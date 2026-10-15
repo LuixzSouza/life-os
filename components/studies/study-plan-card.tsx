@@ -86,7 +86,7 @@ export function StudyPlanCard({ todayMinutes, streak, dailyGoal = 30, suggestion
           </div>
         ) : (
           suggestions.map((s) => {
-            const accent = s.color || "hsl(var(--primary))";
+            const accent = s.color || "var(--primary)";
             return (
               <div
                 key={s.id}

@@ -1,8 +1,9 @@
 "use client";
 
 import {
-  ResponsiveContainer, ComposedChart, Bar, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend,
+  ComposedChart, Bar, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend,
 } from "recharts";
+import { ChartContainer } from "@/components/ui/chart-container";
 import { Brain, Zap, Moon, Dumbbell, CheckCircle2, FlaskConical } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { CorrelationMatrix, DailyInsight, DriverKey } from "@/app/(dashboard)/agenda/focus-actions";
@@ -69,7 +70,7 @@ export function CorrelationDashboard({ matrix }: { matrix: CorrelationMatrix }) 
       {/* SÉRIE DIÁRIA SOBREPOSTA */}
       <div className="rounded-2xl border border-border/40 bg-card p-4 shadow-sm sm:p-6">
         <div className="h-[260px] w-full">
-          <ResponsiveContainer width="100%" height="100%">
+          <ChartContainer>
             <ComposedChart data={chartData} margin={{ top: 8, right: 8, bottom: 0, left: -16 }}>
               <CartesianGrid strokeDasharray="3 3" className="stroke-border/40" vertical={false} />
               <XAxis dataKey="label" tick={{ fontSize: 9 }} interval={4} tickLine={false} axisLine={false} />
@@ -77,12 +78,12 @@ export function CorrelationDashboard({ matrix }: { matrix: CorrelationMatrix }) 
               <YAxis yAxisId="scale" orientation="right" domain={[0, 12]} tick={{ fontSize: 9 }} tickLine={false} axisLine={false} width={28} />
               <Tooltip content={<ChartTooltip />} />
               <Legend wrapperStyle={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.1em" }} />
-              <Bar yAxisId="min" dataKey="Foco" fill="hsl(var(--primary))" fillOpacity={0.7} radius={[3, 3, 0, 0]} name="Foco (min)" />
+              <Bar yAxisId="min" dataKey="Foco" fill="var(--primary)" fillOpacity={0.7} radius={[3, 3, 0, 0]} name="Foco (min)" />
               <Line yAxisId="scale" dataKey="Energia" stroke="#f59e0b" strokeWidth={2} dot={{ r: 2 }} connectNulls name="Energia (1–5)" />
               <Line yAxisId="scale" dataKey="Sono" stroke="#6366f1" strokeWidth={2} strokeDasharray="4 3" dot={false} connectNulls name="Sono (h)" />
               <Line yAxisId="scale" dataKey="Treino" stroke="#10b981" strokeWidth={0} dot={{ r: 4, fill: "#10b981" }} legendType="circle" name="Treino" />
             </ComposedChart>
-          </ResponsiveContainer>
+          </ChartContainer>
         </div>
         <p className="mt-2 text-[10px] text-muted-foreground">
           Últimos {windowDays} dias · meta de sono {sleepGoal}h · ponto verde = dia com treino.

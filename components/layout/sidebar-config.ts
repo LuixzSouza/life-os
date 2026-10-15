@@ -40,7 +40,7 @@ export const groupedSidebarItems: SidebarGroup[] = [
       { label: "Projetos", icon: Briefcase, href: "/projects" },
       { label: "Vagas", icon: ClipboardList, href: "/jobs" },
       { label: "Negócios", icon: BriefcaseBusiness, href: "/business" },
-      { label: "Financeiro", icon: Wallet, href: "/finance", subItems: [{ label: "Investmentos", href: "/finance/investments" },{ label: "Mercado Financeiro", href: "/finance/market" },{ label: "Transações", href: "/finance/transactions" },] },
+      { label: "Financeiro", icon: Wallet, href: "/finance", subItems: [{ label: "Investimentos", href: "/finance/investments" },{ label: "Mercado Financeiro", href: "/finance/market" },{ label: "Transações", href: "/finance/transactions" },] },
     ]
   },
   {

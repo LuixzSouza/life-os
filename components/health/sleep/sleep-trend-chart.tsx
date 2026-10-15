@@ -14,8 +14,8 @@ interface SleepTrendChartProps {
 
 // Cor de cada noite: cinza (sem registro), primária (na meta) ou âmbar (abaixo).
 const barColor = (hours: number, goal: number) => {
-  if (hours <= 0) return "hsl(var(--muted))";
-  return hours >= goal ? "hsl(var(--primary))" : "#f59e0b";
+  if (hours <= 0) return "var(--muted)";
+  return hours >= goal ? "var(--primary)" : "#f59e0b";
 };
 
 export function SleepTrendChart({ data, goal = 8 }: SleepTrendChartProps) {
@@ -32,10 +32,10 @@ export function SleepTrendChart({ data, goal = 8 }: SleepTrendChartProps) {
       <CardContent className="h-[300px] pt-6">
         <ChartContainer>
           <BarChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }} barCategoryGap="20%">
-            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" opacity={0.4} />
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" opacity={0.4} />
             <XAxis
               dataKey="day"
-              tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+              tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
               axisLine={false}
               tickLine={false}
               tickMargin={10}
@@ -45,14 +45,14 @@ export function SleepTrendChart({ data, goal = 8 }: SleepTrendChartProps) {
             <YAxis
               domain={[0, yMax]}
               allowDecimals={false}
-              tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+              tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
               axisLine={false}
               tickLine={false}
               width={42}
               tickFormatter={(v) => `${v}h`}
             />
             <Tooltip
-              cursor={{ fill: "hsl(var(--muted))", opacity: 0.25 }}
+              cursor={{ fill: "var(--muted)", opacity: 0.25 }}
               content={({ active, payload }) => {
                 if (active && payload && payload.length) {
                   const point = payload[0].payload as SleepChartPoint;
@@ -81,10 +81,10 @@ export function SleepTrendChart({ data, goal = 8 }: SleepTrendChartProps) {
             />
             <ReferenceLine
               y={goal}
-              stroke="hsl(var(--primary))"
+              stroke="var(--primary)"
               strokeDasharray="4 4"
               strokeOpacity={0.6}
-              label={{ position: "right", value: `${goal}h`, fill: "hsl(var(--primary))", fontSize: 10 }}
+              label={{ position: "right", value: `${goal}h`, fill: "var(--primary)", fontSize: 10 }}
             />
             <Bar dataKey="hours" radius={[4, 4, 0, 0]} maxBarSize={26}>
               {data.map((d, i) => (

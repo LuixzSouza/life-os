@@ -6,7 +6,8 @@ import { getStorageStats, getDbStatus } from "./actions";
 import { Card, CardContent } from "@/components/ui/card";
 import { TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SettingsTabs } from "@/components/settings/settings-tabs";
-import { Database, Shield, BrainCircuit, User, Plug, Wrench } from "lucide-react";
+import { Database, Shield, BrainCircuit, User, Plug, Wrench, Settings } from "lucide-react";
+import { PageShell, PageHeader, PageContainer } from "@/components/layout/page-shell";
 import path from "path";
 import fs from "fs";
 import { cn } from "@/lib/utils";
@@ -198,19 +199,20 @@ export default async function SettingsPage({
     };
 
     return (
-        <div className="min-h-screen bg-muted/30 p-6 md:p-10 space-y-8 animate-in fade-in duration-500">
-            
-            {/* HEADER DA PÁGINA */}
-            <div className="flex flex-col gap-1 pb-6 border-b border-border">
-                <h1 className="text-3xl font-bold tracking-tight text-foreground">Configurações</h1>
-                <p className="text-muted-foreground">Gerencie suas preferências, dados e integrações.</p>
-            </div>
+        <PageShell>
+            {/* Cabeçalho padrão do sistema (mesmo das demais telas) */}
+            <PageHeader
+                icon={<Settings className="h-6 w-6" />}
+                title="Configurações"
+                description="Gerencie suas preferências, dados e integrações."
+            />
 
+            <PageContainer>
             <SettingsTabs defaultValue={initialTab} className="w-full space-y-8">
                 
                 {/* BARRA DE NAVEGAÇÃO (TABS) */}
-                <div className="overflow-x-auto pb-2">
-                    <TabsList className="bg-transparent h-12 p-0 gap-6 w-full justify-start min-w-max">
+                <div className="overflow-x-auto scrollbar-hide border-b border-border/60">
+                    <TabsList className="bg-transparent h-11 p-0 gap-6 w-full justify-start min-w-max rounded-none">
                     {[
                         { value: "profile", icon: User, label: "Perfil & Aparência" },
                         { value: "intelligence", icon: BrainCircuit, label: "Inteligência Artificial" },
@@ -222,10 +224,12 @@ export default async function SettingsPage({
                             key={tab.value}
                             value={tab.value} 
                             className={cn(
-                                "data-[state=active]:bg-transparent data-[state=active]:shadow-none",
-                                "data-[state=active]:border-b-2 data-[state=active]:border-primary",
-                                "rounded-none px-0 pb-2 font-medium text-muted-foreground",
-                                "data-[state=active]:text-foreground flex items-center gap-2 transition-all"
+                                // Sublinhado de verdade: o TabsTrigger base põe borda nos 4 lados
+                                // e fundo no tema escuro (virava uma caixa vermelha).
+                                "h-full flex-none rounded-none border-0 border-b-2 border-transparent px-0 pb-2 font-medium text-muted-foreground",
+                                "bg-transparent hover:ring-0 dark:bg-transparent shadow-none",
+                                "data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:shadow-none",
+                                "dark:data-[state=active]:bg-transparent data-[state=active]:text-foreground flex items-center gap-2 transition-colors"
                             )}
                         >
                             <tab.icon className="h-4 w-4" /> {tab.label}
@@ -496,6 +500,7 @@ export default async function SettingsPage({
                 </TabsContent>
 
             </SettingsTabs>
-        </div>
+            </PageContainer>
+        </PageShell>
     );
 }

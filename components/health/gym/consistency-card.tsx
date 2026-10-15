@@ -49,7 +49,7 @@ export function ConsistencyCard({ workouts }: { workouts: GymWorkout[] }) {
           <div
             className="h-full w-full rounded-full"
             style={{
-              background: `conic-gradient(${done ? "hsl(142 71% 45%)" : "hsl(var(--primary))"} ${deg}deg, hsl(var(--muted)) ${deg}deg)`,
+              background: `conic-gradient(${done ? "hsl(142 71% 45%)" : "var(--primary)"} ${deg}deg, var(--muted) ${deg}deg)`,
             }}
           />
           <div className="absolute inset-[6px] flex flex-col items-center justify-center rounded-full bg-card">

@@ -31,7 +31,7 @@ function VolumeRow({ mv }: { mv: MuscleVolume }) {
     <li className="space-y-1">
       <div className="flex items-center justify-between text-xs">
         <span className="flex items-center gap-1.5 font-medium">
-          <span className="h-2 w-2 rounded-full" style={{ backgroundColor: color ?? "hsl(var(--primary))" }} />
+          <span className="h-2 w-2 rounded-full" style={{ backgroundColor: color ?? "var(--primary)" }} />
           {label}
         </span>
         <span className="flex items-center gap-1.5">

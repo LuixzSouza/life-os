@@ -368,7 +368,7 @@ export function FocusDock() {
                     <span
                       key={i}
                       className="h-1.5 w-1.5 rounded-full transition-colors"
-                      style={{ backgroundColor: i < (state.focusCompleted % state.longEvery) || (state.focusCompleted > 0 && state.focusCompleted % state.longEvery === 0) ? phaseMeta.color : "hsl(var(--muted-foreground) / 0.25)" }}
+                      style={{ backgroundColor: i < (state.focusCompleted % state.longEvery) || (state.focusCompleted > 0 && state.focusCompleted % state.longEvery === 0) ? phaseMeta.color : "color-mix(in oklch, var(--muted-foreground) 25%, transparent)" }}
                     />
                   ))}
                 </div>

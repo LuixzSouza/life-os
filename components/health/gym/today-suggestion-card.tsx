@@ -107,7 +107,7 @@ export function TodaySuggestionCard({
                     className="inline-flex items-center gap-1.5 rounded-full border border-border/50 bg-background px-2.5 py-1 text-xs font-medium"
                     title={p.reason}
                   >
-                    <span className="h-2 w-2 rounded-full" style={{ backgroundColor: MUSCLE_META[p.group]?.color ?? "hsl(var(--primary))" }} />
+                    <span className="h-2 w-2 rounded-full" style={{ backgroundColor: MUSCLE_META[p.group]?.color ?? "var(--primary)" }} />
                     {label(p.group)}
                     <span className="text-[10px] text-muted-foreground">· {p.sets} sér.</span>
                   </span>

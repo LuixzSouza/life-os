@@ -83,12 +83,12 @@ export function BodyEvolutionChart({ data }: { data: BodyEvolutionPoint[] }) {
         {enoughPoints ? (
           <ChartContainer>
             <LineChart data={chartData} margin={{ top: 10, right: 8, left: -10, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" opacity={0.4} />
-              <XAxis dataKey="label" tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }} axisLine={false} tickLine={false} tickMargin={10} minTickGap={20} />
-              <YAxis yAxisId="weight" tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }} axisLine={false} tickLine={false} tickFormatter={(v) => `${v}kg`} domain={["dataMin - 2", "dataMax + 2"]} width={45} />
-              <YAxis yAxisId="fat" orientation="right" tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }} axisLine={false} tickLine={false} tickFormatter={(v) => `${v}%`} domain={["dataMin - 2", "dataMax + 2"]} width={40} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" opacity={0.4} />
+              <XAxis dataKey="label" tick={{ fontSize: 10, fill: "var(--muted-foreground)" }} axisLine={false} tickLine={false} tickMargin={10} minTickGap={20} />
+              <YAxis yAxisId="weight" tick={{ fontSize: 10, fill: "var(--muted-foreground)" }} axisLine={false} tickLine={false} tickFormatter={(v) => `${v}kg`} domain={["dataMin - 2", "dataMax + 2"]} width={45} />
+              <YAxis yAxisId="fat" orientation="right" tick={{ fontSize: 10, fill: "var(--muted-foreground)" }} axisLine={false} tickLine={false} tickFormatter={(v) => `${v}%`} domain={["dataMin - 2", "dataMax + 2"]} width={40} />
               <Tooltip
-                cursor={{ stroke: "hsl(var(--muted-foreground))", strokeWidth: 1, strokeDasharray: "4 4" }}
+                cursor={{ stroke: "var(--muted-foreground)", strokeWidth: 1, strokeDasharray: "4 4" }}
                 content={({ active, payload }) => {
                   if (!active || !payload?.length) return null;
                   const d = payload[0].payload as (typeof chartData)[number];
@@ -107,7 +107,7 @@ export function BodyEvolutionChart({ data }: { data: BodyEvolutionPoint[] }) {
               />
               <Legend wrapperStyle={{ fontSize: 11 }} iconType="plainline" />
               {hasWeight && (
-                <Line yAxisId="weight" type="monotone" dataKey="weight" name="Peso (kg)" stroke="hsl(var(--primary))" strokeWidth={2.5} dot={{ r: 2.5 }} activeDot={{ r: 5 }} connectNulls />
+                <Line yAxisId="weight" type="monotone" dataKey="weight" name="Peso (kg)" stroke="var(--primary)" strokeWidth={2.5} dot={{ r: 2.5 }} activeDot={{ r: 5 }} connectNulls />
               )}
               {hasFat && (
                 <Line yAxisId="fat" type="monotone" dataKey="bodyFat" name="Gordura (%)" stroke="#f59e0b" strokeWidth={2.5} dot={{ r: 2.5 }} activeDot={{ r: 5 }} connectNulls />

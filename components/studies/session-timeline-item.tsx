@@ -21,7 +21,7 @@ export function SessionTimelineItem({
   session, expanded, isDeleting, onToggle, onDelete,
 }: SessionTimelineItemProps) {
   const focusInfo = FOCUS_MAP[session.focusLevel as keyof typeof FOCUS_MAP] || FOCUS_MAP[3];
-  const accent = session.subject.color || "hsl(var(--primary))";
+  const accent = session.subject.color || "var(--primary)";
   const hasNotes = !!session.notesRaw && session.notesRaw.trim().length > 0;
 
   return (
@@ -29,7 +29,7 @@ export function SessionTimelineItem({
       {/* Marcador */}
       <span
         className="absolute left-0 top-3.5 h-3.5 w-3.5 -translate-x-1/2 rounded-full border-2 border-background shadow-sm transition-all"
-        style={{ backgroundColor: expanded ? accent : "hsl(var(--muted-foreground) / 0.4)" }}
+        style={{ backgroundColor: expanded ? accent : "color-mix(in oklch, var(--muted-foreground) 40%, transparent)" }}
       />
 
       <div

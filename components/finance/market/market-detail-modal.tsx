@@ -97,13 +97,13 @@ export function MarketDetailModal({ item, onClose }: { item: MarketItem | null; 
                       <CartesianGrid strokeDasharray="4 4" vertical={false} stroke="currentColor" strokeOpacity={0.06} />
                       <XAxis
                         dataKey="date"
-                        tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+                        tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
                         axisLine={false} tickLine={false} minTickGap={40}
                         tickFormatter={(d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" })}
                       />
                       <YAxis
                         width={56} domain={["auto", "auto"]}
-                        tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+                        tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
                         axisLine={false} tickLine={false}
                         tickFormatter={(v: number) => v.toLocaleString("pt-BR", { maximumFractionDigits: 0 })}
                       />

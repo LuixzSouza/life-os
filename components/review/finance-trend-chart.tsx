@@ -69,26 +69,26 @@ export function FinanceTrendChart({ data }: { data: TrendPoint[] }) {
             dataKey="label"
             axisLine={false}
             tickLine={false}
-            tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+            tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
             dy={6}
             interval={0}
           />
           <Tooltip
-            cursor={{ fill: "hsl(var(--muted)/0.25)" }}
+            cursor={{ fill: "color-mix(in oklch, var(--muted) 25%, transparent)" }}
             content={(props) => (
               <TrendTooltip active={props.active} payload={props.payload as TooltipPayloadEntry[] | undefined} fmt={fmt} />
             )}
           />
-          <ReferenceLine y={0} stroke="hsl(var(--border))" />
+          <ReferenceLine y={0} stroke="var(--border)" />
           <Bar dataKey="income" name="Receitas" radius={[3, 3, 0, 0]} barSize={9} fill="#10b981" fillOpacity={0.85} />
           <Bar dataKey="expense" name="Despesas" radius={[3, 3, 0, 0]} barSize={9} fill="#f43f5e" fillOpacity={0.75} />
           <Line
             dataKey="balance"
             name="Saldo"
             type="monotone"
-            stroke="hsl(var(--primary))"
+            stroke="var(--primary)"
             strokeWidth={2}
-            dot={{ r: 2.5, strokeWidth: 0, fill: "hsl(var(--primary))" }}
+            dot={{ r: 2.5, strokeWidth: 0, fill: "var(--primary)" }}
             activeDot={{ r: 4 }}
           />
         </ComposedChart>

@@ -133,12 +133,12 @@ export function ExerciseProgressCard({ workouts }: { workouts: GymWorkout[] }) {
         <div className="h-[150px] w-full">
           <ChartContainer>
             <LineChart data={points} margin={{ top: 8, right: 8, bottom: 0, left: -24 }}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" opacity={0.4} />
-              <XAxis dataKey="date" tick={{ fontSize: 9, fill: "hsl(var(--muted-foreground))" }} axisLine={false} tickLine={false} tickMargin={8} />
-              <YAxis domain={[yMin, yMax]} tick={{ fontSize: 9, fill: "hsl(var(--muted-foreground))" }} axisLine={false} tickLine={false} width={40} />
-              <ReferenceLine y={first.oneRm} stroke="hsl(var(--muted-foreground))" strokeDasharray="4 4" opacity={0.35} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" opacity={0.4} />
+              <XAxis dataKey="date" tick={{ fontSize: 9, fill: "var(--muted-foreground)" }} axisLine={false} tickLine={false} tickMargin={8} />
+              <YAxis domain={[yMin, yMax]} tick={{ fontSize: 9, fill: "var(--muted-foreground)" }} axisLine={false} tickLine={false} width={40} />
+              <ReferenceLine y={first.oneRm} stroke="var(--muted-foreground)" strokeDasharray="4 4" opacity={0.35} />
               <Tooltip
-                cursor={{ stroke: "hsl(var(--primary))", strokeWidth: 1, strokeDasharray: "4 4" }}
+                cursor={{ stroke: "var(--primary)", strokeWidth: 1, strokeDasharray: "4 4" }}
                 content={({ active: on, payload }) => {
                   if (on && payload && payload.length) {
                     const p = payload[0].payload as SessionPoint;
@@ -153,7 +153,7 @@ export function ExerciseProgressCard({ workouts }: { workouts: GymWorkout[] }) {
                   return null;
                 }}
               />
-              <Line type="monotone" dataKey="oneRm" stroke="hsl(var(--primary))" strokeWidth={2.5} dot={{ r: 3, fill: "hsl(var(--primary))" }} activeDot={{ r: 5 }} />
+              <Line type="monotone" dataKey="oneRm" stroke="var(--primary)" strokeWidth={2.5} dot={{ r: 3, fill: "var(--primary)" }} activeDot={{ r: 5 }} />
             </LineChart>
           </ChartContainer>
         </div>

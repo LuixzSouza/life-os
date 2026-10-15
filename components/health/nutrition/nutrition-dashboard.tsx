@@ -172,9 +172,9 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                                 <CardContent className="h-[200px] w-full pt-4">
                                     <ChartContainer>
                                         <BarChart data={chartData} margin={{ top: 0, right: 0, bottom: 0, left: -25 }}>
-                                            <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }} dy={10} />
+                                            <XAxis dataKey="day" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: 'var(--muted-foreground)' }} dy={10} />
                                             <Tooltip 
-                                                cursor={{ fill: 'hsl(var(--muted)/0.2)' }} 
+                                                cursor={{ fill: 'color-mix(in oklch, var(--muted) 20%, transparent)' }} 
                                                 content={({ active, payload }) => {
                                                     if (active && payload && payload.length) {
                                                         const data = payload[0].payload;
@@ -190,7 +190,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                                             />
                                             <Bar dataKey="calories" radius={[4, 4, 4, 4]} barSize={20}>
                                                 {chartData.map((entry, index) => (
-                                                    <Cell key={`cell-${index}`} fill={entry.isCurrent ? 'hsl(var(--primary))' : entry.isOverGoal ? 'hsl(var(--destructive)/0.4)' : 'hsl(var(--muted))'} />
+                                                    <Cell key={`cell-${index}`} fill={entry.isCurrent ? 'var(--primary)' : entry.isOverGoal ? 'color-mix(in oklch, var(--destructive) 40%, transparent)' : 'var(--muted)'} />
                                                 ))}
                                             </Bar>
                                         </BarChart>

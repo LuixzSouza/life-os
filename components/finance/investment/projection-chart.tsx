@@ -19,8 +19,8 @@ export function ProjectionChart({ data, compareSavings }: ProjectionChartProps) 
         <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
           <defs>
             <linearGradient id="colorTotal" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3} />
-              <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0} />
+              <stop offset="5%" stopColor="var(--primary)" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="var(--primary)" stopOpacity={0} />
             </linearGradient>
           </defs>
 
@@ -28,7 +28,7 @@ export function ProjectionChart({ data, compareSavings }: ProjectionChartProps) 
 
           <XAxis
             dataKey="year"
-            tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))', fontWeight: 600 }}
+            tick={{ fontSize: 11, fill: 'var(--muted-foreground)', fontWeight: 600 }}
             axisLine={false}
             tickLine={false}
             tickMargin={12}
@@ -38,46 +38,46 @@ export function ProjectionChart({ data, compareSavings }: ProjectionChartProps) 
 
           <YAxis
             width={60} /* Largura fixa evita que corte R$ 1.000k */
-            tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))', fontWeight: 600 }}
+            tick={{ fontSize: 11, fill: 'var(--muted-foreground)', fontWeight: 600 }}
             axisLine={false}
             tickLine={false}
             tickFormatter={(v) => `R$ ${(v / 1000).toFixed(0)}k`}
           />
 
           <Tooltip
-            cursor={{ stroke: 'hsl(var(--primary))', strokeWidth: 1, strokeDasharray: '4 4', opacity: 0.5 }}
+            cursor={{ stroke: 'var(--primary)', strokeWidth: 1, strokeDasharray: '4 4', opacity: 0.5 }}
             contentStyle={{
               backgroundColor: 'rgba(var(--background), 0.95)',
               backdropFilter: 'blur(8px)',
-              borderColor: 'hsl(var(--border))',
+              borderColor: 'var(--border)',
               borderRadius: '16px',
               fontSize: '12px',
               fontWeight: 'bold',
               boxShadow: '0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)'
             }}
-            itemStyle={{ color: 'hsl(var(--foreground))' }}
+            itemStyle={{ color: 'var(--foreground)' }}
             formatter={(value: number) => [formatCurrency(value), "Total Projetado"]}
-            labelStyle={{ color: 'hsl(var(--muted-foreground))', marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '10px' }}
+            labelStyle={{ color: 'var(--muted-foreground)', marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '10px' }}
           />
 
           <Area
             type="monotone"
             dataKey="total"
-            stroke="hsl(var(--primary))"
+            stroke="var(--primary)"
             strokeWidth={3}
             fill="url(#colorTotal)"
-            activeDot={{ r: 6, strokeWidth: 0, fill: "hsl(var(--primary))" }}
+            activeDot={{ r: 6, strokeWidth: 0, fill: "var(--primary)" }}
           />
 
           {compareSavings && (
             <Area
               type="monotone"
               dataKey="savings"
-              stroke="hsl(var(--muted-foreground))"
+              stroke="var(--muted-foreground)"
               strokeWidth={2}
               strokeDasharray="4 4"
               fillOpacity={0}
-              activeDot={{ r: 4, strokeWidth: 0, fill: "hsl(var(--muted-foreground))" }}
+              activeDot={{ r: 4, strokeWidth: 0, fill: "var(--muted-foreground)" }}
             />
           )}
         </AreaChart>

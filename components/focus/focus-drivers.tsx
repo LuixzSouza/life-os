@@ -75,7 +75,7 @@ export function FocusDrivers({ drivers }: { drivers: FocusDriversData }) {
                   {/* Barras comparativas */}
                   <div className="space-y-1.5">
                     <CompareBar label={ins.positiveLabel} value={ins.withMinutes} max={max} color={accent} sample={ins.samplePositive} />
-                    <CompareBar label={ins.otherLabel} value={ins.withoutMinutes} max={max} color="hsl(var(--muted-foreground) / 0.4)" sample={ins.sampleOther} />
+                    <CompareBar label={ins.otherLabel} value={ins.withoutMinutes} max={max} color="color-mix(in oklch, var(--muted-foreground) 40%, transparent)" sample={ins.sampleOther} />
                   </div>
                 </div>
               );

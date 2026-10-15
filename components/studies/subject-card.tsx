@@ -127,7 +127,7 @@ function DifficultyDots({ level }: { level: number }) {
         <span
           key={i}
           className="h-1.5 w-1.5 rounded-full transition-colors"
-          style={{ backgroundColor: i <= level ? info.dot : "hsl(var(--muted))" }}
+          style={{ backgroundColor: i <= level ? info.dot : "var(--muted)" }}
         />
       ))}
     </span>
@@ -184,8 +184,8 @@ export function SubjectCard({
     requestStudyStart(subject.id);
   };
 
-  const accent = isCompleted ? "#10b981" : subject.color || "hsl(var(--primary))";
-  const ringColor = subject.color || "hsl(var(--primary))";
+  const accent = isCompleted ? "#10b981" : subject.color || "var(--primary)";
+  const ringColor = subject.color || "var(--primary)";
 
   const Menu = (
     <DropdownMenu>

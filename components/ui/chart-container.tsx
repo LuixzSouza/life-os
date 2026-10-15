@@ -23,7 +23,8 @@ interface ChartContainerProps extends Omit<ResponsiveProps, "width" | "height" |
  */
 export function ChartContainer({ children, className, ...rest }: ChartContainerProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [ready, setReady] = useState(false);
+  // Tamanho medido (null = ainda sem tamanho > 0).
+  const [size, setSize] = useState<{ width: number; height: number } | null>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -31,7 +32,8 @@ export function ChartContainer({ children, className, ...rest }: ChartContainerP
 
     const ro = new ResizeObserver((entries) => {
       const box = entries[0]?.contentRect;
-      if (box) setReady(box.width > 0 && box.height > 0);
+      if (!box) return;
+      setSize(box.width > 0 && box.height > 0 ? { width: box.width, height: box.height } : null);
     });
     ro.observe(el);
     return () => ro.disconnect();
@@ -39,8 +41,10 @@ export function ChartContainer({ children, className, ...rest }: ChartContainerP
 
   return (
     <div ref={ref} className={className} style={{ width: "100%", height: "100%" }}>
-      {ready ? (
-        <ResponsiveContainer width="100%" height="100%" {...rest}>
+      {size ? (
+        // initialDimension: o ResponsiveContainer do Recharts 3 nasce com -1×-1
+        // até medir sozinho — e avisa no console. Já medimos aqui; passa adiante.
+        <ResponsiveContainer width="100%" height="100%" initialDimension={size} {...rest}>
           {children}
         </ResponsiveContainer>
       ) : null}

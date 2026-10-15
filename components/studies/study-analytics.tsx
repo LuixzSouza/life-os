@@ -47,10 +47,10 @@ export function StudyAnalytics({ daily, stats }: StudyAnalyticsProps) {
         <CardContent className="h-[240px] pt-6">
           <ChartContainer>
             <BarChart data={daily} margin={{ top: 4, right: 8, left: -20, bottom: 0 }} barCategoryGap="22%">
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" opacity={0.4} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" opacity={0.4} />
               <XAxis
                 dataKey="label"
-                tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+                tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
                 axisLine={false}
                 tickLine={false}
                 tickMargin={8}
@@ -59,14 +59,14 @@ export function StudyAnalytics({ daily, stats }: StudyAnalyticsProps) {
               />
               <YAxis
                 domain={[0, Math.ceil(maxMin / 30) * 30]}
-                tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+                tick={{ fontSize: 10, fill: "var(--muted-foreground)" }}
                 axisLine={false}
                 tickLine={false}
                 width={42}
                 tickFormatter={(v) => (v >= 60 ? `${Math.round((v / 60) * 10) / 10}h` : `${v}m`)}
               />
               <Tooltip
-                cursor={{ fill: "hsl(var(--muted))", opacity: 0.25 }}
+                cursor={{ fill: "var(--muted)", opacity: 0.25 }}
                 content={({ active, payload }) => {
                   if (active && payload && payload.length) {
                     const p = payload[0].payload as DailyPoint;
@@ -84,7 +84,7 @@ export function StudyAnalytics({ daily, stats }: StudyAnalyticsProps) {
               />
               <Bar dataKey="minutes" radius={[4, 4, 0, 0]} maxBarSize={28}>
                 {daily.map((d, i) => (
-                  <Cell key={i} fill={d.minutes <= 0 ? "hsl(var(--muted))" : d.isToday ? "hsl(var(--primary))" : "hsl(var(--primary) / 0.55)"} />
+                  <Cell key={i} fill={d.minutes <= 0 ? "var(--muted)" : d.isToday ? "var(--primary)" : "color-mix(in oklch, var(--primary) 55%, transparent)"} />
                 ))}
               </Bar>
             </BarChart>

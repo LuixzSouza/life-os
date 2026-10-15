@@ -83,7 +83,7 @@ export function SubjectGridContent({
                   className="w-full flex items-center gap-3 border-b border-border/40 pb-3 text-left group"
                 >
                   {/* Barra com a COR da matéria raiz — identidade da seção */}
-                  <div className="h-6 w-1.5 rounded-full" style={{ backgroundColor: root.color || "hsl(var(--primary))" }} />
+                  <div className="h-6 w-1.5 rounded-full" style={{ backgroundColor: root.color || "var(--primary)" }} />
                   <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform shrink-0", isCollapsed && "-rotate-90")} />
                   <h4 className="font-bold text-xl truncate group-hover:text-primary transition-colors">{root.title}</h4>
                   {children.length > 0 && (

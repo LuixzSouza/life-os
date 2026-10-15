@@ -66,7 +66,7 @@ export function FocusInsights({ stats }: { stats: FocusStats }) {
                     className="w-full max-w-[34px] rounded-md transition-all"
                     style={{
                       height: h,
-                      backgroundColor: d.minutes > 0 ? (isToday ? ACCENT : `${ACCENT}80`) : "hsl(var(--muted-foreground) / 0.15)",
+                      backgroundColor: d.minutes > 0 ? (isToday ? ACCENT : `${ACCENT}80`) : "color-mix(in oklch, var(--muted-foreground) 15%, transparent)",
                     }}
                     title={`${fmtMin(d.minutes)} em ${WEEKDAYS[d.weekday]}`}
                   />

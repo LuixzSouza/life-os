@@ -31,7 +31,7 @@ export function DeckCard({ deck, onStudy, onDelete, onConnections }: DeckCardPro
   const masteredPct = total > 0 ? Math.round((mastered / total) * 100) : 0;
 
   // Cor da matéria entra só como acento sutil no ícone.
-  const accent = deck.studySubject?.color || "hsl(var(--primary))";
+  const accent = deck.studySubject?.color || "var(--primary)";
 
   return (
     <Card className="group flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-card shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md">

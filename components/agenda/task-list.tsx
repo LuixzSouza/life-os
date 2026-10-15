@@ -187,7 +187,7 @@ function QuickAddTask() {
 
 function TaskRow({ task, isLate }: { task: TaskWithProject; isLate: boolean }) {
   const [isPending, startTransition] = useTransition();
-  const projectColor = task.project?.color || "hsl(var(--primary))";
+  const projectColor = task.project?.color || "var(--primary)";
   const prio = PRIORITY_META[task.priority] ?? PRIORITY_META.MEDIUM;
 
   return (
@@ -200,7 +200,7 @@ function TaskRow({ task, isLate }: { task: TaskWithProject; isLate: boolean }) {
       {/* Borda esquerda: cor do projeto (ou primária se solta) */}
       <div
         className="absolute left-0 top-0 bottom-0 w-1.5 transition-all group-hover:w-2"
-        style={{ backgroundColor: task.project ? `${projectColor}80` : "hsl(var(--primary) / 0.5)" }}
+        style={{ backgroundColor: task.project ? `${projectColor}80` : "color-mix(in oklch, var(--primary) 50%, transparent)" }}
       />
 
       {/* Concluir (com estado de pending) */}

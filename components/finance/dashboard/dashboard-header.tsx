@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { TrendingUp, BarChart3, Receipt, Plus, FileUp } from "lucide-react";
+import { Plus, FileUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BankConnector, SyncButton } from "@/components/finance/bank-connector";
 import { TransactionDialog } from "@/components/finance/transaction-dialog";
@@ -51,28 +50,8 @@ export function FinanceHeaderActions({ accounts }: { accounts: DashboardAccount[
       <SyncButton accounts={accounts} />
       <BankConnector onOpenImport={() => setImportOpen(true)} />
 
-      <div className="hidden h-5 w-px shrink-0 bg-border/60 sm:block" />
-
-      <Link href="/finance/transactions" className="shrink-0">
-        <Button variant="outline" size="sm" className="h-9 gap-1.5 rounded-xl border-border/40 font-medium" title="Todas as transações">
-          <Receipt className="h-4 w-4" />
-          <span className="hidden lg:inline">Transações</span>
-        </Button>
-      </Link>
-
-      <Link href="/finance/investments" className="shrink-0">
-        <Button variant="outline" size="sm" className="h-9 gap-1.5 rounded-xl border-border/40 font-medium" title="Investimentos">
-          <TrendingUp className="h-4 w-4" />
-          <span className="hidden lg:inline">Investimentos</span>
-        </Button>
-      </Link>
-
-      <Link href="/finance/market" className="shrink-0">
-        <Button variant="outline" size="sm" className="h-9 gap-1.5 rounded-xl border-border/40 font-medium" title="Mercado financeiro">
-          <BarChart3 className="h-4 w-4" />
-          <span className="hidden lg:inline">Mercado</span>
-        </Button>
-      </Link>
+      {/* Transações / Investimentos / Mercado saíram daqui: já são subitens de
+          "Financeiro" no menu lateral (e na busca ⌘K). Header = só ações. */}
 
       <div className="shrink-0">
         <TransactionDialog

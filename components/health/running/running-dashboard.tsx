@@ -261,26 +261,26 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                                 <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                     <defs>
                                         <linearGradient id="colorKm" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.3}/>
-                                            <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0}/>
+                                            <stop offset="5%" stopColor="var(--primary)" stopOpacity={0.3}/>
+                                            <stop offset="95%" stopColor="var(--primary)" stopOpacity={0}/>
                                         </linearGradient>
                                     </defs>
-                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" opacity={0.4} />
+                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" opacity={0.4} />
                                     <XAxis 
                                         dataKey="date" 
-                                        tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }} 
+                                        tick={{ fontSize: 10, fill: 'var(--muted-foreground)' }} 
                                         axisLine={false} 
                                         tickLine={false} 
                                         tickMargin={10} 
                                     />
                                     <YAxis 
-                                        tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }} 
+                                        tick={{ fontSize: 10, fill: 'var(--muted-foreground)' }} 
                                         axisLine={false} 
                                         tickLine={false} 
                                         tickFormatter={(val) => `${val}km`} 
                                     />
                                     <Tooltip 
-                                        cursor={{ stroke: 'hsl(var(--muted-foreground))', strokeWidth: 1, strokeDasharray: '4 4' }}
+                                        cursor={{ stroke: 'var(--muted-foreground)', strokeWidth: 1, strokeDasharray: '4 4' }}
                                         content={({ active, payload }) => {
                                             if (active && payload && payload.length) {
                                                 const data = payload[0].payload;
@@ -305,11 +305,11 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                                     <Area 
                                         type="monotone" 
                                         dataKey="km" 
-                                        stroke="hsl(var(--primary))" 
+                                        stroke="var(--primary)" 
                                         strokeWidth={3} 
                                         fillOpacity={1} 
                                         fill="url(#colorKm)" 
-                                        activeDot={{ r: 6, fill: "hsl(var(--background))", stroke: "hsl(var(--primary))", strokeWidth: 2 }}
+                                        activeDot={{ r: 6, fill: "var(--background)", stroke: "var(--primary)", strokeWidth: 2 }}
                                     />
                                 </AreaChart>
                             </ChartContainer>

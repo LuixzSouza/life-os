@@ -42,7 +42,7 @@ export function MasteryTracks({ tracks }: { tracks: MasteryTrack[] }) {
         {tracks.map((t) => {
           const { mastery } = t;
           const open = expanded === t.id;
-          const accent = t.color || "hsl(var(--primary))";
+          const accent = t.color || "var(--primary)";
           return (
             <div
               key={t.id}

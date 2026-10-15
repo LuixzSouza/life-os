@@ -62,24 +62,24 @@ export function FinanceOverview({
   return (
     <div className="space-y-10 animate-in fade-in duration-700">
 
-      {/* HEADER DE CONTROLES — alinhado ao design system (chip suave, sombras
-          sutis) em vez do bloco sólido/sombra pesada de antes. */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-            <Wallet className="h-5 w-5" />
-          </div>
-          <div className="min-w-0">
-            <h2 className="text-2xl font-bold text-foreground tracking-tight">Visão Global</h2>
-            <p className="text-sm text-muted-foreground">Seu painel de controle financeiro</p>
-          </div>
-        </div>
+      {/* Barra de ferramentas da seção. O título da página já vem do
+          PageHeader ("Financeiro") — antes havia um 2º cabeçalho ("Visão
+          Global") com ícone e título grandes logo abaixo. */}
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <h2 className="eyebrow text-muted-foreground">Resumo</h2>
         <div className="flex items-center gap-2">
-          <Button variant="outline" onClick={handleReport} className="rounded-xl h-11 font-semibold gap-2 hover:bg-primary/5 hover:text-primary transition-colors shadow-sm">
+          <Button variant="outline" size="sm" onClick={handleReport} className="h-9 gap-2 rounded-lg">
             <FileSpreadsheet className="h-4 w-4" /> Relatório
           </Button>
-          <Button variant={smartView ? "secondary" : "default"} onClick={toggleSmartView} className="rounded-xl h-11 font-semibold gap-2 transition-all active:scale-95 shadow-sm">
-            {smartView ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />} Smart View
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={toggleSmartView}
+            aria-pressed={smartView}
+            className="h-9 gap-2 rounded-lg"
+          >
+            {smartView ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
+            {smartView ? "Mostrar valores" : "Ocultar valores"}
           </Button>
         </div>
       </div>

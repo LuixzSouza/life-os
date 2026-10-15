@@ -26,26 +26,26 @@ export function VolumeChart({ data }: VolumeChartProps) {
             <AreaChart data={data} margin={{ top: 10, right: 10, bottom: 0, left: -20 }}>
               <defs>
                 <linearGradient id="colorLoad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="hsl(var(--primary))" stopOpacity={0.2} />
-                  <stop offset="95%" stopColor="hsl(var(--primary))" stopOpacity={0} />
+                  <stop offset="5%" stopColor="var(--primary)" stopOpacity={0.2} />
+                  <stop offset="95%" stopColor="var(--primary)" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--border))" opacity={0.4} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" opacity={0.4} />
               <XAxis
                 dataKey="date"
-                tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }}
+                tick={{ fontSize: 10, fill: 'var(--muted-foreground)' }}
                 axisLine={false}
                 tickLine={false}
                 tickMargin={10}
               />
               <YAxis
-                tick={{ fontSize: 10, fill: 'hsl(var(--muted-foreground))' }}
+                tick={{ fontSize: 10, fill: 'var(--muted-foreground)' }}
                 axisLine={false}
                 tickLine={false}
                 tickFormatter={(value) => `${(value / 1000).toFixed(1)}k`}
               />
               <Tooltip
-                cursor={{ stroke: 'hsl(var(--primary))', strokeWidth: 1, strokeDasharray: '4 4' }}
+                cursor={{ stroke: 'var(--primary)', strokeWidth: 1, strokeDasharray: '4 4' }}
                 content={({ active, payload }) => {
                   if (active && payload && payload.length) {
                     const point = payload[0].payload as VolumePoint;
@@ -66,7 +66,7 @@ export function VolumeChart({ data }: VolumeChartProps) {
               <Area
                 type="monotone"
                 dataKey="load"
-                stroke="hsl(var(--primary))"
+                stroke="var(--primary)"
                 strokeWidth={2}
                 fillOpacity={1}
                 fill="url(#colorLoad)"

@@ -297,7 +297,7 @@ export function SubjectFormDialog({
                         backgroundColor: c.hex,
                         // Anel offset na própria cor, lendo o fundo do modal — limpo
                         // e sem depender das vars de ring do Tailwind.
-                        boxShadow: selected ? `0 0 0 2px hsl(var(--background)), 0 0 0 4px ${c.hex}` : undefined,
+                        boxShadow: selected ? `0 0 0 2px var(--background), 0 0 0 4px ${c.hex}` : undefined,
                       }}
                       title={c.name}
                       aria-label={`Cor ${c.name}`}

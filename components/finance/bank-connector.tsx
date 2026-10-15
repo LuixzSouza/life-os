@@ -78,6 +78,10 @@ export function SyncButton({ accounts }: { accounts: AccountProp[] }) {
         }
     };
 
+    // Sem banco conectado não há o que sincronizar: some, em vez de ficar
+    // desativado ocupando espaço no header.
+    if (connectedAccounts.length === 0) return null;
+
     return (
         <Button
             variant="outline"
