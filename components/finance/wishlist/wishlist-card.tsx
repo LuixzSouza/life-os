@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { WishlistForm, WishlistData } from "./wishlist-form";
 import { cn } from "@/lib/utils";
+import { SafeImg } from "@/components/ui/safe-img";
 import { useFormatCurrency } from "@/components/providers/currency-provider";
 import { useSmartView } from "@/components/finance/smart-view-context";
 import confetti from "canvas-confetti";
@@ -326,27 +327,25 @@ function WishlistCard({ item, accounts, totalBalance }: { item: WishlistData; ac
         )}>
             {/* ÁREA DA IMAGEM */}
             <div className="relative h-40 w-full shrink-0 overflow-hidden border-b border-border/30 bg-gradient-to-br from-muted/40 via-muted/15 to-background">
-                {item.imageUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                        src={item.imageUrl}
-                        alt={item.name}
-                        className={cn(
-                            "h-full w-full object-contain p-6 drop-shadow-md transition-transform duration-300 group-hover:scale-[1.04]",
-                            bought && "grayscale opacity-60"
-                        )}
-                    />
-                ) : (
-                    // Fallback frictionless: monograma suave
-                    <div className="flex h-full w-full items-center justify-center">
-                        <span className={cn(
-                            "text-6xl font-black text-foreground/[0.08] select-none transition-transform duration-300 group-hover:scale-105",
-                            bought && "opacity-60"
-                        )}>
-                            {(item.name?.trim()?.charAt(0) || "?").toUpperCase()}
-                        </span>
-                    </div>
-                )}
+                {/* Sem foto OU link quebrado (site que bloqueia hotlink) → monograma suave */}
+                <SafeImg
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className={cn(
+                        "h-full w-full object-contain p-6 drop-shadow-md transition-transform duration-300 group-hover:scale-[1.04]",
+                        bought && "grayscale opacity-60"
+                    )}
+                    fallback={
+                        <div className="flex h-full w-full items-center justify-center">
+                            <span className={cn(
+                                "text-6xl font-black text-foreground/[0.08] select-none transition-transform duration-300 group-hover:scale-105",
+                                bought && "opacity-60"
+                            )}>
+                                {(item.name?.trim()?.charAt(0) || "?").toUpperCase()}
+                            </span>
+                        </div>
+                    }
+                />
 
                 {/* Status (uma pílula só, discreta) */}
                 <div className="absolute right-3 top-3 z-10">

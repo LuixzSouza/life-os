@@ -29,7 +29,9 @@ export interface GradeResponse {
   grade?: EssayGrade;
 }
 
-export const ENEM_COMPETENCIES = [
+// Sem `export`: arquivo "use server" só pode exportar funções async — exportar
+// este array derrubava o módulo inteiro (HTTP 500 em /studies/redacao).
+const ENEM_COMPETENCIES = [
   "C1 — Domínio da norma culta (gramática, ortografia, concordância)",
   "C2 — Compreender o tema e aplicar repertório sociocultural (não fugir do tema)",
   "C3 — Selecionar e organizar argumentos em defesa de um ponto de vista",

@@ -213,7 +213,7 @@ function BankCard({ account, onEdit, onDelete, onConnections }: { account: Accou
                 background: `linear-gradient(135deg, ${account.color || '#18181b'} 0%, #000000 100%)`
             }}
         >
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
             <div className="absolute top-[-50%] right-[-50%] w-[100%] h-[100%] bg-white/10 blur-[80px] rounded-full pointer-events-none"></div>
 
             <div className="relative z-10 p-7 flex flex-col justify-between h-full">
