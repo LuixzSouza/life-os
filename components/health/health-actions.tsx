@@ -20,7 +20,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // --- CONFIGURAÇÃO DE NAVEGAÇÃO ---
 const navItems = [
-    { label: "Overview", href: "/health", icon: LayoutDashboard },
+    { label: "Visão geral", href: "/health", icon: LayoutDashboard },
     { label: "Treino", href: "/health/gym", icon: Dumbbell },
     { label: "Corrida", href: "/health/running", icon: Footprints },
     { label: "Nutrição", href: "/health/nutrition", icon: Utensils },
@@ -38,6 +38,12 @@ export function HealthActions() {
 
     // Encontra qual é a página ativa no momento para mostrar no estado "fechado"
     const activeItem = navItems.find(item => pathname === item.href) || navItems[0];
+
+    // Ações contextuais: em Sono/Nutrição/Corpo "Registrar Treino" e "Nova
+    // Corrida" não fazem sentido (essas telas têm o próprio registro).
+    const onOverview = pathname === "/health";
+    const showGym = onOverview || pathname.startsWith("/health/gym");
+    const showRun = onOverview || pathname.startsWith("/health/running");
 
     return (
         <div className="flex w-full items-center gap-2 sm:w-auto sm:gap-4">
@@ -69,6 +75,7 @@ export function HealthActions() {
 
             {/* Ações mobile: só ícone, mesma altura da pílula */}
             <div className="flex shrink-0 items-center gap-1.5 sm:hidden">
+                {showGym && (
                 <Button
                     size="icon"
                     className="h-9 w-9 rounded-xl shadow-sm"
@@ -77,6 +84,8 @@ export function HealthActions() {
                 >
                     <Plus className="h-4 w-4" />
                 </Button>
+                )}
+                {showRun && (
                 <Button
                     size="icon"
                     variant="secondary"
@@ -86,6 +95,7 @@ export function HealthActions() {
                 >
                     <Timer className="h-4 w-4 text-blue-500" />
                 </Button>
+                )}
             </div>
 
             {/* ============== DESKTOP (sm+) ============== */}
@@ -165,10 +175,13 @@ export function HealthActions() {
 
             {/* BOTÕES DE AÇÃO RÁPIDA (desktop, com rótulo) */}
             <div className="hidden sm:flex items-center gap-2 shrink-0">
+                {showGym && (
                 <Button className="h-9 gap-2 font-medium shadow-sm" onClick={() => setGymOpen(true)}>
                     <Plus className="h-4 w-4" />
                     Registrar Treino
                 </Button>
+                )}
+                {showRun && (
                 <Button
                     variant="secondary"
                     className="h-9 gap-2 font-medium shadow-sm border border-border/40 bg-card hover:bg-muted/80"
@@ -177,6 +190,7 @@ export function HealthActions() {
                     <Timer className="h-4 w-4 text-blue-500" />
                     Nova Corrida
                 </Button>
+                )}
             </div>
 
             {/* ============== DIALOGS (compartilhados pelos dois layouts) ============== */}

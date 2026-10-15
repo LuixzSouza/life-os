@@ -26,7 +26,7 @@ export function SleepTrendChart({ data, goal = 8 }: SleepTrendChartProps) {
     <Card className="lg:col-span-2 border-border/60 bg-card shadow-sm">
       <CardHeader className="pb-2 border-b border-border/40 bg-muted/20">
         <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2 py-1">
-          <TrendingUp className="h-4 w-4 text-primary" /> Tendência (14 Dias)
+          <TrendingUp className="h-4 w-4 text-primary" /> Tendência (14 dias)
         </CardTitle>
       </CardHeader>
       <CardContent className="h-[300px] pt-6">

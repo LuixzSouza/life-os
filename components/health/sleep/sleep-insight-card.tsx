@@ -22,7 +22,7 @@ function buildAdvice(insights: SleepInsights, goal: number): string {
   if (score >= 85) {
     return "Descanso excelente! Sua duração e regularidade estão ótimas — isso potencializa memória, humor e performance física. Continue assim.";
   }
-  return "Bom descanso no geral. Pequenos ajustes na consistência dos horários podem levar seu Sleep Score ao nível ideal.";
+  return "Bom descanso no geral. Pequenos ajustes na consistência dos horários podem levar sua pontuação de sono ao nível ideal.";
 }
 
 export function SleepInsightCard({ insights, goal }: { insights: SleepInsights; goal: number }) {

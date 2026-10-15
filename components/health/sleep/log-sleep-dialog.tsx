@@ -69,12 +69,14 @@ export function LogSleepDialog({ goal = DEFAULT_SLEEP_GOAL }: { goal?: number })
   return (
     <Dialog open={isOpen} onOpenChange={(o) => { setIsOpen(o); if (!o) reset(); }}>
       <DialogTrigger asChild>
-        <Card className="bg-primary hover:bg-primary/90 border-primary text-primary-foreground shadow-lg shadow-primary/20 flex flex-col justify-center items-center text-center p-6 cursor-pointer transition-all hover:scale-[1.02] active:scale-[0.98] h-full">
-          <div className="bg-background/20 p-4 rounded-full mb-3 backdrop-blur-sm shadow-inner">
-            <Plus className="h-8 w-8 text-primary-foreground" />
+        {/* Card de ação no padrão do sistema (sutil: borda tracejada, destaque só
+            no ícone) — antes era um bloco vermelho sólido com sombra forte. */}
+        <Card className="group flex h-full cursor-pointer flex-col items-center justify-center border-dashed border-border/60 bg-card p-6 text-center transition-colors hover:border-primary/40 hover:bg-primary/5">
+          <div className="mb-3 rounded-full bg-primary/10 p-3 text-primary transition-colors group-hover:bg-primary/15">
+            <Plus className="h-6 w-6" />
           </div>
-          <h3 className="font-bold text-xl">Registrar Noite</h3>
-          <p className="text-primary-foreground/80 text-sm mt-1 font-medium">Deitou, acordou e pronto</p>
+          <h3 className="text-base font-semibold">Registrar noite</h3>
+          <p className="mt-1 text-sm text-muted-foreground">Deitou, acordou e pronto</p>
         </Card>
       </DialogTrigger>
 

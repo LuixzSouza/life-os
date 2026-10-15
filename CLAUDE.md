@@ -47,6 +47,24 @@ Life OS is a privacy-first, local-capable "Second Brain" operating system. It un
 - **Badges:** Use soft background colors with strong text (e.g., `bg-primary/10 text-primary border-none`).
 - **Responsiveness:** Always ensure toolbars and tabs scroll horizontally (`overflow-x-auto scrollbar-hide`) on mobile. Ensure main layouts use `max-w-7xl mx-auto`.
 
+### 6. Padrões visuais do sistema (padronização de 2026-10)
+Toda tela segue estes padrões — não reinvente localmente:
+- **Estrutura de página:** `PageShell` + `PageHeader` (ícone, título, descrição, `actions`) + `PageContainer` (`components/layout/page-shell.tsx`). Um cabeçalho só por tela — nada de 2º título grande logo abaixo.
+- **Ações do cabeçalho:** só AÇÕES da tela atual (contextuais). Atalhos de navegação que já estão no menu lateral não entram no header.
+- **Rótulo pequeno em caixa-alta** (títulos de card/KPI/seção, rótulos de campo): use **só** `eyebrow` + uma cor (`eyebrow text-muted-foreground`). Proibido montar `text-[10px] font-black uppercase tracking-widest` à mão. O `cn()` já entende que `eyebrow` substitui tamanho/peso/espaçamento.
+- **Tipografia:** sem `font-black`+`uppercase` em texto corrido; títulos `font-semibold`, textos `font-medium`/normal; mínimo `text-xs` (exceto `eyebrow`, 11px).
+- **Datas pt-BR:** `capFirst(format(...))` (`lib/utils`). Nunca o CSS `capitalize` (gera "Quinta-Feira, 15 De Outubro").
+- **Arredondamento:** containers `rounded-2xl`/`rounded-xl`, internos `rounded-lg`, chips `rounded-md`. Sem `rounded-[2rem]` & cia.
+- **Cores em JS/SVG/Recharts:** `var(--primary)` ou `color-mix(in oklch, var(--x) 40%, transparent)`. O tema é **oklch**: `hsl(var(--x))` é cor INVÁLIDA (gráfico sem cor).
+- **Gráficos:** `ChartContainer` (`components/ui/chart-container.tsx`), nunca `ResponsiveContainer` cru.
+- **Imagens externas:** `SafeImg` (`components/ui/safe-img.tsx`) com `fallback` — link quebrado nunca mostra ícone de imagem quebrada.
+- **Cards de ação ("+ Registrar…"):** sutis (`border-dashed`, destaque só no ícone), não blocos sólidos de cor primária.
+- **Textos da interface em português** (nada de "Overview", "Smart View", "Sleep Score").
+
+### 7. Armadilhas de Server Actions (aprendidas na prática)
+- Arquivo `"use server"` **só exporta funções async** — exportar const/objeto derruba o módulo (HTTP 500). Constantes compartilhadas vão em `lib/`.
+- Toda Server Action exportada é um **endpoint público** (chamável de qualquer rota; o `proxy.ts` não protege). Sempre checar a sessão nela ou na `lib` que ela chama, e **nunca** receber `userId` como parâmetro.
+
 ---
 
 ## 💻 Useful Commands

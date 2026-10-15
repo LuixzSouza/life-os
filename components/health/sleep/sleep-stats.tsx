@@ -24,7 +24,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
-            <Gauge className="h-4 w-4 text-primary" /> Sleep Score
+            <Gauge className="h-4 w-4 text-primary" /> Pontuação do sono
           </CardTitle>
         </CardHeader>
         <CardContent>

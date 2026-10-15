@@ -59,7 +59,7 @@ export function SleepDashboard({ data, initialGoal }: { data: SleepEntry[]; init
       {/* META EDITÁVEL */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Painel de Recuperação</h2>
+          <h2 className="eyebrow text-muted-foreground">Painel de Recuperação</h2>
           <p className="text-xs text-muted-foreground mt-1">Adultos precisam de 7 a 9 horas para recuperação ideal.</p>
         </div>
         <div className="flex items-center gap-3 h-11 px-4 rounded-xl border border-border/50 bg-muted/20">

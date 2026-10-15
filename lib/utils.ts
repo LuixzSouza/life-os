@@ -1,5 +1,15 @@
 import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { extendTailwindMerge } from "tailwind-merge"
+
+// `eyebrow` (@utility em globals.css) define tamanho, peso, espaçamento e
+// altura de linha. Sem ensinar isso ao tailwind-merge, cn("text-lg
+// font-semibold", "eyebrow") mantinha o text-lg e o rótulo saía GRANDE.
+const twMerge = extendTailwindMerge<"eyebrow">({
+  extend: {
+    classGroups: { eyebrow: ["eyebrow"] },
+    conflictingClassGroups: { eyebrow: ["font-size", "font-weight", "tracking", "leading"] },
+  },
+})
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
