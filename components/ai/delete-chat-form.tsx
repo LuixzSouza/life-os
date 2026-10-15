@@ -24,7 +24,7 @@ export function DeleteChatForm({ chatId }: { chatId: string }) {
             size="icon" 
             onClick={handleDelete}
             disabled={isPending}
-            className="h-10 w-10 rounded-xl text-muted-foreground hover:text-rose-500 hover:bg-rose-500/10 border border-transparent hover:border-rose-500/20 transition-all"
+            className="h-10 w-10 text-muted-foreground hover:text-rose-500 hover:bg-rose-500/10 border border-transparent hover:border-rose-500/20 transition-all"
             title="Protocolo de Limpeza (Wipe Memory)"
             aria-label="Apagar conversa"
         >

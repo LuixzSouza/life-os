@@ -118,7 +118,7 @@ export function MediaCard({ item }: { item: MediaItemData }) {
           <div className="absolute top-2 right-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity z-10" onClick={(e) => e.stopPropagation()}>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button size="icon" variant="ghost" aria-label="Mais ações" className="h-7 w-7 bg-black/50 hover:bg-black/80 text-white rounded-md backdrop-blur-sm border border-white/10">
+                <Button size="icon" variant="ghost" aria-label="Mais ações" className="h-7 w-7 bg-black/50 hover:bg-black/80 text-white backdrop-blur-sm border border-white/10">
                   <MoreVertical className="h-3.5 w-3.5" />
                 </Button>
               </DropdownMenuTrigger>
@@ -277,8 +277,8 @@ export function MediaCard({ item }: { item: MediaItemData }) {
 
           {/* Rodapé Fixo */}
           <div className="p-4 md:p-5 bg-muted/10 border-t border-border/40 flex justify-end gap-3 shrink-0">
-            <Button type="button" variant="ghost" onClick={() => setIsDetailsOpen(false)} className="rounded-lg">Cancelar</Button>
-            <Button type="submit" form={`review-form-${item.id}`} disabled={isLoading} className="bg-primary text-primary-foreground shadow-lg shadow-primary/20 min-w-[120px] rounded-lg">
+            <Button type="button" variant="ghost" onClick={() => setIsDetailsOpen(false)} className="">Cancelar</Button>
+            <Button type="submit" form={`review-form-${item.id}`} disabled={isLoading} className="bg-primary text-primary-foreground shadow-lg shadow-primary/20 min-w-[120px]">
               {isLoading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
               Salvar Review
             </Button>

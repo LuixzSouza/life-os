@@ -79,7 +79,7 @@ export function ExamCountdown() {
   const addButton = (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button variant="outline" size="sm" className="h-9 shrink-0 gap-1.5 rounded-xl border-dashed border-border/60 text-xs">
+        <Button variant="outline" size="sm" className="h-9 shrink-0 gap-1.5 border-dashed border-border/60 text-xs">
           <Plus className="h-3.5 w-3.5" /> Adicionar prova
         </Button>
       </PopoverTrigger>
@@ -89,7 +89,7 @@ export function ExamCountdown() {
           <Input placeholder="Ex.: ENEM, Fuvest, Concurso…" value={name} onChange={(e) => setName(e.target.value)} className="h-9" onKeyDown={(e) => { if (e.key === "Enter") addExam(); }} />
           <Input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="h-9" />
         </div>
-        <Button onClick={addExam} disabled={!name.trim() || !date} className="w-full h-9 rounded-lg font-semibold">
+        <Button onClick={addExam} disabled={!name.trim() || !date} className="w-full h-9 font-semibold">
           Adicionar
         </Button>
       </PopoverContent>

@@ -77,7 +77,7 @@ export function NewPageForm({
             <Button
               type="submit"
               disabled={pending || !cleanSlug}
-              className="w-full h-12 rounded-xl font-semibold shadow-sm gap-2"
+              className="w-full h-10 font-semibold shadow-sm gap-2"
             >
               {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
               {pending ? "Criando…" : "Criar endpoint"}

@@ -155,7 +155,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                         type="button"
                         onClick={handleImport}
                         disabled={isFetching}
-                        className="h-11 px-5 rounded-xl font-bold gap-2 shadow-sm shrink-0 active:scale-95 transition-all"
+                        className="h-10 px-5 font-bold gap-2 shadow-sm shrink-0 active:scale-95 transition-all"
                     >
                         {isFetching ? <Loader2 className="h-4 w-4 animate-spin" /> : <Wand2 className="h-4 w-4" />}
                         {isFetching ? "Buscando..." : "Importar"}
@@ -294,10 +294,10 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
 
             <DialogFooter className="border-t border-border/40 pt-6 mt-4">
                 <div className="flex w-full justify-between sm:justify-end gap-3">
-                    <Button type="button" variant="ghost" onClick={onClose} disabled={isLoading} className="h-12 px-6 rounded-xl font-bold">
+                    <Button type="button" variant="ghost" onClick={onClose} disabled={isLoading} className="h-10 px-6 font-bold">
                         Cancelar
                     </Button>
-                    <Button type="submit" disabled={isLoading} className="h-12 px-8 rounded-xl font-bold bg-foreground text-background hover:bg-foreground/90 shadow-lg shadow-foreground/10 transition-all active:scale-95 w-full sm:w-auto">
+                    <Button type="submit" disabled={isLoading} className="h-10 px-8 font-bold bg-foreground text-background hover:bg-foreground/90 shadow-lg shadow-foreground/10 transition-all active:scale-95 w-full sm:w-auto">
                         {isLoading ? <Loader2 className="h-5 w-5 animate-spin mr-2" /> : null}
                         {item ? "Salvar Alterações" : "Criar Meta"}
                     </Button>

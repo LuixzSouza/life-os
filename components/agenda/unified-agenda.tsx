@@ -865,7 +865,7 @@ function NowDivider() {
   return (
     <div className="flex items-center gap-2 py-0.5">
       <span className="h-2 w-2 animate-pulse rounded-full bg-rose-500" />
-      <span className="text-xs font-medium text-rose-500">agora · {format(new Date(), "HH:mm")}</span>
+      <span className="eyebrow text-rose-500">agora · {format(new Date(), "HH:mm")}</span>
       <span className="h-px flex-1 bg-rose-500/30" />
     </div>
   );
@@ -911,7 +911,7 @@ function AgendaRow({ item, showTime, dim, eventById, onEditEvent, onDeleteEvent,
             title="Editar evento"
             aria-label="Editar evento"
             onClick={() => onEditEvent(editable)}
-            className="h-8 w-8 rounded-lg text-muted-foreground hover:bg-primary/10 hover:text-primary"
+            className="h-8 w-8 text-muted-foreground hover:bg-primary/10 hover:text-primary"
           >
             <Pencil className="h-3.5 w-3.5" />
           </Button>
@@ -921,7 +921,7 @@ function AgendaRow({ item, showTime, dim, eventById, onEditEvent, onDeleteEvent,
             title="Excluir evento"
             aria-label="Excluir evento"
             onClick={() => onDeleteEvent(editable)}
-            className="h-8 w-8 rounded-lg text-muted-foreground hover:bg-rose-500/10 hover:text-rose-500"
+            className="h-8 w-8 text-muted-foreground hover:bg-rose-500/10 hover:text-rose-500"
           >
             <Trash2 className="h-3.5 w-3.5" />
           </Button>
@@ -940,7 +940,7 @@ function AgendaRow({ item, showTime, dim, eventById, onEditEvent, onDeleteEvent,
             title="Evento recorrente — editar/pular esta ocorrência ou a série"
             aria-label="Opções do evento recorrente"
             onClick={() => onRecurring(occurrenceAnchor, format(parseISO(item.date), "yyyy-MM-dd"))}
-            className="h-8 w-8 rounded-lg text-muted-foreground hover:bg-primary/10 hover:text-primary"
+            className="h-8 w-8 text-muted-foreground hover:bg-primary/10 hover:text-primary"
           >
             <Repeat className="h-3.5 w-3.5" />
           </Button>

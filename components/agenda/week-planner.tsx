@@ -94,7 +94,7 @@ export function WeekPlanner({ tasks, selectedDateISO, themedDays }: WeekPlannerP
                   style={theme ? { backgroundColor: `${theme.color}14` } : undefined}
                 >
                   <div className="flex items-center justify-between gap-1">
-                    <p className={cn("text-xs font-medium", today ? "text-primary" : "text-muted-foreground")}>
+                    <p className={cn("eyebrow", today ? "text-primary" : "text-muted-foreground")}>
                       {format(day, "EEE", { locale: ptBR }).replace(".", "")}
                     </p>
                     <p className={cn("text-sm font-semibold tabular-nums", today ? "text-primary" : "text-foreground")}>
@@ -185,7 +185,7 @@ function DayQuickAdd({ day }: { day: Date }) {
         placeholder="Anotar…"
         className="h-7 flex-1 border-none bg-transparent px-1 text-xs shadow-none focus-visible:ring-0"
       />
-      <Button type="submit" disabled={isPending} size="icon" variant="ghost" className="h-9 w-9 md:h-7 md:w-7 shrink-0 rounded-md" title="Adicionar" aria-label="Adicionar anotação">
+      <Button type="submit" disabled={isPending} size="icon" variant="ghost" className="h-9 w-9 md:h-7 md:w-7 shrink-0" title="Adicionar" aria-label="Adicionar anotação">
         {isPending ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Plus className="h-3.5 w-3.5" />}
       </Button>
     </form>

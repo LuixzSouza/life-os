@@ -39,7 +39,7 @@ export function FoodSearch({ searchOpen, setSearchOpen, ingredients, onAdd }: Fo
             variant="outline"
             role="combobox"
             aria-expanded={searchOpen}
-            className="w-full justify-between h-12 text-base font-normal border-primary/20 hover:border-primary/40"
+            className="w-full justify-between h-10 text-base font-normal border-primary/20 hover:border-primary/40"
           >
             <div className="flex items-center gap-2">
               <Search className="h-4 w-4 text-muted-foreground" />

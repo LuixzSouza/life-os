@@ -28,6 +28,7 @@ import { WorkoutDetailModal } from "./workout-detail";
 import { downloadWorkoutsCsv } from "./export-csv";
 import type { GymWorkout, VolumePoint, MuscleCount } from "./gym-types";
 import { loadMultiplier, type MuscleRecovery, type Equipment } from "./session/session-types";
+import { EmptyState } from "@/components/ui/empty-state";
 
 export type { Exercise, GymWorkout } from "./gym-types";
 
@@ -122,7 +123,7 @@ export function GymDashboard({ workouts, recovery = [] }: { workouts: GymWorkout
             <Button
               size="sm"
               variant="ghost"
-              className="h-9 gap-2 rounded-lg text-muted-foreground hover:text-foreground"
+              className="h-9 gap-2 text-muted-foreground hover:text-foreground"
               onClick={() => { downloadWorkoutsCsv(workouts); toast.success("CSV gerado — 1 linha por série. 📊"); }}
               title="Exportar histórico em CSV (1 linha por série)"
             >
@@ -131,7 +132,7 @@ export function GymDashboard({ workouts, recovery = [] }: { workouts: GymWorkout
           )}
           <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
             <DialogTrigger asChild>
-              <Button size="sm" variant="outline" className="h-9 w-full gap-2 font-medium rounded-lg shadow-sm sm:w-auto">
+              <Button size="sm" variant="outline" className="h-9 w-full gap-2 font-medium shadow-sm sm:w-auto">
                 <Plus className="h-4 w-4" /> Registrar Sessão
               </Button>
             </DialogTrigger>
@@ -203,13 +204,11 @@ export function GymDashboard({ workouts, recovery = [] }: { workouts: GymWorkout
               {/* Feed List */}
               <div className="space-y-4">
                 {filteredWorkouts.length === 0 ? (
-                  <div className="flex flex-col items-center justify-center py-16 border border-dashed border-border/60 rounded-2xl bg-muted/5 text-center">
-                    <div className="p-3 bg-muted/20 rounded-full mb-3">
-                      <Dumbbell className="h-6 w-6 text-muted-foreground/50" />
-                    </div>
-                    <h3 className="text-base font-semibold text-foreground">Nenhum treino encontrado</h3>
-                    <p className="text-xs text-muted-foreground mt-1">Ajuste os filtros ou registre sua sessão de hoje.</p>
-                  </div>
+                  <EmptyState
+                    icon={Dumbbell}
+                    title="Nenhum treino encontrado"
+                    description="Ajuste os filtros ou registre sua sessão de hoje."
+                  />
                 ) : (
                   filteredWorkouts.map((w) => (
                     <WorkoutCard key={w.id} workout={w} onOpenDetail={() => setDetailWorkout(w)} />

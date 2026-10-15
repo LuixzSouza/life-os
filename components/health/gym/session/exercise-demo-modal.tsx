@@ -142,7 +142,7 @@ export function ExerciseDemoModal({
                 placeholder="Cole o link do YouTube…"
                 className="h-11 border-white/20 bg-white/5 text-white placeholder:text-white/40"
               />
-              <Button onClick={save} disabled={!url.trim()} className="h-11 shrink-0 gap-1.5">
+              <Button onClick={save} disabled={!url.trim()} className="h-10 shrink-0 gap-1.5">
                 <Save className="h-4 w-4" /> Salvar
               </Button>
             </div>

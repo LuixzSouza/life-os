@@ -150,7 +150,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
         {item ? (
           <AlertDialog open={isDeleteDialogOpen} onOpenChange={setIsDeleteDialogOpen}>
             <AlertDialogTrigger asChild>
-              <Button type="button" variant="outline" className="h-12 w-12 p-0 rounded-xl text-rose-500 border-rose-500/20 hover:bg-rose-500 hover:text-white transition-all shrink-0">
+              <Button type="button" variant="outline" className="h-12 w-12 p-0 text-rose-500 border-rose-500/20 hover:bg-rose-500 hover:text-white transition-all shrink-0">
                 <Trash2 className="h-5 w-5" />
               </Button>
             </AlertDialogTrigger>
@@ -171,10 +171,10 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
         )}
 
         <div className="flex gap-2 flex-1 justify-end">
-          <Button type="button" variant="ghost" onClick={onClose} className="h-12 px-6 rounded-xl text-xs font-medium text-muted-foreground hover:bg-muted hidden sm:flex">
+          <Button type="button" variant="ghost" onClick={onClose} className="h-10 px-6 text-xs font-medium text-muted-foreground hover:bg-muted hidden sm:flex">
             Cancelar
           </Button>
-          <Button type="submit" disabled={isLoading} className="h-12 w-full sm:w-auto px-8 rounded-xl bg-foreground text-background hover:bg-primary hover:text-white shadow-lg font-medium text-xs transition-all active:scale-95">
+          <Button type="submit" disabled={isLoading} className="h-10 w-full sm:w-auto px-8 bg-foreground text-background hover:bg-primary hover:text-white shadow-lg font-medium text-xs transition-all active:scale-95">
             {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Gravar Dados"}
           </Button>
         </div>

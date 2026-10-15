@@ -334,7 +334,7 @@ export default async function ReviewPage({
         <div className="space-y-6 pb-24 animate-in fade-in duration-500">
           {/* Navegação do período + toggle Mês/Ano */}
           <div className="flex items-center justify-between gap-3">
-            <Button asChild variant="outline" size="sm" className="gap-1 rounded-lg">
+            <Button asChild variant="outline" size="sm" className="gap-1">
               <Link href={isYearMode ? `/review?year=${year - 1}` : `/review?month=${ym(prevStart)}`}>
                 <ChevronLeft className="h-4 w-4" />
                 {isYearMode ? year - 1 : MONTH_NAMES[prevStart.getMonth()]}
@@ -370,13 +370,13 @@ export default async function ReviewPage({
             </div>
 
             {hasNext ? (
-              <Button asChild variant="outline" size="sm" className="gap-1 rounded-lg">
+              <Button asChild variant="outline" size="sm" className="gap-1">
                 <Link href={isYearMode ? `/review?year=${year + 1}` : `/review?month=${ym(new Date(year, monthIdx + 1, 1))}`}>
                   {isYearMode ? year + 1 : MONTH_NAMES[(monthIdx + 1) % 12]} <ChevronRight className="h-4 w-4" />
                 </Link>
               </Button>
             ) : (
-              <Button variant="outline" size="sm" disabled className="gap-1 rounded-lg opacity-40">
+              <Button variant="outline" size="sm" disabled className="gap-1 opacity-40">
                 Próximo <ChevronRight className="h-4 w-4" />
               </Button>
             )}

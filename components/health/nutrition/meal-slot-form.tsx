@@ -166,14 +166,14 @@ export function MealSlotForm({ dayIdx, type, existingSlot, onClose }: MealSlotFo
           variant="outline"
           onClick={onClose}
           disabled={isSaving}
-          className="sm:flex-1 h-11 border-border/50 hover:border-primary/30"
+          className="sm:flex-1 h-10 border-border/50 hover:border-primary/30"
         >
           Cancelar
         </Button>
         <Button
           onClick={handleSubmit}
           disabled={isSaving}
-          className="sm:flex-1 h-11 gap-2 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-primary/25 transition-all duration-200"
+          className="sm:flex-1 h-10 gap-2 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-primary/25 transition-all duration-200"
         >
           {isSaving && <Loader2 className="h-4 w-4 animate-spin" />}
           Salvar Refeição

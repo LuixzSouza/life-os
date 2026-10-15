@@ -345,7 +345,7 @@ export function EventForm({
             type="button"
             variant="ghost"
             onClick={onClose}
-            className="flex-1 h-12 rounded-xl text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-border/40 transition-all hidden sm:flex"
+            className="flex-1 h-10 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-border/40 transition-all hidden sm:flex"
           >
             Cancelar
           </Button>
@@ -353,7 +353,7 @@ export function EventForm({
         <Button
           type="submit"
           disabled={isPending}
-          className="flex-[2] h-12 w-full rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs shadow-lg transition-all group active:scale-95"
+          className="flex-[2] h-10 w-full bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs shadow-lg transition-all group active:scale-95"
         >
           {isPending ? (
             <Loader2 className="h-4 w-4 animate-spin" />

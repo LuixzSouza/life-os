@@ -46,7 +46,7 @@ const CustomTooltip = ({ active, payload, label }: FlowTooltipProps) => {
 
   return (
     <div className="flex flex-col gap-2 rounded-xl border border-border/40 bg-background/95 p-3 shadow-2xl backdrop-blur-md min-w-[180px]">
-      <span className="text-xs text-muted-foreground font-medium border-b border-border/40 pb-2">
+      <span className="eyebrow text-muted-foreground border-b border-border/40 pb-2">
         {label}
       </span>
       <div className="flex items-center justify-between gap-3">

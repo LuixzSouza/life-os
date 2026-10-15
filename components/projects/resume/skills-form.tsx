@@ -29,9 +29,9 @@ const SkillCategory = ({ title, category, data, onAdd, onRemove, onUpdate }: Ski
         <div className="h-6 w-6 rounded-md bg-primary/10 flex items-center justify-center text-primary">
             <Code2 className="h-3 w-3" />
         </div>
-        <Label className="text-xs font-medium text-muted-foreground">{title}</Label>
+        <Label className="eyebrow text-muted-foreground">{title}</Label>
       </div>
-      <Button size="icon" variant="ghost" aria-label="Adicionar habilidade" className="h-7 w-7 rounded-lg bg-background shadow-sm hover:bg-primary/10 hover:text-primary" onClick={() => onAdd(category)}>
+      <Button size="icon" variant="ghost" aria-label="Adicionar habilidade" className="h-7 w-7 bg-background shadow-sm hover:bg-primary/10 hover:text-primary" onClick={() => onAdd(category)}>
         <Plus className="h-3.5 w-3.5" />
       </Button>
     </div>
@@ -63,7 +63,7 @@ const SkillCategory = ({ title, category, data, onAdd, onRemove, onUpdate }: Ski
             size="icon"
             variant="ghost"
             aria-label="Remover habilidade"
-            className="h-10 w-10 shrink-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all rounded-xl"
+            className="h-10 w-10 shrink-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all"
             onClick={() => onRemove(category, index)}
           >
             <X className="h-4 w-4" />
@@ -108,7 +108,7 @@ const SoftSkills = ({ data, onChange }: SkillsFormProps) => {
           placeholder="Ex: Trabalho em equipe (Enter para adicionar)"
           className="h-10 text-sm bg-background border-border/50 rounded-xl shadow-inner font-medium"
         />
-        <Button size="icon" variant="ghost" aria-label="Adicionar" className="h-10 w-10 shrink-0 rounded-xl bg-background shadow-sm hover:bg-primary/10 hover:text-primary" onClick={addTag}>
+        <Button size="icon" variant="ghost" aria-label="Adicionar" className="h-10 w-10 shrink-0 bg-background shadow-sm hover:bg-primary/10 hover:text-primary" onClick={addTag}>
           <Plus className="h-4 w-4" />
         </Button>
       </div>

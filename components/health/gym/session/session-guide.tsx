@@ -199,7 +199,7 @@ export function EducationalCard({
           type="button"
           onClick={action}
           size="sm"
-          className="h-8 w-full rounded-lg text-xs gap-1.5"
+          className="h-8 w-full text-xs gap-1.5"
         >
           {actionLabel}
         </Button>

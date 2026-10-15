@@ -132,7 +132,7 @@ export function HydrationCard({ total, goal = 3000 }: HydrationCardProps) {
                             size="icon"
                             disabled={isPending || !customAmount}
                             onClick={() => handleAddWater(Number(customAmount))}
-                            className="h-10 w-10 shrink-0 rounded-xl"
+                            className="h-10 w-10 shrink-0"
                             aria-label="Registrar quantidade"
                         >
                             {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
@@ -160,7 +160,7 @@ function PresetButton({ ml, label, onClick, disabled }: PresetButtonProps) {
             variant="outline"
             disabled={disabled}
             onClick={onClick}
-            className="h-12 flex-col gap-0 rounded-xl border-border/40 transition-colors hover:border-blue-500/30 hover:bg-blue-500/10 hover:text-blue-600"
+            className="h-10 flex-col gap-0 border-border/40 transition-colors hover:border-blue-500/30 hover:bg-blue-500/10 hover:text-blue-600"
         >
             <span className="text-sm font-bold tabular-nums">+{ml}ml</span>
             <span className="text-[10px] font-medium text-muted-foreground">{label}</span>

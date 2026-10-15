@@ -98,7 +98,7 @@ function UsageItem({ icon, label, used, limit, colorClass, textColorClass }: Usa
             {/* GATILHO (O QUE APARECE NA BARRA) */}
             <HoverCardTrigger asChild>
                 <div className="flex flex-col gap-1.5 w-24 sm:w-28 cursor-crosshair group">
-                    <div className="flex justify-between items-center text-xs font-medium text-muted-foreground/80 group-hover:text-foreground transition-colors">
+                    <div className="eyebrow flex justify-between items-center text-muted-foreground/80 group-hover:text-foreground transition-colors">
                         <span className={cn("flex items-center gap-1.5 transition-colors", "group-hover:" + textColorClass)}>
                             {icon} {label}
                         </span>
@@ -127,7 +127,7 @@ function UsageItem({ icon, label, used, limit, colorClass, textColorClass }: Usa
                         <Cpu className="h-4 w-4" /> Uso de Tokens
                     </h4>
                     <span className={cn(
-                        "text-xs font-medium px-2 py-1 rounded-full text-background shadow-sm", 
+                        "eyebrow px-2 py-1 rounded-full text-background shadow-sm", 
                         isCritical ? "bg-rose-500 animate-pulse" : colorClass
                     )}>
                         {isCritical ? "CRÍTICO" : "CICLO ATIVO"}

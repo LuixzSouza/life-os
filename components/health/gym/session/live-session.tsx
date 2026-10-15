@@ -264,13 +264,13 @@ export function LiveSession({
             Você tem um treino <span className="font-semibold text-foreground">“{s.session.title}”</span> parado há {stalePrompt}. Deseja retomar de onde parou ou descartar?
           </p>
           <div className="mt-6 flex flex-col gap-2">
-            <Button onClick={() => { s.touch(); setStaleHandled(true); }} className="h-12 gap-2 text-base font-bold">
+            <Button onClick={() => { s.touch(); setStaleHandled(true); }} className="h-10 gap-2 text-base font-bold">
               <Play className="h-5 w-5" /> Retomar treino
             </Button>
             <Button
               variant="ghost"
               onClick={() => { s.cancel(); setStaleHandled(true); }}
-              className="h-11 gap-2 text-destructive hover:bg-destructive/10 hover:text-destructive"
+              className="h-10 gap-2 text-destructive hover:bg-destructive/10 hover:text-destructive"
             >
               <Trash2 className="h-4 w-4" /> Descartar e começar do zero
             </Button>

@@ -109,7 +109,7 @@ export function CredentialFields({ item }: { item: AccessItem }) {
             size="icon"
             variant="ghost"
             aria-label="Copiar usuário"
-            className="absolute right-1 top-1 h-8 w-8 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+            className="absolute right-1 top-1 h-8 w-8 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
             onClick={() => handleCopy(item.username, 'USER')}
           >
             {copiedUser ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
@@ -140,11 +140,11 @@ export function CredentialFields({ item }: { item: AccessItem }) {
           </div>
 
           <div className="flex items-center gap-0.5">
-            <Button size="icon" variant="ghost" aria-label={visible ? "Ocultar senha" : "Mostrar senha"} className="h-8 w-8 rounded-lg hover:bg-muted/50 text-muted-foreground" onClick={handleReveal}>
+            <Button size="icon" variant="ghost" aria-label={visible ? "Ocultar senha" : "Mostrar senha"} className="h-8 w-8 hover:bg-muted/50 text-muted-foreground" onClick={handleReveal}>
               {visible ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
             </Button>
             <div className="w-px h-5 bg-border/60 mx-1" />
-            <Button size="icon" variant="ghost" className="h-8 w-8 rounded-lg hover:bg-emerald-500/10 hover:text-emerald-500 text-muted-foreground" onClick={handleCopyPassword} disabled={copying} title="Copiar senha (sem exibir)" aria-label="Copiar senha">
+            <Button size="icon" variant="ghost" className="h-8 w-8 hover:bg-emerald-500/10 hover:text-emerald-500 text-muted-foreground" onClick={handleCopyPassword} disabled={copying} title="Copiar senha (sem exibir)" aria-label="Copiar senha">
               {copying ? <Loader2 className="h-4 w-4 animate-spin" /> : copiedPass ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
             </Button>
           </div>

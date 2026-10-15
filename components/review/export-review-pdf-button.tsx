@@ -69,7 +69,7 @@ export function ExportReviewPdfButton(props: ExportReviewPdfButtonProps) {
   };
 
   return (
-    <Button onClick={handleExport} disabled={loading} variant="outline" size="sm" className="gap-1.5 rounded-lg">
+    <Button onClick={handleExport} disabled={loading} variant="outline" size="sm" className="gap-1.5">
       {loading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <FileDown className="h-3.5 w-3.5" />}
       <span className="hidden sm:inline">{loading ? "Gerando…" : "Exportar PDF"}</span>
     </Button>

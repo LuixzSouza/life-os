@@ -103,7 +103,7 @@ export const MetricCard: FC<{ title: string; value: number; icon: ReactNode; tre
           </div>
         </div>
         <div className="space-y-1 mt-auto">
-          <p className="text-xs font-medium opacity-70">{title}</p>
+          <p className="eyebrow opacity-70">{title}</p>
           <div className="text-2xl sm:text-3xl font-black font-mono tracking-tighter tabular-nums flex items-center">
             <PrivacyText value={value} isSmartView={!!isSmartView} />
           </div>
@@ -117,7 +117,7 @@ export const MetricCard: FC<{ title: string; value: number; icon: ReactNode; tre
 export const ValueRow: FC<{ label: string; value: number; tooltip: string; isNegative?: boolean; isTotal?: boolean; isSmartView?: boolean; }> = ({ label, value, tooltip, isNegative, isTotal, isSmartView }) => (
   <div className={cn("flex justify-between items-center py-3.5 px-4 -mx-4 rounded-xl transition-colors group/row hover:bg-muted/40", isTotal && "mt-2 mb-4 bg-muted/30 border border-border/50 shadow-inner")}>
     <div className="flex items-center gap-2">
-      <span className={cn("text-xs sm:text-sm font-semibold tracking-tight transition-colors", isTotal ? "text-foreground font-medium text-[11px]" : "text-muted-foreground group-hover/row:text-foreground")}>
+      <span className={cn("eyebrow sm:text-sm transition-colors", isTotal ? "text-foreground font-medium text-[11px]" : "text-muted-foreground group-hover/row:text-foreground")}>
         {label}
       </span>
       <TooltipProvider delayDuration={0}>

@@ -122,7 +122,7 @@ export function BusinessView({ initialClients, friends, pixKey, businessName }: 
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <Button onClick={handleOpenNewClientModal} className="w-full sm:w-auto shadow-md gap-2 font-bold rounded-xl">
+        <Button onClick={handleOpenNewClientModal} className="w-full sm:w-auto shadow-md gap-2 font-bold">
           <Plus size={18} /> Novo Cliente
         </Button>
       </div>

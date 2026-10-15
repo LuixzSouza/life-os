@@ -32,7 +32,7 @@ export function NewSiteDialog() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="h-10 px-4 gap-2 font-medium rounded-lg shadow-sm">
+        <Button className="h-10 px-4 gap-2 font-medium shadow-sm">
           <Plus className="h-4 w-4" /> Novo Container
         </Button>
       </DialogTrigger>
@@ -71,7 +71,7 @@ export function NewSiteDialog() {
           </DialogBody>
 
           <DialogFooter>
-            <Button type="submit" disabled={pending} className="w-full h-10 rounded-lg font-semibold shadow-sm gap-2">
+            <Button type="submit" disabled={pending} className="w-full h-10 font-semibold shadow-sm gap-2">
               {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
               {pending ? "Criando…" : "Criar container"}
             </Button>

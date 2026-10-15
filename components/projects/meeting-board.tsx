@@ -13,6 +13,7 @@ import { createMeeting } from "@/app/(dashboard)/projects/actions";
 import { parseActionItems } from "@/lib/meeting-summary";
 import { useRecording } from "@/components/providers/recording-provider";
 import { MeetingEditor, type MeetingData } from "./meeting-editor";
+import { EmptyState } from "@/components/ui/empty-state";
 
 interface MeetingBoardProps {
   meetings: MeetingData[];
@@ -100,7 +101,7 @@ export function MeetingBoard({ meetings, projectId }: MeetingBoardProps) {
             <p className="text-[10px] font-bold text-muted-foreground uppercase">Anote rápido e deixe a IA virar checklist</p>
           </div>
         </div>
-        <Button onClick={handleNew} disabled={creating} className="gap-2 rounded-xl font-bold shadow-lg shadow-primary/20">
+        <Button onClick={handleNew} disabled={creating} className="gap-2 font-bold shadow-lg shadow-primary/20">
           {creating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
           Nova Reunião
         </Button>
@@ -152,20 +153,18 @@ export function MeetingBoard({ meetings, projectId }: MeetingBoardProps) {
       )}
 
       {meetings.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
-          <div className="h-16 w-16 rounded-2xl bg-muted/50 flex items-center justify-center mb-4">
-            <FileText className="h-8 w-8 text-muted-foreground/30" />
-          </div>
-          <h4 className="font-bold text-foreground">Nenhuma reunião ainda</h4>
-          <p className="text-sm text-muted-foreground max-w-xs mt-1">Crie uma, anote os pontos durante a call e gere o checklist com IA.</p>
-        </div>
+        <EmptyState
+          icon={FileText}
+          title="Nenhuma reunião ainda"
+          description="Crie uma, anote os pontos durante a call e gere o checklist com IA."
+        />
       ) : filtered.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-16 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
-          <Search className="h-7 w-7 text-muted-foreground/30 mb-3" />
-          <h4 className="font-bold text-foreground">Nenhuma reunião encontrada</h4>
-          <p className="text-sm text-muted-foreground mt-1">Ajuste a busca ou os filtros.</p>
-          <button onClick={clearFilters} className="mt-3 text-xs font-bold text-primary hover:underline">Limpar filtros</button>
-        </div>
+        <EmptyState
+          icon={Search}
+          title="Nenhuma reunião encontrada"
+          description="Ajuste a busca ou os filtros."
+          action={<Button variant="outline" size="sm" onClick={clearFilters}>Limpar filtros</Button>}
+        />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((m) => {

@@ -509,7 +509,7 @@ export function TimeBlockingDay({ events, tasks, themedDays, selectedDateISO }: 
               start.setHours(9, 0, 0, 0);
               setCreating({ start, end: new Date(start.getTime() + 3_600_000) });
             }}
-            className="h-9 rounded-lg px-3.5 text-sm font-medium"
+            className="h-9 px-3.5 text-sm font-medium"
           >
             <Plus className="mr-1.5 h-4 w-4 stroke-[3]" /> Bloco
           </Button>
@@ -540,7 +540,7 @@ export function TimeBlockingDay({ events, tasks, themedDays, selectedDateISO }: 
                       size="sm"
                       variant={scheduled ? "ghost" : "outline"}
                       onClick={() => scheduleTask(t)}
-                      className="h-8 shrink-0 rounded-lg px-2.5 text-xs font-medium"
+                      className="h-8 shrink-0 px-2.5 text-xs font-medium"
                     >
                       <CalendarPlus2 className="mr-1 h-3.5 w-3.5" /> Agendar
                     </Button>

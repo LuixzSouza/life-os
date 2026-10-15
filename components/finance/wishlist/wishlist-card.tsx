@@ -101,7 +101,7 @@ function SummaryTile({ icon, label, value, blur }: { icon: React.ReactNode; labe
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-xs font-medium text-muted-foreground truncate">{label}</p>
+                <p className="eyebrow text-muted-foreground truncate">{label}</p>
                 <p className={cn("text-base font-black font-mono tracking-tight text-foreground truncate", blur && "blur-sm select-none")}>{value}</p>
             </div>
         </div>
@@ -157,11 +157,11 @@ function BuyDialog({ item, accounts, affordable }: { item: WishlistData; account
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
                 {affordable ? (
-                    <Button className="w-full h-11 rounded-xl font-bold bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm transition-all active:scale-[0.98]">
+                    <Button className="w-full h-10 font-bold bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm transition-all active:scale-[0.98]">
                         <ShoppingCart className="h-4 w-4 mr-2" /> Comprar agora
                     </Button>
                 ) : (
-                    <Button variant="outline" className="w-full h-11 rounded-xl font-semibold border-border/50 text-muted-foreground hover:text-foreground transition-all active:scale-[0.98]">
+                    <Button variant="outline" className="w-full h-10 font-semibold border-border/50 text-muted-foreground hover:text-foreground transition-all active:scale-[0.98]">
                         <Check className="h-4 w-4 mr-2" /> Já comprei
                     </Button>
                 )}
@@ -211,7 +211,7 @@ function BuyDialog({ item, accounts, affordable }: { item: WishlistData; account
                     </div>
                 </DialogBody>
                 <DialogFooter>
-                    <Button onClick={handleBuy} disabled={isLoading} className="w-full h-14 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 transition-all active:scale-95">
+                    <Button onClick={handleBuy} disabled={isLoading} className="w-full h-14 font-bold text-lg shadow-lg shadow-primary/20 transition-all active:scale-95">
                         {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : "Confirmar compra"}
                     </Button>
                 </DialogFooter>
@@ -252,7 +252,7 @@ function PlanButton({ item }: { item: WishlistData }) {
             onClick={handlePlan}
             disabled={loading}
             title="Calcula o prazo realista pela sua sobra mensal real e cria uma tarefa-plano com a data prevista"
-            className="w-full h-9 rounded-xl text-xs font-bold text-muted-foreground hover:text-primary"
+            className="w-full h-9 text-xs font-bold text-muted-foreground hover:text-primary"
         >
             {loading
                 ? <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -363,7 +363,7 @@ function WishlistCard({ item, accounts, totalBalance }: { item: WishlistData; ac
 
                      <Dialog open={isEditOpen} onOpenChange={setIsEditOpen}>
                         <DialogTrigger asChild>
-                            <Button size="icon" variant="secondary" aria-label="Editar desejo" className="h-8 w-8 rounded-lg bg-background/80 backdrop-blur-md shadow-sm border border-border/50 hover:text-primary transition-all">
+                            <Button size="icon" variant="secondary" aria-label="Editar desejo" className="h-8 w-8 bg-background/80 backdrop-blur-md shadow-sm border border-border/50 hover:text-primary transition-all">
                                 <Pencil className="h-3.5 w-3.5" />
                             </Button>
                         </DialogTrigger>
@@ -381,7 +381,7 @@ function WishlistCard({ item, accounts, totalBalance }: { item: WishlistData; ac
 
                     <AlertDialog open={isConfirmOpen} onOpenChange={setIsConfirmOpen}>
                         <AlertDialogTrigger asChild>
-                            <Button size="icon" variant="secondary" aria-label="Excluir desejo" className="h-8 w-8 rounded-lg bg-background/80 backdrop-blur-md shadow-sm border border-border/50 hover:text-rose-500 transition-all">
+                            <Button size="icon" variant="secondary" aria-label="Excluir desejo" className="h-8 w-8 bg-background/80 backdrop-blur-md shadow-sm border border-border/50 hover:text-rose-500 transition-all">
                                 <Trash2 className="h-3.5 w-3.5" />
                             </Button>
                         </AlertDialogTrigger>
@@ -462,7 +462,7 @@ function WishlistCard({ item, accounts, totalBalance }: { item: WishlistData; ac
             {/* AÇÃO */}
             <div className="px-5 pb-5 space-y-2">
                 {bought ? (
-                    <Button variant="outline" className="w-full h-11 rounded-xl border-emerald-500/25 bg-emerald-500/5 font-semibold text-emerald-600 hover:bg-emerald-500/10 cursor-default">
+                    <Button variant="outline" className="w-full h-10 border-emerald-500/25 bg-emerald-500/5 font-semibold text-emerald-600 hover:bg-emerald-500/10 cursor-default">
                         <Check className="h-4 w-4 mr-2" /> Comprado!
                     </Button>
                 ) : (

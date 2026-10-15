@@ -84,7 +84,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="secondary" className="w-full gap-2 rounded-xl font-medium text-xs h-11 shadow-sm hover:bg-primary hover:text-primary-foreground transition-all group">
+        <Button variant="secondary" className="w-full gap-2 font-medium text-xs h-10 shadow-sm hover:bg-primary hover:text-primary-foreground transition-all group">
           <Code2 className="h-4 w-4 group-hover:scale-110 transition-transform" />
           Gerenciar Container
         </Button>
@@ -113,7 +113,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                 aria-label="Excluir site"
                 onClick={handleDeleteSite}
                 disabled={isDeleting}
-                className="h-10 w-10 rounded-xl text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
+                className="h-10 w-10 text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
               >
                 {isDeleting ? <Loader2 className="h-5 w-5 animate-spin" /> : <Trash2 className="h-5 w-5" />}
               </Button>
@@ -192,7 +192,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                       <Button
                         variant="link"
                         size="sm"
-                        className="eyebrow text-destructive hover:no-underline"
+                        className="text-xs font-medium text-destructive hover:no-underline"
                       >
                         Deletar Rota /{page.slug}
                       </Button>
@@ -236,7 +236,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                         </div>
                       </div>
 
-                      <Button type="submit" className="w-full h-12 rounded-xl bg-foreground text-background hover:bg-foreground/90 font-medium text-[11px] shadow-xl">
+                      <Button type="submit" className="w-full h-10 bg-foreground text-background hover:bg-foreground/90 font-medium text-[11px] shadow-xl">
                         Provisionar Rota
                       </Button>
                     </form>

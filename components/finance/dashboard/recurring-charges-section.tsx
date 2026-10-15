@@ -26,7 +26,7 @@ export function RecurringChargesSection({ charges, totalCharges, clients }: Recu
           Cobranças Recorrentes
         </h3>
         <RecurringChargeDialog clients={clients} trigger={
-          <Button variant="outline" size="sm" className="gap-2 rounded-xl font-bold shrink-0 hover:border-emerald-500/50 hover:text-emerald-600 transition-all active:scale-95">
+          <Button variant="outline" size="sm" className="gap-2 font-bold shrink-0 hover:border-emerald-500/50 hover:text-emerald-600 transition-all active:scale-95">
             <Plus className="h-4 w-4" /> <span className="hidden sm:inline">Nova cobrança</span>
           </Button>
         } />
@@ -42,7 +42,7 @@ export function RecurringChargesSection({ charges, totalCharges, clients }: Recu
             description="Cadastre o que você recebe todo mês (mensalidades, serviços) para ser lembrado de cobrar na data certa."
             action={
               <RecurringChargeDialog clients={clients} trigger={
-                <Button className="rounded-xl h-11 px-8 font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-500/20 transition-all active:scale-95">
+                <Button className="h-10 px-8 font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-500/20 transition-all active:scale-95">
                   <Plus className="h-4 w-4 mr-2" /> Criar cobrança
                 </Button>
               } />

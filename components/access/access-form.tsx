@@ -195,7 +195,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
             {/* GRID: TÍTULO E CATEGORIA */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                  <Label className="text-xs font-medium text-muted-foreground ml-1">
+                  <Label className="eyebrow text-muted-foreground ml-1">
                       {isNote ? "Título" : accessType === "CLIENT" ? "Serviço / Instância" : "Plataforma"}
                   </Label>
                   <div className="relative group">
@@ -280,7 +280,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                   {/* Opções do gerador (comprimento, números, símbolos) */}
                   <Popover>
                     <PopoverTrigger asChild>
-                      <Button type="button" variant="outline" size="icon" title="Opções do gerador" aria-label="Opções do gerador de senha" className="h-11 w-11 shrink-0 rounded-xl border-border/40 hover:bg-muted">
+                      <Button type="button" variant="outline" size="icon" title="Opções do gerador" aria-label="Opções do gerador de senha" className="h-11 w-11 shrink-0 border-border/40 hover:bg-muted">
                         <SlidersHorizontal className="h-4 w-4" />
                       </Button>
                     </PopoverTrigger>
@@ -304,7 +304,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                         <Label className="text-xs font-medium text-muted-foreground">Incluir símbolos</Label>
                         <Switch checked={genOptions.symbols} onCheckedChange={(c) => setGenOptions((o) => ({ ...o, symbols: c }))} />
                       </div>
-                      <Button type="button" onClick={handleGeneratePassword} className="w-full h-10 rounded-xl font-medium text-xs gap-2">
+                      <Button type="button" onClick={handleGeneratePassword} className="w-full h-10 font-medium text-xs gap-2">
                         <Wand2 className="h-3.5 w-3.5" /> Gerar agora
                       </Button>
                     </PopoverContent>
@@ -314,7 +314,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                       type="button"
                       variant="outline"
                       onClick={handleGeneratePassword}
-                      className="h-11 px-4 rounded-xl border-dashed border-primary/40 hover:bg-primary/5 hover:text-primary font-medium text-xs gap-2"
+                      className="h-10 px-4 border-dashed border-primary/40 hover:bg-primary/5 hover:text-primary font-medium text-xs gap-2"
                   >
                       <Wand2 className="h-3.5 w-3.5" /> Gerar
                   </Button>
@@ -327,7 +327,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                     <div className={cn("h-full rounded-full transition-all duration-500 ease-out", strengthColor)} style={{ width: `${strength}%` }} />
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-xs font-medium text-muted-foreground">Força: <span className={cn(strength >= 80 ? "text-emerald-500" : strength >= 50 ? "text-amber-500" : "text-rose-500")}>{strengthLabel}</span></span>
+                    <span className="eyebrow text-muted-foreground">Força: <span className={cn(strength >= 80 ? "text-emerald-500" : strength >= 50 ? "text-amber-500" : "text-rose-500")}>{strengthLabel}</span></span>
                     <span className="text-[9px] font-mono text-muted-foreground">{password.length} caracteres</span>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
 
             {/* NOTAS / CONTEÚDO */}
             <div className="space-y-2">
-              <Label className="text-xs font-medium text-muted-foreground ml-1">
+              <Label className="eyebrow text-muted-foreground ml-1">
                 {isNote ? "Conteúdo da anotação" : "Registros de Auditoria / Notas"}
               </Label>
               <Textarea
@@ -365,13 +365,13 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                 type="button" 
                 variant="ghost" 
                 onClick={onClose} 
-                className="flex-1 h-12 rounded-xl text-xs font-medium text-muted-foreground hover:bg-muted"
+                className="flex-1 h-10 text-xs font-medium text-muted-foreground hover:bg-muted"
               >
                 Cancelar
               </Button>
               <Button 
                 type="submit" 
-                className="flex-[2] h-12 rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs shadow-lg transition-all active:scale-95"
+                className="flex-[2] h-10 bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs shadow-lg transition-all active:scale-95"
               >
                 {isLoading ? (
                   <Loader2 className="h-4 w-4 animate-spin" />

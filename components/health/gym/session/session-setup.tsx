@@ -228,10 +228,10 @@ export function SessionSetup({
           O aquecimento tem timer próprio e sugestões pros grupos de hoje — as séries começam depois.
         </p>
         <div className="mt-4 flex flex-col gap-2">
-          <Button onClick={() => launch(5)} className="h-11 gap-2 font-bold">
+          <Button onClick={() => launch(5)} className="h-10 gap-2 font-bold">
             <Flame className="h-4 w-4" /> Aquecer (5 min)
           </Button>
-          <Button variant="outline" onClick={() => launch()} className="h-11 gap-2">
+          <Button variant="outline" onClick={() => launch()} className="h-10 gap-2">
             <Play className="h-4 w-4" /> Direto pro treino
           </Button>
           <Button variant="ghost" onClick={() => setPendingStart(null)} className="h-9 text-xs text-muted-foreground">
@@ -678,7 +678,7 @@ export function SessionSetup({
           <div className="min-w-0 flex-1 text-xs text-muted-foreground">
             {picked.length > 0 ? `${picked.length} exercício(s) prontos` : "Adicione exercícios para começar"}
           </div>
-          <Button onClick={begin} disabled={picked.length === 0} className="h-12 shrink-0 gap-2 px-5 text-base font-bold sm:px-6">
+          <Button onClick={begin} disabled={picked.length === 0} className="h-10 shrink-0 gap-2 px-5 text-base font-bold sm:px-6">
             <Play className="h-5 w-5" /> Iniciar treino
           </Button>
         </div>

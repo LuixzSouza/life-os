@@ -101,7 +101,7 @@ export function MetricCard({
       <CardContent className="p-6 relative z-10">
         <div className="flex items-start justify-between mb-4">
           <div className="space-y-1">
-            <h3 className="text-xs font-medium text-muted-foreground/70">
+            <h3 className="eyebrow text-muted-foreground/70">
               {title}
             </h3>
             {subtitle && (
@@ -131,7 +131,7 @@ export function MetricCard({
                 {value}
               </span>
               {unit && (
-                <span className="text-xs font-medium text-muted-foreground/60">
+                <span className="eyebrow text-muted-foreground/60">
                   {unit}
                 </span>
               )}

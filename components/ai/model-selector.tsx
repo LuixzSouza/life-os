@@ -140,7 +140,7 @@ export function ModelSelector({ currentProvider, currentModel, configuredProvide
         {MODEL_OPTIONS.map((group, groupIdx) => (
             <div key={group.category} className={cn(groupIdx > 0 && "mt-2 pt-2 border-t border-border/20")}>
                 
-                <div className="px-3 py-2 text-xs font-medium text-muted-foreground/60">
+                <div className="eyebrow px-3 py-2 text-muted-foreground/60">
                     {group.category}
                 </div>
                 

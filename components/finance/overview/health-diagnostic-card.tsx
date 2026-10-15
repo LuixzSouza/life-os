@@ -37,7 +37,7 @@ export function HealthDiagnosticCard({ metrics, smartView, isClient }: HealthDia
           <div className="flex items-center gap-3">
             <ShieldCheck className="h-6 w-6 text-foreground/80" /> Diagnóstico
           </div>
-          <Badge variant="outline" className={cn("px-3 py-1 font-medium text-xs border-current bg-transparent", metrics.health.text)}>
+          <Badge variant="outline" className={cn("eyebrow px-3 py-1 border-current bg-transparent", metrics.health.text)}>
             {metrics.health.label}
           </Badge>
         </CardTitle>

@@ -81,12 +81,12 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
         return (
             <div className="space-y-4">
                 <div className="flex items-center justify-between gap-2">
-                    <Button onClick={() => run(mode)} disabled={isLoading} className="gap-2 rounded-xl font-medium text-[11px] h-11">
+                    <Button onClick={() => run(mode)} disabled={isLoading} className="gap-2 font-medium text-[11px] h-10">
                         {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : value ? <RefreshCw className="h-4 w-4" /> : <Sparkles className="h-4 w-4" />}
                         {value ? "Gerar novamente" : generateLabel}
                     </Button>
                     {value && (
-                        <Button variant="outline" onClick={() => copy(value)} className="gap-2 rounded-xl font-medium text-xs h-11 border-border/60">
+                        <Button variant="outline" onClick={() => copy(value)} className="text-xs font-medium gap-2 h-10 border-border/60">
                             <Copy className="h-3.5 w-3.5" /> Copiar
                         </Button>
                     )}
@@ -161,7 +161,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                         <TabsContent value="tailor" className="mt-0 focus-visible:ring-0 outline-none">
                             <div className="space-y-4">
                                 <div className="flex items-center gap-2">
-                                    <Button onClick={runTailor} disabled={tailoring} className="gap-2 rounded-xl font-medium text-[11px] h-11">
+                                    <Button onClick={runTailor} disabled={tailoring} className="gap-2 font-medium text-[11px] h-10">
                                         {tailoring ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
                                         {tailoredName ? "Gerar outra versão" : "Criar currículo para esta vaga"}
                                     </Button>
@@ -187,7 +187,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                                             <Button
                                                 variant="outline"
                                                 onClick={() => onOpenChange(false)}
-                                                className="gap-2 rounded-xl font-medium text-xs h-10 border-border/60"
+                                                className="gap-2 font-medium text-xs h-10 border-border/60"
                                             >
                                                 Fechar e abrir a aba Currículos <ArrowRight className="h-3.5 w-3.5" />
                                             </Button>

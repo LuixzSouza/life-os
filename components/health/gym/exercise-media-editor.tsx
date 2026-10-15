@@ -236,7 +236,7 @@ export function ExerciseMediaEditor({
               <Button
                 onClick={handleYouTubeAdd}
                 disabled={!ytInput.trim() || ytLoading}
-                className="w-full h-10 rounded-lg font-semibold"
+                className="w-full h-10 font-semibold"
               >
                 {ytLoading ? (
                   <>Validando...</>
@@ -347,7 +347,7 @@ export function ExerciseMediaEditor({
                   type="button"
                   variant="destructive"
                   size="sm"
-                  className="w-full h-9 rounded-lg"
+                  className="w-full h-9"
                   onClick={handleClearAll}
                 >
                   <Trash2 className="h-4 w-4 mr-2" /> Limpar tudo
@@ -373,13 +373,13 @@ export function ExerciseMediaEditor({
           <Button
             variant="outline"
             onClick={() => onOpenChange(false)}
-            className="rounded-lg"
+            className=""
           >
             <X className="h-4 w-4 mr-1" /> Fechar
           </Button>
           <Button
             onClick={() => onOpenChange(false)}
-            className="rounded-lg"
+            className=""
           >
             <Check className="h-4 w-4 mr-1" /> Pronto!
           </Button>

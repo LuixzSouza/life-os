@@ -98,7 +98,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                     <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                         <Cpu className="h-4 w-4 text-primary" /> Motor de Processamento
                     </Label>
-                    <span className="text-xs font-medium text-muted-foreground bg-muted/50 px-3 py-1 rounded-full border border-border/40">
+                    <span className="eyebrow text-muted-foreground bg-muted/50 px-3 py-1 rounded-full border border-border/40">
                         Ativo: <span className={cn("text-foreground", isLocal ? "text-zinc-500" : "text-primary")}>{providerInfo?.name ?? provider}</span>
                     </span>
                 </div>
@@ -199,7 +199,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                                 size="icon"
                                 aria-label={showKey ? "Ocultar chave" : "Mostrar chave"}
                                 onClick={() => setShowKey(!showKey)}
-                                className="absolute right-1 top-1/2 -translate-y-1/2 h-10 w-10 rounded-lg hover:bg-muted/50"
+                                className="absolute right-1 top-1/2 -translate-y-1/2 h-10 w-10 hover:bg-muted/50"
                             >
                                 {showKey ? <EyeOff className="h-4 w-4 text-muted-foreground" /> : <Eye className="h-4 w-4 text-muted-foreground" />}
                             </Button>
@@ -221,7 +221,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                     {/* Feedback Dinâmico sobre o estado da Personalidade */}
                     <div className="flex items-center gap-3">
                         <span className={cn(
-                            "text-xs font-medium px-2 py-0.5 rounded-sm border",
+                            "eyebrow px-2 py-0.5 rounded-sm border",
                             isDefaultPersona ? "bg-muted/50 text-muted-foreground border-border/40" : "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
                         )}>
                             {isDefaultPersona ? "Padrão do Sistema" : "Personalizado"}
@@ -232,7 +232,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                                 variant="ghost"
                                 size="sm"
                                 onClick={restoreDefaultPersona}
-                                className="eyebrow h-6 px-2 text-rose-500 hover:bg-rose-500/10 hover:text-rose-600"
+                                className="text-xs font-medium h-6 px-2 text-rose-500 hover:bg-rose-500/10 hover:text-rose-600"
                             >
                                 <RotateCcw className="h-3 w-3 mr-1" /> Resetar
                             </Button>
@@ -263,7 +263,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                     variant="outline"
                     onClick={handleTestConnection}
                     disabled={isTesting}
-                    className="font-medium text-xs rounded-full h-12 px-6 border-border/60"
+                    className="font-medium text-xs rounded-full h-10 px-6 border-border/60"
                 >
                     {isTesting ? (
                         <span className="flex items-center gap-2"><Loader2 className="h-4 w-4 animate-spin"/> Testando...</span>
@@ -274,7 +274,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                 <Button
                     type="submit"
                     disabled={isLoading}
-                    className="bg-foreground text-background hover:bg-foreground/90 font-medium text-xs rounded-full h-12 px-8 shadow-xl transition-transform hover:scale-105"
+                    className="bg-foreground text-background hover:bg-foreground/90 font-medium text-xs rounded-full h-10 px-8 shadow-xl transition-transform hover:scale-105"
                 >
                     {isLoading ? (
                         <span className="flex items-center gap-2"><Loader2 className="h-4 w-4 animate-spin"/> Atualizando Núcleo...</span>
@@ -312,7 +312,7 @@ function ProviderCard({ value, icon, title, active, colorClass, hasKey }: Provid
                 <div className={cn("mb-2 transition-colors", active ? colorClass : "text-muted-foreground")}>
                     {icon}
                 </div>
-                <span className={cn("font-medium text-xs block", active ? "text-foreground" : "text-muted-foreground")}>
+                <span className={cn("eyebrow block", active ? "text-foreground" : "text-muted-foreground")}>
                     {title}
                 </span>
 

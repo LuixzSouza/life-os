@@ -55,7 +55,7 @@ const StatusIndicator = ({ status }: { status: APIProvider['status'] }) => {
   return (
     <div className="flex items-center gap-2">
       <div className={`h-2 w-2 rounded-full ${color}`} />
-      <span className="text-xs font-medium text-muted-foreground">{label}</span>
+      <span className="eyebrow text-muted-foreground">{label}</span>
     </div>
   );
 };
@@ -141,7 +141,7 @@ const APIInputField: React.FC<{
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <CardTitle className="text-xs font-medium">{field.label}</CardTitle>
+                <CardTitle className="eyebrow">{field.label}</CardTitle>
                 <StatusIndicator status={currentStatus} />
               </div>
               <CardDescription className="text-[10px] font-medium mt-1">{field.description}</CardDescription>
@@ -160,7 +160,7 @@ const APIInputField: React.FC<{
               <Key className="h-3.5 w-3.5" /> Hash/Key
             </Label>
             <div className="flex items-center gap-2">
-              <button type="button" onClick={toggleActive} className={cn("text-xs font-medium px-3 py-1 rounded-full transition-colors border", active ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" : "bg-background border-border/40 text-muted-foreground hover:bg-muted")}>
+              <button type="button" onClick={toggleActive} className={cn("eyebrow px-3 py-1 rounded-full transition-colors border", active ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" : "bg-background border-border/40 text-muted-foreground hover:bg-muted")}>
                 {active ? "Habilitado" : "Desabilitado"}
               </button>
               {field.secret && (
@@ -183,13 +183,13 @@ const APIInputField: React.FC<{
             />
             
             <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
-              <Button type="button" variant="ghost" size="icon" aria-label={revealed ? "Ocultar chave" : "Mostrar chave"} onClick={() => setRevealed(!revealed)} className="h-8 w-8 rounded-lg hover:bg-muted">
+              <Button type="button" variant="ghost" size="icon" aria-label={revealed ? "Ocultar chave" : "Mostrar chave"} onClick={() => setRevealed(!revealed)} className="h-8 w-8 hover:bg-muted">
                 {revealed ? <EyeOff className="h-4 w-4 text-muted-foreground" /> : <Eye className="h-4 w-4 text-muted-foreground" />}
               </Button>
-              <Button type="button" variant="ghost" size="icon" aria-label="Copiar chave" onClick={handleCopy} className="h-8 w-8 rounded-lg hover:bg-muted">
+              <Button type="button" variant="ghost" size="icon" aria-label="Copiar chave" onClick={handleCopy} className="h-8 w-8 hover:bg-muted">
                 {copied ? <Check className="h-4 w-4 text-emerald-600" /> : <Copy className="h-4 w-4 text-muted-foreground" />}
               </Button>
-              <Button type="button" variant="ghost" size="icon" aria-label="Testar conexão" onClick={handleTest} disabled={testing || !value} className="h-8 w-8 rounded-lg hover:bg-primary/10 hover:text-primary">
+              <Button type="button" variant="ghost" size="icon" aria-label="Testar conexão" onClick={handleTest} disabled={testing || !value} className="h-8 w-8 hover:bg-primary/10 hover:text-primary">
                 {testing ? <Loader2 className="h-4 w-4 animate-spin" /> : <TestTube2 className="h-4 w-4" />}
               </Button>
             </div>
@@ -375,7 +375,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
                     </p>
                 </div>
                 <div className="flex gap-3 w-full sm:w-auto">
-                  <Button type="button" variant="outline" className="eyebrow rounded-full" onClick={() => window.location.reload()}>Descartar</Button>
+                  <Button type="button" variant="outline" className="text-xs font-medium rounded-full" onClick={() => window.location.reload()}>Descartar</Button>
                   <SubmitButton />
                 </div>
               </div>

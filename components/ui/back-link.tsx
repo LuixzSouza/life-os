@@ -22,7 +22,7 @@ export function BackLink({
       <Button
         variant="ghost"
         size="sm"
-        className="-ml-2 gap-1.5 rounded-lg px-3 text-muted-foreground hover:text-foreground"
+        className="-ml-2 gap-1.5 px-3 text-muted-foreground hover:text-foreground"
       >
         <ChevronLeft className="h-4 w-4" />
         {label}

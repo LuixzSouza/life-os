@@ -113,7 +113,7 @@ export function AccessCard({ item, strength, reused = false, breachCount }: { it
               {/* Menu Tático */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" aria-label="Mais ações" className="h-7 w-7 -mr-2 -mt-1 text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-colors">
+                  <Button variant="ghost" size="icon" aria-label="Mais ações" className="h-7 w-7 -mr-2 -mt-1 text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors">
                     <MoreHorizontal className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
@@ -234,7 +234,7 @@ function NoteContent({ notes }: { notes: string | null }) {
           variant="ghost"
           aria-label="Copiar anotação"
           onClick={handleCopy}
-          className="absolute right-1.5 top-1.5 h-8 w-8 rounded-lg text-muted-foreground opacity-0 transition-all hover:bg-primary/10 hover:text-primary group-hover/note:opacity-100"
+          className="absolute right-1.5 top-1.5 h-8 w-8 text-muted-foreground opacity-0 transition-all hover:bg-primary/10 hover:text-primary group-hover/note:opacity-100"
         >
           {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
         </Button>

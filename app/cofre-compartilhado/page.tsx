@@ -171,7 +171,7 @@ export default function SharedCredentialPage() {
                       {secondsLeft}s
                     </span>
                   )}
-                  <Button size="icon" variant="ghost" className="h-8 w-8 rounded-lg" onClick={toggleVisible} aria-label={visible ? "Ocultar" : "Mostrar"}>
+                  <Button size="icon" variant="ghost" className="h-8 w-8" onClick={toggleVisible} aria-label={visible ? "Ocultar" : "Mostrar"}>
                     {visible ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </Button>
                   <CopyBtn copied={copiedPass} onClick={() => copy(cred.password, "pass")} />
@@ -184,7 +184,7 @@ export default function SharedCredentialPage() {
                 )}
 
                 {cred.url && (
-                  <Button onClick={openSiteAndCopy} className="h-11 w-full gap-2 text-sm font-semibold">
+                  <Button onClick={openSiteAndCopy} className="h-10 w-full gap-2 text-sm font-semibold">
                     <ExternalLink className="h-4 w-4" /> Abrir site e copiar senha
                   </Button>
                 )}

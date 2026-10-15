@@ -264,7 +264,7 @@ export function SubjectCard({
             variant="outline"
             onClick={startStudy}
             title="Abrir o modo foco nesta matéria"
-            className="h-8 shrink-0 gap-1 rounded-lg px-2.5 text-xs font-medium hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+            className="h-8 shrink-0 gap-1 px-2.5 text-xs font-medium hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
           >
             <Play className="h-3 w-3" /> <span className="hidden sm:inline">Estudar</span>
           </Button>

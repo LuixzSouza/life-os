@@ -59,7 +59,7 @@ export async function DopamineBalanceCard() {
         <p className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
           <Scale className="h-3.5 w-3.5 text-primary" /> Balanço dopaminérgico · {WINDOW_DAYS} dias
         </p>
-        <span className="rounded-md bg-muted/60 px-2 py-0.5 text-xs font-medium text-muted-foreground">
+        <span className="eyebrow rounded-md bg-muted/60 px-2 py-0.5 text-muted-foreground">
           experimento
         </span>
       </div>

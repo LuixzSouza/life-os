@@ -68,7 +68,7 @@ export function LiquefyCard() {
                 size="sm"
                 disabled={busyId !== null}
                 onClick={() => melt(task)}
-                className="h-7 shrink-0 gap-1.5 rounded-lg px-2 text-xs font-medium text-sky-500 hover:bg-sky-500/10 hover:text-sky-500"
+                className="h-7 shrink-0 gap-1.5 px-2 text-xs font-medium text-sky-500 hover:bg-sky-500/10 hover:text-sky-500"
               >
                 {busyId === task.id ? <Loader2 className="h-3 w-3 animate-spin" /> : <FlaskConical className="h-3 w-3" />}
                 Liquefazer

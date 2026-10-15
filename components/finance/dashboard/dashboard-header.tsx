@@ -36,7 +36,7 @@ export function FinanceHeaderActions({ accounts }: { accounts: DashboardAccount[
         onClick={() => setImportOpen(true)}
         disabled={accounts.length === 0}
         title="Importar extrato (OFX, CSV ou texto com IA)"
-        className="h-9 shrink-0 gap-1.5 rounded-xl border-border/40 font-medium"
+        className="h-9 shrink-0 gap-1.5 border-border/40 font-medium"
       >
         <FileUp className="h-4 w-4" />
         <span className="hidden lg:inline">Importar extrato</span>
@@ -57,7 +57,7 @@ export function FinanceHeaderActions({ accounts }: { accounts: DashboardAccount[
         <TransactionDialog
           accounts={accounts}
           trigger={
-            <Button size="sm" className="h-9 gap-1.5 rounded-xl font-semibold" disabled={accounts.length === 0}>
+            <Button size="sm" className="h-9 gap-1.5 font-semibold" disabled={accounts.length === 0}>
               <Plus className="h-4 w-4" />
               <span className="hidden sm:inline">Nova transação</span>
               <span className="sm:hidden">Nova</span>

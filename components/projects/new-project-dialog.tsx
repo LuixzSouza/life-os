@@ -79,7 +79,7 @@ export function NewProjectDialog() {
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
                 <Button 
-                    className="gap-2 bg-foreground text-background hover:bg-foreground/90 shadow-lg rounded-xl px-5 h-11 transition-all active:scale-95"
+                    className="gap-2 bg-foreground text-background hover:bg-foreground/90 shadow-lg px-5 h-10 transition-all active:scale-95"
                 >
                     <Plus className="h-4 w-4" /> 
                     <span className="font-bold tracking-tight">Novo Projeto</span>

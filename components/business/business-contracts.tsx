@@ -46,7 +46,7 @@ export function ContractsList({
         <span className="text-xs font-medium text-muted-foreground flex items-center gap-2">
           <Briefcase size={12} className="text-primary/60" /> Contratos e Projetos
         </span>
-        <Button variant="ghost" size="sm" className="eyebrow h-7 px-2.5 hover:bg-primary/10 hover:text-primary rounded-lg" onClick={() => onNewBilling(client.id)}>
+        <Button variant="ghost" size="sm" className="text-xs font-medium h-7 px-2.5 hover:bg-primary/10 hover:text-primary" onClick={() => onNewBilling(client.id)}>
           <Plus size={14} className="mr-1" /> Novo
         </Button>
       </div>
@@ -186,7 +186,7 @@ export function ContractsList({
                               {!isPaid && (
                                 <Button
                                   variant="ghost"
-                                  className="h-7 px-2 text-[10px] font-bold uppercase bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all rounded-lg"
+                                  className="h-7 px-2 text-[10px] font-bold uppercase bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500 hover:text-white transition-all"
                                   title="Registrar recebimento no Financeiro"
                                   onClick={() => onReceiveInvoice(invoice)}
                                 >

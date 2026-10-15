@@ -163,7 +163,7 @@ export function ConversationSidebar({ chats, activeId, activeTitle }: Props) {
         ) : (
           groups.map((g) => (
             <div key={g.key} className="mb-3">
-              <div className="flex items-center gap-1.5 px-2 py-1.5 text-xs font-medium text-muted-foreground/70">
+              <div className="eyebrow flex items-center gap-1.5 px-2 py-1.5 text-muted-foreground/70">
                 <g.Icon className="h-3 w-3" />
                 {g.label}
                 <span className="ml-auto rounded-full bg-muted/60 px-1.5 text-[9px] font-bold text-muted-foreground/70">{g.items.length}</span>

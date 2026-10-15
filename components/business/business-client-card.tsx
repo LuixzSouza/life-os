@@ -114,7 +114,7 @@ export function ClientCard({
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" aria-label="Mais ações" className="h-8 w-8 rounded-lg text-muted-foreground hover:bg-muted/80">
+            <Button variant="ghost" size="icon" aria-label="Mais ações" className="h-8 w-8 text-muted-foreground hover:bg-muted/80">
               <MoreHorizontal size={18} />
             </Button>
           </DropdownMenuTrigger>
@@ -172,7 +172,7 @@ export function ClientCard({
         )}
 
         <Link href={`/business/${client.id}`} className="mt-auto">
-          <Button variant="outline" className="w-full rounded-xl font-bold h-11 group/abrir border-border/50 hover:bg-primary/5 hover:text-primary hover:border-primary/30 transition-all">
+          <Button variant="outline" className="w-full font-bold h-10 group/abrir border-border/50 hover:bg-primary/5 hover:text-primary hover:border-primary/30 transition-all">
             Abrir detalhes
             <ArrowRight size={16} className="ml-2 group-hover/abrir:translate-x-1 transition-transform" />
           </Button>

@@ -130,12 +130,12 @@ export function ActivityCard({ workout, expanded, onToggle, onDelete, onConnecti
 
           {/* Ações */}
           <div className="flex items-center gap-2">
-            <Button size="sm" variant="outline" className="h-8 gap-1.5 rounded-lg border-border/40 text-xs" onClick={() => onConnections(workout)}>
+            <Button size="sm" variant="outline" className="h-8 gap-1.5 border-border/40 text-xs" onClick={() => onConnections(workout)}>
               <Tags className="h-3.5 w-3.5" /> Tags & Anexos
             </Button>
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button size="sm" variant="ghost" className="h-8 gap-1.5 rounded-lg text-xs text-muted-foreground hover:bg-rose-500/10 hover:text-rose-500">
+                <Button size="sm" variant="ghost" className="h-8 gap-1.5 text-xs text-muted-foreground hover:bg-rose-500/10 hover:text-rose-500">
                   <Trash2 className="h-3.5 w-3.5" /> Excluir
                 </Button>
               </AlertDialogTrigger>

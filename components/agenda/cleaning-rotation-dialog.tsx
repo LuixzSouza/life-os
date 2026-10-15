@@ -101,7 +101,7 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
                 maxLength={40}
                 className="h-9 text-sm"
               />
-              <Button type="button" onClick={addRoom} size="icon" variant="outline" className="h-9 w-9 shrink-0 rounded-lg" title="Adicionar cômodo" aria-label="Adicionar cômodo">
+              <Button type="button" onClick={addRoom} size="icon" variant="outline" className="h-9 w-9 shrink-0" title="Adicionar cômodo" aria-label="Adicionar cômodo">
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
@@ -153,7 +153,7 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
           <Button
             onClick={submit}
             disabled={isPending || rooms.length === 0 || days.length === 0}
-            className="h-12 w-full rounded-xl text-xs font-medium"
+            className="h-10 w-full text-xs font-medium"
           >
             {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <BrushCleaning className="h-4 w-4" />}
             Criar rodízio ({rooms.length} cômodos · {days.length} dias)

@@ -55,7 +55,7 @@ export function ProjectAiSummary({ projectId, projectTitle }: { projectId: strin
       <Button
         variant="outline"
         size="sm"
-        className="h-9 rounded-xl border-border/40 gap-1.5 text-xs font-semibold"
+        className="h-9 border-border/40 gap-1.5 text-xs font-semibold"
         onClick={() => {
           setOpen(true);
           if (!summary) generate();

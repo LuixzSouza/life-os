@@ -167,7 +167,7 @@ export function BillingReminders({ clients, onCharge, onCopyCharge }: BillingRem
                 </Button>
                 <Button
                   size="sm"
-                  className="h-8 gap-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold disabled:opacity-50"
+                  className="h-8 gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-[11px] font-bold disabled:opacity-50"
                   disabled={!client.phone}
                   title={client.phone ? "Cobrar no WhatsApp" : "Cadastre o WhatsApp do cliente"}
                   onClick={() => onCharge(client, billing)}

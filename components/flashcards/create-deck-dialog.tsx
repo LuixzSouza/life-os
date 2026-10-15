@@ -72,7 +72,7 @@ export function CreateDeckDialog({ open, onOpenChange, subjects }: CreateDeckDia
         if (!o) reset();
     }}>
       <DialogTrigger asChild>
-        <Button size="lg" className="gap-2 shadow-lg shadow-primary/20 bg-primary hover:bg-primary/90 font-bold rounded-xl h-12">
+        <Button size="lg" className="gap-2 shadow-lg shadow-primary/20 bg-primary hover:bg-primary/90 font-bold h-10">
           <Plus className="h-5 w-5" />
           Novo Baralho
         </Button>

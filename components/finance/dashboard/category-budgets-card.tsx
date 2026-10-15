@@ -99,7 +99,7 @@ export function CategoryBudgetsCard({ items, options }: CategoryBudgetsCardProps
               {overCount} estourado{overCount > 1 ? "s" : ""}
             </span>
           )}
-          <Button variant="outline" size="sm" className="h-8 gap-1 rounded-lg text-xs" onClick={() => setAdding((v) => !v)}>
+          <Button variant="outline" size="sm" className="h-8 gap-1 text-xs" onClick={() => setAdding((v) => !v)}>
             <Plus className="h-3.5 w-3.5" /> Teto
           </Button>
         </div>
@@ -128,7 +128,7 @@ export function CategoryBudgetsCard({ items, options }: CategoryBudgetsCardProps
             className="h-9 w-36 text-sm font-mono"
             onKeyDown={(e) => e.key === "Enter" && submitNew()}
           />
-          <Button size="sm" className="h-9 gap-1.5 rounded-lg" onClick={submitNew} disabled={busy}>
+          <Button size="sm" className="h-9 gap-1.5" onClick={submitNew} disabled={busy}>
             {busy ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Check className="h-3.5 w-3.5" />} Salvar
           </Button>
         </div>

@@ -104,7 +104,7 @@ export function FixedIncomeCalculator({ cdi, ipca, preset }: FixedIncomeCalculat
 
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-1.5">
-            <label className="text-xs font-medium text-muted-foreground">{rateLabel}</label>
+            <label className="eyebrow text-muted-foreground">{rateLabel}</label>
             <Input type="number" min="0" step="0.5" value={rate} onChange={(e) => setRate(Math.max(0, Number(e.target.value)))} className="rounded-xl font-mono" />
           </div>
           <div className="space-y-1.5">
@@ -124,7 +124,7 @@ export function FixedIncomeCalculator({ cdi, ipca, preset }: FixedIncomeCalculat
       {/* RESULTADO */}
       <div className="space-y-4 rounded-2xl border border-primary/20 bg-primary/[0.03] p-6 shadow-sm">
         <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-muted-foreground">Valor líquido em {months} meses</span>
+          <span className="eyebrow text-muted-foreground">Valor líquido em {months} meses</span>
           <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-black text-primary">{result.annualRate.toFixed(2)}% a.a.</span>
         </div>
         <p className="font-mono text-4xl font-black tracking-tighter text-foreground">{formatMoney(result.net)}</p>
@@ -150,7 +150,7 @@ function Stat({ label, value, tone = "default", icon }: { label: string; value: 
   const color = tone === "emerald" ? "text-emerald-600 dark:text-emerald-400" : tone === "rose" ? "text-rose-600 dark:text-rose-400" : "text-foreground";
   return (
     <div className="rounded-xl bg-background/60 border border-border/40 p-3">
-      <p className="text-xs font-medium text-muted-foreground leading-tight">{label}</p>
+      <p className="eyebrow text-muted-foreground leading-tight">{label}</p>
       <p className={cn("mt-1 font-mono font-bold tabular-nums flex items-center gap-1", color)}>{icon}{value}</p>
     </div>
   );

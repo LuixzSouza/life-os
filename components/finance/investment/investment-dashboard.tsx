@@ -185,7 +185,7 @@ function SummaryCard({ icon: Icon, title, value, subtitle, theme }: SummaryCardP
                     </div>
                 </div>
                 <div className="space-y-1 mt-auto">
-                    <p className="text-xs font-medium text-muted-foreground">{title}</p>
+                    <p className="eyebrow text-muted-foreground">{title}</p>
                     <div className="text-3xl font-black font-mono tracking-tighter text-foreground">
                         {value}
                     </div>

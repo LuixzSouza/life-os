@@ -182,7 +182,7 @@ export function TaskInput({ projectId }: TaskInputProps) {
                                 size="icon"
                                 variant={image ? "default" : "secondary"}
                                 aria-label="Anexar imagem"
-                                className="h-10 w-10 rounded-xl transition-all shadow-inner"
+                                className="h-10 w-10 transition-all shadow-inner"
                                 onClick={() => fileInputRef.current?.click()}
                                 disabled={isUploading}
                             >
@@ -230,7 +230,7 @@ export function TaskInput({ projectId }: TaskInputProps) {
 
                             <div className="flex items-center gap-4 ml-auto">
                                 {/* CONTADOR DE CARACTERES */}
-                                <div className="text-xs font-medium text-muted-foreground/40 font-mono">
+                                <div className="eyebrow text-muted-foreground/40 font-mono">
                                     {content.length} / {MAX_CHARS}
                                 </div>
 
@@ -288,12 +288,12 @@ function ToolbarButton({ icon: Icon, onClick, tooltip }: ToolbarButtonProps) {
                     size="icon"
                     aria-label={tooltip}
                     onClick={onClick}
-                    className="h-8 w-8 rounded-lg hover:bg-background hover:text-primary transition-all group"
+                    className="h-8 w-8 hover:bg-background hover:text-primary transition-all group"
                 >
                     <Icon className="h-4 w-4 opacity-50 group-hover:opacity-100" />
                 </Button>
             </TooltipTrigger>
-            <TooltipContent side="top" className="text-xs font-medium bg-zinc-950 text-white px-3 py-1.5 border-none">
+            <TooltipContent side="top" className="eyebrow bg-zinc-950 text-white px-3 py-1.5 border-none">
                 {tooltip}
             </TooltipContent>
         </Tooltip>

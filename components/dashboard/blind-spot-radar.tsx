@@ -79,7 +79,7 @@ export async function BlindSpotRadar() {
           <Radar className="h-3.5 w-3.5 text-primary" /> Radar de pontos cegos · {WINDOW_DAYS} dias
         </p>
         {blind.length > 0 && (
-          <span className="rounded-md bg-rose-500/10 px-2 py-0.5 text-xs font-medium text-rose-500">
+          <span className="eyebrow rounded-md bg-rose-500/10 px-2 py-0.5 text-rose-500">
             {blind.length} área(s) no escuro
           </span>
         )}

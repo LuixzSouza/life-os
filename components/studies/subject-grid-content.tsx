@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { formatMinutes } from "@/lib/studies-math";
 import { SubjectCard } from "./subject-card";
 import type { RichSubject } from "./subject-grid-types";
+import { EmptyState } from "@/components/ui/empty-state";
 
 interface SubjectGridContentProps {
   filteredSubjects: RichSubject[];
@@ -47,18 +48,16 @@ export function SubjectGridContent({
 
   if (visibleCount === 0) {
     return (
-      <div className="text-center py-24 px-4 rounded-3xl border border-dashed border-border/60 bg-muted/10">
-        <div className="h-16 w-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-          <BookDashed className="h-8 w-8 text-muted-foreground/50" />
-        </div>
-        <h3 className="text-xl font-bold text-foreground">Nenhuma matéria encontrada</h3>
-        <p className="text-sm text-muted-foreground max-w-sm mx-auto mt-2 mb-6">
-          Não encontramos nenhum tópico com os filtros atuais. Que tal criar um novo agora?
-        </p>
-        <Button onClick={onCreate} size="lg" className="shadow-lg shadow-primary/20 rounded-xl font-bold">
-          <Plus className="h-5 w-5 mr-2" /> Criar Primeiro Tópico
-        </Button>
-      </div>
+      <EmptyState
+        icon={BookDashed}
+        title="Nenhuma matéria encontrada"
+        description="Não encontramos nenhuma matéria com os filtros atuais. Que tal criar uma agora?"
+        action={
+          <Button onClick={onCreate} className="gap-2">
+            <Plus className="h-4 w-4" /> Criar matéria
+          </Button>
+        }
+      />
     );
   }
 

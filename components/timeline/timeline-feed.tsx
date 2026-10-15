@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import type { ClientActivity } from "@/lib/activity";
 import { loadOlderActivity } from "@/app/(dashboard)/timeline/actions";
 import { moduleMeta, actionMeta } from "./timeline-meta";
+import { EmptyState } from "@/components/ui/empty-state";
 
 const PAGE_SIZE = 120;
 
@@ -274,13 +275,11 @@ export function TimelineFeed({ initialItems }: { initialItems: ClientActivity[] 
 
       {/* GRUPOS POR DIA */}
       {groups.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-border/60 py-16 text-center">
-          <Activity className="mx-auto mb-3 h-8 w-8 text-muted-foreground/30" />
-          <p className="text-sm font-medium text-muted-foreground">Nenhuma atividade para este filtro.</p>
-          {!exhausted && (
-            <p className="mt-1 text-xs text-muted-foreground/60">O que você procura pode estar mais atrás — carregue mais histórico.</p>
-          )}
-        </div>
+        <EmptyState
+          icon={Activity}
+          title="Nenhuma atividade para este filtro"
+          description={exhausted ? undefined : "O que você procura pode estar mais atrás — carregue mais histórico."}
+        />
       ) : (
         <div className="space-y-7">
           {groups.map(([day, rows]) => (
@@ -361,7 +360,7 @@ export function TimelineFeed({ initialItems }: { initialItems: ClientActivity[] 
             variant="outline"
             onClick={loadMore}
             disabled={isLoading}
-            className="h-9 gap-1.5 rounded-xl text-[11px] font-medium"
+            className="h-9 gap-1.5 text-[11px] font-medium"
           >
             {isLoading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ChevronDown className="h-3.5 w-3.5" />}
             Carregar mais

@@ -61,7 +61,7 @@ export function FriendDetailModal({ friend, onOpenChange, onEdit }: FriendDetail
                     variant="secondary"
                     size="sm"
                     onClick={() => onEdit(friend)}
-                    className="absolute top-4 right-14 sm:top-5 sm:right-16 h-8 gap-1.5 rounded-lg text-xs font-medium bg-background/80 backdrop-blur shadow-sm hover:bg-background"
+                    className="absolute top-4 right-14 sm:top-5 sm:right-16 h-8 gap-1.5 text-xs font-medium bg-background/80 backdrop-blur shadow-sm hover:bg-background"
                   >
                     <Pencil className="h-3.5 w-3.5" /> Editar
                   </Button>
@@ -94,27 +94,27 @@ export function FriendDetailModal({ friend, onOpenChange, onEdit }: FriendDetail
                   {hasContact && (
                     <div className="flex flex-wrap gap-2">
                       {friend.phone && (
-                        <Button size="sm" variant="outline" className="h-9 gap-2 rounded-xl text-xs font-medium text-emerald-600 border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10" onClick={() => openWhatsApp(friend.phone)}>
+                        <Button size="sm" variant="outline" className="h-9 gap-2 text-xs font-medium text-emerald-600 border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10" onClick={() => openWhatsApp(friend.phone)}>
                           <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
                         </Button>
                       )}
                       {friend.phone && (
-                        <Button size="sm" variant="outline" className="h-9 gap-2 rounded-xl text-xs font-medium" onClick={() => copyToClipboard(friend.phone, "Telefone")}>
+                        <Button size="sm" variant="outline" className="h-9 gap-2 text-xs font-medium" onClick={() => copyToClipboard(friend.phone, "Telefone")}>
                           <Phone className="h-3.5 w-3.5" /> {friend.phone}
                         </Button>
                       )}
                       {friend.email && (
-                        <Button size="sm" variant="outline" className="h-9 gap-2 rounded-xl text-xs font-medium" onClick={() => copyToClipboard(friend.email, "Email")}>
+                        <Button size="sm" variant="outline" className="h-9 gap-2 text-xs font-medium" onClick={() => copyToClipboard(friend.email, "Email")}>
                           <Mail className="h-3.5 w-3.5" /> {friend.email}
                         </Button>
                       )}
                       {igHandle && (
-                        <Button size="sm" variant="outline" className="h-9 gap-2 rounded-xl text-xs font-medium text-pink-600 border-pink-500/20 bg-pink-500/5 hover:bg-pink-500/10" onClick={() => window.open(`https://instagram.com/${igHandle}`, "_blank")}>
+                        <Button size="sm" variant="outline" className="h-9 gap-2 text-xs font-medium text-pink-600 border-pink-500/20 bg-pink-500/5 hover:bg-pink-500/10" onClick={() => window.open(`https://instagram.com/${igHandle}`, "_blank")}>
                           <Instagram className="h-3.5 w-3.5" /> @{igHandle}
                         </Button>
                       )}
                       {friend.linkedin && (
-                        <Button size="sm" variant="outline" className="h-9 gap-2 rounded-xl text-xs font-medium text-blue-600 border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10" onClick={() => window.open(friend.linkedin || "", "_blank")}>
+                        <Button size="sm" variant="outline" className="h-9 gap-2 text-xs font-medium text-blue-600 border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10" onClick={() => window.open(friend.linkedin || "", "_blank")}>
                           <Linkedin className="h-3.5 w-3.5" /> LinkedIn
                         </Button>
                       )}

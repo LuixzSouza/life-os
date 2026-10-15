@@ -91,11 +91,11 @@ export function HabitsCard() {
         </div>
         <div className="flex items-center gap-1.5">
           {habits.length > 0 && (
-            <Button size="sm" variant="ghost" className="h-8 gap-1.5 rounded-lg px-2.5 text-muted-foreground hover:text-primary" onClick={() => setSkillOpen(true)} title="Ver evolução dos hábitos">
+            <Button size="sm" variant="ghost" className="h-8 gap-1.5 px-2.5 text-muted-foreground hover:text-primary" onClick={() => setSkillOpen(true)} title="Ver evolução dos hábitos">
               <Sparkles className="h-3.5 w-3.5" /> <span className="hidden sm:inline">Evolução</span>
             </Button>
           )}
-          <Button size="sm" variant="outline" className="h-8 gap-1.5 rounded-lg" onClick={() => setAddOpen(true)}>
+          <Button size="sm" variant="outline" className="h-8 gap-1.5" onClick={() => setAddOpen(true)}>
             <Plus className="h-3.5 w-3.5" /> Novo
           </Button>
         </div>
@@ -261,8 +261,8 @@ function AddHabitDialog({ open, onOpenChange, onCreated }: { open: boolean; onOp
           </div>
         </DialogBody>
         <DialogFooter>
-          <Button variant="outline" onClick={() => onOpenChange(false)} className="rounded-xl">Cancelar</Button>
-          <Button onClick={submit} disabled={saving || !name.trim()} className="rounded-xl gap-1.5">
+          <Button variant="outline" onClick={() => onOpenChange(false)} className="">Cancelar</Button>
+          <Button onClick={submit} disabled={saving || !name.trim()} className="gap-1.5">
             <Plus className="h-4 w-4" /> {saving ? "Criando..." : "Criar hábito"}
           </Button>
         </DialogFooter>

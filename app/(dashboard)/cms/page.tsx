@@ -1,3 +1,4 @@
+import { EmptyState } from "@/components/ui/empty-state";
 // Conteudo autenticado por-usuario: render por requisicao (nunca prerender no build).
 export const dynamic = "force-dynamic";
 
@@ -40,16 +41,13 @@ export default async function CMSPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           
           {sites.length === 0 ? (
-            <div className="col-span-full flex flex-col items-center justify-center py-24 border border-dashed border-border/60 rounded-2xl bg-muted/5 text-center">
-              <div className="h-16 w-16 rounded-full bg-muted/20 flex items-center justify-center mb-4">
-                  <Braces className="h-8 w-8 text-muted-foreground/50" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">Nenhum container ativo</h3>
-              <p className="text-sm text-muted-foreground mt-1 mb-5 max-w-sm">
-                Crie um container para começar a distribuir dados via API REST.
-              </p>
-              <NewSiteDialog />
-            </div>
+            <EmptyState
+              icon={Braces}
+              title="Nenhum container ativo"
+              description="Crie um container para começar a distribuir dados via API REST."
+              action={<NewSiteDialog />}
+              className="col-span-full"
+            />
           ) : (
             sites.map((site) => (
               <Card key={site.id} className="group flex flex-col bg-card border-border/40 rounded-2xl shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md overflow-hidden">

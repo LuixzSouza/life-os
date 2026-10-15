@@ -145,7 +145,7 @@ export function ProjectCardMenu({ projectId, slug, title, taskCount, status = "A
             onClick={stopNav}
             onPointerDown={stop}
             aria-label="Ações do projeto"
-            className="h-8 w-8 rounded-lg text-muted-foreground opacity-100 transition-all md:opacity-0 md:group-hover:opacity-100 focus-visible:opacity-100 data-[state=open]:opacity-100 hover:bg-muted hover:text-foreground"
+            className="h-8 w-8 text-muted-foreground opacity-100 transition-all md:opacity-0 md:group-hover:opacity-100 focus-visible:opacity-100 data-[state=open]:opacity-100 hover:bg-muted hover:text-foreground"
           >
             <MoreHorizontal className="h-4 w-4" />
           </Button>
@@ -270,7 +270,7 @@ export function ProjectCardMenu({ projectId, slug, title, taskCount, status = "A
                   onSelect={() => changePara(key)}
                   className="rounded-lg px-2.5 py-2 gap-2 cursor-pointer"
                 >
-                  <span className={cn("rounded px-1.5 py-0.5 text-xs font-medium", PARA_META[key].badgeClass)}>
+                  <span className={cn("eyebrow rounded px-1.5 py-0.5", PARA_META[key].badgeClass)}>
                     {PARA_META[key].label}
                   </span>
                   <span className="flex-1 truncate text-[10px] text-muted-foreground">{PARA_META[key].hint}</span>

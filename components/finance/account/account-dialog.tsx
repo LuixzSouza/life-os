@@ -280,14 +280,14 @@ export function AccountDialog({
           </DialogBody>
 
           <DialogFooter>
-            <Button type="button" variant="ghost" className="rounded-xl font-bold" onClick={() => setIsOpen(false)}>
+            <Button type="button" variant="ghost" className="font-bold" onClick={() => setIsOpen(false)}>
               Cancelar
             </Button>
 
             <Button
               type="submit"
               disabled={isLoading}
-              className="rounded-xl font-bold shadow-lg"
+              className="font-bold shadow-lg"
               style={{ backgroundColor: selectedColor, color: "white" }}
             >
               {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : account ? "Salvar" : "Criar Conta"}

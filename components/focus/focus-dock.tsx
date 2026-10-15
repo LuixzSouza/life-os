@@ -544,7 +544,7 @@ function SettingsPanel({
         </>
       )}
 
-      <Button onClick={onClose} className="h-11 w-full rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs">
+      <Button onClick={onClose} className="h-10 w-full bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs">
         <Maximize2 className="mr-2 h-3.5 w-3.5" /> Voltar ao timer
       </Button>
     </div>
@@ -554,7 +554,7 @@ function SettingsPanel({
 function Field({ label, value, onChange, wide }: { label: string; value: number; onChange: (v: string) => void; wide?: boolean }) {
   return (
     <div className={cn("space-y-1.5", wide && "col-span-full")}>
-      <label className="text-xs font-medium text-muted-foreground">{label}</label>
+      <label className="eyebrow text-muted-foreground">{label}</label>
       <Input
         type="number"
         min={1}

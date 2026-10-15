@@ -234,7 +234,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
                     <Button
                       key={level} type="button"
                       variant={focusLevel === level.toString() ? "default" : "ghost"}
-                      className="flex-1 rounded-md transition-all"
+                      className="flex-1 transition-all"
                       onClick={() => setFocusLevel(level.toString())}
                     >
                       {level}

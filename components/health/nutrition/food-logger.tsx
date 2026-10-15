@@ -181,7 +181,7 @@ export function FoodLogger({ meals, dailyGoal = 2000, workoutBurn = 0, missingKc
                             size="sm"
                             onClick={handleCopyYesterday}
                             disabled={copying}
-                            className="h-9 gap-1.5 rounded-lg text-xs"
+                            className="h-9 gap-1.5 text-xs"
                             title="Copiar todas as refeições de ontem para hoje"
                         >
                             {copying ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <CopyPlus className="h-3.5 w-3.5" />}
@@ -239,7 +239,7 @@ export function FoodLogger({ meals, dailyGoal = 2000, workoutBurn = 0, missingKc
                             size="sm"
                             onClick={handleQuickAdd}
                             disabled={quickLoading || !quickText.trim()}
-                            className="h-9 gap-1.5 rounded-lg px-3 shrink-0 font-semibold min-w-[2.5rem]"
+                            className="h-9 gap-1.5 px-3 shrink-0 font-semibold min-w-[2.5rem]"
                         >
                             {quickLoading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Plus className="h-3.5 w-3.5" />}
                             <span className="hidden sm:inline">{quickLoading ? "Registrando…" : "Registrar"}</span>
@@ -259,7 +259,7 @@ export function FoodLogger({ meals, dailyGoal = 2000, workoutBurn = 0, missingKc
                     <p className="text-xs text-muted-foreground min-w-0">
                         <span className="font-semibold text-foreground">{missingKcalCount} {missingKcalCount === 1 ? "refeição antiga está" : "refeições antigas estão"} sem calorias</span> — a IA pode estimar kcal e macros pela descrição.
                     </p>
-                    <Button variant="outline" size="sm" onClick={handleRecalcMissing} disabled={recalcing} className="h-8 gap-1.5 rounded-lg text-xs shrink-0">
+                    <Button variant="outline" size="sm" onClick={handleRecalcMissing} disabled={recalcing} className="h-8 gap-1.5 text-xs shrink-0">
                         {recalcing ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5 text-amber-500" />}
                         Recalcular com IA
                     </Button>
@@ -338,10 +338,10 @@ function MealRow({ meal, onConnections, onDelete }: { meal: Meal; onConnections:
                 <Badge variant="secondary" className="font-mono font-medium text-xs px-2.5 h-6 bg-background border-border/60">{meal.calories} kcal</Badge>
                 <div className="flex gap-1 md:opacity-0 group-hover:opacity-100 transition-opacity">
                     <MealFormDialog meal={meal}>
-                        <Button variant="ghost" size="icon" aria-label="Editar refeição" className="h-8 w-8 text-muted-foreground hover:text-primary rounded-lg"><Pencil className="h-4 w-4" /></Button>
+                        <Button variant="ghost" size="icon" aria-label="Editar refeição" className="h-8 w-8 text-muted-foreground hover:text-primary"><Pencil className="h-4 w-4" /></Button>
                     </MealFormDialog>
-                    <Button variant="ghost" size="icon" title="Tags & Anexos" aria-label="Tags e anexos da refeição" onClick={() => onConnections(meal)} className="h-8 w-8 text-muted-foreground hover:text-primary rounded-lg"><Tags className="h-4 w-4" /></Button>
-                    <Button variant="ghost" size="icon" aria-label="Excluir refeição" onClick={() => onDelete(meal)} className="h-8 w-8 text-muted-foreground hover:text-rose-500 rounded-lg"><Trash2 className="h-4 w-4" /></Button>
+                    <Button variant="ghost" size="icon" title="Tags & Anexos" aria-label="Tags e anexos da refeição" onClick={() => onConnections(meal)} className="h-8 w-8 text-muted-foreground hover:text-primary"><Tags className="h-4 w-4" /></Button>
+                    <Button variant="ghost" size="icon" aria-label="Excluir refeição" onClick={() => onDelete(meal)} className="h-8 w-8 text-muted-foreground hover:text-rose-500"><Trash2 className="h-4 w-4" /></Button>
                 </div>
             </div>
         </div>
@@ -476,7 +476,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
         <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o && !meal) reset(); }}>
             <DialogTrigger asChild>
                 {children || (
-                    <Button variant="outline" size="sm" className="h-9 gap-1.5 rounded-lg px-3 text-xs" title="Montar refeição item a item, com busca de alimentos">
+                    <Button variant="outline" size="sm" className="h-9 gap-1.5 px-3 text-xs" title="Montar refeição item a item, com busca de alimentos">
                         <UtensilsCrossed className="h-3.5 w-3.5" /> <span className="hidden sm:inline">Montar refeição</span>
                     </Button>
                 )}
@@ -504,7 +504,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                     {/* Mobile: confirma o que já entrou no prato e volta para os detalhes. */}
                     {usingPlate && (
                         <div className="md:hidden shrink-0 border-t border-border/40 bg-background p-3">
-                            <Button onClick={() => setShowSearchMobile(false)} className="w-full h-11 gap-2 rounded-xl font-bold">
+                            <Button onClick={() => setShowSearchMobile(false)} className="w-full h-10 gap-2 font-bold">
                                 <UtensilsCrossed className="h-4 w-4" />
                                 Ver prato ({plate.length}) · {plateCals} kcal
                             </Button>
@@ -573,7 +573,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                             </div>
 
                             {/* Botão de busca (mobile) */}
-                            <Button type="button" variant="outline" className="md:hidden w-full h-11 border-dashed border-border/60 gap-2 rounded-xl" onClick={() => setShowSearchMobile(true)}>
+                            <Button type="button" variant="outline" className="md:hidden w-full h-10 border-dashed border-border/60 gap-2" onClick={() => setShowSearchMobile(true)}>
                                 <Search className="h-4 w-4" /> {usingPlate ? `Adicionar mais (${plate.length} no prato)` : "Buscar alimentos"}
                             </Button>
 
@@ -604,7 +604,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                                 </div>
                                                 {/* Stepper de quantidade */}
                                                 <div className="flex items-center gap-1 shrink-0">
-                                                    <Button type="button" variant="outline" size="icon" aria-label="Diminuir quantidade" className="h-7 w-7 rounded-lg" onClick={() => setQty(food.id, quantity - 1)}>
+                                                    <Button type="button" variant="outline" size="icon" aria-label="Diminuir quantidade" className="h-7 w-7" onClick={() => setQty(food.id, quantity - 1)}>
                                                         <Minus className="h-3 w-3" />
                                                     </Button>
                                                     <Input
@@ -612,10 +612,10 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                                         onChange={(e) => setQty(food.id, Number(e.target.value.replace(",", ".")) || 0)}
                                                         className="h-7 w-12 text-center px-1 rounded-lg bg-background border-border/40 font-mono text-sm"
                                                     />
-                                                    <Button type="button" variant="outline" size="icon" aria-label="Aumentar quantidade" className="h-7 w-7 rounded-lg" onClick={() => setQty(food.id, quantity + 1)}>
+                                                    <Button type="button" variant="outline" size="icon" aria-label="Aumentar quantidade" className="h-7 w-7" onClick={() => setQty(food.id, quantity + 1)}>
                                                         <Plus className="h-3 w-3" />
                                                     </Button>
-                                                    <Button type="button" variant="ghost" size="icon" aria-label="Remover alimento" className="h-7 w-7 rounded-lg text-muted-foreground hover:text-destructive" onClick={() => removeItem(food.id)}>
+                                                    <Button type="button" variant="ghost" size="icon" aria-label="Remover alimento" className="h-7 w-7 text-muted-foreground hover:text-destructive" onClick={() => removeItem(food.id)}>
                                                         <Trash2 className="h-3.5 w-3.5" />
                                                     </Button>
                                                 </div>
@@ -696,8 +696,8 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                 )}
                             </div>
                             <div className="flex gap-2 shrink-0">
-                                <Button type="button" variant="ghost" onClick={() => setOpen(false)} className="rounded-xl h-11 px-5">Cancelar</Button>
-                                <Button type="submit" disabled={isLoading} title="Ctrl/Cmd + Enter para salvar" className="rounded-xl h-11 px-7 font-bold gap-2">
+                                <Button type="button" variant="ghost" onClick={() => setOpen(false)} className="h-10 px-5">Cancelar</Button>
+                                <Button type="submit" disabled={isLoading} title="Ctrl/Cmd + Enter para salvar" className="h-10 px-7 font-bold gap-2">
                                     {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
                                     {meal ? "Salvar" : "Registrar"}
                                 </Button>

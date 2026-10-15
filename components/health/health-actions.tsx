@@ -78,7 +78,7 @@ export function HealthActions() {
                 {showGym && (
                 <Button
                     size="icon"
-                    className="h-9 w-9 rounded-xl shadow-sm"
+                    className="h-9 w-9 shadow-sm"
                     aria-label="Registrar treino"
                     onClick={() => setGymOpen(true)}
                 >
@@ -89,7 +89,7 @@ export function HealthActions() {
                 <Button
                     size="icon"
                     variant="secondary"
-                    className="h-9 w-9 rounded-xl border border-border/40 bg-card shadow-sm hover:bg-muted/80"
+                    className="h-9 w-9 border border-border/40 bg-card shadow-sm hover:bg-muted/80"
                     aria-label="Registrar corrida"
                     onClick={() => setRunOpen(true)}
                 >
@@ -163,7 +163,7 @@ export function HealthActions() {
                                 variant="ghost"
                                 size="icon"
                                 aria-label="Fechar"
-                                className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-rose-500/10 transition-colors"
+                                className="h-8 w-8 text-muted-foreground hover:text-foreground hover:bg-rose-500/10 transition-colors"
                                 onClick={() => setIsNavExpanded(false)}
                             >
                                 <X className="h-4 w-4" />

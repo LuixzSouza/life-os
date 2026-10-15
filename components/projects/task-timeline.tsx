@@ -19,6 +19,7 @@ import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronLeft, ChevronRight, Inbox, Lock } from "lucide-react";
 import { toggleTask } from "@/app/(dashboard)/projects/actions";
 import { useIsTaskBlocked } from "./task/blocked-tasks-context";
+import { EmptyState } from "@/components/ui/empty-state";
 
 const LEFT_COL = "13rem"; // coluna fixa de títulos
 const DAY_COL = "2.25rem"; // largura de cada dia da régua
@@ -180,15 +181,11 @@ export function TaskTimeline({ initialTasks }: { initialTasks: Task[] }) {
 
   if (withDue.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
-        <div className="h-16 w-16 rounded-2xl bg-muted/50 flex items-center justify-center mb-4">
-          <Inbox className="h-8 w-8 text-muted-foreground/40" />
-        </div>
-        <h3 className="text-lg font-bold text-foreground">Nenhuma tarefa com prazo</h3>
-        <p className="text-sm text-muted-foreground max-w-xs mt-1">
-          A linha do tempo mostra tarefas com data de entrega. Abra uma tarefa e defina um prazo para vê-la aqui.
-        </p>
-      </div>
+      <EmptyState
+        icon={Inbox}
+        title="Nenhuma tarefa com prazo"
+        description="A linha do tempo mostra tarefas com data de entrega. Abra uma tarefa e defina um prazo para vê-la aqui."
+      />
     );
   }
 

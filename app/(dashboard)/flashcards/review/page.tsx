@@ -67,7 +67,7 @@ export default async function GlobalReviewPage({
             </p>
           </div>
           <Link href="/flashcards" className="block">
-            <Button variant="outline" size="lg" className="h-14 w-full gap-2 rounded-xl text-base font-semibold">
+            <Button variant="outline" size="lg" className="h-14 w-full gap-2 text-base font-semibold">
               <ArrowLeft className="h-5 w-5" /> Voltar para a Biblioteca
             </Button>
           </Link>

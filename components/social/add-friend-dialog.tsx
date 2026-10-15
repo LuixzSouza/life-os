@@ -200,7 +200,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       {mode === "create" && (
-        <Button onClick={() => setOpen(true)} className="gap-2 font-medium rounded-lg shadow-sm">
+        <Button onClick={() => setOpen(true)} className="gap-2 font-medium shadow-sm">
           <Plus className="h-4 w-4" /> Novo Contato
         </Button>
       )}
@@ -248,11 +248,11 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                         </div>
                       </div>
                       <div className="flex gap-1">
-                        <Button type="button" variant="outline" size="sm" className="h-7 text-[11px] rounded-lg" onClick={() => fileRef.current?.click()} disabled={uploadingImg}>
+                        <Button type="button" variant="outline" size="sm" className="h-7 text-[11px]" onClick={() => fileRef.current?.click()} disabled={uploadingImg}>
                           <Upload className="h-3 w-3 mr-1" /> Foto
                         </Button>
                         {formData.imageUrl && (
-                          <Button type="button" variant="ghost" size="sm" className="h-7 text-[11px] rounded-lg text-destructive hover:bg-destructive/10" onClick={() => setFormData(prev => ({ ...prev, imageUrl: "" }))}>
+                          <Button type="button" variant="ghost" size="sm" className="h-7 text-[11px] text-destructive hover:bg-destructive/10" onClick={() => setFormData(prev => ({ ...prev, imageUrl: "" }))}>
                             <Trash2 className="h-3 w-3" />
                           </Button>
                         )}
@@ -349,7 +349,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                         placeholder="Ex: Cliente, Faculdade, Futebol..."
                         className="bg-background rounded-lg h-9 text-sm"
                       />
-                      <Button type="button" variant="secondary" onClick={handleAddTag} className="h-9 px-4 rounded-lg">Adicionar</Button>
+                      <Button type="button" variant="secondary" onClick={handleAddTag} className="h-9 px-4">Adicionar</Button>
                     </div>
                     {tags.length > 0 ? (
                       <div className="flex flex-wrap gap-2 mt-2">

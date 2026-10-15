@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { SafeImg } from "@/components/ui/safe-img";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { MarketDetailModal } from "./market-detail-modal";
+import { EmptyState } from "@/components/ui/empty-state";
 
 const REFRESH_MS = 45000; // atualização automática a cada 45s
 
@@ -350,11 +351,11 @@ function MarketHighlightCard({ item, onSelect, isFav, onToggleFav }: { item: Mar
 
 function MarketGrid({ items, onSelect, favSet, onToggleFav }: { items: MarketItem[]; onSelect: (i: MarketItem) => void; favSet: Set<string>; onToggleFav: (t: string) => void }) {
     if (items.length === 0) return (
-        <div className="flex flex-col items-center justify-center py-16 text-center border-2 border-dashed border-border/50 rounded-xl bg-muted/5">
-            <Search className="h-8 w-8 text-muted-foreground/40 mb-3" />
-            <p className="text-sm font-medium text-foreground">Nenhum ativo encontrado</p>
-            <p className="text-xs text-muted-foreground mt-1">Tente buscar por outro nome ou código (ticker).</p>
-        </div>
+        <EmptyState
+            icon={Search}
+            title="Nenhum ativo encontrado"
+            description="Tente buscar por outro nome ou código (ticker)."
+        />
     );
 
     return (

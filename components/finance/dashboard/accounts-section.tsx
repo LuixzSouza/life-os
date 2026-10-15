@@ -29,7 +29,7 @@ export function AccountsSection({ accounts }: AccountsSectionProps) {
             onClick={() => setIsImportOpen(true)}
             variant="outline"
             size="sm"
-            className="gap-2 rounded-xl font-bold shrink-0"
+            className="gap-2 font-bold shrink-0"
           >
             <FileUp className="h-4 w-4" /> <span className="hidden sm:inline">Importar extrato</span>
           </Button>
@@ -56,7 +56,7 @@ export function AccountsSection({ accounts }: AccountsSectionProps) {
                 open={isAccountOpen}
                 onOpenChange={setIsAccountOpen}
                 trigger={
-                  <Button className="rounded-xl h-11 px-8 font-bold shadow-lg shadow-primary/20 transition-all active:scale-95" onClick={() => setIsAccountOpen(true)}>
+                  <Button className="h-10 px-8 font-bold shadow-lg shadow-primary/20 transition-all active:scale-95" onClick={() => setIsAccountOpen(true)}>
                     <Plus className="h-4 w-4 mr-2" /> Criar Carteira
                   </Button>
                 }

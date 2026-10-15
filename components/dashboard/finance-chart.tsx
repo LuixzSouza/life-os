@@ -46,7 +46,7 @@ const CustomTooltip = ({ active, payload, label }: FinanceChartTooltipProps) => 
     return (
       <div className="flex flex-col gap-2 rounded-xl border border-border/40 bg-background/95 p-3 shadow-2xl backdrop-blur-md min-w-[160px]">
         <div className="flex items-center justify-between border-b border-border/40 pb-2">
-          <span className="text-xs text-muted-foreground font-medium">{label}</span>
+          <span className="eyebrow text-muted-foreground">{label}</span>
           {isIncome ? <TrendingUp className="h-3.5 w-3.5 text-emerald-500" /> : <TrendingDown className="h-3.5 w-3.5 text-rose-500" />}
         </div>
         <div className="flex items-center justify-between gap-3">
@@ -86,7 +86,7 @@ function FinanceChartContent({ data, title = "Fluxo de Caixa", className }: { da
     <div className={cn("w-full space-y-3 sm:space-y-6", className)}>
       {/* Sem título quando o Card pai já o exibe (title="") — só a legenda. */}
       <div className={cn("flex flex-wrap items-center gap-2 px-2", title ? "justify-between" : "justify-end")}>
-        {title && <h4 className="text-xs font-medium text-muted-foreground">{title}</h4>}
+        {title && <h4 className="eyebrow text-muted-foreground">{title}</h4>}
         <div className="flex gap-3 sm:gap-4 text-xs font-medium">
           <span className="flex items-center gap-1.5 sm:gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]" /> Entradas</span>
           <span className="flex items-center gap-1.5 sm:gap-2"><span className="w-1.5 h-1.5 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]" /> Saídas</span>

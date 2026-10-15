@@ -31,6 +31,7 @@ import {
   accuracy, accuracyClass, areaBadgeClass, areaLabel, difficultyLabel, optionLetter,
   type QuestionRow,
 } from "./question-helpers";
+import { EmptyState } from "@/components/ui/empty-state";
 
 interface QuestionBankProps {
   questions: QuestionRow[];
@@ -182,33 +183,23 @@ export function QuestionBank({ questions, subjects }: QuestionBankProps) {
 
       {/* LISTA */}
       {filtered.length === 0 ? (
-        <Card className="border-dashed border-border/70 bg-card shadow-sm">
-          <CardContent className="flex flex-col items-center justify-center gap-3 py-14 text-center">
-            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-              <ListChecks className="h-6 w-6" />
+        <EmptyState
+          icon={ListChecks}
+          title={questions.length === 0 ? "Seu banco está vazio" : "Nenhuma questão encontrada"}
+          description={questions.length === 0
+            ? "Crie questões à mão ou deixe a IA gerar a partir de um assunto. Elas viram simulados cronometrados depois."
+            : "Ajuste a busca ou os filtros para encontrar a questão."}
+          action={questions.length === 0 ? (
+            <div className="flex flex-wrap justify-center gap-2">
+              <Button variant="outline" className="gap-2" onClick={() => setAiOpen(true)}>
+                <Sparkles className="h-4 w-4" /> Gerar com IA
+              </Button>
+              <Button className="gap-2" onClick={openCreate}>
+                <Plus className="h-4 w-4" /> Nova questão
+              </Button>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold">
-                {questions.length === 0 ? "Seu banco está vazio" : "Nada com esses filtros"}
-              </h3>
-              <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground">
-                {questions.length === 0
-                  ? "Crie questões à mão ou deixe a IA gerar a partir de um assunto. Elas viram simulados cronometrados depois."
-                  : "Ajuste a busca ou os filtros para encontrar a questão."}
-              </p>
-            </div>
-            {questions.length === 0 && (
-              <div className="mt-2 flex flex-wrap justify-center gap-2">
-                <Button variant="outline" className="gap-2" onClick={() => setAiOpen(true)}>
-                  <Sparkles className="h-4 w-4" /> Gerar com IA
-                </Button>
-                <Button className="gap-2" onClick={openCreate}>
-                  <Plus className="h-4 w-4" /> Nova questão
-                </Button>
-              </div>
-            )}
-          </CardContent>
-        </Card>
+          ) : undefined}
+        />
       ) : (
         <div className="space-y-3">
           {filtered.map((q) => {

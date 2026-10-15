@@ -160,7 +160,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
           <Button
             size="icon"
             variant="ghost"
-            className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg"
+            className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-primary/10"
             onClick={() => setIsEditing(true)}
             title="Editar Cartão"
             aria-label="Editar cartão"
@@ -171,7 +171,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
           <Button
             size="icon"
             variant="ghost"
-            className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg"
+            className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
             onClick={() => setIsDeleteDialogOpen(true)}
             title="Remover Cartão"
             aria-label="Remover cartão"

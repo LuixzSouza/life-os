@@ -215,7 +215,7 @@ export default function RegisterPageClient() {
                         </AnimatePresence>
 
                         <Button type="submit" size="lg"
-                            className="w-full h-12 font-semibold shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70 disabled:hover:scale-100"
+                            className="w-full h-10 font-semibold shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70 disabled:hover:scale-100"
                             disabled={isLoading}>
                             {isLoading ? (
                                 <span className="flex items-center gap-2"><Loader2 className="h-5 w-5 animate-spin" /> Criando…</span>

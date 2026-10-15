@@ -74,7 +74,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
       {/* RESUMO DO DIA + LEGENDA */}
       <div className="flex items-center justify-between gap-3 border-b border-border/40 bg-muted/10 px-4 py-2.5 shrink-0">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-medium text-foreground tabular-nums">
+          <span className="eyebrow text-foreground tabular-nums">
             {items.length} {items.length === 1 ? "bloco" : "blocos"}
           </span>
           <span className="text-[10px] font-bold text-muted-foreground tabular-nums">
@@ -105,7 +105,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
           {hours.map((hour) => (
             <div key={hour} className="absolute w-full flex items-start" style={{ top: `${(hour - START_HOUR) * HOUR_HEIGHT}px`, height: `${HOUR_HEIGHT}px` }}>
               <div className="w-14 text-right pr-3 shrink-0 -mt-2">
-                <span className="text-xs font-medium text-muted-foreground/40">{hour.toString().padStart(2, "0")}:00</span>
+                <span className="eyebrow text-muted-foreground/40">{hour.toString().padStart(2, "0")}:00</span>
               </div>
               <div className="flex-1 border-t border-border/40 border-dashed" />
             </div>
@@ -143,7 +143,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
 
                         {!isCompact && (
                           <div className="mt-1.5 flex items-center gap-2">
-                            <span className={cn("text-xs font-medium", theme.colorClass)}>{theme.label}</span>
+                            <span className={cn("eyebrow", theme.colorClass)}>{theme.label}</span>
                             <span className="eyebrow text-muted-foreground/60 tabular-nums border-l border-border pl-2">
                               {item.startTime} - {item.endTime}
                             </span>
@@ -196,7 +196,7 @@ function NowLine({ startHour, endHour, hourHeight }: { startHour: number; endHou
 
   return (
     <div className="pointer-events-none absolute left-0 right-2 z-20 flex items-center" style={{ top: `${top}px` }}>
-      <span className="w-14 shrink-0 pr-2 text-right text-xs font-medium text-rose-500 tabular-nums">
+      <span className="eyebrow w-14 shrink-0 pr-2 text-right text-rose-500 tabular-nums">
         {label}
       </span>
       <div className="relative flex-1">

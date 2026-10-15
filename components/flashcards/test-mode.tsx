@@ -148,8 +148,8 @@ export function TestMode({ deck, cards }: TestModeProps) {
           )}
 
           <div className="flex flex-col gap-2">
-            <Button onClick={restart} className="h-11 gap-2 rounded-xl font-bold"><RotateCcw className="h-4 w-4" /> Refazer teste</Button>
-            <Link href="/flashcards"><Button variant="ghost" className="h-10 w-full rounded-xl text-muted-foreground">Voltar à biblioteca</Button></Link>
+            <Button onClick={restart} className="h-10 gap-2 font-bold"><RotateCcw className="h-4 w-4" /> Refazer teste</Button>
+            <Link href="/flashcards"><Button variant="ghost" className="h-10 w-full text-muted-foreground">Voltar à biblioteca</Button></Link>
           </div>
         </div>
       </div>
@@ -212,7 +212,7 @@ export function TestMode({ deck, cards }: TestModeProps) {
       {/* Próxima */}
       {picked !== null && (
         <div className="mt-6 flex justify-end animate-in fade-in slide-in-from-bottom-2">
-          <Button onClick={next} className="h-11 gap-2 rounded-xl px-6 font-bold">
+          <Button onClick={next} className="h-10 gap-2 px-6 font-bold">
             {index + 1 >= total ? "Ver resultado" : "Próxima"}
           </Button>
         </div>

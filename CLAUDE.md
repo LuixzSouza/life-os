@@ -52,6 +52,9 @@ Toda tela segue estes padrões — não reinvente localmente:
 - **Estrutura de página:** `PageShell` + `PageHeader` (ícone, título, descrição, `actions`) + `PageContainer` (`components/layout/page-shell.tsx`). Um cabeçalho só por tela — nada de 2º título grande logo abaixo.
 - **Ações do cabeçalho:** só AÇÕES da tela atual (contextuais). Atalhos de navegação que já estão no menu lateral não entram no header.
 - **Rótulo pequeno em caixa-alta** (títulos de card/KPI/seção, rótulos de campo): use **só** `eyebrow` + uma cor (`eyebrow text-muted-foreground`). Proibido montar `text-[10px] font-black uppercase tracking-widest` à mão. O `cn()` já entende que `eyebrow` substitui tamanho/peso/espaçamento.
+- **Texto dinâmico em caixa-alta:** se o rótulo mostra algo que vem em minúsculas (mês/dia da semana do `date-fns`, "agora", tempo relativo), a caixa-alta vem do `eyebrow` — nunca remova o `uppercase` de um rótulo assim sem tratar o texto.
+- **Botões:** nunca em caixa-alta e nunca com `eyebrow`. O `<Button>` base já define o raio (`rounded-lg`); não sobrescreva `rounded-*` (exceto `rounded-full` para botão redondo). Tamanhos: `size="sm"` (h-8), padrão (h-9), `size="lg"` (h-10).
+- **Estado vazio:** sempre `EmptyState` (`components/ui/empty-state.tsx`; `size="sm"` dentro de cards). Não monte "Nenhum X" com tracejado à mão.
 - **Tipografia:** sem `font-black`+`uppercase` em texto corrido; títulos `font-semibold`, textos `font-medium`/normal; mínimo `text-xs` (exceto `eyebrow`, 11px).
 - **Datas pt-BR:** `capFirst(format(...))` (`lib/utils`). Nunca o CSS `capitalize` (gera "Quinta-Feira, 15 De Outubro").
 - **Arredondamento:** containers `rounded-2xl`/`rounded-xl`, internos `rounded-lg`, chips `rounded-md`. Sem `rounded-[2rem]` & cia.

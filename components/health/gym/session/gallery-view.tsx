@@ -482,10 +482,10 @@ export function GymGallery() {
               ))}
             </div>
             <div className="mx-auto mt-3 flex w-full max-w-sm gap-2">
-              <Button onClick={shareCompare} disabled={comparing} className="h-11 flex-1 gap-1.5">
+              <Button onClick={shareCompare} disabled={comparing} className="h-10 flex-1 gap-1.5">
                 {comparing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Share2 className="h-4 w-4" />} Compartilhar
               </Button>
-              <Button variant="outline" onClick={clearCompare} className="h-11 gap-1.5 border-white/20 bg-transparent text-white hover:bg-white/10">
+              <Button variant="outline" onClick={clearCompare} className="h-10 gap-1.5 border-white/20 bg-transparent text-white hover:bg-white/10">
                 Trocar
               </Button>
             </div>
@@ -612,13 +612,13 @@ export function GymGallery() {
                 </div>
               </div>
               <div className="mx-auto flex max-w-sm gap-2">
-                <Button onClick={() => share(activePhoto)} disabled={sharing} className="h-11 flex-1 gap-1.5">
+                <Button onClick={() => share(activePhoto)} disabled={sharing} className="h-10 flex-1 gap-1.5">
                   {sharing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Share2 className="h-4 w-4" />} Compartilhar
                 </Button>
-                <Button variant="outline" onClick={() => downloadPhoto(activePhoto)} className="h-11 gap-1.5 border-white/20 bg-transparent text-white hover:bg-white/10" title="Baixar foto">
+                <Button variant="outline" onClick={() => downloadPhoto(activePhoto)} className="h-10 gap-1.5 border-white/20 bg-transparent text-white hover:bg-white/10" title="Baixar foto">
                   <Download className="h-4 w-4" />
                 </Button>
-                <Button variant="outline" onClick={() => remove(activePhoto.id)} className="h-11 gap-1.5 border-white/20 bg-transparent text-white hover:bg-white/10" title="Excluir">
+                <Button variant="outline" onClick={() => remove(activePhoto.id)} className="h-10 gap-1.5 border-white/20 bg-transparent text-white hover:bg-white/10" title="Excluir">
                   <Trash2 className="h-4 w-4" />
                 </Button>
               </div>

@@ -45,14 +45,14 @@ export function ErrorState({
           <div className="mt-4 flex gap-3">
             {backHref && (
               <Link href={backHref}>
-                <Button variant="ghost" className="rounded-xl">
+                <Button variant="ghost" className="">
                   {backLabel}
                 </Button>
               </Link>
             )}
             {retryHref && (
               <Link href={retryHref}>
-                <Button variant="outline" className="gap-2 rounded-xl">
+                <Button variant="outline" className="gap-2">
                   <RefreshCcw className="h-4 w-4" /> {retryLabel}
                 </Button>
               </Link>

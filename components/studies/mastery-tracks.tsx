@@ -119,7 +119,7 @@ export function MasteryTracks({ tracks }: { tracks: MasteryTrack[] }) {
                     </p>
                     <Button
                       size="sm"
-                      className="h-7 shrink-0 gap-1.5 rounded-lg text-xs font-bold"
+                      className="h-7 shrink-0 gap-1.5 text-xs font-bold"
                       onClick={() => requestStudyStart(t.id)}
                     >
                       <Play className="h-3 w-3" /> Estudar

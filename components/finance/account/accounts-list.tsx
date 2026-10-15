@@ -178,7 +178,7 @@ export function AccountsList({ accounts }: { accounts: AccountItem[] }) {
 function SummaryStat({ label, value, blur, accent }: { label: string; value: string; blur?: boolean; accent?: boolean }) {
     return (
         <div className="min-w-0">
-            <p className="text-xs font-medium text-muted-foreground">{label}</p>
+            <p className="eyebrow text-muted-foreground">{label}</p>
             <p className={cn(
                 "font-mono font-black tracking-tight tabular-nums truncate",
                 accent ? "text-2xl text-foreground" : "text-xl text-foreground/80",

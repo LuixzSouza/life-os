@@ -110,7 +110,7 @@ export function QuickCaptureCard() {
             <Zap className="h-3 w-3" /> 2 min
           </button>
         </div>
-        <Button size="icon" onClick={add} disabled={!value.trim() || busy} className="h-10 w-10 shrink-0 rounded-xl" aria-label="Capturar">
+        <Button size="icon" onClick={add} disabled={!value.trim() || busy} className="h-10 w-10 shrink-0" aria-label="Capturar">
           {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-5 w-5" />}
         </Button>
       </div>

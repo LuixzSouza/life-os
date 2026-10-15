@@ -39,7 +39,7 @@ export function BodyBackfillBanner({ count }: { count: number }) {
         </span>{" "}
         (peso anotado pela IA em versões antigas) — dá para completar com os dados das medições vizinhas.
       </p>
-      <Button variant="outline" size="sm" onClick={handleFix} disabled={busy} className="h-8 gap-1.5 rounded-lg text-xs shrink-0">
+      <Button variant="outline" size="sm" onClick={handleFix} disabled={busy} className="h-8 gap-1.5 text-xs shrink-0">
         {busy ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Wrench className="h-3.5 w-3.5 text-amber-500" />}
         Corrigir registros
       </Button>

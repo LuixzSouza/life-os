@@ -122,7 +122,7 @@ export function TodaySuggestionCard({
           <div className="shrink-0">
             {match ? (
               <div className="flex flex-col items-stretch gap-1.5">
-                <Button onClick={start} className="h-11 gap-2 px-5 font-bold shadow-sm">
+                <Button onClick={start} className="h-10 gap-2 px-5 font-bold shadow-sm">
                   <Play className="h-4 w-4" /> Iniciar {match.div.label.split("—")[0].trim()}
                 </Button>
                 <span className="text-center text-[10px] text-muted-foreground">
@@ -133,7 +133,7 @@ export function TodaySuggestionCard({
               <Button
                 onClick={onPlanTab}
                 variant="outline"
-                className="h-11 gap-2 px-4 font-semibold"
+                className="h-10 gap-2 px-4 font-semibold"
                 title="Criar uma ficha para esse treino"
               >
                 <ClipboardList className="h-4 w-4" /> Montar ficha <ChevronRight className="h-4 w-4 opacity-60" />

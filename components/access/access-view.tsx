@@ -157,7 +157,7 @@ export function AccessView({ initialItems, audit }: { initialItems: AccessItem[]
             onClick={handleScanBreaches}
             disabled={scanning}
             title="Verifica se suas senhas apareceram em vazamentos públicos (privado, via k-anonymity)"
-            className="h-10 gap-2 rounded-xl border-border/40 bg-muted/10 px-4 text-xs font-medium hover:bg-muted"
+            className="h-10 gap-2 border-border/40 bg-muted/10 px-4 text-xs font-medium hover:bg-muted"
           >
             {scanning ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Radar className="h-3.5 w-3.5" />}
             {scanning ? "Verificando…" : "Vazamentos"}
@@ -331,7 +331,7 @@ function PaginationFooter({
           size="icon"
           onClick={() => onPage(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className="h-9 w-9 rounded-lg disabled:opacity-40"
+          className="h-9 w-9 disabled:opacity-40"
           aria-label="Página anterior"
         >
           <ChevronLeft className="h-4 w-4" />
@@ -362,7 +362,7 @@ function PaginationFooter({
           size="icon"
           onClick={() => onPage(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="h-9 w-9 rounded-lg disabled:opacity-40"
+          className="h-9 w-9 disabled:opacity-40"
           aria-label="Próxima página"
         >
           <ChevronRight className="h-4 w-4" />

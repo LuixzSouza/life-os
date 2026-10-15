@@ -40,12 +40,12 @@ export function NotesHeaderActions() {
   return (
     <>
       <ContentMapDialog />
-      <Button asChild variant="outline" size="sm" className="rounded-xl gap-1.5">
+      <Button asChild variant="outline" size="sm" className="gap-1.5">
         <Link href="/notes/graph">
           <Network className="h-3.5 w-3.5" /> Grafo
         </Link>
       </Button>
-      <Button onClick={openJournal} disabled={opening} size="sm" className="rounded-xl gap-1.5">
+      <Button onClick={openJournal} disabled={opening} size="sm" className="gap-1.5">
         {opening ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <BookHeart className="h-3.5 w-3.5" />}
         Diário de hoje
         {streak > 1 && (

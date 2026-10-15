@@ -68,7 +68,7 @@ export function TodayPanel({ items, inRange }: { items: AgendaItem[]; inRange: b
         </div>
         <p className="font-semibold text-foreground">Você está vendo outro mês</p>
         <p className="mt-1 max-w-xs text-sm text-muted-foreground">Volte para o dia de hoje para ver sua linha do tempo ao vivo.</p>
-        <Button className="mt-4 rounded-xl" onClick={() => router.push(agendaUrl(format(new Date(), "yyyy-MM-dd")))}>
+        <Button className="mt-4" onClick={() => router.push(agendaUrl(format(new Date(), "yyyy-MM-dd")))}>
           Ir para hoje <ArrowRight className="ml-1.5 h-4 w-4" />
         </Button>
       </div>
@@ -134,7 +134,7 @@ export function TodayPanel({ items, inRange }: { items: AgendaItem[]; inRange: b
         <div className="flex items-center gap-2" aria-label="Agora">
           <span className="h-2 w-2 rounded-full bg-rose-500" />
           <span className="h-px flex-1 bg-rose-500/60" />
-          <span className="font-mono text-xs font-medium text-rose-500">agora</span>
+          <span className="eyebrow font-mono text-rose-500">agora</span>
         </div>
 
         {/* O que vem (próximo destacado) */}
@@ -178,7 +178,7 @@ function TodayRow({ item, highlight, onFocus }: { item: AgendaItem; highlight?: 
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-semibold text-foreground">
           {item.title}
-          {highlight && <span className="ml-2 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">próximo</span>}
+          {highlight && <span className="eyebrow ml-2 rounded-full bg-primary/10 px-2 py-0.5 text-primary">próximo</span>}
         </p>
         <p className="truncate text-xs text-muted-foreground">
           <span className="font-medium" style={{ color: item.color }}>{meta.label}</span>
@@ -190,7 +190,7 @@ function TodayRow({ item, highlight, onFocus }: { item: AgendaItem; highlight?: 
         <Button
           size="sm"
           onClick={onFocus}
-          className="h-8 shrink-0 rounded-lg bg-primary px-2.5 text-xs font-medium text-primary-foreground"
+          className="h-8 shrink-0 bg-primary px-2.5 text-xs font-medium text-primary-foreground"
         >
           <Play className="mr-1 h-3 w-3" /> Foco
         </Button>

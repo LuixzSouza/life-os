@@ -65,7 +65,7 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
         </div>
         <div className="pt-4">
           <Link href="/flashcards" className="block">
-            <Button variant="outline" size="lg" className="w-full gap-2 rounded-xl h-14 text-base font-semibold hover:bg-muted/50">
+            <Button variant="outline" size="lg" className="w-full gap-2 h-14 text-base font-semibold hover:bg-muted/50">
               <ArrowLeft className="h-5 w-5" /> Voltar para Biblioteca
             </Button>
           </Link>
@@ -104,7 +104,7 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
         </div>
         <div className="pt-4">
           <Link href="/flashcards" className="block">
-            <Button variant="default" size="lg" className="w-full gap-2 shadow-lg shadow-primary/20 rounded-xl h-14 text-base font-bold">
+            <Button variant="default" size="lg" className="w-full gap-2 shadow-lg shadow-primary/20 h-14 text-base font-bold">
               <ArrowLeft className="h-5 w-5" /> Voltar para Biblioteca
             </Button>
           </Link>
@@ -134,13 +134,13 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
 
         <div className="flex flex-col sm:flex-row gap-4 pt-6">
           <Link href="/flashcards" className="w-full sm:w-1/2">
-            <Button variant="outline" className="w-full gap-2 h-14 rounded-xl text-base font-semibold hover:bg-muted/50 transition-colors">
+            <Button variant="outline" className="w-full gap-2 h-14 text-base font-semibold hover:bg-muted/50 transition-colors">
               <ArrowLeft className="h-5 w-5" /> Voltar
             </Button>
           </Link>
 
           <Link href={`/flashcards/${deckId}/edit`} className="w-full sm:w-1/2">
-            <Button className="w-full gap-2 h-14 rounded-xl text-base font-bold shadow-lg shadow-primary/25 bg-primary hover:bg-primary/90 text-primary-foreground transition-all hover:-translate-y-0.5 active:translate-y-0">
+            <Button className="w-full gap-2 h-14 text-base font-bold shadow-lg shadow-primary/25 bg-primary hover:bg-primary/90 text-primary-foreground transition-all hover:-translate-y-0.5 active:translate-y-0">
               <Plus className="h-5 w-5" /> Criar Cartões
             </Button>
           </Link>
@@ -196,12 +196,12 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
 
         <div className="flex flex-col sm:flex-row gap-4 pt-6">
           <Link href="/flashcards" className="w-full sm:w-1/2">
-            <Button variant="outline" className="w-full gap-2 h-14 rounded-xl text-base font-semibold hover:bg-muted/50">
+            <Button variant="outline" className="w-full gap-2 h-14 text-base font-semibold hover:bg-muted/50">
               <ArrowLeft className="h-5 w-5" /> Voltar
             </Button>
           </Link>
           <Link href={`/flashcards/${deckId}/study?mode=cram`} className="w-full sm:w-1/2">
-            <Button className="w-full gap-2 h-14 rounded-xl text-base font-bold shadow-lg shadow-primary/25 bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button className="w-full gap-2 h-14 text-base font-bold shadow-lg shadow-primary/25 bg-primary hover:bg-primary/90 text-primary-foreground">
               <Layers className="h-5 w-5" /> Revisar tudo
             </Button>
           </Link>

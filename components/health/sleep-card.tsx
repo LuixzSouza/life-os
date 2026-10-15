@@ -116,7 +116,7 @@ export function SleepCard({ value, targetGoal = 7.5 }: SleepCardProps) {
 
                 <Dialog open={isOpen} onOpenChange={setIsOpen}>
                     <DialogTrigger asChild>
-                        <Button variant="outline" size="icon" className="h-9 w-9 shrink-0 rounded-xl border-border/40" aria-label="Registrar sono">
+                        <Button variant="outline" size="icon" className="h-9 w-9 shrink-0 border-border/40" aria-label="Registrar sono">
                             <Plus className="h-4 w-4" />
                         </Button>
                     </DialogTrigger>
@@ -135,7 +135,7 @@ export function SleepCard({ value, targetGoal = 7.5 }: SleepCardProps) {
                                     <Button
                                         key={val}
                                         variant="outline"
-                                        className="h-10 rounded-xl font-mono text-sm font-bold"
+                                        className="h-10 font-mono text-sm font-bold"
                                         onClick={() => handleQuickLog(val)}
                                         disabled={isLoading}
                                     >
@@ -157,7 +157,7 @@ export function SleepCard({ value, targetGoal = 7.5 }: SleepCardProps) {
                                 />
                             </div>
                             <Button
-                                className="h-11 w-full rounded-xl font-semibold"
+                                className="h-10 w-full font-semibold"
                                 disabled={isLoading || !customValue}
                                 onClick={() => handleQuickLog(Number(customValue))}
                             >

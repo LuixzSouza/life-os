@@ -185,7 +185,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button className="bg-foreground text-background hover:bg-foreground/90 shadow-md gap-2 font-semibold rounded-lg h-10 px-4">
+        <Button className="bg-foreground text-background hover:bg-foreground/90 shadow-md gap-2 font-semibold h-10 px-4">
           <Plus className="h-4 w-4" /> Buscar Obras
         </Button>
       </DialogTrigger>
@@ -224,7 +224,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
                 </button>
                 )}
             </div>
-            <Button onClick={() => handleSearch()} disabled={isLoadingSearch || !query.trim()} className="h-12 px-6 rounded-xl shadow-sm">
+            <Button onClick={() => handleSearch()} disabled={isLoadingSearch || !query.trim()} className="h-10 px-6 shadow-sm">
               {isLoadingSearch ? <Loader2 className="h-4 w-4 animate-spin" /> : "Buscar"}
             </Button>
             <Button
@@ -232,7 +232,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
               onClick={handleDiscover}
               disabled={isLoadingSearch}
               title="Descobrir algo aleatório para esta categoria"
-              className="h-12 px-4 rounded-xl shadow-sm gap-2 shrink-0 text-primary border-primary/30 hover:bg-primary/10"
+              className="h-10 px-4 shadow-sm gap-2 shrink-0 text-primary border-primary/30 hover:bg-primary/10"
             >
               <Dices className="h-4 w-4" /> <span className="hidden sm:inline">Surpreenda-me</span>
             </Button>
@@ -347,7 +347,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
                 </div>
               )}
 
-              <Button variant="outline" onClick={handleDiscover} className="mt-5 gap-2 rounded-xl text-primary border-primary/30 hover:bg-primary/10">
+              <Button variant="outline" onClick={handleDiscover} className="mt-5 gap-2 text-primary border-primary/30 hover:bg-primary/10">
                 <Dices className="h-4 w-4" /> Surpreenda-me
               </Button>
             </div>
@@ -358,7 +358,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
               <Dices className="h-12 w-12 mb-4 text-muted-foreground/30" />
               <p className="text-sm font-medium text-foreground">Busque pelo nome ou descubra algo novo.</p>
               <p className="text-xs text-muted-foreground mt-1 max-w-xs">Sem ideias do que assistir, jogar, ouvir ou ler? Deixe o sistema sugerir.</p>
-              <Button onClick={handleDiscover} className="mt-5 gap-2 rounded-xl shadow-sm">
+              <Button onClick={handleDiscover} className="mt-5 gap-2 shadow-sm">
                 <Dices className="h-4 w-4" /> Surpreenda-me
               </Button>
             </div>

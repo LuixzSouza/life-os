@@ -10,6 +10,7 @@ import { OutfitBuilderBar } from "./outfit-builder-bar";
 import { WardrobeListToolbar } from "./wardrobe-list-toolbar";
 import { WardrobeItemCard } from "./wardrobe-item-card";
 import { EntityConnectionsDialog } from "@/components/connect/entity-connections-dialog";
+import { EmptyState } from "@/components/ui/empty-state";
 
 // --- COMPONENTE PRINCIPAL ---
 export function WardrobeList({ initialData }: { initialData: WardrobeItem[] }) {
@@ -129,13 +130,11 @@ export function WardrobeList({ initialData }: { initialData: WardrobeItem[] }) {
 
             {/* --- GRID DE RESULTADOS --- */}
             {filteredItems.length === 0 ? (
-                <div className="flex flex-col items-center justify-center py-20 text-center border border-dashed border-border/60 rounded-3xl bg-muted/10">
-                    <div className="bg-background p-4 rounded-2xl mb-4 shadow-sm border border-border/40">
-                        <Shirt className="h-8 w-8 text-muted-foreground/40" />
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground">Nenhuma peça encontrada</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Adicione uma nova roupa para compor seu acervo.</p>
-                </div>
+                <EmptyState
+                    icon={Shirt}
+                    title="Nenhuma peça encontrada"
+                    description="Adicione uma nova roupa para compor seu acervo."
+                />
             ) : (
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5">
                     {filteredItems.map((item) => (

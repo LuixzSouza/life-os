@@ -298,7 +298,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
       <Button 
         type="submit" 
         disabled={isLoading} 
-        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-12 shadow-lg shadow-primary/20 transition-all active:scale-[0.98] mt-2"
+        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold h-10 shadow-lg shadow-primary/20 transition-all active:scale-[0.98] mt-2"
       >
         {isLoading ? (
           <><Loader2 className="h-4 w-4 animate-spin mr-2" /> Salvando...</>

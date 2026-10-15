@@ -130,7 +130,7 @@ export function BodySummaryCard({
 
                 <Dialog open={open} onOpenChange={setOpen}>
                     <DialogTrigger asChild>
-                        <Button variant="outline" size="icon" className="h-9 w-9 shrink-0 rounded-xl border-border/40" aria-label="Atualizar medidas">
+                        <Button variant="outline" size="icon" className="h-9 w-9 shrink-0 border-border/40" aria-label="Atualizar medidas">
                             <Pencil className="h-4 w-4" />
                         </Button>
                     </DialogTrigger>
@@ -154,7 +154,7 @@ export function BodySummaryCard({
                                     <Input name="height" type="number" defaultValue={height || ""} placeholder="0" className="h-11 rounded-xl border-border/40 bg-muted/30 text-center text-lg font-bold" required />
                                 </div>
                             </div>
-                            <Button type="submit" className="h-11 w-full rounded-xl font-semibold" disabled={isLoading}>
+                            <Button type="submit" className="h-10 w-full font-semibold" disabled={isLoading}>
                                 {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Salvar medidas"}
                             </Button>
                         </form>

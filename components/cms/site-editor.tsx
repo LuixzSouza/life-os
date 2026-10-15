@@ -22,7 +22,7 @@ export function SiteEditor({ site }: { site: SiteWithPages }) {
             <aside className="w-full md:w-64 lg:w-72 border-b md:border-b-0 md:border-r border-border/40 bg-muted/5 flex flex-col shrink-0">
                 <Tabs value={activeTab} onValueChange={setActiveTab} orientation="vertical" className="flex flex-col h-full">
                     <div className="p-5 border-b border-border/40 bg-background/50">
-                        <Button onClick={() => setActiveTab("new-page")} className="w-full gap-2 rounded-xl font-semibold text-sm shadow-sm h-10">
+                        <Button onClick={() => setActiveTab("new-page")} className="w-full gap-2 font-semibold text-sm shadow-sm h-10">
                             <Plus className="h-4 w-4" /> Novo endpoint
                         </Button>
                     </div>

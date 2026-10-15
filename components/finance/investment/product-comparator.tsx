@@ -88,7 +88,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                             </div>
                                             <div className="space-y-1.5">
                                                 <div className="flex flex-wrap items-center gap-2">
-                                                    <Badge variant="secondary" className="text-xs font-medium bg-muted text-muted-foreground">
+                                                    <Badge variant="secondary" className="eyebrow bg-muted text-muted-foreground">
                                                         {product.type}
                                                     </Badge>
                                                     {isBest && (
@@ -139,7 +139,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                 <div className="bg-card border-b border-border/40 p-6 md:p-8 relative shrink-0">
                                     <DialogHeader className="text-left space-y-4">
                                         <div className="flex flex-wrap items-center gap-2">
-                                            <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20 border-0 font-medium text-xs">
+                                            <Badge variant="secondary" className="eyebrow bg-primary/10 text-primary hover:bg-primary/20 border-0">
                                                 {product.type}
                                             </Badge>
                                             {product.hasFGC && (
@@ -205,7 +205,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                         </div>
                                     </div>
 
-                                    <Button className="w-full h-14 rounded-xl text-lg font-bold bg-foreground text-background hover:bg-foreground/90 shadow-lg transition-all active:scale-[0.98]">
+                                    <Button className="w-full h-14 text-lg font-bold bg-foreground text-background hover:bg-foreground/90 shadow-lg transition-all active:scale-[0.98]">
                                         Planejar Aporte
                                     </Button>
                                 </div>

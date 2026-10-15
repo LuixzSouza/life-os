@@ -326,7 +326,7 @@ export function TransactionsView({
                                 variant="ghost"
                                 size="sm"
                                 onClick={clearFilters}
-                                className="col-span-2 h-10 rounded-xl font-semibold text-muted-foreground hover:text-foreground sm:col-span-1 sm:ml-auto"
+                                className="col-span-2 h-10 font-semibold text-muted-foreground hover:text-foreground sm:col-span-1 sm:ml-auto"
                             >
                                 <X className="h-4 w-4 mr-1.5" /> Limpar filtros
                             </Button>
@@ -340,7 +340,7 @@ export function TransactionsView({
                         <section key={group.key}>
                             {/* Cabeçalho do dia: rótulo + saldo do dia */}
                             <div className="flex items-baseline justify-between gap-3 px-2 pb-2">
-                                <h3 className="text-xs font-medium text-muted-foreground">
+                                <h3 className="eyebrow text-muted-foreground">
                                     {group.label}
                                 </h3>
                                 <span className={cn(
@@ -424,7 +424,7 @@ export function TransactionsView({
                             <div className="flex items-center gap-2">
                                 <Button
                                     variant="outline" size="sm"
-                                    className="h-9 rounded-xl font-bold border-border/50"
+                                    className="h-9 font-bold border-border/50"
                                     disabled={page <= 1 || isPending}
                                     onClick={() => updateParam("page", String(page - 1))}
                                 >
@@ -432,7 +432,7 @@ export function TransactionsView({
                                 </Button>
                                 <Button
                                     variant="outline" size="sm"
-                                    className="h-9 rounded-xl font-bold border-border/50"
+                                    className="h-9 font-bold border-border/50"
                                     disabled={page >= totalPages || isPending}
                                     onClick={() => updateParam("page", String(page + 1))}
                                 >

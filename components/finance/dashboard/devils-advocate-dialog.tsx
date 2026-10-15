@@ -34,7 +34,7 @@ export function DevilsAdvocateButton({ input }: { input: AdvocateInput }) {
         variant="outline"
         size="sm"
         onClick={summon}
-        className="w-full rounded-xl gap-1.5 border-rose-500/30 text-rose-500 hover:bg-rose-500/10 hover:text-rose-500"
+        className="w-full gap-1.5 border-rose-500/30 text-rose-500 hover:bg-rose-500/10 hover:text-rose-500"
       >
         <Scale className="h-3.5 w-3.5" /> Ouvir o Advogado do Diabo
       </Button>

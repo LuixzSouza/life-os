@@ -18,6 +18,7 @@ import { FriendFilterBar } from "./friend-filter-bar";
 import { FriendCard } from "./friend-card";
 import { FriendDetailModal } from "./friend-detail-modal";
 import { EntityConnectionsDialog } from "@/components/connect/entity-connections-dialog";
+import { EmptyState } from "@/components/ui/empty-state";
 
 // --- COMPONENTE PRINCIPAL ---
 export function FriendList({
@@ -108,15 +109,11 @@ export function FriendList({
 
       {/* --- GRID DE CONEXÕES --- */}
       {filteredAndSortedFriends.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 text-center border border-dashed border-border/60 rounded-2xl bg-muted/10 shadow-sm">
-          <div className="p-4 bg-background border border-border/40 rounded-full mb-4 shadow-sm">
-            <UsersIcon className="h-8 w-8 text-muted-foreground/50" />
-          </div>
-          <h3 className="text-lg font-bold text-foreground">Nenhum contato encontrado</h3>
-          <p className="text-sm text-muted-foreground max-w-sm mt-1">
-            Ajuste os filtros ou adicione uma nova conexão ao seu ecossistema.
-          </p>
-        </div>
+        <EmptyState
+          icon={UsersIcon}
+          title="Nenhum contato encontrado"
+          description="Ajuste os filtros ou adicione uma nova conexão."
+        />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           <TooltipProvider delayDuration={300}>

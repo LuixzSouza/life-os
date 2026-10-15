@@ -308,14 +308,14 @@ export function GymForm({ onSuccess, initialData }: GymFormProps) {
           </div>
         </div>
 
-        <Button type="button" variant="outline" onClick={addExercise} className="w-full border-dashed border-border/60 hover:border-primary/50 hover:bg-primary/5 h-10 rounded-xl text-xs font-semibold gap-2">
+        <Button type="button" variant="outline" onClick={addExercise} className="w-full border-dashed border-border/60 hover:border-primary/50 hover:bg-primary/5 h-10 text-xs font-semibold gap-2">
           <Plus className="h-4 w-4" /> Incluir exercício
         </Button>
       </div>
 
       {/* RODAPÉ */}
       <div className="pt-4 border-t border-border/40">
-        <Button type="submit" disabled={isLoading} className="w-full h-11 rounded-xl font-bold gap-2">
+        <Button type="submit" disabled={isLoading} className="w-full h-10 font-bold gap-2">
           {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
           {initialData ? "Atualizar treino" : "Salvar treino"}
         </Button>

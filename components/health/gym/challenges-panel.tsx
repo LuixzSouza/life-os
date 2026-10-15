@@ -116,7 +116,7 @@ export function ChallengesPanel({ challenges }: { challenges: SerializedChalleng
             <Plus className="h-4 w-4 text-primary" />
             <h3 className="text-sm font-semibold text-foreground">Iniciar um desafio</h3>
           </div>
-          <Button variant="outline" size="sm" className="h-8 gap-1.5 rounded-lg" onClick={() => setCustomOpen(true)}>
+          <Button variant="outline" size="sm" className="h-8 gap-1.5" onClick={() => setCustomOpen(true)}>
             <Sparkles className="h-3.5 w-3.5" /> Criar do zero
           </Button>
         </div>
@@ -140,7 +140,7 @@ export function ChallengesPanel({ challenges }: { challenges: SerializedChalleng
                   size="sm"
                   disabled={isPending}
                   onClick={() => startTemplate(tpl)}
-                  className="w-full h-9 rounded-lg font-semibold gap-1.5"
+                  className="w-full h-9 font-semibold gap-1.5"
                 >
                   <Plus className="h-3.5 w-3.5" /> {creatingKey === tpl.key ? "Iniciando..." : "Iniciar"}
                 </Button>
@@ -226,7 +226,7 @@ function ChallengeCard({ challenge, disabled, onRefresh }: { challenge: Serializ
             )}
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="ghost" size="icon" aria-label="Excluir desafio" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-destructive hover:bg-destructive/10 active:bg-destructive/15">
+                <Button variant="ghost" size="icon" aria-label="Excluir desafio" className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10 active:bg-destructive/15">
                   <Trash2 className="h-4 w-4" />
                 </Button>
               </AlertDialogTrigger>
@@ -442,8 +442,8 @@ function CustomChallengeDialog({ open, onOpenChange, onCreated }: { open: boolea
           </div>
         </DialogBody>
         <DialogFooter>
-          <Button variant="outline" onClick={() => onOpenChange(false)} className="rounded-xl">Cancelar</Button>
-          <Button onClick={submit} disabled={saving || !title.trim()} className="rounded-xl gap-1.5">
+          <Button variant="outline" onClick={() => onOpenChange(false)} className="">Cancelar</Button>
+          <Button onClick={submit} disabled={saving || !title.trim()} className="gap-1.5">
             <Plus className="h-4 w-4" /> {saving ? "Criando..." : "Criar desafio"}
           </Button>
         </DialogFooter>

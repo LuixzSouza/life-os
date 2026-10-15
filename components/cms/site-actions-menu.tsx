@@ -52,7 +52,7 @@ export function SiteActionsMenu({ site }: { site: { id: string; name: string; ur
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" aria-label="Mais ações" className="h-8 w-8 text-muted-foreground hover:text-foreground rounded-lg">
+          <Button variant="ghost" size="icon" aria-label="Mais ações" className="h-8 w-8 text-muted-foreground hover:text-foreground">
             <MoreVertical className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
@@ -88,7 +88,7 @@ export function SiteActionsMenu({ site }: { site: { id: string; name: string; ur
             </DialogBody>
 
             <DialogFooter>
-              <Button type="submit" disabled={isLoading} className="w-full h-12 rounded-xl bg-primary text-primary-foreground font-semibold shadow-sm hover:scale-[1.02] transition-transform">
+              <Button type="submit" disabled={isLoading} className="w-full h-10 bg-primary text-primary-foreground font-semibold shadow-sm hover:scale-[1.02] transition-transform">
                 {isLoading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Save className="h-4 w-4 mr-2" />}
                 Salvar alterações
               </Button>
@@ -110,10 +110,10 @@ export function SiteActionsMenu({ site }: { site: { id: string; name: string; ur
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="sm:justify-stretch">
-            <Button type="button" variant="ghost" onClick={() => setIsDeleteDialogOpen(false)} className="flex-1 h-12 rounded-xl font-semibold">
+            <Button type="button" variant="ghost" onClick={() => setIsDeleteDialogOpen(false)} className="flex-1 h-10 font-semibold">
               Cancelar
             </Button>
-            <Button type="button" onClick={handleDelete} disabled={isLoading} className="flex-1 h-12 rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-semibold shadow-sm">
+            <Button type="button" onClick={handleDelete} disabled={isLoading} className="flex-1 h-10 bg-rose-500 hover:bg-rose-600 text-white font-semibold shadow-sm">
               {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Confirmar exclusão"}
             </Button>
           </DialogFooter>

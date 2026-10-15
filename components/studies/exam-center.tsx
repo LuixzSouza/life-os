@@ -30,6 +30,7 @@ import { EXAM_STRATEGIES, EXAM_STRATEGY_LABELS, formatDuration, type ExamStrateg
 import { scoreBand } from "@/lib/exam-scoring";
 import { QUESTION_AREAS, QUESTION_AREA_LABELS, type QuestionArea } from "@/lib/enums";
 import type { SubjectOption } from "./question-form-dialog";
+import { EmptyState } from "@/components/ui/empty-state";
 
 export interface ExamAttemptRow {
   id: string;
@@ -160,20 +161,16 @@ export function ExamCenter({ exams, subjects, poolCount }: ExamCenterProps) {
 
       {/* BANCO VAZIO: o simulado depende dele, então o convite é direto */}
       {poolCount === 0 && (
-        <Card className="border-dashed border-border/70 bg-card shadow-sm">
-          <CardContent className="flex flex-col items-center gap-3 py-14 text-center">
-            <div className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-              <ListChecks className="h-6 w-6" />
-            </div>
-            <h3 className="text-lg font-semibold">Nenhuma questão ainda</h3>
-            <p className="mx-auto max-w-sm text-sm text-muted-foreground">
-              Um simulado é feito das suas próprias questões. Crie algumas (ou gere com IA) e volte aqui.
-            </p>
-            <Button className="mt-1 gap-2" onClick={() => router.push("/studies/questoes")}>
+        <EmptyState
+          icon={ListChecks}
+          title="Nenhuma questão ainda"
+          description="Um simulado é feito das suas próprias questões. Crie algumas (ou gere com IA) e volte aqui."
+          action={
+            <Button className="gap-2" onClick={() => router.push("/studies/questoes")}>
               <Plus className="h-4 w-4" /> Ir para o banco de questões
             </Button>
-          </CardContent>
-        </Card>
+          }
+        />
       )}
 
       {/* PROVAS MONTADAS */}

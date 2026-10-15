@@ -110,10 +110,10 @@ export function FieldFocusProvider({ children }: { children: React.ReactNode }) 
                                     </div>
                                 </DialogBody>
                                 <DialogFooter>
-                                    <Button variant="ghost" onClick={close} className="rounded-xl">Cancelar</Button>
+                                    <Button variant="ghost" onClick={close} className="">Cancelar</Button>
                                     <Button
                                         onClick={() => { state.cfg.onCommit(draft); close(); }}
-                                        className="gap-2 rounded-xl font-bold"
+                                        className="gap-2 font-bold"
                                     >
                                         <Check className="h-4 w-4" /> Concluir
                                     </Button>
@@ -144,12 +144,12 @@ export function FieldFocusProvider({ children }: { children: React.ReactNode }) 
                                     </div>
                                 </DialogBody>
                                 <DialogFooter>
-                                    <Button variant="ghost" onClick={close} className="gap-2 rounded-xl">
+                                    <Button variant="ghost" onClick={close} className="gap-2">
                                         <X className="h-4 w-4" /> Descartar
                                     </Button>
                                     <Button
                                         onClick={() => { state.cfg.onAccept(draft); close(); }}
-                                        className="gap-2 rounded-xl bg-violet-600 font-bold text-white hover:bg-violet-700"
+                                        className="gap-2 bg-violet-600 font-bold text-white hover:bg-violet-700"
                                     >
                                         <Check className="h-4 w-4" /> Aceitar
                                     </Button>

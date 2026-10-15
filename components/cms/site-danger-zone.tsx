@@ -43,7 +43,7 @@ export function SiteDangerZone({ site }: { site: ManagedSite }) {
                 <CardContent className="p-8 pt-4">
                     <Dialog onOpenChange={(open) => { if (!open) setDeleteConfirmName(""); }}>
                         <DialogTrigger asChild>
-                            <Button variant="destructive" className="w-full h-12 rounded-xl font-semibold shadow-sm transition-all hover:scale-[1.02]">
+                            <Button variant="destructive" className="w-full h-10 font-semibold shadow-sm transition-all hover:scale-[1.02]">
                                 <Trash2 className="mr-2 h-4 w-4" /> Excluir container
                             </Button>
                         </DialogTrigger>
@@ -70,7 +70,7 @@ export function SiteDangerZone({ site }: { site: ManagedSite }) {
                                 <Button
                                     disabled={deleteConfirmName !== site.name || isDeleting}
                                     onClick={handleFinalDeleteSite}
-                                    className="w-full h-14 rounded-2xl bg-destructive text-white hover:bg-destructive/90 font-semibold shadow-sm disabled:opacity-30 transition-all"
+                                    className="w-full h-14 bg-destructive text-white hover:bg-destructive/90 font-semibold shadow-sm disabled:opacity-30 transition-all"
                                 >
                                     {isDeleting ? <Loader2 className="h-4 w-4 animate-spin" /> : "Excluir projeto permanentemente"}
                                 </Button>

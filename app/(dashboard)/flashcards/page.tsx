@@ -98,7 +98,7 @@ export default async function FlashcardsPage() {
         }
         actions={
           <Link href="/studies">
-            <Button variant="outline" className="gap-2 rounded-xl border-border/60 bg-background/50 shadow-sm backdrop-blur-sm">
+            <Button variant="outline" className="gap-2 border-border/60 bg-background/50 shadow-sm backdrop-blur-sm">
               <BookOpen className="h-4 w-4 text-primary" />
               Árvore de Matérias
             </Button>
@@ -152,7 +152,7 @@ export default async function FlashcardsPage() {
                             </div>
                             {dueToday > 0 && (
                                 <Link href="/flashcards/review" className="mt-3 block">
-                                    <Button size="sm" className="h-9 w-full gap-1.5 rounded-lg font-bold shadow-sm">
+                                    <Button size="sm" className="h-9 w-full gap-1.5 font-bold shadow-sm">
                                         <Zap className="h-4 w-4" /> Revisar tudo agora
                                     </Button>
                                 </Link>

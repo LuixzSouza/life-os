@@ -465,11 +465,11 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
 
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md pt-6">
           <Link href="/flashcards" className="w-full">
-             <Button variant="outline" size="lg" className="w-full h-14 text-base font-bold rounded-xl transition-all">
+             <Button variant="outline" size="lg" className="w-full h-14 text-base font-bold transition-all">
                 Sair para Biblioteca
              </Button>
           </Link>
-          <Button onClick={restartFull} size="lg" className="w-full h-14 text-base font-bold shadow-xl shadow-primary/20 hover:scale-[1.02] transition-transform bg-primary text-primary-foreground rounded-xl">
+          <Button onClick={restartFull} size="lg" className="w-full h-14 text-base font-bold shadow-xl shadow-primary/20 hover:scale-[1.02] transition-transform bg-primary text-primary-foreground">
             <Repeat className="mr-2 h-5 w-5" /> Revisar Novamente
           </Button>
         </div>
@@ -489,7 +489,7 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
         <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
                 <Link href="/flashcards">
-                    <Button variant="outline" size="icon" className="h-12 w-12 rounded-xl text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors shadow-sm" title="Sair" aria-label="Sair da sessão de estudo">
+                    <Button variant="outline" size="icon" className="h-12 w-12 text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors shadow-sm" title="Sair" aria-label="Sair da sessão de estudo">
                         <X className="h-6 w-6" />
                     </Button>
                 </Link>
@@ -587,7 +587,7 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
                                     placeholder="Digite sua resposta…"
                                     className="h-14 rounded-xl border-border/60 bg-background text-center text-lg shadow-sm focus-visible:ring-primary/30"
                                 />
-                                <Button onClick={reveal} className="mt-3 h-11 w-full gap-2 rounded-xl font-bold shadow-sm">
+                                <Button onClick={reveal} className="mt-3 h-10 w-full gap-2 font-bold shadow-sm">
                                     <CornerDownLeft className="h-4 w-4" /> Verificar resposta
                                 </Button>
                             </div>
@@ -703,7 +703,7 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
                           <span className="hidden font-mono text-[9px] tracking-widest opacity-50 sm:block">tecla 2</span>
                         </Button>
 
-                        <Button size="lg" disabled={isSaving} onClick={() => handleRate("EASY")} className="flex-1 h-20 sm:h-24 rounded-2xl bg-blue-500/10 text-blue-600 hover:bg-blue-500 hover:text-white border border-blue-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm">
+                        <Button size="lg" disabled={isSaving} onClick={() => handleRate("EASY")} className="flex-1 h-20 sm:h-24 bg-blue-500/10 text-blue-600 hover:bg-blue-500 hover:text-white border border-blue-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm">
                           <span className="text-base sm:text-lg">Fácil</span>
                           <span className="text-[11px] font-bold opacity-90 tabular-nums">{previews?.EASY}</span>
                           <span className="hidden font-mono text-[9px] tracking-widest opacity-50 sm:block">tecla 3</span>

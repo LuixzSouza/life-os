@@ -852,7 +852,7 @@ export function SessionActive({
           <h2 className="text-lg font-bold">Treino pausado</h2>
           <p className="mt-1 font-mono text-4xl font-bold tabular-nums">{clock(elapsed)}</p>
           <p className="mt-1 text-xs text-muted-foreground">O cronômetro está congelado — nada foi perdido.</p>
-          <Button onClick={onTogglePause} className="mt-6 h-12 gap-2 px-8 text-base font-bold">
+          <Button onClick={onTogglePause} className="mt-6 h-10 gap-2 px-8 text-base font-bold">
             <Play className="h-5 w-5" /> Retomar treino
           </Button>
         </div>
@@ -1458,7 +1458,7 @@ function FocusView({ ex, dir, index, total, groups, existingNames, onAdd, doneFl
 
       {/* Navegação */}
       <div className="mt-4 flex items-center gap-3">
-        <Button variant="outline" onClick={onPrev} disabled={!hasPrev} className="h-12 flex-1 gap-1.5">
+        <Button variant="outline" onClick={onPrev} disabled={!hasPrev} className="h-10 flex-1 gap-1.5">
           <ChevronLeft className="h-4 w-4" /> Anterior
         </Button>
         {hasNext ? (

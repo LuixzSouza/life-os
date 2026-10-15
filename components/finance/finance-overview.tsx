@@ -68,7 +68,7 @@ export function FinanceOverview({
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="eyebrow text-muted-foreground">Resumo</h2>
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" onClick={handleReport} className="h-9 gap-2 rounded-lg">
+          <Button variant="outline" size="sm" onClick={handleReport} className="h-9 gap-2">
             <FileSpreadsheet className="h-4 w-4" /> Relatório
           </Button>
           <Button
@@ -76,7 +76,7 @@ export function FinanceOverview({
             size="sm"
             onClick={toggleSmartView}
             aria-pressed={smartView}
-            className="h-9 gap-2 rounded-lg"
+            className="h-9 gap-2"
           >
             {smartView ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
             {smartView ? "Mostrar valores" : "Ocultar valores"}

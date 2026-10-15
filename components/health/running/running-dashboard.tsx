@@ -24,6 +24,7 @@ import { RunForm, SURFACE_OPTIONS } from "./run-form";
 import { ImportRunsDialog } from "./import-runs-dialog";
 import { ShoeMileageCard } from "./shoe-mileage-card";
 import { deleteWorkout, type ShoeWithMileage } from "@/app/(dashboard)/health/actions";
+import { EmptyState } from "@/components/ui/empty-state";
 
 // --- Tipagem Estrita ---
 interface RunWorkout {
@@ -117,7 +118,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 {/* CTA Principal */}
                 <Dialog open={open} onOpenChange={setOpen}>
                     <DialogTrigger asChild>
-                        <Button className="w-full h-12 text-base font-bold rounded-xl shadow-sm active:scale-[0.98] transition-all">
+                        <Button className="w-full h-10 text-base font-bold shadow-sm active:scale-[0.98] transition-all">
                             <Plus className="mr-2 h-5 w-5" /> Registrar Corrida
                         </Button>
                     </DialogTrigger>
@@ -330,13 +331,11 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                     </div>
                     
                     {filteredRuns.length === 0 ? (
-                        <div className="flex flex-col items-center justify-center py-24 border-2 border-dashed border-border rounded-3xl bg-muted/10">
-                            <div className="p-4 bg-muted/30 rounded-full mb-3">
-                                <Footprints className="h-8 w-8 text-muted-foreground/50" />
-                            </div>
-                            <h3 className="text-lg font-semibold text-foreground">{terrainFilter === "ALL" ? "Nenhuma corrida registrada" : "Nenhuma corrida neste terreno"}</h3>
-                            <p className="text-sm text-muted-foreground mt-1">{terrainFilter === "ALL" ? "Bora correr? 🏃‍♂️💨" : "Tente outro filtro de terreno."}</p>
-                        </div>
+                        <EmptyState
+                            icon={Footprints}
+                            title={terrainFilter === "ALL" ? "Nenhuma corrida registrada" : "Nenhuma corrida neste terreno"}
+                            description={terrainFilter === "ALL" ? "Registre sua primeira corrida para ver a evolução aqui." : "Tente outro filtro de terreno."}
+                        />
                     ) : (
                         <div className="grid gap-3">
                             {filteredRuns.map(run => (

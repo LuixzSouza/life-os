@@ -209,7 +209,7 @@ export function MagicInbox() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose-500/60" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-rose-500" />
                   </span>
-                  <span className="shrink-0 text-xs font-medium text-rose-500">
+                  <span className="eyebrow shrink-0 text-rose-500">
                     Ouvindo · {formatListenClock(dictation.seconds)}
                   </span>
                   <span className="truncate text-xs italic text-muted-foreground">
@@ -270,7 +270,7 @@ export function MagicInbox() {
             </div>
           ) : (
             <div className="space-y-3">
-              <p className="text-xs font-medium text-muted-foreground/60">
+              <p className="eyebrow text-muted-foreground/60">
                 {source === "ai" ? "Classificado pela sua IA" : "Classificado localmente (IA não conectada)"} — revise e confirme
               </p>
               <ul className="max-h-64 space-y-2 overflow-y-auto pr-1">

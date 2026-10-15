@@ -80,7 +80,7 @@ function Calendar({
 
         // Cabeçalho do Mês (Tipografia Tática)
         caption_label: cn(
-          "select-none text-xs font-medium text-foreground",
+          "eyebrow select-none text-foreground",
           captionLayout !== "label" &&
             "flex h-8 items-center gap-1 rounded-md pl-2 pr-1 [&>svg]:size-3.5 [&>svg]:text-muted-foreground",
           defaultClassNames.caption_label
@@ -108,7 +108,7 @@ function Calendar({
 
         // Dias da Semana (Seg, Ter, Qua...)
         weekday: cn(
-          "flex-1 text-center text-xs font-medium text-muted-foreground/60 select-none",
+          "eyebrow flex-1 text-center text-muted-foreground/60 select-none",
           defaultClassNames.weekday
         ),
 

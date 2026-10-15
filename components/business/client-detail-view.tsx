@@ -249,7 +249,7 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Mais ações" className="h-9 w-9 rounded-lg text-muted-foreground hover:bg-muted/80">
+              <Button variant="ghost" size="icon" aria-label="Mais ações" className="h-9 w-9 text-muted-foreground hover:bg-muted/80">
                 <MoreHorizontal size={20} />
               </Button>
             </DropdownMenuTrigger>
@@ -388,7 +388,7 @@ function InfoRow({
         <Icon size={13} />
       </span>
       <div className="min-w-0">
-        <p className="text-xs font-medium text-muted-foreground">{label}</p>
+        <p className="eyebrow text-muted-foreground">{label}</p>
         {href ? (
           <a href={href} className="hover:underline">{content}</a>
         ) : (

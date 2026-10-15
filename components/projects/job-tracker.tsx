@@ -21,6 +21,7 @@ import { JobApplyDialog } from "./job-apply-dialog";
 import { JobDetailDialog } from "./job-detail-dialog";
 import { STATUS_MAP, getThemeClasses } from "./job-tracker-status";
 import { JobWithProject, ProjectOption } from "./job-types";
+import { EmptyState } from "@/components/ui/empty-state";
 
 type ViewMode = 'list' | 'grid' | 'board';
 type SortMode = 'recent' | 'followup' | 'priority' | 'progress';
@@ -167,7 +168,7 @@ export function JobTracker({ jobs, resumes, projects }: JobTrackerProps) {
 
                     <Dialog>
                         <DialogTrigger asChild>
-                            <Button className="gap-2 h-10 w-full rounded-xl font-bold shadow-sm shrink-0 lg:w-auto">
+                            <Button className="gap-2 h-10 w-full font-bold shadow-sm shrink-0 lg:w-auto">
                                 <Plus className="h-4 w-4" /> Adicionar {type === 'JOB' ? 'vaga' : 'freela'}
                             </Button>
                         </DialogTrigger>
@@ -186,15 +187,11 @@ export function JobTracker({ jobs, resumes, projects }: JobTrackerProps) {
 
                 {/* Content */}
                 {filtered.length === 0 ? (
-                    <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
-                        <div className="h-16 w-16 rounded-2xl bg-muted/50 flex items-center justify-center mb-4">
-                            <Briefcase className="h-8 w-8 text-muted-foreground/30" />
-                        </div>
-                        <h3 className="text-lg font-bold text-foreground">{query ? "Nada encontrado" : "Pipeline vazio"}</h3>
-                        <p className="text-sm text-muted-foreground max-w-xs mt-1">
-                            {query ? "Ajuste a busca para encontrar suas oportunidades." : "Comece a rastrear suas oportunidades para acelerar sua carreira."}
-                        </p>
-                    </div>
+                    <EmptyState
+                        icon={Briefcase}
+                        title={query ? "Nenhuma vaga encontrada" : "Nenhuma vaga ainda"}
+                        description={query ? "Ajuste a busca para encontrar suas oportunidades." : "Comece a acompanhar as vagas que você está mirando."}
+                    />
                 ) : viewMode === 'board' ? (
                     <KanbanBoard jobs={filtered} onAiClick={setAiJob} onLinkClick={setProjectJob} onApplyClick={setApplyJob} onDetailsClick={setDetailJob} />
                 ) : (

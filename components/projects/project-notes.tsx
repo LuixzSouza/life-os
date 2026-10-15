@@ -493,7 +493,7 @@ export function ProjectNotes({ projectId, initialNotes, mentionables }: ProjectN
           ) : lastSaved && !isDirty ? (
             <span className="flex items-center gap-1.5 text-[11px] font-medium text-emerald-500"><CheckCircle2 className="h-3 w-3" /> Salvo</span>
           ) : null}
-          <Button onClick={() => handleSave(notes)} disabled={isSaving || !isDirty} size="sm" variant="outline" className="h-8 gap-1.5 rounded-lg text-xs">
+          <Button onClick={() => handleSave(notes)} disabled={isSaving || !isDirty} size="sm" variant="outline" className="h-8 gap-1.5 text-xs">
             <Save className="h-3.5 w-3.5" /> Salvar
           </Button>
         </div>

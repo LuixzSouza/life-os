@@ -48,7 +48,7 @@ export function ContentMapDialog() {
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button variant="outline" size="sm" className="rounded-xl gap-1.5">
+        <Button variant="outline" size="sm" className="gap-1.5">
           <MapIcon className="h-3.5 w-3.5" /> Mapa de Conteúdo
         </Button>
       </DialogTrigger>

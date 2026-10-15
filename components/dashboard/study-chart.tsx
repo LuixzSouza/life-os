@@ -66,7 +66,7 @@ const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
             }}
           />
 
-          <span className="text-xs font-medium text-muted-foreground">
+          <span className="eyebrow text-muted-foreground">
             {chartData.name}
           </span>
         </div>
@@ -150,7 +150,7 @@ function StudyChartContent({ data }: StudyChartProps) {
               iconType="circle"
               iconSize={6}
               formatter={(value: string) => (
-                <span className="text-xs font-medium text-muted-foreground/70 ml-2">
+                <span className="eyebrow text-muted-foreground/70 ml-2">
                   {value}
                 </span>
               )}

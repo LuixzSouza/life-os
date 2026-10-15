@@ -1,3 +1,4 @@
+import { EmptyState } from "@/components/ui/empty-state";
 // Conteudo autenticado por-usuario: render por requisicao (nunca prerender no build).
 export const dynamic = "force-dynamic";
 
@@ -100,7 +101,7 @@ export default async function DeckEditPage({ params }: DeckEditPageProps) {
         actions={
           hasCards && (
             <Link href={`/flashcards/${deck.id}/study`}>
-              <Button className="gap-2 rounded-xl font-bold shadow-lg shadow-primary/20 transition-transform hover:scale-[1.02]">
+              <Button className="gap-2 font-bold shadow-lg shadow-primary/20 transition-transform hover:scale-[1.02]">
                 <PlayCircle className="h-5 w-5 fill-current" />
                 Estudar Agora
               </Button>
@@ -170,15 +171,11 @@ export default async function DeckEditPage({ params }: DeckEditPageProps) {
                 </div>
 
                 {deck.cards.length === 0 ? (
-                    <div className="py-24 text-center border-2 border-dashed border-border/60 rounded-3xl bg-muted/5 flex flex-col items-center justify-center animate-in zoom-in-95 duration-500">
-                        <div className="bg-muted/50 p-6 rounded-full mb-4 ring-1 ring-border">
-                            <BookOpen className="h-10 w-10 text-muted-foreground/40" />
-                        </div>
-                        <h3 className="text-xl font-bold text-foreground">Baralho Vazio</h3>
-                        <p className="text-sm text-muted-foreground max-w-xs mt-2 leading-relaxed">
-                            Este baralho precisa de conteúdo. Use o formulário para adicionar seu primeiro flashcard.
-                        </p>
-                    </div>
+                    <EmptyState
+                        icon={BookOpen}
+                        title="Baralho vazio"
+                        description="Este baralho precisa de conteúdo. Use o formulário para adicionar seu primeiro flashcard."
+                    />
                 ) : (
                     <div className="space-y-4">
                         {deck.cards.map((card, index) => (

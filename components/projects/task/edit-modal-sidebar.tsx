@@ -83,16 +83,16 @@ export function TaskProperties({
               <Calendar mode="single" selected={dueDate} onSelect={setDueDate} locale={ptBR} initialFocus />
               {/* Atalhos: 90% dos prazos são "hoje" ou "amanhã" */}
               <div className="flex items-center gap-1.5 border-t border-border/40 p-2">
-                <Button type="button" variant="ghost" size="sm" className="h-8 flex-1 rounded-lg text-xs font-bold" onClick={() => setDueDate(new Date())}>
+                <Button type="button" variant="ghost" size="sm" className="h-8 flex-1 text-xs font-bold" onClick={() => setDueDate(new Date())}>
                   Hoje
                 </Button>
-                <Button type="button" variant="ghost" size="sm" className="h-8 flex-1 rounded-lg text-xs font-bold" onClick={() => setDueDate(addDays(new Date(), 1))}>
+                <Button type="button" variant="ghost" size="sm" className="h-8 flex-1 text-xs font-bold" onClick={() => setDueDate(addDays(new Date(), 1))}>
                   Amanhã
                 </Button>
                 <Button
                   type="button" variant="ghost" size="sm"
                   disabled={!dueDate}
-                  className="h-8 flex-1 rounded-lg text-xs font-bold text-muted-foreground hover:text-rose-500"
+                  className="h-8 flex-1 text-xs font-bold text-muted-foreground hover:text-rose-500"
                   onClick={() => setDueDate(undefined)}
                 >
                   <X className="mr-1 h-3 w-3" /> Limpar

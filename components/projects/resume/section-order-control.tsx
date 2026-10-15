@@ -54,7 +54,7 @@ export function SectionOrderControl({
                     variant="outline"
                     size="sm"
                     title="Ordenar e mostrar/ocultar seções do PDF"
-                    className="h-9 rounded-xl font-medium text-xs gap-1.5 border-border/60 hover:bg-primary/5 hover:text-primary"
+                    className="h-9 font-medium text-xs gap-1.5 border-border/60 hover:bg-primary/5 hover:text-primary"
                 >
                     <ListOrdered className="h-3.5 w-3.5" />
                     <span className="hidden sm:inline">Seções</span>

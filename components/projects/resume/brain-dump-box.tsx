@@ -80,7 +80,7 @@ export function BrainDumpBox({ title, description, placeholder, onParse }: Brain
                         <Button
                             onClick={run}
                             disabled={loading}
-                            className="gap-2 rounded-xl bg-violet-600 font-bold text-white hover:bg-violet-700"
+                            className="gap-2 bg-violet-600 font-bold text-white hover:bg-violet-700"
                         >
                             {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
                             {loading ? "Estruturando…" : "Estruturar com IA"}

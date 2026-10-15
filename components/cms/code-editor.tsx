@@ -110,14 +110,14 @@ export function CodeEditor({ page }: { page: SitePage }) {
                         onClick={handleFormat}
                         disabled={!isJsonValid || code.length === 0}
                         title="Reindentar o JSON"
-                        className="gap-2 rounded-xl font-semibold text-xs"
+                        className="gap-2 font-semibold text-xs"
                     >
                         <Braces className="h-4 w-4" /> <span className="hidden sm:inline">Formatar</span>
                     </Button>
 
                     <AlertDialog>
                         <AlertDialogTrigger asChild>
-                            <Button variant="ghost" size="icon" aria-label="Excluir" className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-xl">
+                            <Button variant="ghost" size="icon" aria-label="Excluir" className="text-muted-foreground hover:text-destructive hover:bg-destructive/10">
                                 <Trash2 className="h-4 w-4" />
                             </Button>
                         </AlertDialogTrigger>
@@ -138,7 +138,7 @@ export function CodeEditor({ page }: { page: SitePage }) {
                         </AlertDialogContent>
                     </AlertDialog>
 
-                    <Button size="sm" onClick={handleSave} disabled={!isDirty || isSaving} className="gap-2 rounded-xl font-semibold text-xs shadow-sm">
+                    <Button size="sm" onClick={handleSave} disabled={!isDirty || isSaving} className="gap-2 font-semibold text-xs shadow-sm">
                         {isSaving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
                         Deploy
                     </Button>

@@ -19,7 +19,7 @@ export function EditModalFooter({ onDelete, isSaving, onSave }: EditModalFooterP
 
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button variant="ghost" className="h-11 px-4 rounded-xl text-muted-foreground hover:text-rose-500 hover:bg-rose-500/10 font-semibold text-sm transition-all group">
+          <Button variant="ghost" className="h-10 px-4 text-muted-foreground hover:text-rose-500 hover:bg-rose-500/10 font-semibold text-sm transition-all group">
             <Trash2 size={16} className="mr-2 group-hover:rotate-12 transition-transform" /> Excluir tarefa
           </Button>
         </AlertDialogTrigger>
@@ -56,7 +56,7 @@ export function EditModalFooter({ onDelete, isSaving, onSave }: EditModalFooterP
       <Button
         onClick={onSave}
         disabled={isSaving}
-        className="h-12 px-8 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-sm shadow-lg shadow-primary/20 transition-all active:scale-95 disabled:opacity-50"
+        className="h-10 px-8 bg-primary text-primary-foreground hover:bg-primary/90 font-bold text-sm shadow-lg shadow-primary/20 transition-all active:scale-95 disabled:opacity-50"
       >
         {isSaving ? <Loader2 size={18} className="animate-spin mr-2" /> : <Save size={18} className="mr-2" />}
         {isSaving ? "Salvando..." : "Salvar alterações"}

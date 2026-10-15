@@ -65,7 +65,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
         <Button 
           size="sm" 
           onClick={addProject} 
-          className="h-10 rounded-xl font-medium text-xs gap-2 shadow-sm hover:scale-105 transition-all w-full sm:w-auto"
+          className="h-10 font-medium text-xs gap-2 shadow-sm hover:scale-105 transition-all w-full sm:w-auto"
         >
           <Plus className="h-4 w-4" /> Novo Projeto
         </Button>
@@ -88,7 +88,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
             {/* Cabeçalho do Card */}
             <div className="flex justify-between items-center mb-5 border-b border-border/40 pb-3">
               <div className="flex items-center gap-3">
-                <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-lg border border-primary/20">
+                <span className="eyebrow bg-primary/10 text-primary px-3 py-1.5 rounded-lg border border-primary/20">
                   PROJETO #{index + 1}
                 </span>
                 <ReorderControls
@@ -101,7 +101,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
               <Button
                 size="icon"
                 variant="ghost"
-                className="h-8 w-8 rounded-xl text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
+                className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
                 onClick={() => removeProject(proj.id)}
                 title="Excluir Projeto"
                 aria-label="Excluir projeto"

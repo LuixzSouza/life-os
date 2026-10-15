@@ -285,10 +285,10 @@ export function BodyMeasurementsDialog({ open, onOpenChange, initialStats, onSav
                             <span className="hidden text-xs text-muted-foreground sm:block">Preencha pescoço, cintura e quadril para estimar a gordura.</span>
                         )}
                         <div className="flex shrink-0 items-center gap-2">
-                            <Button type="button" variant="ghost" onClick={() => onOpenChange(false)} className="h-10 rounded-xl">
+                            <Button type="button" variant="ghost" onClick={() => onOpenChange(false)} className="h-10">
                                 Cancelar
                             </Button>
-                            <Button type="submit" disabled={isLoading} className="h-10 min-w-[110px] rounded-xl font-semibold">
+                            <Button type="submit" disabled={isLoading} className="h-10 min-w-[110px] font-semibold">
                                 {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Salvar"}
                             </Button>
                         </div>

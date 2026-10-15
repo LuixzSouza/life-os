@@ -73,7 +73,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
                         </CardTitle>
                         <p className="mt-1 text-xs text-muted-foreground">Estimada pelas suas medidas e idade (fórmula Naval).</p>
                     </div>
-                    <Button variant="outline" size="sm" onClick={onEdit} className="h-9 shrink-0 gap-2 rounded-xl border-border/40">
+                    <Button variant="outline" size="sm" onClick={onEdit} className="h-9 shrink-0 gap-2 border-border/40">
                         <Edit3 className="h-3.5 w-3.5" /> <span className="hidden sm:inline">Atualizar</span>
                     </Button>
                 </CardHeader>
@@ -197,7 +197,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
                                 reference="Atualize pelo botão “Atualizar” → aba “Aparelhos & Dobras”"
                             />
                         </CardTitle>
-                        <Button variant="ghost" size="sm" onClick={onEdit} className="h-8 gap-1.5 rounded-lg text-xs text-muted-foreground">
+                        <Button variant="ghost" size="sm" onClick={onEdit} className="h-8 gap-1.5 text-xs text-muted-foreground">
                             <Edit3 className="h-3.5 w-3.5" /> Editar
                         </Button>
                     </CardHeader>
@@ -291,7 +291,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
                         <div className="rounded-lg bg-primary/10 p-1.5 text-primary"><Ruler className="h-4 w-4" /></div>
                         Medidas atuais (cm)
                     </CardTitle>
-                    <Button variant="ghost" size="sm" onClick={onEdit} className="h-8 gap-1.5 rounded-lg text-xs text-muted-foreground">
+                    <Button variant="ghost" size="sm" onClick={onEdit} className="h-8 gap-1.5 text-xs text-muted-foreground">
                         <Edit3 className="h-3.5 w-3.5" /> Editar
                     </Button>
                 </CardHeader>

@@ -74,7 +74,7 @@ export function DigitalRotCard() {
           size="sm"
           onClick={sweepAll}
           disabled={sweeping}
-          className="h-7 gap-1.5 rounded-lg px-2 text-xs font-medium text-violet-500 hover:bg-violet-500/10 hover:text-violet-500"
+          className="h-7 gap-1.5 px-2 text-xs font-medium text-violet-500 hover:bg-violet-500/10 hover:text-violet-500"
         >
           {sweeping ? <Loader2 className="h-3 w-3 animate-spin" /> : <Archive className="h-3 w-3" />}
           Limpeza fantasma
@@ -109,13 +109,13 @@ export function DigitalRotCard() {
                   "group-hover:opacity-100 focus-within:opacity-100 max-sm:opacity-100")}>
                   <Button
                     variant="ghost" size="icon" onClick={() => revive(item)} title="Ainda importa — reviver" aria-label="Reviver item"
-                    className="h-7 w-7 rounded-lg text-emerald-500 hover:bg-emerald-500/10 hover:text-emerald-500"
+                    className="h-7 w-7 text-emerald-500 hover:bg-emerald-500/10 hover:text-emerald-500"
                   >
                     <RotateCcw className="h-3.5 w-3.5" />
                   </Button>
                   <Button
                     variant="ghost" size="icon" onClick={() => archive(item)} title="Arquivar na Lixeira" aria-label="Arquivar na lixeira"
-                    className="h-7 w-7 rounded-lg text-muted-foreground hover:bg-rose-500/10 hover:text-rose-500"
+                    className="h-7 w-7 text-muted-foreground hover:bg-rose-500/10 hover:text-rose-500"
                   >
                     <Archive className="h-3.5 w-3.5" />
                   </Button>

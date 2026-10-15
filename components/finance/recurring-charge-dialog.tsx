@@ -148,7 +148,7 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogTrigger asChild>
                     {trigger ? trigger : (
-                        <Button variant="ghost" size="icon" aria-label="Nova cobrança recorrente" className="h-8 w-8 text-muted-foreground hover:text-emerald-600 rounded-lg transition-colors">
+                        <Button variant="ghost" size="icon" aria-label="Nova cobrança recorrente" className="h-8 w-8 text-muted-foreground hover:text-emerald-600 transition-colors">
                             <Plus className="h-5 w-5" />
                         </Button>
                     )}
@@ -177,7 +177,7 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <Label className="text-xs font-medium text-muted-foreground ml-1">{installmentMode ? "Valor total" : "Valor"}</Label>
+                                    <Label className="eyebrow text-muted-foreground ml-1">{installmentMode ? "Valor total" : "Valor"}</Label>
                                     <div className="relative">
                                         <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground/50" />
                                         <Input
@@ -222,7 +222,7 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-xs font-medium text-muted-foreground ml-1">
+                                        <Label className="eyebrow text-muted-foreground ml-1">
                                             Próxima cobrança (parcela {Math.min((parseInt(paid || "0", 10) || 0) + 1, installmentsNum)}/{installmentsNum})
                                         </Label>
                                         <Input name="startDate" type="date" defaultValue={toDateInput(item?.startDate)} required className="h-12 rounded-xl bg-muted/20 font-medium" />
@@ -299,8 +299,8 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
                             <DialogFooter className="!flex-row justify-between items-center gap-3">
                                 <p className="text-sm font-bold text-rose-600 leading-tight">Remover esta cobrança?</p>
                                 <div className="flex gap-2 shrink-0">
-                                    <Button type="button" variant="ghost" className="rounded-xl font-bold" onClick={() => setIsDeleteDialogOpen(false)} disabled={isLoading}>Não</Button>
-                                    <Button type="button" onClick={handleDelete} disabled={isLoading} className="bg-destructive text-white hover:bg-destructive/90 rounded-xl font-bold px-6 min-w-[120px]">
+                                    <Button type="button" variant="ghost" className="font-bold" onClick={() => setIsDeleteDialogOpen(false)} disabled={isLoading}>Não</Button>
+                                    <Button type="button" onClick={handleDelete} disabled={isLoading} className="bg-destructive text-white hover:bg-destructive/90 font-bold px-6 min-w-[120px]">
                                         {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Sim, remover"}
                                     </Button>
                                 </div>
@@ -308,14 +308,14 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
                         ) : (
                             <DialogFooter className="!flex-row justify-between items-center">
                                 {item ? (
-                                    <Button type="button" variant="ghost" className="text-rose-600 hover:bg-rose-500/10 rounded-xl font-bold px-4" onClick={() => setIsDeleteDialogOpen(true)} disabled={isLoading}>
+                                    <Button type="button" variant="ghost" className="text-rose-600 hover:bg-rose-500/10 font-bold px-4" onClick={() => setIsDeleteDialogOpen(true)} disabled={isLoading}>
                                         <Trash2 className="h-4 w-4 mr-2" /> Excluir
                                     </Button>
                                 ) : <div />}
 
                                 <div className="flex gap-2">
-                                    <Button type="button" variant="ghost" className="rounded-xl font-bold" onClick={() => setOpen(false)}>Cancelar</Button>
-                                    <Button type="submit" disabled={isLoading} className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold shadow-lg shadow-emerald-500/20 min-w-[120px]">
+                                    <Button type="button" variant="ghost" className="font-bold" onClick={() => setOpen(false)}>Cancelar</Button>
+                                    <Button type="submit" disabled={isLoading} className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-500/20 min-w-[120px]">
                                         {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : (item ? "Salvar" : "Criar")}
                                     </Button>
                                 </div>

@@ -21,7 +21,7 @@ export function CertificationsForm({ data, onChange }: { data: PortfolioData; on
             <Award className="h-4 w-4 text-primary" /> Cursos & Certificações
           </h3>
         </div>
-        <Button size="sm" onClick={add} className="h-10 rounded-xl font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
+        <Button size="sm" onClick={add} className="h-10 font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
           <Plus className="h-4 w-4" /> Adicionar
         </Button>
       </div>
@@ -34,7 +34,7 @@ export function CertificationsForm({ data, onChange }: { data: PortfolioData; on
             </Button>
 
             <div className="flex items-center gap-3 mb-4">
-              <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-lg border border-primary/20">#{index + 1}</span>
+              <span className="eyebrow bg-primary/10 text-primary px-3 py-1 rounded-lg border border-primary/20">#{index + 1}</span>
               <ReorderControls index={index} count={data.certifications.length} onMove={(dir) => move(index, dir)} orientation="horizontal" />
             </div>
 

@@ -110,7 +110,7 @@ export function Sidebar({ user, inbox }: { user?: UserData | null; inbox: Notifi
               variant="ghost"
               size="icon"
               onClick={() => setIsCollapsed(false)}
-              className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground"
+              className="h-8 w-8 text-muted-foreground hover:text-foreground"
               title="Expandir menu"
               aria-label="Expandir menu"
             >

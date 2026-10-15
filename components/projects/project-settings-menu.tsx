@@ -95,7 +95,7 @@ export function ProjectSettingsMenu({
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" aria-label="Configurações do projeto" className="h-9 w-9 rounded-xl hover:bg-muted/80 transition-all active:scale-90">
+          <Button variant="ghost" size="icon" aria-label="Configurações do projeto" className="h-9 w-9 hover:bg-muted/80 transition-all active:scale-90">
             <MoreHorizontal className="h-5 w-5 text-muted-foreground" />
           </Button>
         </DropdownMenuTrigger>
@@ -178,7 +178,7 @@ export function ProjectSettingsMenu({
             </DialogBody>
 
             <DialogFooter>
-              <Button type="submit" disabled={isLoading} className="w-full h-14 rounded-2xl font-medium text-xs shadow-lg transition-all active:scale-95" style={{ backgroundColor: selectedColor }}>
+              <Button type="submit" disabled={isLoading} className="w-full h-14 font-medium text-xs shadow-lg transition-all active:scale-95" style={{ backgroundColor: selectedColor }}>
                 {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : "Salvar Alterações"}
               </Button>
             </DialogFooter>

@@ -27,6 +27,7 @@ import { useResumeExport } from "./resume/use-resume-export";
 import type { ResumeRecord } from "@/app/(dashboard)/jobs/resume-actions";
 import type { JobWithProject } from "./job-types";
 import { attachResumeSnapshot, getJobResumeSnapshot } from "@/app/(dashboard)/projects/actions/job";
+import { EmptyState } from "@/components/ui/empty-state";
 
 const LOCALE_FLAG: Record<string, string> = { "pt-BR": "🇧🇷", "en-US": "🇺🇸" };
 
@@ -133,12 +134,12 @@ export function JobDetailDialog({ job, resumes, onOpenChange }: JobDetailDialogP
 
               <div className="flex flex-wrap gap-2">
                 {job.jobUrl && (
-                  <Button asChild variant="outline" size="sm" className="rounded-lg gap-1.5">
+                  <Button asChild variant="outline" size="sm" className="gap-1.5">
                     <a href={job.jobUrl} target="_blank" rel="noreferrer"><ExternalLink className="h-3.5 w-3.5" /> Abrir vaga</a>
                   </Button>
                 )}
                 {job.contactEmail && (
-                  <Button asChild variant="outline" size="sm" className="rounded-lg gap-1.5">
+                  <Button asChild variant="outline" size="sm" className="gap-1.5">
                     <a href={`mailto:${job.contactEmail}`}><Mail className="h-3.5 w-3.5" /> E-mail</a>
                   </Button>
                 )}
@@ -219,7 +220,7 @@ export function JobDetailDialog({ job, resumes, onOpenChange }: JobDetailDialogP
                       </p>
                     )}
 
-                    <Button onClick={downloadExact} disabled={downloading || exporting} className="w-full rounded-xl gap-2">
+                    <Button onClick={downloadExact} disabled={downloading || exporting} className="w-full gap-2">
                       {downloading || exporting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />}
                       Baixar PDF exato (o que a empresa recebeu)
                     </Button>
@@ -242,15 +243,14 @@ export function JobDetailDialog({ job, resumes, onOpenChange }: JobDetailDialogP
                 </>
               ) : (
                 <>
-                  <div className="rounded-xl border border-dashed border-border/50 p-6 text-center">
-                    <FileWarning className="h-8 w-8 text-muted-foreground/40 mx-auto mb-2" />
-                    <p className="text-sm font-semibold">Nenhum currículo registrado para esta vaga</p>
-                    <p className="text-xs text-muted-foreground mt-1 max-w-xs mx-auto">
-                      Vincule a versão que você enviou para congelar uma cópia exata e rastreável.
-                    </p>
-                  </div>
+                  <EmptyState
+                    size="sm"
+                    icon={FileWarning}
+                    title="Nenhum currículo registrado para esta vaga"
+                    description="Vincule a versão que você enviou para congelar uma cópia exata e rastreável."
+                  />
                   {!changing ? (
-                    <Button onClick={startChange} className="w-full rounded-xl gap-2">
+                    <Button onClick={startChange} className="w-full gap-2">
                       <FileText className="h-4 w-4" /> Vincular currículo enviado
                     </Button>
                   ) : (
@@ -299,8 +299,8 @@ function ChangePanel({
     <div className="space-y-3 rounded-xl border border-border/40 bg-muted/10 p-3">
       <ResumePicker resumes={resumes} value={selected} onChange={setSelected} />
       <div className="flex justify-end gap-2">
-        <Button variant="outline" size="sm" className="rounded-lg" onClick={onCancel} disabled={busy}>Cancelar</Button>
-        <Button size="sm" className="rounded-lg gap-1.5" onClick={onConfirm} disabled={busy || !selected}>
+        <Button variant="outline" size="sm" className="" onClick={onCancel} disabled={busy}>Cancelar</Button>
+        <Button size="sm" className="gap-1.5" onClick={onConfirm} disabled={busy || !selected}>
           {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Lock className="h-4 w-4" />} Congelar snapshot
         </Button>
       </div>

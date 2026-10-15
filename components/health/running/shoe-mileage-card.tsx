@@ -188,8 +188,8 @@ export function ShoeMileageCard({ shoes }: { shoes: ShoeWithMileage[] }) {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={closeForm} disabled={saving} className="rounded-xl">Cancelar</Button>
-            <Button onClick={submit} disabled={saving} className="rounded-xl gap-1.5">
+            <Button variant="outline" onClick={closeForm} disabled={saving} className="">Cancelar</Button>
+            <Button onClick={submit} disabled={saving} className="gap-1.5">
               {saving && <Loader2 className="h-4 w-4 animate-spin" />} Salvar
             </Button>
           </DialogFooter>

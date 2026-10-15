@@ -295,7 +295,7 @@ export default function LoginPageClient() {
                         <Button
                             type="submit"
                             size="lg"
-                            className="w-full h-12 font-semibold shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70 disabled:hover:scale-100"
+                            className="w-full h-10 font-semibold shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-70 disabled:hover:scale-100"
                             disabled={isLoading || cooldownLeft > 0}
                         >
                             {isLoading ? (

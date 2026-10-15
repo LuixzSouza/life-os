@@ -146,7 +146,7 @@ export function WardrobeItemCard({
           <Button
             variant="secondary"
             onClick={(e) => { e.stopPropagation(); onWear(item.id); }}
-            className="w-full h-9 text-xs font-bold rounded-lg shadow-sm hover:bg-primary hover:text-primary-foreground transition-all group/btn"
+            className="w-full h-9 text-xs font-bold shadow-sm hover:bg-primary hover:text-primary-foreground transition-all group/btn"
           >
             <CheckCircle2 className="h-4 w-4 mr-1.5 opacity-50 group-hover/btn:opacity-100 transition-opacity" /> Usei Hoje
           </Button>

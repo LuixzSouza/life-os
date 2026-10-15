@@ -138,7 +138,7 @@ export function DeckCard({ deck, onStudy, onDelete, onConnections }: DeckCardPro
       <CardFooter className="pt-0">
         {hasCards ? (
           <Button
-            className="h-11 w-full gap-2 rounded-xl font-bold shadow-sm"
+            className="h-10 w-full gap-2 font-bold shadow-sm"
             onClick={() => onStudy(deck)}
           >
             <PlayCircle className="h-5 w-5" />
@@ -146,7 +146,7 @@ export function DeckCard({ deck, onStudy, onDelete, onConnections }: DeckCardPro
           </Button>
         ) : (
           <Link href={`/flashcards/${deck.id}/edit`} className="w-full">
-            <Button variant="outline" className="h-11 w-full gap-2 rounded-xl border-dashed border-primary/40 font-bold text-primary hover:bg-primary/5">
+            <Button variant="outline" className="h-10 w-full gap-2 border-dashed border-primary/40 font-bold text-primary hover:bg-primary/5">
               <Plus className="h-4 w-4" /> Criar cartões
             </Button>
           </Link>

@@ -119,7 +119,7 @@ export function TransactionDialog({
             trigger
           ) : (
             <Button
-              className="h-11 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 active:translate-y-0"
+              className="h-10 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 active:translate-y-0"
               disabled={!hasAccounts}
             >
               <Plus className="mr-2 h-5 w-5" /> Nova Transação
@@ -294,8 +294,8 @@ export function TransactionDialog({
                 <DialogFooter className="!flex-row justify-between items-center gap-3">
                   <p className="text-sm font-bold text-rose-600 leading-tight">Excluir esta transação?</p>
                   <div className="flex gap-2 shrink-0">
-                    <Button type="button" variant="ghost" className="rounded-xl font-bold" onClick={() => setIsDeleteDialogOpen(false)} disabled={isLoading}>Não</Button>
-                    <Button type="button" onClick={handleDelete} disabled={isLoading} className="bg-destructive text-white hover:bg-destructive/90 rounded-xl font-bold px-6 min-w-[120px]">
+                    <Button type="button" variant="ghost" className="font-bold" onClick={() => setIsDeleteDialogOpen(false)} disabled={isLoading}>Não</Button>
+                    <Button type="button" onClick={handleDelete} disabled={isLoading} className="bg-destructive text-white hover:bg-destructive/90 font-bold px-6 min-w-[120px]">
                       {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Sim, remover"}
                     </Button>
                   </div>
@@ -306,7 +306,7 @@ export function TransactionDialog({
                     <Button
                       type="button"
                       variant="ghost"
-                      className="text-rose-600 hover:bg-rose-500/10 rounded-xl font-bold px-4"
+                      className="text-rose-600 hover:bg-rose-500/10 font-bold px-4"
                       onClick={() => setIsDeleteDialogOpen(true)}
                       disabled={isLoading}
                     >
@@ -320,7 +320,7 @@ export function TransactionDialog({
                     <Button
                       type="button"
                       variant="ghost"
-                      className="rounded-xl font-bold"
+                      className="font-bold"
                       onClick={() => setOpen(false)}
                     >
                       Cancelar

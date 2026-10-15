@@ -21,7 +21,7 @@ export function LanguagesForm({ data, onChange }: { data: PortfolioData; onChang
         <h3 className="text-[11px] font-medium text-muted-foreground/80 flex items-center gap-2">
           <Languages className="h-4 w-4 text-primary" /> Idiomas
         </h3>
-        <Button size="sm" onClick={add} className="h-10 rounded-xl font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
+        <Button size="sm" onClick={add} className="h-10 font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
           <Plus className="h-4 w-4" /> Adicionar
         </Button>
       </div>
@@ -48,7 +48,7 @@ export function LanguagesForm({ data, onChange }: { data: PortfolioData; onChang
               size="icon"
               variant="ghost"
               aria-label="Remover idioma"
-              className="h-11 w-11 shrink-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all rounded-xl"
+              className="h-11 w-11 shrink-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all"
               onClick={() => remove(lang.id)}
             >
               <X className="h-4 w-4" />

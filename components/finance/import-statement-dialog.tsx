@@ -160,7 +160,7 @@ export function ImportStatementDialog({ open, onOpenChange, accounts }: ImportSt
                   size="sm"
                   onClick={handleAiParse}
                   disabled={aiLoading || aiText.trim().length < 10}
-                  className="h-9 shrink-0 gap-1.5 rounded-xl font-semibold"
+                  className="h-9 shrink-0 gap-1.5 font-semibold"
                 >
                   {aiLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
                   {aiLoading ? "Lendo extrato…" : "Extrair lançamentos"}
@@ -213,7 +213,7 @@ export function ImportStatementDialog({ open, onOpenChange, accounts }: ImportSt
           <Button
             onClick={handleImport}
             disabled={importing || parsed.length === 0 || !accountId}
-            className="w-full h-12 rounded-xl font-bold shadow-lg shadow-primary/20"
+            className="w-full h-10 font-bold shadow-lg shadow-primary/20"
           >
             {importing ? <Loader2 className="h-5 w-5 animate-spin" /> : `Importar ${parsed.length || ""} lançamento(s)`}
           </Button>

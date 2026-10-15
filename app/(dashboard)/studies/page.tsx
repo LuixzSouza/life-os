@@ -1,3 +1,4 @@
+import { EmptyState } from "@/components/ui/empty-state";
 // Conteudo autenticado por-usuario: render por requisicao (nunca prerender no build).
 export const dynamic = "force-dynamic";
 
@@ -442,18 +443,12 @@ export default async function StudiesPage() {
           <div className="space-y-6 lg:col-span-2">
             {/* PAINEL DE FOCO (protagonista) — ou onboarding */}
             {subjects.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-border/70 bg-card p-12 text-center shadow-sm">
-                <div className="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-primary/10 text-primary">
-                  <BookOpen className="h-6 w-6" />
-                </div>
-                <h3 className="text-lg font-semibold">Comece sua jornada</h3>
-                <p className="mx-auto mt-1 max-w-xs text-sm text-muted-foreground">
-                  Cadastre sua primeira matéria para abrir o modo foco.
-                </p>
-                <div className="mt-5 flex justify-center">
-                  <CreateSubjectButton withIcon />
-                </div>
-              </div>
+              <EmptyState
+                icon={BookOpen}
+                title="Nenhuma matéria ainda"
+                description="Cadastre sua primeira matéria para abrir o modo foco."
+                action={<CreateSubjectButton withIcon />}
+              />
             ) : (
               <StudyTimer subjects={subjectsWithStats} />
             )}

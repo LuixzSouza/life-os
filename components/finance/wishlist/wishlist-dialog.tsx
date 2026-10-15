@@ -15,7 +15,7 @@ export function WishlistDialog({ trigger }: WishlistDialogProps) {
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
                 {trigger ? trigger : (
-                    <Button variant="outline" className="gap-2 rounded-xl font-bold border-dashed border-border hover:bg-muted/50">
+                    <Button variant="outline" className="gap-2 font-bold border-dashed border-border hover:bg-muted/50">
                         <Plus className="h-4 w-4"/> Nova Meta
                     </Button>
                 )}

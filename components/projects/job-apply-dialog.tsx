@@ -100,10 +100,10 @@ export function JobApplyDialog({ job, resumes, onOpenChange }: JobApplyDialogPro
             Candidatar sem registrar currículo
           </button>
           <div className="flex gap-2">
-            <Button variant="outline" className="rounded-xl" onClick={() => onOpenChange(false)} disabled={busy}>
+            <Button variant="outline" className="" onClick={() => onOpenChange(false)} disabled={busy}>
               Cancelar
             </Button>
-            <Button className="rounded-xl gap-2" onClick={confirm} disabled={busy || !selected}>
+            <Button className="gap-2" onClick={confirm} disabled={busy || !selected}>
               {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />} Confirmar envio
             </Button>
           </div>

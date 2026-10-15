@@ -233,7 +233,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                         size="icon"
                                         onClick={onBack}
                                         aria-label="Voltar aos currículos"
-                                        className="h-9 w-9 rounded-xl shrink-0 text-muted-foreground hover:text-foreground"
+                                        className="h-9 w-9 shrink-0 text-muted-foreground hover:text-foreground"
                                     >
                                         <ArrowLeft className="h-4 w-4" />
                                     </Button>
@@ -258,7 +258,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                     onClick={handleReview}
                                     disabled={reviewLoading}
                                     title="A IA revisa seu currículo e sugere melhorias"
-                                    className="h-9 rounded-xl font-medium text-xs gap-1.5 border-violet-500/30 bg-violet-500/5 text-violet-600 hover:bg-violet-500/10"
+                                    className="h-9 font-medium text-xs gap-1.5 border-violet-500/30 bg-violet-500/5 text-violet-600 hover:bg-violet-500/10"
                                 >
                                     {reviewLoading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Sparkles className="h-3.5 w-3.5" />}
                                     <span className="hidden sm:inline">Revisar IA</span>
@@ -285,7 +285,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                         <Button
                                             variant="outline"
                                             size="sm"
-                                            className="h-9 rounded-xl font-medium text-xs gap-1.5 border-border/60 hover:bg-primary/5 hover:text-primary"
+                                            className="h-9 font-medium text-xs gap-1.5 border-border/60 hover:bg-primary/5 hover:text-primary"
                                         >
                                             <Database className="h-3.5 w-3.5" /> Dados <ChevronDown className="h-3 w-3 opacity-60" />
                                         </Button>
@@ -510,7 +510,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                         <Button
                             variant="outline"
                             disabled={isSaving}
-                            className="flex-1 gap-2 rounded-xl h-12 sm:h-14 font-medium text-[11px] shadow-sm hover:bg-muted hover:text-foreground transition-all border-border/60"
+                            className="flex-1 gap-2 h-10 sm:h-14 font-medium text-[11px] shadow-sm hover:bg-muted hover:text-foreground transition-all border-border/60"
                             onClick={handleSave}
                             title="Autosave ativo — clique para gravar agora"
                         >
@@ -524,7 +524,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                         </Button>
                         <Button
                             disabled={exporting}
-                            className="flex-1 gap-2 rounded-xl h-12 sm:h-14 bg-foreground text-background hover:bg-foreground/90 font-medium text-[11px] shadow-xl transition-all"
+                            className="flex-1 gap-2 h-10 sm:h-14 bg-foreground text-background hover:bg-foreground/90 font-medium text-[11px] shadow-xl transition-all"
                             onClick={handleExportPdf}
                             title="Gera um PDF ATS-friendly (uma coluna, texto linear)"
                         >

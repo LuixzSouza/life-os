@@ -7,6 +7,7 @@ import { History } from "lucide-react";
 
 import { type StudySessionListProps } from "./study-session-utils";
 import { SessionTimelineItem } from "./session-timeline-item";
+import { EmptyState } from "@/components/ui/empty-state";
 
 export function StudySessionList({ sessions }: StudySessionListProps) {
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
@@ -31,15 +32,12 @@ export function StudySessionList({ sessions }: StudySessionListProps) {
 
   if (sessions.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-border/50 bg-muted/5 px-4 py-14 text-center">
-        <div className="mb-3 rounded-full bg-muted p-3">
-          <History className="h-6 w-6 text-muted-foreground/50" />
-        </div>
-        <h3 className="text-sm font-semibold text-foreground">Sem histórico recente</h3>
-        <p className="mt-1 max-w-[220px] text-xs text-muted-foreground">
-          Suas sessões finalizadas aparecerão aqui.
-        </p>
-      </div>
+      <EmptyState
+        size="sm"
+        icon={History}
+        title="Sem histórico recente"
+        description="Suas sessões finalizadas aparecerão aqui."
+      />
     );
   }
 

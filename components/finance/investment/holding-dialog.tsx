@@ -221,7 +221,7 @@ export function HoldingDialog({ open, onOpenChange, holding }: HoldingDialogProp
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
                     <p className="font-bold text-foreground">{ticker}</p>
-                    <span className="rounded-md bg-muted/60 px-1.5 py-0.5 text-xs font-medium text-muted-foreground">{TYPE_LABEL[type] ?? type}</span>
+                    <span className="eyebrow rounded-md bg-muted/60 px-1.5 py-0.5 text-muted-foreground">{TYPE_LABEL[type] ?? type}</span>
                   </div>
                   <p className="text-[11px] text-muted-foreground truncate">
                     {selName || ticker}{currentPrice != null && ` · agora ${formatMoney(currentPrice)}`}
@@ -262,7 +262,7 @@ export function HoldingDialog({ open, onOpenChange, holding }: HoldingDialogProp
           )}
         </DialogBody>
         <DialogFooter>
-          <Button onClick={submit} disabled={loading || !hasSelection} className="w-full h-12 rounded-xl font-bold shadow-lg shadow-primary/20">
+          <Button onClick={submit} disabled={loading || !hasSelection} className="w-full h-10 font-bold shadow-lg shadow-primary/20">
             {loading ? <Loader2 className="h-5 w-5 animate-spin" /> : isEdit ? "Salvar" : (
               <span className="flex items-center gap-1.5"><Check className="h-4 w-4" /> Adicionar à carteira</span>
             )}

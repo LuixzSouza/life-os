@@ -30,6 +30,7 @@ import {
   PLAN_GOAL_META, WEEKDAY_LABELS, formatTarget, totalExercises, newPlan, newDivision, newPlanExercise,
   type WorkoutPlan, type PlanGoal, type PlanDivision, type PlanExercise, type ExerciseTarget, type IntensityType,
 } from "./session/plan-types";
+import { EmptyState } from "@/components/ui/empty-state";
 
 const GOALS = Object.keys(PLAN_GOAL_META) as PlanGoal[];
 const DIVISION_LETTERS = ["A", "B", "C", "D", "E", "F"];
@@ -376,15 +377,17 @@ export function PlanBuilder() {
       {plans === null ? (
         <div className="flex items-center justify-center py-16 text-muted-foreground"><Loader2 className="h-5 w-5 animate-spin" /></div>
       ) : plans.length === 0 ? (
-        <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-border/60 bg-muted/5 py-16 text-center">
-          <div className="mb-3 rounded-full bg-muted/20 p-3"><Dumbbell className="h-6 w-6 text-muted-foreground/50" /></div>
-          <h4 className="text-base font-semibold">Nenhuma ficha ainda</h4>
-          <p className="mt-1 max-w-xs text-xs text-muted-foreground">Fotografe a ficha que te passaram ou crie do zero (ex: Push/Pull/Legs) com séries, faixas de reps e RIR/RPE.</p>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-            <PlanPhotoImport onImported={openImported} />
-            <Button onClick={createNew} size="sm" className="gap-1.5"><Plus className="h-4 w-4" /> Criar ficha</Button>
-          </div>
-        </div>
+        <EmptyState
+          icon={Dumbbell}
+          title="Nenhuma ficha ainda"
+          description="Fotografe a ficha que te passaram ou crie do zero (ex: Push/Pull/Legs) com séries, faixas de reps e RIR/RPE."
+          action={
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              <PlanPhotoImport onImported={openImported} />
+              <Button onClick={createNew} size="sm" className="gap-1.5"><Plus className="h-4 w-4" /> Criar ficha</Button>
+            </div>
+          }
+        />
       ) : (
         <div className="grid gap-3 sm:grid-cols-2">
           {plans.map((plan) => (

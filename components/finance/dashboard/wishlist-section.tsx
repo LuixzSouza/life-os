@@ -39,7 +39,7 @@ export function WishlistSection({ wishlist, accounts, totalBalance }: WishlistSe
             />
           )}
           <WishlistDialog trigger={
-            <Button size="lg" className="rounded-xl font-bold shadow-lg shadow-primary/20 transition-all active:scale-95 px-8">
+            <Button size="lg" className="font-bold shadow-lg shadow-primary/20 transition-all active:scale-95 px-8">
               <Plus className="h-5 w-5 mr-2" /> Nova Meta
             </Button>
           } />
@@ -59,7 +59,7 @@ export function WishlistSection({ wishlist, accounts, totalBalance }: WishlistSe
             action={
               <WishlistDialog
                 trigger={
-                  <Button variant="default" className="rounded-xl h-11 px-8 font-bold shadow-lg shadow-primary/20 mt-2 transition-all active:scale-95">
+                  <Button variant="default" className="h-10 px-8 font-bold shadow-lg shadow-primary/20 mt-2 transition-all active:scale-95">
                     <Plus className="h-4 w-4 mr-2" /> Criar Meta
                   </Button>
                 }

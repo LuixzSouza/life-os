@@ -28,7 +28,7 @@ export function StatementSection({ transactions, recurring, totalRecurring, acco
               Histórico Recente
             </h3>
             <Link href="/finance/transactions">
-              <Button variant="ghost" size="sm" className="h-9 px-4 rounded-xl gap-2 text-muted-foreground hover:text-primary hover:bg-primary/5 font-bold group transition-all">
+              <Button variant="ghost" size="sm" className="h-9 px-4 gap-2 text-muted-foreground hover:text-primary hover:bg-primary/5 font-bold group transition-all">
                 Ver tudo <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -58,7 +58,7 @@ export function StatementSection({ transactions, recurring, totalRecurring, acco
               Custos Fixos
             </h3>
             <RecurringDialog trigger={
-              <Button variant="outline" size="icon" aria-label="Adicionar custo fixo" className="h-9 w-9 rounded-xl hover:bg-primary/10 hover:text-primary transition-all active:scale-95 border-border/50 shadow-sm">
+              <Button variant="outline" size="icon" aria-label="Adicionar custo fixo" className="h-9 w-9 hover:bg-primary/10 hover:text-primary transition-all active:scale-95 border-border/50 shadow-sm">
                 <Plus className="h-5 w-5" />
               </Button>
             } />
@@ -76,7 +76,7 @@ export function StatementSection({ transactions, recurring, totalRecurring, acco
                 action={
                   <RecurringDialog
                     trigger={
-                      <Button variant="outline" className="rounded-xl h-11 px-6 font-bold shadow-sm transition-all active:scale-95 bg-background">
+                      <Button variant="outline" className="h-10 px-6 font-bold shadow-sm transition-all active:scale-95 bg-background">
                         Adicionar Fixo
                       </Button>
                     }

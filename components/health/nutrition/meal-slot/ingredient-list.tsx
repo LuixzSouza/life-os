@@ -39,7 +39,7 @@ export function IngredientList({ ingredients, onUpdateAmount, onRemove }: Ingred
                     type="button"
                     variant="ghost"
                     size="icon"
-                    className="h-5 w-5 rounded-md hover:bg-muted"
+                    className="h-5 w-5 hover:bg-muted"
                     onClick={() => onUpdateAmount(ing.id, Math.max(0.1, ing.amount - 0.1))}
                   >
                     <span className="sr-only">Diminuir</span>
@@ -57,7 +57,7 @@ export function IngredientList({ ingredients, onUpdateAmount, onRemove }: Ingred
                     type="button"
                     variant="ghost"
                     size="icon"
-                    className="h-5 w-5 rounded-md hover:bg-muted"
+                    className="h-5 w-5 hover:bg-muted"
                     onClick={() => onUpdateAmount(ing.id, ing.amount + 0.1)}
                   >
                     <span className="sr-only">Aumentar</span>
@@ -75,7 +75,7 @@ export function IngredientList({ ingredients, onUpdateAmount, onRemove }: Ingred
                   variant="ghost"
                   size="icon"
                   aria-label="Remover ingrediente"
-                  className="h-8 w-8 hover:bg-destructive/10 hover:text-destructive rounded-md"
+                  className="h-8 w-8 hover:bg-destructive/10 hover:text-destructive"
                   onClick={() => onRemove(ing.id)}
                 >
                   <X className="h-4 w-4" />

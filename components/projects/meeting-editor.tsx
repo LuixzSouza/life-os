@@ -490,15 +490,15 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
           <div className="flex flex-wrap items-center gap-2">
             {isRecordingThis ? (
               <>
-                <Button onClick={rec.stopSession} size="sm" className="gap-2 rounded-lg bg-rose-600 hover:bg-rose-700 text-white">
+                <Button onClick={rec.stopSession} size="sm" className="gap-2 bg-rose-600 hover:bg-rose-700 text-white">
                   <Square className="h-3.5 w-3.5 fill-current" /> Parar · {fmtTime(rec.elapsed)}
                 </Button>
                 {rec.isPaused ? (
-                  <Button onClick={rec.resumeSession} size="sm" className="gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white">
+                  <Button onClick={rec.resumeSession} size="sm" className="gap-2 bg-emerald-600 hover:bg-emerald-700 text-white">
                     <Play className="h-3.5 w-3.5 fill-current" /> Retomar
                   </Button>
                 ) : (
-                  <Button onClick={rec.pauseSession} size="sm" variant="secondary" className="gap-2 rounded-lg">
+                  <Button onClick={rec.pauseSession} size="sm" variant="secondary" className="gap-2">
                     <Pause className="h-3.5 w-3.5 fill-current" /> Pausar
                   </Button>
                 )}
@@ -523,7 +523,7 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
                 disabled={otherRecording}
                 variant="outline"
                 size="sm"
-                className="gap-2 rounded-lg"
+                className="gap-2"
               >
                 <Mic className="h-4 w-4 text-rose-500" /> Gravar reunião
               </Button>
@@ -735,7 +735,7 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
           onClick={handleSummarize}
           disabled={summarizing || !notes.trim()}
           title={!notes.trim() ? "Escreva (ou grave) as notas primeiro" : summary ? "Gera o resumo de novo com as notas atuais" : undefined}
-          className="gap-2 rounded-xl bg-primary shadow-lg shadow-primary/20"
+          className="gap-2 bg-primary shadow-lg shadow-primary/20"
         >
           {summarizing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
           {summary ? "Resumir de novo" : "Resumir com IA"}
@@ -745,20 +745,20 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
           disabled={generating || !summary || actionCount === 0}
           title={!summary ? "Gere o resumo primeiro" : actionCount === 0 ? "O resumo não tem itens de ação (bullets)" : `Cria ${actionCount} tarefa(s) no projeto`}
           variant="secondary"
-          className="gap-2 rounded-xl"
+          className="gap-2"
         >
           {generating ? <Loader2 className="h-4 w-4 animate-spin" /> : <ListChecks className="h-4 w-4" />}
           Gerar checklist{actionCount > 0 ? ` (${actionCount})` : ""}
         </Button>
-        <Button onClick={handleSave} disabled={saving} title="Atalho: Ctrl+S" variant="outline" className="gap-2 rounded-xl">
+        <Button onClick={handleSave} disabled={saving} title="Atalho: Ctrl+S" variant="outline" className="gap-2">
           {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
           Salvar
         </Button>
-        <Button onClick={handleExportPdf} disabled={exporting} variant="outline" className="gap-2 rounded-xl">
+        <Button onClick={handleExportPdf} disabled={exporting} variant="outline" className="gap-2">
           {exporting ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileDown className="h-4 w-4" />}
           PDF
         </Button>
-        <Button onClick={handleDelete} variant="ghost" size="icon" aria-label="Excluir" className="ml-auto rounded-xl text-destructive hover:bg-destructive/10">
+        <Button onClick={handleDelete} variant="ghost" size="icon" aria-label="Excluir" className="ml-auto text-destructive hover:bg-destructive/10">
           <Trash2 className="h-4 w-4" />
         </Button>
       </div>

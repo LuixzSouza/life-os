@@ -12,6 +12,7 @@ import { DeckCard } from "./deck-card";
 import { StudyModeDialog } from "./study-mode-dialog";
 import { DeleteDeckAlert } from "./delete-deck-alert";
 import { EntityConnectionsDialog } from "@/components/connect/entity-connections-dialog";
+import { EmptyState } from "@/components/ui/empty-state";
 
 /** Busca sem acento/caixa ("logica" acha "Lógica") — padrão do projeto. */
 const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
@@ -92,22 +93,18 @@ export function DeckGrid({ decks, subjects = [] }: DeckGridProps) {
       {/* GRID */}
       <div>
         {decks.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-24 border-2 border-dashed border-border/60 rounded-3xl bg-muted/5">
-                <div className="bg-background p-5 rounded-full shadow-sm mb-4 ring-1 ring-border/50">
-                    <BrainCircuit className="h-10 w-10 text-muted-foreground/30" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">Sua biblioteca está vazia</h3>
-                <p className="text-muted-foreground max-w-sm text-center mt-2 leading-relaxed">
-                    Crie seu primeiro baralho para começar a montar o seu acervo de memória de longo prazo.
-                </p>
-                <Button variant="default" className="mt-8 shadow-lg rounded-xl h-12 px-6" onClick={() => setIsCreateDialogOpen(true)}>
-                    <Plus className="h-5 w-5 mr-2" /> Criar agora
-                </Button>
-            </div>
+            <EmptyState
+                icon={BrainCircuit}
+                title="Sua biblioteca está vazia"
+                description="Crie seu primeiro baralho para começar a montar o seu acervo de memória de longo prazo."
+                action={
+                    <Button className="gap-2" onClick={() => setIsCreateDialogOpen(true)}>
+                        <Plus className="h-4 w-4" /> Criar baralho
+                    </Button>
+                }
+            />
         ) : visibleDecks.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-border/60 py-14 text-center text-sm text-muted-foreground">
-                Nenhum baralho bate com &quot;{search}&quot;.
-            </div>
+            <EmptyState icon={Search} title="Nenhum baralho encontrado" description={<>Nada bate com &quot;{search}&quot;.</>} />
         ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {visibleDecks.map((deck) => (

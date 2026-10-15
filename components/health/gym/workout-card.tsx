@@ -82,15 +82,15 @@ export function WorkoutCard({ workout: w, onOpenDetail }: WorkoutCardProps) {
 
               {/* Ações (repetir / editar / excluir) */}
               <div className="flex items-center gap-1 opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100 shrink-0">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); handleRepeat(); }} title="Repetir este treino" aria-label="Repetir este treino">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); handleRepeat(); }} title="Repetir este treino" aria-label="Repetir este treino">
                   <Repeat2 className="h-4 w-4" />
                 </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); setIsEditOpen(true); }} title="Editar" aria-label="Editar treino">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); setIsEditOpen(true); }} title="Editar" aria-label="Editar treino">
                   <Pencil className="h-4 w-4" />
                 </Button>
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-destructive hover:bg-destructive/10" onClick={(e) => e.stopPropagation()} title="Excluir" aria-label="Excluir treino">
+                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10" onClick={(e) => e.stopPropagation()} title="Excluir" aria-label="Excluir treino">
                       <Trash2 className="h-4 w-4" />
                     </Button>
                   </AlertDialogTrigger>

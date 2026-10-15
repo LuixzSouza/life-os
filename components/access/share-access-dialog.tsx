@@ -168,7 +168,7 @@ export function ShareAccessDialog({
                 )}
               </div>
 
-              <Button onClick={generateLink} disabled={generating} className="h-12 w-full gap-2 text-sm font-bold">
+              <Button onClick={generateLink} disabled={generating} className="h-10 w-full gap-2 text-sm font-bold">
                 {generating ? <Loader2 className="h-4 w-4 animate-spin" /> : <ShieldCheck className="h-4 w-4" />}
                 {generating ? "Gerando link seguro…" : "Gerar link seguro"}
               </Button>
@@ -179,7 +179,7 @@ export function ShareAccessDialog({
               <div className="flex items-center gap-2 rounded-xl border border-border/50 bg-muted/20 p-1.5 pl-3">
                 <Link2 className="h-4 w-4 shrink-0 text-primary" />
                 <span className="min-w-0 flex-1 truncate font-mono text-xs text-muted-foreground">{link}</span>
-                <Button size="icon" variant="ghost" onClick={copyLink} className="h-8 w-8 shrink-0 rounded-lg" aria-label="Copiar link">
+                <Button size="icon" variant="ghost" onClick={copyLink} className="h-8 w-8 shrink-0" aria-label="Copiar link">
                   {copied ? <Check className="h-4 w-4 text-emerald-500" /> : <Copy className="h-4 w-4" />}
                 </Button>
               </div>
@@ -193,15 +193,15 @@ export function ShareAccessDialog({
 
               {/* Ações de envio */}
               <div className="grid grid-cols-2 gap-2">
-                <Button onClick={shareWhatsApp} variant="outline" className="h-11 gap-2 border-emerald-500/30 text-emerald-600 hover:bg-emerald-500/5">
+                <Button onClick={shareWhatsApp} variant="outline" className="h-10 gap-2 border-emerald-500/30 text-emerald-600 hover:bg-emerald-500/5">
                   <MessageCircle className="h-4 w-4" /> WhatsApp
                 </Button>
                 {canNativeShare ? (
-                  <Button onClick={shareNative} variant="outline" className="h-11 gap-2">
+                  <Button onClick={shareNative} variant="outline" className="h-10 gap-2">
                     <Share2 className="h-4 w-4" /> Compartilhar…
                   </Button>
                 ) : (
-                  <Button onClick={copyLink} variant="outline" className="h-11 gap-2">
+                  <Button onClick={copyLink} variant="outline" className="h-10 gap-2">
                     {copied ? <Check className="h-4 w-4 text-emerald-500" /> : <Copy className="h-4 w-4" />} Copiar link
                   </Button>
                 )}

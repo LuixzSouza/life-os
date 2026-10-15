@@ -36,6 +36,7 @@ import { DAYS } from "./routine-config";
 import { RoutineGrid } from "./routine-grid";
 import { RoutineForm } from "./routine-form";
 import { CleaningRotationDialog } from "./cleaning-rotation-dialog";
+import { EmptyState } from "@/components/ui/empty-state";
 
 // --- COMPONENTE PRINCIPAL ---
 export function RoutineManager({ items }: { items: RoutineItem[] }) {
@@ -88,7 +89,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
           {items.length > 0 && (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon" aria-label="Mais ações" className="h-11 w-11 rounded-xl hover:bg-muted border-border/60">
+                <Button variant="outline" size="icon" aria-label="Mais ações" className="h-11 w-11 hover:bg-muted border-border/60">
                   <MoreVertical className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -117,12 +118,12 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
           <Button
             onClick={() => setIsCleaningOpen(true)}
             variant="outline"
-            className="h-11 px-4 rounded-xl gap-2 border-amber-500/30 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 font-medium text-xs shadow-sm transition-all"
+            className="h-10 px-4 gap-2 border-amber-500/30 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 font-medium text-xs shadow-sm transition-all"
             title="Limpeza Programada: rodízio de cômodos por dia"
           >
             <BrushCleaning className="h-4 w-4" /> Limpeza
           </Button>
-          <Button onClick={() => setIsDialogOpen(true)} className="h-11 px-5 rounded-xl bg-foreground text-background hover:bg-primary shadow-lg font-medium text-xs gap-2 transition-all">
+          <Button onClick={() => setIsDialogOpen(true)} className="h-10 px-5 bg-foreground text-background hover:bg-primary shadow-lg font-medium text-xs gap-2 transition-all">
             <Plus className="h-4 w-4 stroke-[3]" /> Novo Bloco
           </Button>
         </div>
@@ -130,19 +131,18 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
 
       {/* CONTEÚDO PRINCIPAL */}
       {items.length === 0 ? (
-        <div className="flex flex-col items-center justify-center flex-1 py-16 px-4 border-2 border-dashed border-border/40 rounded-2xl bg-muted/5 mt-6">
-          <div className="bg-primary/10 p-4 rounded-2xl mb-6 shadow-inner border border-primary/20">
-            <Wand2 className="h-8 w-8 text-primary animate-pulse" />
-          </div>
-          <h4 className="text-2xl font-semibold text-foreground mb-2">Protocolo Vazio</h4>
-          <p className="text-muted-foreground text-xs font-medium text-center max-w-[300px] mb-8 leading-relaxed">
-            Você ainda não configurou uma rotina fixa. Use o nosso modelo de alta performance para começar.
-          </p>
-          <Button onClick={handleSeed} disabled={isLoading} variant="outline" className="h-12 px-6 rounded-xl gap-2 border-primary/30 hover:bg-primary/10 text-primary font-medium text-xs shadow-sm transition-all">
-            {isLoading ? <Loader2 className="animate-spin h-4 w-4" /> : <Sparkles className="h-4 w-4" />}
-            Gerar Rotina Padrão
-          </Button>
-        </div>
+        <EmptyState
+          icon={Wand2}
+          title="Nenhuma rotina ainda"
+          description="Você ainda não configurou uma rotina fixa. Comece pelo modelo pronto e ajuste depois."
+          className="mt-6 flex-1"
+          action={
+            <Button onClick={handleSeed} disabled={isLoading} variant="outline" className="gap-2">
+              {isLoading ? <Loader2 className="animate-spin h-4 w-4" /> : <Sparkles className="h-4 w-4" />}
+              Gerar rotina padrão
+            </Button>
+          }
+        />
       ) : (
         <Tabs defaultValue={defaultTab} className="flex-1 flex flex-col min-h-0 w-full mt-6">
           {/* TABS DE NAVEGAÇÃO DE DIAS */}

@@ -215,11 +215,11 @@ export function MatchGame({ deck, cards }: MatchGameProps) {
               </div>
             </div>
             <div className="flex flex-col gap-2 pt-1">
-              <Button onClick={newRound} className="h-11 gap-2 rounded-xl font-bold">
+              <Button onClick={newRound} className="h-10 gap-2 font-bold">
                 <RotateCcw className="h-4 w-4" /> {cards.length > ROUND_SIZE ? "Próxima rodada" : "Jogar de novo"}
               </Button>
               <Link href="/flashcards">
-                <Button variant="ghost" className="h-10 w-full rounded-xl text-muted-foreground">Voltar à biblioteca</Button>
+                <Button variant="ghost" className="h-10 w-full text-muted-foreground">Voltar à biblioteca</Button>
               </Link>
             </div>
           </div>

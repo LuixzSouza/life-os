@@ -84,7 +84,7 @@ export function RealFixedIncome({ cdi, ipca, tesouro }: RealFixedIncomeProps) {
                   <div>
                     <div className="flex items-start justify-between gap-2">
                       <div className={cn("p-2 rounded-xl bg-muted/40 border border-border/40", meta.color)}><meta.Icon className="h-4 w-4" /></div>
-                      <span className="rounded-md bg-muted/50 px-2 py-0.5 text-xs font-medium text-muted-foreground">{meta.label}</span>
+                      <span className="eyebrow rounded-md bg-muted/50 px-2 py-0.5 text-muted-foreground">{meta.label}</span>
                     </div>
                     <h4 className="mt-3 font-bold text-foreground leading-tight">{b.name}</h4>
                     <p className="mt-1 font-mono text-lg font-black text-primary">{rateDisplay(b)}</p>

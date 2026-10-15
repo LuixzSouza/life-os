@@ -10,7 +10,7 @@ export function InputGroup({ label, value, onChange, highlight = false, icon }: 
   const symbol = useCurrencySymbol();
   return (
     <div className="space-y-2.5 group">
-      <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2 group-focus-within:text-primary transition-colors ml-1">
+      <Label className="eyebrow text-muted-foreground flex items-center gap-2 group-focus-within:text-primary transition-colors ml-1">
         <span className="opacity-70">{icon}</span> {label}
       </Label>
       <div className="relative">

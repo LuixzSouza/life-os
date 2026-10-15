@@ -87,7 +87,7 @@ export function WardrobeImagePicker({ previewImage, color, category, onPreviewCh
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={previewImage} alt="Pré-visualização da peça" className="w-full h-full object-contain p-4 md:p-8" />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
-                            <Button variant="destructive" className="rounded-xl shadow-2xl font-bold gap-2" onClick={() => onPreviewChange("")}>
+                            <Button variant="destructive" className="shadow-2xl font-bold gap-2" onClick={() => onPreviewChange("")}>
                                 <X className="h-4 w-4" /> Remover Foto
                             </Button>
                         </div>
@@ -140,10 +140,10 @@ export function WardrobeImagePicker({ previewImage, color, category, onPreviewCh
                 {/* Painel ativo */}
                 {source === "foto" && (
                     <div className="grid grid-cols-2 gap-2">
-                        <Button type="button" variant="outline" className="h-11 rounded-xl gap-2 font-medium" onClick={() => cameraRef.current?.click()} disabled={uploading}>
+                        <Button type="button" variant="outline" className="h-10 gap-2 font-medium" onClick={() => cameraRef.current?.click()} disabled={uploading}>
                             <Camera className="h-4 w-4" /> Tirar Foto
                         </Button>
-                        <Button type="button" variant="outline" className="h-11 rounded-xl gap-2 font-medium" onClick={() => galleryRef.current?.click()} disabled={uploading}>
+                        <Button type="button" variant="outline" className="h-10 gap-2 font-medium" onClick={() => galleryRef.current?.click()} disabled={uploading}>
                             <ImagePlus className="h-4 w-4" /> Galeria
                         </Button>
                         <p className="col-span-2 text-[10px] text-muted-foreground text-center">No celular, &quot;Tirar Foto&quot; abre a câmera direto.</p>
@@ -163,7 +163,7 @@ export function WardrobeImagePicker({ previewImage, color, category, onPreviewCh
                                     className="h-11 text-sm pl-9 bg-muted/30 rounded-xl"
                                 />
                             </div>
-                            <Button type="button" onClick={handleImportStore} disabled={importing || !storeUrl.trim()} className="h-11 px-4 rounded-xl gap-2">
+                            <Button type="button" onClick={handleImportStore} disabled={importing || !storeUrl.trim()} className="h-10 px-4 gap-2">
                                 {importing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
                             </Button>
                         </div>
@@ -183,7 +183,7 @@ export function WardrobeImagePicker({ previewImage, color, category, onPreviewCh
                                 className="h-11 text-sm pl-9 bg-muted/30 rounded-xl"
                             />
                         </div>
-                        <Button type="button" onClick={handleApplyUrl} disabled={!imageUrlInput.trim()} className="h-11 px-4 rounded-xl">Aplicar</Button>
+                        <Button type="button" onClick={handleApplyUrl} disabled={!imageUrlInput.trim()} className="h-10 px-4">Aplicar</Button>
                     </div>
                 )}
 

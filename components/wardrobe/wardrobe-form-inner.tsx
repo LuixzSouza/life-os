@@ -210,8 +210,8 @@ export function WardrobeFormInner({ mode, initialData, onSuccess, onCancel }: { 
 
                 {/* Footer Fixo */}
                 <div className="p-4 md:p-6 border-t border-border/40 bg-muted/5 flex justify-end gap-3 shrink-0">
-                    <Button type="button" variant="ghost" onClick={onCancel} className="rounded-xl">Cancelar</Button>
-                    <Button form="wardrobe-form" type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-[140px] h-10 rounded-xl font-semibold shadow-sm">
+                    <Button type="button" variant="ghost" onClick={onCancel} className="">Cancelar</Button>
+                    <Button form="wardrobe-form" type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-[140px] h-10 font-semibold shadow-sm">
                         {isLoading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
                         {mode === 'create' ? "Salvar Peça" : "Salvar Edição"}
                     </Button>

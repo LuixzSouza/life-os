@@ -174,22 +174,22 @@ export function JobListItem({ job, mode, onAiClick, onLinkClick, onApplyClick, o
     const renderActions = (revealOnHover = true) => (
         <div className={cn("flex items-center gap-1", revealOnHover && "opacity-0 group-hover:opacity-100 transition-opacity")}>
             {onDetailsClick && (
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); onDetailsClick(job); }} title="Detalhes da vaga" aria-label="Detalhes da vaga">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); onDetailsClick(job); }} title="Detalhes da vaga" aria-label="Detalhes da vaga">
                     <PanelRightOpen className="h-4 w-4" />
                 </Button>
             )}
             {onAiClick && (
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-violet-600 hover:bg-violet-500/10" onClick={(e) => { e.stopPropagation(); onAiClick(job); }} title="Assistente de IA" aria-label="Assistente de IA">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-violet-600 hover:bg-violet-500/10" onClick={(e) => { e.stopPropagation(); onAiClick(job); }} title="Assistente de IA" aria-label="Assistente de IA">
                     <Sparkles className="h-4 w-4" />
                 </Button>
             )}
             {onLinkClick && !job.project && (
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); onLinkClick(job); }} title="Conectar a um projeto" aria-label="Conectar a um projeto">
+                <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); onLinkClick(job); }} title="Conectar a um projeto" aria-label="Conectar a um projeto">
                     <Link2 className="h-4 w-4" />
                 </Button>
             )}
             {job.contactEmail && (
-                <Button variant="ghost" size="icon" aria-label="Enviar e-mail" asChild className="h-8 w-8 rounded-lg text-muted-foreground hover:text-emerald-600 hover:bg-emerald-500/10">
+                <Button variant="ghost" size="icon" aria-label="Enviar e-mail" asChild className="h-8 w-8 text-muted-foreground hover:text-emerald-600 hover:bg-emerald-500/10">
                     <a
                         href={`mailto:${job.contactEmail}?subject=${encodeURIComponent(`Candidatura: ${job.role} — ${job.company}`)}`}
                         onClick={(e) => e.stopPropagation()}
@@ -200,11 +200,11 @@ export function JobListItem({ job, mode, onAiClick, onLinkClick, onApplyClick, o
                 </Button>
             )}
             {job.jobUrl && (
-                <Button variant="ghost" size="icon" aria-label="Abrir vaga" asChild className="h-8 w-8 rounded-lg text-muted-foreground hover:text-blue-600 hover:bg-blue-500/10">
+                <Button variant="ghost" size="icon" aria-label="Abrir vaga" asChild className="h-8 w-8 text-muted-foreground hover:text-blue-600 hover:bg-blue-500/10">
                     <a href={job.jobUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}><ExternalLink className="h-4 w-4" /></a>
                 </Button>
             )}
-            <Button variant="ghost" size="icon" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); setIsEditOpen(true); }} title="Editar" aria-label="Editar vaga">
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-primary/10" onClick={(e) => { e.stopPropagation(); setIsEditOpen(true); }} title="Editar" aria-label="Editar vaga">
                 <Pencil className="h-4 w-4" />
             </Button>
             <DeleteDialog onConfirm={handleDeleteConfirmed} />

@@ -88,7 +88,7 @@ export function DateBadge({ date, isOverdue: forceOverdue = false, className }: 
                 <div className="p-1.5 bg-primary/10 rounded-lg">
                     <Timer className="h-3.5 w-3.5 text-primary" />
                 </div>
-                <span className="text-xs font-medium">{getRelativeTime() || 'Prazo Final'}</span>
+                <span className="eyebrow">{getRelativeTime() || 'Prazo Final'}</span>
              </div>
              <div className="space-y-0.5">
                 <p className="text-xs font-bold text-foreground">

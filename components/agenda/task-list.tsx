@@ -14,6 +14,7 @@ import Link from "next/link";
 import { toggleTaskDone, createQuickTask } from "@/app/(dashboard)/agenda/actions";
 import { Prisma } from "@prisma/client";
 import { cn } from "@/lib/utils";
+import { EmptyState } from "@/components/ui/empty-state";
 
 type TaskWithProject = Prisma.TaskGetPayload<{
   include: { project: { select: { title: true; color: true } } };
@@ -96,15 +97,12 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
       {/* LISTA AGRUPADA */}
       <div className="flex-1 p-6 space-y-6 overflow-y-auto custom-scrollbar bg-background/30">
         {total === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full py-16 text-center border-2 border-dashed border-border/40 rounded-2xl bg-muted/5">
-            <div className="bg-emerald-500/10 p-4 rounded-2xl mb-4 shadow-inner border border-emerald-500/20">
-              <Sparkles className="h-8 w-8 text-emerald-500 animate-pulse" />
-            </div>
-            <h4 className="text-xl font-semibold text-foreground">Tudo Limpo!</h4>
-            <p className="eyebrow text-muted-foreground mt-2 max-w-[250px] leading-relaxed opacity-60">
-              Nenhuma tarefa pendente. Aproveite a visão livre — ou adicione uma acima.
-            </p>
-          </div>
+          <EmptyState
+            icon={Sparkles}
+            title="Tudo em dia"
+            description="Nenhuma tarefa pendente. Aproveite — ou adicione uma acima."
+            className="h-full"
+          />
         ) : (
           groups.map((group) => {
             const meta = GROUP_META[group.key];
@@ -130,7 +128,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
 
       {/* FOOTER */}
       <div className="p-5 border-t border-border/40 bg-muted/10 shrink-0">
-        <Button variant="ghost" className="w-full h-12 rounded-xl flex justify-between items-center text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all group/btn border border-transparent hover:border-primary/20" asChild>
+        <Button variant="ghost" className="w-full h-10 flex justify-between items-center text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all group/btn border border-transparent hover:border-primary/20" asChild>
           <Link href="/projects">
             <span className="text-xs font-medium">
               {hiddenCount > 0 ? `+${hiddenCount} no Painel de Projetos` : "Painel de Projetos"}
@@ -177,7 +175,7 @@ function QuickAddTask() {
           <option value="LOW">Baixa</option>
         </select>
         <Input name="dueDate" type="date" aria-label="Vencimento" className="h-9 w-[150px] text-xs" />
-        <Button type="submit" disabled={isPending} size="icon" className="h-9 w-9 shrink-0 rounded-lg" title="Adicionar tarefa" aria-label="Adicionar tarefa">
+        <Button type="submit" disabled={isPending} size="icon" className="h-9 w-9 shrink-0" title="Adicionar tarefa" aria-label="Adicionar tarefa">
           {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
         </Button>
       </div>

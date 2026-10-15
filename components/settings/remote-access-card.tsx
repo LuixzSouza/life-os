@@ -308,7 +308,7 @@ export function RemoteAccessCard({ lanUrls, mode, windows, calendarToken }: Remo
           type="button"
           variant="outline"
           size="sm"
-          className="rounded-lg"
+          className=""
           onClick={() => url && copy(url)}
           disabled={!url}
         >

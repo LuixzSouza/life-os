@@ -87,7 +87,7 @@ export function DailyReviewBanner({ due, totalCards }: DailyReviewBannerProps) {
           </div>
         </div>
         <Link href="/flashcards/review" className="w-full sm:w-auto">
-          <Button size="lg" className="h-12 w-full gap-2 rounded-xl font-bold shadow-sm sm:w-auto">
+          <Button size="lg" className="h-10 w-full gap-2 font-bold shadow-sm sm:w-auto">
             <BrainCircuit className="h-5 w-5" /> Revisar agora
           </Button>
         </Link>

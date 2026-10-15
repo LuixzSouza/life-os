@@ -137,14 +137,14 @@ function EditModalContent({
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={imageContent} alt="Capa" className="w-full h-44 object-cover" />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/image:opacity-100 transition-all flex items-center justify-center gap-3">
-                  <Button variant="secondary" size="sm" className="rounded-xl font-semibold" onClick={() => fileInputRef.current?.click()}>Alterar</Button>
-                  <Button variant="destructive" size="icon" aria-label="Remover imagem" className="h-9 w-9 rounded-xl" onClick={() => setImageContent(null)}>
+                  <Button variant="secondary" size="sm" className="font-semibold" onClick={() => fileInputRef.current?.click()}>Alterar</Button>
+                  <Button variant="destructive" size="icon" aria-label="Remover imagem" className="h-9 w-9" onClick={() => setImageContent(null)}>
                     <Trash2 size={16} />
                   </Button>
                 </div>
               </div>
             ) : (
-              <Button variant="ghost" className="w-full h-16 border-2 border-dashed border-border/40 rounded-xl hover:bg-primary/5 hover:border-primary/30 flex items-center justify-center gap-2 transition-colors text-muted-foreground" onClick={() => fileInputRef.current?.click()}>
+              <Button variant="ghost" className="w-full h-16 border-2 border-dashed border-border/40 hover:bg-primary/5 hover:border-primary/30 flex items-center justify-center gap-2 transition-colors text-muted-foreground" onClick={() => fileInputRef.current?.click()}>
                 <ImageIcon className="h-5 w-5" />
                 <span className="text-xs font-semibold">Adicionar imagem de capa</span>
               </Button>

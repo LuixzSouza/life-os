@@ -85,7 +85,7 @@ export function ClientModal({ open, onOpenChange, editingClient, friends, phoneV
 
   const linkedFriend = friends.find(f => f.id === friendId);
 
-  const labelCls = "text-xs font-medium text-muted-foreground ml-1";
+  const labelCls = "eyebrow text-muted-foreground ml-1";
   const inputCls = "rounded-xl bg-muted/20 border-border/40 h-11";
 
   return (
@@ -137,11 +137,11 @@ export function ClientModal({ open, onOpenChange, editingClient, friends, phoneV
                     <div className="flex-1 space-y-1.5">
                       <p className="text-[11px] font-bold text-foreground">Logo da Empresa</p>
                       <div className="flex gap-1.5">
-                        <Button type="button" variant="outline" size="sm" className="h-8 text-[11px] rounded-lg" onClick={() => fileRef.current?.click()} disabled={uploading}>
+                        <Button type="button" variant="outline" size="sm" className="h-8 text-[11px]" onClick={() => fileRef.current?.click()} disabled={uploading}>
                           <Upload className="h-3 w-3 mr-1" /> Enviar
                         </Button>
                         {imageUrl && (
-                          <Button type="button" variant="ghost" size="sm" className="h-8 text-[11px] rounded-lg text-destructive hover:bg-destructive/10" onClick={() => setImageUrl("")}>
+                          <Button type="button" variant="ghost" size="sm" className="h-8 text-[11px] text-destructive hover:bg-destructive/10" onClick={() => setImageUrl("")}>
                             <Trash2 className="h-3 w-3" />
                           </Button>
                         )}
@@ -227,7 +227,7 @@ export function ClientModal({ open, onOpenChange, editingClient, friends, phoneV
               </DialogBody>
 
               <DialogFooter>
-                  <Button type="button" variant="ghost" className="rounded-xl" onClick={() => onOpenChange(false)}>Cancelar</Button>
+                  <Button type="button" variant="ghost" className="" onClick={() => onOpenChange(false)}>Cancelar</Button>
                   <SubmitButton className="rounded-xl px-8 font-bold shadow-lg shadow-primary/20">
                     {editingClient ? "Salvar Alterações" : "Cadastrar Cliente"}
                   </SubmitButton>
@@ -462,7 +462,7 @@ export function BillingEditModal({ billing, onClose }: BillingEditModalProps) {
               </DialogBody>
 
               <DialogFooter>
-                  <Button type="button" variant="ghost" className="rounded-xl" onClick={onClose}>Cancelar</Button>
+                  <Button type="button" variant="ghost" className="" onClick={onClose}>Cancelar</Button>
                   <SubmitButton className="rounded-xl px-8 font-bold">Salvar</SubmitButton>
               </DialogFooter>
           </form>
@@ -532,7 +532,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
                 </DialogBody>
 
                 <DialogFooter>
-                    <Button type="button" variant="ghost" className="rounded-xl" onClick={onClose}>Cancelar</Button>
+                    <Button type="button" variant="ghost" className="" onClick={onClose}>Cancelar</Button>
                     <SubmitButton className="rounded-xl px-8 font-bold bg-emerald-600 hover:bg-emerald-700 shadow-lg shadow-emerald-600/20">
                       Confirmar Recebimento
                     </SubmitButton>
@@ -546,7 +546,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
                 </p>
               </DialogBody>
               <DialogFooter>
-                <Button type="button" variant="ghost" className="rounded-xl" onClick={onClose}>Fechar</Button>
+                <Button type="button" variant="ghost" className="" onClick={onClose}>Fechar</Button>
               </DialogFooter>
             </>
           )}
@@ -590,7 +590,7 @@ export function AddInvoiceModal({ billing, onClose }: AddInvoiceModalProps) {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <Label className="text-xs font-medium text-muted-foreground ml-1">Valor ({currencySymbol})</Label>
+                <Label className="eyebrow text-muted-foreground ml-1">Valor ({currencySymbol})</Label>
                 <Input type="number" step="0.01" min="0.01" name="value" placeholder="0,00" required className="rounded-xl h-12 bg-muted/20 font-mono" />
               </div>
               <div className="space-y-1.5">

@@ -10,6 +10,7 @@ import {
 import { ProjectCard } from "./project-card";
 import { NewProjectDialog } from "./new-project-dialog";
 import { PARA_TYPES, PARA_META, type ParaType } from "@/lib/para";
+import { EmptyState } from "@/components/ui/empty-state";
 
 // Resumo das tarefas (projeto ou inbox) calculado no servidor — alimenta os
 // sinais de prazo/ritmo/prioridade do card.
@@ -197,24 +198,14 @@ export function ProjectsExplorer({ projects, inbox }: { projects: ProjectItem[];
 
         {/* Grid */}
         {visible.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
-            <div className="h-16 w-16 rounded-2xl bg-muted/50 flex items-center justify-center mb-4">
-              <LayoutGrid className="h-8 w-8 text-muted-foreground/30" />
-            </div>
-            <h3 className="text-lg font-bold text-foreground">
-              {search || filter !== "all" ? "Nenhum projeto encontrado" : "Vazio por aqui"}
-            </h3>
-            <p className="text-sm text-muted-foreground max-w-xs mt-1">
-              {search || filter !== "all"
-                ? "Ajuste a busca ou os filtros para encontrar seus projetos."
-                : "Que tal transformar aquele objetivo em um projeto estruturado?"}
-            </p>
-            {!search && filter === "all" && (
-              <div className="mt-6">
-                <NewProjectDialog />
-              </div>
-            )}
-          </div>
+          <EmptyState
+            icon={LayoutGrid}
+            title={search || filter !== "all" ? "Nenhum projeto encontrado" : "Nenhum projeto ainda"}
+            description={search || filter !== "all"
+              ? "Ajuste a busca ou os filtros para encontrar seus projetos."
+              : "Que tal transformar aquele objetivo em um projeto estruturado?"}
+            action={!search && filter === "all" ? <NewProjectDialog /> : undefined}
+          />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 items-stretch">
             {visible.map((project) => (

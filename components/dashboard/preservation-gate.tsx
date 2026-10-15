@@ -65,7 +65,7 @@ export function PreservationGate({ lowEnergy, children }: { lowEnergy: boolean; 
           <Button
             variant="outline"
             size="sm"
-            className="rounded-xl gap-1.5 border-sky-500/30 text-sky-600 hover:bg-sky-500/10"
+            className="gap-1.5 border-sky-500/30 text-sky-600 hover:bg-sky-500/10"
             onClick={() => {
               localStorage.setItem(STORAGE_KEY, todayKey());
               setOverride(true);

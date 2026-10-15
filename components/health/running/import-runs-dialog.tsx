@@ -64,7 +64,7 @@ export function ImportRunsDialog() {
     return (
         <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o) reset(); }}>
             <DialogTrigger asChild>
-                <Button variant="outline" className="w-full h-11 gap-2 rounded-xl font-semibold border-border/60">
+                <Button variant="outline" className="w-full h-10 gap-2 font-semibold border-border/60">
                     <Upload className="h-4 w-4" /> Importar arquivo (GPX/TCX/CSV)
                 </Button>
             </DialogTrigger>
@@ -117,7 +117,7 @@ export function ImportRunsDialog() {
                                     </div>
                                 ))}
                             </div>
-                            <Button onClick={confirm} disabled={importing} className="w-full h-11 rounded-xl font-bold gap-2">
+                            <Button onClick={confirm} disabled={importing} className="w-full h-10 font-bold gap-2">
                                 {importing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Upload className="h-4 w-4" />}
                                 Importar {parsed.length} corrida(s)
                             </Button>

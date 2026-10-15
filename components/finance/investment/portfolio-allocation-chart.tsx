@@ -23,7 +23,7 @@ function SliceTooltip({ active, payload, formatMoney }: SliceTooltipProps) {
   const p = payload[0].payload;
   return (
     <div className="rounded-xl border border-border/60 bg-popover px-3 py-2 shadow-lg">
-      <p className="text-xs font-medium text-foreground">{String(p.ticker)}</p>
+      <p className="eyebrow text-foreground">{String(p.ticker)}</p>
       <p className="text-sm font-mono font-bold text-foreground">{formatMoney(Number(p.currentValue))}</p>
       <p className="text-[11px] text-muted-foreground">{Number(p.allocation).toFixed(1)}% da carteira</p>
     </div>

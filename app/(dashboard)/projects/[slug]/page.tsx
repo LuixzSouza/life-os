@@ -1,3 +1,4 @@
+import { EmptyState } from "@/components/ui/empty-state";
 // Conteudo autenticado por-usuario: render por requisicao (nunca prerender no build).
 export const dynamic = "force-dynamic";
 
@@ -332,7 +333,7 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="outline" className="h-10 rounded-xl border-border/40 gap-2 text-xs font-semibold px-3 shrink-0">
+                    <Button variant="outline" className="h-10 border-border/40 gap-2 text-xs font-semibold px-3 shrink-0">
                       <SlidersHorizontal className="h-3.5 w-3.5 text-muted-foreground" />
                       {FILTER_LABEL[currentFilter]}
                     </Button>
@@ -360,7 +361,7 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
               {isKanban ? (
                 <TaskKanbanBoard initialTasks={tasks} />
               ) : tasks.length === 0 ? (
-                <EmptyState search={!!searchQuery} />
+                <TasksEmpty search={!!searchQuery} />
               ) : viewMode === "byday" ? (
                 <TasksByDay initialTasks={tasks} />
               ) : viewMode === "timeline" ? (
@@ -434,25 +435,19 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
   );
 }
 
-function EmptyState({ search }: { search: boolean }) {
+function TasksEmpty({ search }: { search: boolean }) {
   return (
-    <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
-      <div className="h-16 w-16 rounded-2xl bg-muted/50 flex items-center justify-center mb-4">
-        {search ? <Search className="h-8 w-8 text-muted-foreground/40" /> : <ListTodo className="h-8 w-8 text-muted-foreground/40" />}
-      </div>
-      <h3 className="text-lg font-bold text-foreground">
-        {search ? "Nenhuma tarefa encontrada" : "Tudo em dia por aqui"}
-      </h3>
-      <p className="text-sm text-muted-foreground max-w-xs mt-1">
-        {search
-          ? "Tente outra busca ou ajuste o filtro."
-          : "Sem tarefas pendentes. Capture uma nova ideia no campo acima."}
-      </p>
-      {search && (
-        <Button variant="link" asChild className="mt-3 text-primary text-sm">
+    <EmptyState
+      icon={search ? Search : ListTodo}
+      title={search ? "Nenhuma tarefa encontrada" : "Tudo em dia por aqui"}
+      description={search
+        ? "Tente outra busca ou ajuste o filtro."
+        : "Sem tarefas pendentes. Capture uma nova ideia no campo acima."}
+      action={search ? (
+        <Button variant="outline" size="sm" asChild>
           <Link href="?">Limpar busca</Link>
         </Button>
-      )}
-    </div>
+      ) : undefined}
+    />
   );
 }

@@ -167,7 +167,7 @@ export function LogSleepDialog({ goal = DEFAULT_SLEEP_GOAL }: { goal?: number })
           </DialogBody>
 
           <DialogFooter>
-            <Button type="submit" className="w-full h-12 text-base font-bold shadow-lg shadow-primary/20" disabled={isLoading}>
+            <Button type="submit" className="w-full h-10 text-base font-bold shadow-lg shadow-primary/20" disabled={isLoading}>
               {isLoading ? <Loader2 className="h-5 w-5 animate-spin mr-2" /> : "Salvar Registro"}
             </Button>
           </DialogFooter>

@@ -129,7 +129,7 @@ export function FocusSounds({ compact = false }: { compact?: boolean }) {
           )}
         </CardTitle>
         {anyActive && (
-          <Button variant="ghost" size="sm" onClick={stopAll} className="h-8 gap-1.5 rounded-lg text-xs text-muted-foreground">
+          <Button variant="ghost" size="sm" onClick={stopAll} className="h-8 gap-1.5 text-xs text-muted-foreground">
             <Square className="h-3 w-3" /> Parar
           </Button>
         )}

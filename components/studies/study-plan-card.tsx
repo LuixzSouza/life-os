@@ -107,7 +107,7 @@ export function StudyPlanCard({ todayMinutes, streak, dailyGoal = 30, suggestion
                 <Button
                   size="sm"
                   onClick={() => requestStudyStart(s.id)}
-                  className="h-8 shrink-0 gap-1.5 rounded-lg font-bold"
+                  className="h-8 shrink-0 gap-1.5 font-bold"
                 >
                   <Play className="h-3.5 w-3.5" /> Estudar
                 </Button>

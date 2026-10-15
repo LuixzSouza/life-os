@@ -43,7 +43,7 @@ const FinanceDashboard = dynamic<FinanceDashboardLoaderProps>(
   { 
     ssr: false,
     loading: () => (
-      <div className="min-h-screen bg-muted/20 flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center space-y-4 flex flex-col items-center animate-in fade-in zoom-in duration-500">
           <div className="relative">
               {/* Spinner com cor do tema (Primary) */}

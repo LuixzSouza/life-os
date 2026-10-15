@@ -63,7 +63,7 @@ export function ExperienceForm({ data, onChange }: ExperienceFormProps) {
           </h3>
           <p className="text-xs text-muted-foreground">Registre sua evolução de carreira.</p>
         </div>
-        <Button size="sm" onClick={addExperience} className="h-10 rounded-xl font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
+        <Button size="sm" onClick={addExperience} className="h-10 font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
           <Plus className="h-4 w-4" /> Adicionar
         </Button>
       </div>
@@ -88,7 +88,7 @@ export function ExperienceForm({ data, onChange }: ExperienceFormProps) {
             </Button>
 
             <div className="mb-6 flex items-center gap-3">
-              <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-lg border border-primary/20">
+              <span className="eyebrow bg-primary/10 text-primary px-3 py-1 rounded-lg border border-primary/20">
                 POSIÇÃO #{index + 1}
               </span>
               <ReorderControls

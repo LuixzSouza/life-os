@@ -60,7 +60,7 @@ export function JobProjectDialog({ job, projects, onOpenChange }: { job: JobWith
                     {/* Criar novo projeto */}
                     <div className="space-y-2">
                         <p className="eyebrow text-muted-foreground">Novo projeto</p>
-                        <Button onClick={handleCreate} disabled={loading !== null} className="w-full h-11 gap-2 rounded-xl font-bold justify-between">
+                        <Button onClick={handleCreate} disabled={loading !== null} className="w-full h-10 gap-2 font-bold justify-between">
                             <span className="flex items-center gap-2">
                                 {loading === "create" ? <Loader2 className="h-4 w-4 animate-spin" /> : <FolderPlus className="h-4 w-4" />}
                                 Criar projeto a partir desta vaga
@@ -86,7 +86,7 @@ export function JobProjectDialog({ job, projects, onOpenChange }: { job: JobWith
                                         {projects.map(p => <SelectItem key={p.id} value={p.id}>{p.title}</SelectItem>)}
                                     </SelectContent>
                                 </Select>
-                                <Button onClick={handleLink} disabled={!selected || loading !== null} variant="outline" className="w-full h-11 gap-2 rounded-xl font-bold border-border/60">
+                                <Button onClick={handleLink} disabled={!selected || loading !== null} variant="outline" className="w-full h-10 gap-2 font-bold border-border/60">
                                     {loading === "link" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Link2 className="h-4 w-4" />}
                                     Vincular ao projeto selecionado
                                 </Button>

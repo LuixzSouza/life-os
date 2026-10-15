@@ -29,7 +29,7 @@ export default async function SiteDetailsPage(props: SitePageProps) {
   if (!site) return notFound();
 
   return (
-    <div className="min-h-screen bg-muted/30 flex flex-col w-full overflow-x-hidden">
+    <div className="min-h-screen bg-background flex flex-col w-full overflow-x-hidden">
 
       {/* ------------------------------------------------------------------ */}
       {/* HEADER TÁTICO FULL WIDTH */}

@@ -73,14 +73,14 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
         <div className="flex flex-col gap-2">
           <Label className="text-xs font-medium text-muted-foreground/60">Foto de Perfil</Label>
           <div className="flex gap-2">
-            <Button asChild variant="outline" size="sm" className="rounded-xl font-medium text-xs gap-2 cursor-pointer">
+            <Button asChild variant="outline" size="sm" className="font-medium text-xs gap-2 cursor-pointer">
               <label>
                 <Upload className="h-3.5 w-3.5" /> Enviar
                 <input type="file" accept="image/*" className="hidden" onChange={handlePhoto} />
               </label>
             </Button>
             {data.hero.photoUrl && (
-              <Button variant="ghost" size="sm" className="rounded-xl text-muted-foreground hover:text-destructive gap-1.5 text-xs font-medium" onClick={() => update('photoUrl', '')}>
+              <Button variant="ghost" size="sm" className="text-xs font-medium text-muted-foreground hover:text-destructive gap-1.5" onClick={() => update('photoUrl', '')}>
                 <X className="h-3.5 w-3.5" /> Remover
               </Button>
             )}

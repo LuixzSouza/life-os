@@ -89,7 +89,7 @@ export function EndpointEditor({ page }: { page: SitePage }) {
             onClick={handleSave}
             disabled={!isDirty || isSaving || !isJsonValid}
             title={!isJsonValid ? "Corrija o JSON antes de publicar" : undefined}
-            className="h-8 gap-2 font-medium text-xs rounded-lg shadow-lg"
+            className="h-8 gap-2 font-medium text-xs shadow-lg"
           >
             {isSaving ? <Loader2 className="h-3 w-3 animate-spin" /> : <Save className="h-3 w-3" />}
             Deploy

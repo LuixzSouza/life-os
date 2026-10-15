@@ -261,7 +261,7 @@ function LoadingLabel({ override }: { override?: string | null }) {
         return () => clearInterval(id);
     }, []);
     return (
-        <span className="ml-1 text-xs font-medium text-muted-foreground/60">
+        <span className="eyebrow ml-1 text-muted-foreground/60">
             {override || LOADING_STEPS[Math.min(step, LOADING_STEPS.length - 1)]}
         </span>
     );
@@ -654,7 +654,7 @@ function AssistantContent({
                                     <MetaIcon className="h-4 w-4" />
                                 </span>
                                 <span className="min-w-0 flex-1">
-                                    <span className="block text-xs font-medium text-muted-foreground">
+                                    <span className="eyebrow block text-muted-foreground">
                                         {meta.label} · {info.name}
                                     </span>
                                     <span className="block truncate text-xs font-bold text-foreground">{a.label}</span>
@@ -1161,7 +1161,7 @@ export function ChatInterface({
                                             <div className={cn("p-2.5 rounded-xl shadow-sm", item.color)}>
                                                 <item.icon className="h-4 w-4" />
                                             </div>
-                                            <span className="font-medium text-xs text-foreground/80 group-hover:text-foreground">
+                                            <span className="eyebrow text-foreground/80 group-hover:text-foreground">
                                                 {item.label}
                                             </span>
                                         </button>
@@ -1226,7 +1226,7 @@ export function ChatInterface({
                         {daySep && (
                             <div suppressHydrationWarning className="flex items-center gap-3 py-1 animate-in fade-in">
                                 <div className="h-px flex-1 bg-border/40" />
-                                <span className="text-xs font-medium text-muted-foreground/60">{daySep}</span>
+                                <span className="eyebrow text-muted-foreground/60">{daySep}</span>
                                 <div className="h-px flex-1 bg-border/40" />
                             </div>
                         )}
@@ -1413,7 +1413,7 @@ export function ChatInterface({
                                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose-500/60" />
                                 <span className="relative inline-flex h-2 w-2 rounded-full bg-rose-500" />
                             </span>
-                            <span className="shrink-0 text-xs font-medium text-rose-500">
+                            <span className="eyebrow shrink-0 text-rose-500">
                                 Ouvindo · {formatListenClock(dictation.seconds)}
                             </span>
                             <span className="truncate text-xs italic text-muted-foreground">

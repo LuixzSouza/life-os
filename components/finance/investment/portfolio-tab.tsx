@@ -17,6 +17,7 @@ import { removeHolding } from "@/app/(dashboard)/finance/actions";
 import type { Position, PortfolioTotals, HoldingInput } from "@/lib/portfolio-compute";
 import { HoldingDialog } from "./holding-dialog";
 import { PortfolioAllocationChart } from "./portfolio-allocation-chart";
+import { EmptyState } from "@/components/ui/empty-state";
 
 const TYPE_LABEL: Record<string, string> = { STOCK: "Ação", FII: "FII", ETF: "ETF", CRYPTO: "Cripto" };
 
@@ -54,18 +55,16 @@ export function PortfolioTab({ positions, totals }: PortfolioTabProps) {
   if (positions.length === 0) {
     return (
       <>
-        <div className="flex flex-col items-center justify-center py-20 rounded-2xl border-2 border-dashed border-border/50 bg-muted/10 text-center">
-          <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 text-primary">
-            <Wallet className="h-8 w-8" />
-          </div>
-          <h4 className="font-bold text-foreground text-lg">Sua carteira está vazia</h4>
-          <p className="text-sm text-muted-foreground max-w-sm mt-1">
-            Cadastre seus ativos (ações, FIIs, ETFs, cripto) e acompanhe o preço atual, lucro/prejuízo e alocação em tempo real.
-          </p>
-          <Button onClick={openCreate} className="mt-5 gap-2 rounded-xl font-bold shadow-lg shadow-primary/20">
-            <Plus className="h-4 w-4" /> Adicionar primeiro ativo
-          </Button>
-        </div>
+        <EmptyState
+          icon={Wallet}
+          title="Sua carteira está vazia"
+          description="Cadastre seus ativos (ações, FIIs, ETFs, cripto) e acompanhe o preço atual, lucro/prejuízo e alocação em tempo real."
+          action={
+            <Button onClick={openCreate} className="gap-2">
+              <Plus className="h-4 w-4" /> Adicionar primeiro ativo
+            </Button>
+          }
+        />
         <HoldingDialog open={dialogOpen} onOpenChange={setDialogOpen} holding={editing} />
       </>
     );
@@ -81,7 +80,7 @@ export function PortfolioTab({ positions, totals }: PortfolioTabProps) {
         <h3 className="text-lg font-extrabold text-foreground flex items-center gap-2">
           <Wallet className="h-5 w-5 text-primary" /> Minha Carteira
         </h3>
-        <Button onClick={openCreate} className="gap-2 rounded-xl font-bold shadow-lg shadow-primary/20">
+        <Button onClick={openCreate} className="gap-2 font-bold shadow-lg shadow-primary/20">
           <Plus className="h-4 w-4" /> Adicionar ativo
         </Button>
       </div>

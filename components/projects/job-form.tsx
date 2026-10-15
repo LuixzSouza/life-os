@@ -117,7 +117,7 @@ export function JobForm({ defaultValues, type, mode = 'create', events, onSubmit
                         <span className="eyebrow text-primary flex items-center gap-1.5">
                             <Wand2 className="h-3.5 w-3.5" /> Preencher automaticamente
                         </span>
-                        <Button type="button" size="sm" onClick={() => runImport()} disabled={importing || !importText.trim()} className="h-8 shrink-0 gap-1.5 rounded-lg">
+                        <Button type="button" size="sm" onClick={() => runImport()} disabled={importing || !importText.trim()} className="h-8 shrink-0 gap-1.5">
                             {importing ? <Loader2 className="h-4 w-4 animate-spin" /> : <Wand2 className="h-4 w-4" />} {importing ? "Lendo…" : "Preencher"}
                         </Button>
                     </div>
@@ -245,7 +245,7 @@ export function JobForm({ defaultValues, type, mode = 'create', events, onSubmit
             )}
 
             <DialogFooter className="pt-4 border-t border-border/40">
-                <Button type="submit" className="w-full h-11 rounded-xl font-bold shadow-sm">
+                <Button type="submit" className="w-full h-10 font-bold shadow-sm">
                     {mode === 'create' ? 'Adicionar registro' : 'Salvar alterações'}
                 </Button>
             </DialogFooter>

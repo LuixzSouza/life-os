@@ -111,7 +111,7 @@ export function TransactionList({ transactions, accounts = [] }: { transactions:
                     <div key={g.key} className="mb-1">
                         {/* Cabeçalho do dia */}
                         <div className="sticky top-0 z-10 flex items-center justify-between px-3 py-2 bg-card/95 backdrop-blur-sm">
-                            <span className="text-xs font-medium text-muted-foreground">
+                            <span className="eyebrow text-muted-foreground">
                                 {g.label}
                             </span>
                             <span
@@ -234,7 +234,7 @@ export function RecurringCard({ total, items, accounts = [] }: { total: number, 
                 <div className="relative z-10">
                     <RecurringDialog 
                         trigger={
-                            <Button size="icon" variant="ghost" aria-label="Custos fixos" className="h-8 w-8 text-muted-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors">
+                            <Button size="icon" variant="ghost" aria-label="Custos fixos" className="h-8 w-8 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors">
                                 <MoreHorizontal className="h-5 w-5" />
                             </Button>
                         } 
@@ -415,7 +415,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                             </div>
                         </DialogBody>
                         <DialogFooter>
-                            <Button type="button" variant="ghost" className="rounded-xl" onClick={onClose}>Cancelar</Button>
+                            <Button type="button" variant="ghost" className="" onClick={onClose}>Cancelar</Button>
                             <SubmitButton className="rounded-xl px-8 font-bold bg-orange-600 hover:bg-orange-700 shadow-lg shadow-orange-600/20">
                                 Confirmar Pagamento
                             </SubmitButton>
@@ -429,7 +429,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                             </p>
                         </DialogBody>
                         <DialogFooter>
-                            <Button type="button" variant="ghost" className="rounded-xl" onClick={onClose}>Fechar</Button>
+                            <Button type="button" variant="ghost" className="" onClick={onClose}>Fechar</Button>
                         </DialogFooter>
                     </>
                 )}

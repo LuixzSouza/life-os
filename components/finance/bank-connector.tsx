@@ -89,7 +89,7 @@ export function SyncButton({ accounts }: { accounts: AccountProp[] }) {
             onClick={handleSync}
             disabled={isSyncing || connectedAccounts.length === 0}
             title="Sincronizar bancos conectados"
-            className="h-9 shrink-0 gap-1.5 rounded-xl border-border/40 font-medium"
+            className="h-9 shrink-0 gap-1.5 border-border/40 font-medium"
         >
             <RefreshCw className={cn("h-4 w-4", isSyncing && "animate-spin")} />
             <span className="hidden lg:inline">{isSyncing ? "Sincronizando…" : "Sincronizar"}</span>
@@ -169,7 +169,7 @@ export function BankConnector({ onOpenImport }: { onOpenImport?: () => void }) {
                 onClick={handleStartConnection}
                 disabled={isLoading || !!connectToken}
                 title="Conectar banco (Open Finance)"
-                className="h-9 shrink-0 gap-1.5 rounded-xl border-border/40 font-medium"
+                className="h-9 shrink-0 gap-1.5 border-border/40 font-medium"
             >
                 {isLoading ? <Loader2 className="animate-spin h-4 w-4" /> : <Link2 className="h-4 w-4" />}
                 <span className="hidden lg:inline">Conectar banco</span>

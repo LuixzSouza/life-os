@@ -131,7 +131,7 @@ export function AgendaHeader({ date, userName }: AgendaHeaderProps) {
           {/* Botão de Ação Primária (G20: menu — Evento · Tarefa · Bloco agora) */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button className="h-9 rounded-lg px-3.5 text-sm font-medium">
+              <Button className="h-9 px-3.5 text-sm font-medium">
                 <Plus className="mr-1 h-4 w-4" /> Novo
                 <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-70" />
               </Button>
@@ -185,7 +185,7 @@ export function AgendaHeader({ date, userName }: AgendaHeaderProps) {
                 placeholder="O que precisa ser feito?"
                 autoFocus
               />
-              <Button onClick={createQuickTask} disabled={taskPending || !taskTitle.trim()} className="shrink-0 rounded-xl">
+              <Button onClick={createQuickTask} disabled={taskPending || !taskTitle.trim()} className="shrink-0">
                 {taskPending ? <Loader2 className="h-4 w-4 animate-spin" /> : "Criar"}
               </Button>
             </div>
