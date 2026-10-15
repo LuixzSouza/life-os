@@ -2,6 +2,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { requireUserId } from "@/lib/auth";
+import { ensureInbox } from "@/lib/notebook-inbox";
 import { revalidatePath } from "next/cache";
 
 export interface NotebookData {
@@ -14,20 +15,6 @@ export interface NotebookData {
   noteCount: number;
 }
 
-const INBOX_NAME = "Entrada";
-
-/** Garante que o usuário tenha um caderno Inbox; devolve o id dele. */
-export async function ensureInbox(userId: string): Promise<string> {
-  const existing = await prisma.notebook.findFirst({
-    where: { userId, isInbox: true },
-    select: { id: true },
-  });
-  if (existing) return existing.id;
-  const created = await prisma.notebook.create({
-    data: { userId, name: INBOX_NAME, isInbox: true, color: "#64748b", icon: "inbox", position: -1 },
-  });
-  return created.id;
-}
 
 /** Lista os cadernos do usuário (Entrada primeiro) com a contagem de notas vivas. */
 export async function getNotebooks(): Promise<NotebookData[]> {

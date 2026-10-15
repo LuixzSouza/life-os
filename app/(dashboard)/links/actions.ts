@@ -18,12 +18,28 @@ const LinkSchema = z.object({
 // --- 1. BUSCAR METADADOS (Scraping) ---
 export async function fetchMetadata(url: string) {
   try {
+    // Server Action = endpoint público: sem sessão, qualquer um usaria o
+    // servidor para buscar URLs arbitrárias (inclusive da rede interna).
+    await requireUserId();
+
+    let parsed: URL;
+    try {
+      parsed = new URL(url);
+    } catch {
+      return { success: false, data: null };
+    }
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+      return { success: false, data: null };
+    }
+
     // Usamos um User-Agent de navegador real para evitar bloqueios em sites protegidos
-    const response = await fetch(url, { 
-      headers: { 
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' 
+    const response = await fetch(parsed, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       },
-      next: { revalidate: 3600 } 
+      // Site lento/pendurado não deve travar o formulário indefinidamente.
+      signal: AbortSignal.timeout(8000),
+      next: { revalidate: 3600 }
     });
     
     const html = await response.text();

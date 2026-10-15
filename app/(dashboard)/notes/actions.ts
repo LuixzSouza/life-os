@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { requireUserId } from "@/lib/auth";
 import { revalidatePath } from "next/cache";
 import { logActivity } from "@/lib/activity";
-import { ensureInbox } from "./notebook-actions";
+import { ensureInbox } from "@/lib/notebook-inbox";
 
 export interface NoteData {
   id: string;
@@ -126,6 +126,18 @@ export async function getNotes(): Promise<NoteData[]> {
   return rows.map(mapNote);
 }
 
+/** Só `id` + `title` das notas vivas — para menus de menção "@" e pickers, sem
+ *  carregar o corpo (`content`) de cada nota. Evita puxar todo o markdown/base64
+ *  de todas as anotações quando a tela só precisa da lista de títulos. */
+export async function getNoteTitles(): Promise<{ id: string; title: string }[]> {
+  const userId = await requireUserId();
+  return prisma.studyNote.findMany({
+    where: { userId, deletedAt: null },
+    orderBy: [{ isFavorite: "desc" }, { updatedAt: "desc" }],
+    select: { id: true, title: true },
+  });
+}
+
 /** Busca uma única nota (para a edição em tela cheia). */
 export async function getNote(id: string): Promise<NoteData | null> {
   const userId = await requireUserId();
@@ -203,7 +215,7 @@ export async function getNoteProjects(): Promise<NoteProject[]> {
  * navega direto para a edição em tela cheia (/notes/[id]).
  */
 export async function createBlankNote(
-  opts?: { notebookId?: string; projectId?: string; subjectId?: string },
+  opts?: { notebookId?: string; projectId?: string; subjectId?: string; title?: string; content?: string },
 ): Promise<{ success: boolean; id?: string; message: string }> {
   try {
     const userId = await requireUserId();
@@ -225,8 +237,12 @@ export async function createBlankNote(
       const owned = await prisma.studySubject.findFirst({ where: { id: opts.subjectId, userId }, select: { id: true } });
       subjectId = owned ? owned.id : null;
     }
+    // Título/conteúdo opcionais permitem criar a nota já a partir de um MODELO
+    // (Cornell, Feynman, etc.). Sem eles, mantém o comportamento "em branco".
+    const title = opts?.title?.trim() ? opts.title.trim().slice(0, 120) : "Nova nota";
+    const content = typeof opts?.content === "string" ? opts.content : "";
     const created = await prisma.studyNote.create({
-      data: { userId, title: "Nova nota", content: "", notebookId, projectId, subjectId },
+      data: { userId, title, content, notebookId, projectId, subjectId },
     });
     revalidatePath("/notes");
     return { success: true, id: created.id, message: "Nota criada." };

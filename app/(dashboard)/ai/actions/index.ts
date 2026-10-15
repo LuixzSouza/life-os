@@ -159,7 +159,7 @@ export async function saveMessageAsNote(title: string, content: string) {
     const cleanContent = stripPending(content || "").trim();
     if (!cleanContent) return { success: false as const, error: "Nada para salvar." };
 
-    const { ensureInbox } = await import("@/app/(dashboard)/notes/notebook-actions");
+    const { ensureInbox } = await import("@/lib/notebook-inbox");
     const notebookId = await ensureInbox(userId);
     const created = await prisma.studyNote.create({
       data: { userId, notebookId, title: cleanTitle, content: cleanContent, tags: "ia" },

@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { getDbProfile } from "@/lib/db-config";
 import { isSqliteFamily } from "@/lib/db-dialect";
 import { revalidatePath } from "next/cache";
+import { getCurrentUserId } from "@/lib/auth";
 
 // ============================================================================
 // MANUTENÇÃO AVANÇADA
@@ -11,6 +12,7 @@ import { revalidatePath } from "next/cache";
 
 // Executa limpeza e compactação do SQLite
 export async function optimizeDatabase() {
+  if (!(await getCurrentUserId())) return { success: false, message: "Não autorizado." };
   // VACUUM/PRAGMA são dialeto SQLite (gate de dialeto): não existem no
   // Postgres/MySQL e não fazem sentido sobre Turso/réplica (o primário é
   // gerenciado na nuvem). Só roda no modo Local, onde há um arquivo .db real.
@@ -51,6 +53,7 @@ export async function optimizeDatabase() {
 
 // Verifica se o arquivo .db está saudável
 export async function checkDatabaseIntegrity() {
+  if (!(await getCurrentUserId())) return { success: false, message: "Não autorizado." };
   // PRAGMA integrity_check é dialeto SQLite e só faz sentido sobre um ARQUIVO
   // local (Local/Híbrido). Nuvem (Turso/Postgres/...) é gerenciada pelo serviço.
   if (getDbProfile()?.mode === "cloud" || !isSqliteFamily()) {

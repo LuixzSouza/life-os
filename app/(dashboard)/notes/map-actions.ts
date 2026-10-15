@@ -3,7 +3,7 @@
 import { prisma } from "@/lib/prisma";
 import { requireUserId } from "@/lib/auth";
 import { revalidatePath } from "next/cache";
-import { ensureInbox } from "./notebook-actions";
+import { ensureInbox } from "@/lib/notebook-inbox";
 
 // =========================================================
 // MAPAS DE CONTEÚDO (#9, Fase 2 — Zettelkasten)
