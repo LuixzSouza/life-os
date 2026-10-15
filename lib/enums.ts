@@ -10,6 +10,12 @@
 export const TASK_STATUSES = ["TODO", "IN_PROGRESS", "REVIEW", "DONE"] as const;
 export type TaskStatus = (typeof TASK_STATUSES)[number];
 
+// Metas de aprendizado (LearningGoal). Mesmo domínio das tarefas de projeto, mas
+// com leitura de estudo no quadro: Para estudar / Estudando / Revisar / Dominado.
+// Legado: metas antigas só usavam IN_PROGRESS e DONE — os dois seguem válidos.
+export const GOAL_STATUSES = ["TODO", "IN_PROGRESS", "REVIEW", "DONE"] as const;
+export type GoalStatus = (typeof GOAL_STATUSES)[number];
+
 export const TASK_PRIORITIES = ["HIGH", "MEDIUM", "LOW"] as const;
 export type TaskPriority = (typeof TASK_PRIORITIES)[number];
 
