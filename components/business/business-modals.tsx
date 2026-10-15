@@ -222,12 +222,12 @@ export function ClientModal({ open, onOpenChange, editingClient, friends, phoneV
                 {/* Anotações (largura total) */}
                 <div className="space-y-1.5 md:col-span-2">
                     <Label className={labelCls}>Anotações</Label>
-                    <Textarea name="notes" defaultValue={editingClient?.notes || ""} placeholder="Detalhes do cliente, histórico, observações..." className="rounded-xl bg-muted/20 border-border/40 resize-none h-20 p-3 text-sm" />
+                    <Textarea name="notes" defaultValue={editingClient?.notes || ""} placeholder="Detalhes do cliente, histórico, observações..." className="resize-none h-20 p-3 text-sm" />
                 </div>
               </DialogBody>
 
               <DialogFooter>
-                  <Button type="button" variant="ghost" className="" onClick={() => onOpenChange(false)}>Cancelar</Button>
+                  <Button type="button" variant="ghost" onClick={() => onOpenChange(false)}>Cancelar</Button>
                   <SubmitButton className="rounded-xl px-8 font-bold shadow-lg shadow-primary/20">
                     {editingClient ? "Salvar Alterações" : "Cadastrar Cliente"}
                   </SubmitButton>
@@ -268,7 +268,7 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
 
               <div className="space-y-1.5">
                   <Label className="text-xs font-medium text-muted-foreground ml-1">Serviço ou Projeto</Label>
-                  <Input name="title" required placeholder="Ex: Consultoria Mensal" className="rounded-xl h-12 bg-muted/20" />
+                  <Input name="title" required placeholder="Ex: Consultoria Mensal" />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -276,12 +276,12 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
                       <Label className="text-xs font-medium text-muted-foreground ml-1">Valor Total</Label>
                       <div className="relative">
                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-muted-foreground">{symbol}</span>
-                        <Input type="number" step="0.01" name="totalValue" required className="pl-9 rounded-xl h-12 bg-muted/20 font-mono text-lg" />
+                        <Input type="number" step="0.01" name="totalValue" required className="pl-9 font-mono text-lg" />
                       </div>
                   </div>
                   <div className="space-y-1.5">
                       <Label className="text-xs font-medium text-muted-foreground ml-1">Parcelas</Label>
-                      <Input type="number" name="installments" defaultValue="1" required min="1" className="rounded-xl h-12 bg-muted/20 font-mono text-lg" />
+                      <Input type="number" name="installments" defaultValue="1" required min="1" className="font-mono text-lg" />
                   </div>
               </div>
 
@@ -289,7 +289,7 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
                   <div className="space-y-1.5">
                       <Label className="text-xs font-medium text-muted-foreground ml-1">Ciclo</Label>
                       <Select name="interval" defaultValue="MONTHLY">
-                          <SelectTrigger className="rounded-xl h-12 bg-muted/20">
+                          <SelectTrigger>
                               <SelectValue />
                           </SelectTrigger>
                           <SelectContent className="rounded-xl z-[100]">
@@ -300,7 +300,7 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
                   </div>
                   <div className="space-y-1.5">
                       <Label className="text-xs font-medium text-muted-foreground ml-1">Venc. Inicial</Label>
-                      <Input type="date" name="startDate" defaultValue={toInputDate(new Date())} required className="rounded-xl h-12 bg-muted/20" />
+                      <Input type="date" name="startDate" defaultValue={toInputDate(new Date())} required />
                   </div>
               </div>
 
@@ -344,13 +344,13 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
 
               <div className="space-y-1.5">
                   <Label className="text-xs font-medium text-muted-foreground ml-1">Descrição</Label>
-                  <Input name="title" defaultValue={invoice?.title} required className="rounded-xl h-12 bg-muted/20 font-medium" />
+                  <Input name="title" defaultValue={invoice?.title} required className="font-medium" />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                       <Label className="text-xs font-medium text-muted-foreground ml-1">Valor Parcela</Label>
-                      <Input type="number" step="0.01" name="value" defaultValue={invoice?.value} required className="rounded-xl h-12 bg-muted/20 font-mono" />
+                      <Input type="number" step="0.01" name="value" defaultValue={invoice?.value} required className="font-mono" />
                   </div>
                   <div className="space-y-1.5">
                       <Label className="text-xs font-medium text-muted-foreground ml-1">Vencimento</Label>
@@ -359,7 +359,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
                           name="dueDate"
                           defaultValue={invoice?.dueDate ? toInputDate(invoice.dueDate) : ""}
                           required
-                          className="rounded-xl h-12 bg-muted/20"
+                         
                       />
                   </div>
               </div>
@@ -371,7 +371,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
                     type="url"
                     placeholder="https://..."
                     defaultValue={invoice?.linkUrl ?? ""}
-                    className="rounded-xl h-12 bg-muted/20 font-mono text-xs"
+                    className="font-mono text-xs"
                   />
                   <p className="ml-1 text-[10px] text-muted-foreground">Vai junto na mensagem de cobrança do WhatsApp e fica clicável na lista.</p>
               </div>
@@ -379,7 +379,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
               <div className="space-y-1.5">
                   <Label className="text-xs font-medium text-muted-foreground ml-1">Status de Pagamento</Label>
                   <Select name="status" defaultValue={invoice?.status || "PENDING"}>
-                      <SelectTrigger className="rounded-xl h-12 bg-muted/20">
+                      <SelectTrigger>
                           <SelectValue />
                       </SelectTrigger>
                       <SelectContent className="rounded-xl z-[100]">
@@ -442,13 +442,13 @@ export function BillingEditModal({ billing, onClose }: BillingEditModalProps) {
 
               <div className="space-y-1.5">
                   <Label className="text-xs font-medium text-muted-foreground ml-1">Título do Serviço</Label>
-                  <Input name="title" defaultValue={billing?.title} required className="rounded-xl h-12 bg-muted/20" />
+                  <Input name="title" defaultValue={billing?.title} required />
               </div>
 
               <div className="space-y-1.5">
                   <Label className="text-xs font-medium text-muted-foreground ml-1">Status do Projeto</Label>
                   <Select name="status" defaultValue={billing?.status || "ACTIVE"}>
-                      <SelectTrigger className="rounded-xl h-12 bg-muted/20">
+                      <SelectTrigger>
                           <SelectValue placeholder="Selecione..." />
                       </SelectTrigger>
                       <SelectContent className="rounded-xl z-[100]">
@@ -462,7 +462,7 @@ export function BillingEditModal({ billing, onClose }: BillingEditModalProps) {
               </DialogBody>
 
               <DialogFooter>
-                  <Button type="button" variant="ghost" className="" onClick={onClose}>Cancelar</Button>
+                  <Button type="button" variant="ghost" onClick={onClose}>Cancelar</Button>
                   <SubmitButton className="rounded-xl px-8 font-bold">Salvar</SubmitButton>
               </DialogFooter>
           </form>
@@ -514,7 +514,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
                 <div className="space-y-1.5">
                     <Label className="text-xs font-medium text-muted-foreground ml-1">Conta de Destino</Label>
                     <Select value={accountId} onValueChange={setAccountId}>
-                        <SelectTrigger className="rounded-xl h-12 bg-muted/20">
+                        <SelectTrigger>
                             <SelectValue placeholder="Selecione a conta..." />
                         </SelectTrigger>
                         <SelectContent className="rounded-xl z-[100]">
@@ -532,7 +532,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
                 </DialogBody>
 
                 <DialogFooter>
-                    <Button type="button" variant="ghost" className="" onClick={onClose}>Cancelar</Button>
+                    <Button type="button" variant="ghost" onClick={onClose}>Cancelar</Button>
                     <SubmitButton className="rounded-xl px-8 font-bold bg-emerald-600 hover:bg-emerald-700 shadow-lg shadow-emerald-600/20">
                       Confirmar Recebimento
                     </SubmitButton>
@@ -546,7 +546,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
                 </p>
               </DialogBody>
               <DialogFooter>
-                <Button type="button" variant="ghost" className="" onClick={onClose}>Fechar</Button>
+                <Button type="button" variant="ghost" onClick={onClose}>Fechar</Button>
               </DialogFooter>
             </>
           )}
@@ -585,17 +585,17 @@ export function AddInvoiceModal({ billing, onClose }: AddInvoiceModalProps) {
           <DialogBody className="space-y-5">
             <div className="space-y-1.5">
               <Label className="text-xs font-medium text-muted-foreground ml-1">Descrição</Label>
-              <Input name="title" placeholder="Ex: Aditivo — nova página" required className="rounded-xl h-12 bg-muted/20 font-medium" />
+              <Input name="title" placeholder="Ex: Aditivo — nova página" required className="font-medium" />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
                 <Label className="eyebrow text-muted-foreground ml-1">Valor ({currencySymbol})</Label>
-                <Input type="number" step="0.01" min="0.01" name="value" placeholder="0,00" required className="rounded-xl h-12 bg-muted/20 font-mono" />
+                <Input type="number" step="0.01" min="0.01" name="value" placeholder="0,00" required className="font-mono" />
               </div>
               <div className="space-y-1.5">
                 <Label className="text-xs font-medium text-muted-foreground ml-1">Vencimento</Label>
-                <Input type="date" name="dueDate" required className="rounded-xl h-12 bg-muted/20" />
+                <Input type="date" name="dueDate" required />
               </div>
             </div>
 

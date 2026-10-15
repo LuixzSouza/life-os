@@ -162,7 +162,7 @@ export function WorkoutCard({ workout: w, onOpenDetail }: WorkoutCardProps) {
 
       {/* Modal de edição */}
       <Dialog open={isEditOpen} onOpenChange={setIsEditOpen}>
-        <DialogContent className="sm:max-w-[560px] p-0 overflow-hidden border-border/40 shadow-2xl rounded-2xl">
+        <DialogContent className="sm:max-w-[560px] p-0 overflow-hidden">
           <DialogHeader className="px-6 pt-6 pb-2">
             <DialogTitle className="text-xl">Editar treino</DialogTitle>
             <DialogDescription>Ajuste as cargas, músculos e exercícios da sessão.</DialogDescription>

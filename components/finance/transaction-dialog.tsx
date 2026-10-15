@@ -219,7 +219,7 @@ export function TransactionDialog({
                   defaultValue={transaction?.description}
                   placeholder="Ex: Mercado, Salário..."
                   required
-                  className="h-12 rounded-xl bg-muted/20 font-medium"
+                  className="font-medium"
                 />
               </div>
 
@@ -232,7 +232,7 @@ export function TransactionDialog({
                     name="accountId"
                     defaultValue={transaction?.accountId || accounts[0]?.id}
                   >
-                    <SelectTrigger className="h-12 rounded-xl bg-muted/20 font-medium">
+                    <SelectTrigger className="font-medium">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="rounded-xl">
@@ -254,7 +254,7 @@ export function TransactionDialog({
                       name="category"
                       defaultValue={transaction?.category}
                       placeholder="Ex: Lazer"
-                      className="h-12 pl-9 rounded-xl bg-muted/20 font-medium"
+                      className="pl-9 font-medium"
                     />
                   </div>
                 </div>
@@ -269,7 +269,7 @@ export function TransactionDialog({
                   <Input
                     name="date"
                     type="date"
-                    className="h-12 pl-9 rounded-xl bg-muted/20 font-medium"
+                    className="pl-9 font-medium"
                     defaultValue={
                       transaction?.date
                         ? new Date(transaction.date).toISOString().split("T")[0]

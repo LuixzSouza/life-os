@@ -158,7 +158,7 @@ export function MediaCard({ item }: { item: MediaItemData }) {
 
       {/* 2. O MODAL DE DETALHES (Cinematográfico) */}
       <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
-        <DialogContent className="w-[96vw] sm:max-w-xl md:max-w-2xl p-0 overflow-hidden bg-background border-border/60 shadow-2xl rounded-2xl flex flex-col max-h-[90vh]">
+        <DialogContent className="w-[96vw] sm:max-w-xl md:max-w-2xl p-0 overflow-hidden flex flex-col max-h-[90vh]">
           <DialogHeader className="sr-only">
             <DialogTitle>{item.title}</DialogTitle>
             <DialogDescription>Detalhes e review da obra</DialogDescription>
@@ -262,7 +262,7 @@ export function MediaCard({ item }: { item: MediaItemData }) {
 
                 <Textarea
                   placeholder="Escreva sua resenha pessoal, pensamentos ou citações marcantes aqui..."
-                  className="min-h-[120px] resize-none bg-muted/20 focus:bg-background border-border/50 rounded-xl p-4 text-sm leading-relaxed"
+                  className="min-h-[120px] resize-none focus:bg-background p-4 text-sm leading-relaxed"
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                 />
@@ -277,7 +277,7 @@ export function MediaCard({ item }: { item: MediaItemData }) {
 
           {/* Rodapé Fixo */}
           <div className="p-4 md:p-5 bg-muted/10 border-t border-border/40 flex justify-end gap-3 shrink-0">
-            <Button type="button" variant="ghost" onClick={() => setIsDetailsOpen(false)} className="">Cancelar</Button>
+            <Button type="button" variant="ghost" onClick={() => setIsDetailsOpen(false)}>Cancelar</Button>
             <Button type="submit" form={`review-form-${item.id}`} disabled={isLoading} className="bg-primary text-primary-foreground shadow-lg shadow-primary/20 min-w-[120px]">
               {isLoading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
               Salvar Review

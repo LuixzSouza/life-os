@@ -29,7 +29,7 @@ export function SystemModules({
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Saúde Rápida */}
-        <Card className="shadow-sm border-border/50 hover:border-primary/30 transition-colors">
+        <Card className="hover:border-primary/30 transition-colors">
           <CardContent className="p-4">
             <div className="flex items-center justify-between mb-3">
               <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
@@ -51,7 +51,7 @@ export function SystemModules({
         </Card>
 
         {/* IA e Automação */}
-        <Card className="shadow-sm border-border/50 hover:border-primary/30 transition-colors">
+        <Card className="hover:border-primary/30 transition-colors">
           <CardContent className="p-4 flex flex-col justify-between h-full">
             <div className="flex items-center justify-between mb-3">
               <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
@@ -68,7 +68,7 @@ export function SystemModules({
         </Card>
 
         {/* Closet */}
-        <Card className="shadow-sm border-border/50 hover:border-primary/30 transition-colors">
+        <Card className="hover:border-primary/30 transition-colors">
           <CardContent className="p-4 flex flex-col justify-between h-full">
             <div className="flex items-center justify-between mb-3">
               <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
@@ -85,7 +85,7 @@ export function SystemModules({
         </Card>
 
         {/* Links e Sites */}
-        <Card className="shadow-sm border-border/50 hover:border-primary/30 transition-colors">
+        <Card className="hover:border-primary/30 transition-colors">
           <CardContent className="p-4 flex flex-col h-full">
             <div className="flex items-center justify-between mb-3">
               <span className="eyebrow text-muted-foreground flex items-center gap-1.5">

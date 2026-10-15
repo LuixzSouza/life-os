@@ -118,7 +118,7 @@ export function NewProjectDialog() {
                                 placeholder="Dê um nome impactante..." 
                                 required 
                                 maxLength={40}
-                                className="h-12 pl-11 bg-muted/20 border-border/50 rounded-xl font-bold text-base focus-visible:ring-offset-0 focus-visible:ring-1 transition-all" 
+                                className="pl-11 font-bold text-base focus-visible:ring-offset-0 focus-visible:ring-1 transition-all" 
                             />
                         </div>
                     </div>
@@ -135,7 +135,7 @@ export function NewProjectDialog() {
                                 name="description" 
                                 placeholder="Qual o grande objetivo?" 
                                 maxLength={80}
-                                className="h-12 pl-11 bg-muted/20 border-border/50 rounded-xl font-medium focus-visible:ring-offset-0 focus-visible:ring-1 transition-all" 
+                                className="pl-11 font-medium focus-visible:ring-offset-0 focus-visible:ring-1 transition-all" 
                             />
                         </div>
                     </div>

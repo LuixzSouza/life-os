@@ -145,7 +145,7 @@ export function ProjectSettingsMenu({
             <DialogBody className="space-y-6">
                 <div className="space-y-2.5">
                 <Label htmlFor="title" className="text-xs font-medium text-muted-foreground ml-1">Nome do Projeto</Label>
-                <Input id="title" name="title" defaultValue={projectTitle} required className="h-12 bg-muted/20 border-border/50 rounded-xl font-bold text-base focus-visible:ring-primary/30" />
+                <Input id="title" name="title" defaultValue={projectTitle} required className="font-bold text-base focus-visible:ring-primary/30" />
                 </div>
 
                 <div className="space-y-4">
@@ -173,7 +173,7 @@ export function ProjectSettingsMenu({
                 
                 <div className="space-y-2.5">
                 <Label htmlFor="description" className="text-xs font-medium text-muted-foreground ml-1">Descrição</Label>
-                <Textarea id="description" name="description" defaultValue={projectDescription || ""} className="resize-none min-h-[120px] bg-muted/20 border-border/50 rounded-xl font-medium p-4 focus-visible:ring-primary/30" />
+                <Textarea id="description" name="description" defaultValue={projectDescription || ""} className="resize-none min-h-[120px] font-medium p-4 focus-visible:ring-primary/30" />
                 </div>
             </DialogBody>
 

@@ -158,7 +158,7 @@ export function EventForm({
               name="title"
               defaultValue={initialData?.title ?? (taskTitle || undefined)}
               placeholder="Ex: Sync de Projetos"
-              className="h-12 text-base font-bold placeholder:text-muted-foreground/30 bg-muted/20 border-border/40 focus-visible:ring-primary/30 focus-visible:border-primary transition-all rounded-xl"
+              className="text-base font-bold placeholder:text-muted-foreground/30 focus-visible:ring-primary/30 focus-visible:border-primary transition-all"
               required
               autoFocus={!initialData}
             />
@@ -178,7 +178,7 @@ export function EventForm({
                   type="date"
                   required
                   defaultValue={defaultDate}
-                  className="pl-10 h-11 bg-background border-border/40 focus-visible:ring-primary/30 transition-all rounded-xl font-mono font-bold text-sm"
+                  className="pl-10 focus-visible:ring-primary/30 transition-all font-mono font-bold text-sm"
                 />
               </div>
             </div>
@@ -208,7 +208,7 @@ export function EventForm({
                 required
                 disabled={isAllDay}
                 defaultValue={defaultStartTime}
-                className="h-11 bg-background border-border/40 focus-visible:ring-primary/30 transition-all rounded-xl font-mono font-bold text-sm text-center"
+                className="focus-visible:ring-primary/30 transition-all font-mono font-bold text-sm text-center"
               />
             </div>
 
@@ -223,7 +223,7 @@ export function EventForm({
                 required
                 disabled={isAllDay}
                 defaultValue={defaultEndTime}
-                className="h-11 bg-background border-border/40 focus-visible:ring-primary/30 transition-all rounded-xl font-mono font-bold text-sm text-center"
+                className="focus-visible:ring-primary/30 transition-all font-mono font-bold text-sm text-center"
               />
             </div>
 
@@ -256,7 +256,7 @@ export function EventForm({
                   name="recurrenceEnd"
                   type="date"
                   defaultValue={initialData?.recurrenceEnd ? format(new Date(initialData.recurrenceEnd), "yyyy-MM-dd") : ""}
-                  className="h-11 bg-background border-border/40 focus-visible:ring-primary/30 transition-all rounded-xl font-mono font-bold text-sm"
+                  className="focus-visible:ring-primary/30 transition-all font-mono font-bold text-sm"
                 />
               </div>
             )}
@@ -274,7 +274,7 @@ export function EventForm({
                 name="location"
                 defaultValue={initialData?.location || ""}
                 placeholder="Ex: Sala de Reunião 1 / Link do Meet"
-                className="pl-10 h-11 bg-muted/20 border-border/40 focus-visible:ring-primary/30 transition-all rounded-xl font-medium text-sm"
+                className="pl-10 focus-visible:ring-primary/30 transition-all font-medium text-sm"
               />
             </div>
           </div>
@@ -290,7 +290,7 @@ export function EventForm({
               defaultValue={initialData?.description || ""}
               placeholder="Adicione pautas, links importantes ou notas..."
               rows={3}
-              className="bg-muted/20 border-border/40 focus-visible:ring-primary/30 resize-none p-4 rounded-xl min-h-[100px] text-sm font-medium leading-relaxed transition-all"
+              className="focus-visible:ring-primary/30 resize-none p-4 min-h-[100px] text-sm font-medium leading-relaxed transition-all"
             />
           </div>
 

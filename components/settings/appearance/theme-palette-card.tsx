@@ -19,7 +19,7 @@ export function ThemePaletteCard({
   onCustomColorChange,
 }: ThemePaletteCardProps) {
   return (
-    <Card className="border-border shadow-sm bg-card">
+    <Card>
       <CardHeader>
         <CardTitle>Paleta de Cores</CardTitle>
         <CardDescription>Escolha um preset ou personalize a cor do sistema.</CardDescription>

@@ -158,7 +158,7 @@ export function MarketDashboard({ data: initialData, initialFavorites = [] }: { 
                                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                                     <Input
                                         placeholder="Buscar ativo (ex: PETR4)..."
-                                        className="pl-9 bg-card border-border/60 h-10 transition-all focus-visible:ring-primary/20"
+                                        className="pl-9 transition-all focus-visible:ring-primary/20"
                                         value={search}
                                         onChange={(e) => setSearch(e.target.value)}
                                     />
@@ -210,7 +210,7 @@ export function MarketDashboard({ data: initialData, initialFavorites = [] }: { 
                                         onChange={(e) => setQuery(e.target.value)}
                                         placeholder="Busque por nome ou código: Petrobras, PETR, Magalu, BTC…"
                                         autoFocus
-                                        className="pl-9 rounded-xl"
+                                        className="pl-9"
                                     />
                                     {searching && <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 animate-spin text-muted-foreground/50" />}
                                 </div>
@@ -318,7 +318,7 @@ function FavStar({ active, onClick }: { active: boolean; onClick: () => void }) 
 
 function MarketHighlightCard({ item, onSelect, isFav, onToggleFav }: { item: MarketItem; onSelect: (i: MarketItem) => void; isFav: boolean; onToggleFav: (t: string) => void }) {
     return (
-        <Card onClick={() => onSelect(item)} className="border-border/60 shadow-sm hover:border-primary/30 transition-all bg-gradient-to-br from-card to-muted/20 group cursor-pointer">
+        <Card onClick={() => onSelect(item)} className="hover:border-primary/30 transition-all bg-gradient-to-br from-card to-muted/20 group cursor-pointer">
             <CardContent className="p-5">
                 <div className="flex justify-between items-start mb-3">
                     <div className="flex items-center gap-3">

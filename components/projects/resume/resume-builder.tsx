@@ -221,7 +221,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                     ? "w-full lg:w-[500px] xl:w-[550px] shrink-0"
                     : "w-full max-w-4xl mx-auto" // prévia oculta: coluna única, centralizada e confortável
             )}>
-                <Card className="flex-1 flex flex-col overflow-hidden border-border/40 bg-card/60 backdrop-blur-2xl h-full shadow-2xl rounded-2xl">
+                <Card className="flex-1 flex flex-col overflow-hidden bg-card/60 backdrop-blur-2xl h-full shadow-2xl">
                     
                     {/* Header do Painel */}
                     <div className="px-4 py-4 sm:px-8 sm:py-6 border-b border-border/40 bg-background/50 flex flex-col gap-5 shrink-0 z-10">

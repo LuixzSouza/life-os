@@ -216,7 +216,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                  className="pl-9 pr-10 h-12 bg-background border-border/50 focus:border-primary/50 transition-all text-base rounded-xl shadow-sm"
+                  className="pl-9 pr-10 focus:border-primary/50 transition-all text-base"
                 />
                 {query && (
                 <button type="button" onClick={clearSearch} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground hover:bg-muted p-1 rounded-full transition-colors">

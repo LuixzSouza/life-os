@@ -103,14 +103,14 @@ export function FieldFocusProvider({ children }: { children: React.ReactNode }) 
                                         value={draft}
                                         onChange={(e) => setDraft(e.target.value)}
                                         placeholder={state.cfg.placeholder}
-                                        className="min-h-[45vh] w-full resize-none rounded-2xl border-border/50 bg-muted/20 text-sm leading-relaxed"
+                                        className="min-h-[45vh] w-full resize-none text-sm leading-relaxed"
                                     />
                                     <div className="mt-2 flex justify-end">
                                         <CharCounter len={draft.length} range={state.cfg.recommendedRange} />
                                     </div>
                                 </DialogBody>
                                 <DialogFooter>
-                                    <Button variant="ghost" onClick={close} className="">Cancelar</Button>
+                                    <Button variant="ghost" onClick={close}>Cancelar</Button>
                                     <Button
                                         onClick={() => { state.cfg.onCommit(draft); close(); }}
                                         className="gap-2 font-bold"
@@ -139,7 +139,7 @@ export function FieldFocusProvider({ children }: { children: React.ReactNode }) 
                                         <Textarea
                                             value={draft}
                                             onChange={(e) => setDraft(e.target.value)}
-                                            className="mt-1 min-h-[30vh] w-full resize-none rounded-2xl border-violet-500/30 bg-violet-500/[0.03] text-sm leading-relaxed"
+                                            className="mt-1 min-h-[30vh] w-full resize-none border-violet-500/30 bg-violet-500/[0.03] text-sm leading-relaxed"
                                         />
                                     </div>
                                 </DialogBody>

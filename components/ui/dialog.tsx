@@ -123,7 +123,7 @@ const DialogContent = React.forwardRef<
           "flex flex-col w-[calc(100%-1.5rem)]",
           DIALOG_SIZES[size],
           // Estrutura: cantos arredondados, borda, sombra e altura limitada com scroll interno
-          "rounded-3xl border border-border/50 bg-background shadow-2xl",
+          "rounded-2xl border border-border/50 bg-background shadow-2xl",
           // isolate: cria um stacking context próprio — impede que o conteúdo rolável
           // "vaze" por cima dos cantos arredondados durante a animação de zoom.
           "outline-none overflow-hidden isolate",

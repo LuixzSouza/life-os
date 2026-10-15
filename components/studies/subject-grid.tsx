@@ -177,7 +177,7 @@ export function SubjectGrid({ subjects }: SubjectListProps) {
       </div>
 
       <Link href="/flashcards" className="block group">
-        <Card className="border-border/50 bg-card shadow-sm transition-all hover:border-primary/30 hover:shadow-md">
+        <Card className="transition-all hover:border-primary/30 hover:shadow-md">
           <CardContent className="flex items-center justify-between gap-4 p-4">
             <div className="flex items-center gap-3">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">

@@ -13,7 +13,7 @@ interface BillingCardProps {
 // Dados usados nas mensagens de cobrança do módulo Negócios (WhatsApp/PIX).
 export function BillingCard({ pixKey, setPixKey, businessName, setBusinessName }: BillingCardProps) {
   return (
-    <Card className="border-border shadow-sm bg-card">
+    <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <QrCode className="h-4 w-4 text-primary" /> Cobrança & Negócios
@@ -31,7 +31,7 @@ export function BillingCard({ pixKey, setPixKey, businessName, setBusinessName }
             value={pixKey}
             onChange={(e) => setPixKey(e.target.value)}
             placeholder="CPF, e-mail, telefone ou chave aleatória"
-            className="bg-muted/30 border-border/60 h-11 font-mono"
+            className="font-mono"
           />
           <p className="text-[10px] text-muted-foreground px-1">Incluída automaticamente no resumo de cobrança.</p>
         </div>
@@ -46,7 +46,7 @@ export function BillingCard({ pixKey, setPixKey, businessName, setBusinessName }
             value={businessName}
             onChange={(e) => setBusinessName(e.target.value)}
             placeholder="Ex: João Silva — Studio Design"
-            className="bg-muted/30 border-border/60 h-11"
+           
           />
           <p className="text-[10px] text-muted-foreground px-1">Assina o final da mensagem de cobrança.</p>
         </div>

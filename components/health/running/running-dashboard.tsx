@@ -141,7 +141,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 <ImportRunsDialog />
 
                 {/* Card de Volume Total (Hero) */}
-                <Card className="relative overflow-hidden border-border/60 bg-card shadow-lg group">
+                <Card className="relative overflow-hidden shadow-lg group">
                     {/* Background Decorativo */}
                     <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none transition-opacity group-hover:opacity-80" />
                     
@@ -179,7 +179,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 </Card>
 
                 {/* Card de Recorde Pessoal (PR) */}
-                <Card className="border-border/60 bg-card shadow-sm relative overflow-hidden">
+                <Card className="relative overflow-hidden">
                     <div className="absolute left-0 top-0 w-1 h-full bg-amber-500"></div>
                     <CardHeader className="pb-2 pl-6">
                         <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
@@ -250,7 +250,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 )}
 
                 {/* Gráfico de Evolução */}
-                <Card className="border-border/60 bg-card shadow-sm">
+                <Card>
                     <CardHeader className="pb-2 border-b border-border/40 bg-muted/20">
                         <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2 py-1">
                             <TrendingUp className="h-4 w-4 text-primary" /> Performance Recente (10 Treinos)
@@ -406,7 +406,7 @@ function RunCard({ run, onEdit, onDelete }: { run: RunWorkout; onEdit: () => voi
     const shoe = run.shoeName || null;
 
     return (
-        <Card className="group border-border/60 bg-card hover:border-primary/30 hover:shadow-md transition-all duration-300">
+        <Card className="group hover:border-primary/30 hover:shadow-md transition-all duration-300">
             <CardContent className="p-5">
                 <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-6">
 

@@ -41,7 +41,7 @@ export function SortSelect({ sortBy, slug }: SortSelectProps) {
             </span>
 
             <Select value={sortBy} onValueChange={handleValueChange}>
-                <SelectTrigger className="h-10 bg-muted/30 border-border/50 rounded-xl px-3 font-bold text-xs hover:bg-muted/50 transition-all focus:ring-primary/20 shadow-sm">
+                <SelectTrigger className="px-3 font-bold text-xs hover:bg-muted/50 transition-all focus:ring-primary/20">
                     <div className="flex items-center gap-2">
                         <ArrowDownNarrowWide className="h-3.5 w-3.5 text-primary" />
                         <SelectValue placeholder="Ordenar por..." />

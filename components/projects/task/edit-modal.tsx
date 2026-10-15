@@ -29,7 +29,7 @@ export function EditModal(props: EditModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="max-w-4xl w-[96vw] h-[88vh] max-h-[88vh] p-0 gap-0 overflow-hidden bg-background border-border/40 shadow-2xl rounded-2xl flex flex-col outline-none"
+        className="max-w-4xl w-[96vw] h-[88vh] max-h-[88vh] p-0 gap-0 overflow-hidden flex flex-col outline-none"
       >
         {/* ACESSIBILIDADE */}
         <DialogHeader className="sr-only">

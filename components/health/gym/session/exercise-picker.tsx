@@ -106,7 +106,7 @@ export function ExercisePicker({
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter" && canCustom) { e.preventDefault(); pick(query.trim()); } }}
               placeholder="Buscar exercício…"
-              className="h-11 pl-9"
+              className="pl-9"
             />
           </div>
 

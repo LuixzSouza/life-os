@@ -94,7 +94,7 @@ export function RemoteAccessCard({ lanUrls, mode, windows, calendarToken }: Remo
   };
 
   return (
-    <Card className="border-border shadow-sm bg-card">
+    <Card>
       <CardContent className="p-6 space-y-6">
         <div className="flex items-start gap-4">
           <div className="p-3 bg-primary/10 rounded-xl text-primary shrink-0">
@@ -308,7 +308,7 @@ export function RemoteAccessCard({ lanUrls, mode, windows, calendarToken }: Remo
           type="button"
           variant="outline"
           size="sm"
-          className=""
+         
           onClick={() => url && copy(url)}
           disabled={!url}
         >

@@ -112,7 +112,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
           value={data.hero.name}
           onChange={e => update('name', e.target.value)}
           placeholder="Ex: Ana Silva"
-          className="h-12 bg-muted/30 border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20 font-bold"
+          className="shadow-inner focus-visible:ring-primary/20 font-bold"
         />
       </div>
 
@@ -124,7 +124,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
           value={data.hero.headline} 
           onChange={e => update('headline', e.target.value)} 
           placeholder="Ex: Senior Frontend Engineer | React Specialist" 
-          className="h-12 bg-muted/30 border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20 font-medium"
+          className="shadow-inner focus-visible:ring-primary/20 font-medium"
         />
       </div>
 
@@ -136,7 +136,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
           <Input 
             value={data.hero.email} 
             onChange={e => update('email', e.target.value)} 
-            className="h-12 bg-muted/30 border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20"
+            className="shadow-inner focus-visible:ring-primary/20"
           />
         </div>
         <div className="space-y-3">
@@ -146,7 +146,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
           <Input
             value={data.hero.phone}
             onChange={e => update('phone', e.target.value)}
-            className="h-12 bg-muted/30 border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20 font-mono text-sm"
+            className="shadow-inner focus-visible:ring-primary/20 font-mono text-sm"
           />
         </div>
         <div className="space-y-3">
@@ -157,7 +157,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
             value={data.hero.location}
             onChange={e => update('location', e.target.value)}
             placeholder="Ex: Inconfidentes — MG, Brasil"
-            className="h-12 bg-muted/30 border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20"
+            className="shadow-inner focus-visible:ring-primary/20"
           />
         </div>
         <div className="space-y-3">
@@ -168,7 +168,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
             value={data.hero.website}
             onChange={e => update('website', e.target.value)}
             placeholder="Ex: luixzsouza.com.br"
-            className="h-12 bg-muted/30 border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20"
+            className="shadow-inner focus-visible:ring-primary/20"
           />
         </div>
       </div>

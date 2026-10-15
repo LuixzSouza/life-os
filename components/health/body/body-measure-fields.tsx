@@ -30,7 +30,7 @@ export const InputWithTooltip = ({ label, val, onChange, tooltip }: { label: str
             type="number" step="0.1"
             value={val || ''}
             onChange={(e) => onChange(e.target.value)}
-            placeholder="0.0" className="bg-muted/20 h-9"
+            placeholder="0.0" className="h-9"
         />
     </div>
 );

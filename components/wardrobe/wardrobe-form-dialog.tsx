@@ -31,7 +31,7 @@ export function WardrobeFormDialog({ mode = "create", initialData, trigger, open
                 </DialogTrigger>
             )}
 
-            <DialogContent className="w-[96vw] sm:max-w-2xl md:max-w-5xl lg:max-w-6xl h-[92vh] md:h-[86vh] p-0 gap-0 bg-background border-border/40 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl">
+            <DialogContent className="w-[96vw] sm:max-w-2xl md:max-w-5xl lg:max-w-6xl h-[92vh] md:h-[86vh] p-0 gap-0 overflow-hidden flex flex-col md:flex-row">
                 <DialogHeader className="sr-only">
                     <DialogTitle>Editor de Guarda-Roupa</DialogTitle>
                     <DialogDescription>Adicione ou edite peças do seu armário</DialogDescription>

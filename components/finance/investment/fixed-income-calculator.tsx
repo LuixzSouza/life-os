@@ -85,11 +85,11 @@ export function FixedIncomeCalculator({ cdi, ipca, preset }: FixedIncomeCalculat
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-1.5">
             <label className="text-xs font-medium text-muted-foreground">Aporte (R$)</label>
-            <Input type="number" min="0" step="100" value={amount} onChange={(e) => setAmount(Math.max(0, Number(e.target.value)))} className="rounded-xl font-mono" />
+            <Input type="number" min="0" step="100" value={amount} onChange={(e) => setAmount(Math.max(0, Number(e.target.value)))} className="font-mono" />
           </div>
           <div className="space-y-1.5">
             <label className="text-xs font-medium text-muted-foreground">Prazo (meses)</label>
-            <Input type="number" min="1" step="1" value={months} onChange={(e) => setMonths(Math.max(1, Number(e.target.value)))} className="rounded-xl font-mono" />
+            <Input type="number" min="1" step="1" value={months} onChange={(e) => setMonths(Math.max(1, Number(e.target.value)))} className="font-mono" />
           </div>
         </div>
 
@@ -105,7 +105,7 @@ export function FixedIncomeCalculator({ cdi, ipca, preset }: FixedIncomeCalculat
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-1.5">
             <label className="eyebrow text-muted-foreground">{rateLabel}</label>
-            <Input type="number" min="0" step="0.5" value={rate} onChange={(e) => setRate(Math.max(0, Number(e.target.value)))} className="rounded-xl font-mono" />
+            <Input type="number" min="0" step="0.5" value={rate} onChange={(e) => setRate(Math.max(0, Number(e.target.value)))} className="font-mono" />
           </div>
           <div className="space-y-1.5">
             <label className="text-xs font-medium text-muted-foreground">Imposto</label>

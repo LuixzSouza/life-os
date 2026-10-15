@@ -57,13 +57,13 @@ function SelectTrigger({
         "flex w-fit items-center justify-between gap-2 whitespace-nowrap",
 
         /* Shape */
-        "rounded-md border px-3 py-2",
+        "rounded-lg border px-3 py-2",
 
         /* Tipografia */
         "text-sm font-medium",
 
         /* Cores base */
-        "bg-transparent border-input text-foreground",
+        "bg-muted/20 border-border/60 text-foreground",
 
         /* Placeholder */
         "data-[placeholder]:text-muted-foreground",
@@ -82,7 +82,7 @@ function SelectTrigger({
         "disabled:cursor-not-allowed disabled:opacity-50",
 
         /* Tamanhos */
-        "data-[size=default]:h-9 data-[size=sm]:h-8",
+        "data-[size=default]:h-10 data-[size=sm]:h-8",
 
         /* Conteúdo interno */
         "*:data-[slot=select-value]:line-clamp-1",

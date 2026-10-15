@@ -71,7 +71,7 @@ export function LogSleepDialog({ goal = DEFAULT_SLEEP_GOAL }: { goal?: number })
       <DialogTrigger asChild>
         {/* Card de ação no padrão do sistema (sutil: borda tracejada, destaque só
             no ícone) — antes era um bloco vermelho sólido com sombra forte. */}
-        <Card className="group flex h-full cursor-pointer flex-col items-center justify-center border-dashed border-border/60 bg-card p-6 text-center transition-colors hover:border-primary/40 hover:bg-primary/5">
+        <Card className="group flex h-full cursor-pointer flex-col items-center justify-center border-dashed p-6 text-center transition-colors hover:border-primary/40 hover:bg-primary/5">
           <div className="mb-3 rounded-full bg-primary/10 p-3 text-primary transition-colors group-hover:bg-primary/15">
             <Plus className="h-6 w-6" />
           </div>
@@ -97,7 +97,7 @@ export function LogSleepDialog({ goal = DEFAULT_SLEEP_GOAL }: { goal?: number })
                 value={date}
                 max={todayStr()}
                 onChange={(e) => setDate(e.target.value)}
-                className="h-10 bg-muted/20 border-border/50"
+               
               />
             </div>
 
@@ -115,13 +115,13 @@ export function LogSleepDialog({ goal = DEFAULT_SLEEP_GOAL }: { goal?: number })
                   <Label className="text-xs font-bold uppercase text-muted-foreground flex items-center gap-1.5">
                     <Moon className="h-3.5 w-3.5 text-indigo-500" /> Deitou
                   </Label>
-                  <Input type="time" value={bedtime} onChange={(e) => setBedtime(e.target.value)} className="h-12 text-lg font-bold bg-muted/20 border-border/50" />
+                  <Input type="time" value={bedtime} onChange={(e) => setBedtime(e.target.value)} className="text-lg font-bold" />
                 </div>
                 <div className="space-y-2">
                   <Label className="text-xs font-bold uppercase text-muted-foreground flex items-center gap-1.5">
                     <Sunrise className="h-3.5 w-3.5 text-amber-500" /> Acordou
                   </Label>
-                  <Input type="time" value={wakeTime} onChange={(e) => setWakeTime(e.target.value)} className="h-12 text-lg font-bold bg-muted/20 border-border/50" />
+                  <Input type="time" value={wakeTime} onChange={(e) => setWakeTime(e.target.value)} className="text-lg font-bold" />
                 </div>
               </div>
             ) : (
@@ -136,7 +136,7 @@ export function LogSleepDialog({ goal = DEFAULT_SLEEP_GOAL }: { goal?: number })
                     placeholder="0.0"
                     value={hours}
                     onChange={(e) => setHours(e.target.value)}
-                    className="h-14 text-3xl font-bold pl-4 pr-12 bg-muted/20 border-border/50"
+                    className="h-14 text-3xl font-bold pl-4 pr-12"
                     autoFocus
                   />
                   <span className="absolute right-4 top-1/2 -translate-y-1/2 text-lg font-medium text-muted-foreground">h</span>

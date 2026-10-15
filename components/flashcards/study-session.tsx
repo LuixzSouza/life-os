@@ -585,7 +585,7 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
                                         if (e.key === "Enter") { e.preventDefault(); reveal(); }
                                     }}
                                     placeholder="Digite sua resposta…"
-                                    className="h-14 rounded-xl border-border/60 bg-background text-center text-lg shadow-sm focus-visible:ring-primary/30"
+                                    className="h-14 text-center text-lg focus-visible:ring-primary/30"
                                 />
                                 <Button onClick={reveal} className="mt-3 h-10 w-full gap-2 font-bold shadow-sm">
                                     <CornerDownLeft className="h-4 w-4" /> Verificar resposta

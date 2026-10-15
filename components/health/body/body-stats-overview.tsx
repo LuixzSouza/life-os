@@ -57,7 +57,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
         <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-12">
 
             {/* 1. GORDURA E COMPOSIÇÃO */}
-            <Card className="md:col-span-8 border-border/40 bg-card shadow-sm transition-all hover:shadow-md">
+            <Card className="md:col-span-8 transition-all hover:shadow-md">
                 <CardHeader className="flex flex-row items-start justify-between gap-2 pb-2">
                     <div className="min-w-0">
                         <CardTitle className="flex items-center gap-2 text-sm font-semibold">
@@ -151,7 +151,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
             </Card>
 
             {/* 2. IMC */}
-            <Card className="md:col-span-4 flex flex-col justify-between border-border/40 bg-card shadow-sm transition-all hover:shadow-md">
+            <Card className="md:col-span-4 flex flex-col justify-between transition-all hover:shadow-md">
                 <CardHeader className="pb-2">
                     <CardTitle className="flex items-center gap-2 text-sm font-semibold">
                         <div className="rounded-lg bg-indigo-500/10 p-1.5 text-indigo-500"><Activity className="h-4 w-4" /></div>
@@ -184,7 +184,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
 
             {/* 3b. MEDIÇÕES POR APARELHO (só aparece se houver dados de balança/adipômetro) */}
             {deviceList.length > 0 && (
-                <Card className="md:col-span-12 border-border/40 bg-card shadow-sm">
+                <Card className="md:col-span-12">
                     <CardHeader className="flex flex-row items-center justify-between border-b border-border/40 pb-4">
                         <CardTitle className="flex items-center gap-2 text-sm font-semibold">
                             <div className="rounded-lg bg-primary/10 p-1.5 text-primary"><Gauge className="h-4 w-4" /></div>
@@ -218,7 +218,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
             )}
 
             {/* 4. METABOLISMO & PLANO */}
-            <Card className="md:col-span-12 grid divide-y divide-border/40 border-border/40 bg-card shadow-sm md:grid-cols-3 md:divide-x md:divide-y-0">
+            <Card className="md:col-span-12 grid divide-y divide-border/40 md:grid-cols-3 md:divide-x md:divide-y-0">
                 <div className="space-y-3 p-5">
                     <div className="flex items-center gap-2 text-xs font-semibold text-orange-600 dark:text-orange-400">
                         <Flame className="h-4 w-4" /> Gasto calórico (dia)
@@ -285,7 +285,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
             </Card>
 
             {/* 5. RELATÓRIO DE MEDIDAS (cm) */}
-            <Card className="md:col-span-12 border-border/40 bg-card shadow-sm">
+            <Card className="md:col-span-12">
                 <CardHeader className="flex flex-row items-center justify-between border-b border-border/40 pb-4">
                     <CardTitle className="flex items-center gap-2 text-sm font-semibold">
                         <div className="rounded-lg bg-primary/10 p-1.5 text-primary"><Ruler className="h-4 w-4" /></div>

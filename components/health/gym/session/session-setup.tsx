@@ -472,7 +472,7 @@ export function SessionSetup({
             value={title}
             onChange={(e) => { setTitle(e.target.value); setTitleEdited(true); }}
             placeholder="Selecione os grupos e o nome aparece sozinho…"
-            className="h-11"
+           
           />
         </section>
 
@@ -554,7 +554,7 @@ export function SessionSetup({
               onChange={(e) => setCustom(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addCustom(); } }}
               placeholder="Digite o nome… (Enter para adicionar)"
-              className="h-11 pl-9"
+              className="pl-9"
             />
           </div>
           {customMatches.length > 0 && (
@@ -653,7 +653,7 @@ export function SessionSetup({
                 value={restText}
                 onChange={(e) => setRestText(e.target.value.replace(/[^\d]/g, ""))}
                 placeholder="90"
-                className="h-11 pr-24 text-center font-mono text-lg font-bold tabular-nums"
+                className="pr-24 text-center font-mono text-lg font-bold tabular-nums"
                 aria-label="Descanso em segundos"
               />
               <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-muted-foreground">

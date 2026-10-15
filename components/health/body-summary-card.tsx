@@ -112,7 +112,7 @@ export function BodySummaryCard({
     };
 
     return (
-        <Card className="relative flex h-full flex-col overflow-hidden rounded-2xl border-border/40 bg-card shadow-sm transition-all hover:shadow-md">
+        <Card className="relative flex h-full flex-col overflow-hidden transition-all hover:shadow-md">
 
             {/* Indicador de status lateral */}
             <div className={cn("absolute bottom-0 left-0 top-0 w-1 transition-colors duration-500", status.bar)} />
@@ -147,11 +147,11 @@ export function BodySummaryCard({
                             <div className="grid grid-cols-2 gap-3">
                                 <div className="space-y-2">
                                     <Label className="text-xs font-medium text-muted-foreground">Peso (kg)</Label>
-                                    <Input name="weight" type="number" step="0.1" defaultValue={weight || ""} placeholder="0.0" className="h-11 rounded-xl border-border/40 bg-muted/30 text-center text-lg font-bold" required autoFocus />
+                                    <Input name="weight" type="number" step="0.1" defaultValue={weight || ""} placeholder="0.0" className="text-center text-lg font-bold" required autoFocus />
                                 </div>
                                 <div className="space-y-2">
                                     <Label className="text-xs font-medium text-muted-foreground">Altura (cm)</Label>
-                                    <Input name="height" type="number" defaultValue={height || ""} placeholder="0" className="h-11 rounded-xl border-border/40 bg-muted/30 text-center text-lg font-bold" required />
+                                    <Input name="height" type="number" defaultValue={height || ""} placeholder="0" className="text-center text-lg font-bold" required />
                                 </div>
                             </div>
                             <Button type="submit" className="h-10 w-full font-semibold" disabled={isLoading}>

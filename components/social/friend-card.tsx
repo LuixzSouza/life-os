@@ -52,7 +52,7 @@ export function FriendCard({ friend, lastContactAt, onContact, onSelect, onEdit,
   return (
     <Card
       onClick={() => onSelect(friend)}
-      className="group flex flex-col h-full bg-card rounded-2xl border-border/40 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 cursor-pointer overflow-hidden relative"
+      className="group flex flex-col h-full hover:shadow-lg hover:border-primary/30 transition-all duration-300 cursor-pointer overflow-hidden relative"
     >
       {/* Faixa de Cor Topo */}
       <div className={cn("absolute top-0 left-0 w-full h-1", barColor)} />

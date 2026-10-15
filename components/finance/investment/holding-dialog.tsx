@@ -155,7 +155,7 @@ export function HoldingDialog({ open, onOpenChange, holding }: HoldingDialogProp
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Busque: PETR, Petrobras, Magalu, BTC…"
                   autoFocus
-                  className="pl-9 rounded-xl"
+                  className="pl-9"
                 />
                 {searching && <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 animate-spin text-muted-foreground/50" />}
               </div>
@@ -237,11 +237,11 @@ export function HoldingDialog({ open, onOpenChange, holding }: HoldingDialogProp
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1.5">
                   <label className="eyebrow text-muted-foreground">Quantidade</label>
-                  <Input type="number" step="any" min="0" value={quantity} onChange={(e) => setQuantity(e.target.value)} placeholder="10" autoFocus className="rounded-xl font-mono" />
+                  <Input type="number" step="any" min="0" value={quantity} onChange={(e) => setQuantity(e.target.value)} placeholder="10" autoFocus className="font-mono" />
                 </div>
                 <div className="space-y-1.5">
                   <label className="eyebrow text-muted-foreground">Preço de compra</label>
-                  <Input type="number" step="0.01" min="0" value={avgPrice} onChange={(e) => setAvgPrice(e.target.value)} placeholder="32.50" className="rounded-xl font-mono" />
+                  <Input type="number" step="0.01" min="0" value={avgPrice} onChange={(e) => setAvgPrice(e.target.value)} placeholder="32.50" className="font-mono" />
                 </div>
               </div>
               {currentPrice != null && (
@@ -256,7 +256,7 @@ export function HoldingDialog({ open, onOpenChange, holding }: HoldingDialogProp
 
               <div className="space-y-1.5">
                 <label className="eyebrow text-muted-foreground">Nota (opcional)</label>
-                <Input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Ex.: corretora, estratégia…" className="rounded-xl" />
+                <Input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Ex.: corretora, estratégia…" />
               </div>
             </>
           )}

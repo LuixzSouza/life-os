@@ -27,7 +27,7 @@ export function SystemInfoCard({ info }: { info: SystemInfo }) {
     };
 
     return (
-        <Card className="border-border shadow-sm bg-card h-full flex flex-col overflow-hidden">
+        <Card className="h-full flex flex-col overflow-hidden">
             <CardHeader className="pb-3 border-b border-border/40 bg-muted/10">
                 <CardTitle className="text-sm font-semibold flex items-center gap-2">
                     <Activity className="h-4 w-4 text-primary" />

@@ -76,7 +76,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
         {/* Atividade */}
         <div className="space-y-2">
             <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">Identificação da Atividade</Label>
-            <Input name="title" defaultValue={item?.title} placeholder="Ex: Leitura Focada, Academia..." className="h-12 bg-muted/20 border-border/40 focus-visible:ring-primary/30 rounded-xl font-bold text-base" required />
+            <Input name="title" defaultValue={item?.title} placeholder="Ex: Leitura Focada, Academia..." className="focus-visible:ring-primary/30 font-bold text-base" required />
         </div>
 
         {/* Time Grid (Início e Fim) */}
@@ -85,13 +85,13 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
                 <Label className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
                     <Clock className="h-3 w-3" /> Início
                 </Label>
-                <Input type="time" name="startTime" defaultValue={item?.startTime || "07:00"} className="h-12 bg-background border-border/40 focus-visible:ring-primary/30 rounded-xl font-mono font-black text-lg text-center" required />
+                <Input type="time" name="startTime" defaultValue={item?.startTime || "07:00"} className="focus-visible:ring-primary/30 font-mono font-black text-lg text-center" required />
             </div>
             <div className="space-y-2">
                 <Label className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
                     <Clock className="h-3 w-3" /> Fim
                 </Label>
-                <Input type="time" name="endTime" defaultValue={item?.endTime || "08:00"} className="h-12 bg-background border-border/40 focus-visible:ring-primary/30 rounded-xl font-mono font-black text-lg text-center" required />
+                <Input type="time" name="endTime" defaultValue={item?.endTime || "08:00"} className="focus-visible:ring-primary/30 font-mono font-black text-lg text-center" required />
             </div>
         </div>
 
@@ -99,7 +99,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
         <div className="space-y-2">
             <Label className="text-xs font-medium text-muted-foreground">Categoria Tática</Label>
             <Select name="category" defaultValue={item?.category || "study"}>
-            <SelectTrigger className="h-12 bg-muted/20 border-border/40 rounded-xl font-bold text-sm">
+            <SelectTrigger className="font-bold text-sm">
                 <SelectValue />
             </SelectTrigger>
             <SelectContent className="rounded-xl">
@@ -140,7 +140,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
         {/* Descrição */}
         <div className="space-y-2 pb-2">
             <Label className="text-xs font-medium text-muted-foreground">Anotações Adicionais</Label>
-            <Textarea name="description" defaultValue={item?.description || ""} rows={3} className="bg-muted/20 border-border/40 rounded-xl resize-none text-sm font-medium p-4 leading-relaxed" placeholder="Metas ou checklists da rotina..." />
+            <Textarea name="description" defaultValue={item?.description || ""} rows={3} className="resize-none text-sm font-medium p-4 leading-relaxed" placeholder="Metas ou checklists da rotina..." />
         </div>
       </div>
 

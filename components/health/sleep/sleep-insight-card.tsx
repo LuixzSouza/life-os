@@ -27,7 +27,7 @@ function buildAdvice(insights: SleepInsights, goal: number): string {
 
 export function SleepInsightCard({ insights, goal }: { insights: SleepInsights; goal: number }) {
   return (
-    <Card className="bg-gradient-to-br from-primary/5 to-transparent border-primary/20 shadow-sm">
+    <Card className="bg-gradient-to-br from-primary/5 to-transparent border-primary/20">
       <CardHeader className="pb-2">
         <CardTitle className="text-xs uppercase font-bold text-primary flex items-center gap-2">
           <BrainCircuit className="h-4 w-4" /> Coach do Sono

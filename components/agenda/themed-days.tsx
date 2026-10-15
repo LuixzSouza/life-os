@@ -158,13 +158,13 @@ export function ThemedDays({ themedDays, weekday }: { themedDays: ThemedDayData[
                       onChange={(e) => setField(d, { icon: e.target.value })}
                       placeholder="🎯"
                       maxLength={2}
-                      className="h-10 w-12 shrink-0 rounded-xl border-border/40 bg-background text-center text-lg"
+                      className="w-12 shrink-0 text-center text-lg"
                     />
                     <Input
                       value={row.name}
                       onChange={(e) => setField(d, { name: e.target.value })}
                       placeholder="Nome do tema (ex.: Deep Work)"
-                      className="h-10 flex-1 rounded-xl border-border/40 bg-background text-sm font-semibold"
+                      className="flex-1 text-sm font-semibold"
                     />
                   </div>
 
@@ -172,7 +172,7 @@ export function ThemedDays({ themedDays, weekday }: { themedDays: ThemedDayData[
                     value={row.focus}
                     onChange={(e) => setField(d, { focus: e.target.value })}
                     placeholder="Intenção do dia (opcional)"
-                    className="mt-2 h-9 rounded-xl border-border/40 bg-background text-sm"
+                    className="mt-2 h-9 text-sm"
                   />
 
                   <div className="mt-2 flex flex-wrap items-center gap-1.5">

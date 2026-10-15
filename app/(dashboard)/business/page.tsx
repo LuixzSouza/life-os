@@ -137,7 +137,7 @@ export default async function BusinessPage() {
         <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           
           {/* 1. O que já entrou no bolso */}
-          <Card className="shadow-sm border-border/50 bg-card">
+          <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-xs font-medium text-muted-foreground">Total Recebido</CardTitle>
               <Landmark className="h-4 w-4 text-muted-foreground/70" />
@@ -150,7 +150,7 @@ export default async function BusinessPage() {
           </Card>
 
           {/* 2. O que tem pra receber (Saudável) */}
-          <Card className="shadow-sm border-transparent bg-emerald-50/50 dark:bg-emerald-950/10">
+          <Card className="border-transparent bg-emerald-50/50 dark:bg-emerald-950/10">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-xs font-medium text-emerald-600 dark:text-emerald-400">A Receber</CardTitle>
               <Wallet className="h-4 w-4 text-emerald-500 opacity-70" />
@@ -176,7 +176,7 @@ export default async function BusinessPage() {
           </Card>
 
           {/* 4. Operacional */}
-          <Card className="shadow-sm border-border/50 bg-card">
+          <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-xs font-medium text-muted-foreground">Contratos Ativos</CardTitle>
               <TrendingUp className="h-4 w-4 text-muted-foreground/70" />
@@ -187,7 +187,7 @@ export default async function BusinessPage() {
           </Card>
 
           {/* 5. Clientes */}
-          <Card className="shadow-sm border-border/50 bg-card hidden md:block">
+          <Card className="hidden md:block">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-xs font-medium text-muted-foreground">Base de Clientes</CardTitle>
               <Users className="h-4 w-4 text-muted-foreground/70" />

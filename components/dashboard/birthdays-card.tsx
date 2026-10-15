@@ -12,7 +12,7 @@ interface BirthdaysCardProps {
 
 export function BirthdaysCard({ birthdays }: BirthdaysCardProps) {
   return (
-    <Card className="shadow-sm border-pink-200/50 dark:border-pink-900/30 bg-gradient-to-br from-pink-50/30 to-background dark:from-pink-950/10">
+    <Card className="border-pink-200/50 dark:border-pink-900/30 bg-gradient-to-br from-pink-50/30 to-background dark:from-pink-950/10">
       <CardHeader className="flex flex-row items-center justify-between pb-3">
         <CardTitle className="text-sm flex items-center gap-2 text-pink-600 dark:text-pink-400">
           <Cake className="h-4 w-4" /> Aniversários

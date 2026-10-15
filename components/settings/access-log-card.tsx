@@ -32,7 +32,7 @@ export function describeUserAgent(ua: string): string {
 
 export function AccessLogCard({ entries }: { entries: AccessLogEntry[] }) {
   return (
-    <Card className="border-border shadow-sm bg-card">
+    <Card>
       <CardHeader className="pb-3">
         <CardTitle className="text-base flex items-center gap-2">
           <History className="h-4 w-4 text-primary" /> Últimos acessos

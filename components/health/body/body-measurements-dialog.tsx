@@ -138,11 +138,11 @@ export function BodyMeasurementsDialog({ open, onOpenChange, initialStats, onSav
                                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                                     <div className="space-y-1.5">
                                         <Label className="text-xs font-medium text-muted-foreground">Peso (kg)</Label>
-                                        <Input type="number" inputMode="decimal" step="0.1" value={formDataState.weight || ''} onChange={(e) => handleInputChange('weight', e.target.value)} className="h-10 rounded-xl border-border/40 bg-muted/30" required />
+                                        <Input type="number" inputMode="decimal" step="0.1" value={formDataState.weight || ''} onChange={(e) => handleInputChange('weight', e.target.value)} required />
                                     </div>
                                     <div className="space-y-1.5">
                                         <Label className="text-xs font-medium text-muted-foreground">Altura (cm)</Label>
-                                        <Input type="number" inputMode="numeric" value={formDataState.height || ''} onChange={(e) => handleInputChange('height', e.target.value)} className="h-10 rounded-xl border-border/40 bg-muted/30" required />
+                                        <Input type="number" inputMode="numeric" value={formDataState.height || ''} onChange={(e) => handleInputChange('height', e.target.value)} required />
                                     </div>
                                     <div className="col-span-2 space-y-1.5">
                                         <Label className="text-xs font-medium text-muted-foreground">Data de nascimento</Label>
@@ -151,7 +151,7 @@ export function BodyMeasurementsDialog({ open, onOpenChange, initialStats, onSav
                                                 type="date"
                                                 value={formDataState.birthDate ? new Date(formDataState.birthDate).toISOString().split('T')[0] : ''}
                                                 onChange={(e) => handleInputChange('birthDate', e.target.value)}
-                                                className="h-10 min-w-0 flex-1 rounded-xl border-border/40 bg-muted/30"
+                                                className="min-w-0 flex-1"
                                                 required
                                             />
                                             {formDataState.birthDate && (
@@ -164,7 +164,7 @@ export function BodyMeasurementsDialog({ open, onOpenChange, initialStats, onSav
                                     <div className="space-y-1.5">
                                         <Label className="text-xs font-medium text-muted-foreground">Gênero</Label>
                                         <Select value={formDataState.gender} onValueChange={(val) => handleInputChange('gender', val)}>
-                                            <SelectTrigger className="h-10 rounded-xl border-border/40 bg-muted/30"><SelectValue /></SelectTrigger>
+                                            <SelectTrigger><SelectValue /></SelectTrigger>
                                             <SelectContent>
                                                 <SelectItem value="MALE">Masculino</SelectItem>
                                                 <SelectItem value="FEMALE">Feminino</SelectItem>
@@ -174,7 +174,7 @@ export function BodyMeasurementsDialog({ open, onOpenChange, initialStats, onSav
                                     <div className="space-y-1.5">
                                         <Label className="text-xs font-medium text-muted-foreground">Atividade</Label>
                                         <Select value={formDataState.activityFactor.toString()} onValueChange={(val) => handleInputChange('activityFactor', val)}>
-                                            <SelectTrigger className="h-10 rounded-xl border-border/40 bg-muted/30"><SelectValue /></SelectTrigger>
+                                            <SelectTrigger><SelectValue /></SelectTrigger>
                                             <SelectContent>
                                                 {ACTIVITY_LEVELS.map((level) => (
                                                     <SelectItem key={level.value} value={level.value.toString()}>{level.label}</SelectItem>

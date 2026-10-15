@@ -160,7 +160,7 @@ export function WardrobeImagePicker({ previewImage, color, category, onPreviewCh
                                     value={storeUrl}
                                     onChange={(e) => setStoreUrl(e.target.value)}
                                     onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleImportStore(); } }}
-                                    className="h-11 text-sm pl-9 bg-muted/30 rounded-xl"
+                                    className="text-sm pl-9"
                                 />
                             </div>
                             <Button type="button" onClick={handleImportStore} disabled={importing || !storeUrl.trim()} className="h-10 px-4 gap-2">
@@ -180,7 +180,7 @@ export function WardrobeImagePicker({ previewImage, color, category, onPreviewCh
                                 value={imageUrlInput}
                                 onChange={(e) => setImageUrlInput(e.target.value)}
                                 onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleApplyUrl(); } }}
-                                className="h-11 text-sm pl-9 bg-muted/30 rounded-xl"
+                                className="text-sm pl-9"
                             />
                         </div>
                         <Button type="button" onClick={handleApplyUrl} disabled={!imageUrlInput.trim()} className="h-10 px-4">Aplicar</Button>

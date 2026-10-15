@@ -25,7 +25,7 @@ export function MarketTicker({ initialData }: { initialData: MarketData[] }) {
         return (
           <Card 
             key={item.symbol} 
-            className="p-3 border-border/50 bg-card/50 backdrop-blur-sm flex flex-col justify-between hover:border-primary/20 transition-all"
+            className="p-3 bg-card/50 backdrop-blur-sm flex flex-col justify-between hover:border-primary/20 transition-all"
           >
             <div className="flex justify-between items-start mb-2">
               <span className="eyebrow text-muted-foreground">

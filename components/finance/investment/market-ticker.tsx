@@ -53,7 +53,7 @@ function TickerCard({ item }: { item: MarketItem }) {
     );
 
     return (
-        <Card className="group relative overflow-hidden border border-border/60 bg-card p-4 transition-all duration-300 hover:shadow-md hover:border-primary/30 hover:-translate-y-0.5">
+        <Card className="group relative overflow-hidden border p-4 transition-all duration-300 hover:shadow-md hover:border-primary/30 hover:-translate-y-0.5">
             {/* Subtle gradient on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none" />
 

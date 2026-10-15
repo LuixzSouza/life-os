@@ -138,7 +138,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                         value={model}
                         onChange={(e) => setModel(e.target.value)}
                         placeholder={isLocal ? "ex: llama3.1, qwen2.5" : "ex: gpt-4o-mini"}
-                        className="bg-background border-border/40 font-mono text-sm focus-visible:ring-primary rounded-xl h-12"
+                        className="font-mono text-sm focus-visible:ring-primary"
                         required
                     />
                     {/* Sugestões do provedor selecionado — clique preenche o campo */}
@@ -247,7 +247,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                         name="aiPersona"
                         value={personaText}
                         onChange={(e) => setPersonaText(e.target.value)}
-                        className="relative min-h-[120px] bg-background border-border/40 leading-relaxed p-4 rounded-xl resize-y focus-visible:ring-primary font-medium"
+                        className="relative min-h-[120px] leading-relaxed p-4 resize-y focus-visible:ring-primary font-medium"
                         placeholder={DEFAULT_PERSONA}
                     />
                 </div>

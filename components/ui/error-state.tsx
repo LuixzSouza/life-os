@@ -45,7 +45,7 @@ export function ErrorState({
           <div className="mt-4 flex gap-3">
             {backHref && (
               <Link href={backHref}>
-                <Button variant="ghost" className="">
+                <Button variant="ghost">
                   {backLabel}
                 </Button>
               </Link>

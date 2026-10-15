@@ -33,10 +33,10 @@ export function LanguagesForm({ data, onChange }: { data: PortfolioData; onChang
               value={lang.name}
               onChange={e => update(lang.id, 'name', e.target.value)}
               placeholder="Ex: Inglês"
-              className="h-11 text-sm bg-muted/30 border-border/50 rounded-xl font-bold"
+              className="text-sm font-bold"
             />
             <Select value={lang.level} onValueChange={val => update(lang.id, 'level', val)}>
-              <SelectTrigger className="h-11 w-[150px] text-xs bg-muted/30 border-border/50 rounded-xl font-bold shrink-0">
+              <SelectTrigger className="w-[150px] text-xs font-bold shrink-0">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="rounded-xl">

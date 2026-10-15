@@ -10,7 +10,7 @@ interface TransactionsCardProps {
 
 export function TransactionsCard({ transactions }: TransactionsCardProps) {
   return (
-    <Card className="shadow-sm border-border/50">
+    <Card>
       <CardHeader className="pb-4">
         <CardTitle className="text-sm flex items-center gap-2">
           <Clock className="h-4 w-4 text-muted-foreground" /> Movimentações

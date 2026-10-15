@@ -32,7 +32,7 @@ export function MuscleRecoveryCard({ recovery }: { recovery: MuscleRecovery[] })
   const ready = trained.filter((m) => m.recovery >= 0.9).map((m) => MUSCLE_META[m.group]?.label ?? m.group);
 
   return (
-    <Card className="border-border/40 shadow-sm bg-card">
+    <Card>
       <CardHeader className="pb-3">
         <CardTitle className="text-sm font-semibold text-muted-foreground flex items-center gap-2">
           <HeartPulse className="h-4 w-4 text-primary" />

@@ -80,7 +80,7 @@ export function AccessCard({ item, strength, reused = false, breachCount }: { it
 
   return (
     <>
-      <Card className="group relative flex flex-col h-full bg-card border-border/40 hover:border-primary/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden rounded-2xl">
+      <Card className="group relative flex flex-col h-full hover:border-primary/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
         {/* Faixa decorativa HUD */}
         <div className={cn("absolute top-0 left-0 w-full h-1.5 transition-colors group-hover:h-2", catConfig.bg.replace("/10", "/50"))} />

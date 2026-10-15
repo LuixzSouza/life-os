@@ -482,7 +482,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                 )}
             </DialogTrigger>
 
-            <DialogContent size="xl" className="w-[96vw] h-[88vh] md:h-[660px] p-0 gap-0 overflow-hidden rounded-2xl border-border/40 shadow-2xl flex flex-col md:flex-row">
+            <DialogContent size="xl" className="w-[96vw] h-[88vh] md:h-[660px] p-0 gap-0 overflow-hidden flex flex-col md:flex-row">
 
                 {/* --- ESQUERDA: BUSCA DE ALIMENTOS --- */}
                 <div className={cn(
@@ -546,7 +546,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                 <div className="space-y-1.5">
                                     <Label className="eyebrow text-muted-foreground">Refeição</Label>
                                     <Select value={title} onValueChange={setTitle}>
-                                        <SelectTrigger className="h-11 rounded-xl bg-muted/30 border-border/40"><SelectValue /></SelectTrigger>
+                                        <SelectTrigger><SelectValue /></SelectTrigger>
                                         <SelectContent className="rounded-xl">
                                             {(MEAL_TITLES.includes(title) ? MEAL_TITLES : [title, ...MEAL_TITLES]).map(t => (
                                                 <SelectItem key={t} value={t}>{t}</SelectItem>
@@ -562,7 +562,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                         )}
                                     </Label>
                                     <Select value={effectiveType} onValueChange={(v) => { setType(v as MealType); setTypeTouched(true); }}>
-                                        <SelectTrigger className="h-11 rounded-xl bg-muted/30 border-border/40"><SelectValue /></SelectTrigger>
+                                        <SelectTrigger><SelectValue /></SelectTrigger>
                                         <SelectContent className="rounded-xl">
                                             <SelectItem value="HEALTHY">✅ Saudável</SelectItem>
                                             <SelectItem value="NEUTRAL">⚖️ Moderado</SelectItem>
@@ -610,7 +610,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                                     <Input
                                                         value={quantity}
                                                         onChange={(e) => setQty(food.id, Number(e.target.value.replace(",", ".")) || 0)}
-                                                        className="h-7 w-12 text-center px-1 rounded-lg bg-background border-border/40 font-mono text-sm"
+                                                        className="h-7 w-12 text-center px-1 font-mono text-sm"
                                                     />
                                                     <Button type="button" variant="outline" size="icon" aria-label="Aumentar quantidade" className="h-7 w-7" onClick={() => setQty(food.id, quantity + 1)}>
                                                         <Plus className="h-3 w-3" />
@@ -645,7 +645,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                     </div>
                                     <div className="space-y-1.5">
                                         <Label className="eyebrow text-muted-foreground">Calorias (kcal)</Label>
-                                        <Input type="number" inputMode="numeric" value={manualCals || ""} placeholder="0" onChange={(e) => setManualCals(Number(e.target.value) || 0)} className="h-12 text-lg font-bold font-mono rounded-xl bg-muted/20 border-border/40" />
+                                        <Input type="number" inputMode="numeric" value={manualCals || ""} placeholder="0" onChange={(e) => setManualCals(Number(e.target.value) || 0)} className="text-lg font-bold font-mono" />
                                     </div>
                                 </>
                             )}
@@ -667,15 +667,15 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                 </div>
                                 <div className="grid grid-cols-3 gap-2">
                                     <div className="relative">
-                                        <Input inputMode="decimal" value={protein} onChange={(e) => setProtein(e.target.value)} placeholder="0" className="h-11 pl-9 rounded-xl bg-muted/20 border-border/40 font-mono" />
+                                        <Input inputMode="decimal" value={protein} onChange={(e) => setProtein(e.target.value)} placeholder="0" className="pl-9 font-mono" />
                                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-blue-500">P</span>
                                     </div>
                                     <div className="relative">
-                                        <Input inputMode="decimal" value={carbs} onChange={(e) => setCarbs(e.target.value)} placeholder="0" className="h-11 pl-9 rounded-xl bg-muted/20 border-border/40 font-mono" />
+                                        <Input inputMode="decimal" value={carbs} onChange={(e) => setCarbs(e.target.value)} placeholder="0" className="pl-9 font-mono" />
                                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-emerald-500">C</span>
                                     </div>
                                     <div className="relative">
-                                        <Input inputMode="decimal" value={fat} onChange={(e) => setFat(e.target.value)} placeholder="0" className="h-11 pl-9 rounded-xl bg-muted/20 border-border/40 font-mono" />
+                                        <Input inputMode="decimal" value={fat} onChange={(e) => setFat(e.target.value)} placeholder="0" className="pl-9 font-mono" />
                                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-amber-500">G</span>
                                     </div>
                                 </div>

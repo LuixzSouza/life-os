@@ -149,12 +149,12 @@ export function JobTracker({ jobs, resumes, projects }: JobTrackerProps) {
                                 value={search}
                                 onChange={e => setSearch(e.target.value)}
                                 placeholder="Buscar empresa, cargo ou local..."
-                                className="pl-9 h-10 rounded-xl bg-muted/40 border-border/40 focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-primary/20"
+                                className="pl-9 focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-primary/20"
                             />
                         </div>
 
                         <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortMode)}>
-                            <SelectTrigger className="h-10 min-w-0 flex-1 rounded-xl bg-muted/40 border-border/40 gap-1.5 text-xs sm:flex-none sm:w-[160px]">
+                            <SelectTrigger className="min-w-0 flex-1 gap-1.5 text-xs sm:flex-none sm:w-[160px]">
                                 <ArrowUpDown className="h-3.5 w-3.5 text-muted-foreground shrink-0" /> <SelectValue />
                             </SelectTrigger>
                             <SelectContent className="rounded-xl">

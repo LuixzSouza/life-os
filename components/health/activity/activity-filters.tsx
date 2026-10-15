@@ -22,7 +22,7 @@ export function ActivityFilters({ filter, setFilter, searchTerm, setSearchTerm }
           placeholder="Buscar treino…"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="h-9 rounded-lg border-border/40 bg-background pl-8 text-sm"
+          className="h-9 pl-8 text-sm"
         />
       </div>
       <div className="flex shrink-0 rounded-lg border border-border/40 bg-muted/40 p-0.5">

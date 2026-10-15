@@ -97,7 +97,7 @@ export default async function ResultadoPage({
 
       <PageContainer className="space-y-6">
         {/* NOTA */}
-        <Card className="border-border/40 bg-card shadow-sm">
+        <Card>
           <CardContent className="flex flex-col items-center gap-6 py-8 sm:flex-row sm:justify-around">
             <div className="text-center">
               <p className={cn("text-5xl font-black leading-none", TONE_CLASS[band.tone])}>{attempt.score}</p>
@@ -130,7 +130,7 @@ export default async function ResultadoPage({
             const sorted = [...q.options].sort((a, b) => a.position - b.position);
 
             return (
-              <Card key={q.id} className="border-border/40 bg-card shadow-sm">
+              <Card key={q.id}>
                 <CardContent className="space-y-4 p-5">
                   <div className="flex flex-wrap items-center gap-2">
                     <Badge variant="secondary" className="border-none bg-muted text-muted-foreground">

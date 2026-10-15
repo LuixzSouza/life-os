@@ -216,7 +216,7 @@ export function WeeklyPlanner({ initialData, suggestedGoal = null, tdee = null, 
               step={50}
               value={goal}
               onChange={(e) => setOverride(Number(e.target.value))}
-              className="h-7 w-20 px-2 text-sm font-bold font-mono border-border/40 bg-background"
+              className="h-7 w-20 px-2 text-sm font-bold font-mono"
             />
             <span className="text-xs text-muted-foreground">kcal</span>
             {hasSuggestion && (
@@ -398,7 +398,7 @@ export function WeeklyPlanner({ initialData, suggestedGoal = null, tdee = null, 
           </Card>
 
           {/* Slots do dia */}
-          <Card className="border-border/60 shadow-sm">
+          <Card>
             <CardContent className="p-4 space-y-3">
               {MEAL_TYPES.map((type) => {
                 const slot = activeDayPlan.find(p => p.mealType === type.id);
@@ -491,7 +491,7 @@ function StatCard({
   };
 
   return (
-    <Card className="border-border/40 shadow-sm">
+    <Card>
       <CardContent className="p-4 flex items-center gap-3">
         <div className={cn("p-2 rounded-lg shrink-0", tones[tone])}>
           <Icon className="h-4 w-4" />

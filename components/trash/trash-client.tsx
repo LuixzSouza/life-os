@@ -134,7 +134,7 @@ export function TrashClient({ initial }: { initial: TrashItem[] }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Buscar na lixeira…"
-          className="h-10 pl-9"
+          className="pl-9"
           aria-label="Buscar na lixeira"
         />
       </div>

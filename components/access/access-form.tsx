@@ -185,7 +185,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                             name="client"
                             defaultValue={item?.client ?? ""}
                             placeholder="Ex: Construtora Silva"
-                            className="pl-10 h-12 bg-muted/10 border-border/40 focus-visible:ring-primary/20 rounded-xl font-bold text-sm"
+                            className="pl-10 focus-visible:ring-primary/20 font-bold text-sm"
                             required={accessType === "CLIENT"}
                         />
                     </div>
@@ -204,7 +204,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                         name="title"
                         defaultValue={item?.title}
                         placeholder={isNote ? "Ex: Wi-Fi do escritório" : accessType === "CLIENT" ? "Ex: WP Admin" : "Ex: Netflix"}
-                        className="pl-10 h-12 bg-muted/10 border-border/40 focus-visible:ring-primary/20 rounded-xl font-bold text-sm"
+                        className="pl-10 focus-visible:ring-primary/20 font-bold text-sm"
                         required
                     />
                   </div>
@@ -213,7 +213,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
               <div className="space-y-2">
                   <Label className="text-xs font-medium text-muted-foreground ml-1">Categoria de Segurança</Label>
                   <Select name="category" defaultValue={item?.category ?? (accessType === "CLIENT" ? "WORK" : "SOCIAL")}>
-                    <SelectTrigger className="eyebrow h-12 bg-muted/10 border-border/40 rounded-xl">
+                    <SelectTrigger className="eyebrow">
                         <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="rounded-xl">
@@ -237,7 +237,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                     name="username"
                     defaultValue={item?.username ?? ""}
                     placeholder="admin, root, seu@email.com"
-                    className="pl-10 h-12 bg-muted/10 border-border/40 focus-visible:ring-primary/20 rounded-xl font-mono text-sm"
+                    className="pl-10 focus-visible:ring-primary/20 font-mono text-sm"
                     autoComplete="off"
                   />
               </div>
@@ -261,7 +261,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                           value={password}
                           onChange={(e) => setPassword(e.target.value)}
                           placeholder={isEditing ? "Deixe em branco para manter a atual" : "••••••••"}
-                          className="pl-10 pr-10 h-11 bg-background border-border/40 focus-visible:ring-primary/20 rounded-xl font-mono tracking-widest text-sm"
+                          className="pl-10 pr-10 focus-visible:ring-primary/20 font-mono tracking-widest text-sm"
                           required={!isEditing}
                           autoComplete="new-password"
                       />
@@ -341,7 +341,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
               <Label className="text-xs font-medium text-muted-foreground ml-1">Ponto de Acesso (URL)</Label>
               <div className="relative group">
                 <Globe className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors z-10" />
-                <Input name="url" defaultValue={item?.url ?? ""} placeholder="https://..." className="pl-10 h-11 bg-muted/10 border-border/40 focus-visible:ring-primary/20 rounded-xl font-mono text-xs" />
+                <Input name="url" defaultValue={item?.url ?? ""} placeholder="https://..." className="pl-10 focus-visible:ring-primary/20 font-mono text-xs" />
               </div>
             </div>
 
@@ -355,7 +355,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                   defaultValue={item?.notes ?? ""}
                   placeholder={isNote ? "O que você quer lembrar? Ex: senha do Wi-Fi, código do portão, observações do cliente..." : "Instruções de segurança, backups ou chaves secundárias..."}
                   rows={isNote ? 6 : 3}
-                  className="bg-muted/10 border-border/40 focus-visible:ring-primary/20 rounded-2xl resize-none text-sm font-medium p-4 leading-relaxed"
+                  className="focus-visible:ring-primary/20 resize-none text-sm font-medium p-4 leading-relaxed"
               />
             </div>
 

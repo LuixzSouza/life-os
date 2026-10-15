@@ -596,7 +596,7 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
             onChange={(e) => { setNotes(e.target.value); scheduleSave(); }}
             onPaste={handlePaste}
             placeholder="Anote pontos, decisões, próximos passos... A transcrição da gravação aparece aqui."
-            className="min-h-[240px] rounded-xl bg-muted/20 border-border/40 resize-y p-4 text-[15px] leading-7"
+            className="min-h-[240px] resize-y p-4 text-[15px] leading-7"
           />
           <p className="text-[10px] text-muted-foreground/70 text-right">{notes.length} caracteres</p>
         </div>
@@ -685,7 +685,7 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
                       onChange={(e) => setCaption(i, e.target.value)}
                       onBlur={saveCaption}
                       placeholder="Legenda..."
-                      className="h-7 rounded-lg border-border/40 bg-muted/20 px-2 text-[11px]"
+                      className="h-7 px-2 text-[11px]"
                     />
                   </div>
                 ))}
@@ -810,7 +810,7 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
               onChange={(e) => setCaption(lightbox, e.target.value)}
               onBlur={saveCaption}
               placeholder="Adicionar legenda..."
-              className="h-9 flex-1 rounded-lg border-white/20 bg-white/10 px-3 text-sm text-white placeholder:text-white/50 focus-visible:ring-white/40"
+              className="h-9 flex-1 border-white/20 bg-white/10 px-3 text-sm text-white placeholder:text-white/50 focus-visible:ring-white/40"
             />
             {images.length > 1 && (
               <span className="shrink-0 rounded-full bg-white/10 px-3 py-1.5 text-xs font-medium text-white">

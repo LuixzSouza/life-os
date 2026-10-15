@@ -13,7 +13,7 @@ interface VolumeChartProps {
 
 export function VolumeChart({ data }: VolumeChartProps) {
   return (
-    <Card className="border-border/40 shadow-sm bg-card">
+    <Card>
       <CardHeader className="pb-4">
         <CardTitle className="text-sm font-semibold text-muted-foreground flex items-center gap-2">
           <TrendingUp className="h-4 w-4 text-primary" />

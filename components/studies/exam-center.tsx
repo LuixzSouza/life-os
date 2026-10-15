@@ -184,7 +184,7 @@ export function ExamCenter({ exams, subjects, poolCount }: ExamCenterProps) {
               return (
                 <Card
                   key={exam.id}
-                  className="border-border/40 bg-card shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+                  className="transition-all hover:border-primary/30 hover:shadow-md"
                 >
                   <CardContent className="space-y-3 p-5">
                     <div className="flex items-start justify-between gap-2">
@@ -250,7 +250,7 @@ export function ExamCenter({ exams, subjects, poolCount }: ExamCenterProps) {
       {finished.length > 0 && (
         <div className="space-y-3">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">Sua evolução</h2>
-          <Card className="border-border/40 bg-card shadow-sm">
+          <Card>
             <CardContent className="divide-y divide-border/40 p-0">
               {finished.slice(0, 10).map((a) => (
                 <button

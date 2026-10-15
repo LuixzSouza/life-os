@@ -13,7 +13,7 @@ interface InvoicesCardProps {
 
 export function InvoicesCard({ invoices, today, formatCurrency }: InvoicesCardProps) {
   return (
-    <Card className="shadow-sm border-border/50">
+    <Card>
       <CardHeader className="flex flex-row items-center justify-between gap-2 pb-4">
         <CardTitle className="text-sm flex min-w-0 items-center gap-2">
           <Landmark className="h-4 w-4 shrink-0 text-muted-foreground" />

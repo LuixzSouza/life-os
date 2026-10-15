@@ -12,7 +12,7 @@ interface MuscleFrequencyCardProps {
 
 export function MuscleFrequencyCard({ distribution }: MuscleFrequencyCardProps) {
   return (
-    <Card className="border-border/40 shadow-sm bg-card overflow-hidden">
+    <Card className="overflow-hidden">
       <CardHeader className="pb-3 border-b border-border/40 bg-muted/10">
         <CardTitle className="text-sm font-semibold text-muted-foreground flex items-center gap-2">
           <BicepsFlexed className="h-4 w-4 text-primary" />

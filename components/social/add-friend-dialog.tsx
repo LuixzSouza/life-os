@@ -264,7 +264,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                       <Label htmlFor="imageUrl" className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
                         <LinkIcon className="h-3 w-3" /> Ou cole uma URL de imagem
                       </Label>
-                      <Input id="imageUrl" name="imageUrl" value={formData.imageUrl?.startsWith("data:") ? "" : (formData.imageUrl || "")} onChange={handleChange} placeholder="https://..." className="rounded-lg h-10 bg-background font-mono text-xs" />
+                      <Input id="imageUrl" name="imageUrl" value={formData.imageUrl?.startsWith("data:") ? "" : (formData.imageUrl || "")} onChange={handleChange} placeholder="https://..." className="font-mono text-xs" />
                       <p className="text-[10px] text-muted-foreground">
                         {formData.imageUrl?.startsWith("data:") ? "Foto enviada do dispositivo. Cole uma URL para substituir." : "A foto fica salva junto do contato."}
                       </p>
@@ -274,18 +274,18 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2 col-span-2 md:col-span-1">
                       <Label htmlFor="name" className="text-xs font-semibold text-muted-foreground">Nome Completo <span className="text-rose-500">*</span></Label>
-                      <Input id="name" name="name" value={formData.name || ""} onChange={handleChange} required placeholder="Ex: João Silva" className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="name" name="name" value={formData.name || ""} onChange={handleChange} required placeholder="Ex: João Silva" />
                     </div>
                     <div className="space-y-2 col-span-2 md:col-span-1">
                       <Label htmlFor="nickname" className="text-xs font-semibold text-muted-foreground">Apelido</Label>
-                      <Input id="nickname" name="nickname" value={formData.nickname || ""} onChange={handleChange} placeholder="Ex: Jão" className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="nickname" name="nickname" value={formData.nickname || ""} onChange={handleChange} placeholder="Ex: Jão" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label className="text-xs font-semibold text-muted-foreground">Círculo de Proximidade</Label>
                     <Select value={formData.proximity} onValueChange={(v) => handleSelectChange("proximity", v)}>
-                      <SelectTrigger className="rounded-lg h-10 bg-muted/20">
+                      <SelectTrigger>
                         <SelectValue placeholder="Selecione o nível" />
                       </SelectTrigger>
                       <SelectContent className="rounded-lg">
@@ -303,33 +303,33 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="phone" className="text-xs font-semibold text-muted-foreground">WhatsApp / Telefone</Label>
-                      <Input id="phone" name="phone" value={formData.phone || ""} onChange={handleChange} placeholder="(00) 00000-0000" className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="phone" name="phone" value={formData.phone || ""} onChange={handleChange} placeholder="(00) 00000-0000" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-xs font-semibold text-muted-foreground">Email</Label>
-                      <Input id="email" name="email" type="email" value={formData.email || ""} onChange={handleChange} placeholder="contato@email.com" className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="email" name="email" type="email" value={formData.email || ""} onChange={handleChange} placeholder="contato@email.com" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="jobTitle" className="text-xs font-semibold text-muted-foreground">Cargo / Ocupação</Label>
-                      <Input id="jobTitle" name="jobTitle" value={formData.jobTitle || ""} onChange={handleChange} placeholder="Ex: Engenheiro de Software" className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="jobTitle" name="jobTitle" value={formData.jobTitle || ""} onChange={handleChange} placeholder="Ex: Engenheiro de Software" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="company" className="text-xs font-semibold text-muted-foreground">Empresa</Label>
-                      <Input id="company" name="company" value={formData.company || ""} onChange={handleChange} placeholder="Ex: Google" className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="company" name="company" value={formData.company || ""} onChange={handleChange} placeholder="Ex: Google" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="instagram" className="text-xs font-semibold text-muted-foreground">Instagram</Label>
-                      <Input id="instagram" name="instagram" value={formData.instagram || ""} onChange={handleChange} placeholder="@usuario" className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="instagram" name="instagram" value={formData.instagram || ""} onChange={handleChange} placeholder="@usuario" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="linkedin" className="text-xs font-semibold text-muted-foreground">LinkedIn (URL)</Label>
-                      <Input id="linkedin" name="linkedin" value={formData.linkedin || ""} onChange={handleChange} placeholder="https://linkedin.com/in/..." className="rounded-lg h-10 bg-muted/20 font-mono text-xs" />
+                      <Input id="linkedin" name="linkedin" value={formData.linkedin || ""} onChange={handleChange} placeholder="https://linkedin.com/in/..." className="font-mono text-xs" />
                     </div>
                   </div>
                 </TabsContent>
@@ -347,7 +347,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                         onChange={(e) => setTagInput(e.target.value)}
                         onKeyDown={handleAddTag}
                         placeholder="Ex: Cliente, Faculdade, Futebol..."
-                        className="bg-background rounded-lg h-9 text-sm"
+                        className="h-9 text-sm"
                       />
                       <Button type="button" variant="secondary" onClick={handleAddTag} className="h-9 px-4">Adicionar</Button>
                     </div>
@@ -370,11 +370,11 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="birthday" className="text-xs font-semibold text-muted-foreground">Data de Aniversário</Label>
-                      <Input id="birthday" name="birthday" type="date" value={formData.birthday || ""} onChange={handleChange} className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="birthday" name="birthday" type="date" value={formData.birthday || ""} onChange={handleChange} />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="pixKey" className="text-xs font-semibold text-muted-foreground">Chave Pix</Label>
-                      <Input id="pixKey" name="pixKey" value={formData.pixKey || ""} onChange={handleChange} placeholder="CPF, Email, Celular..." className="rounded-lg h-10 bg-muted/20" />
+                      <Input id="pixKey" name="pixKey" value={formData.pixKey || ""} onChange={handleChange} placeholder="CPF, Email, Celular..." />
                     </div>
                   </div>
 
@@ -382,14 +382,14 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                     <Label htmlFor="giftIdeas" className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
                       <Gift className="h-3.5 w-3.5 text-purple-500" /> Ideias de Presente
                     </Label>
-                    <Input id="giftIdeas" name="giftIdeas" value={formData.giftIdeas || ""} onChange={handleChange} placeholder="Ex: Livros de ficção, vinho, fone..." className="rounded-lg h-10 bg-muted/20" />
+                    <Input id="giftIdeas" name="giftIdeas" value={formData.giftIdeas || ""} onChange={handleChange} placeholder="Ex: Livros de ficção, vinho, fone..." />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="address" className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
                       <MapPin className="h-3.5 w-3.5 text-rose-500" /> Endereço
                     </Label>
-                    <Input id="address" name="address" value={formData.address || ""} onChange={handleChange} placeholder="Rua, bairro, cidade..." className="rounded-lg h-10 bg-muted/20" />
+                    <Input id="address" name="address" value={formData.address || ""} onChange={handleChange} placeholder="Rua, bairro, cidade..." />
                   </div>
 
                   <div className="space-y-2">
@@ -400,7 +400,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                       value={formData.notes || ""}
                       onChange={handleChange}
                       placeholder="Como vocês se conheceram? Gostos pessoais, alergias a comidas, etc."
-                      className="resize-none h-24 rounded-xl bg-muted/20 p-4 text-sm"
+                      className="resize-none h-24 p-4 text-sm"
                     />
                   </div>
                 </TabsContent>

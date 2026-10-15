@@ -93,7 +93,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
                 value={formData.tursoUrl}
                 onChange={(e) => setFormData({ ...formData, tursoUrl: e.target.value })}
                 placeholder="libsql://seu-banco.turso.io"
-                className="bg-background font-mono text-xs border-border h-10"
+                className="font-mono text-xs"
               />
             </div>
             <div className="grid gap-1.5">
@@ -106,7 +106,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
                 value={formData.tursoToken}
                 onChange={(e) => setFormData({ ...formData, tursoToken: e.target.value })}
                 placeholder="eyJhbGciOi..."
-                className="bg-background font-mono text-xs border-border h-10"
+                className="font-mono text-xs"
               />
               <p className="text-[10px] text-amber-600/90">
                 ⚠️ O token começa com <code>eyJ…</code> — não é a URL. Gere com{" "}
@@ -140,7 +140,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
                   value={formData.storagePath}
                   onChange={(e) => setFormData({ ...formData, storagePath: e.target.value })}
                   placeholder="Ex: C:\LifeOS_Data"
-                  className="pl-9 bg-background font-mono text-xs border-border h-10"
+                  className="pl-9 font-mono text-xs"
                 />
               </div>
               <div className="shrink-0">
@@ -173,7 +173,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
               value={formData.tursoUrl}
               onChange={(e) => setFormData({ ...formData, tursoUrl: e.target.value })}
               placeholder="libsql://seu-banco.turso.io"
-              className="bg-background font-mono text-xs border-border h-10"
+              className="font-mono text-xs"
             />
           </div>
           <div className="grid gap-1.5">
@@ -186,7 +186,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
               value={formData.tursoToken}
               onChange={(e) => setFormData({ ...formData, tursoToken: e.target.value })}
               placeholder="eyJhbGciOi..."
-              className="bg-background font-mono text-xs border-border h-10"
+              className="font-mono text-xs"
             />
             <p className="text-[10px] text-amber-600/90">
               ⚠️ O token começa com <code>eyJ…</code> — gere com{" "}
@@ -376,7 +376,7 @@ function PostgresPanel({
           value={formData.pgUrl}
           onChange={(e) => setFormData({ ...formData, pgUrl: e.target.value })}
           placeholder="postgresql://usuario:senha@host:5432/banco"
-          className="bg-background font-mono text-xs border-border h-10"
+          className="font-mono text-xs"
         />
         {looksLikeApiKey ? (
           <p className="text-[10px] text-rose-500">
@@ -451,7 +451,7 @@ function MysqlPanel({
           value={formData.mysqlUrl}
           onChange={(e) => setFormData({ ...formData, mysqlUrl: e.target.value })}
           placeholder="mysql://usuario:senha@host:3306/banco"
-          className="bg-background font-mono text-xs border-border h-10"
+          className="font-mono text-xs"
         />
         {looksLikeApiKey ? (
           <p className="text-[10px] text-rose-500">
@@ -510,7 +510,7 @@ function LocalDbPanel({
             value={formData.storagePath}
             onChange={(e) => setFormData({ ...formData, storagePath: e.target.value })}
             placeholder="Ex: C:\LifeOS_Data  ou  C:\LifeOS_Data\life_os.db"
-            className="pl-9 bg-background font-mono text-xs border-border h-10"
+            className="pl-9 font-mono text-xs"
           />
         </div>
         <div className="shrink-0">
@@ -560,9 +560,9 @@ function WorkPreferences({
       <div className="space-y-2">
         <Label>Horário de Trabalho</Label>
         <div className="flex items-center gap-2">
-          <Input type="time" value={formData.workStart} onChange={(e) => setFormData({ ...formData, workStart: e.target.value })} className="bg-muted/30" />
+          <Input type="time" value={formData.workStart} onChange={(e) => setFormData({ ...formData, workStart: e.target.value })} />
           <span className="text-muted-foreground text-sm">até</span>
-          <Input type="time" value={formData.workEnd} onChange={(e) => setFormData({ ...formData, workEnd: e.target.value })} className="bg-muted/30" />
+          <Input type="time" value={formData.workEnd} onChange={(e) => setFormData({ ...formData, workEnd: e.target.value })} />
         </div>
       </div>
       <div className="space-y-2">

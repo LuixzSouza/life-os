@@ -19,7 +19,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
 
     if (!hasBase) {
         return (
-            <Card className="border-dashed border-border/60 bg-muted/10">
+            <Card className="border-dashed bg-muted/10">
                 <CardContent className="flex flex-col items-center justify-center text-center py-12 gap-3">
                     <div className="p-3 rounded-full bg-primary/10 text-primary">
                         <Sparkles className="h-6 w-6" />
@@ -72,7 +72,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
                 {/* PESO IDEAL / FAIXA SAUDÁVEL */}
-                <Card className="border-border/40 bg-card shadow-sm">
+                <Card>
                     <CardHeader className="pb-2">
                         <CardTitle className="text-xs uppercase font-bold text-muted-foreground flex items-center gap-2">
                             <Scale className="h-4 w-4 text-primary" /> Peso Ideal
@@ -103,7 +103,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
                 </Card>
 
                 {/* GORDURA ESTIMADA (sem fita) */}
-                <Card className="border-border/40 bg-card shadow-sm">
+                <Card>
                     <CardHeader className="pb-2">
                         <CardTitle className="text-xs uppercase font-bold text-muted-foreground flex items-center gap-2">
                             <Activity className="h-4 w-4 text-primary" /> Gordura Estimada
@@ -121,7 +121,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
                 </Card>
 
                 {/* COMPOSIÇÃO RÁPIDA */}
-                <Card className="border-border/40 bg-card shadow-sm">
+                <Card>
                     <CardHeader className="pb-2">
                         <CardTitle className="text-xs uppercase font-bold text-muted-foreground flex items-center gap-2">
                             <Dumbbell className="h-4 w-4 text-primary" /> Composição
@@ -144,7 +144,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
                 </Card>
 
                 {/* MACROS SUGERIDOS */}
-                <Card className="border-border/40 bg-card shadow-sm">
+                <Card>
                     <CardHeader className="pb-2">
                         <CardTitle className="text-xs uppercase font-bold text-muted-foreground flex items-center gap-2">
                             <Beef className="h-4 w-4 text-primary" /> Macros (manutenção)
@@ -159,7 +159,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
                 </Card>
 
                 {/* FREQUÊNCIA CARDÍACA + ZONAS */}
-                <Card className="border-border/40 bg-card shadow-sm md:col-span-2">
+                <Card className="md:col-span-2">
                     <CardHeader className="pb-2">
                         <CardTitle className="text-xs uppercase font-bold text-muted-foreground flex items-center gap-2">
                             <HeartPulse className="h-4 w-4 text-rose-500" /> Zonas de Treino (FC)

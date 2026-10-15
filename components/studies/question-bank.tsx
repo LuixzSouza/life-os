@@ -209,7 +209,7 @@ export function QuestionBank({ questions, subjects }: QuestionBankProps) {
             return (
               <Card
                 key={q.id}
-                className="border-border/40 bg-card shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+                className="transition-all hover:border-primary/30 hover:shadow-md"
               >
                 <CardContent className="p-4 sm:p-5">
                   <div className="flex items-start justify-between gap-3">

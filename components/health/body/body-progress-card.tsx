@@ -38,7 +38,7 @@ export function BodyProgressCard({ progress }: { progress: BodyProgressInfo | nu
     const changed = progress.items.filter((i) => Math.abs(i.to - i.from) >= 0.05);
 
     return (
-        <Card className="border-border/40 bg-card shadow-sm transition-all hover:shadow-md">
+        <Card className="transition-all hover:shadow-md">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
                 <CardTitle className="flex items-center gap-2 text-sm font-semibold">
                     <div className="rounded-lg bg-violet-500/10 p-1.5 text-violet-500"><GitCompareArrows className="h-4 w-4" /></div>

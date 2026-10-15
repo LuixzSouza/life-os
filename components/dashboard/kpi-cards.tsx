@@ -39,7 +39,7 @@ export function KpiCards({
     <div className="grid gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
       {/* Saldo Pessoal */}
       <Reveal delay={0} className="h-full">
-        <Card className="h-full bg-card shadow-sm border-border/50 hover:shadow-md hover:border-primary/30 transition-all">
+        <Card className="h-full hover:shadow-md hover:border-primary/30 transition-all">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-xs font-medium text-muted-foreground">Saldo Pessoal</CardTitle>
             <DollarSign className="h-4 w-4 text-muted-foreground/50" />
@@ -83,7 +83,7 @@ export function KpiCards({
 
       {/* Tarefas */}
       <Reveal delay={0.12} className="h-full">
-        <Card className="h-full bg-card shadow-sm border-border/50 hover:shadow-md hover:border-primary/30 transition-all">
+        <Card className="h-full hover:shadow-md hover:border-primary/30 transition-all">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-xs font-medium text-muted-foreground">Tarefas</CardTitle>
             <CheckSquare className="h-4 w-4 text-muted-foreground/50" />
@@ -102,7 +102,7 @@ export function KpiCards({
 
       {/* Tempo de Foco */}
       <Reveal delay={0.18} className="h-full">
-        <Card className="h-full bg-card shadow-sm border-border/50 hover:shadow-md hover:border-primary/30 transition-all">
+        <Card className="h-full hover:shadow-md hover:border-primary/30 transition-all">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-xs font-medium text-muted-foreground">Tempo de Foco</CardTitle>
             <BookOpen className="h-4 w-4 text-muted-foreground/50" />
@@ -121,7 +121,7 @@ export function KpiCards({
 
       {/* Próximo Evento */}
       <Reveal delay={0.24} className="h-full">
-        <Card className="h-full bg-primary/5 border-primary/20 shadow-sm relative overflow-hidden group">
+        <Card className="h-full bg-primary/5 border-primary/20 relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
             <CalendarIcon className="h-16 w-16 text-primary" />
           </div>

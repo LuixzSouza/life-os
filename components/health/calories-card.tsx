@@ -57,7 +57,7 @@ export function CaloriesCard({
     ];
 
     return (
-        <Card className="flex h-full flex-col rounded-2xl border-border/40 bg-card shadow-sm transition-all hover:shadow-md">
+        <Card className="flex h-full flex-col transition-all hover:shadow-md">
 
             <CardHeader className="flex flex-row items-center justify-between gap-2 space-y-0 p-5 pb-3">
                 <div className="flex min-w-0 items-center gap-2.5">

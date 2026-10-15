@@ -112,7 +112,7 @@ export function WardrobeFormInner({ mode, initialData, onSuccess, onCancel }: { 
                                 <Input
                                     value={name} onChange={(e) => setName(e.target.value)}
                                     placeholder="Ex: Jaqueta Jeans Vintage, Camiseta Preta..."
-                                    className="h-12 bg-muted/20 border-border/50 rounded-xl text-base"
+                                    className="text-base"
                                     required
                                 />
                             </div>
@@ -179,20 +179,20 @@ export function WardrobeFormInner({ mode, initialData, onSuccess, onCancel }: { 
                             <div className="grid grid-cols-2 gap-4 pt-2">
                                 <div className="space-y-2">
                                     <Label className="text-xs font-semibold text-muted-foreground">Marca</Label>
-                                    <Input value={brand} onChange={(e) => setBrand(e.target.value)} placeholder="Ex: Zara, Nike..." className="h-10 bg-muted/20 rounded-lg" />
+                                    <Input value={brand} onChange={(e) => setBrand(e.target.value)} placeholder="Ex: Zara, Nike..." />
                                 </div>
                                 <div className="space-y-2">
                                     <Label className="text-xs font-semibold text-muted-foreground">Tamanho</Label>
-                                    <Input value={size} onChange={(e) => setSize(e.target.value)} placeholder="P, M, 42..." className="h-10 bg-muted/20 rounded-lg" />
+                                    <Input value={size} onChange={(e) => setSize(e.target.value)} placeholder="P, M, 42..." />
                                 </div>
                                 <div className="space-y-2">
                                     <Label className="text-xs font-semibold text-muted-foreground">Preço Pago (R$)</Label>
-                                    <Input type="number" step="0.01" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="0.00" className="h-10 bg-muted/20 rounded-lg" />
+                                    <Input type="number" step="0.01" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="0.00" />
                                 </div>
                                 <div className="space-y-2">
                                     <Label className="text-xs font-semibold text-muted-foreground">Status Atual</Label>
                                     <Select value={status} onValueChange={(val) => setStatus(val as WardrobeStatus)}>
-                                        <SelectTrigger className="h-10 bg-muted/20 rounded-lg border-border/50"><SelectValue /></SelectTrigger>
+                                        <SelectTrigger><SelectValue /></SelectTrigger>
                                         <SelectContent className="rounded-xl">
                                             <SelectItem value="IN_CLOSET"><span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-emerald-500"/>Disponível</span></SelectItem>
                                             <SelectItem value="LAUNDRY"><span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-500"/>Lavando</span></SelectItem>
@@ -210,7 +210,7 @@ export function WardrobeFormInner({ mode, initialData, onSuccess, onCancel }: { 
 
                 {/* Footer Fixo */}
                 <div className="p-4 md:p-6 border-t border-border/40 bg-muted/5 flex justify-end gap-3 shrink-0">
-                    <Button type="button" variant="ghost" onClick={onCancel} className="">Cancelar</Button>
+                    <Button type="button" variant="ghost" onClick={onCancel}>Cancelar</Button>
                     <Button form="wardrobe-form" type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-[140px] h-10 font-semibold shadow-sm">
                         {isLoading ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
                         {mode === 'create' ? "Salvar Peça" : "Salvar Edição"}

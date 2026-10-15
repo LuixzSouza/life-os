@@ -167,7 +167,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
               type="number" 
               step="0.01" 
               placeholder="0.0" 
-              className="font-mono text-2xl h-14 pl-4 pr-10 bg-muted/20 border-border/60 focus:border-primary/50 font-bold transition-all"
+              className="font-mono text-2xl h-14 pl-4 pr-10 focus:border-primary/50 font-bold transition-all"
               value={distance}
               onChange={(e) => setDistance(e.target.value)}
               required
@@ -185,7 +185,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
             <Input 
               type="number" 
               placeholder="00" 
-              className="font-mono text-2xl h-14 pl-4 pr-12 bg-muted/20 border-border/60 focus:border-primary/50 font-bold transition-all"
+              className="font-mono text-2xl h-14 pl-4 pr-12 focus:border-primary/50 font-bold transition-all"
               value={duration}
               onChange={(e) => setDuration(e.target.value)}
               required
@@ -250,7 +250,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
             <Navigation className="h-3 w-3" /> Terreno
           </Label>
           <Select value={surface} onValueChange={setSurface}>
-            <SelectTrigger className="h-9 text-xs bg-background border-border/60 focus:ring-primary/20">
+            <SelectTrigger className="h-9 text-xs focus:ring-primary/20">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -267,7 +267,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
             <Footprints className="h-3 w-3" /> Tênis
           </Label>
           <Select value={shoes} onValueChange={setShoes}>
-            <SelectTrigger className="h-9 text-xs bg-background border-border/60 focus:ring-primary/20">
+            <SelectTrigger className="h-9 text-xs focus:ring-primary/20">
               <SelectValue placeholder="Selecione..." />
             </SelectTrigger>
             <SelectContent>
@@ -288,7 +288,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
         <Label className="eyebrow text-muted-foreground">Notas</Label>
         <Textarea 
           placeholder="Sensações, clima, dor..." 
-          className="resize-none h-20 text-xs bg-background border-border/60 focus-visible:ring-primary/20 leading-relaxed"
+          className="resize-none h-20 text-xs focus-visible:ring-primary/20 leading-relaxed"
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
         />

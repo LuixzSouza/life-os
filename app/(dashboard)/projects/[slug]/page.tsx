@@ -301,7 +301,7 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   name="q" placeholder="Buscar tarefas..." defaultValue={searchQuery}
-                  className="pl-9 h-10 rounded-xl bg-muted/40 border-border/40 focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-primary/20"
+                  className="pl-9 focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-primary/20"
                 />
                 <input type="hidden" name="filter" value={currentFilter} />
                 <input type="hidden" name="sort" value={sortBy} />

@@ -99,7 +99,7 @@ export function ExamCountdown() {
   // Estado vazio: um convite discreto a cadastrar a primeira prova.
   if (exams.length === 0) {
     return (
-      <Card className="border-border/50 bg-card shadow-sm">
+      <Card>
         <CardContent className="flex items-center justify-between gap-3 p-4">
           <div className="flex items-center gap-3">
             <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary/10 text-primary">
@@ -117,7 +117,7 @@ export function ExamCountdown() {
   }
 
   return (
-    <Card className="border-border/50 bg-card shadow-sm">
+    <Card>
       <CardContent className="p-4">
         <div className="mb-3 flex items-center justify-between gap-2">
           <p className="flex items-center gap-2 text-sm font-semibold">

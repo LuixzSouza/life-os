@@ -43,13 +43,13 @@ const SkillCategory = ({ title, category, data, onAdd, onRemove, onUpdate }: Ski
             value={skill.name} 
             onChange={(e) => onUpdate(category, index, "name", e.target.value)} 
             placeholder="Ex: React"
-            className="h-10 text-sm bg-background border-border/50 rounded-xl shadow-inner font-medium"
+            className="text-sm shadow-inner font-medium"
           />
           <Select 
             value={skill.proficiency} 
             onValueChange={(val) => onUpdate(category, index, "proficiency", val)}
           >
-            <SelectTrigger className="h-10 w-[130px] text-xs bg-background border-border/50 rounded-xl shadow-inner font-bold">
+            <SelectTrigger className="w-[130px] text-xs shadow-inner font-bold">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="rounded-xl">
@@ -106,7 +106,7 @@ const SoftSkills = ({ data, onChange }: SkillsFormProps) => {
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addTag(); } }}
           placeholder="Ex: Trabalho em equipe (Enter para adicionar)"
-          className="h-10 text-sm bg-background border-border/50 rounded-xl shadow-inner font-medium"
+          className="text-sm shadow-inner font-medium"
         />
         <Button size="icon" variant="ghost" aria-label="Adicionar" className="h-10 w-10 shrink-0 bg-background shadow-sm hover:bg-primary/10 hover:text-primary" onClick={addTag}>
           <Plus className="h-4 w-4" />

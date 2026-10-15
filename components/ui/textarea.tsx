@@ -28,7 +28,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           
           // 1. Default: Padding equilibrado para inputs de formulário
           variant === "default" && [
-            "px-4 py-3.5 rounded-xl border border-input bg-background shadow-sm",
+            "px-4 py-3.5 rounded-lg border border-border/60 bg-muted/20",
             "hover:border-primary/30 focus-visible:ring-2 focus-visible:ring-primary/20 focus-visible:border-primary"
           ],
 

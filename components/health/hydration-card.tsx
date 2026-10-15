@@ -58,7 +58,7 @@ export function HydrationCard({ total, goal = 3000 }: HydrationCardProps) {
     };
 
     return (
-        <Card className="relative flex h-full flex-col overflow-hidden rounded-2xl border-border/40 bg-card shadow-sm transition-all hover:shadow-md">
+        <Card className="relative flex h-full flex-col overflow-hidden transition-all hover:shadow-md">
 
             {/* Nível "líquido" de fundo acompanha o progresso do dia */}
             <div
@@ -124,7 +124,7 @@ export function HydrationCard({ total, goal = 3000 }: HydrationCardProps) {
                                 value={customAmount}
                                 onChange={(e) => setCustomAmount(e.target.value)}
                                 onKeyDown={(e) => { if (e.key === "Enter") handleAddWater(Number(customAmount)); }}
-                                className="h-10 rounded-xl border-border/40 bg-muted/30 pr-9 text-sm tabular-nums"
+                                className="pr-9 text-sm tabular-nums"
                             />
                             <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-semibold text-muted-foreground/50">ML</span>
                         </div>

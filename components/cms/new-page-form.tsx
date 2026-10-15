@@ -44,7 +44,7 @@ export function NewPageForm({
 
   return (
     <div className="max-w-xl mx-auto py-10">
-      <Card className="border-border/40 shadow-sm rounded-2xl bg-card overflow-hidden">
+      <Card className="overflow-hidden">
         <CardHeader className="bg-primary/5 border-b border-border/40 p-8 text-center">
           <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4 border border-primary/20">
             <Plus className="h-6 w-6" />

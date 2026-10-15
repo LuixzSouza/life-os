@@ -41,7 +41,7 @@ export function TaskProperties({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-1">
         <PropertyRow icon={LayoutTemplate} label="Status">
           <Select value={status} onValueChange={setStatus}>
-            <SelectTrigger className="h-11 border-border/40 bg-background shadow-sm rounded-xl font-semibold text-sm">
+            <SelectTrigger className="font-semibold text-sm">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="rounded-xl">
@@ -55,7 +55,7 @@ export function TaskProperties({
 
         <PropertyRow icon={Flag} label="Prioridade">
           <Select value={priority} onValueChange={setPriority}>
-            <SelectTrigger className="h-11 border-border/40 bg-background shadow-sm rounded-xl font-semibold text-sm">
+            <SelectTrigger className="font-semibold text-sm">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="rounded-xl">

@@ -29,7 +29,7 @@ export function StepReview({ formData, dbFromEnv }: StepReviewProps) {
 
   return (
     <div className="space-y-6 animate-in slide-in-from-right-8 fade-in duration-300">
-      <Card className="p-6 bg-muted/20 border-border border-dashed">
+      <Card className="p-6 bg-muted/20 border-dashed">
         <div className="flex items-center gap-4 mb-6">
           <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl border border-primary/20">
             {formData.name.substring(0, 2).toUpperCase() || "??"}

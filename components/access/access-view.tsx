@@ -130,7 +130,7 @@ export function AccessView({ initialItems, audit }: { initialItems: AccessItem[]
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
           <Input
             placeholder="Pesquisar no cofre…"
-            className="pl-10 h-11 bg-muted/20 border-border/40 focus-visible:ring-primary/20 rounded-xl transition-all"
+            className="pl-10 focus-visible:ring-primary/20 transition-all"
             value={search}
             onChange={handleSearchChange}
           />
@@ -139,7 +139,7 @@ export function AccessView({ initialItems, audit }: { initialItems: AccessItem[]
         <div className="flex w-full md:w-auto items-center gap-3 justify-end flex-wrap">
           {/* Filtro por categoria */}
           <Select value={categoryFilter} onValueChange={(v) => { setCategoryFilter(v); setCurrentPage(1); }}>
-            <SelectTrigger className="h-10 w-[150px] rounded-xl border-border/40 bg-muted/10 text-xs font-medium">
+            <SelectTrigger className="w-[150px] text-xs font-medium">
               <Filter className="h-3.5 w-3.5 mr-1 text-muted-foreground" />
               <SelectValue placeholder="Categoria" />
             </SelectTrigger>
@@ -394,7 +394,7 @@ function EmptyState({ isSearch, type }: { isSearch: boolean; type: "PERSONAL" | 
         ? "Cadastre as credenciais de servidores e painéis dos seus clientes."
         : "Anote textos e lembretes rápidos — senha do Wi-Fi, códigos, observações. Sem senha, só pra lembrar.";
   return (
-    <Card className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-border/60 bg-muted/5 py-20 animate-in fade-in zoom-in-95 duration-500">
+    <Card className="flex flex-col items-center justify-center border-2 border-dashed bg-muted/5 py-20 animate-in fade-in zoom-in-95 duration-500">
       <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-border/60 bg-background shadow-sm">
         {isSearch ? (
           <Search className="h-7 w-7 text-muted-foreground" />

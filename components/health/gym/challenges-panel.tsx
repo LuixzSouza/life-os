@@ -122,7 +122,7 @@ export function ChallengesPanel({ challenges }: { challenges: SerializedChalleng
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {CHALLENGE_TEMPLATES.map((tpl) => (
-            <Card key={tpl.key} className="group border-border/40 bg-card rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all">
+            <Card key={tpl.key} className="group hover:shadow-md hover:border-primary/30 transition-all">
               <CardContent className="p-5 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="h-10 w-10 rounded-xl flex items-center justify-center text-lg" style={{ backgroundColor: `${tpl.color}1a` }}>
@@ -442,7 +442,7 @@ function CustomChallengeDialog({ open, onOpenChange, onCreated }: { open: boolea
           </div>
         </DialogBody>
         <DialogFooter>
-          <Button variant="outline" onClick={() => onOpenChange(false)} className="">Cancelar</Button>
+          <Button variant="outline" onClick={() => onOpenChange(false)}>Cancelar</Button>
           <Button onClick={submit} disabled={saving || !title.trim()} className="gap-1.5">
             <Plus className="h-4 w-4" /> {saving ? "Criando..." : "Criar desafio"}
           </Button>

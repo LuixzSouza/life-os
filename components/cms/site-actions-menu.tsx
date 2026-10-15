@@ -79,11 +79,11 @@ export function SiteActionsMenu({ site }: { site: { id: string; name: string; ur
             <DialogBody className="space-y-4">
               <div className="space-y-2">
                 <label className="text-xs font-semibold text-muted-foreground">Nome do container</label>
-                <Input name="name" defaultValue={site.name} required className="h-12 rounded-xl bg-muted/30 border-border/50 shadow-inner font-bold focus-visible:ring-primary/20" />
+                <Input name="name" defaultValue={site.name} required className="shadow-inner font-bold focus-visible:ring-primary/20" />
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-semibold text-muted-foreground flex items-center gap-2"><Globe className="h-3 w-3"/> Domínio alvo</label>
-                <Input name="url" defaultValue={site.url || ""} className="h-12 rounded-xl bg-muted/30 border-border/50 shadow-inner font-mono text-xs focus-visible:ring-primary/20" />
+                <Input name="url" defaultValue={site.url || ""} className="shadow-inner font-mono text-xs focus-visible:ring-primary/20" />
               </div>
             </DialogBody>
 

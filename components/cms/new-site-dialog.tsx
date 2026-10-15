@@ -52,7 +52,7 @@ export function NewSiteDialog() {
                 name="name"
                 placeholder="Ex: Website Institucional"
                 required
-                className="h-10 rounded-lg bg-muted/20 border-border/50"
+               
               />
             </div>
             <div className="space-y-2">
@@ -64,7 +64,7 @@ export function NewSiteDialog() {
                 <Input
                   name="url"
                   placeholder="https://meusite.com.br"
-                  className="h-10 pl-9 rounded-lg bg-muted/20 border-border/50 font-mono text-sm"
+                  className="pl-9 font-mono text-sm"
                 />
               </div>
             </div>

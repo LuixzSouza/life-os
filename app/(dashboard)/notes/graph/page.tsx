@@ -18,7 +18,7 @@ export default async function NoteGraphPage() {
         title="Grafo de Conexões"
         description="Seu segundo cérebro visto de cima: cada nota é um nó; links no texto e Conexões viram fios."
         actions={
-          <Button asChild variant="outline" size="sm" className="">
+          <Button asChild variant="outline" size="sm">
             <Link href="/notes">← Voltar às notas</Link>
           </Button>
         }

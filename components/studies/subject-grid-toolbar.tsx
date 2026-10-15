@@ -50,7 +50,7 @@ export function SubjectGridToolbar({
             value={searchTerm}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Pesquisar matérias..."
-            className="pl-9 bg-muted/30 border-0 focus-visible:ring-1 shadow-none h-11 rounded-xl w-full"
+            className="pl-9 bg-muted/30 border-0 focus-visible:ring-1 shadow-none w-full"
           />
         </div>
 
@@ -70,7 +70,7 @@ export function SubjectGridToolbar({
 
       <div className="grid grid-cols-2 gap-3 sm:flex sm:justify-end">
         <Select value={categoryFilter} onValueChange={onCategoryChange}>
-          <SelectTrigger className="h-10 w-full sm:w-[160px] rounded-xl bg-muted/30 border-border/50 font-medium text-sm">
+          <SelectTrigger className="w-full sm:w-[160px] font-medium text-sm">
             <SelectValue placeholder="Categoria" />
           </SelectTrigger>
           <SelectContent>
@@ -82,7 +82,7 @@ export function SubjectGridToolbar({
         </Select>
 
         <Select value={sortBy} onValueChange={(value) => onSortChange(value as SortOption)}>
-          <SelectTrigger className="h-10 w-full sm:w-[170px] rounded-xl bg-muted/30 border-border/50 font-medium text-sm">
+          <SelectTrigger className="w-full sm:w-[170px] font-medium text-sm">
             <div className="flex items-center gap-2 text-muted-foreground">
               <SortAsc className="h-4 w-4" />
               <SelectValue />

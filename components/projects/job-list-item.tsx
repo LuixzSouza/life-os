@@ -229,7 +229,7 @@ export function JobListItem({ job, mode, onAiClick, onLinkClick, onApplyClick, o
     // ============ GRID MODE ============
     if (mode === 'grid') {
         return (
-            <Card className="group relative flex flex-col justify-between rounded-2xl border border-border/40 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-primary/30 h-full">
+            <Card className="group relative flex flex-col justify-between border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-primary/30 h-full">
                 <CardContent className="p-0 space-y-5">
                     <div className="flex items-start justify-between gap-3">
                         <div className="h-12 w-12 rounded-xl bg-background border border-border/40 flex items-center justify-center shadow-sm overflow-hidden p-2 shrink-0">

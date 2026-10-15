@@ -157,7 +157,7 @@ export function MigrateDbCard() {
                     ? "mysql://usuario:senha@host:3306/banco"
                     : "postgresql://usuario:senha@host:5432/banco"
               }
-              className="bg-background font-mono text-xs h-10"
+              className="font-mono text-xs"
             />
           </div>
         )}
@@ -175,7 +175,7 @@ export function MigrateDbCard() {
                 resetTest();
               }}
               placeholder="eyJhbGciOi..."
-              className="bg-background font-mono text-xs h-10"
+              className="font-mono text-xs"
             />
           </div>
         )}
@@ -193,7 +193,7 @@ export function MigrateDbCard() {
                   resetTest();
                 }}
                 placeholder="D:\MeusDados\LifeOS"
-                className="bg-background font-mono text-xs h-10 flex-1"
+                className="font-mono text-xs flex-1"
               />
               {/* Navegador de pastas (o mesmo do wizard): escolher visualmente
                   em vez de digitar o caminho na mão. */}

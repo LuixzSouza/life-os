@@ -65,7 +65,7 @@ export function BodyEvolutionChart({ data }: { data: BodyEvolutionPoint[] }) {
   const enoughPoints = chartData.length >= 2;
 
   return (
-    <Card className="border-border/60 bg-card shadow-sm">
+    <Card>
       <CardHeader className="pb-2 border-b border-border/40 bg-muted/20">
         <div className="flex flex-wrap items-center justify-between gap-3 py-1">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">

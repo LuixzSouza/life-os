@@ -142,7 +142,7 @@ export default function RegisterPageClient() {
                             <div className="relative">
                                 <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                                 <Input id="name" name="name" type="text" placeholder="Seu nome" required autoFocus
-                                    disabled={isLoading} onChange={clearError} className="h-12 pl-9 bg-muted/40" />
+                                    disabled={isLoading} onChange={clearError} className="pl-9" />
                             </div>
                         </div>
 
@@ -150,7 +150,7 @@ export default function RegisterPageClient() {
                         <div className="space-y-2">
                             <Label htmlFor="email" className="eyebrow text-muted-foreground">Email</Label>
                             <Input id="email" name="email" type="email" placeholder="seu.email@exemplo.com" required
-                                autoComplete="email" disabled={isLoading} onChange={clearError} className="h-12 bg-muted/40" />
+                                autoComplete="email" disabled={isLoading} onChange={clearError} />
                         </div>
 
                         {/* Senha */}

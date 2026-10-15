@@ -256,7 +256,7 @@ export function TransactionsView({
                             placeholder="Buscar por descrição ou categoria..."
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
-                            className="pl-11 h-11 rounded-xl bg-muted/20 border-border/50 focus-visible:ring-primary/30 font-medium"
+                            className="pl-11 focus-visible:ring-primary/30 font-medium"
                         />
                         {isPending && (
                             <Loader2 className="absolute right-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground/60 animate-spin" />
@@ -265,7 +265,7 @@ export function TransactionsView({
 
                     <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center">
                         <Select value={filters.period} onValueChange={(v) => updateParam("period", v)}>
-                            <SelectTrigger className="h-10 rounded-xl bg-muted/20 font-semibold border-border/50 sm:w-[180px]">
+                            <SelectTrigger className="font-semibold sm:w-[180px]">
                                 <div className="flex items-center min-w-0">
                                     <CalendarDays className="h-4 w-4 mr-2 shrink-0 text-muted-foreground/70" />
                                     <SelectValue placeholder="Período" />
@@ -279,7 +279,7 @@ export function TransactionsView({
                         </Select>
 
                         <Select value={filters.type} onValueChange={(v) => updateParam("type", v)}>
-                            <SelectTrigger className="h-10 rounded-xl bg-muted/20 font-semibold border-border/50 sm:w-[150px]">
+                            <SelectTrigger className="font-semibold sm:w-[150px]">
                                 <div className="flex items-center min-w-0">
                                     <Filter className="h-4 w-4 mr-2 shrink-0 text-muted-foreground/70" />
                                     <SelectValue placeholder="Tipo" />
@@ -293,7 +293,7 @@ export function TransactionsView({
                         </Select>
 
                         <Select value={filters.account} onValueChange={(v) => updateParam("account", v)}>
-                            <SelectTrigger className="h-10 rounded-xl bg-muted/20 font-semibold border-border/50 sm:w-[170px]">
+                            <SelectTrigger className="font-semibold sm:w-[170px]">
                                 <SelectValue placeholder="Carteira" />
                             </SelectTrigger>
                             <SelectContent className="rounded-xl font-medium">
@@ -306,7 +306,7 @@ export function TransactionsView({
 
                         {categories.length > 0 && (
                             <Select value={filters.category} onValueChange={(v) => updateParam("category", v)}>
-                                <SelectTrigger className="h-10 rounded-xl bg-muted/20 font-semibold border-border/50 sm:w-[180px]">
+                                <SelectTrigger className="font-semibold sm:w-[180px]">
                                     <div className="flex items-center min-w-0">
                                         <Tags className="h-4 w-4 mr-2 shrink-0 text-muted-foreground/70" />
                                         <SelectValue placeholder="Categoria" />

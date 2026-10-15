@@ -259,7 +259,7 @@ export function PlanBuilder() {
 
         {/* Nome + objetivo */}
         <div className="grid gap-3 sm:grid-cols-[1fr_auto]">
-          <Input value={draft.name} onChange={(e) => patchDraft((p) => ({ ...p, name: e.target.value }))} placeholder="Nome da ficha (ex: Foco Hipertrofia)" className="h-11 text-base font-semibold" />
+          <Input value={draft.name} onChange={(e) => patchDraft((p) => ({ ...p, name: e.target.value }))} placeholder="Nome da ficha (ex: Foco Hipertrofia)" className="text-base font-semibold" />
           <div className="flex gap-1.5 overflow-x-auto scrollbar-hide">
             {GOALS.map((g) => (
               <button

@@ -79,7 +79,7 @@ export function JobProjectDialog({ job, projects, onOpenChange }: { job: JobWith
                             </div>
                             <div className="space-y-2">
                                 <Select value={selected} onValueChange={setSelected}>
-                                    <SelectTrigger className="h-11 rounded-xl bg-muted/40 border-border/40">
+                                    <SelectTrigger>
                                         <SelectValue placeholder="Selecione um projeto..." />
                                     </SelectTrigger>
                                     <SelectContent className="rounded-xl">

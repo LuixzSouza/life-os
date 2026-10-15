@@ -146,7 +146,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                                 }
                             }}
                             placeholder="https://loja.com/produto..."
-                            className="h-11 pl-10 text-sm font-medium bg-background border-border/50 rounded-xl focus-visible:ring-primary/30"
+                            className="pl-10 text-sm font-medium focus-visible:ring-primary/30"
                             autoComplete="off"
                             inputMode="url"
                         />
@@ -189,7 +189,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                                 value={previewUrl} 
                                 onChange={(e) => setPreviewUrl(e.target.value)} 
                                 placeholder="Cole o link da foto..." 
-                                className="h-12 pl-10 text-sm bg-muted/20 border-border/50 rounded-xl focus-visible:ring-primary/30 font-medium"
+                                className="pl-10 text-sm focus-visible:ring-primary/30 font-medium"
                                 autoComplete="off"
                             />
                         </div>
@@ -210,7 +210,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                                 placeholder="Ex: MacBook Pro M3, Viagem para Paris..."
                                 required
                                 autoFocus={!item}
-                                className="pl-11 h-12 rounded-xl bg-muted/20 font-bold text-base border-border/50 focus-visible:ring-primary/30"
+                                className="pl-11 font-bold text-base focus-visible:ring-primary/30"
                             />
                         </div>
                     </div>
@@ -228,7 +228,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                                 value={price || ""}
                                 onChange={(e) => setPrice(Number(e.target.value))}
                                 required
-                                className="h-12 pl-10 font-mono text-lg font-bold bg-muted/20 border-border/50 rounded-xl focus-visible:ring-primary/30"
+                                className="pl-10 font-mono text-lg font-bold focus-visible:ring-primary/30"
                                 placeholder="0.00"
                             />
                         </div>
@@ -284,7 +284,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                                 value={productUrl}
                                 onChange={(e) => setProductUrl(e.target.value)}
                                 placeholder="https://mercadolivre.com.br/..."
-                                className="h-12 pl-10 text-sm font-medium bg-muted/20 border-border/50 rounded-xl focus-visible:ring-primary/30"
+                                className="pl-10 text-sm font-medium focus-visible:ring-primary/30"
                                 autoComplete="off"
                             />
                         </div>

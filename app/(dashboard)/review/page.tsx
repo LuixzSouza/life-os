@@ -160,7 +160,7 @@ function StatCard({
   delta?: React.ReactNode;
 }) {
   return (
-    <Card className="group rounded-2xl border-border/40 bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md">
+    <Card className="group transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md">
       <CardContent className="flex h-full flex-col p-4">
         <div className="flex items-center gap-2">
           <span className={cn("flex h-8 w-8 items-center justify-center rounded-xl transition-transform group-hover:scale-110", tone)}>
@@ -394,7 +394,7 @@ export default async function ReviewPage({
           {!isEmpty && <MonthHighlights highlights={highlights} />}
 
           {/* Finanças — saldo em destaque */}
-          <Card className="overflow-hidden rounded-2xl border-border/40 bg-card shadow-sm">
+          <Card className="overflow-hidden">
             <div className={cn(
               "p-5 sm:p-6",
               balance >= 0
@@ -455,7 +455,7 @@ export default async function ReviewPage({
 
           {/* Tendência financeira de 12 meses */}
           {trend.some((p) => p.income > 0 || p.expense > 0) && (
-            <Card className="border-border/40 bg-card shadow-sm">
+            <Card>
               <CardContent className="p-5 space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -477,7 +477,7 @@ export default async function ReviewPage({
 
           {/* Constância: 1 quadradinho por dia (esforço real registrado) */}
           {viewerId && (
-            <Card className="border-border/40 bg-card shadow-sm">
+            <Card>
               <CardContent className="p-5 space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">

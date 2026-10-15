@@ -42,7 +42,7 @@ export function DayOverviewCard({ consumed, goal, workoutBurn, recovery }: DayOv
         : `${fatigued.length} ${fatigued.length > 1 ? "músculos fadigados" : "músculo fadigado"}${ready ? ` · ${ready.group} pronto!` : ""}`;
 
   return (
-    <Card className="overflow-hidden border-border/50 shadow-sm">
+    <Card className="overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* ---------- ENERGIA ---------- */}
         <Link

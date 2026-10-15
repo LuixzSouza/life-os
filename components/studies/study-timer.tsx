@@ -108,7 +108,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
         />
       )}
 
-      <Card className="border-border/50 bg-card shadow-sm relative overflow-hidden">
+      <Card className="relative overflow-hidden">
         <div className="absolute right-0 top-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
 
         <CardContent className="p-6 md:p-8">
@@ -246,7 +246,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
               <div className="space-y-3">
                 <Label className="eyebrow text-muted-foreground">Tipo de Atividade</Label>
                 <Select value={sessionType} onValueChange={(v) => setSessionType(v as SessionType)}>
-                  <SelectTrigger className="bg-muted/30"><SelectValue /></SelectTrigger>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
                     {SESSION_TYPE_OPTIONS.map((option) => (
                       <SelectItem key={option.value} value={option.value}><span className="flex items-center gap-2">{option.icon} {option.label}</span></SelectItem>
@@ -262,7 +262,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
                 placeholder="Anotações feitas durante o foco aparecerão aqui..."
                 value={sessionNotes}
                 onChange={(e) => setSessionNotes(e.target.value)}
-                className="min-h-[120px] resize-none bg-muted/30 focus:bg-background"
+                className="min-h-[120px] resize-none focus:bg-background"
               />
             </div>
 

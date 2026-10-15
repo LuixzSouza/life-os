@@ -184,7 +184,7 @@ function BuyDialog({ item, accounts, affordable }: { item: WishlistData; account
                     <div className="space-y-2">
                         <p className="text-xs font-medium text-muted-foreground ml-1">Pagar com</p>
                         <Select value={accountId} onValueChange={setAccountId}>
-                            <SelectTrigger className="h-12 rounded-xl bg-muted/20 border-border/50 font-medium">
+                            <SelectTrigger className="font-medium">
                                 <SelectValue placeholder="Escolha a conta" />
                             </SelectTrigger>
                             <SelectContent>

@@ -21,7 +21,7 @@ interface RoutineCardProps {
 
 export function RoutineCard({ workStart, setWorkStart, workEnd, setWorkEnd, language, setLanguage, reminderLead }: RoutineCardProps) {
   return (
-    <Card className="border-border shadow-sm bg-card">
+    <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-base">
           <Clock className="h-5 w-5 text-primary" /> Rotina & Idioma
@@ -36,7 +36,7 @@ export function RoutineCard({ workStart, setWorkStart, workEnd, setWorkEnd, lang
             type="time"
             value={workStart}
             onChange={(e) => setWorkStart(e.target.value)}
-            className="h-10 bg-muted/30"
+           
           />
         </div>
         <div className="space-y-2">
@@ -46,7 +46,7 @@ export function RoutineCard({ workStart, setWorkStart, workEnd, setWorkEnd, lang
             type="time"
             value={workEnd}
             onChange={(e) => setWorkEnd(e.target.value)}
-            className="h-10 bg-muted/30"
+           
           />
         </div>
         <div className="space-y-2">
@@ -61,7 +61,7 @@ export function RoutineCard({ workStart, setWorkStart, workEnd, setWorkEnd, lang
             max={180}
             step={5}
             defaultValue={reminderLead}
-            className="h-10 bg-muted/30"
+           
           />
         </div>
         <div className="space-y-2">

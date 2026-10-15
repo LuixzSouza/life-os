@@ -35,7 +35,7 @@ export async function ConsistencyCard({ userId }: { userId: string }) {
   }
 
   return (
-    <Card className="border-border/40 bg-card shadow-sm">
+    <Card>
       <CardContent className="p-4 sm:p-5 space-y-3">
         <div className="flex items-center gap-2">
           <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">

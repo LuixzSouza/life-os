@@ -177,7 +177,7 @@ export function BankConnector({ onOpenImport }: { onOpenImport?: () => void }) {
 
             {/* Modal Nativo do Shadcn UI cuidando do scroll lock e blur de forma correta */}
             <Dialog open={isDialogOpen} onOpenChange={(open) => { if(!open) handleCloseConnection(); }}>
-                <DialogContent showCloseButton={false} className="sm:max-w-[450px] h-[85vh] sm:h-[750px] max-h-[900px] rounded-2xl">
+                <DialogContent showCloseButton={false} className="sm:max-w-[450px] h-[85vh] sm:h-[750px] max-h-[900px]">
 
                     {/* Cabeçalho Customizado */}
                     <div className="flex justify-between items-center p-4 bg-muted/10 border-b border-border/40 shrink-0">

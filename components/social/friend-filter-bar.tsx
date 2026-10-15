@@ -29,7 +29,7 @@ export function FriendFilterBar({ search, onSearchChange, filter, onFilterChange
           placeholder="Buscar por nome, empresa ou tag (Ex: Cliente, LoL)..."
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="pl-10 pr-10 h-11 border-0 bg-transparent shadow-none focus-visible:ring-0 text-base md:text-sm"
+          className="pl-10 pr-10 border-0 bg-transparent shadow-none focus-visible:ring-0 text-base md:text-sm"
         />
         {search && (
           <button onClick={() => onSearchChange("")} className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-muted">

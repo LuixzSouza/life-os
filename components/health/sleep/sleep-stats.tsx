@@ -21,7 +21,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
   return (
     <>
       {/* SLEEP SCORE */}
-      <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
+      <Card className="relative overflow-hidden h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <Gauge className="h-4 w-4 text-primary" /> Pontuação do sono
@@ -37,7 +37,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       </Card>
 
       {/* MÉDIA 7 DIAS */}
-      <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
+      <Card className="relative overflow-hidden h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <Clock className="h-4 w-4 text-primary" /> Média (7 dias)
@@ -58,7 +58,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       </Card>
 
       {/* BANCO DE SONO (DÍVIDA) */}
-      <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
+      <Card className="relative overflow-hidden h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <Battery className="h-4 w-4 text-primary" /> Banco de Sono
@@ -78,7 +78,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       </Card>
 
       {/* CONSISTÊNCIA */}
-      <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
+      <Card className="relative overflow-hidden h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <Repeat className="h-4 w-4 text-primary" /> Consistência

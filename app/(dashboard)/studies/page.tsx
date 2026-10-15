@@ -461,7 +461,7 @@ export default async function StudiesPage() {
           </div>
 
           {/* SIDEBAR: Histórico recente */}
-          <Card className="h-fit border-border/50 bg-card shadow-sm lg:sticky lg:top-6">
+          <Card className="h-fit lg:sticky lg:top-6">
             <CardHeader className="border-b border-border/40 pb-4">
               <div className="flex items-center justify-between gap-2">
                 <CardTitle className="flex items-center gap-2 text-sm font-semibold">

@@ -166,7 +166,7 @@ export function GymForm({ onSuccess, initialData }: GymFormProps) {
               name="title"
               defaultValue={initialData?.title || ""}
               placeholder="Ex: Push Day - Hipertrofia"
-              className="h-11 pl-10 rounded-xl bg-muted/40 border-border/40 focus-visible:bg-background font-semibold"
+              className="pl-10 focus-visible:bg-background font-semibold"
               required
             />
           </div>
@@ -180,7 +180,7 @@ export function GymForm({ onSuccess, initialData }: GymFormProps) {
               name="duration"
               type="number"
               defaultValue={initialData?.duration || 60}
-              className="h-11 pl-10 rounded-xl bg-muted/40 border-border/40 focus-visible:bg-background font-mono font-semibold"
+              className="pl-10 focus-visible:bg-background font-mono font-semibold"
               required
             />
           </div>
@@ -286,19 +286,19 @@ export function GymForm({ onSuccess, initialData }: GymFormProps) {
                 <div className="col-span-6">
                   <Input
                     placeholder="Ex: Supino Reto"
-                    className="h-9 bg-transparent border-transparent focus-visible:border-primary/30 focus-visible:bg-background rounded-lg text-sm font-medium"
+                    className="h-9 bg-transparent border-transparent focus-visible:border-primary/30 focus-visible:bg-background text-sm font-medium"
                     value={ex.name}
                     onChange={(e) => updateExercise(i, 'name', e.target.value)}
                   />
                 </div>
                 <div className="col-span-2">
-                  <Input placeholder="4" className="h-9 text-center bg-transparent border-transparent focus-visible:border-primary/30 focus-visible:bg-background rounded-lg font-mono text-sm" value={ex.sets} onChange={(e) => updateExercise(i, 'sets', e.target.value)} />
+                  <Input placeholder="4" className="h-9 text-center bg-transparent border-transparent focus-visible:border-primary/30 focus-visible:bg-background font-mono text-sm" value={ex.sets} onChange={(e) => updateExercise(i, 'sets', e.target.value)} />
                 </div>
                 <div className="col-span-2">
-                  <Input placeholder="12" className="h-9 text-center bg-transparent border-transparent focus-visible:border-primary/30 focus-visible:bg-background rounded-lg font-mono text-sm" value={ex.reps} onChange={(e) => updateExercise(i, 'reps', e.target.value)} />
+                  <Input placeholder="12" className="h-9 text-center bg-transparent border-transparent focus-visible:border-primary/30 focus-visible:bg-background font-mono text-sm" value={ex.reps} onChange={(e) => updateExercise(i, 'reps', e.target.value)} />
                 </div>
                 <div className="col-span-2 relative flex items-center">
-                  <Input placeholder="0" className="h-9 text-center bg-transparent border-transparent focus-visible:border-primary/30 focus-visible:bg-background rounded-lg font-mono text-sm" value={ex.weight} onChange={(e) => updateExercise(i, 'weight', e.target.value)} />
+                  <Input placeholder="0" className="h-9 text-center bg-transparent border-transparent focus-visible:border-primary/30 focus-visible:bg-background font-mono text-sm" value={ex.weight} onChange={(e) => updateExercise(i, 'weight', e.target.value)} />
                   <button type="button" onClick={() => removeExercise(i)} className="absolute -right-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 text-muted-foreground hover:text-destructive transition-all p-1">
                     <Trash2 className="h-3.5 w-3.5" />
                   </button>

@@ -26,7 +26,7 @@ export function ApiGuide({ site }: { site: SiteWithPages }) {
 
   return (
     <div className="w-full max-w-3xl space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <Card className="overflow-hidden rounded-2xl border-border/40 bg-card shadow-sm">
+      <Card className="overflow-hidden">
         <CardHeader className="border-b border-border/40 bg-muted/10 p-8">
           <CardTitle className="flex items-center gap-2 text-lg font-bold tracking-tight">
             <Code2 className="h-5 w-5 text-primary" /> Integração

@@ -111,7 +111,7 @@ export function ImportStatementDialog({ open, onOpenChange, accounts }: ImportSt
           <div className="space-y-1.5">
             <label className="eyebrow text-muted-foreground">Conta de destino</label>
             <Select value={accountId} onValueChange={setAccountId}>
-              <SelectTrigger className="rounded-xl"><SelectValue placeholder="Escolha a conta" /></SelectTrigger>
+              <SelectTrigger><SelectValue placeholder="Escolha a conta" /></SelectTrigger>
               <SelectContent>
                 {accounts.map((a) => <SelectItem key={a.id} value={a.id}>{a.name}</SelectItem>)}
               </SelectContent>

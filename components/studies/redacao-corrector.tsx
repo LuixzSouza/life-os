@@ -105,7 +105,7 @@ export function RedacaoCorrector() {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       {/* ESQUERDA: editor */}
-      <Card className="border-border/50 bg-card shadow-sm">
+      <Card>
         <CardHeader className="border-b border-border/40 pb-4">
           <CardTitle className="flex items-center gap-2 text-sm font-semibold">
             <div className="rounded-lg bg-primary/10 p-1.5 text-primary"><PenLine className="h-4 w-4" /></div>
@@ -115,7 +115,7 @@ export function RedacaoCorrector() {
         <CardContent className="space-y-4 pt-5">
           <div className="space-y-1.5">
             <Label className="text-xs font-semibold text-muted-foreground">Tema da redação</Label>
-            <Input value={theme} onChange={(e) => setTheme(e.target.value)} placeholder="Ex.: Desafios para a valorização de comunidades tradicionais no Brasil" className="h-10" />
+            <Input value={theme} onChange={(e) => setTheme(e.target.value)} placeholder="Ex.: Desafios para a valorização de comunidades tradicionais no Brasil" />
           </div>
           <div className="space-y-1.5">
             <div className="flex items-center justify-between">
@@ -128,7 +128,7 @@ export function RedacaoCorrector() {
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder="Escreva ou cole sua redação aqui. Estruture em 4 parágrafos: introdução, dois de desenvolvimento e conclusão com proposta de intervenção…"
-              className="min-h-[340px] resize-y bg-muted/20 text-sm leading-relaxed"
+              className="min-h-[340px] resize-y text-sm leading-relaxed"
             />
             <p className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
               <Info className="h-3 w-3" /> O ENEM espera de 7 a 30 linhas. Ideal: ~25–30 linhas em 4 parágrafos.
@@ -147,7 +147,7 @@ export function RedacaoCorrector() {
       </Card>
 
       {/* DIREITA: resultado */}
-      <Card className="border-border/50 bg-card shadow-sm">
+      <Card>
         <CardHeader className="border-b border-border/40 pb-4">
           <CardTitle className="flex items-center gap-2 text-sm font-semibold">
             <div className="rounded-lg bg-amber-500/10 p-1.5 text-amber-600"><Trophy className="h-4 w-4" /></div>

@@ -41,15 +41,15 @@ export function EducationForm({ data, onChange }: { data: PortfolioData; onChang
             <div className="space-y-4">
               <div className="space-y-2">
                   <Label className="text-xs font-medium text-muted-foreground/60">Instituição de Ensino</Label>
-                  <Input value={edu.institution} onChange={e => update(edu.id, 'institution', e.target.value)} placeholder="Ex: Universidade XYZ" className="h-11 bg-muted/30 border-border/50 rounded-xl font-bold" />
+                  <Input value={edu.institution} onChange={e => update(edu.id, 'institution', e.target.value)} placeholder="Ex: Universidade XYZ" className="font-bold" />
               </div>
               <div className="space-y-2">
                   <Label className="text-xs font-medium text-muted-foreground/60">Grau / Curso</Label>
-                  <Input value={edu.degree} onChange={e => update(edu.id, 'degree', e.target.value)} placeholder="Ex: Bacharelado em Ciência da Computação" className="h-11 bg-muted/30 border-border/50 rounded-xl" />
+                  <Input value={edu.degree} onChange={e => update(edu.id, 'degree', e.target.value)} placeholder="Ex: Bacharelado em Ciência da Computação" />
               </div>
               <div className="space-y-2">
                   <Label className="text-xs font-medium text-muted-foreground/60">Período</Label>
-                  <Input value={edu.dates} onChange={e => update(edu.id, 'dates', e.target.value)} placeholder="Ex: 2018 - 2022" className="h-11 bg-muted/30 border-border/50 rounded-xl" />
+                  <Input value={edu.dates} onChange={e => update(edu.id, 'dates', e.target.value)} placeholder="Ex: 2018 - 2022" />
               </div>
             </div>
           </div>

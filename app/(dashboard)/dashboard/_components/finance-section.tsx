@@ -115,7 +115,7 @@ export async function FinanceSection({ userId, currency }: { userId: string, cur
             de alargar a coluna além da viewport e criar scroll lateral) */}
         <div className="min-w-0 xl:col-span-8 flex flex-col gap-6">
           
-          <Card className="shadow-sm flex-1">
+          <Card className="flex-1">
             <CardHeader className="p-4 pb-2 sm:p-6 sm:pb-4">
               <CardTitle className="text-base font-semibold">Fluxo de Caixa</CardTitle>
               <CardDescription>Balanço consolidado do mês atual</CardDescription>
@@ -150,7 +150,7 @@ export async function FinanceSection({ userId, currency }: { userId: string, cur
           {finance === null ? (
             <Card className="p-6 h-full text-center text-muted-foreground text-sm border-dashed">Erro ao carregar transações.</Card>
           ) : !hasTransactions ? (
-            <Card className="h-full shadow-sm flex flex-col justify-center border-dashed">
+            <Card className="h-full flex flex-col justify-center border-dashed">
               <CardContent className="pt-6">
                 <EmptyState icon={Receipt} title="Nenhuma transação" description="Suas movimentações recentes aparecerão aqui." />
               </CardContent>

@@ -104,28 +104,28 @@ export function ExperienceForm({ data, onChange }: ExperienceFormProps) {
                 <Label className="text-xs font-medium text-muted-foreground/60">Empresa / Instituição</Label>
                 <Input 
                   value={exp.company} onChange={(e) => updateExperience(exp.id, "company", e.target.value)} 
-                  placeholder="Ex: Tech Solutions Inc." className="h-11 bg-muted/30 border-border/50 rounded-xl font-bold"
+                  placeholder="Ex: Tech Solutions Inc." className="font-bold"
                 />
               </div>
               <div className="space-y-2">
                 <Label className="text-xs font-medium text-muted-foreground/60">Cargo Ocupado</Label>
                 <Input 
                   value={exp.role} onChange={(e) => updateExperience(exp.id, "role", e.target.value)} 
-                  placeholder="Ex: Senior Developer" className="h-11 bg-muted/30 border-border/50 rounded-xl"
+                  placeholder="Ex: Senior Developer"
                 />
               </div>
               <div className="space-y-2">
                 <Label className="text-xs font-medium text-muted-foreground/60">Período de Atuação</Label>
                 <div className="flex gap-2">
-                    <Input value={exp.startDate} onChange={(e) => updateExperience(exp.id, "startDate", e.target.value)} placeholder="Início" className="h-11 bg-muted/30 border-border/50 rounded-xl" />
-                    <Input value={exp.endDate} onChange={(e) => updateExperience(exp.id, "endDate", e.target.value)} placeholder="Fim (ou Atual)" className="h-11 bg-muted/30 border-border/50 rounded-xl" />
+                    <Input value={exp.startDate} onChange={(e) => updateExperience(exp.id, "startDate", e.target.value)} placeholder="Início" />
+                    <Input value={exp.endDate} onChange={(e) => updateExperience(exp.id, "endDate", e.target.value)} placeholder="Fim (ou Atual)" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label className="text-xs font-medium text-muted-foreground/60">Tecnologias Usadas</Label>
                 <Input 
                   defaultValue={exp.stack.join(", ")} onBlur={(e) => handleStackChange(exp.id, e.target.value)} 
-                  placeholder="React, Node.js, AWS (separadas por vírgula)" className="h-11 bg-muted/30 border-border/50 rounded-xl font-mono text-xs"
+                  placeholder="React, Node.js, AWS (separadas por vírgula)" className="font-mono text-xs"
                 />
               </div>
               

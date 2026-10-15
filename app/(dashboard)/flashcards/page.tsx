@@ -121,7 +121,7 @@ export default async function FlashcardsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
                 
                 {/* Resumo Total */}
-                <Card className="bg-card border-border/60 shadow-sm lg:col-span-1">
+                <Card className="lg:col-span-1">
                     <CardContent className="p-6 flex flex-col justify-center h-full">
                         <div className="flex items-center gap-3 mb-2">
                             <div className="p-2 bg-primary/10 rounded-lg text-primary">
@@ -170,7 +170,7 @@ export default async function FlashcardsPage() {
                 </Card>
 
                 {/* Gráfico de Retenção Visual */}
-                <Card className="bg-card border-border/60 shadow-sm lg:col-span-3">
+                <Card className="lg:col-span-3">
                     <CardContent className="p-6">
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="font-bold text-lg flex items-center gap-2">

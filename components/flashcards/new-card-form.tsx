@@ -78,7 +78,7 @@ export function NewCardForm({ deckId }: { deckId: string }) {
           ref={termRef}
           name="term"
           placeholder="Ex: O que é useState?"
-          className="border-border/60 bg-background font-medium focus:ring-primary/20"
+          className="font-medium focus:ring-primary/20"
         />
         <p className="text-[11px] leading-relaxed text-muted-foreground">
           Pode deixar em branco e usar <strong>só uma imagem</strong> abaixo (ex.: identificar uma figura).
@@ -94,7 +94,7 @@ export function NewCardForm({ deckId }: { deckId: string }) {
           name="definition"
           placeholder="Ex: Um hook do React para gerenciar estado…"
           required
-          className="min-h-[120px] resize-none border-border/60 bg-background leading-relaxed focus:ring-primary/20"
+          className="min-h-[120px] resize-none leading-relaxed focus:ring-primary/20"
         />
         <p className="text-[11px] leading-relaxed text-muted-foreground">
           Dica: cole um link do <strong>YouTube, Vimeo ou .mp4</strong> aqui e ele vira um vídeo na revisão.
@@ -109,7 +109,7 @@ export function NewCardForm({ deckId }: { deckId: string }) {
           name="hint"
           placeholder="Ex: começa com 'u' e guarda valor entre renders"
           maxLength={500}
-          className="border-border/60 bg-background focus:ring-primary/20"
+          className="focus:ring-primary/20"
         />
         <p className="text-[11px] leading-relaxed text-muted-foreground">
           Aparece na frente sob demanda (botão <strong>Dica</strong>) — ajuda sem entregar a resposta.

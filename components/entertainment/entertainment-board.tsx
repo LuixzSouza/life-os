@@ -95,7 +95,7 @@ export function EntertainmentBoard({ initialItems }: { initialItems: MediaItemDa
         <div className="flex gap-2 w-full xl:w-auto">
           <div className="relative flex-1 xl:w-64">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <Input placeholder="Buscar título, ano..." className="pl-9 h-10 w-full bg-card rounded-lg" value={filterQuery} onChange={(e) => setFilterQuery(e.target.value)} />
+            <Input placeholder="Buscar título, ano..." className="pl-9 w-full" value={filterQuery} onChange={(e) => setFilterQuery(e.target.value)} />
           </div>
           <Button variant="outline" onClick={handlePickRandom} className="h-10 text-primary border-primary/20 hover:bg-primary/10 shadow-sm shrink-0" title="Sortear algo para consumir">
             <Dices className="h-5 w-5 md:mr-2" /> <span className="hidden md:inline">Sortear</span>

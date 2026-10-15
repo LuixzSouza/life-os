@@ -15,7 +15,7 @@ interface AppearanceModeCardProps {
 
 export function AppearanceModeCard({ theme, setTheme }: AppearanceModeCardProps) {
   return (
-    <Card className="border-border shadow-sm bg-card">
+    <Card>
       <CardHeader><CardTitle>Aparência</CardTitle><CardDescription>Modo claro, escuro ou automático.</CardDescription></CardHeader>
       <CardContent className="flex gap-2">
         {MODES.map((mode) => (

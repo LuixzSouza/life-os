@@ -54,7 +54,7 @@ export function MaintenancePanel({ mode = "local" }: { mode?: DbMode }) {
     return (
         <div className="grid md:grid-cols-2 gap-4">
             {/* Otimização */}
-            <Card className="border-border shadow-sm bg-card">
+            <Card>
                 <CardHeader className="pb-3">
                     <CardTitle className="text-sm font-medium flex items-center gap-2">
                         <BowArrowIcon className="h-4 w-4 text-primary" />
@@ -90,7 +90,7 @@ export function MaintenancePanel({ mode = "local" }: { mode?: DbMode }) {
             </Card>
 
             {/* Integridade */}
-            <Card className="border-border shadow-sm bg-card">
+            <Card>
                 <CardHeader className="pb-3">
                     <CardTitle className="text-sm font-medium flex items-center gap-2">
                         <Stethoscope className="h-4 w-4 text-primary" />

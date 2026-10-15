@@ -130,7 +130,7 @@ export function PortfolioTab({ positions, totals }: PortfolioTabProps) {
       </div>
 
       {/* ALOCAÇÃO */}
-      <Card className="rounded-2xl border-border/40 shadow-sm">
+      <Card>
         <CardContent className="p-6">
           <p className="text-xs font-medium text-muted-foreground mb-4 flex items-center gap-2">
             <PieIcon className="h-3.5 w-3.5" /> Alocação da carteira
@@ -140,7 +140,7 @@ export function PortfolioTab({ positions, totals }: PortfolioTabProps) {
       </Card>
 
       {/* TABELA DE POSIÇÕES */}
-      <Card className="rounded-2xl border-border/40 shadow-sm overflow-hidden">
+      <Card className="overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -261,7 +261,7 @@ function KpiCard({ label, value, sub, icon, tone = "default", accent, blur }: Kp
       : "bg-primary/10 text-primary";
 
   return (
-    <Card className="rounded-2xl border-border/40 shadow-sm">
+    <Card>
       <CardContent className="p-4">
         <div className="flex items-center justify-between mb-3">
           <p className="text-xs font-medium text-muted-foreground">{label}</p>

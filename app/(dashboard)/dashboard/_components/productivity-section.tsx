@@ -146,7 +146,7 @@ export async function ProductivitySection({ userId }: { userId: string }) {
         
         {/* Bloco Primário: Gráfico (Foco Principal) */}
         <div className="min-w-0 lg:col-span-7 flex flex-col">
-          <Card className="shadow-sm flex-1 flex flex-col">
+          <Card className="flex-1 flex flex-col">
             <CardHeader className="pb-4">
               <CardTitle className="text-base font-semibold flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-purple-500" /> Foco por Matéria
@@ -170,7 +170,7 @@ export async function ProductivitySection({ userId }: { userId: string }) {
         {/* Bloco Secundário: Projetos (Altura Consistente) */}
         <div className="min-w-0 lg:col-span-5 flex flex-col">
           {!hasProjects ? (
-            <Card className="shadow-sm flex-1 flex flex-col justify-center border-dashed">
+            <Card className="flex-1 flex flex-col justify-center border-dashed">
               <CardContent className="pt-6">
                 <EmptyState 
                   icon={Trophy} 

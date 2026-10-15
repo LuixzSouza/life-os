@@ -9,7 +9,7 @@ interface RegionalCardProps {
 
 export function RegionalCard({ currency, setCurrency }: RegionalCardProps) {
   return (
-    <Card className="border-border shadow-sm bg-card">
+    <Card>
       <CardHeader>
         <CardTitle>Regional</CardTitle>
         <CardDescription>Moeda usada em todo o sistema (valores, finanças, metas).</CardDescription>

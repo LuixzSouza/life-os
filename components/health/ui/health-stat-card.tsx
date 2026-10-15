@@ -25,7 +25,7 @@ interface HealthStatCardProps {
 // KPI no padrão limpo do sistema (espelha o StatCard de Projetos).
 export function HealthStatCard({ label, value, unit, icon: Icon, color = "zinc", hint }: HealthStatCardProps) {
     return (
-        <Card className="min-w-0 bg-card border-border/40 shadow-sm hover:shadow-md hover:border-border/80 transition-all">
+        <Card className="min-w-0 hover:shadow-md hover:border-border/80 transition-all">
             <CardContent className="p-4 sm:p-5 flex items-start justify-between gap-3 sm:gap-4">
                 <div className="space-y-0.5 sm:space-y-1 min-w-0">
                     <p className="eyebrow truncate sm:text-[11px] text-muted-foreground">{label}</p>

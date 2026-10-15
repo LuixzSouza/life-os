@@ -117,7 +117,7 @@ export function BusinessView({ initialClients, friends, pixKey, businessName }: 
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
           <Input
             placeholder="Buscar cliente ou empresa..."
-            className="pl-9 border-none bg-muted/50 hover:bg-muted/80 focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-border shadow-sm transition-all h-10 w-full"
+            className="pl-9 border-none bg-muted/50 hover:bg-muted/80 focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-border transition-all w-full"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />

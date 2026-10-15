@@ -113,7 +113,7 @@ export function MeetingTokenField({
           // Pequeno atraso no blur: o mousedown da sugestão precisa disparar antes.
           onBlur={() => { setTimeout(() => setFocused(false), 120); add(); }}
           placeholder={placeholder}
-          className="h-8 rounded-lg border-border/40 bg-muted/20 px-2.5 text-[13px]"
+          className="h-8 px-2.5 text-[13px]"
         />
 
         {/* Autocomplete (ex.: Conexões nos Participantes) */}

@@ -75,7 +75,7 @@ export function MigrateToReplicaCard() {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             placeholder="libsql://seu-banco.turso.io"
-            className="bg-background font-mono text-xs border-cyan-500/20 h-10"
+            className="font-mono text-xs border-cyan-500/20"
           />
         </div>
         <div className="grid gap-1.5">
@@ -88,7 +88,7 @@ export function MigrateToReplicaCard() {
             value={token}
             onChange={(e) => setToken(e.target.value)}
             placeholder="eyJhbGciOi..."
-            className="bg-background font-mono text-xs border-cyan-500/20 h-10"
+            className="font-mono text-xs border-cyan-500/20"
           />
           <p className="text-[10px] text-amber-600/90">
             ⚠️ O token começa com <code>eyJ…</code> — gere com{" "}

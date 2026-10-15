@@ -434,7 +434,7 @@ export function FocusDock() {
                 value={state.label}
                 onChange={(e) => update({ label: e.target.value })}
                 placeholder="Rótulo livre (ex.: Estudo React)"
-                className="h-10 rounded-xl border-border/40 bg-muted/20 text-sm"
+                className="text-sm"
               />
             </div>
 
@@ -560,7 +560,7 @@ function Field({ label, value, onChange, wide }: { label: string; value: number;
         min={1}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="h-10 rounded-xl border-border/40 bg-muted/20 text-center font-mono text-sm font-bold"
+        className="text-center font-mono text-sm font-bold"
       />
     </div>
   );

@@ -131,7 +131,7 @@ export function ExamRunner({ examId, title, durationMinutes, questions }: ExamRu
   /* ---------- ANTES DE COMEÇAR: o briefing ---------- */
   if (!attemptId) {
     return (
-      <Card className="border-border/40 bg-card shadow-sm">
+      <Card>
         <CardContent className="flex flex-col items-center gap-5 py-12 text-center">
           <div className="grid h-14 w-14 place-items-center rounded-full bg-primary/10 text-primary">
             <ListChecks className="h-7 w-7" />
@@ -186,7 +186,7 @@ export function ExamRunner({ examId, title, durationMinutes, questions }: ExamRu
 
       <div className="grid gap-4 lg:grid-cols-[1fr_auto]">
         {/* QUESTÃO ATUAL */}
-        <Card className="border-border/40 bg-card shadow-sm">
+        <Card>
           <CardContent className="space-y-5 p-5 sm:p-6">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="secondary" className="border-none bg-primary/10 text-primary">
@@ -254,7 +254,7 @@ export function ExamRunner({ examId, title, durationMinutes, questions }: ExamRu
         </Card>
 
         {/* NAVEGADOR: o mapa da prova (respondidas em destaque) */}
-        <Card className="h-fit border-border/40 bg-card shadow-sm lg:sticky lg:top-20 lg:w-[220px]">
+        <Card className="h-fit lg:sticky lg:top-20 lg:w-[220px]">
           <CardContent className="p-4">
             <p className="eyebrow mb-3 text-muted-foreground">
               Navegação

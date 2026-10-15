@@ -1409,7 +1409,7 @@ function FocusView({ ex, dir, index, total, groups, existingNames, onAdd, doneFl
           {ex.name ? (
             <h2 className="truncate text-xl font-bold tracking-tight">{ex.name}</h2>
           ) : (
-            <Input autoFocus defaultValue="" onBlur={(e) => controls.renameExercise(ex.id, e.target.value)} placeholder="Nome do exercício…" className="h-10 text-lg font-bold" />
+            <Input autoFocus defaultValue="" onBlur={(e) => controls.renameExercise(ex.id, e.target.value)} placeholder="Nome do exercício…" className="text-lg font-bold" />
           )}
           <div className="mt-1"><LastAndPR last={last} pr={pr} orm={orm} /></div>
         </div>

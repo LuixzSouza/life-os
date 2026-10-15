@@ -93,7 +93,7 @@ export function FoodSelector({ onAdd, addedIds }: FoodSelectorProps) {
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Buscar alimento (ex: arroz, feijão, frango)..."
-            className="pl-9 h-11 text-sm bg-background border-border/60 focus-visible:ring-primary/30"
+            className="pl-9 text-sm focus-visible:ring-primary/30"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => {

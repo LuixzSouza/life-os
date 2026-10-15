@@ -44,7 +44,7 @@ export function WardrobeListToolbar({
             placeholder="Buscar por nome, marca ou cor..."
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            className="pl-10 h-11 bg-muted/20 border-border/50 focus:border-primary/50 transition-all rounded-xl"
+            className="pl-10 focus:border-primary/50 transition-all"
           />
         </div>
 

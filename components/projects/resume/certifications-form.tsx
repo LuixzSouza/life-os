@@ -41,21 +41,21 @@ export function CertificationsForm({ data, onChange }: { data: PortfolioData; on
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label className="text-xs font-medium text-muted-foreground/60">Nome do Certificado / Curso</Label>
-                <Input value={cert.name} onChange={e => update(cert.id, 'name', e.target.value)} placeholder="Ex: AWS Academy Cloud Foundations" className="h-11 bg-muted/30 border-border/50 rounded-xl font-bold" />
+                <Input value={cert.name} onChange={e => update(cert.id, 'name', e.target.value)} placeholder="Ex: AWS Academy Cloud Foundations" className="font-bold" />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label className="text-xs font-medium text-muted-foreground/60">Emissor</Label>
-                  <Input value={cert.issuer} onChange={e => update(cert.id, 'issuer', e.target.value)} placeholder="Ex: AWS Academy" className="h-11 bg-muted/30 border-border/50 rounded-xl" />
+                  <Input value={cert.issuer} onChange={e => update(cert.id, 'issuer', e.target.value)} placeholder="Ex: AWS Academy" />
                 </div>
                 <div className="space-y-2">
                   <Label className="text-xs font-medium text-muted-foreground/60">Data</Label>
-                  <Input value={cert.date} onChange={e => update(cert.id, 'date', e.target.value)} placeholder="Ex: mar — abr 2024" className="h-11 bg-muted/30 border-border/50 rounded-xl" />
+                  <Input value={cert.date} onChange={e => update(cert.id, 'date', e.target.value)} placeholder="Ex: mar — abr 2024" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label className="text-xs font-medium text-muted-foreground/60">Link (opcional)</Label>
-                <Input value={cert.link || ""} onChange={e => update(cert.id, 'link', e.target.value)} placeholder="https://..." className="h-11 bg-muted/30 border-border/50 rounded-xl font-medium" />
+                <Input value={cert.link || ""} onChange={e => update(cert.id, 'link', e.target.value)} placeholder="https://..." className="font-medium" />
               </div>
             </div>
           </div>

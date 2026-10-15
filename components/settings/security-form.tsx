@@ -216,7 +216,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
         <div className="space-y-6">
             
             {/* CARTÃO 1: ALTERAR SENHA */}
-            <Card className="border-destructive/20 bg-card shadow-sm overflow-hidden">
+            <Card className="border-destructive/20 overflow-hidden">
                 <div className="h-1 w-full bg-destructive" /> 
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-foreground text-base">
@@ -330,7 +330,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
             </Card>
 
             {/* CARTÃO 2: PREFERÊNCIAS DE PRIVACIDADE */}
-            <Card className="border-border bg-card shadow-sm">
+            <Card>
                 <CardHeader className="pb-3">
                     <CardTitle className="text-base font-medium flex items-center gap-2">
                         <Lock className="h-4 w-4 text-primary" /> Privacidade & Bloqueio
@@ -406,7 +406,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
             </Card>
 
             {/* CARTÃO 3: ACESSO AO SISTEMA (cadastro aberto) */}
-            <Card className="border-border bg-card shadow-sm">
+            <Card>
                 <CardHeader className="pb-3">
                     <CardTitle className="text-base font-medium flex items-center gap-2">
                         <UserPlus className="h-4 w-4 text-primary" /> Acesso ao Sistema

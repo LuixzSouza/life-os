@@ -74,7 +74,7 @@ export function BrainDumpBox({ title, description, placeholder, onParse }: Brain
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                         placeholder={placeholder}
-                        className="min-h-[120px] w-full resize-none rounded-xl border-violet-500/20 bg-background/60 text-sm leading-relaxed"
+                        className="min-h-[120px] w-full resize-none border-violet-500/20 bg-background/60 text-sm leading-relaxed"
                     />
                     <div className="flex justify-end">
                         <Button

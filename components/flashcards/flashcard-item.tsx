@@ -195,7 +195,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
                 value={term}
                 onChange={(e) => setTerm(e.target.value)}
                 placeholder="Deixe em branco para usar só a imagem"
-                className="font-semibold text-base h-12 bg-muted/20 border-border/60 focus-visible:ring-primary/30"
+                className="font-semibold text-base focus-visible:ring-primary/30"
               />
             </div>
             
@@ -204,7 +204,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
               <Textarea
                 value={definition}
                 onChange={(e) => setDefinition(e.target.value)}
-                className="min-h-[160px] resize-none leading-relaxed text-base bg-muted/20 border-border/60 focus-visible:ring-primary/30 p-4"
+                className="min-h-[160px] resize-none leading-relaxed text-base focus-visible:ring-primary/30 p-4"
               />
             </div>
 
@@ -215,7 +215,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
                 onChange={(e) => setHint(e.target.value)}
                 placeholder="Uma pista que ajuda a lembrar — aparece na frente sob demanda"
                 maxLength={500}
-                className="text-base h-12 bg-muted/20 border-border/60 focus-visible:ring-primary/30"
+                className="text-base focus-visible:ring-primary/30"
               />
               <p className="text-[11px] leading-relaxed text-muted-foreground">
                 Mostrada na frente do cartão quando você tocar em <strong>Dica</strong> — sem revelar a resposta.

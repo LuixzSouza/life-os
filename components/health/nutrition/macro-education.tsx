@@ -4,7 +4,7 @@ import { Wheat, Droplets, Activity, Zap, Brain, ShieldCheck } from "lucide-react
 export function MacroEducation() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 print:hidden">
-      <Card className="bg-blue-500/5 border-blue-200/20 shadow-sm hover:border-blue-500/30 transition-all">
+      <Card className="bg-blue-500/5 border-blue-200/20 hover:border-blue-500/30 transition-all">
         <CardHeader className="pb-2">
           <CardTitle className="text-sm font-bold text-blue-600 flex items-center gap-2">
             <Wheat className="h-4 w-4" /> Carboidratos
@@ -21,7 +21,7 @@ export function MacroEducation() {
         </CardContent>
       </Card>
 
-      <Card className="bg-emerald-500/5 border-emerald-200/20 shadow-sm hover:border-emerald-500/30 transition-all">
+      <Card className="bg-emerald-500/5 border-emerald-200/20 hover:border-emerald-500/30 transition-all">
         <CardHeader className="pb-2">
           <CardTitle className="text-sm font-bold text-emerald-600 flex items-center gap-2">
             <Activity className="h-4 w-4" /> Proteínas
@@ -38,7 +38,7 @@ export function MacroEducation() {
         </CardContent>
       </Card>
 
-      <Card className="bg-amber-500/5 border-amber-200/20 shadow-sm hover:border-amber-500/30 transition-all">
+      <Card className="bg-amber-500/5 border-amber-200/20 hover:border-amber-500/30 transition-all">
         <CardHeader className="pb-2">
           <CardTitle className="text-sm font-bold text-amber-600 flex items-center gap-2">
             <Droplets className="h-4 w-4" /> Gorduras

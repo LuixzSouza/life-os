@@ -195,7 +195,7 @@ export function HealthActions() {
 
             {/* ============== DIALOGS (compartilhados pelos dois layouts) ============== */}
             <Dialog open={gymOpen} onOpenChange={setGymOpen}>
-                <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden border-border/40 shadow-2xl rounded-2xl">
+                <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden">
                     <DialogHeader className="px-6 pt-6 pb-2">
                         <DialogTitle className="text-xl">Novo Treino</DialogTitle>
                         <DialogDescription>
@@ -210,7 +210,7 @@ export function HealthActions() {
             </Dialog>
 
             <Dialog open={runOpen} onOpenChange={setRunOpen}>
-                <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden border-border/40 shadow-2xl rounded-2xl">
+                <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden">
                     <DialogHeader className="px-6 pt-6 pb-2">
                         <DialogTitle className="text-xl">Registrar Corrida</DialogTitle>
                         <DialogDescription>

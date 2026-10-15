@@ -50,7 +50,7 @@ export default async function CMSPage() {
             />
           ) : (
             sites.map((site) => (
-              <Card key={site.id} className="group flex flex-col bg-card border-border/40 rounded-2xl shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md overflow-hidden">
+              <Card key={site.id} className="group flex flex-col transition-all hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md overflow-hidden">
                 
                 <CardHeader className="p-5 pb-3">
                   <div className="flex justify-between items-start mb-3">

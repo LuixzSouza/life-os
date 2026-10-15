@@ -117,7 +117,7 @@ export function MeetingBoard({ meetings, projectId }: MeetingBoardProps) {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Buscar por título, notas, tags ou participantes…"
-                className="pl-9 rounded-xl bg-muted/20 border-border/40"
+                className="pl-9"
               />
             </div>
             <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide">

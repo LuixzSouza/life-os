@@ -95,7 +95,7 @@ export function SleepCard({ value, targetGoal = 7.5 }: SleepCardProps) {
     };
 
     return (
-        <Card className="relative flex h-full flex-col overflow-hidden rounded-2xl border-border/40 bg-card shadow-sm transition-all hover:shadow-md">
+        <Card className="relative flex h-full flex-col overflow-hidden transition-all hover:shadow-md">
 
             {/* Indicador lateral: altura acompanha a recuperação */}
             <div
@@ -150,7 +150,7 @@ export function SleepCard({ value, targetGoal = 7.5 }: SleepCardProps) {
                                     type="number" step="0.1" placeholder="0.0"
                                     value={customValue}
                                     onChange={(e) => setCustomValue(e.target.value)}
-                                    className="h-11 rounded-xl border-border/40 bg-muted/30 text-center text-lg font-bold"
+                                    className="text-center text-lg font-bold"
                                     onKeyDown={(e) => {
                                         if (e.key === "Enter") handleQuickLog(Number(e.currentTarget.value));
                                     }}

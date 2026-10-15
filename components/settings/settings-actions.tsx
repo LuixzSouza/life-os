@@ -106,7 +106,7 @@ export function RestoreBackupForm() {
                             type="file" 
                             accept=".json" 
                             disabled={isLoading}
-                            className="flex-1 cursor-pointer file:cursor-pointer file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20 h-10 bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground"
+                            className="flex-1 cursor-pointer file:cursor-pointer file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20 bg-transparent border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-foreground"
                         />
                     </div>
                 </div>

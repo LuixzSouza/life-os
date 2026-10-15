@@ -89,7 +89,7 @@ export function ShoeMileageCard({ shoes }: { shoes: ShoeWithMileage[] }) {
   };
 
   return (
-    <Card className="border-border/60 bg-card shadow-sm">
+    <Card>
       <CardHeader className="pb-2 border-b border-border/40 bg-muted/20">
         <div className="flex items-center justify-between py-1">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
@@ -180,15 +180,15 @@ export function ShoeMileageCard({ shoes }: { shoes: ShoeWithMileage[] }) {
           <div className="space-y-3 py-1">
             <div className="space-y-1.5">
               <Label className="text-xs font-semibold">Nome do tênis</Label>
-              <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Ex: Nike Pegasus 40" className="h-10" autoFocus />
+              <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Ex: Nike Pegasus 40" autoFocus />
             </div>
             <div className="space-y-1.5">
               <Label className="text-xs font-semibold">Meta de troca (km) <span className="font-normal text-muted-foreground">— opcional</span></Label>
-              <Input inputMode="decimal" value={maxDistance} onChange={(e) => setMaxDistance(e.target.value)} placeholder="Ex: 600" className="h-10 font-mono" />
+              <Input inputMode="decimal" value={maxDistance} onChange={(e) => setMaxDistance(e.target.value)} placeholder="Ex: 600" className="font-mono" />
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={closeForm} disabled={saving} className="">Cancelar</Button>
+            <Button variant="outline" onClick={closeForm} disabled={saving}>Cancelar</Button>
             <Button onClick={submit} disabled={saving} className="gap-1.5">
               {saving && <Loader2 className="h-4 w-4 animate-spin" />} Salvar
             </Button>

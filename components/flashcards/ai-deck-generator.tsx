@@ -135,7 +135,7 @@ export function AiDeckGenerator({ deckId }: { deckId: string }) {
   };
 
   return (
-    <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-primary/[0.04] to-transparent shadow-sm">
+    <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-primary/[0.04] to-transparent">
       <div className="h-1.5 w-full bg-gradient-to-r from-primary via-primary/60 to-primary/20" />
       <CardHeader className="border-b border-border/40 bg-muted/20 pb-4">
         <CardTitle className="flex items-center gap-2 text-lg">
@@ -154,7 +154,7 @@ export function AiDeckGenerator({ deckId }: { deckId: string }) {
             onChange={(e) => setSource(e.target.value)}
             disabled={loading}
             placeholder="Ex.: 'Verbos irregulares em inglês' — cole um resumo, ou anexe uma foto/PDF abaixo."
-            className="min-h-[100px] resize-none border-border/60 bg-background leading-relaxed focus:ring-primary/20"
+            className="min-h-[100px] resize-none leading-relaxed focus:ring-primary/20"
           />
         </div>
 

@@ -61,7 +61,7 @@ export function ProfileIdentityCard({
   };
 
   return (
-    <Card className="overflow-hidden border-border shadow-sm bg-card group/card">
+    <Card className="overflow-hidden group/card">
       <div className="relative h-52 w-full overflow-hidden group/cover rounded-t-lg bg-muted">
         {coverUrl ? (
           <div
@@ -190,16 +190,16 @@ export function ProfileIdentityCard({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="flex items-center gap-2 text-muted-foreground"><User className="h-3.5 w-3.5" /> Nome de Exibição</Label>
-                <Input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} className="bg-muted/30 focus-visible:ring-primary" />
+                <Input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} className="focus-visible:ring-primary" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email" className="flex items-center gap-2 text-muted-foreground"><Mail className="h-3.5 w-3.5" /> Email</Label>
-                <Input id="email" name="email" defaultValue={userEmail || ""} readOnly className="bg-muted/50 opacity-70 cursor-not-allowed border-dashed" />
+                <Input id="email" name="email" defaultValue={userEmail || ""} readOnly className="opacity-70 cursor-not-allowed border-dashed" />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="bio" className="text-muted-foreground">Bio / Objetivo</Label>
-              <Textarea id="bio" name="bio" value={bio} onChange={(e) => setBio(e.target.value)} className="bg-muted/30 min-h-[80px] resize-none focus-visible:ring-primary" placeholder="O que você está focando no momento?" />
+              <Textarea id="bio" name="bio" value={bio} onChange={(e) => setBio(e.target.value)} className="min-h-[80px] resize-none focus-visible:ring-primary" placeholder="O que você está focando no momento?" />
             </div>
           </div>
         </div>

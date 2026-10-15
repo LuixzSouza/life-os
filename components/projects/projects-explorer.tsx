@@ -143,7 +143,7 @@ export function ProjectsExplorer({ projects, inbox }: { projects: ProjectItem[];
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Buscar projeto..."
-              className="pl-9 h-10 rounded-xl bg-muted/40 border-border/40 focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-primary/20"
+              className="pl-9 focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-primary/20"
             />
           </div>
 
@@ -166,7 +166,7 @@ export function ProjectsExplorer({ projects, inbox }: { projects: ProjectItem[];
 
             {/* Filtro PARA (#10) */}
             <Select value={paraFilter} onValueChange={(v) => setParaFilter(v as ParaFilter)}>
-              <SelectTrigger className="h-10 w-[140px] rounded-xl bg-muted/40 border-border/40 shrink-0 gap-2">
+              <SelectTrigger className="w-[140px] shrink-0 gap-2">
                 <Tag className="h-3.5 w-3.5 text-muted-foreground" />
                 <SelectValue />
               </SelectTrigger>
@@ -181,7 +181,7 @@ export function ProjectsExplorer({ projects, inbox }: { projects: ProjectItem[];
 
             {/* Ordenação */}
             <Select value={sort} onValueChange={(v) => setSort(v as SortKey)}>
-              <SelectTrigger className="h-10 w-[150px] rounded-xl bg-muted/40 border-border/40 shrink-0 gap-2">
+              <SelectTrigger className="w-[150px] shrink-0 gap-2">
                 <ArrowDownUp className="h-3.5 w-3.5 text-muted-foreground" />
                 <SelectValue />
               </SelectTrigger>

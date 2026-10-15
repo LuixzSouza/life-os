@@ -95,7 +95,7 @@ export function BackupManager({ history, mode = "local" }: { history: BackupLog[
 
     return (
         <>
-            <Card className="border-border shadow-sm bg-card">
+            <Card>
                 <CardHeader className="pb-4 border-b border-border/40 bg-muted/20">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div className="space-y-1">

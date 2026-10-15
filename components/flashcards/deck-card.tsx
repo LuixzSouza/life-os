@@ -34,7 +34,7 @@ export function DeckCard({ deck, onStudy, onDelete, onConnections }: DeckCardPro
   const accent = deck.studySubject?.color || "var(--primary)";
 
   return (
-    <Card className="group flex flex-col overflow-hidden rounded-2xl border border-border/40 bg-card shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md">
+    <Card className="group flex flex-col overflow-hidden border transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md">
       <CardHeader className="pb-3 pt-5">
         {/* min-w-0: o CardHeader é um grid e este é um grid item — sem isto, o
             título com truncate (white-space: nowrap) estoura a largura e empurra

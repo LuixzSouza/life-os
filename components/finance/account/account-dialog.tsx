@@ -204,7 +204,7 @@ export function AccountDialog({
               placeholder="Ex: Nubank, Carteira Física..."
               defaultValue={account?.name || ""}
               required
-              className="h-12 rounded-xl bg-muted/20 font-bold text-base"
+              className="font-bold text-base"
             />
           </div>
 
@@ -215,7 +215,7 @@ export function AccountDialog({
               </Label>
 
               <Select name="type" defaultValue={account?.type || "CHECKING"}>
-                <SelectTrigger className="h-12 rounded-xl bg-muted/20 font-medium">
+                <SelectTrigger className="font-medium">
                   <SelectValue placeholder="Selecione o tipo" />
                 </SelectTrigger>
 
@@ -240,7 +240,7 @@ export function AccountDialog({
                 onChange={handleBalanceChange}
                 onPaste={handlePaste}
                 onKeyDown={handleKeyDown}
-                className="h-12 rounded-xl bg-muted/20 font-mono font-bold"
+                className="font-mono font-bold"
                 inputMode="decimal"
                 autoComplete="off"
                 aria-label="Saldo atual em reais"

@@ -32,7 +32,7 @@ export function ProfileStrengthCard({ name, avatarUrl, coverUrl, bio, pixKey }: 
   const circumference = 2 * Math.PI * radius;
 
   return (
-    <Card className="border-border/40 shadow-sm bg-card">
+    <Card>
       <CardContent className="p-5 flex flex-col sm:flex-row items-center gap-5">
         <div className="relative h-16 w-16 shrink-0">
           <svg viewBox="0 0 64 64" className="h-16 w-16 -rotate-90">

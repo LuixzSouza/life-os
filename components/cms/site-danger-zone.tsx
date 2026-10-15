@@ -30,7 +30,7 @@ export function SiteDangerZone({ site }: { site: ManagedSite }) {
 
     return (
         <div className="max-w-2xl py-10 mx-auto">
-            <Card className="border-red-500/30 bg-red-500/5 shadow-sm rounded-2xl">
+            <Card className="border-red-500/30 bg-red-500/5">
                 <CardHeader className="p-8 pb-4">
                     <div className="h-12 w-12 rounded-2xl bg-red-500/20 flex items-center justify-center text-red-500 mb-4">
                         <AlertCircle className="h-6 w-6" />
@@ -63,7 +63,7 @@ export function SiteDangerZone({ site }: { site: ManagedSite }) {
                                     value={deleteConfirmName}
                                     onChange={(e) => setDeleteConfirmName(e.target.value)}
                                     placeholder={site.name}
-                                    className="h-14 rounded-2xl bg-muted/40 border-border/60 shadow-inner font-bold text-center text-lg focus-visible:ring-red-500/20"
+                                    className="h-14 shadow-inner font-bold text-center text-lg focus-visible:ring-red-500/20"
                                 />
                             </DialogBody>
                             <DialogFooter>

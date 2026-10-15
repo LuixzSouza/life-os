@@ -41,7 +41,7 @@ export function IncomeDynamicsCard({
   const formatMoney = useFormatCurrency();
 
   return (
-    <Card className="lg:col-span-2 rounded-2xl border-border/40 shadow-sm hover:shadow-md transition-all relative overflow-hidden bg-card">
+    <Card className="lg:col-span-2 hover:shadow-md transition-all relative overflow-hidden">
       <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <CardHeader className="pb-4 pt-8 px-8">
@@ -64,7 +64,7 @@ export function IncomeDynamicsCard({
             <div className="flex items-center gap-2 animate-in fade-in zoom-in-95 bg-background p-1.5 rounded-2xl shadow-inner border border-border/50">
               {/* Smart View ligado: mascara o valor mesmo no modo edição (mostra
                   pontinhos, mas segue editável) — não vaza o número ao editar. */}
-              <Input autoFocus type={smartView ? "password" : "text"} inputMode="decimal" value={tempSalary} onChange={e => setTempSalary(e.target.value)} className="w-36 h-10 text-right font-mono text-lg font-bold border-none focus-visible:ring-0 bg-transparent" />
+              <Input autoFocus type={smartView ? "password" : "text"} inputMode="decimal" value={tempSalary} onChange={e => setTempSalary(e.target.value)} className="w-36 text-right font-mono text-lg font-bold border-none focus-visible:ring-0 bg-transparent" />
               <Button size="icon" aria-label="Salvar salário" className="h-10 w-10 shadow-md" onClick={onSaveSalary} disabled={isPending}>
                 {isPending ? <Loader2 className="h-5 w-5 animate-spin" /> : <Check className="h-5 w-5" />}
               </Button>

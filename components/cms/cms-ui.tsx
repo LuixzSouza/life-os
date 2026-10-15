@@ -203,7 +203,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
 
               {/* FORMULÁRIO DE NOVA PÁGINA */}
               <TabsContent value="new" className="h-full m-0 focus-visible:ring-0 animate-in slide-in-from-bottom-2 duration-300 overflow-y-auto">
-                <Card className="border-border/40 bg-muted/5 shadow-xl rounded-2xl border-dashed">
+                <Card className="bg-muted/5 shadow-xl border-dashed">
                   <CardHeader className="p-8 pb-4">
                     <CardTitle className="text-xl font-semibold">Inicializar Nova Rota</CardTitle>
                     <CardDescription className="eyebrow text-muted-foreground/60">

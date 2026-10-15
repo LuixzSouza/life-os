@@ -120,7 +120,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                   value={proj.title} 
                   onChange={(e) => updateProject(proj.id, "title", e.target.value)} 
                   placeholder="Ex: Plataforma SaaS de Vendas"
-                  className="h-11 bg-background border-border/50 rounded-xl shadow-inner font-bold focus-visible:ring-primary/20"
+                  className="shadow-inner font-bold focus-visible:ring-primary/20"
                 />
               </div>
 
@@ -134,7 +134,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                       value={proj.role} 
                       onChange={(e) => updateProject(proj.id, "role", e.target.value)} 
                       placeholder="Ex: Lead Frontend" 
-                      className="h-11 bg-background border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20" 
+                      className="shadow-inner focus-visible:ring-primary/20" 
                     />
                 </div>
                 <div className="space-y-2">
@@ -145,7 +145,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                       value={proj.duration} 
                       onChange={(e) => updateProject(proj.id, "duration", e.target.value)} 
                       placeholder="Ex: 3 meses" 
-                      className="h-11 bg-background border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20" 
+                      className="shadow-inner focus-visible:ring-primary/20" 
                     />
                 </div>
               </div>
@@ -193,7 +193,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                       <Input 
                         value={proj.liveLink || ""} 
                         onChange={(e) => updateProject(proj.id, "liveLink", e.target.value)} 
-                        className="h-11 bg-background border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20 font-mono text-xs" 
+                        className="shadow-inner focus-visible:ring-primary/20 font-mono text-xs" 
                         placeholder="https://..." 
                       />
                   </div>
@@ -204,7 +204,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                       <Input 
                         value={proj.repoLink || ""} 
                         onChange={(e) => updateProject(proj.id, "repoLink", e.target.value)} 
-                        className="h-11 bg-background border-border/50 rounded-xl shadow-inner focus-visible:ring-primary/20 font-mono text-xs" 
+                        className="shadow-inner focus-visible:ring-primary/20 font-mono text-xs" 
                         placeholder="github.com/..." 
                       />
                   </div>

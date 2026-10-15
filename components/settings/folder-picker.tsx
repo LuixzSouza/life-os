@@ -158,7 +158,7 @@ export function FolderPicker({ onSelect, currentPath }: FolderPickerProps) {
                                 value={browsingPath} 
                                 onChange={(e) => setBrowsingPath(e.target.value)}
                                 onKeyDown={(e) => e.key === 'Enter' && loadFolders(browsingPath)}
-                                className="pr-16 font-mono text-xs bg-muted/50 border-border focus-visible:ring-primary"
+                                className="pr-16 font-mono text-xs focus-visible:ring-primary"
                             />
                             <Button 
                                 size="sm" 

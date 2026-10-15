@@ -132,7 +132,7 @@ const APIInputField: React.FC<{
   const currentStatus = active ? (value.trim() ? "active" : "pending") : "inactive";
 
   return (
-    <Card className="overflow-hidden border-border/40 hover:border-primary/40 transition-all duration-500 group rounded-2xl bg-muted/5">
+    <Card className="overflow-hidden hover:border-primary/40 transition-all duration-500 group bg-muted/5">
       <CardHeader className="pb-3 border-b border-border/20">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
@@ -309,7 +309,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
           </TabsContent>
 
           <TabsContent value="nutrition" className="space-y-4 m-0">
-            <Card className="overflow-hidden border-border/40 rounded-2xl bg-muted/5">
+            <Card className="overflow-hidden bg-muted/5">
               <CardHeader className="pb-3 border-b border-border/20">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
@@ -362,7 +362,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
             </div>
           </TabsContent>
 
-          <Card className="border-border/40 shadow-sm bg-background rounded-3xl overflow-hidden">
+          <Card className="bg-background rounded-3xl overflow-hidden">
             <div className="h-1 w-full bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50" />
             <CardContent className="p-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">

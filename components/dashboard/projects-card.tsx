@@ -10,7 +10,7 @@ interface ProjectsCardProps {
 
 export function ProjectsCard({ projects }: ProjectsCardProps) {
   return (
-    <Card className="shadow-sm border-border/50">
+    <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-4">
         <CardTitle className="text-sm flex items-center gap-2">
           <Target className="h-4 w-4 text-muted-foreground" /> Projetos Pessoais

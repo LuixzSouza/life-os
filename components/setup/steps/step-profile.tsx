@@ -66,7 +66,7 @@ export function StepProfile({ formData, setFormData, showPassword, setShowPasswo
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           placeholder="Ex: Luiza"
-          className="h-12 text-lg bg-muted/30 border-border"
+          className="text-lg"
           autoFocus
           required
         />
@@ -80,7 +80,7 @@ export function StepProfile({ formData, setFormData, showPassword, setShowPasswo
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           placeholder="admin@lifeos.local"
-          className="h-12 bg-muted/30 border-border"
+         
           required
         />
       </div>
@@ -103,7 +103,7 @@ export function StepProfile({ formData, setFormData, showPassword, setShowPasswo
             value={formData.password}
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
             placeholder="••••••••"
-            className="h-12 pr-20 bg-muted/30 border-border font-mono"
+            className="pr-20 font-mono"
             required
           />
           <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
@@ -158,7 +158,7 @@ export function StepProfile({ formData, setFormData, showPassword, setShowPasswo
           value={formData.bio}
           onChange={(e) => setFormData({ ...formData, bio: e.target.value })}
           placeholder="Ex: Produtividade e Estudos"
-          className="h-12 text-base bg-muted/30 border-border"
+          className="text-base"
         />
       </div>
     </div>

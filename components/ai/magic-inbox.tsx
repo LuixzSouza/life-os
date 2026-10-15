@@ -184,7 +184,7 @@ export function MagicInbox() {
                   rows={4}
                   maxLength={INBOX_CHAR_LIMIT}
                   autoFocus
-                  className="resize-none rounded-xl border-border/40 bg-muted/20 pr-12 text-sm leading-relaxed focus-visible:ring-primary/30"
+                  className="resize-none pr-12 text-sm leading-relaxed focus-visible:ring-primary/30"
                 />
                 {dictation.supported && (
                   <button

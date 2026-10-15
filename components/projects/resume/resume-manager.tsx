@@ -305,7 +305,7 @@ export function ResumeManager({ resumes }: { resumes: ResumeRecord[] }) {
                         </div>
                     </DialogBody>
                     <DialogFooter>
-                        <Button variant="outline" className="" onClick={() => setCloneTarget(null)}>Cancelar</Button>
+                        <Button variant="outline" onClick={() => setCloneTarget(null)}>Cancelar</Button>
                         <Button className="gap-2" disabled={busy} onClick={handleClone}>
                             {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Copy className="h-4 w-4" />} Clonar
                         </Button>
@@ -334,7 +334,7 @@ export function ResumeManager({ resumes }: { resumes: ResumeRecord[] }) {
                         <div className="space-y-1.5">
                             <Label>Idioma do currículo</Label>
                             <Select value={localeInput} onValueChange={setLocaleInput}>
-                                <SelectTrigger className="rounded-xl">
+                                <SelectTrigger>
                                     <SelectValue />
                                 </SelectTrigger>
                                 <SelectContent className="rounded-xl">
@@ -345,7 +345,7 @@ export function ResumeManager({ resumes }: { resumes: ResumeRecord[] }) {
                         </div>
                     </DialogBody>
                     <DialogFooter>
-                        <Button variant="outline" className="" onClick={() => setRenameTarget(null)}>Cancelar</Button>
+                        <Button variant="outline" onClick={() => setRenameTarget(null)}>Cancelar</Button>
                         <Button className="gap-2" disabled={busy} onClick={handleRename}>
                             {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Pencil className="h-4 w-4" />} Salvar
                         </Button>

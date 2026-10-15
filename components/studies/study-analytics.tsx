@@ -38,7 +38,7 @@ export function StudyAnalytics({ daily, stats }: StudyAnalyticsProps) {
       </div>
 
       {/* GRÁFICO DE ATIVIDADE */}
-      <Card className="lg:col-span-2 lg:order-1 border-border/50 bg-card shadow-sm">
+      <Card className="lg:col-span-2 lg:order-1">
         <CardHeader className="pb-2 border-b border-border/40">
           <CardTitle className="text-sm font-semibold flex items-center gap-2 py-1">
             <BarChart3 className="h-4 w-4 text-primary" /> Atividade dos últimos 14 dias
@@ -112,7 +112,7 @@ function Kpi({
   unit?: string;
 }) {
   return (
-    <Card className="border-border/40 bg-card shadow-sm">
+    <Card>
       <CardContent className="p-4 flex items-center gap-3">
         <div className={cn("p-2 rounded-lg shrink-0", TONES[tone])}>
           <Icon className="h-4 w-4" />

@@ -104,7 +104,7 @@ export function AdvancedInsights({ stats }: { stats: BodyStats }) {
                 </Card>
 
                 {/* SIMETRIA */}
-                <Card className="border-border/60 bg-card">
+                <Card>
                     <CardHeader className="pb-2">
                         <CardTitle className="flex items-center gap-2 text-xs font-bold uppercase text-muted-foreground">
                             <Binary className="h-4 w-4" /> Simetria (Esq vs Dir)

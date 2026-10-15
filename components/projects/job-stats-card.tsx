@@ -19,7 +19,7 @@ const THEMES: Record<StatsCardProps["theme"], string> = {
 
 export function StatsCard({ label, value, icon: Icon, theme, hint }: StatsCardProps) {
     return (
-        <Card className="bg-card border-border/40 shadow-sm hover:shadow-md hover:border-border/80 transition-all">
+        <Card className="hover:shadow-md hover:border-border/80 transition-all">
             <CardContent className="p-6 flex items-start justify-between gap-4">
                 <div className="space-y-1.5 min-w-0">
                     <p className="eyebrow text-muted-foreground">{label}</p>

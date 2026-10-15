@@ -53,7 +53,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                                     placeholder="O que disseram sobre o seu trabalho..." 
                                     value={test.text} 
                                     onChange={e => update(test.id, 'text', e.target.value)} 
-                                    className="min-h-[80px] text-sm bg-muted/30 border-border/50 rounded-xl resize-none italic font-medium leading-relaxed" 
+                                    className="min-h-[80px] text-sm resize-none italic font-medium leading-relaxed" 
                                 />
                             </div>
                             
@@ -64,7 +64,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                                         placeholder="Ex: João Souza" 
                                         value={test.authorName} 
                                         onChange={e => update(test.id, 'authorName', e.target.value)} 
-                                        className="h-11 bg-muted/30 border-border/50 rounded-xl font-bold" 
+                                        className="font-bold" 
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -73,7 +73,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                                         placeholder="Ex: Acme Corp" 
                                         value={test.company} 
                                         onChange={e => update(test.id, 'company', e.target.value)} 
-                                        className="h-11 bg-muted/30 border-border/50 rounded-xl" 
+                                        
                                     />
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                                     placeholder="Ex: CTO" 
                                     value={test.authorRole} 
                                     onChange={e => update(test.id, 'authorRole', e.target.value)} 
-                                    className="h-11 bg-muted/30 border-border/50 rounded-xl" 
+                                    
                                 />
                             </div>
                         </div>

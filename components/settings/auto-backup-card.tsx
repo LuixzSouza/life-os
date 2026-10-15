@@ -65,7 +65,7 @@ export function AutoBackupCard({ initial }: { initial: AutoBackupStatus }) {
 
     if (!status.supported) {
         return (
-            <Card className="border-border shadow-sm bg-card">
+            <Card>
                 <CardHeader className="pb-3">
                     <CardTitle className="text-base flex items-center gap-2">
                         <CalendarClock className="h-4 w-4 text-primary" /> Backup Automático
@@ -80,7 +80,7 @@ export function AutoBackupCard({ initial }: { initial: AutoBackupStatus }) {
     }
 
     return (
-        <Card className="border-border shadow-sm bg-card">
+        <Card>
             <CardHeader className="pb-3">
                 <div className="flex items-start justify-between gap-4">
                     <div className="space-y-1">

@@ -18,7 +18,7 @@ export function BedtimeCalculator() {
   );
 
   return (
-    <Card className="border-border/60 bg-card shadow-sm">
+    <Card>
       <CardHeader className="pb-3 border-b border-border/40 bg-muted/20">
         <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2 py-1">
           <Calculator className="h-4 w-4 text-primary" /> Calculadora de Ciclos
@@ -51,7 +51,7 @@ export function BedtimeCalculator() {
           type="time"
           value={mode === "wake" ? wakeTime : bedTime}
           onChange={(e) => (mode === "wake" ? setWakeTime(e.target.value) : setBedTime(e.target.value))}
-          className="h-12 text-2xl font-bold text-center bg-muted/20 border-border/50"
+          className="text-2xl font-bold text-center"
         />
 
         <p className="text-xs text-muted-foreground text-center">

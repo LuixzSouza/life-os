@@ -127,7 +127,7 @@ export function JobForm({ defaultValues, type, mode = 'create', events, onSubmit
                         onPaste={handleImportPaste}
                         onKeyDown={(e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); runImport(); } }}
                         placeholder="Cole o LINK da vaga (LinkedIn, Gupy…) ou o TEXTO da descrição — preenche sozinho ao colar…"
-                        className="min-h-[64px] bg-background/60 border-border/40 rounded-lg p-2.5 text-sm focus-visible:ring-1 focus-visible:ring-primary/20 resize-y"
+                        className="min-h-[64px] bg-background/60 p-2.5 text-sm focus-visible:ring-1 focus-visible:ring-primary/20 resize-y"
                     />
                     <p className="text-[10px] text-muted-foreground leading-snug">
                         Cole e pronto — <b>preenche automaticamente</b>. Se o site bloquear a leitura do link, cole o texto da vaga.

@@ -139,7 +139,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         {/* COLUNA ESQUERDA (4/12) - Calendário & Gráficos */}
                         <div className="lg:col-span-4 space-y-6">
-                            <Card className="border-border/60 bg-card shadow-sm overflow-hidden">
+                            <Card className="overflow-hidden">
                                 <CardHeader className="pb-0 border-b border-border/40 bg-muted/20">
                                     <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2 py-2">
                                         <CalendarIcon className="h-4 w-4 text-primary" /> Navegação
@@ -163,7 +163,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                                 </CardContent>
                             </Card>
 
-                            <Card className="border-border/60 bg-card shadow-sm">
+                            <Card>
                                 <CardHeader className="pb-2">
                                     <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
                                         <TrendingUp className="h-4 w-4 text-primary" /> Tendência Semanal
@@ -201,7 +201,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
 
                         {/* COLUNA DIREITA (8/12) - Logger & Métricas Rápidas */}
                         <div className="lg:col-span-8 flex flex-col h-full space-y-6">
-                            <Card className="border-border/60 bg-gradient-to-r from-card to-muted/20 shadow-sm">
+                            <Card className="bg-gradient-to-r from-card to-muted/20">
                                 <CardContent className="p-5 flex flex-col sm:flex-row items-center justify-between gap-6">
                                     <div className="flex items-center gap-4">
                                         <div className={cn("p-3 rounded-full", isOver ? "bg-destructive/10 text-destructive" : "bg-emerald-500/10 text-emerald-500")}>

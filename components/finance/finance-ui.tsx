@@ -398,7 +398,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                             <div className="space-y-1.5">
                                 <Label className="text-xs font-medium text-muted-foreground ml-1">Conta de Origem</Label>
                                 <Select value={accountId} onValueChange={setAccountId}>
-                                    <SelectTrigger className="rounded-xl h-12 bg-muted/20">
+                                    <SelectTrigger>
                                         <SelectValue placeholder="Selecione a conta..." />
                                     </SelectTrigger>
                                     <SelectContent className="rounded-xl z-[100]">
@@ -415,7 +415,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                             </div>
                         </DialogBody>
                         <DialogFooter>
-                            <Button type="button" variant="ghost" className="" onClick={onClose}>Cancelar</Button>
+                            <Button type="button" variant="ghost" onClick={onClose}>Cancelar</Button>
                             <SubmitButton className="rounded-xl px-8 font-bold bg-orange-600 hover:bg-orange-700 shadow-lg shadow-orange-600/20">
                                 Confirmar Pagamento
                             </SubmitButton>
@@ -429,7 +429,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                             </p>
                         </DialogBody>
                         <DialogFooter>
-                            <Button type="button" variant="ghost" className="" onClick={onClose}>Fechar</Button>
+                            <Button type="button" variant="ghost" onClick={onClose}>Fechar</Button>
                         </DialogFooter>
                     </>
                 )}

@@ -299,7 +299,7 @@ function ChangePanel({
     <div className="space-y-3 rounded-xl border border-border/40 bg-muted/10 p-3">
       <ResumePicker resumes={resumes} value={selected} onChange={setSelected} />
       <div className="flex justify-end gap-2">
-        <Button variant="outline" size="sm" className="" onClick={onCancel} disabled={busy}>Cancelar</Button>
+        <Button variant="outline" size="sm" onClick={onCancel} disabled={busy}>Cancelar</Button>
         <Button size="sm" className="gap-1.5" onClick={onConfirm} disabled={busy || !selected}>
           {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Lock className="h-4 w-4" />} Congelar snapshot
         </Button>

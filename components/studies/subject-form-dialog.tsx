@@ -266,7 +266,7 @@ export function SubjectFormDialog({
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
                 placeholder="Ex: Tecnologia"
-                className="h-10 bg-muted/30"
+               
               />
             </div>
           </div>
@@ -282,7 +282,7 @@ export function SubjectFormDialog({
                 onChange={(e) => setIcon(e.target.value)}
                 placeholder="⚛️"
                 aria-label="Emoji do ícone"
-                className="h-10 w-12 shrink-0 bg-muted/30 p-0 text-center text-xl"
+                className="w-12 shrink-0 p-0 text-center text-xl"
               />
               <div className="flex flex-1 flex-wrap gap-2">
                 {SUBJECT_COLORS.map((c) => {
@@ -338,7 +338,7 @@ export function SubjectFormDialog({
                 <Gauge className="h-3.5 w-3.5" /> Dificuldade
               </Label>
               <Select value={difficulty} onValueChange={setDifficulty}>
-                <SelectTrigger className="h-10 bg-muted/30">
+                <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>

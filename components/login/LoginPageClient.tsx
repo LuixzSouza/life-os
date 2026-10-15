@@ -218,7 +218,7 @@ export default function LoginPageClient() {
                                     value={email}
                                     onChange={(e) => { setEmail(e.target.value); handleInputChange(); }}
                                     suppressHydrationWarning
-                                    className="h-12 bg-muted/40 transition-all"
+                                    className="transition-all"
                                 />
                             </div>
 

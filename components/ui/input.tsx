@@ -12,13 +12,13 @@ function Input({
       data-slot="input"
       className={cn(
         /* Base */
-        "w-full min-w-0 h-9 rounded-md border bg-transparent px-3 py-1 text-sm",
+        "w-full min-w-0 h-10 rounded-lg border bg-muted/20 px-3 py-1 text-sm",
         "text-foreground placeholder:text-muted-foreground",
         "shadow-xs transition-[color,box-shadow,border-color,background-color]",
         "outline-none",
 
         /* Tema / estados */
-        "border-input dark:bg-input/30",
+        "border-border/60",
         "selection:bg-primary selection:text-primary-foreground",
 
         /* Focus */

@@ -71,7 +71,7 @@ export function DeckGrid({ decks, subjects = [] }: DeckGridProps) {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Buscar baralho ou matéria…"
-              className="h-10 rounded-xl border-0 bg-muted/30 pl-9 shadow-none focus-visible:ring-1"
+              className="border-0 bg-muted/30 pl-9 shadow-none focus-visible:ring-1"
             />
           </div>
           <button

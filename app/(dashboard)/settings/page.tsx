@@ -266,7 +266,7 @@ export default async function SettingsPage({
                                 />
                             )}
                             {dbStatus.mode === "local" && <MigrateToReplicaCard />}
-                            <Card className="border-border shadow-sm bg-card">
+                            <Card>
                                 <CardContent className="p-6">
                                     {dbStatus.mode !== "cloud" && (
                                         <>
@@ -344,7 +344,7 @@ export default async function SettingsPage({
                                 <SelectiveExport />
 
                                 {/* Importação */}
-                                <Card className="border-border shadow-sm bg-card h-full">
+                                <Card className="h-full">
                                     <CardContent className="p-6">
                                         <RestoreBackupForm />
                                     </CardContent>
@@ -406,7 +406,7 @@ export default async function SettingsPage({
                             </p>
                         </div>
                         <div className="md:col-span-8">
-                            <Card className="border-border shadow-sm bg-card">
+                            <Card>
                                 <CardContent className="p-6">
                                     <NotificationsCard
                                         initial={{
@@ -433,22 +433,22 @@ export default async function SettingsPage({
                             <p className="text-sm text-muted-foreground">Personalize o comportamento da IA.</p>
                         </div>
                         <div className="md:col-span-8 space-y-6">
-                            <Card className="border-border shadow-sm bg-card">
+                            <Card>
                                 <CardContent className="p-6">
                                     <AIConfigForm settings={settings} />
                                 </CardContent>
                             </Card>
-                            <Card className="border-border shadow-sm bg-card">
+                            <Card>
                                 <CardContent className="p-6">
                                     <AiMemoriesCard initialMemories={aiMemories} />
                                 </CardContent>
                             </Card>
-                            <Card className="border-border shadow-sm bg-card">
+                            <Card>
                                 <CardContent className="p-6">
                                     <AiAutomationsCard initialAutomations={aiAutomations} />
                                 </CardContent>
                             </Card>
-                            <Card className="border-border shadow-sm bg-card">
+                            <Card>
                                 <CardContent className="p-6">
                                     <AiPrivacyCard
                                         initial={{
@@ -471,7 +471,7 @@ export default async function SettingsPage({
                             <p className="text-sm text-muted-foreground">Conecte serviços externos.</p>
                         </div>
                         <div className="md:col-span-8">
-                            <Card className="border-border shadow-sm bg-card">
+                            <Card>
                                 <CardContent className="p-6">
                                     <APIIntegrationsForm settings={settings} />
                                 </CardContent>

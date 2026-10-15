@@ -95,14 +95,14 @@ export function CreateDeckDialog({ open, onOpenChange, subjects }: CreateDeckDia
                 required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="h-11 bg-muted/20 font-medium"
+                className="font-medium"
               />
             </div>
 
             <div className="space-y-2">
               <Label className="eyebrow text-muted-foreground">Matéria vinculada</Label>
               <Select value={selectedSubjectId} onValueChange={handleSubjectSelect}>
-                <SelectTrigger className="h-11 bg-muted/20">
+                <SelectTrigger>
                   <SelectValue placeholder="Vincular a uma matéria existente..." />
                 </SelectTrigger>
                 <SelectContent>
@@ -122,7 +122,7 @@ export function CreateDeckDialog({ open, onOpenChange, subjects }: CreateDeckDia
               <Textarea
                 name="description"
                 placeholder="Para que serve este baralho?"
-                className="h-24 resize-none bg-muted/20"
+                className="h-24 resize-none"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />

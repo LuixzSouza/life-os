@@ -121,7 +121,7 @@ export function ExerciseMediaEditor({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl rounded-2xl">
+      <DialogContent className="max-w-2xl">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-lg">
             <ImageIcon className="h-5 w-5 text-primary" />
@@ -222,7 +222,7 @@ export function ExerciseMediaEditor({
                     if (e.key === "Enter") handleYouTubeAdd();
                   }}
                   disabled={ytLoading}
-                  className="h-10 rounded-lg"
+                 
                 />
               </div>
 
@@ -373,13 +373,13 @@ export function ExerciseMediaEditor({
           <Button
             variant="outline"
             onClick={() => onOpenChange(false)}
-            className=""
+           
           >
             <X className="h-4 w-4 mr-1" /> Fechar
           </Button>
           <Button
             onClick={() => onOpenChange(false)}
-            className=""
+           
           >
             <Check className="h-4 w-4 mr-1" /> Pronto!
           </Button>

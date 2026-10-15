@@ -261,7 +261,7 @@ function AddHabitDialog({ open, onOpenChange, onCreated }: { open: boolean; onOp
           </div>
         </DialogBody>
         <DialogFooter>
-          <Button variant="outline" onClick={() => onOpenChange(false)} className="">Cancelar</Button>
+          <Button variant="outline" onClick={() => onOpenChange(false)}>Cancelar</Button>
           <Button onClick={submit} disabled={saving || !name.trim()} className="gap-1.5">
             <Plus className="h-4 w-4" /> {saving ? "Criando..." : "Criar hábito"}
           </Button>

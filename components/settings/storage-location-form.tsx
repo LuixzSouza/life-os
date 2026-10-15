@@ -56,7 +56,7 @@ export function StorageLocationForm({ currentPath }: { currentPath?: string }) {
                         <div className="flex gap-2">
                             <div className="relative flex-1">
                                 <FolderInput className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                                <Input name="storagePath" value={pathValue} onChange={(e) => setPathValue(e.target.value)} placeholder="Ex: D:/MeusArquivos/LifeOS" className="pl-9 bg-background font-mono text-xs border-primary/20 focus-visible:ring-primary" />
+                                <Input name="storagePath" value={pathValue} onChange={(e) => setPathValue(e.target.value)} placeholder="Ex: D:/MeusArquivos/LifeOS" className="pl-9 font-mono text-xs border-primary/20 focus-visible:ring-primary" />
                             </div>
 
                             <FolderPicker currentPath={pathValue} onSelect={(newPath) => setPathValue(newPath)} />

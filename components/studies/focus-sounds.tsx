@@ -115,7 +115,7 @@ export function FocusSounds({ compact = false }: { compact?: boolean }) {
   const anyActive = active.size > 0;
 
   return (
-    <Card className="border-border/50 bg-card shadow-sm">
+    <Card>
       <CardHeader className="flex flex-row items-center justify-between border-b border-border/40 pb-4">
         <CardTitle className="flex items-center gap-2 text-sm font-semibold">
           <div className={cn("rounded-lg p-1.5", anyActive ? "bg-primary/15 text-primary" : "bg-muted text-muted-foreground")}>

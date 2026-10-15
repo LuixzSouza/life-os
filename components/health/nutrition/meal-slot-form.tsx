@@ -136,7 +136,7 @@ export function MealSlotForm({ dayIdx, type, existingSlot, onClose }: MealSlotFo
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Ex: Almoço Fit Segunda-feira"
-            className="h-12 text-base font-medium bg-background border-primary/20 focus:border-primary"
+            className="text-base font-medium border-primary/20 focus:border-primary"
             autoFocus
           />
         </div>
