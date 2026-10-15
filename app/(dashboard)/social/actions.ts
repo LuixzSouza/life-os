@@ -3,6 +3,7 @@
 import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { getCurrentUserId } from "@/lib/auth";
+import { isFriendImageRef } from "@/lib/friend-image";
 import { logActivity } from "@/lib/activity";
 import { CONTACT_ACTION, CONTACT_MODULE } from "@/lib/social-contact";
 
@@ -99,8 +100,11 @@ export async function updateFriend(formData: FormData) {
     const id = formData.get("id") as string;
     if (!id) return { success: false, message: "ID do contato inválido." };
 
-    const data = extractFriendData(formData);
-    if (!data.name) return { success: false, message: "O nome é obrigatório." };
+    const { imageUrl, ...fields } = extractFriendData(formData);
+    if (!fields.name) return { success: false, message: "O nome é obrigatório." };
+    // O form de edição recebe a foto como ref da rota (/api/friend-image/…) e a
+    // devolve intacta quando ela não muda — gravar a ref apagaria a foto real.
+    const data = isFriendImageRef(imageUrl) ? fields : { ...fields, imageUrl };
 
     // Usamos updateMany em vez de update para poder checar id e userId juntos
     // sem dar erro de chave composta no Prisma.

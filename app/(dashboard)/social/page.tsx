@@ -10,6 +10,7 @@ import { PageShell, PageHeader, PageContainer } from "@/components/layout/page-s
 import { StatCard } from "@/components/ui/stat-card";
 import { getLastContacts } from "./actions";
 import { isReconnectDue } from "@/lib/social-contact";
+import { friendImageSrc } from "@/lib/friend-image";
 
 // --- Página Principal (Server Component) ---
 export default async function SocialPage() {
@@ -47,7 +48,8 @@ export default async function SocialPage() {
     birthday: f.birthday ? f.birthday.toISOString() : null,
     createdAt: f.createdAt.toISOString(),
     updatedAt: f.updatedAt.toISOString(),
-    imageUrl: f.imageUrl || null,
+    // Ref cacheável em vez do base64 inteiro no HTML (ver lib/friend-image.ts).
+    imageUrl: friendImageSrc(f),
     giftIdeas: f.giftIdeas || null,
     tags: f.tags || null,
     nickname: f.nickname || null,
