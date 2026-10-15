@@ -48,7 +48,7 @@ export default async function AccessPage() {
             {/* Saúde geral (score) */}
             <div className="col-span-2 min-w-[160px] rounded-xl border border-border/60 bg-card p-4 shadow-sm sm:col-span-1">
               <div className="mb-2 flex items-center justify-between">
-                <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                <span className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                   <Activity className="h-3 w-3" /> Saúde
                 </span>
                 <span className={cn("text-lg font-black leading-none", healthColor)}>{stats.healthScore}%</span>
@@ -61,7 +61,7 @@ export default async function AccessPage() {
             {/* Total */}
             <div className="rounded-xl border border-border/60 bg-card p-4 text-center shadow-sm">
               <span className="block text-2xl font-bold leading-none text-foreground">{allItems.length}</span>
-              <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Itens</span>
+              <span className="eyebrow text-muted-foreground">Itens</span>
             </div>
 
             {/* Senhas frágeis */}
@@ -69,7 +69,7 @@ export default async function AccessPage() {
               <span className={cn("flex items-center justify-center gap-1 text-2xl font-bold leading-none", stats.weak > 0 ? "text-rose-500" : "text-foreground")}>
                 {stats.weak > 0 && <ShieldAlert className="h-4 w-4" />}{stats.weak}
               </span>
-              <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Frágeis</span>
+              <span className="eyebrow text-muted-foreground">Frágeis</span>
             </div>
 
             {/* Senhas reutilizadas */}
@@ -77,7 +77,7 @@ export default async function AccessPage() {
               <span className={cn("flex items-center justify-center gap-1 text-2xl font-bold leading-none", stats.reused > 0 ? "text-amber-500" : "text-foreground")}>
                 {stats.reused > 0 && <Repeat2 className="h-4 w-4" />}{stats.reused}
               </span>
-              <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Repetidas</span>
+              <span className="eyebrow text-muted-foreground">Repetidas</span>
             </div>
           </div>
         }

@@ -250,7 +250,7 @@ export function SessionSummary({
       {/* Volume por grupo muscular (onde o trabalho foi parar) */}
       {groups.length > 1 && (
         <div className="mt-4 rounded-2xl border border-border/40 bg-card p-3.5 shadow-sm">
-          <p className="mb-2.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Volume por grupo</p>
+          <p className="eyebrow mb-2.5 text-muted-foreground">Volume por grupo</p>
           <div className="space-y-2">
             {groups.slice(0, 5).map((g) => (
               <div key={g.group} className="flex items-center gap-2.5">
@@ -270,7 +270,7 @@ export function SessionSummary({
       {/* Recap por exercício — o que você fez, com melhor série, recorde, nota e drop */}
       {recap.length > 0 && (
         <div className="mt-4 rounded-2xl border border-border/40 bg-card p-3.5 shadow-sm">
-          <p className="mb-2.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Resumo por exercício</p>
+          <p className="eyebrow mb-2.5 text-muted-foreground">Resumo por exercício</p>
           <ul className="space-y-2">
             {recap.map((r) => (
               <li key={r.id} className="flex items-center gap-2.5">
@@ -313,7 +313,7 @@ export function SessionSummary({
       <div className="mt-6 flex-1 space-y-6">
         {/* Fotos do dia + compartilhar */}
         <section className="space-y-2">
-          <label className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
             <Camera className="h-3.5 w-3.5" /> Fotos do treino
           </label>
 
@@ -355,7 +355,7 @@ export function SessionSummary({
 
         {/* Como foi */}
         <section className="space-y-2">
-          <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Como foi?</label>
+          <label className="eyebrow text-muted-foreground">Como foi?</label>
           <div className="flex gap-2">
             {FEELINGS.map((f) => (
               <button
@@ -376,7 +376,7 @@ export function SessionSummary({
 
         {/* Notas */}
         <section className="space-y-2">
-          <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Observações (opcional)</label>
+          <label className="eyebrow text-muted-foreground">Observações (opcional)</label>
           <textarea
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
@@ -387,7 +387,7 @@ export function SessionSummary({
 
         {/* Salvar como rotina */}
         <section className="space-y-2 rounded-xl border border-border/40 bg-muted/20 p-3">
-          <label className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
             <Star className="h-3.5 w-3.5 text-amber-400" /> Salvar como rotina (reutilizar depois)
           </label>
           <div className="flex items-center gap-2">
@@ -417,7 +417,7 @@ function HeroStat({ icon: Icon, label, value }: { icon: typeof Timer; label: str
     <div className="flex flex-col items-center gap-0.5 rounded-xl bg-white/12 px-2 py-2.5 text-center ring-1 ring-white/15 backdrop-blur-sm">
       <Icon className="h-4 w-4 text-white/80" />
       <span className="text-base font-black tabular-nums leading-tight">{value}</span>
-      <span className="text-[9px] font-semibold uppercase tracking-wider text-white/70">{label}</span>
+      <span className="eyebrow text-white/70">{label}</span>
     </div>
   );
 }

@@ -238,7 +238,7 @@ export function SubjectCard({
               <h3 className="truncate font-bold text-foreground transition-colors group-hover:text-primary">{subject.title}</h3>
               {isCompleted && <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-500" />}
             </div>
-            <div className="mt-0.5 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+            <div className="eyebrow mt-0.5 flex items-center gap-2 text-muted-foreground">
               {parentName && (
                 <span className="flex min-w-0 items-center gap-1">
                   <Folder className="h-3 w-3 shrink-0" /> <span className="truncate">{parentName}</span>
@@ -251,7 +251,7 @@ export function SubjectCard({
 
           <div className="hidden shrink-0 flex-col items-end md:flex">
             <span className="text-sm font-bold tabular-nums text-foreground">{totalMinutesFormatted}</span>
-            <span className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+            <span className="eyebrow text-muted-foreground">
               {isCompleted ? "meta ✓" : `${progressPercent}% da meta`}
             </span>
           </div>
@@ -324,7 +324,7 @@ export function SubjectCard({
         {/* Identificação */}
         <div className="mt-3 min-w-0">
           {(parentName || isRoot) && (
-            <p className="mb-0.5 flex items-center gap-1 text-[10px] font-bold uppercase tracking-wide text-muted-foreground/70">
+            <p className="eyebrow mb-0.5 flex items-center gap-1 text-muted-foreground/70">
               <Folder className="h-3 w-3 shrink-0" />
               <span className="truncate">{parentName ?? "Tópico raiz"}</span>
             </p>
@@ -333,7 +333,7 @@ export function SubjectCard({
             {subject.title}
           </h3>
           <div className="mt-1.5 flex items-center gap-2">
-            <span className="truncate text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+            <span className="eyebrow truncate text-muted-foreground">
               {subject.category ?? "Geral"}
             </span>
             <DifficultyDots level={difficulty} />
@@ -397,7 +397,7 @@ function FooterStat({ label, value }: { label: string; value: string }) {
   return (
     <div className="min-w-0 px-1">
       <p className="truncate text-xs font-bold tabular-nums text-foreground">{value}</p>
-      <p className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/60">{label}</p>
+      <p className="eyebrow text-muted-foreground/60">{label}</p>
     </div>
   );
 }

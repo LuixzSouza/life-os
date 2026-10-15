@@ -166,7 +166,7 @@ function StatCard({
           <span className={cn("flex h-8 w-8 items-center justify-center rounded-xl transition-transform group-hover:scale-110", tone)}>
             <Icon className="h-4 w-4" />
           </span>
-          <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground leading-tight">{label}</p>
+          <p className="eyebrow text-muted-foreground leading-tight">{label}</p>
         </div>
         <p className="mt-3 text-2xl font-bold tracking-tight leading-none tabular-nums">{value}</p>
         <div className="mt-auto space-y-1 pt-2">
@@ -183,7 +183,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-2.5">
       <span className="h-4 w-1 rounded-full bg-primary/60" />
-      <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{children}</h3>
+      <h3 className="eyebrow text-muted-foreground">{children}</h3>
     </div>
   );
 }
@@ -347,7 +347,7 @@ export default async function ReviewPage({
                 <Link
                   href={monthModeHref}
                   className={cn(
-                    "rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider transition-colors",
+                    "eyebrow rounded-full px-3 py-1 transition-colors",
                     !isYearMode
                       ? "bg-primary text-primary-foreground shadow-sm"
                       : "text-muted-foreground hover:text-foreground"
@@ -358,7 +358,7 @@ export default async function ReviewPage({
                 <Link
                   href={`/review?year=${year}`}
                   className={cn(
-                    "rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider transition-colors",
+                    "eyebrow rounded-full px-3 py-1 transition-colors",
                     isYearMode
                       ? "bg-primary text-primary-foreground shadow-sm"
                       : "text-muted-foreground hover:text-foreground"
@@ -405,13 +405,13 @@ export default async function ReviewPage({
                 <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-500">
                   <Wallet className="h-3.5 w-3.5" />
                 </span>
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Finanças</p>
+                <p className="eyebrow text-muted-foreground">Finanças</p>
                 <span className="ml-auto text-[11px] text-muted-foreground">{stats.txCount} lançamentos</span>
               </div>
 
               <div className="mt-5 flex flex-wrap items-end justify-between gap-4">
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Saldo do período</p>
+                  <p className="eyebrow text-muted-foreground">Saldo do período</p>
                   <p className={cn(
                     "text-3xl sm:text-4xl font-black tracking-tight tabular-nums leading-none mt-1",
                     balance >= 0 ? "text-emerald-600 dark:text-emerald-500" : "text-rose-500"
@@ -421,12 +421,12 @@ export default async function ReviewPage({
                 </div>
                 <div className="flex gap-2.5">
                   <div className="rounded-xl border border-border/50 bg-background/70 px-3.5 py-2 backdrop-blur-sm">
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-muted-foreground">Receitas</p>
+                    <p className="eyebrow text-muted-foreground">Receitas</p>
                     <p className="text-base sm:text-lg font-bold text-emerald-500 tabular-nums">{money(stats.income)}</p>
                     <DeltaBadge compareLabel={cmp} current={stats.income} previous={prev.income} goodWhen="up" format={money} />
                   </div>
                   <div className="rounded-xl border border-border/50 bg-background/70 px-3.5 py-2 backdrop-blur-sm">
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-muted-foreground">Despesas</p>
+                    <p className="eyebrow text-muted-foreground">Despesas</p>
                     <p className="text-base sm:text-lg font-bold text-rose-500 tabular-nums">{money(stats.expense)}</p>
                     <DeltaBadge compareLabel={cmp} current={stats.expense} previous={prev.expense} goodWhen="down" format={money} />
                   </div>
@@ -436,7 +436,7 @@ export default async function ReviewPage({
 
             {stats.topCategories.length > 0 && (
               <div className="space-y-2.5 border-t border-border/40 p-5">
-                <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Onde o dinheiro foi</p>
+                <p className="eyebrow text-muted-foreground">Onde o dinheiro foi</p>
                 {stats.topCategories.map((c) => (
                   <div key={c.category} className="flex items-center gap-3">
                     <span className="w-28 sm:w-36 truncate text-xs font-medium">{c.category}</span>
@@ -461,7 +461,7 @@ export default async function ReviewPage({
                   <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <TrendingUp className="h-3.5 w-3.5" />
                   </span>
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                  <p className="eyebrow text-muted-foreground">
                     {isYearMode ? `Tendência · jan–dez de ${year}` : "Tendência · últimos 12 meses"}
                   </p>
                   <span className="ml-auto hidden sm:flex items-center gap-3 text-[10px] font-semibold text-muted-foreground">
@@ -483,7 +483,7 @@ export default async function ReviewPage({
                   <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <Activity className="h-3.5 w-3.5" />
                   </span>
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                  <p className="eyebrow text-muted-foreground">
                     {isYearMode ? `Constância · ${year}` : "Constância · últimos 12 meses"}
                   </p>
                 </div>

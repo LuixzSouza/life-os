@@ -132,7 +132,7 @@ export function TestMode({ deck, cards }: TestModeProps) {
 
           {wrong.length > 0 && (
             <div className="space-y-2 rounded-2xl border border-border/40 bg-muted/20 p-4 text-left">
-              <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Revisar ({wrong.length})</p>
+              <p className="eyebrow text-muted-foreground">Revisar ({wrong.length})</p>
               {wrong.map((w, i) => (
                 <div key={i} className="border-t border-border/30 pt-2 first:border-0 first:pt-0">
                   <p className="text-sm font-semibold">{w.prompt}</p>
@@ -171,7 +171,7 @@ export function TestMode({ deck, cards }: TestModeProps) {
 
       {/* Pergunta */}
       <div className="mb-6 rounded-2xl border border-border/50 bg-card p-6 text-center shadow-sm">
-        <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">O que é / significa</p>
+        <p className="eyebrow text-muted-foreground">O que é / significa</p>
         <p className="mt-2 text-xl font-bold leading-snug">{current.prompt}</p>
       </div>
 

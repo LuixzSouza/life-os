@@ -72,7 +72,7 @@ export function AiBriefingCard() {
             <p className="text-xs font-medium text-muted-foreground">
               Briefing do dia
             </p>
-            <p className="flex items-center gap-1 text-[9px] font-bold uppercase tracking-widest text-muted-foreground/60">
+            <p className="eyebrow flex items-center gap-1 text-muted-foreground/60">
               {briefing.source === "ai" ? (
                 <><Sparkles className="h-2.5 w-2.5 text-primary" /> gerado pela sua IA</>
               ) : (

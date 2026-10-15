@@ -35,7 +35,7 @@ export function NowPlayingCard({ media }: NowPlayingCardProps) {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="font-medium text-sm truncate group-hover:text-primary transition-colors">{item.title}</p>
-                  <p className="text-[10px] text-muted-foreground truncate uppercase tracking-wider">{item.type}</p>
+                  <p className="eyebrow text-muted-foreground truncate">{item.type}</p>
                 </div>
               </div>
             ))}

@@ -578,7 +578,7 @@ function MonthGrid({
           const theme = themeByWeekday[i];
           return (
             <div key={w} className="flex flex-col items-center gap-0.5 py-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider" style={theme ? { color: theme.color } : undefined}>
+              <span className="eyebrow" style={theme ? { color: theme.color } : undefined}>
                 {theme?.icon ? `${theme.icon} ` : ""}{w}
               </span>
               {theme && <span className="max-w-full truncate px-1 text-[9px] font-semibold leading-none text-muted-foreground">{theme.name}</span>}
@@ -703,7 +703,7 @@ function WeekGrid({
                 className="group sticky top-0 z-10 flex cursor-pointer items-center justify-between gap-1 border-b border-border/40 bg-background/95 px-2 py-2 backdrop-blur transition-colors hover:bg-muted/40"
               >
                 <span className="flex items-center gap-1.5">
-                  <span className={cn("text-[10px] font-bold uppercase tracking-wider", today ? "text-primary" : "text-muted-foreground")}>
+                  <span className={cn("eyebrow", today ? "text-primary" : "text-muted-foreground")}>
                     {theme?.icon ? `${theme.icon} ` : ""}{WEEKDAYS[d.getDay()]}
                   </span>
                   <span className={cn("flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold", today ? "bg-primary text-primary-foreground" : "text-foreground")}>
@@ -838,7 +838,7 @@ function DayView({ items, day, theme, eventById, onEditEvent, onDeleteEvent, onR
 function Section({ title, items, showTime, nowIndex, eventById, onEditEvent, onDeleteEvent, onRecurring }: { title: string; items: AgendaItem[]; showTime?: boolean; nowIndex?: number } & DayEditProps) {
   return (
     <div className="space-y-2">
-      <h3 className="px-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">{title}</h3>
+      <h3 className="eyebrow px-1 text-muted-foreground/60">{title}</h3>
       <div className="space-y-2">
         {items.map((it, i) => (
           <Fragment key={it.id}>

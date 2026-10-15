@@ -112,7 +112,7 @@ export function KpiCards({
               <AnimatedNumber value={studyHours} format="int" /><span className="text-sm font-normal text-muted-foreground">h</span>{" "}
               <AnimatedNumber value={studyMins} format="int" /><span className="text-sm font-normal text-muted-foreground">m</span>
             </div>
-            <p className="text-[10px] text-muted-foreground mt-1.5 uppercase tracking-wide">
+            <p className="eyebrow text-muted-foreground mt-1.5">
               {studySessionsCount} sessões hoje
             </p>
           </CardContent>
@@ -126,7 +126,7 @@ export function KpiCards({
             <CalendarIcon className="h-16 w-16 text-primary" />
           </div>
           <CardHeader className="pb-2 relative z-10">
-            <CardTitle className="text-xs font-medium text-primary uppercase tracking-wider">Próximo Evento</CardTitle>
+            <CardTitle className="eyebrow text-primary">Próximo Evento</CardTitle>
           </CardHeader>
           <CardContent className="relative z-10">
             {nextEvent ? (

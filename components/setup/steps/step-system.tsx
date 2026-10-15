@@ -45,7 +45,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
 
         {/* Showcase: Turso ativo + demais provedores no roadmap ("Em breve"). */}
         <div className="space-y-2.5">
-          <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+          <p className="eyebrow text-muted-foreground">
             Provedores de banco
           </p>
           <ProviderGrid providers={DB_PROVIDERS} selectedId="turso" mode="showcase" />

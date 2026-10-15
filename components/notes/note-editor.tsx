@@ -675,7 +675,7 @@ export function NoteEditor({
                 onClick={() => setShowOutline(false)}
               />
               <div className="absolute left-0 top-full z-50 mt-1 max-h-72 w-72 overflow-y-auto rounded-lg border border-border/60 bg-popover p-1 shadow-lg">
-                <p className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground/60">
+                <p className="eyebrow px-2 py-1 text-muted-foreground/60">
                   Estrutura
                 </p>
                 {outline.map((h, i) => (
@@ -806,7 +806,7 @@ export function NoteEditor({
               style={{ top: mentionCoords.top, left: mentionCoords.left }}
               onMouseDown={(e) => e.preventDefault()}
             >
-              <p className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground/60">
+              <p className="eyebrow px-2 py-1 text-muted-foreground/60">
                 Vincular a…
               </p>
               {mentionList.map((it, i) => (

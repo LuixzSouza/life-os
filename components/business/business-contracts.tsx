@@ -46,7 +46,7 @@ export function ContractsList({
         <span className="text-xs font-medium text-muted-foreground flex items-center gap-2">
           <Briefcase size={12} className="text-primary/60" /> Contratos e Projetos
         </span>
-        <Button variant="ghost" size="sm" className="h-7 px-2.5 text-[10px] font-bold uppercase tracking-wider hover:bg-primary/10 hover:text-primary rounded-lg" onClick={() => onNewBilling(client.id)}>
+        <Button variant="ghost" size="sm" className="eyebrow h-7 px-2.5 hover:bg-primary/10 hover:text-primary rounded-lg" onClick={() => onNewBilling(client.id)}>
           <Plus size={14} className="mr-1" /> Novo
         </Button>
       </div>
@@ -209,7 +209,7 @@ export function ContractsList({
                       );
                     })}
                     {billing.invoices.length > relevantInvoices.length && (
-                      <p className="px-4 py-2 text-[9px] font-bold uppercase tracking-widest text-muted-foreground/50">
+                      <p className="eyebrow px-4 py-2 text-muted-foreground/50">
                         {billing.invoices.length - relevantInvoices.length} fatura(s) cancelada(s) oculta(s)
                       </p>
                     )}

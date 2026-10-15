@@ -74,7 +74,7 @@ export function DailyReviewBanner({ due, totalCards }: DailyReviewBannerProps) {
             <Zap className="h-7 w-7" />
           </div>
           <div>
-            <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-primary/80">
+            <p className="eyebrow flex items-center gap-1.5 text-primary/80">
               <Sparkles className="h-3.5 w-3.5" /> Revisão do dia
             </p>
             <p className="mt-0.5 text-lg font-extrabold leading-tight text-foreground">

@@ -103,7 +103,7 @@ export function TimelineInsights({ insights }: { insights: ActivityInsights }) {
             ))}
           </div>
         </div>
-        <div className="mt-3 flex items-center justify-end gap-1.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground/50">
+        <div className="eyebrow mt-3 flex items-center justify-end gap-1.5 text-muted-foreground/50">
           menos
           <span className="h-2.5 w-2.5 rounded-[3px] bg-muted/50" />
           <span className="h-2.5 w-2.5 rounded-[3px] bg-primary/25" />
@@ -123,7 +123,7 @@ function StatCard({ icon, value, label, small }: { icon: React.ReactNode; value:
       <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-muted/60">{icon}</span>
       <div className="mt-2.5">
         <p className={cn("font-black leading-none tracking-tight text-foreground", small ? "truncate text-base" : "text-xl tabular-nums")}>{value}</p>
-        <p className="mt-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground/70">{label}</p>
+        <p className="eyebrow mt-1 text-muted-foreground/70">{label}</p>
       </div>
     </div>
   );

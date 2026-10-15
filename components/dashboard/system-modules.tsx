@@ -32,7 +32,7 @@ export function SystemModules({
         <Card className="shadow-sm border-border/50 hover:border-primary/30 transition-colors">
           <CardContent className="p-4">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-1.5">
+              <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
                 <Flame className="h-3.5 w-3.5 text-emerald-500" /> Ingestão
               </span>
               <Link href="/health" className="text-[10px] text-primary hover:underline">Monitor</Link>
@@ -54,7 +54,7 @@ export function SystemModules({
         <Card className="shadow-sm border-border/50 hover:border-primary/30 transition-colors">
           <CardContent className="p-4 flex flex-col justify-between h-full">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-1.5">
+              <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
                 <Bot className="h-3.5 w-3.5 text-primary" /> Assistente IA
               </span>
             </div>
@@ -71,7 +71,7 @@ export function SystemModules({
         <Card className="shadow-sm border-border/50 hover:border-primary/30 transition-colors">
           <CardContent className="p-4 flex flex-col justify-between h-full">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-1.5">
+              <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
                 <Shirt className="h-3.5 w-3.5 text-amber-500" /> Closet
               </span>
             </div>
@@ -88,7 +88,7 @@ export function SystemModules({
         <Card className="shadow-sm border-border/50 hover:border-primary/30 transition-colors">
           <CardContent className="p-4 flex flex-col h-full">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-1.5">
+              <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
                 <LinkIcon className="h-3.5 w-3.5 text-indigo-500" /> Links Salvos
               </span>
               <Link href="/links" className="text-[10px] text-primary hover:underline">Ver Todos</Link>

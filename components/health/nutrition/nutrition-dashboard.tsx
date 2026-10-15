@@ -141,7 +141,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                         <div className="lg:col-span-4 space-y-6">
                             <Card className="border-border/60 bg-card shadow-sm overflow-hidden">
                                 <CardHeader className="pb-0 border-b border-border/40 bg-muted/20">
-                                    <CardTitle className="text-xs uppercase font-bold text-muted-foreground tracking-widest flex items-center gap-2 py-2">
+                                    <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2 py-2">
                                         <CalendarIcon className="h-4 w-4 text-primary" /> Navegação
                                     </CardTitle>
                                 </CardHeader>
@@ -165,7 +165,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
 
                             <Card className="border-border/60 bg-card shadow-sm">
                                 <CardHeader className="pb-2">
-                                    <CardTitle className="text-xs uppercase font-bold text-muted-foreground tracking-widest flex items-center gap-2">
+                                    <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
                                         <TrendingUp className="h-4 w-4 text-primary" /> Tendência Semanal
                                     </CardTitle>
                                 </CardHeader>
@@ -208,7 +208,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                                             <Target className="h-6 w-6" />
                                         </div>
                                         <div>
-                                            <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-0.5">Saldo Calórico</p>
+                                            <p className="eyebrow text-muted-foreground mb-0.5">Saldo Calórico</p>
                                             <div className="flex items-baseline gap-2">
                                                 <h2 className={cn("text-3xl font-black tracking-tight", isOver ? "text-destructive" : "text-emerald-500")}>
                                                     {isOver ? `+${Math.abs(balance)}` : balance}

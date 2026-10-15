@@ -410,7 +410,7 @@ export function NoteFullEditor({
         {/* Metadados */}
         <div className="grid grid-cols-1 gap-3 rounded-xl border border-border/40 bg-card p-4 shadow-sm sm:grid-cols-3">
           <div className="space-y-1.5">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Caderno</label>
+            <label className="eyebrow text-muted-foreground">Caderno</label>
             <Select value={notebookId} onValueChange={setNotebookId}>
               <SelectTrigger><SelectValue placeholder="Entrada" /></SelectTrigger>
               <SelectContent>
@@ -428,7 +428,7 @@ export function NoteFullEditor({
 
           <div className="space-y-1.5">
             <div className="flex items-center justify-between">
-              <label className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+              <label className="eyebrow flex items-center gap-1 text-muted-foreground">
                 <Briefcase className="h-3 w-3" /> Projeto
               </label>
               {linkedProject && (
@@ -459,7 +459,7 @@ export function NoteFullEditor({
 
           <div className="space-y-1.5">
             <div className="flex items-center justify-between gap-2">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Matéria</label>
+              <label className="eyebrow text-muted-foreground">Matéria</label>
               {subjectId !== "none" && (
                 <Link
                   href={`/studies?subject=${subjectId}`}
@@ -482,7 +482,7 @@ export function NoteFullEditor({
           </div>
 
           <div className="space-y-1.5 sm:col-span-3">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Tags rápidas (vírgula)</label>
+            <label className="eyebrow text-muted-foreground">Tags rápidas (vírgula)</label>
             <Input value={tags} onChange={(e) => setTags(e.target.value)} placeholder="ex: revisão, ideia" />
           </div>
         </div>
@@ -496,7 +496,7 @@ export function NoteFullEditor({
         {/* Backlinks: outras notas que mencionam esta */}
         {backlinks.length > 0 && (
           <div className="space-y-2 rounded-xl border border-border/40 bg-card p-4 shadow-sm">
-            <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+            <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
               <Link2 className="h-3.5 w-3.5" /> Mencionada em ({backlinks.length})
             </p>
             <div className="flex flex-col">
@@ -519,7 +519,7 @@ export function NoteFullEditor({
         {relatedDecks.length > 0 && (
           <div className="space-y-2 rounded-xl border border-border/40 bg-card p-4 shadow-sm">
             <div className="flex items-center justify-between gap-2">
-              <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+              <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                 <Layers className="h-3.5 w-3.5 text-primary" /> Flashcards da matéria
               </p>
               {subjectId !== "none" && (
@@ -554,7 +554,7 @@ export function NoteFullEditor({
             que NÃO estão linkadas (as linkadas aparecem nos backlinks acima). */}
         {related.length > 0 && (
           <div className="space-y-2 rounded-xl border border-border/40 bg-card p-4 shadow-sm">
-            <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+            <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
               <Sparkles className="h-3.5 w-3.5 text-amber-500" /> Conexões esquecidas ({related.length})
             </p>
             <div className="flex flex-col">

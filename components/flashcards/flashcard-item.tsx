@@ -190,7 +190,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
 
           <DialogBody className="space-y-6">
             <div className="space-y-2">
-              <Label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Frente (Pergunta ou imagem)</Label>
+              <Label className="eyebrow text-muted-foreground">Frente (Pergunta ou imagem)</Label>
               <Input
                 value={term}
                 onChange={(e) => setTerm(e.target.value)}
@@ -200,7 +200,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
             </div>
             
             <div className="space-y-2">
-              <Label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Verso (Resposta Detalhada)</Label>
+              <Label className="eyebrow text-muted-foreground">Verso (Resposta Detalhada)</Label>
               <Textarea
                 value={definition}
                 onChange={(e) => setDefinition(e.target.value)}
@@ -209,7 +209,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
             </div>
 
             <div className="space-y-2">
-              <Label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Dica (opcional)</Label>
+              <Label className="eyebrow text-muted-foreground">Dica (opcional)</Label>
               <Input
                 value={hint}
                 onChange={(e) => setHint(e.target.value)}
@@ -223,7 +223,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
             </div>
 
             <div className="space-y-2">
-              <Label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Imagem (opcional)</Label>
+              <Label className="eyebrow text-muted-foreground">Imagem (opcional)</Label>
               <ImagePaster defaultValue={imageUrl} onImageChange={setImageUrl} />
             </div>
           </DialogBody>

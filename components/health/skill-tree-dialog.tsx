@@ -75,7 +75,7 @@ export function SkillTreeDialog({ open, onOpenChange }: { open: boolean; onOpenC
                         </div>
                         <div className="shrink-0 text-right">
                           <p className="text-sm font-black tabular-nums" style={{ color: accent }}>{n.xp}</p>
-                          <p className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground">XP</p>
+                          <p className="eyebrow text-muted-foreground">XP</p>
                         </div>
                       </div>
 

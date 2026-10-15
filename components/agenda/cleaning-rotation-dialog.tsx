@@ -71,7 +71,7 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
         <DialogBody className="space-y-5">
           {/* CÔMODOS */}
           <div className="space-y-2">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Cômodos / áreas (na ordem)</p>
+            <p className="eyebrow text-muted-foreground">Cômodos / áreas (na ordem)</p>
             <div className="flex flex-wrap gap-1.5">
               {rooms.map((room) => (
                 <span key={room} className="flex items-center gap-1 rounded-lg border border-border/40 bg-muted/40 px-2 py-1 text-xs font-semibold text-foreground">
@@ -109,7 +109,7 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
 
           {/* DIAS */}
           <div className="space-y-2">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Dias do rodízio</p>
+            <p className="eyebrow text-muted-foreground">Dias do rodízio</p>
             <div className="flex flex-wrap gap-1.5">
               {DAYS.map((day) => (
                 <button
@@ -132,11 +132,11 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
           {/* HORÁRIO + DURAÇÃO */}
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Horário</p>
+              <p className="eyebrow text-muted-foreground">Horário</p>
               <Input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} className="h-9 text-sm" />
             </div>
             <div className="space-y-1.5">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Duração (min)</p>
+              <p className="eyebrow text-muted-foreground">Duração (min)</p>
               <Input
                 type="number"
                 min={10}

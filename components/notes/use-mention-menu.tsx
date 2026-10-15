@@ -100,7 +100,7 @@ export function useMentionMenu({
       style={{ top: state.top, left: state.left }}
       onMouseDown={(e) => e.preventDefault()}
     >
-      <p className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground/60">
+      <p className="eyebrow px-2 py-1 text-muted-foreground/60">
         Vincular a…
       </p>
       {items.map((it, i) => (

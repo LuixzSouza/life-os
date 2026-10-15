@@ -28,7 +28,7 @@ export function MarketTicker({ initialData }: { initialData: MarketData[] }) {
             className="p-3 border-border/50 bg-card/50 backdrop-blur-sm flex flex-col justify-between hover:border-primary/20 transition-all"
           >
             <div className="flex justify-between items-start mb-2">
-              <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+              <span className="eyebrow text-muted-foreground">
                 {item.symbol === '^BVSP' ? 'IBOVESPA' : item.shortName || item.symbol}
               </span>
               {item.symbol === 'USD' || item.symbol === 'EUR' ? (

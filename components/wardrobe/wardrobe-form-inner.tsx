@@ -133,7 +133,7 @@ export function WardrobeFormInner({ mode, initialData, onSuccess, onCancel }: { 
                                             )}
                                         >
                                             <cat.icon className="h-5 w-5 mb-1.5" />
-                                            <span className="text-[10px] font-bold uppercase tracking-wider">{cat.label}</span>
+                                            <span className="eyebrow">{cat.label}</span>
                                         </button>
                                     ))}
                                 </div>

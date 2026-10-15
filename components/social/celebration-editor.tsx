@@ -144,7 +144,7 @@ export function CelebrationEditor({
             {/* MENSAGEM */}
             <section className="space-y-2.5">
               <div className="flex items-center justify-between">
-                <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Mensagem</label>
+                <label className="eyebrow text-muted-foreground">Mensagem</label>
                 {hasCustom && (
                   <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold text-primary">personalizada</span>
                 )}
@@ -171,7 +171,7 @@ export function CelebrationEditor({
 
             {/* FOTOS */}
             <section className="space-y-3">
-              <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              <label className="eyebrow text-muted-foreground">
                 Fotos {busyPhoto && <Loader2 className="ml-1 inline h-3 w-3 animate-spin" />}
               </label>
 

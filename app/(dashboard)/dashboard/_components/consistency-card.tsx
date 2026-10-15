@@ -41,7 +41,7 @@ export async function ConsistencyCard({ userId }: { userId: string }) {
           <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
             <Activity className="h-3.5 w-3.5" />
           </span>
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Constância</p>
+          <p className="eyebrow text-muted-foreground">Constância</p>
 
           {streak > 0 && (
             <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/10 px-2 py-0.5 text-[11px] font-bold text-orange-500">

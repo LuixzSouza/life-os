@@ -237,7 +237,7 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
                       type="button"
                       onClick={() => window.open(`https://wa.me/55${clearMask(client.friend!.phone!)}`, "_blank")}
                       title={`Falar com ${client.friend.name} no WhatsApp`}
-                      className="ml-0.5 flex items-center gap-1 rounded-full bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500 hover:text-white px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide transition-colors shrink-0"
+                      className="eyebrow ml-0.5 flex items-center gap-1 rounded-full bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500 hover:text-white px-1.5 py-0.5 transition-colors shrink-0"
                     >
                       <MessageCircle size={10} /> Zap
                     </button>

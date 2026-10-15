@@ -76,7 +76,7 @@ export function GoalsBoard({ goals, onOpen, onMove, onCreate }: GoalsBoardProps)
                 <span className={cn("grid h-6 w-6 shrink-0 place-items-center rounded-md", col.soft)}>
                   <Icon className={cn("h-3.5 w-3.5", col.accent)} />
                 </span>
-                <span className="truncate text-[11px] font-bold uppercase tracking-widest text-foreground/80">
+                <span className="eyebrow truncate text-foreground/80">
                   {col.label}
                 </span>
               </div>
@@ -100,7 +100,7 @@ export function GoalsBoard({ goals, onOpen, onMove, onCreate }: GoalsBoardProps)
             {/* Cards */}
             <div className="flex flex-col gap-2.5">
               {list.length === 0 ? (
-                <div className="flex flex-1 items-center justify-center rounded-xl border-2 border-dashed border-border/40 py-8 text-center text-[10px] font-bold uppercase tracking-widest text-muted-foreground/40">
+                <div className="eyebrow flex flex-1 items-center justify-center rounded-xl border-2 border-dashed border-border/40 py-8 text-center text-muted-foreground/40">
                   Solte aqui
                 </div>
               ) : (

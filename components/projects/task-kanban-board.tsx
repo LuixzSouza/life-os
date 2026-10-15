@@ -85,7 +85,7 @@ export function TaskKanbanBoard({ initialTasks }: TaskKanbanBoardProps) {
             {/* Cards */}
             <div className="flex flex-col gap-2.5">
               {colTasks.length === 0 ? (
-                <div className="flex-1 flex items-center justify-center rounded-xl border-2 border-dashed border-border/40 py-8 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/40">
+                <div className="eyebrow flex-1 flex items-center justify-center rounded-xl border-2 border-dashed border-border/40 py-8 text-muted-foreground/40">
                   Solte aqui
                 </div>
               ) : (

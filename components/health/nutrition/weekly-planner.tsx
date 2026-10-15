@@ -97,7 +97,7 @@ function MealSlotRow({ slot, dayIdx, type }: {
           <div className={cn("p-1.5 rounded-md", type.bg, type.color)}>
             <Icon className="h-3.5 w-3.5" />
           </div>
-          <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          <span className="eyebrow text-muted-foreground">
             {type.label}
           </span>
         </div>
@@ -221,14 +221,14 @@ export function WeeklyPlanner({ initialData, suggestedGoal = null, tdee = null, 
             <span className="text-xs text-muted-foreground">kcal</span>
             {hasSuggestion && (
               isAutoGoal ? (
-                <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                <span className="eyebrow flex items-center gap-1 text-emerald-600 bg-emerald-500/10 px-1.5 py-0.5 rounded">
                   <Sparkles className="h-2.5 w-2.5" /> Auto
                 </span>
               ) : (
                 <button
                   type="button"
                   onClick={clearOverride}
-                  className="flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground hover:text-primary transition-colors"
+                  className="eyebrow flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors"
                   title={`Usar sugestão do perfil (${suggestedGoal} kcal)`}
                 >
                   <Wand2 className="h-2.5 w-2.5" /> Auto

@@ -70,7 +70,7 @@ export function SessionGuide({ collapsed: initialCollapsed = false }: { collapse
       >
         <div className="flex items-center gap-2">
           <Lightbulb className="h-4 w-4 text-primary shrink-0" />
-          <span className="text-xs font-bold uppercase tracking-wider text-primary">
+          <span className="eyebrow text-primary">
             {collapsed ? "📚 Ver guia" : "📚 Guia rápido (fechar)"}
           </span>
         </div>

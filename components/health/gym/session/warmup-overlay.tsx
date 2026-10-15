@@ -131,7 +131,7 @@ export function WarmupOverlay({
       {/* Checklist interativo (gerado pelos grupos musculares de hoje) */}
       <div className="mt-5 w-full max-w-sm rounded-2xl border border-border/40 bg-card p-3.5 text-left shadow-sm">
         <div className="mb-1 flex items-center justify-between gap-2">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <p className="eyebrow text-muted-foreground">
             Checklist de aquecimento
           </p>
           <span className={cn("font-mono text-[11px] font-bold tabular-nums", allChecked ? "text-emerald-500" : "text-orange-500")}>

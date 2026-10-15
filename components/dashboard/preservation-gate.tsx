@@ -38,7 +38,7 @@ export function PreservationGate({ lowEnergy, children }: { lowEnergy: boolean; 
   if (override && hydrated) {
     return (
       <>
-        <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+        <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
           <BatteryLow className="h-3.5 w-3.5 text-sky-500" /> Modo de preservação desativado por hoje
         </p>
         {children}

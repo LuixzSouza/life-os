@@ -87,7 +87,7 @@ export function NotesMarkdownField({ name, value, onChange, placeholder }: Notes
               type="button"
               onClick={() => setTab(t)}
               className={cn(
-                "flex items-center gap-1 rounded-md px-2 py-1 text-[10px] font-bold uppercase tracking-wider transition-all",
+                "eyebrow flex items-center gap-1 rounded-md px-2 py-1 transition-all",
                 tab === t ? "bg-background shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground"
               )}
             >

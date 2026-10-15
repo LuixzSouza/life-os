@@ -32,7 +32,7 @@ export function SiteEditor({ site }: { site: SiteWithPages }) {
 
                             {/* ROTAS */}
                             <div className="space-y-2">
-                                <div className="text-[10px] font-semibold text-muted-foreground/60 uppercase tracking-wider px-2 flex items-center gap-2">
+                                <div className="eyebrow text-muted-foreground/60 px-2 flex items-center gap-2">
                                     <Database className="h-3 w-3" /> Rotas ativas
                                 </div>
                                 <TabsList className="flex flex-col h-auto bg-transparent gap-1 p-0">
@@ -52,7 +52,7 @@ export function SiteEditor({ site }: { site: SiteWithPages }) {
 
                             {/* SISTEMA */}
                             <div className="space-y-2">
-                                <div className="text-[10px] font-semibold text-muted-foreground/60 uppercase tracking-wider px-2 flex items-center gap-2">
+                                <div className="eyebrow text-muted-foreground/60 px-2 flex items-center gap-2">
                                     <Settings className="h-3 w-3" /> Sistema
                                 </div>
                                 <TabsList className="flex flex-col h-auto bg-transparent gap-1 p-0">

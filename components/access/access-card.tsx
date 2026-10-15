@@ -162,7 +162,7 @@ export function AccessCard({ item, strength, reused = false, breachCount }: { it
             {isBreached && (
               <span className="flex items-center gap-1 bg-rose-600/15 text-rose-600 px-2 py-0.5 rounded-md border border-rose-600/30" title={`Encontrada em ${breachCount?.toLocaleString("pt-BR")} vazamentos — troque imediatamente`}>
                 <ShieldX className="h-2.5 w-2.5" />
-                <span className="text-[10px] font-semibold uppercase tracking-wide">Vazada</span>
+                <span className="eyebrow">Vazada</span>
               </span>
             )}
 
@@ -170,7 +170,7 @@ export function AccessCard({ item, strength, reused = false, breachCount }: { it
             {isWeak && (
               <span className="flex items-center gap-1 bg-rose-500/10 text-rose-500 px-2 py-0.5 rounded-md border border-rose-500/20" title="Senha fraca — considere trocar">
                 <ShieldAlert className="h-2.5 w-2.5" />
-                <span className="text-[10px] font-semibold uppercase tracking-wide">Fraca</span>
+                <span className="eyebrow">Fraca</span>
               </span>
             )}
 
@@ -178,7 +178,7 @@ export function AccessCard({ item, strength, reused = false, breachCount }: { it
             {reused && (
               <span className="flex items-center gap-1 bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-md border border-amber-500/20" title="Senha reutilizada em outra credencial">
                 <Repeat2 className="h-2.5 w-2.5" />
-                <span className="text-[10px] font-semibold uppercase tracking-wide">Repetida</span>
+                <span className="eyebrow">Repetida</span>
               </span>
             )}
 
@@ -186,14 +186,14 @@ export function AccessCard({ item, strength, reused = false, breachCount }: { it
             {isStale && !isBreached && !isWeak && (
               <span className="flex items-center gap-1 bg-zinc-500/10 text-zinc-500 px-2 py-0.5 rounded-md border border-zinc-500/20" title="Sem alteração há mais de 1 ano — considere rotacionar a senha">
                 <History className="h-2.5 w-2.5" />
-                <span className="text-[10px] font-semibold uppercase tracking-wide">Antiga</span>
+                <span className="eyebrow">Antiga</span>
               </span>
             )}
 
             {item.notes && !isNote && (
               <span className="flex items-center gap-1.5 bg-muted text-muted-foreground px-2 py-0.5 rounded-md border border-border/40" title="Possui notas">
                 <span className="block w-1.5 h-1.5 rounded-full bg-muted-foreground/60" />
-                <span className="text-[10px] font-semibold uppercase tracking-wide">Anotado</span>
+                <span className="eyebrow">Anotado</span>
               </span>
             )}
           </div>

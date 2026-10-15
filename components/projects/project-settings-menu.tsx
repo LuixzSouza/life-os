@@ -136,7 +136,7 @@ export function ProjectSettingsMenu({
                 </div>
                 <div>
                     <DialogTitle className="text-2xl font-semibold">Propriedades</DialogTitle>
-                    <DialogDescription className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Configurações de exibição</DialogDescription>
+                    <DialogDescription className="eyebrow text-muted-foreground">Configurações de exibição</DialogDescription>
                 </div>
             </div>
           </DialogHeader>

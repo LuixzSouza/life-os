@@ -163,7 +163,7 @@ export function ExercisePicker({
             <div className="space-y-3">
               {browse.map(({ group, items }) => (
                 <div key={group} className="space-y-1.5">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">{GROUP_LABEL[group] ?? group}</p>
+                  <p className="eyebrow text-muted-foreground">{GROUP_LABEL[group] ?? group}</p>
                   <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2">
                     {items.map((name) => (
                       <PickerItem key={name} name={name} group={group} added={isAdded(name)} onPick={pick} />

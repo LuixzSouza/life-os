@@ -88,7 +88,7 @@ export function CreateDeckDialog({ open, onOpenChange, subjects }: CreateDeckDia
 
           <DialogBody className="space-y-5">
             <div className="space-y-2">
-              <Label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Título <span className="text-destructive">*</span></Label>
+              <Label className="eyebrow text-muted-foreground">Título <span className="text-destructive">*</span></Label>
               <Input
                 name="title"
                 placeholder="Ex: Vocabulário Inglês, Fórmulas de Física..."
@@ -100,7 +100,7 @@ export function CreateDeckDialog({ open, onOpenChange, subjects }: CreateDeckDia
             </div>
 
             <div className="space-y-2">
-              <Label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Matéria vinculada</Label>
+              <Label className="eyebrow text-muted-foreground">Matéria vinculada</Label>
               <Select value={selectedSubjectId} onValueChange={handleSubjectSelect}>
                 <SelectTrigger className="h-11 bg-muted/20">
                   <SelectValue placeholder="Vincular a uma matéria existente..." />
@@ -118,7 +118,7 @@ export function CreateDeckDialog({ open, onOpenChange, subjects }: CreateDeckDia
             </div>
 
             <div className="space-y-2">
-              <Label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Descrição curta (opcional)</Label>
+              <Label className="eyebrow text-muted-foreground">Descrição curta (opcional)</Label>
               <Textarea
                 name="description"
                 placeholder="Para que serve este baralho?"

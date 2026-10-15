@@ -229,7 +229,7 @@ export default async function AIPage({ searchParams }: AIPageProps) {
                                 <span className="text-xs font-medium text-muted-foreground/70">Uso no mês</span>
                                 <span className="text-xs font-mono font-bold text-foreground">
                                     {compact.format(monthlyTokensUsed)} <span className="text-[9px]">TKN</span>
-                                    <span className="ml-1 text-[8px] font-bold uppercase tracking-widest text-muted-foreground/60">· sem teto mensal</span>
+                                    <span className="eyebrow ml-1 text-muted-foreground/60">· sem teto mensal</span>
                                 </span>
                             </div>
                             <div className="h-6 w-px bg-border/50" />

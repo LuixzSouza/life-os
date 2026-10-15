@@ -86,7 +86,7 @@ export function NotebookDialog({
           />
 
           <div className="space-y-1.5">
-            <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Cor</label>
+            <label className="eyebrow text-muted-foreground">Cor</label>
             <div className="flex flex-wrap gap-2">
               {PALETTE.map((c) => (
                 <button

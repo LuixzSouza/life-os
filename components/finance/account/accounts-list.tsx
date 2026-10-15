@@ -232,7 +232,7 @@ function BankCard({ account, onEdit, onDelete, onConnections }: { account: Accou
                                     Sync Ativo
                                 </span>
                             ) : (
-                                <span className="text-[10px] text-white/50 font-medium uppercase tracking-wider">{meta.label}</span>
+                                <span className="eyebrow text-white/50">{meta.label}</span>
                             )}
                         </div>
                     </div>
@@ -264,7 +264,7 @@ function BankCard({ account, onEdit, onDelete, onConnections }: { account: Accou
                 </div>
 
                 <div>
-                    <p className="text-[10px] uppercase tracking-widest text-white/60 mb-1 font-medium pl-1">Saldo Atual</p>
+                    <p className="eyebrow text-white/60 mb-1 pl-1">Saldo Atual</p>
                     <div
                         className="flex items-center gap-3 cursor-pointer group/balance w-fit"
                         onClick={handleCopyBalance}

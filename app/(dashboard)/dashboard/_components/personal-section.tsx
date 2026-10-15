@@ -143,7 +143,7 @@ export async function PersonalSection({ userId }: { userId: string }) {
 
           <div className="flex items-center gap-4 py-2">
             <div className="h-px bg-border flex-1"></div>
-            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Módulos do Sistema</span>
+            <span className="eyebrow text-muted-foreground">Módulos do Sistema</span>
             <div className="h-px bg-border flex-1"></div>
           </div>
           

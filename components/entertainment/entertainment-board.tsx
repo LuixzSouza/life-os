@@ -105,7 +105,7 @@ export function EntertainmentBoard({ initialItems }: { initialItems: MediaItemDa
 
       {/* FILTROS DE STATUS (Chips) */}
       <div className="flex flex-wrap gap-2 items-center border-b border-border/50 pb-4">
-        <span className="text-[10px] font-bold text-muted-foreground flex items-center gap-1.5 uppercase tracking-wider mr-2">
+        <span className="eyebrow text-muted-foreground flex items-center gap-1.5 mr-2">
           <Filter className="h-3 w-3" /> Status
         </span>
         <StatusFilterButton label="Todos" isActive={activeStatusFilter === "ALL"} onClick={() => setActiveStatusFilter("ALL")} />

@@ -59,7 +59,7 @@ export function JobProjectDialog({ job, projects, onOpenChange }: { job: JobWith
                 <DialogBody className="space-y-6">
                     {/* Criar novo projeto */}
                     <div className="space-y-2">
-                        <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Novo projeto</p>
+                        <p className="eyebrow text-muted-foreground">Novo projeto</p>
                         <Button onClick={handleCreate} disabled={loading !== null} className="w-full h-11 gap-2 rounded-xl font-bold justify-between">
                             <span className="flex items-center gap-2">
                                 {loading === "create" ? <Loader2 className="h-4 w-4 animate-spin" /> : <FolderPlus className="h-4 w-4" />}
@@ -74,7 +74,7 @@ export function JobProjectDialog({ job, projects, onOpenChange }: { job: JobWith
                         <>
                             <div className="flex items-center gap-3">
                                 <div className="h-px flex-1 bg-border/60" />
-                                <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/60">ou vincule a um existente</span>
+                                <span className="eyebrow text-muted-foreground/60">ou vincule a um existente</span>
                                 <div className="h-px flex-1 bg-border/60" />
                             </div>
                             <div className="space-y-2">

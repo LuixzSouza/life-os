@@ -124,7 +124,7 @@ export const MetricCard: FC<MetricCardProps> = ({
 
         {/* Corpo do Card */}
         <div className="space-y-1 mt-auto">
-          <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-widest">{title}</p>
+          <p className="eyebrow text-muted-foreground">{title}</p>
           <div className="text-3xl font-black font-mono tracking-tighter tabular-nums text-foreground flex items-center">
             <PrivacyText value={value} isSmartView={!!isSmartView} />
           </div>

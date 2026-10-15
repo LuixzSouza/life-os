@@ -50,7 +50,7 @@ const CustomTooltip = ({ active, payload, label }: FlowTooltipProps) => {
         {label}
       </span>
       <div className="flex items-center justify-between gap-3">
-        <span className="text-xs font-bold uppercase tracking-tighter text-emerald-500 flex items-center gap-1.5">
+        <span className="eyebrow text-emerald-500 flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Entradas
         </span>
         <span className="font-black font-mono text-sm tracking-tight text-emerald-500">
@@ -58,7 +58,7 @@ const CustomTooltip = ({ active, payload, label }: FlowTooltipProps) => {
         </span>
       </div>
       <div className="flex items-center justify-between gap-3">
-        <span className="text-xs font-bold uppercase tracking-tighter text-rose-500 flex items-center gap-1.5">
+        <span className="eyebrow text-rose-500 flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-rose-500" /> Saídas
         </span>
         <span className="font-black font-mono text-sm tracking-tight text-rose-500">

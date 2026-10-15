@@ -50,7 +50,7 @@ const CustomTooltip = ({ active, payload, label }: FinanceChartTooltipProps) => 
           {isIncome ? <TrendingUp className="h-3.5 w-3.5 text-emerald-500" /> : <TrendingDown className="h-3.5 w-3.5 text-rose-500" />}
         </div>
         <div className="flex items-center justify-between gap-3">
-          <span className="text-xs text-muted-foreground font-bold uppercase tracking-tighter">{isIncome ? 'Entrada' : 'Saída'}</span>
+          <span className="eyebrow text-muted-foreground">{isIncome ? 'Entrada' : 'Saída'}</span>
           <span className={cn("font-black font-mono text-sm tracking-tight", isIncome ? "text-emerald-500" : "text-rose-500")}>
             {formatMoney(data.value)}
           </span>

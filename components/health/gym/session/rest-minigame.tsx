@@ -60,11 +60,11 @@ export function RestMiniGame({ active, onExit }: { active: boolean; onExit: () =
       <div className="flex w-full items-center justify-around rounded-xl border border-border/40 bg-card/60 py-2">
         <div className="flex flex-col items-center">
           <span className="font-mono text-2xl font-black tabular-nums text-primary">{score}</span>
-          <span className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground">pontos</span>
+          <span className="eyebrow text-muted-foreground">pontos</span>
         </div>
         <div className="flex flex-col items-center">
           <span className="font-mono text-2xl font-black tabular-nums text-muted-foreground/70">{misses}</span>
-          <span className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground">erros</span>
+          <span className="eyebrow text-muted-foreground">erros</span>
         </div>
       </div>
 

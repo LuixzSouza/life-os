@@ -90,7 +90,7 @@ export function ExerciseProgressCard({ workouts }: { workouts: GymWorkout[] }) {
 
   return (
     <div className="rounded-2xl border border-border/40 bg-card p-3.5 shadow-sm">
-      <p className="mb-3 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+      <p className="eyebrow mb-3 flex items-center gap-1.5 text-muted-foreground">
         <TrendingUp className="h-3.5 w-3.5 text-primary" /> Evolução por exercício
       </p>
 

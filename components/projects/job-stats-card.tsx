@@ -22,7 +22,7 @@ export function StatsCard({ label, value, icon: Icon, theme, hint }: StatsCardPr
         <Card className="bg-card border-border/40 shadow-sm hover:shadow-md hover:border-border/80 transition-all">
             <CardContent className="p-6 flex items-start justify-between gap-4">
                 <div className="space-y-1.5 min-w-0">
-                    <p className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">{label}</p>
+                    <p className="eyebrow text-muted-foreground">{label}</p>
                     <h3 className="text-3xl font-bold tracking-tight text-foreground">{value}</h3>
                     {hint && <p className="text-xs text-muted-foreground truncate">{hint}</p>}
                 </div>

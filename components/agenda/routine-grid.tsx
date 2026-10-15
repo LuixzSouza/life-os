@@ -54,7 +54,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
       <div className="flex flex-col items-center justify-center h-full py-20 text-muted-foreground/40 text-center">
         <Sun className="h-16 w-16 mb-4 opacity-50" />
         <h4 className="text-xl font-semibold text-foreground/50">Dia Livre</h4>
-        <p className="text-[10px] font-bold uppercase tracking-widest mt-2">Nenhum protocolo para hoje</p>
+        <p className="eyebrow mt-2">Nenhum protocolo para hoje</p>
       </div>
     );
   }
@@ -91,7 +91,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
             return (
               <span key={key} className="flex items-center gap-1.5">
                 <span className={cn("h-2 w-2 rounded-full", theme.bgClass.replace("/10", "/60"))} />
-                <span className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/70">{theme.label}</span>
+                <span className="eyebrow text-muted-foreground/70">{theme.label}</span>
               </span>
             );
           })}
@@ -144,7 +144,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
                         {!isCompact && (
                           <div className="mt-1.5 flex items-center gap-2">
                             <span className={cn("text-xs font-medium", theme.colorClass)}>{theme.label}</span>
-                            <span className="text-[9px] font-bold text-muted-foreground/60 uppercase tracking-widest tabular-nums border-l border-border pl-2">
+                            <span className="eyebrow text-muted-foreground/60 tabular-nums border-l border-border pl-2">
                               {item.startTime} - {item.endTime}
                             </span>
                           </div>

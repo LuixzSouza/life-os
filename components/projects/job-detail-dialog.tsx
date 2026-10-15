@@ -278,7 +278,7 @@ function Fact({ icon: Icon, label, value }: { icon: React.ElementType; label: st
     <div className="flex items-center gap-2.5 rounded-xl border border-border/40 bg-card p-2.5">
       <Icon className="h-4 w-4 text-muted-foreground shrink-0" />
       <div className="min-w-0">
-        <p className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/70">{label}</p>
+        <p className="eyebrow text-muted-foreground/70">{label}</p>
         <p className="text-xs font-semibold truncate">{value}</p>
       </div>
     </div>

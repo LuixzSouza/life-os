@@ -50,7 +50,7 @@ export function DayOverviewCard({ consumed, goal, workoutBurn, recovery }: DayOv
           className="group relative flex flex-col gap-4 p-5 transition-colors hover:bg-muted/30 lg:border-r border-border/40"
         >
           <div className="flex items-center justify-between">
-            <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground">
+            <span className="eyebrow flex items-center gap-2 text-muted-foreground">
               <Flame className="h-4 w-4 text-orange-500" /> Energia do Dia
             </span>
             <ChevronRight className="h-4 w-4 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5" />
@@ -96,7 +96,7 @@ export function DayOverviewCard({ consumed, goal, workoutBurn, recovery }: DayOv
           className="group relative flex flex-col gap-4 p-5 transition-colors hover:bg-muted/30 border-t border-border/40 lg:border-t-0"
         >
           <div className="flex items-center justify-between">
-            <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground">
+            <span className="eyebrow flex items-center gap-2 text-muted-foreground">
               <BatteryCharging className="h-4 w-4 text-primary" /> Recuperação Muscular
             </span>
             <ChevronRight className="h-4 w-4 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5" />

@@ -186,14 +186,14 @@ export function BudgetSection({ budget, monthlyFlow, wishlist, totalBalance }: B
             <>
               <div className="grid grid-cols-2 gap-3">
                 <div className="rounded-xl border border-border/40 bg-background p-4">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Poupança média/mês</p>
+                  <p className="eyebrow text-muted-foreground">Poupança média/mês</p>
                   <p className={cn("mt-1 text-xl font-black tabular-nums", projection.avgMonthlySavings >= 0 ? "text-emerald-500" : "text-rose-500")}>
                     {money(projection.avgMonthlySavings, hidden)}
                   </p>
                   <p className="text-[10px] text-muted-foreground">média de {projection.sampleMonths} mês(es)</p>
                 </div>
                 <div className="rounded-xl border border-border/40 bg-background p-4">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Em 12 meses</p>
+                  <p className="eyebrow text-muted-foreground">Em 12 meses</p>
                   <p className={cn("mt-1 text-xl font-black tabular-nums", projection.in12Months >= 0 ? "text-foreground" : "text-rose-500")}>
                     {money(projection.in12Months, hidden)}
                   </p>

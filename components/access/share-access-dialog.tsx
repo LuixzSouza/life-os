@@ -141,7 +141,7 @@ export function ShareAccessDialog({
             <div className="space-y-3">
               {/* Validade do link (escolha antes de gerar). */}
               <div className="space-y-1.5">
-                <span className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                <span className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                   <Clock className="h-3.5 w-3.5" /> Validade do link
                 </span>
                 <div className="grid grid-cols-4 gap-1.5">

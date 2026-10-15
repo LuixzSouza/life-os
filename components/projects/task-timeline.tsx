@@ -217,14 +217,14 @@ export function TaskTimeline({ initialTasks }: { initialTasks: Task[] }) {
           {/* Cabeçalho: semanas e dias */}
           <div className="relative grid" style={{ gridTemplateColumns: gridTemplate }}>
             <div className="sticky left-0 z-20 bg-background border-r border-border/40 px-3 py-2 flex items-end">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+              <span className="eyebrow text-muted-foreground">
                 {withDue.length} com prazo
               </span>
             </div>
             {Array.from({ length: weeks }, (_, w) => {
               const ws = addDays(rangeStart, w * 7);
               return (
-                <div key={w} className="col-span-7 px-2 pt-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground truncate">
+                <div key={w} className="eyebrow col-span-7 px-2 pt-2 text-muted-foreground truncate">
                   {format(ws, "d MMM", { locale: ptBR })} – {format(addDays(ws, 6), "d MMM", { locale: ptBR })}
                 </div>
               );

@@ -80,7 +80,7 @@ export function ProfileIdentityCard({
         {/* Sem capa: estilos prontos visíveis direto (sem depender de hover — mobile) */}
         {!coverUrl && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80 bg-background/50 backdrop-blur-sm px-3 py-1 rounded-full">
+            <span className="eyebrow text-muted-foreground/80 bg-background/50 backdrop-blur-sm px-3 py-1 rounded-full">
               Envie uma foto ou gere um estilo
             </span>
             <div className="flex gap-2.5">
@@ -163,7 +163,7 @@ export function ProfileIdentityCard({
 
               <div className="absolute inset-0 bg-black/60 rounded-full flex flex-col items-center justify-center text-white opacity-0 group-hover/avatar:opacity-100 transition-opacity border-[6px] border-transparent backdrop-blur-[1px]">
                 <Camera className="w-6 h-6 mb-1" />
-                <span className="text-[10px] font-bold uppercase tracking-wider">Editar</span>
+                <span className="eyebrow">Editar</span>
               </div>
             </div>
 

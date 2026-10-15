@@ -83,7 +83,7 @@ export const MetricCard: FC<{ title: string; value: number; icon: ReactNode; tre
           </div>
           <div className="flex items-center gap-2">
             {trend && (
-              <Badge variant="secondary" className={cn("font-bold text-[10px] uppercase tracking-wider h-6 px-2.5 bg-background/80 backdrop-blur-md border-border/50 shadow-sm", trend === "up" ? "text-emerald-600" : "text-rose-500")}>
+              <Badge variant="secondary" className={cn("eyebrow h-6 px-2.5 bg-background/80 backdrop-blur-md border-border/50 shadow-sm", trend === "up" ? "text-emerald-600" : "text-rose-500")}>
                 {trend === "up" ? <TrendingUp className="h-3 w-3 mr-1" /> : <TrendingDown className="h-3 w-3 mr-1" />}
                 {trend === "up" ? "Alta" : "Baixa"}
               </Badge>

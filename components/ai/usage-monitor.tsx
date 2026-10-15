@@ -141,7 +141,7 @@ function UsageItem({ icon, label, used, limit, colorClass, textColorClass }: Usa
                             <span className={cn("text-3xl font-black font-mono tracking-tighter", isCritical ? "text-rose-500" : textColorClass)}>
                                 {new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(used)}
                             </span>
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60 mb-1.5">
+                            <span className="eyebrow text-muted-foreground/60 mb-1.5">
                                 de {new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(limit)}
                             </span>
                         </div>

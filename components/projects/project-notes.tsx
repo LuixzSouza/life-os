@@ -545,7 +545,7 @@ export function ProjectNotes({ projectId, initialNotes, mentionables }: ProjectN
               className="absolute z-30 w-64 overflow-hidden rounded-xl border border-border/60 bg-popover shadow-xl"
               style={{ top: menu.top, left: Math.min(menu.left, 240) }}
             >
-              <p className="border-b border-border/40 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">Blocos</p>
+              <p className="eyebrow border-b border-border/40 px-3 py-1.5 text-muted-foreground/60">Blocos</p>
               <ul className="max-h-72 overflow-y-auto p-1 custom-scrollbar">
                 {filtered.map((cmd, i) => {
                   const Icon = cmd.icon;

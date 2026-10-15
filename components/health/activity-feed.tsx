@@ -92,7 +92,7 @@ export function ActivityFeed({ initialWorkouts }: { initialWorkouts: Workout[] }
         Object.entries(groupedWorkouts).map(([dateKey, items]) => (
           <div key={dateKey}>
             <div className="flex items-center justify-between border-b border-border/30 bg-muted/30 px-3.5 py-1.5 sm:px-4">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground first-letter:uppercase">
+              <span className="eyebrow text-muted-foreground first-letter:uppercase">
                 {dayLabel(dateKey)}
               </span>
               <span className="text-[10px] tabular-nums text-muted-foreground/60">

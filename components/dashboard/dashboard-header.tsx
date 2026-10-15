@@ -29,7 +29,7 @@ export function DashboardHeader({ greeting, userName, productivityScore }: Dashb
         {typeof productivityScore === "number" && (
           <>
             <div className="hidden md:flex flex-col items-end">
-              <p className="text-[10px] uppercase font-bold text-muted-foreground tracking-wider mb-0.5">Score Diário</p>
+              <p className="eyebrow text-muted-foreground mb-0.5">Score Diário</p>
               <div className="flex items-center gap-2 text-primary font-bold text-2xl leading-none">
                 {productivityScore} <TrendingUp className="h-5 w-5 opacity-80" />
               </div>

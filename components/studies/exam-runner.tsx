@@ -256,7 +256,7 @@ export function ExamRunner({ examId, title, durationMinutes, questions }: ExamRu
         {/* NAVEGADOR: o mapa da prova (respondidas em destaque) */}
         <Card className="h-fit border-border/40 bg-card shadow-sm lg:sticky lg:top-20 lg:w-[220px]">
           <CardContent className="p-4">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            <p className="eyebrow mb-3 text-muted-foreground">
               Navegação
             </p>
             <div className="grid grid-cols-6 gap-1.5 lg:grid-cols-5">

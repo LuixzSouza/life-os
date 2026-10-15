@@ -79,7 +79,7 @@ export async function TodaySection({ userId }: { userId: string }) {
         {/* Tarefas VENCIDAS primeiro — é o que mais precisa de atenção. */}
         {overdueTasks.length > 0 && (
           <div className="bg-rose-500/[0.04] px-5 py-3 space-y-1.5">
-            <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-rose-600">
+            <p className="eyebrow flex items-center gap-1.5 text-rose-600">
               <AlertTriangle className="h-3.5 w-3.5" /> Vencidas
             </p>
             {overdueTasks.map((t) => (

@@ -105,7 +105,7 @@ export function EndpointEditor({ page }: { page: SitePage }) {
       </div>
 
       {/* FOOTER METADATA */}
-      <div className="bg-muted/10 border-t border-border/40 p-3 px-6 flex justify-between items-center text-[10px] font-mono font-bold text-muted-foreground/50 uppercase tracking-widest shrink-0">
+      <div className="eyebrow bg-muted/10 border-t border-border/40 p-3 px-6 flex justify-between items-center font-mono text-muted-foreground/50 shrink-0">
         <span className="flex items-center gap-1"><Terminal className="h-3 w-3" /> Instance: {page.id.split('-')[0]}</span>
         <span>Build: {new Date(page.updatedAt).toLocaleDateString("pt-BR")}</span>
       </div>

@@ -20,7 +20,7 @@ export function UpdateCheck() {
   return (
     <div className="pt-2 border-t border-border/40 space-y-1.5">
       <div className="flex items-center justify-between gap-2">
-        <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">
+        <span className="eyebrow text-muted-foreground">
           Atualizações
         </span>
         <button

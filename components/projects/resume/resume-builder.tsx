@@ -46,7 +46,7 @@ const ResumePdfViewer = dynamic(() => import("./resume-pdf-viewer"), {
     loading: () => (
         <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-xl border border-border/40 bg-muted/20">
             <Loader2 className="h-6 w-6 animate-spin text-primary" />
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Carregando prévia…</p>
+            <p className="eyebrow text-muted-foreground">Carregando prévia…</p>
         </div>
     ),
 });
@@ -245,7 +245,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                     <h3 className="font-medium text-primary text-[11px]">
                                         Builder Engine
                                     </h3>
-                                    <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mt-0.5 truncate">
+                                    <p className="eyebrow text-muted-foreground mt-0.5 truncate">
                                         {resumeName || "Gerador de Portfólio"}
                                     </p>
                                 </div>
@@ -291,7 +291,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                         </Button>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent align="end" className="rounded-xl">
-                                        <DropdownMenuLabel className="text-[10px] uppercase tracking-widest">Backup & importação</DropdownMenuLabel>
+                                        <DropdownMenuLabel className="eyebrow">Backup & importação</DropdownMenuLabel>
                                         <DropdownMenuItem onClick={exportJson} className="gap-2 text-xs cursor-pointer">
                                             <Download className="h-3.5 w-3.5" /> Exportar JSON (backup)
                                         </DropdownMenuItem>
@@ -356,7 +356,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                             <StatusIcon active={checklist.hero} icon={User} />
                                             <div className="text-left">
                                                 <span className="font-medium text-[11px] text-foreground block mb-0.5">1. Identidade</span>
-                                                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Dados básicos e contato</span>
+                                                <span className="eyebrow text-muted-foreground">Dados básicos e contato</span>
                                             </div>
                                         </div>
                                     </AccordionTrigger>
@@ -375,7 +375,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                             <StatusIcon active={checklist.experience} icon={Briefcase} />
                                             <div className="text-left">
                                                 <span className="font-medium text-[11px] text-foreground block mb-0.5">2. Experiência</span>
-                                                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Histórico profissional</span>
+                                                <span className="eyebrow text-muted-foreground">Histórico profissional</span>
                                             </div>
                                         </div>
                                     </AccordionTrigger>
@@ -394,7 +394,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                             <StatusIcon active={checklist.projects} icon={Layers} />
                                             <div className="text-left">
                                                 <span className="font-medium text-[11px] text-foreground block mb-0.5">3. Projetos</span>
-                                                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Cases práticos</span>
+                                                <span className="eyebrow text-muted-foreground">Cases práticos</span>
                                             </div>
                                         </div>
                                     </AccordionTrigger>
@@ -413,7 +413,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                             <StatusIcon active={checklist.education} icon={GraduationCap} />
                                             <div className="text-left">
                                                 <span className="font-medium text-[11px] text-foreground block mb-0.5">4. Educação</span>
-                                                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Formação acadêmica</span>
+                                                <span className="eyebrow text-muted-foreground">Formação acadêmica</span>
                                             </div>
                                         </div>
                                     </AccordionTrigger>
@@ -432,7 +432,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                             <StatusIcon active={checklist.skills} icon={Code} />
                                             <div className="text-left">
                                                 <span className="font-medium text-[11px] text-foreground block mb-0.5">5. Habilidades</span>
-                                                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Tech stack e ferramentas</span>
+                                                <span className="eyebrow text-muted-foreground">Tech stack e ferramentas</span>
                                             </div>
                                         </div>
                                     </AccordionTrigger>
@@ -451,7 +451,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                             <StatusIcon active={checklist.testimonials} icon={MessageSquare} />
                                             <div className="text-left">
                                                 <span className="font-medium text-[11px] text-foreground block mb-0.5">6. Depoimentos</span>
-                                                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Prova social</span>
+                                                <span className="eyebrow text-muted-foreground">Prova social</span>
                                             </div>
                                         </div>
                                     </AccordionTrigger>
@@ -470,7 +470,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                             <StatusIcon active={checklist.certifications} icon={Award} />
                                             <div className="text-left">
                                                 <span className="font-medium text-[11px] text-foreground block mb-0.5">7. Certificações</span>
-                                                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Cursos e credenciais</span>
+                                                <span className="eyebrow text-muted-foreground">Cursos e credenciais</span>
                                             </div>
                                         </div>
                                     </AccordionTrigger>
@@ -489,7 +489,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                             <StatusIcon active={checklist.languages} icon={Languages} />
                                             <div className="text-left">
                                                 <span className="font-medium text-[11px] text-foreground block mb-0.5">8. Idiomas</span>
-                                                <span className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider">Fluência e níveis</span>
+                                                <span className="eyebrow text-muted-foreground">Fluência e níveis</span>
                                             </div>
                                         </div>
                                     </AccordionTrigger>

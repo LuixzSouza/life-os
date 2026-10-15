@@ -544,7 +544,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                             {/* Nome + Classificação */}
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-1.5">
-                                    <Label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Refeição</Label>
+                                    <Label className="eyebrow text-muted-foreground">Refeição</Label>
                                     <Select value={title} onValueChange={setTitle}>
                                         <SelectTrigger className="h-11 rounded-xl bg-muted/30 border-border/40"><SelectValue /></SelectTrigger>
                                         <SelectContent className="rounded-xl">
@@ -555,7 +555,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                     </Select>
                                 </div>
                                 <div className="space-y-1.5">
-                                    <Label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
+                                    <Label className="eyebrow text-muted-foreground flex items-center gap-1.5">
                                         Classificação
                                         {usingPlate && !meal && !typeTouched && (
                                             <span className="normal-case tracking-normal text-[9px] font-bold text-primary bg-primary/10 rounded px-1.5 py-0.5">sugerido</span>
@@ -580,9 +580,9 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                             {/* O PRATO */}
                             <div className="space-y-2">
                                 <div className="flex items-center justify-between">
-                                    <Label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Seu prato</Label>
+                                    <Label className="eyebrow text-muted-foreground">Seu prato</Label>
                                     {usingPlate && (
-                                        <button type="button" onClick={() => setPlate([])} className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground hover:text-destructive">Limpar</button>
+                                        <button type="button" onClick={() => setPlate([])} className="eyebrow text-muted-foreground hover:text-destructive">Limpar</button>
                                     )}
                                 </div>
 
@@ -635,7 +635,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                             {!usingPlate && (
                                 <>
                                     <div className="space-y-1.5">
-                                        <Label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Descrição</Label>
+                                        <Label className="eyebrow text-muted-foreground">Descrição</Label>
                                         <textarea
                                             value={manualDesc}
                                             onChange={(e) => setManualDesc(e.target.value)}
@@ -644,7 +644,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                                         />
                                     </div>
                                     <div className="space-y-1.5">
-                                        <Label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Calorias (kcal)</Label>
+                                        <Label className="eyebrow text-muted-foreground">Calorias (kcal)</Label>
                                         <Input type="number" inputMode="numeric" value={manualCals || ""} placeholder="0" onChange={(e) => setManualCals(Number(e.target.value) || 0)} className="h-12 text-lg font-bold font-mono rounded-xl bg-muted/20 border-border/40" />
                                     </div>
                                 </>
@@ -653,7 +653,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                             {/* Macros (opcional) — gramas. Vazio = não informado. */}
                             <div className="space-y-1.5">
                                 <div className="flex items-center justify-between">
-                                    <Label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Macros <span className="font-normal normal-case">(opcional, em gramas)</span></Label>
+                                    <Label className="eyebrow text-muted-foreground">Macros <span className="font-normal normal-case">(opcional, em gramas)</span></Label>
                                     <button
                                         type="button"
                                         onClick={handleEstimate}
@@ -685,7 +685,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                         {/* RODAPÉ: total + ações */}
                         <div className="p-5 border-t border-border/40 bg-muted/10 shrink-0 flex items-center justify-between gap-4">
                             <div className="min-w-0">
-                                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Total</p>
+                                <p className="eyebrow text-muted-foreground">Total</p>
                                 <p className="text-2xl font-bold tracking-tight leading-none">{finalCals} <span className="text-sm font-medium text-muted-foreground">kcal</span></p>
                                 {macros.any && (
                                     <div className="flex items-center gap-2.5 mt-1.5 text-[11px] font-semibold">

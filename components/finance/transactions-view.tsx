@@ -181,7 +181,7 @@ export function TransactionsView({
                                     {summary.balance > 0 ? "+" : ""}{formatMoney(summary.balance)}
                                 </span>
                             </div>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground pt-1">
+                            <p className="eyebrow text-muted-foreground pt-1">
                                 {totalCount} lançamento(s) no filtro atual
                             </p>
                         </div>
@@ -196,7 +196,7 @@ export function TransactionsView({
                                 </h3>
                                 <p className="text-xs text-muted-foreground font-medium mt-1">Receitas × despesas dos últimos 6 meses</p>
                             </div>
-                            <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                            <div className="eyebrow flex items-center gap-4 text-muted-foreground">
                                 <span className="flex items-center gap-1.5"><div className="h-2 w-2 rounded-full bg-emerald-500" /> Receitas</span>
                                 <span className="flex items-center gap-1.5"><div className="h-2 w-2 rounded-full bg-rose-500" /> Despesas</span>
                             </div>
@@ -234,7 +234,7 @@ export function TransactionsView({
                                             </div>
                                         </div>
 
-                                        <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mt-2">
+                                        <span className="eyebrow text-muted-foreground mt-2">
                                             {stat.month}
                                         </span>
                                     </div>
@@ -418,7 +418,7 @@ export function TransactionsView({
                     {/* PAGINAÇÃO */}
                     {totalPages > 1 && (
                         <div className="flex items-center justify-between gap-4 rounded-2xl border border-border/40 bg-card px-4 py-3 shadow-sm sm:px-5">
-                            <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                            <span className="eyebrow text-muted-foreground">
                                 Página {page} de {totalPages}
                             </span>
                             <div className="flex items-center gap-2">

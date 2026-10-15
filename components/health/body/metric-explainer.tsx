@@ -36,11 +36,11 @@ export function MetricExplainer({ title, whatItIs, whatItMeans, howToImprove, re
                 </div>
                 <div className="space-y-3 p-4">
                     <div>
-                        <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">O que é</p>
+                        <p className="eyebrow text-muted-foreground">O que é</p>
                         <p className="mt-0.5 leading-relaxed text-foreground/90">{whatItIs}</p>
                     </div>
                     <div>
-                        <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">O que significa pra você</p>
+                        <p className="eyebrow text-muted-foreground">O que significa pra você</p>
                         <p className="mt-0.5 leading-relaxed text-foreground/90">{whatItMeans}</p>
                     </div>
                     {howToImprove && (

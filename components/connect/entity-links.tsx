@@ -227,7 +227,7 @@ export function EntityLinks({ entityType, entityId }: { entityType: string; enti
                   >
                     <Icon className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
                     <span className="flex-1 truncate">{h.title}</span>
-                    <span className="shrink-0 text-[10px] uppercase tracking-wide text-muted-foreground/60">
+                    <span className="eyebrow shrink-0 text-muted-foreground/60">
                       {ENTITY_LABEL[h.entityType] ?? h.entityType}
                     </span>
                   </button>
@@ -263,7 +263,7 @@ export function EntityLinks({ entityType, entityId }: { entityType: string; enti
         ) : (
           <div className="space-y-1.5 rounded-lg border border-primary/20 bg-primary/[0.03] p-2">
             <div className="flex items-center justify-between px-0.5">
-              <p className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wide text-primary">
+              <p className="eyebrow inline-flex items-center gap-1 text-primary">
                 <Sparkles className="h-3 w-3" /> Sugestões
               </p>
               <button

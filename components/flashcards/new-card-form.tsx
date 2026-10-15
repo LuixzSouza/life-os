@@ -71,7 +71,7 @@ export function NewCardForm({ deckId }: { deckId: string }) {
   return (
     <form ref={formRef} action={handleAdd} className="space-y-5">
       <div className="space-y-2">
-        <Label className="ml-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+        <Label className="eyebrow ml-1 text-muted-foreground">
           Frente (Pergunta ou imagem)
         </Label>
         <Input
@@ -87,7 +87,7 @@ export function NewCardForm({ deckId }: { deckId: string }) {
       </div>
 
       <div className="space-y-2">
-        <Label className="ml-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+        <Label className="eyebrow ml-1 text-muted-foreground">
           Verso (Resposta)
         </Label>
         <Textarea
@@ -102,7 +102,7 @@ export function NewCardForm({ deckId }: { deckId: string }) {
       </div>
 
       <div className="space-y-2">
-        <Label className="ml-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+        <Label className="eyebrow ml-1 text-muted-foreground">
           Dica (opcional)
         </Label>
         <Input

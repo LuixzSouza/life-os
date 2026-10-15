@@ -123,7 +123,7 @@ export function EnergyCheckinCard() {
       {/* Mini-heatmap dos últimos 14 dias */}
       {loaded && checkins.length > 0 && (
         <div className="mt-4">
-          <div className="mb-1 flex items-center justify-between text-[10px] font-medium uppercase tracking-wider text-muted-foreground/70">
+          <div className="eyebrow mb-1 flex items-center justify-between text-muted-foreground/70">
             <span>14 dias</span>
             <span>hoje →</span>
           </div>

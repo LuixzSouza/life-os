@@ -197,10 +197,10 @@ function ExerciseEditor({ ex, onChange }: { ex: EditedExercise; onChange: (next:
     <section className="overflow-hidden rounded-2xl border border-primary/30 bg-card shadow-sm">
       <div className="flex items-center gap-2.5 border-b border-border/40 bg-primary/5 px-3 py-2">
         <p className="min-w-0 flex-1 truncate text-sm font-semibold">{ex.name}</p>
-        <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wider text-primary">editando</span>
+        <span className="eyebrow shrink-0 text-primary">editando</span>
       </div>
       <div className="space-y-1.5 p-2">
-        <div className="grid grid-cols-[1.75rem_1fr_1fr_2.25rem_1.5rem] items-center gap-1.5 px-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+        <div className="eyebrow grid grid-cols-[1.75rem_1fr_1fr_2.25rem_1.5rem] items-center gap-1.5 px-1 text-muted-foreground/70">
           <span className="text-center">Tipo</span>
           <span className="text-center">{timed ? "+kg" : perHand ? "Carga/mão" : "Carga (kg)"}</span>
           <span className="text-center">{timed ? "Seg" : "Reps"}</span>
@@ -330,7 +330,7 @@ export function WorkoutDetailModal({ workout, onClose }: { workout: GymWorkout |
               )}
               {w.notes && (
                 <div className="rounded-2xl border border-border/40 bg-muted/10 px-3 py-2.5">
-                  <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Notas da sessão</p>
+                  <p className="eyebrow mb-1 text-muted-foreground">Notas da sessão</p>
                   <p className="whitespace-pre-wrap text-xs leading-relaxed text-foreground/80">{w.notes}</p>
                 </div>
               )}

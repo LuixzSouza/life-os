@@ -106,7 +106,7 @@ export function AiMemoriesCard({ initialMemories }: { initialMemories: AiMemoryI
             >
               <div className="min-w-0">
                 <p className="text-sm text-foreground/90">{m.content}</p>
-                <p className="mt-0.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                <p className="eyebrow mt-0.5 text-muted-foreground/60">
                   desde {new Date(m.createdAt).toLocaleDateString("pt-BR")}
                 </p>
               </div>

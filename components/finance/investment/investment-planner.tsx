@@ -163,7 +163,7 @@ export function InvestmentPlanner({ rate }: PlannerProps) {
                             <div className="flex flex-wrap items-center gap-4 sm:gap-6">
                                 <div className="flex items-center space-x-3 bg-muted/30 px-4 py-2.5 rounded-xl border border-border/50 transition-colors hover:bg-muted/50 shadow-sm">
                                     <Switch id="inflation" checked={showInflation} onCheckedChange={setShowInflation} />
-                                    <Label htmlFor="inflation" className="text-xs font-bold cursor-pointer flex items-center gap-1.5 text-muted-foreground uppercase tracking-wider">
+                                    <Label htmlFor="inflation" className="eyebrow cursor-pointer flex items-center gap-1.5 text-muted-foreground">
                                         Descontar Inflação
                                         <HoverCard>
                                             <HoverCardTrigger><HelpCircle className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" /></HoverCardTrigger>
@@ -175,7 +175,7 @@ export function InvestmentPlanner({ rate }: PlannerProps) {
                                 </div>
                                 <div className="flex items-center space-x-3 bg-muted/30 px-4 py-2.5 rounded-xl border border-border/50 transition-colors hover:bg-muted/50 shadow-sm">
                                     <Switch id="savings" checked={compareSavings} onCheckedChange={setCompareSavings} />
-                                    <Label htmlFor="savings" className="text-xs font-bold cursor-pointer text-muted-foreground uppercase tracking-wider">Comparar Poupança</Label>
+                                    <Label htmlFor="savings" className="eyebrow cursor-pointer text-muted-foreground">Comparar Poupança</Label>
                                 </div>
                             </div>
 

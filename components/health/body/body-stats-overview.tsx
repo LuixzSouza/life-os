@@ -116,7 +116,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
 
                         {/* Régua segmentada com marcador na sua posição */}
                         <div className="w-full space-y-1.5 md:w-1/2">
-                            <div className="flex text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                            <div className="eyebrow flex text-muted-foreground">
                                 {FAT_SEGMENTS.map((s, i) => {
                                     const from = i === 0 ? 0 : FAT_SEGMENTS[i - 1].to;
                                     return (
@@ -205,7 +205,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
                         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
                             {deviceList.map((d) => (
                                 <div key={d.label} className={cn("rounded-xl border border-border/40 p-3", d.bg)}>
-                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">{d.label}</p>
+                                    <p className="eyebrow text-muted-foreground">{d.label}</p>
                                     <p className="mt-1 flex items-baseline gap-1">
                                         <span className={cn("text-xl font-bold tabular-nums", d.tone)}>{d.value}</span>
                                         {d.unit && <span className="text-[10px] text-muted-foreground">{d.unit}</span>}
@@ -299,7 +299,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
 
                         <div className="space-y-3">
-                            <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            <h4 className="eyebrow flex items-center gap-2 text-muted-foreground">
                                 <Shirt className="h-3.5 w-3.5" /> Tronco & superior
                             </h4>
                             <div className="grid grid-cols-2 gap-3">
@@ -313,7 +313,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
                         </div>
 
                         <div className="space-y-3">
-                            <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            <h4 className="eyebrow flex items-center gap-2 text-muted-foreground">
                                 <Activity className="h-3.5 w-3.5" /> Core & base
                             </h4>
                             <div className="grid grid-cols-2 gap-3">
@@ -327,7 +327,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
                         </div>
 
                         <div className="space-y-3">
-                            <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            <h4 className="eyebrow flex items-center gap-2 text-muted-foreground">
                                 <Footprints className="h-3.5 w-3.5" /> Inferiores
                             </h4>
                             <div className="grid grid-cols-2 gap-3">

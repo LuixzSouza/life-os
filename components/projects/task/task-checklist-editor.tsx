@@ -38,7 +38,7 @@ export function TaskChecklistEditor({ taskId, initialRaw }: { taskId: string; in
 
   return (
     <div className="space-y-2">
-      <label className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+      <label className="eyebrow flex items-center gap-2 text-muted-foreground">
         <ListTodo size={13} /> Checklist
         {items.length > 0 && (
           <span className="font-mono text-[10px] text-muted-foreground/70">{done}/{items.length}</span>

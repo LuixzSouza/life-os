@@ -104,7 +104,7 @@ export function AutoBackupCard({ initial }: { initial: AutoBackupStatus }) {
             <CardContent className="space-y-4">
                 <div className="grid gap-3 sm:grid-cols-[1fr_110px]">
                     <div className="space-y-1.5">
-                        <Label htmlFor="auto-backup-dir" className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                        <Label htmlFor="auto-backup-dir" className="eyebrow text-muted-foreground">
                             Pasta de destino
                         </Label>
                         <div className="relative">
@@ -119,7 +119,7 @@ export function AutoBackupCard({ initial }: { initial: AutoBackupStatus }) {
                         </div>
                     </div>
                     <div className="space-y-1.5">
-                        <Label htmlFor="auto-backup-keep" className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                        <Label htmlFor="auto-backup-keep" className="eyebrow text-muted-foreground">
                             Manter cópias
                         </Label>
                         <Input

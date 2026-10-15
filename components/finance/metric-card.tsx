@@ -71,7 +71,7 @@ export const MetricCard: FC<MetricCardProps> = ({
           </div>
         </div>
         <div className="space-y-1">
-          <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{title}</p>
+          <p className="eyebrow text-muted-foreground">{title}</p>
           <h3 className={cn(
             "text-2xl font-black font-mono tracking-tighter tabular-nums text-foreground transition-all",
             isSmartView && "blur-[6px] select-none"

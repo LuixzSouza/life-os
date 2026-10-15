@@ -237,7 +237,7 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
           {/* Sobre — a descrição que o usuário escreveu, legível e por extenso */}
           {!isInbox && project?.description?.trim() ? (
             <div className="rounded-2xl border border-border/40 bg-card shadow-sm p-5 space-y-2.5">
-              <h2 className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
+              <h2 className="eyebrow text-muted-foreground flex items-center gap-1.5">
                 <AlignLeft className="h-3.5 w-3.5" /> Sobre
               </h2>
               <p className="text-[15px] text-foreground/90 leading-relaxed whitespace-pre-wrap break-words">
@@ -250,7 +250,7 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 
           <div className="rounded-2xl border border-border/40 bg-card shadow-sm p-5">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Progresso</span>
+              <span className="eyebrow text-muted-foreground">Progresso</span>
               <span className="text-sm font-bold text-foreground">{progressPercent}%</span>
             </div>
             <Progress
@@ -338,7 +338,7 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="w-44 rounded-xl">
-                    <DropdownMenuLabel className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Filtrar</DropdownMenuLabel>
+                    <DropdownMenuLabel className="eyebrow text-muted-foreground">Filtrar</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <Link href={buildUrl({ filter: "active" })}><DropdownMenuCheckboxItem checked={currentFilter === "active"} className="cursor-pointer text-sm">Pendentes</DropdownMenuCheckboxItem></Link>
                     <Link href={buildUrl({ filter: "completed" })}><DropdownMenuCheckboxItem checked={currentFilter === "completed"} className="cursor-pointer text-sm">Concluídas</DropdownMenuCheckboxItem></Link>
@@ -350,7 +350,7 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 
             {/* Captura rápida */}
             <div className="space-y-3">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground px-1">Captura rápida</p>
+              <p className="eyebrow text-muted-foreground px-1">Captura rápida</p>
               <TaskInput projectId={isInbox ? "inbox" : dbProjectId!} />
             </div>
 

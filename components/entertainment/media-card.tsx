@@ -223,7 +223,7 @@ export function MediaCard({ item }: { item: MediaItemData }) {
               {/* Gêneros */}
               {genreList.length > 0 && (
                 <div className="space-y-2">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5"><Tag className="h-3.5 w-3.5" /> Gêneros</h3>
+                  <h3 className="eyebrow text-muted-foreground flex items-center gap-1.5"><Tag className="h-3.5 w-3.5" /> Gêneros</h3>
                   <div className="flex flex-wrap gap-2">
                     {genreList.map((g, i) => (
                       <Badge key={i} variant="secondary" className="px-2.5 py-1 bg-muted/40 text-foreground/80 border border-border/40 font-medium">{g}</Badge>
@@ -235,7 +235,7 @@ export function MediaCard({ item }: { item: MediaItemData }) {
               {/* Sinopse */}
               {item.overview && (
                 <div className="space-y-2">
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5"><AlignLeft className="h-3.5 w-3.5" /> Resumo</h3>
+                  <h3 className="eyebrow text-muted-foreground flex items-center gap-1.5"><AlignLeft className="h-3.5 w-3.5" /> Resumo</h3>
                   <p className="text-sm text-foreground/80 leading-relaxed bg-muted/20 p-4 rounded-xl border border-border/40">
                     {item.overview}
                   </p>

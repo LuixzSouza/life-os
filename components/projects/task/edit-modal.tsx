@@ -161,7 +161,7 @@ function EditModalContent({
 
           {/* Descrição */}
           <div className="space-y-2">
-            <label className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            <label className="eyebrow flex items-center gap-2 text-muted-foreground">
               <Info size={13} /> Descrição
             </label>
             <Textarea
@@ -188,7 +188,7 @@ function EditModalContent({
 
         {/* SIDEBAR DE PROPRIEDADES (desktop) / seção final (mobile) */}
         <aside className="shrink-0 space-y-4 border-t border-border/40 bg-muted/10 p-5 md:h-full md:w-[300px] md:overflow-y-auto md:border-l md:border-t-0 custom-scrollbar">
-          <label className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <label className="eyebrow flex items-center gap-2 text-muted-foreground">
             <SlidersHorizontal size={13} /> Propriedades
           </label>
           <TaskProperties

@@ -163,7 +163,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                             ))}
                         </div>
                     )}
-                    <p className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                    <p className="eyebrow text-muted-foreground/60">
                         Escolha uma sugestão ou digite o nome exato do modelo.
                     </p>
                 </div>
@@ -206,7 +206,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                         )}
                     </div>
 
-                    <p className="text-[9px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                    <p className="eyebrow text-muted-foreground/60">
                         {isLocal ? "Ollama roda localmente na porta 11434." : `Sua chave ${providerInfo?.name ?? provider} é criptografada e salva localmente.`}
                     </p>
                 </div>
@@ -232,7 +232,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                                 variant="ghost"
                                 size="sm"
                                 onClick={restoreDefaultPersona}
-                                className="h-6 px-2 text-[9px] font-bold uppercase tracking-widest text-rose-500 hover:bg-rose-500/10 hover:text-rose-600"
+                                className="eyebrow h-6 px-2 text-rose-500 hover:bg-rose-500/10 hover:text-rose-600"
                             >
                                 <RotateCcw className="h-3 w-3 mr-1" /> Resetar
                             </Button>

@@ -112,7 +112,7 @@ function Stat({ icon: Icon, label, value }: { icon: React.ElementType; label: st
     <div className="rounded-xl border border-border/40 bg-muted/20 p-3 text-center">
       <Icon className="mx-auto mb-1 h-4 w-4 text-muted-foreground" />
       <p className="text-base font-bold leading-none text-foreground">{value}</p>
-      <p className="mt-1 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">{label}</p>
+      <p className="eyebrow mt-1 text-muted-foreground">{label}</p>
     </div>
   );
 }
@@ -339,7 +339,7 @@ export function SubjectDetailsModal({ subjectId, open, onClose }: SubjectDetails
               {/* SUB-TÓPICOS */}
               {details?.subTopics && details.subTopics.length > 0 && (
                 <div className="space-y-2">
-                  <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                  <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                     <Layers className="h-3.5 w-3.5" /> Sub-tópicos ({details.subTopics.length})
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -360,7 +360,7 @@ export function SubjectDetailsModal({ subjectId, open, onClose }: SubjectDetails
               {details?.decks && details.decks.length > 0 && (
                 <div className="space-y-2">
                   <div className="flex items-center justify-between gap-2">
-                    <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                    <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                       <GraduationCap className="h-3.5 w-3.5" /> Flashcards ({details.decks.length})
                     </p>
                     {subjectId && details.decks.some((d) => d.due > 0) && (
@@ -399,7 +399,7 @@ export function SubjectDetailsModal({ subjectId, open, onClose }: SubjectDetails
               {/* NOTAS DA MATÉRIA (estudo passivo: ler/revisar o conteúdo) */}
               <div className="space-y-2">
                 <div className="flex items-center justify-between gap-2">
-                  <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                  <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                     <FileText className="h-3.5 w-3.5" /> Notas{details?.notes?.length ? ` (${details.notes.length})` : ""}
                   </p>
                   <button
@@ -436,7 +436,7 @@ export function SubjectDetailsModal({ subjectId, open, onClose }: SubjectDetails
 
               {/* HISTÓRICO */}
               <div className="space-y-3">
-                <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                   <History className="h-3.5 w-3.5" /> Histórico de sessões
                 </p>
 

@@ -99,7 +99,7 @@ export function NewProjectDialog() {
                         </div>
                         <div className="space-y-1">
                             <DialogTitle className="text-2xl font-semibold">Criar Projeto</DialogTitle>
-                            <DialogDescription className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Defina sua nova meta</DialogDescription>
+                            <DialogDescription className="eyebrow text-muted-foreground">Defina sua nova meta</DialogDescription>
                         </div>
                     </div>
                 </DialogHeader>

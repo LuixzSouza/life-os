@@ -272,7 +272,7 @@ export function SessionSetup({
             <span className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-primary/15 blur-2xl" />
             <div className="relative flex items-center gap-3">
               <div className="min-w-0 flex-1">
-                <span className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">
+                <span className="eyebrow inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-primary">
                   <Sparkles className="h-3 w-3" /> Recomendado hoje
                 </span>
                 <h2 className="mt-1.5 truncate text-lg font-bold">{recommended.div.label}</h2>
@@ -326,7 +326,7 @@ export function SessionSetup({
         {/* Atalho: fichas + rotinas para iniciar com um toque + importar/compartilhar */}
         <div className="mt-7 space-y-4">
           <div className="flex items-center justify-between gap-2">
-            <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
               {hasSaved ? <><Zap className="h-3.5 w-3.5 text-amber-500" /> Iniciar rápido</> : "Recebeu um treino de um amigo?"}
             </p>
             {onImportRoutines && <ImportRoutineButton onImport={onImportRoutines} onImportPlans={onImportPlans} />}
@@ -403,7 +403,7 @@ export function SessionSetup({
             reps/RIR/descanso — carregar no editor as perderia). */}
         {startMode === "planned" && plans.length > 0 && (
           <section className="space-y-2">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            <p className="eyebrow text-muted-foreground">
               Suas fichas <span className="font-normal normal-case text-muted-foreground/70">— toque para iniciar</span>
             </p>
             <div className="space-y-2">
@@ -444,7 +444,7 @@ export function SessionSetup({
         {/* Rotinas salvas */}
         {routines.length > 0 && (
           <section className="space-y-2">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Suas rotinas</p>
+            <p className="eyebrow text-muted-foreground">Suas rotinas</p>
             <div className="flex flex-wrap gap-2">
               {routines.map((r) => (
                 <button
@@ -464,7 +464,7 @@ export function SessionSetup({
 
         {/* Nome */}
         <section className="space-y-2">
-          <label className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <label className="eyebrow flex items-center gap-2 text-muted-foreground">
             Nome da sessão
             {!titleEdited && title && <span className="rounded-full bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold text-primary">automático</span>}
           </label>
@@ -478,7 +478,7 @@ export function SessionSetup({
 
         {/* Grupos */}
         <section className="space-y-2">
-          <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">O que vai treinar?</label>
+          <label className="eyebrow text-muted-foreground">O que vai treinar?</label>
           <div className="grid grid-cols-4 gap-2">
             {MUSCLE_GROUPS.map((g) => {
               const on = groups.includes(g.value);
@@ -504,7 +504,7 @@ export function SessionSetup({
             nome reconhece pelo movimento (a capa anima os 2 frames). */}
         {suggestions.length > 0 && (
           <section className="space-y-2.5 rounded-xl border border-primary/15 bg-primary/[0.03] p-3">
-            <p className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-primary/80">
+            <p className="eyebrow flex items-center gap-1.5 text-primary/80">
               <Plus className="h-3 w-3" /> Toque para adicionar
             </p>
             <div className="max-h-[320px] space-y-2.5 overflow-y-auto pr-1 custom-scrollbar">
@@ -546,7 +546,7 @@ export function SessionSetup({
 
         {/* Exercício personalizado — com autocomplete ILUSTRADO do catálogo */}
         <section className="space-y-2">
-          <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Buscar exercício</label>
+          <label className="eyebrow text-muted-foreground">Buscar exercício</label>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
@@ -582,7 +582,7 @@ export function SessionSetup({
         {picked.length > 0 && (
           <section className="space-y-2">
             <div className="flex items-center justify-between gap-2">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Ordem do treino ({picked.length})</p>
+              <p className="eyebrow text-muted-foreground">Ordem do treino ({picked.length})</p>
               <div className="flex items-center gap-2">
                 <p className="hidden text-[10px] text-muted-foreground/70 sm:block">↑ ↓ reordenam</p>
                 {picked.length > 1 && (
@@ -637,7 +637,7 @@ export function SessionSetup({
 
         {/* Descanso padrão — você digita o tempo (sem fileira de presets) */}
         <section className="space-y-2">
-          <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Descanso padrão entre séries</label>
+          <label className="eyebrow text-muted-foreground">Descanso padrão entre séries</label>
           <div className="flex items-center gap-2">
             <button
               type="button"

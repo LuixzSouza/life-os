@@ -120,7 +120,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
                     </div>
 
                     <div className="space-y-3">
-                        <Label className="text-xs uppercase font-bold text-muted-foreground tracking-wider">O que vamos estudar?</Label>
+                        <Label className="eyebrow text-muted-foreground">O que vamos estudar?</Label>
                         {/* Combobox com busca: escala p/ dezenas de matérias (digite 2 letras e achou) */}
                         <SubjectCombobox
                             subjects={subjects}
@@ -142,7 +142,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
                 <div className="w-full md:w-1/3 space-y-6 md:pl-8 md:border-l border-border/40">
                     <div className="space-y-3">
                         <div className="flex items-center justify-between">
-                            <Label className="text-xs uppercase font-bold text-muted-foreground tracking-wider">Técnica</Label>
+                            <Label className="eyebrow text-muted-foreground">Técnica</Label>
                             <Button variant="outline" size="sm" onClick={() => setShowSettings(!showSettings)}>
                                 <Settings className="h-3.5 w-3.5 mr-2" /> Preferências
                             </Button>
@@ -228,7 +228,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
           <DialogBody className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-3">
-                <Label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Nível de Foco (1-5)</Label>
+                <Label className="eyebrow text-muted-foreground">Nível de Foco (1-5)</Label>
                 <div className="flex gap-1 bg-muted/30 p-1 rounded-lg">
                   {[1, 2, 3, 4, 5].map(level => (
                     <Button
@@ -244,7 +244,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
               </div>
 
               <div className="space-y-3">
-                <Label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Tipo de Atividade</Label>
+                <Label className="eyebrow text-muted-foreground">Tipo de Atividade</Label>
                 <Select value={sessionType} onValueChange={(v) => setSessionType(v as SessionType)}>
                   <SelectTrigger className="bg-muted/30"><SelectValue /></SelectTrigger>
                   <SelectContent>
@@ -257,7 +257,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
             </div>
 
             <div className="space-y-3">
-              <Label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Resumo / Anotações</Label>
+              <Label className="eyebrow text-muted-foreground">Resumo / Anotações</Label>
               <Textarea
                 placeholder="Anotações feitas durante o foco aparecerão aqui..."
                 value={sessionNotes}

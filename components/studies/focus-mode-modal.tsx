@@ -185,7 +185,7 @@ export function FocusModeModal({ isOpen, subject, settings, preferences, onFinis
 
                     <div className="absolute top-4 left-6 right-4 flex justify-between items-start">
                         <div>
-                            <Badge variant={isBreak ? "outline" : "primary"} className={cn("px-3 py-1.5 text-[10px] md:text-xs font-bold uppercase tracking-wider", isBreak && "text-emerald-500 border-emerald-500/30")}>
+                            <Badge variant={isBreak ? "outline" : "primary"} className={cn("eyebrow px-3 py-1.5 md:text-xs", isBreak && "text-emerald-500 border-emerald-500/30")}>
                             {isBreak ? <Coffee className="w-3 h-3 mr-2" /> : <BrainCircuit className="w-3 h-3 mr-2" />}
                             {isBreak ? (isLongBreak ? "Pausa Longa" : "Pausa Curta") : "Sessão de Foco"}
                             </Badge>

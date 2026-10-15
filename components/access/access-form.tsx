@@ -213,7 +213,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
               <div className="space-y-2">
                   <Label className="text-xs font-medium text-muted-foreground ml-1">Categoria de Segurança</Label>
                   <Select name="category" defaultValue={item?.category ?? (accessType === "CLIENT" ? "WORK" : "SOCIAL")}>
-                    <SelectTrigger className="h-12 bg-muted/10 border-border/40 rounded-xl font-bold text-xs uppercase tracking-widest">
+                    <SelectTrigger className="eyebrow h-12 bg-muted/10 border-border/40 rounded-xl">
                         <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="rounded-xl">

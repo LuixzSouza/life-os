@@ -102,7 +102,7 @@ export function BootSequence({ dbStatus }: BootSequenceProps) {
                         <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
                         <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
                     </div>
-                    <div className="flex items-center gap-2 text-[10px] text-green-600 font-bold tracking-widest uppercase">
+                    <div className="eyebrow flex items-center gap-2 text-green-600">
                         <Lock className="w-3 h-3" /> SECURE_BOOT_LOADER
                     </div>
                 </div>

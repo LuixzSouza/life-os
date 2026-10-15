@@ -42,7 +42,7 @@ export function SystemInfoCard({ info }: { info: SystemInfo }) {
                 
                 {/* --- SEÇÃO DO CAMINHO (BLINDADA) --- */}
                 <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-[10px] font-bold text-muted-foreground uppercase tracking-wider">
+                    <div className="eyebrow flex items-center gap-2 text-muted-foreground">
                         <Terminal className="h-3 w-3" /> Diretório (CWD)
                     </div>
                     

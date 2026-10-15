@@ -34,7 +34,7 @@ export function MonthHighlights({ highlights }: { highlights: Highlight[] }) {
         <span className="flex h-4 w-4 items-center justify-center">
           <Sparkles className="h-4 w-4 text-primary" />
         </span>
-        <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Destaques do período</h3>
+        <h3 className="eyebrow text-muted-foreground">Destaques do período</h3>
       </div>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

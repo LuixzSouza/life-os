@@ -82,7 +82,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
           </div>
           <div>
             <h3 className="font-semibold text-foreground text-lg leading-none">Foco do Dia</h3>
-            <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">Tarefas ativas por prioridade</p>
+            <p className="eyebrow text-muted-foreground mt-1">Tarefas ativas por prioridade</p>
           </div>
         </div>
         <Badge variant="outline" className="bg-background border-primary/30 text-primary font-mono text-xs px-2 py-0.5 shadow-sm">
@@ -101,7 +101,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
               <Sparkles className="h-8 w-8 text-emerald-500 animate-pulse" />
             </div>
             <h4 className="text-xl font-semibold text-foreground">Tudo Limpo!</h4>
-            <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mt-2 max-w-[250px] leading-relaxed opacity-60">
+            <p className="eyebrow text-muted-foreground mt-2 max-w-[250px] leading-relaxed opacity-60">
               Nenhuma tarefa pendente. Aproveite a visão livre — ou adicione uma acima.
             </p>
           </div>

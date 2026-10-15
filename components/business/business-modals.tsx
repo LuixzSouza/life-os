@@ -402,7 +402,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
               <DialogFooter className="flex flex-col gap-3">
                   <SubmitButton className="w-full h-12 rounded-xl font-bold">Salvar Ajuste</SubmitButton>
                   {invoice?.status === 'PAID' && invoice?.paidAt && (
-                      <p className="text-[10px] text-center text-emerald-600 font-bold uppercase tracking-widest">
+                      <p className="eyebrow text-center text-emerald-600">
                         Recebido em {new Date(invoice.paidAt).toLocaleDateString('pt-BR')}
                       </p>
                   )}

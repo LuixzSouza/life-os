@@ -203,7 +203,7 @@ export default function LoginPageClient() {
 
                             {/* Input Email */}
                             <div className="space-y-2">
-                                <Label htmlFor="email" className="text-xs font-semibold uppercase text-muted-foreground tracking-wider">
+                                <Label htmlFor="email" className="eyebrow text-muted-foreground">
                                     Email
                                 </Label>
                                 <Input
@@ -224,7 +224,7 @@ export default function LoginPageClient() {
 
                             {/* Input Senha */}
                             <div className="space-y-2 relative">
-                                <Label htmlFor="password" className="text-xs font-semibold uppercase text-muted-foreground tracking-wider">
+                                <Label htmlFor="password" className="eyebrow text-muted-foreground">
                                     Chave de Acesso
                                 </Label>
                                 <div className="relative">
@@ -353,13 +353,13 @@ export default function LoginPageClient() {
                     </div>
 
                     {/* Rodapé em fluxo no mobile (evita sobreposição com o conteúdo) */}
-                    <p className="lg:hidden text-center text-[10px] text-muted-foreground/70 uppercase tracking-widest font-mono pt-2">
+                    <p className="eyebrow lg:hidden text-center text-muted-foreground/70 font-mono pt-2">
                         Life OS • Conexão local segura
                     </p>
                 </motion.div>
 
                 {/* Rodapé fixo só no desktop */}
-                <div className="hidden lg:block absolute bottom-8 text-[10px] text-muted-foreground/70 uppercase tracking-widest font-mono">
+                <div className="eyebrow hidden lg:block absolute bottom-8 text-muted-foreground/70 font-mono">
                     Life OS • Conexão local segura
                 </div>
             </div>
@@ -431,7 +431,7 @@ export default function LoginPageClient() {
                     </div>
 
                     {/* Selo de confiança */}
-                    <div className="mt-14 flex items-center gap-3 text-[11px] text-muted-foreground/70 font-mono uppercase tracking-wider">
+                    <div className="eyebrow mt-14 flex items-center gap-3 text-muted-foreground/70 font-mono">
                         <span className="flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-primary/70" /> Local-first</span>
                         <span className="text-foreground/20">•</span>
                         <span>Criptografado</span>

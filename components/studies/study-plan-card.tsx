@@ -79,7 +79,7 @@ export function StudyPlanCard({ todayMinutes, streak, dailyGoal = 30, suggestion
 
       {/* Sugestões de matérias */}
       <div className="mt-5 space-y-2">
-        <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Estudar agora</p>
+        <p className="eyebrow text-muted-foreground">Estudar agora</p>
         {suggestions.length === 0 ? (
           <div className="flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-3 py-2.5 text-sm font-medium text-emerald-700 dark:text-emerald-400">
             <CheckCircle2 className="h-4 w-4" /> Todas as matérias na meta. Bom descanso! 🎉

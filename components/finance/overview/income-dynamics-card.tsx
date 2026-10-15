@@ -102,7 +102,7 @@ export function IncomeDynamicsCard({
             <p className="text-lg sm:text-xl font-black text-foreground flex items-center gap-2">
               Fluxo de Caixa Livre <ArrowRight className="h-5 w-5 opacity-40" />
             </p>
-            <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mt-1">Sua capacidade real de aporte e lazer</p>
+            <p className="eyebrow text-muted-foreground mt-1">Sua capacidade real de aporte e lazer</p>
           </div>
           <div className={cn("text-4xl sm:text-5xl font-black font-mono tracking-tighter tabular-nums relative z-10",
             metrics.residual < 0 ? "text-rose-500" : "text-primary",

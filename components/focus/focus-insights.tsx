@@ -128,7 +128,7 @@ function StatCard({ icon, value, label, highlight }: { icon: React.ReactNode; va
   return (
     <div className={cn("flex flex-col gap-1 rounded-2xl border p-3 shadow-sm", highlight ? "border-transparent text-white" : "border-border/40 bg-card")}
       style={highlight ? { backgroundColor: ACCENT } : undefined}>
-      <span className={cn("flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider", highlight ? "text-white/80" : "text-muted-foreground")}>
+      <span className={cn("eyebrow flex items-center gap-1.5", highlight ? "text-white/80" : "text-muted-foreground")}>
         {icon}
       </span>
       <span className="text-2xl font-black leading-none tabular-nums">{value}</span>

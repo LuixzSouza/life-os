@@ -158,7 +158,7 @@ export function ModelSelector({ currentProvider, currentModel, configuredProvide
                               <div className={cn("p-1.5 rounded-md bg-background shadow-sm border border-border/20", item.color)}>
                                 <item.icon className="h-3.5 w-3.5" />
                               </div>
-                              <span className="flex-1 uppercase tracking-wider text-[10px]">
+                              <span className="eyebrow flex-1">
                                 {item.label}
                               </span>
                               {/* Status: chave configurada (verde) ou pendente (apagado) */}

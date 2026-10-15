@@ -335,7 +335,7 @@ function InboxPanel({
         ) : (
           groupByDay(visible).map((group) => (
             <section key={group.label}>
-              <h4 className="sticky top-0 z-10 border-b border-border/30 bg-background/95 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wide text-muted-foreground/60 backdrop-blur">
+              <h4 className="eyebrow sticky top-0 z-10 border-b border-border/30 bg-background/95 px-3 py-1.5 text-muted-foreground/60 backdrop-blur">
                 {group.label}
               </h4>
               <ul className="divide-y divide-border/40">
@@ -399,7 +399,7 @@ function NotificationRow({
         <p className={cn("truncate text-sm", unread ? "font-semibold text-foreground" : "text-foreground/80")}>{n.title}</p>
         {n.body && <p className="truncate text-xs text-muted-foreground">{n.body}</p>}
         <span className="mt-0.5 flex items-center gap-1.5">
-          <span className="text-[10px] uppercase tracking-wide text-muted-foreground/60">{timeAgo(n.createdAt)}</span>
+          <span className="eyebrow text-muted-foreground/60">{timeAgo(n.createdAt)}</span>
           {due && (
             <span className={cn("rounded-full px-1.5 py-px text-[10px] font-semibold", due.tone)}>{due.text}</span>
           )}

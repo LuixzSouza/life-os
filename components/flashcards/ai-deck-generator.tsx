@@ -146,7 +146,7 @@ export function AiDeckGenerator({ deckId }: { deckId: string }) {
 
       <CardContent className="space-y-4 pt-6">
         <div className="space-y-2">
-          <Label className="ml-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+          <Label className="eyebrow ml-1 text-muted-foreground">
             Tema, texto, foto ou PDF
           </Label>
           <Textarea

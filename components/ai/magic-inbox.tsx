@@ -242,7 +242,7 @@ export function MagicInbox() {
               )}
 
               <div className="flex items-center justify-between gap-2">
-                <span className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/50">
+                <span className="eyebrow flex items-center gap-2 text-muted-foreground/50">
                   Ctrl+J abre de qualquer tela
                   {text.length >= INBOX_CHAR_LIMIT * 0.6 && (
                     <span className={cn(
@@ -285,7 +285,7 @@ export function MagicInbox() {
                         </span>
                         <div className="min-w-0">
                           <p className="truncate text-sm font-bold text-foreground/90">{item.title}</p>
-                          <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                          <p className="eyebrow text-muted-foreground/60">
                             {meta.label}
                             {item.value != null && ` · ${item.module === "FINANCE" ? `R$ ${item.value.toFixed(2)}` : item.value}`}
                             {item.date && ` · ${item.date.split("-").reverse().join("/")}`}

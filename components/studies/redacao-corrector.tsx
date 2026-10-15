@@ -164,7 +164,7 @@ export function RedacaoCorrector() {
             <div className="space-y-5">
               {/* Nota total */}
               <div className="rounded-2xl border border-border/40 bg-muted/20 p-5 text-center">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Nota total</p>
+                <p className="eyebrow text-muted-foreground">Nota total</p>
                 <p className={cn("text-5xl font-black tabular-nums", totalColor(grade.total))}>{grade.total}</p>
                 <p className="text-xs text-muted-foreground">de 1000{!grade.aiGraded && " · análise estrutural (sem IA)"}</p>
               </div>

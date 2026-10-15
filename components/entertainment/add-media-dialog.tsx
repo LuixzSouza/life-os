@@ -293,7 +293,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
 
                       {/* Selo "Na coleção" (sempre visível quando já possuído). */}
                       {owned && !isSavingThis && (
-                        <div className="absolute top-2 left-2 z-10 flex items-center gap-1 rounded-md bg-emerald-500/90 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white shadow-sm backdrop-blur-sm">
+                        <div className="eyebrow absolute top-2 left-2 z-10 flex items-center gap-1 rounded-md bg-emerald-500/90 px-1.5 py-0.5 text-white shadow-sm backdrop-blur-sm">
                           <Check className="h-3 w-3" /> Na coleção
                         </div>
                       )}

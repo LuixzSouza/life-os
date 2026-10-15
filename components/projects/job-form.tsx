@@ -18,7 +18,7 @@ import { STATUS_MAP } from "./job-tracker-status";
 import { NotesMarkdownField } from "./notes-markdown-field";
 import type { JobEventLite } from "./job-types";
 
-const LABEL_CLS = "text-[11px] font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5";
+const LABEL_CLS = "eyebrow text-muted-foreground flex items-center gap-1.5";
 const INPUT_CLS = "h-11 bg-muted/40 border-border/40 rounded-xl focus-visible:bg-background focus-visible:ring-1 focus-visible:ring-primary/20";
 const SELECT_CLS = "h-11 bg-muted/40 border-border/40 rounded-xl";
 
@@ -114,7 +114,7 @@ export function JobForm({ defaultValues, type, mode = 'create', events, onSubmit
             {mode === 'create' && (
                 <div className="space-y-2 rounded-xl border border-dashed border-primary/30 bg-primary/[0.03] p-3">
                     <div className="flex items-center justify-between gap-2">
-                        <span className="text-[11px] font-semibold text-primary uppercase tracking-wider flex items-center gap-1.5">
+                        <span className="eyebrow text-primary flex items-center gap-1.5">
                             <Wand2 className="h-3.5 w-3.5" /> Preencher automaticamente
                         </span>
                         <Button type="button" size="sm" onClick={() => runImport()} disabled={importing || !importText.trim()} className="h-8 shrink-0 gap-1.5 rounded-lg">

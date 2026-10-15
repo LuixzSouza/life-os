@@ -266,7 +266,7 @@ function TagsTab({ initialTags }: { initialTags: TagOverview[] }) {
                       </span>
                       <div className="min-w-0 flex-1">
                         <p className="truncate text-sm font-medium">{e.title}</p>
-                        <p className="text-[11px] uppercase tracking-wide text-muted-foreground/60">
+                        <p className="eyebrow text-muted-foreground/60">
                           {ENTITY_LABEL[e.entityType] ?? e.entityType}
                         </p>
                       </div>
@@ -385,7 +385,7 @@ function LinkEndpoint({ entity }: { entity: LinkRow["from"] }) {
     <span className="inline-flex items-center gap-1.5 min-w-0">
       <Icon className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
       <span className="truncate text-sm font-medium">{entity.title}</span>
-      <span className="shrink-0 text-[10px] uppercase tracking-wide text-muted-foreground/60">
+      <span className="eyebrow shrink-0 text-muted-foreground/60">
         {ENTITY_LABEL[entity.entityType] ?? entity.entityType}
       </span>
     </span>
@@ -466,7 +466,7 @@ function LinkList({ links, pending, onRemove }: {
         <li key={l.id} className="flex items-center gap-3 bg-card px-4 py-3">
           <div className="grid min-w-0 flex-1 grid-cols-[1fr_auto_1fr] items-center gap-3">
             <LinkEndpoint entity={l.from} />
-            <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+            <span className="eyebrow inline-flex shrink-0 items-center gap-1.5 rounded-full bg-muted px-2 py-0.5 text-muted-foreground">
               {KIND_LABEL[l.kind] ?? l.kind} <ArrowRight className="h-3 w-3" />
             </span>
             <LinkEndpoint entity={l.to} />

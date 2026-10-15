@@ -487,7 +487,7 @@ function ClarifyPanel({
                 <button
                     type="button"
                     onClick={onFreeText}
-                    className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground transition hover:text-foreground"
+                    className="eyebrow text-muted-foreground transition hover:text-foreground"
                 >
                     Outro… digitar resposta
                 </button>
@@ -1147,7 +1147,7 @@ export function ChatInterface({
                                     <h3 className="text-xl font-semibold text-foreground">
                                         {greeting()}{userName ? `, ${userName}` : ""}
                                     </h3>
-                                    <p className="text-muted-foreground text-xs uppercase tracking-widest font-bold">
+                                    <p className="eyebrow text-muted-foreground">
                                         Sistemas operantes via protocolo <span className={cn("font-black", currentStyle.color)}>{currentStyle.label}</span>.
                                     </p>
                                 </div>
@@ -1302,7 +1302,7 @@ export function ChatInterface({
 
                                 {/* Carimbo: hora (+ IA/modelo) — só na última msg do grupo */}
                                 {time && !nextSame && (
-                                    <span suppressHydrationWarning className="mt-1 px-1.5 text-[9px] font-medium uppercase tracking-wider text-muted-foreground/50">
+                                    <span suppressHydrationWarning className="eyebrow mt-1 px-1.5 text-muted-foreground/50">
                                         {!isUser && `${style.label}${msg.model ? ` · ${msg.model}` : ""} · `}{time}
                                     </span>
                                 )}
@@ -1540,7 +1540,7 @@ export function ChatInterface({
                             </Button>
                         </div>
                     </div>
-                    <div className="text-[9px] font-bold uppercase tracking-widest text-center text-muted-foreground/40 mt-3">
+                    <div className="eyebrow text-center text-muted-foreground/40 mt-3">
                         Respostas geradas por inteligência artificial. Sujeito a alucinações.
                     </div>
                 </div>

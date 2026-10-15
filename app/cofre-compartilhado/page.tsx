@@ -225,7 +225,7 @@ export default function SharedCredentialPage() {
 function Field({ label, icon, children }: { label: string; icon: ReactNode; children: ReactNode }) {
   return (
     <div>
-      <span className="mb-1 block text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">{label}</span>
+      <span className="eyebrow mb-1 block text-muted-foreground">{label}</span>
       <div className="flex items-center gap-1 rounded-xl border border-border/40 bg-muted/20 py-1.5 pl-3 pr-1">
         <span className="text-muted-foreground/60">{icon}</span>
         {children}

@@ -87,11 +87,11 @@ export function CodeEditor({ page }: { page: SitePage }) {
                     </div>
 
                     {isDirty ? (
-                        <Badge variant="outline" className="text-[10px] font-semibold uppercase tracking-wide gap-1 bg-amber-500/10 text-amber-600 border-amber-500/20">
+                        <Badge variant="outline" className="eyebrow gap-1 bg-amber-500/10 text-amber-600 border-amber-500/20">
                             Pendente
                         </Badge>
                     ) : (
-                        <Badge variant="outline" className="text-[10px] font-semibold uppercase tracking-wide gap-1 bg-emerald-500/10 text-emerald-600 border-emerald-500/20">
+                        <Badge variant="outline" className="eyebrow gap-1 bg-emerald-500/10 text-emerald-600 border-emerald-500/20">
                             <Check className="h-3 w-3" /> Live
                         </Badge>
                     )}

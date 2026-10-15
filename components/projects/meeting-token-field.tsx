@@ -74,7 +74,7 @@ export function MeetingTokenField({
 
   return (
     <div className="space-y-1.5">
-      <label className="flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-wider text-muted-foreground">
+      <label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
         {icon}{label}
         {values.length > 0 && <span className="text-muted-foreground/50">· {values.length}</span>}
       </label>
@@ -134,7 +134,7 @@ export function MeetingTokenField({
                 {m}
               </button>
             ))}
-            <p className="border-t border-border/40 px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-muted-foreground/50">
+            <p className="eyebrow border-t border-border/40 px-3 py-1 text-muted-foreground/50">
               das suas Conexões · ↑↓ e Enter
             </p>
           </div>

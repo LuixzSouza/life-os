@@ -522,7 +522,7 @@ function GoalDialog({
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <div className="space-y-1.5">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Matéria</label>
+              <label className="eyebrow text-muted-foreground">Matéria</label>
               <SubjectCombobox
                 subjects={subjects}
                 value={subjectId}
@@ -532,7 +532,7 @@ function GoalDialog({
               />
             </div>
             <div className="space-y-1.5">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Prioridade</label>
+              <label className="eyebrow text-muted-foreground">Prioridade</label>
               <Select value={priority} onValueChange={setPriority}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
@@ -543,7 +543,7 @@ function GoalDialog({
               </Select>
             </div>
             <div className="space-y-1.5">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Status</label>
+              <label className="eyebrow text-muted-foreground">Status</label>
               <Select value={status} onValueChange={(v) => setStatus(normalizeGoalStatus(v))}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
@@ -554,7 +554,7 @@ function GoalDialog({
               </Select>
             </div>
             <div className="space-y-1.5">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Prazo</label>
+              <label className="eyebrow text-muted-foreground">Prazo</label>
               <Input type="date" value={targetDate} onChange={(e) => setTargetDate(e.target.value)} />
             </div>
           </div>
@@ -563,7 +563,7 @@ function GoalDialog({
           {goal && (
             <div className="space-y-2 border-t border-border/40 pt-4">
               <div className="flex items-center justify-between">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+                <p className="eyebrow text-muted-foreground">
                   Passos{tasks.length > 0 && <span className="ml-2 font-semibold normal-case tracking-normal">{doneCount}/{tasks.length}</span>}
                 </p>
                 <Button

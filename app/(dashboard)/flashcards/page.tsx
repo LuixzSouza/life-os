@@ -213,7 +213,7 @@ export default async function FlashcardsPage() {
                             <div className="space-y-1">
                                 <div className="flex items-center gap-2">
                                     <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.4)]" />
-                                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Dominados</span>
+                                    <span className="eyebrow text-muted-foreground">Dominados</span>
                                 </div>
                                 <p className="text-2xl font-black text-foreground pl-5">{stats.mastered} <span className="text-xs font-normal text-muted-foreground">({Math.round(masteredPercent)}%)</span></p>
                             </div>
@@ -221,7 +221,7 @@ export default async function FlashcardsPage() {
                             <div className="space-y-1">
                                 <div className="flex items-center gap-2">
                                     <div className="w-3 h-3 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.4)]" />
-                                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Revisando</span>
+                                    <span className="eyebrow text-muted-foreground">Revisando</span>
                                 </div>
                                 <p className="text-2xl font-black text-foreground pl-5">{stats.reviewing} <span className="text-xs font-normal text-muted-foreground">({Math.round(reviewingPercent)}%)</span></p>
                             </div>
@@ -229,7 +229,7 @@ export default async function FlashcardsPage() {
                             <div className="space-y-1">
                                 <div className="flex items-center gap-2">
                                     <div className="w-3 h-3 rounded-full bg-rose-400 shadow-[0_0_8px_rgba(251,113,133,0.4)]" />
-                                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Aprendendo</span>
+                                    <span className="eyebrow text-muted-foreground">Aprendendo</span>
                                 </div>
                                 <p className="text-2xl font-black text-foreground pl-5">{stats.learning} <span className="text-xs font-normal text-muted-foreground">({Math.round(learningPercent)}%)</span></p>
                             </div>

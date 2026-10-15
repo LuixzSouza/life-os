@@ -319,7 +319,7 @@ export function TimelineFeed({ initialItems }: { initialItems: ClientActivity[] 
                           <Link
                             href={mm.href}
                             title={`Abrir ${mm.label}`}
-                            className="inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide transition-all hover:brightness-110 hover:shadow-sm"
+                            className="eyebrow inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 transition-all hover:brightness-110 hover:shadow-sm"
                             style={{ backgroundColor: `${mm.color}1a`, color: mm.color }}
                           >
                             <ModuleIcon className="h-3 w-3" /> {mm.label}
@@ -352,7 +352,7 @@ export function TimelineFeed({ initialItems }: { initialItems: ClientActivity[] 
       <div className="flex justify-center pt-2">
         {exhausted ? (
           items.length > 0 && (
-            <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground/40">
+            <p className="eyebrow text-muted-foreground/40">
               ✦ Início da sua história no Life OS ✦
             </p>
           )

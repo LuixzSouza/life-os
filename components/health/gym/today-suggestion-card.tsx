@@ -80,7 +80,7 @@ export function TodaySuggestionCard({
 
       <div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0 flex-1">
-          <p className="mb-1.5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-primary">
+          <p className="eyebrow mb-1.5 flex items-center gap-1.5 text-primary">
             <Sparkles className="h-3.5 w-3.5" /> Sugestão de hoje
           </p>
 

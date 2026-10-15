@@ -181,7 +181,7 @@ export function AiAutomationsCard({ initialAutomations }: { initialAutomations: 
             <li key={a.id} className="flex items-center justify-between gap-3 rounded-xl border border-border/40 bg-background/60 px-3.5 py-2.5">
               <div className="min-w-0">
                 <p className="truncate text-sm font-bold text-foreground/90">{a.title}</p>
-                <p className="mt-0.5 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/60">
+                <p className="eyebrow mt-0.5 flex items-center gap-1.5 text-muted-foreground/60">
                   <Power className={a.enabled ? "h-3 w-3 text-emerald-500" : "h-3 w-3 text-muted-foreground/40"} />
                   {scheduleLabel(a.schedule, a.hour)}
                   {a.lastRunAt && ` · rodou ${new Date(a.lastRunAt).toLocaleDateString("pt-BR")}`}

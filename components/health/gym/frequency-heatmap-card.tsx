@@ -66,7 +66,7 @@ export function FrequencyHeatmapCard({ workouts }: { workouts: GymWorkout[] }) {
   return (
     <div className="rounded-2xl border border-border/40 bg-card p-3.5 shadow-sm">
       <div className="mb-3 flex items-center justify-between">
-        <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+        <p className="eyebrow flex items-center gap-1.5 text-muted-foreground">
           <CalendarDays className="h-3.5 w-3.5 text-primary" /> Frequência
         </p>
         <p className="text-[11px] text-muted-foreground">

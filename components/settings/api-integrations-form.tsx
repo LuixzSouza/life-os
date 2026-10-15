@@ -269,7 +269,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
           </div>
           <div>
             <h2 className="text-xl font-semibold text-foreground">API Hub</h2>
-            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Conecte o Life OS ao mundo exterior.</p>
+            <p className="eyebrow text-muted-foreground">Conecte o Life OS ao mundo exterior.</p>
           </div>
         </div>
         <Alert className="border-border/40 bg-muted/10 rounded-2xl mt-4">
@@ -375,7 +375,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
                     </p>
                 </div>
                 <div className="flex gap-3 w-full sm:w-auto">
-                  <Button type="button" variant="outline" className="rounded-full font-bold text-[10px] uppercase tracking-widest" onClick={() => window.location.reload()}>Descartar</Button>
+                  <Button type="button" variant="outline" className="eyebrow rounded-full" onClick={() => window.location.reload()}>Descartar</Button>
                   <SubmitButton />
                 </div>
               </div>

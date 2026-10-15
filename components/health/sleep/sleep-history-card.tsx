@@ -29,7 +29,7 @@ export function SleepHistoryCard({ data, onDelete }: SleepHistoryCardProps) {
   return (
     <Card className="flex-1 border-border/60 bg-card shadow-sm flex flex-col overflow-hidden">
       <CardHeader className="pb-3 border-b border-border/40 bg-muted/20">
-        <CardTitle className="text-xs uppercase font-bold text-muted-foreground tracking-widest">
+        <CardTitle className="eyebrow text-muted-foreground">
           Histórico Recente
         </CardTitle>
       </CardHeader>

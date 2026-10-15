@@ -19,7 +19,7 @@ export function DocHeader({
 }) {
   return (
     <header className="mb-12 border-b border-border/60 pb-8">
-      <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary">
+      <span className="eyebrow mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-primary">
         {Icon && <Icon className="size-3.5" />} {eyebrow}
       </span>
       <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">{title}</h1>

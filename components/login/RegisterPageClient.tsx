@@ -138,7 +138,7 @@ export default function RegisterPageClient() {
                     <form action={handleSubmit} className="space-y-5">
                         {/* Nome */}
                         <div className="space-y-2">
-                            <Label htmlFor="name" className="text-xs font-semibold uppercase text-muted-foreground tracking-wider">Nome</Label>
+                            <Label htmlFor="name" className="eyebrow text-muted-foreground">Nome</Label>
                             <div className="relative">
                                 <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                                 <Input id="name" name="name" type="text" placeholder="Seu nome" required autoFocus
@@ -148,14 +148,14 @@ export default function RegisterPageClient() {
 
                         {/* Email */}
                         <div className="space-y-2">
-                            <Label htmlFor="email" className="text-xs font-semibold uppercase text-muted-foreground tracking-wider">Email</Label>
+                            <Label htmlFor="email" className="eyebrow text-muted-foreground">Email</Label>
                             <Input id="email" name="email" type="email" placeholder="seu.email@exemplo.com" required
                                 autoComplete="email" disabled={isLoading} onChange={clearError} className="h-12 bg-muted/40" />
                         </div>
 
                         {/* Senha */}
                         <div className="space-y-2">
-                            <Label htmlFor="password" className="text-xs font-semibold uppercase text-muted-foreground tracking-wider">Senha</Label>
+                            <Label htmlFor="password" className="eyebrow text-muted-foreground">Senha</Label>
                             <div className="relative">
                                 <Input id="password" name="password" type={showPassword ? "text" : "password"} required
                                     autoComplete="new-password" disabled={isLoading}
@@ -192,7 +192,7 @@ export default function RegisterPageClient() {
 
                         {/* Confirmar */}
                         <div className="space-y-2">
-                            <Label htmlFor="confirm" className="text-xs font-semibold uppercase text-muted-foreground tracking-wider">Confirmar Senha</Label>
+                            <Label htmlFor="confirm" className="eyebrow text-muted-foreground">Confirmar Senha</Label>
                             <Input id="confirm" type={showPassword ? "text" : "password"} required autoComplete="new-password"
                                 disabled={isLoading} value={confirm} onChange={(e) => { setConfirm(e.target.value); clearError(); }}
                                 className={cn("h-12 bg-muted/40", pass && confirm && pass !== confirm && "border-destructive focus-visible:ring-destructive")} />
@@ -286,7 +286,7 @@ export default function RegisterPageClient() {
                         ))}
                     </div>
 
-                    <div className="mt-14 flex items-center gap-3 text-[11px] text-muted-foreground/70 font-mono uppercase tracking-wider">
+                    <div className="eyebrow mt-14 flex items-center gap-3 text-muted-foreground/70 font-mono">
                         <span className="flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-primary/70" /> Local-first</span>
                         <span className="text-foreground/20">•</span>
                         <span>Criptografado</span>

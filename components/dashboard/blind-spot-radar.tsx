@@ -92,7 +92,7 @@ export async function BlindSpotRadar() {
           return (
             <div key={area.key} className="space-y-1.5">
               <div className="flex items-center justify-between gap-1">
-                <p className="flex min-w-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                <p className="eyebrow flex min-w-0 items-center gap-1 text-muted-foreground">
                   <Icon className="h-3 w-3 shrink-0" /> <span className="truncate">{area.label}</span>
                 </p>
                 <span className={cn("shrink-0 text-[10px] font-black tabular-nums", st.text)}>{area.signals}</span>

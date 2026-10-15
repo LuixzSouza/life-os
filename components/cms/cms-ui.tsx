@@ -100,7 +100,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                   <Database className="h-6 w-6 text-primary" />
                   {site.name}
                 </SheetTitle>
-                <SheetDescription className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground/60">
+                <SheetDescription className="eyebrow flex items-center gap-2 text-muted-foreground/60">
                   <Globe className="h-3 w-3" />
                   {site.url || "Localhost / Internal App"}
                   {site.url && <ExternalLink className="h-3 w-3 opacity-40" />}
@@ -149,7 +149,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                     <TabsTrigger
                       key={page.id}
                       value={page.id}
-                      className="px-4 h-9 rounded-xl border border-transparent data-[state=active]:border-primary/20 data-[state=active]:bg-primary/5 data-[state=active]:text-primary font-bold text-[11px] uppercase tracking-widest transition-all"
+                      className="eyebrow px-4 h-9 rounded-xl border border-transparent data-[state=active]:border-primary/20 data-[state=active]:bg-primary/5 data-[state=active]:text-primary transition-all"
                     >
                       /{page.slug}
                     </TabsTrigger>
@@ -176,7 +176,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                   <EndpointEditor page={page} />
 
                   <div className="mt-4 flex justify-between items-center">
-                    <p className="text-[10px] font-bold text-muted-foreground/40 uppercase tracking-widest italic">
+                    <p className="eyebrow text-muted-foreground/40 italic">
                       Endpoint ativo para distribuição pública
                     </p>
                     <form
@@ -192,7 +192,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                       <Button
                         variant="link"
                         size="sm"
-                        className="text-destructive font-bold uppercase text-[10px] tracking-widest hover:no-underline"
+                        className="eyebrow text-destructive hover:no-underline"
                       >
                         Deletar Rota /{page.slug}
                       </Button>
@@ -206,7 +206,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                 <Card className="border-border/40 bg-muted/5 shadow-xl rounded-2xl border-dashed">
                   <CardHeader className="p-8 pb-4">
                     <CardTitle className="text-xl font-semibold">Inicializar Nova Rota</CardTitle>
-                    <CardDescription className="text-xs font-medium uppercase tracking-wider text-muted-foreground/60">
+                    <CardDescription className="eyebrow text-muted-foreground/60">
                       Defina o caminho do seu novo endpoint JSON.
                     </CardDescription>
                   </CardHeader>

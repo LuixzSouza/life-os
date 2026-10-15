@@ -1083,7 +1083,7 @@ function SetRows({ ex, controls, onToggle, big = false, last }: {
         </div>
       )}
       {plateWeight > 0 && <PlateHint total={plateWeight} />}
-      <div className="grid grid-cols-[1.75rem_1.4fr_1fr_2.5rem_1.75rem] items-center gap-1.5 px-1 pb-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+      <div className="eyebrow grid grid-cols-[1.75rem_1.4fr_1fr_2.5rem_1.75rem] items-center gap-1.5 px-1 pb-1 text-muted-foreground/70">
         <span className="text-center">Tipo</span>
         <span className="text-center">{timed || bodyweight ? "+kg (opcional)" : perHand ? "Carga/mão" : "Carga (kg)"}</span>
         {/* Cabeçalho tocável: alterna a medida do exercício (repetições ↔ segundos). */}

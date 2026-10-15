@@ -176,7 +176,7 @@ function TransactionItemWrapper({ transaction, accounts }: { transaction: Transa
                                 </span>
                                 
                                 {transaction.category && (
-                                    <Badge variant="secondary" className="text-[9px] px-1.5 py-0 uppercase tracking-wider font-bold bg-primary/5 text-primary border-none truncate max-w-[100px]">
+                                    <Badge variant="secondary" className="eyebrow px-1.5 py-0 bg-primary/5 text-primary border-none truncate max-w-[100px]">
                                         {transaction.category}
                                     </Badge>
                                 )}
@@ -193,7 +193,7 @@ function TransactionItemWrapper({ transaction, accounts }: { transaction: Transa
                         )}>
                             {isIncome ? "+" : "-"} {moneyShort(transaction.amount)}
                         </p>
-                        <p className="text-[10px] sm:text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-0.5 truncate max-w-[90px] ml-auto">
+                        <p className="eyebrow sm:text-xs text-muted-foreground mt-0.5 truncate max-w-[90px] ml-auto">
                             {transaction.account?.name || "Carteira"}
                         </p>
                     </div>

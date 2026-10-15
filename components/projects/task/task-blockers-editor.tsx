@@ -78,7 +78,7 @@ export function TaskBlockersEditor({ taskId }: { taskId: string }) {
 
 function Header({ blockedCount }: { blockedCount: number }) {
   return (
-    <label className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+    <label className="eyebrow flex items-center gap-2 text-muted-foreground">
       {blockedCount > 0
         ? <Lock size={13} className="text-amber-500" />
         : <LockOpen size={13} />}

@@ -330,7 +330,7 @@ export function EventForm({
               <Label
                 htmlFor="notification"
                 title="Aviso no app antes de começar (antecedência nas Configurações → Rotina)"
-                className="text-xs font-bold uppercase tracking-wider text-foreground cursor-pointer select-none flex items-center gap-2"
+                className="eyebrow text-foreground cursor-pointer select-none flex items-center gap-2"
               >
                 <Bell className="h-3.5 w-3.5 text-primary" /> Lembrete local
               </Label>

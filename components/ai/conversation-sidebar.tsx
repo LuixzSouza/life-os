@@ -129,7 +129,7 @@ export function ConversationSidebar({ chats, activeId, activeTitle }: Props) {
         <Link
           href="/ai?new=1"
           onClick={() => setOpen(false)}
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-3 py-2.5 text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-sm transition hover:opacity-90"
+          className="eyebrow flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-3 py-2.5 text-primary-foreground shadow-sm transition hover:opacity-90"
         >
           <Plus className="h-4 w-4" /> Nova conversa
         </Link>

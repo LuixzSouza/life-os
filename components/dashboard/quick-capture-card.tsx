@@ -124,7 +124,7 @@ export function QuickCaptureCard() {
         <div className="mt-3 space-y-3">
           {twoMinTasks.length > 0 && (
             <div className="space-y-1.5">
-              <p className="flex items-center gap-1 px-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-600">
+              <p className="eyebrow flex items-center gap-1 px-0.5 text-amber-600">
                 <Zap className="h-3 w-3" /> Faça agora (2 min)
               </p>
               <AnimatePresence initial={false}>
@@ -134,7 +134,7 @@ export function QuickCaptureCard() {
           )}
           {restTasks.length > 0 && (
             <div className="space-y-1.5">
-              {twoMinTasks.length > 0 && <p className="px-0.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground/60">Depois</p>}
+              {twoMinTasks.length > 0 && <p className="eyebrow px-0.5 text-muted-foreground/60">Depois</p>}
               <AnimatePresence initial={false}>
                 {restTasks.map((t) => <Row key={t.id} t={t} />)}
               </AnimatePresence>

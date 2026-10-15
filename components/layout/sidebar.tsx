@@ -145,7 +145,7 @@ export function Sidebar({ user, inbox }: { user?: UserData | null; inbox: Notifi
             {groupedSidebarItems.map((group) => (
               <div key={group.groupName} className="space-y-1">
                 {!isCollapsed ? (
-                  <h3 className="mb-1.5 px-3 text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground/50">
+                  <h3 className="eyebrow mb-1.5 px-3 text-muted-foreground/50">
                     {group.groupName}
                   </h3>
                 ) : (
@@ -220,7 +220,7 @@ export function Sidebar({ user, inbox }: { user?: UserData | null; inbox: Notifi
                 const subItems = group.items.flatMap((i) => i.subItems ?? []);
                 return (
                   <div key={group.groupName}>
-                    <h3 className="mb-2 px-1 text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground/50">
+                    <h3 className="eyebrow mb-2 px-1 text-muted-foreground/50">
                       {group.groupName}
                     </h3>
 

@@ -33,7 +33,7 @@ export function CodeBlock({ language, value }: { language?: string; value: strin
   return (
     <div className="group/code relative my-3 overflow-hidden rounded-lg border border-border/40">
       <div className="flex items-center justify-between border-b border-white/10 bg-zinc-900 px-3 py-1.5">
-        <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400">
+        <span className="eyebrow text-zinc-400">
           {language || "código"}
         </span>
         <button

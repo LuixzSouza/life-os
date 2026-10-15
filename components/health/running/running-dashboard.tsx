@@ -145,7 +145,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                     <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none transition-opacity group-hover:opacity-80" />
                     
                     <CardHeader className="pb-2 relative z-10">
-                        <CardTitle className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-2">
+                        <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
                             <div className="p-1.5 bg-primary/10 rounded-md text-primary">
                                 <MapPin className="h-3.5 w-3.5" />
                             </div>
@@ -181,7 +181,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 <Card className="border-border/60 bg-card shadow-sm relative overflow-hidden">
                     <div className="absolute left-0 top-0 w-1 h-full bg-amber-500"></div>
                     <CardHeader className="pb-2 pl-6">
-                        <CardTitle className="text-xs uppercase font-bold text-muted-foreground flex items-center gap-2 tracking-widest">
+                        <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
                             <Trophy className="h-4 w-4 text-amber-500" /> Maior Distância
                         </CardTitle>
                     </CardHeader>
@@ -199,7 +199,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                                         {format(new Date(bestRun.date), "d 'de' MMMM, yyyy", { locale: ptBR })}
                                     </p>
                                 </div>
-                                <Badge variant="outline" className="text-[10px] font-bold uppercase tracking-wider text-amber-600 border-amber-200 bg-amber-500/10 px-2 py-0.5 mb-1">
+                                <Badge variant="outline" className="eyebrow text-amber-600 border-amber-200 bg-amber-500/10 px-2 py-0.5 mb-1">
                                     PR Record
                                 </Badge>
                             </div>
@@ -219,7 +219,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 {/* Filtro de terreno (segmenta gráfico + histórico) */}
                 {availableTerrains.length > 0 && (
                     <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-1">
-                        <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground shrink-0">
+                        <span className="eyebrow flex items-center gap-1.5 text-muted-foreground shrink-0">
                             <Navigation className="h-3.5 w-3.5" /> Terreno
                         </span>
                         <button
@@ -251,7 +251,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 {/* Gráfico de Evolução */}
                 <Card className="border-border/60 bg-card shadow-sm">
                     <CardHeader className="pb-2 border-b border-border/40 bg-muted/20">
-                        <CardTitle className="text-xs uppercase font-bold text-muted-foreground tracking-widest flex items-center gap-2 py-1">
+                        <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2 py-1">
                             <TrendingUp className="h-4 w-4 text-primary" /> Performance Recente (10 Treinos)
                         </CardTitle>
                     </CardHeader>
@@ -454,20 +454,20 @@ function RunCard({ run, onEdit, onDelete }: { run: RunWorkout; onEdit: () => voi
                     {/* Métricas + ações */}
                     <div className="flex items-center justify-between sm:justify-end gap-6 sm:gap-8 border-t sm:border-t-0 sm:border-l border-border/60 pt-4 sm:pt-0 sm:pl-8">
                         <div className="text-center sm:text-right">
-                            <p className="text-[10px] uppercase text-muted-foreground font-bold tracking-wider mb-0.5">Distância</p>
+                            <p className="eyebrow text-muted-foreground mb-0.5">Distância</p>
                             <div className="flex items-baseline justify-center sm:justify-end gap-1">
                                 <span className="text-xl font-black text-primary">{run.distance}</span>
                                 <span className="text-xs font-bold text-muted-foreground">km</span>
                             </div>
                         </div>
                         <div className="text-center sm:text-right">
-                            <p className="text-[10px] uppercase text-muted-foreground font-bold tracking-wider mb-0.5">Pace</p>
+                            <p className="eyebrow text-muted-foreground mb-0.5">Pace</p>
                             <p className="text-xl font-bold text-foreground font-mono tracking-tight">
                                 {run.pace || "-"}
                             </p>
                         </div>
                         <div className="text-center sm:text-right">
-                            <p className="text-[10px] uppercase text-muted-foreground font-bold tracking-wider mb-0.5">Tempo</p>
+                            <p className="eyebrow text-muted-foreground mb-0.5">Tempo</p>
                             <div className="flex items-baseline justify-center sm:justify-end gap-1">
                                 <span className="text-lg font-bold text-foreground">{run.duration}</span>
                                 <span className="text-xs font-medium text-muted-foreground">min</span>

@@ -88,7 +88,7 @@ export function RestoreBackupForm() {
     return (
         <form action={handleUpload} className="space-y-4">
             <div className="space-y-2">
-                <Label htmlFor="backup-file" className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                <Label htmlFor="backup-file" className="eyebrow text-muted-foreground">
                     Selecione o arquivo (.json)
                 </Label>
                 

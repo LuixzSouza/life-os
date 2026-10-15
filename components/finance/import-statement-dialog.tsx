@@ -109,7 +109,7 @@ export function ImportStatementDialog({ open, onOpenChange, accounts }: ImportSt
         <DialogBody className="space-y-4">
           {/* Conta de destino */}
           <div className="space-y-1.5">
-            <label className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Conta de destino</label>
+            <label className="eyebrow text-muted-foreground">Conta de destino</label>
             <Select value={accountId} onValueChange={setAccountId}>
               <SelectTrigger className="rounded-xl"><SelectValue placeholder="Escolha a conta" /></SelectTrigger>
               <SelectContent>

@@ -306,7 +306,7 @@ export function FocusDock() {
           </span>
           <span className="flex flex-col items-start leading-none">
             <span className="font-mono text-sm font-black tabular-nums text-foreground">{formatClock(displayMs)}</span>
-            <span className="text-[8px] font-bold uppercase tracking-wider" style={{ color: phaseMeta.color }}>{phaseMeta.label}</span>
+            <span className="eyebrow" style={{ color: phaseMeta.color }}>{phaseMeta.label}</span>
           </span>
           <span
             role="button"
@@ -359,7 +359,7 @@ export function FocusDock() {
               <Ring progress={progress} color={phaseMeta.color} size={176} stroke={8} />
               <div className="absolute flex flex-col items-center">
                 <span className="font-mono text-4xl font-black tabular-nums text-foreground">{formatClock(displayMs)}</span>
-                <span className="mt-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+                <span className="eyebrow mt-1 text-muted-foreground">
                   {state.mode === "STOPWATCH" ? "Cronômetro" : `${phaseDurationMin(state, state.phase)} min`}
                 </span>
                 {/* Ciclos */}
@@ -446,7 +446,7 @@ export function FocusDock() {
                 <span><b className="font-black text-foreground tabular-nums">{today.sessions}</b> sessões</span>
               </div>
               {isActive && (
-                <button onClick={endSession} className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground/70 transition-colors hover:text-destructive">
+                <button onClick={endSession} className="eyebrow text-muted-foreground/70 transition-colors hover:text-destructive">
                   Encerrar
                 </button>
               )}
@@ -496,7 +496,7 @@ function SettingsPanel({
             key={m}
             onClick={() => onChange({ mode: m })}
             className={cn(
-              "rounded-xl border px-3 py-2.5 text-xs font-bold uppercase tracking-wider transition-all",
+              "eyebrow rounded-xl border px-3 py-2.5 transition-all",
               state.mode === m ? "border-primary bg-primary/10 text-primary" : "border-border/40 bg-muted/20 text-muted-foreground hover:border-border"
             )}
           >

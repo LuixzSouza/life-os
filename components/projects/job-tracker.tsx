@@ -245,7 +245,7 @@ function FunnelStep({ label, value, pct, tone }: { label: string; value: number;
     return (
         <div className="space-y-2">
             <div className="flex items-baseline justify-between gap-2">
-                <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider truncate">{label}</span>
+                <span className="eyebrow text-muted-foreground truncate">{label}</span>
                 <span className={cn("text-[11px] font-bold", tone)}>{pct}%</span>
             </div>
             <p className="text-2xl font-black tracking-tight">{value}</p>

@@ -43,7 +43,7 @@ function HeaderStat({ value, label }: { value: number; label: string }) {
   return (
     <div className="rounded-xl border border-border/60 bg-card px-5 py-3 text-center shadow-sm">
       <span className="block text-2xl font-bold leading-none text-foreground">{value}</span>
-      <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+      <span className="eyebrow text-muted-foreground">
         {label}
       </span>
     </div>

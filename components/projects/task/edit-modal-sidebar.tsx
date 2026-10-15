@@ -119,7 +119,7 @@ export function TaskProperties({
       {/* Progresso */}
       <div className="rounded-xl border border-border/40 bg-background/60 p-4 space-y-3">
         <div className="flex items-center justify-between">
-          <span className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <span className="eyebrow flex items-center gap-2 text-muted-foreground">
             <Target size={14} /> Conclusão
           </span>
           <span className="text-lg font-bold font-mono tracking-tight text-primary">{progress}%</span>

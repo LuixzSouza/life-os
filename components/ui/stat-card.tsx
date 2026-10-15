@@ -51,7 +51,7 @@ export function StatCard({
       <CardContent className="flex h-full flex-col gap-4 p-5">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0 space-y-1">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            <p className="eyebrow text-muted-foreground">
               {label}
             </p>
             <h3 className="text-2xl font-bold tracking-tight text-foreground">{value}</h3>

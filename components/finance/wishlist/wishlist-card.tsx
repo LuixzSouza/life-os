@@ -175,7 +175,7 @@ function BuyDialog({ item, accounts, affordable }: { item: WishlistData; account
                 />
                 <DialogBody className="space-y-4">
                     <div className="flex items-center justify-between rounded-2xl border border-border/40 bg-muted/10 px-4 py-3">
-                        <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Valor</span>
+                        <span className="eyebrow text-muted-foreground">Valor</span>
                         <span className={cn("text-2xl font-black font-mono tabular-nums text-foreground", smartView && "blur-md select-none")}>
                             {formatMoney(item.price)}
                         </span>
@@ -412,7 +412,7 @@ function WishlistCard({ item, accounts, totalBalance }: { item: WishlistData; ac
             <CardContent className="flex flex-1 flex-col p-5">
                 {/* Prioridade + link da loja */}
                 <div className="mb-2 flex items-center justify-between gap-2">
-                    <span className={cn("inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider", pr.chip)}>
+                    <span className={cn("eyebrow inline-flex items-center gap-1 rounded-md px-2 py-0.5", pr.chip)}>
                         <pr.Icon className="h-3 w-3" /> {pr.label}
                     </span>
                     {item.productUrl && (

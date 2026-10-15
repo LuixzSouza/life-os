@@ -128,11 +128,11 @@ export function WardrobeItemCard({
 
         <div className="grid grid-cols-2 gap-2 mt-4">
           <div className="bg-muted/30 p-2 rounded-lg border border-border/40">
-            <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-widest mb-0.5">Usos</p>
+            <p className="eyebrow text-muted-foreground mb-0.5">Usos</p>
             <p className="text-xs font-bold text-foreground">{item.wearCount}x</p>
           </div>
           <div className="bg-muted/30 p-2 rounded-lg border border-border/40">
-            <p className="text-[9px] text-muted-foreground uppercase font-bold tracking-widest mb-0.5">CPW</p>
+            <p className="eyebrow text-muted-foreground mb-0.5">CPW</p>
             <p className={cn("text-xs font-bold", (item.wearCount || 0) > 10 ? "text-emerald-600" : "text-foreground")}>
               {costPerWear !== null ? formatMoney(costPerWear) : "-"}
             </p>

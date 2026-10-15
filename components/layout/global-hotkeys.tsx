@@ -104,7 +104,7 @@ export function GlobalHotkeys() {
 
         <div className="space-y-4 text-sm">
           <div className="space-y-1.5">
-            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Globais</p>
+            <p className="eyebrow text-muted-foreground">Globais</p>
             {[
               { keys: ["Ctrl", "K"], label: "Busca global (tudo num lugar só)" },
               { keys: ["Ctrl", "J"], label: "Inbox Mágica (captura por IA)" },
@@ -124,7 +124,7 @@ export function GlobalHotkeys() {
           </div>
 
           <div className="space-y-1.5">
-            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            <p className="eyebrow text-muted-foreground">
               Navegação — pressione <kbd className="rounded bg-muted px-1 text-xs border border-border/60">g</kbd> e depois:
             </p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-0.5">

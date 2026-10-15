@@ -152,7 +152,7 @@ export function GymForm({ onSuccess, initialData }: GymFormProps) {
     }
   };
 
-  const labelCls = "text-[11px] font-semibold uppercase tracking-wider text-muted-foreground ml-1";
+  const labelCls = "eyebrow text-muted-foreground ml-1";
 
   return (
     <form action={handleSubmit} className="space-y-6">
@@ -235,7 +235,7 @@ export function GymForm({ onSuccess, initialData }: GymFormProps) {
         {/* Sugestões por grupo muscular selecionado (clique para adicionar) */}
         {suggestions.length > 0 ? (
           <div className="space-y-2.5 p-3 rounded-xl bg-primary/[0.03] border border-primary/15">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-primary/80 flex items-center gap-1.5">
+            <p className="eyebrow text-primary/80 flex items-center gap-1.5">
               <Plus className="h-3 w-3" /> Sugestões rápidas
             </p>
             <div className="space-y-2.5 max-h-[160px] overflow-y-auto custom-scrollbar pr-1">
@@ -273,7 +273,7 @@ export function GymForm({ onSuccess, initialData }: GymFormProps) {
         )}
 
         <div className="border border-border/40 rounded-xl overflow-hidden bg-muted/10">
-          <div className="grid grid-cols-12 gap-2 px-4 py-2.5 bg-muted/30 border-b border-border/40 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+          <div className="eyebrow grid grid-cols-12 gap-2 px-4 py-2.5 bg-muted/30 border-b border-border/40 text-muted-foreground/70">
             <div className="col-span-6 flex items-center gap-1.5"><Layers className="h-3 w-3" /> Exercício</div>
             <div className="col-span-2 text-center flex items-center justify-center gap-1"><Hash className="h-3 w-3" /> Sets</div>
             <div className="col-span-2 text-center flex items-center justify-center gap-1"><ChevronDown className="h-3 w-3" /> Reps</div>

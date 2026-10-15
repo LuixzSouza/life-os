@@ -229,7 +229,7 @@ export function BankConnector({ onOpenImport }: { onOpenImport?: () => void }) {
                                 <div className="space-y-0.5">
                                     <p className="flex items-center gap-2 text-sm font-bold text-foreground">
                                         Importar extrato
-                                        <span className="rounded-md bg-emerald-500/10 px-1.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-emerald-600">Grátis</span>
+                                        <span className="eyebrow rounded-md bg-emerald-500/10 px-1.5 py-0.5 text-emerald-600">Grátis</span>
                                     </p>
                                     <p className="text-xs leading-relaxed text-muted-foreground">
                                         Todo banco exporta OFX/CSV — ou cole o texto do extrato e a IA estrutura os lançamentos

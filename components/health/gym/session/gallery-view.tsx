@@ -400,7 +400,7 @@ export function GymGallery() {
           {/* Destaques: seu visual mais recente de cada pose (só sem filtro) */}
           {!filter && highlights.length >= 3 && (
             <section className="space-y-2.5">
-              <h3 className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              <h3 className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                 <Sparkles className="h-3.5 w-3.5 text-primary" /> Destaques
               </h3>
               <div className="flex gap-2.5 overflow-x-auto pb-1 scrollbar-hide">
@@ -430,7 +430,7 @@ export function GymGallery() {
             const entries = list.flatMap((s) => s.photos.map((p, idx) => ({ p, key: s.key, idx, multi: s.photos.length > 1 })));
             return (
               <section key={key} className="space-y-2.5">
-                <h3 className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground first-letter:uppercase">
+                <h3 className="eyebrow flex items-center gap-1.5 text-muted-foreground first-letter:uppercase">
                   {dayLabel(key)}
                   <span className="font-mono text-[10px] normal-case opacity-50">· {entries.length}</span>
                 </h3>

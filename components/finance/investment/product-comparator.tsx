@@ -143,7 +143,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                                 {product.type}
                                             </Badge>
                                             {product.hasFGC && (
-                                                <Badge variant="outline" className="text-muted-foreground border-border/60 flex items-center gap-1 font-bold text-[10px] uppercase tracking-widest">
+                                                <Badge variant="outline" className="eyebrow text-muted-foreground border-border/60 flex items-center gap-1">
                                                     <ShieldCheck className="h-3.5 w-3.5" /> FGC Garantido
                                                 </Badge>
                                             )}
@@ -166,7 +166,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                             <p className="text-3xl md:text-4xl font-black font-mono text-emerald-600 dark:text-emerald-500 tracking-tighter">
                                                 + {formatCurrency(result.netProfit)}
                                             </p>
-                                            <p className="text-[11px] font-bold text-muted-foreground/70 uppercase tracking-wider">Já descontando taxas/IR.</p>
+                                            <p className="eyebrow text-muted-foreground/70">Já descontando taxas/IR.</p>
                                         </div>
                                         
                                         <div className="space-y-4 bg-muted/20 p-5 rounded-2xl border border-border/50 shadow-inner">
@@ -176,7 +176,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                                     <span className="text-3xl md:text-4xl font-black font-mono text-foreground tracking-tighter">
                                                         {result.equivalentCDI.toFixed(0)}%
                                                     </span>
-                                                    <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider">do CDI Base</span>
+                                                    <span className="eyebrow text-muted-foreground">do CDI Base</span>
                                                 </div>
                                             </div>
                                             <Progress 
@@ -226,7 +226,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                         <HoverCard key={term}>
                             <HoverCardTrigger asChild>
                                 <div className="bg-muted/20 border border-border/50 hover:border-primary/40 hover:bg-primary/5 hover:shadow-sm p-4 rounded-xl text-center cursor-help transition-all duration-300">
-                                    <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">{term}</span>
+                                    <span className="eyebrow text-muted-foreground group-hover:text-primary transition-colors">{term}</span>
                                 </div>
                             </HoverCardTrigger>
                             <HoverCardContent className="w-[280px] sm:w-80 text-sm z-50 border-border/50 shadow-2xl rounded-2xl p-6" sideOffset={12}>

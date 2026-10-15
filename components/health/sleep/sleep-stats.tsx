@@ -23,7 +23,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       {/* SLEEP SCORE */}
       <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
-          <CardTitle className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-2">
+          <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <Gauge className="h-4 w-4 text-primary" /> Sleep Score
           </CardTitle>
         </CardHeader>
@@ -39,7 +39,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       {/* MÉDIA 7 DIAS */}
       <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
-          <CardTitle className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-2">
+          <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <Clock className="h-4 w-4 text-primary" /> Média (7 dias)
           </CardTitle>
         </CardHeader>
@@ -60,7 +60,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       {/* BANCO DE SONO (DÍVIDA) */}
       <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
-          <CardTitle className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-2">
+          <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <Battery className="h-4 w-4 text-primary" /> Banco de Sono
           </CardTitle>
         </CardHeader>
@@ -80,7 +80,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       {/* CONSISTÊNCIA */}
       <Card className="relative overflow-hidden border-border/60 bg-card shadow-sm h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
-          <CardTitle className="text-xs font-bold text-muted-foreground uppercase tracking-widest flex items-center gap-2">
+          <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <Repeat className="h-4 w-4 text-primary" /> Consistência
           </CardTitle>
         </CardHeader>

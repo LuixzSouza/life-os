@@ -327,7 +327,7 @@ function MarketHighlightCard({ item, onSelect, isFav, onToggleFav }: { item: Mar
                             )}
                         </div>
                         <div>
-                            <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{item.ticker}</p>
+                            <p className="eyebrow text-muted-foreground">{item.ticker}</p>
                             <p className="text-sm font-semibold text-foreground truncate max-w-[100px]" title={item.name}>{item.name}</p>
                         </div>
                     </div>
@@ -433,7 +433,7 @@ function TopMoversCard({ data, type, title, description, onSelect }: { data: Mar
         <Card className={cn("border border-border/60 shadow-sm overflow-hidden", type === "high" ? "bg-emerald-500/5 border-emerald-500/10" : "bg-red-500/5 border-red-500/10")}>
             <CardHeader className="pb-3 border-b border-border/40 bg-muted/20">
                 <div className="flex items-center justify-between">
-                    <CardTitle className={cn("text-xs uppercase font-bold tracking-wider flex items-center gap-2", type === "high" ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400")}>
+                    <CardTitle className={cn("eyebrow flex items-center gap-2", type === "high" ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400")}>
                         {type === "high" ? <TrendingUp className="h-4 w-4" /> : <TrendingDown className="h-4 w-4" />}
                         {title}
                     </CardTitle>

@@ -130,7 +130,7 @@ export function SessionHistoryDialog({ totalSessions }: { totalSessions: number 
             </div>
           )}
           {loaded && exhausted && sessions.length > 0 && (
-            <p className="pt-4 text-center text-[10px] font-bold uppercase tracking-widest text-muted-foreground/40">
+            <p className="eyebrow pt-4 text-center text-muted-foreground/40">
               ✦ Primeira sessão registrada ✦
             </p>
           )}

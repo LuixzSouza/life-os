@@ -571,7 +571,7 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
         {/* Notas */}
         <div className="space-y-1.5">
           <div className="flex items-center justify-between gap-2">
-            <label className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Notas (cole prints com Ctrl+V)</label>
+            <label className="eyebrow text-muted-foreground">Notas (cole prints com Ctrl+V)</label>
             <div className="flex items-center gap-1">
               <Button
                 onClick={handlePolish}
@@ -615,7 +615,7 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
         {/* Anexos (galeria) */}
         <div className="space-y-2">
           <div className="flex items-center justify-between gap-2">
-            <label className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">
+            <label className="eyebrow text-muted-foreground">
               Anexos {images.length > 0 && <span className="text-muted-foreground/60">· {images.length}/{MAX_IMAGES}</span>}
             </label>
             <Button
@@ -707,7 +707,7 @@ export function MeetingEditor({ meeting, onClose }: { meeting: MeetingData; onCl
         {summary && (
           <div className="rounded-xl border border-primary/20 bg-primary/5 p-4">
             <div className="mb-2 flex items-center justify-between gap-2">
-              <p className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-primary">
+              <p className="eyebrow flex items-center gap-1.5 text-primary">
                 <Sparkles className="h-3 w-3" /> Resumo da IA
                 {actionCount > 0 && (
                   <span className="rounded-md bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold normal-case tracking-normal tabular-nums">

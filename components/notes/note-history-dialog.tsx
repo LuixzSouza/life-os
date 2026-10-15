@@ -172,7 +172,7 @@ export function NoteHistoryDialog({
                 >
                   <span className="flex items-center gap-2 text-xs font-semibold text-foreground">
                     {i === 0 && (
-                      <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-primary">
+                      <span className="eyebrow rounded bg-primary/10 px-1.5 py-0.5 text-primary">
                         Mais recente
                       </span>
                     )}

@@ -51,7 +51,7 @@ function HighlightCard({ label, value, subValue, icon: Icon, variant = "default"
         <div>
           <div className={cn("flex items-center gap-1.5 mb-3", variant === "default" ? "text-primary" : "text-rose-500")}>
             <Icon className="h-3.5 w-3.5" />
-            <p className="text-[10px] font-bold uppercase tracking-wider">{label}</p>
+            <p className="eyebrow">{label}</p>
           </div>
           <h3 className="text-lg font-bold leading-tight line-clamp-2 text-foreground pr-4">
             {value}

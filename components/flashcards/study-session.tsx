@@ -58,7 +58,7 @@ function RichTextDisplay({ text, isDark = false }: { text: string; isDark?: bool
             <div key={i} className={cn("my-4 rounded-xl overflow-hidden border shadow-inner", isDark ? "bg-slate-900/50 border-slate-700/50" : "bg-muted/50 border-border")}>
               <div className={cn("flex items-center gap-2 px-4 py-2 border-b", isDark ? "bg-slate-800/80 border-slate-700/50" : "bg-muted border-border")}>
                 <Code2 className="h-4 w-4 text-primary" />
-                <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Código</span>
+                <span className="eyebrow font-mono text-muted-foreground">Código</span>
               </div>
               <pre className="p-4 overflow-x-auto font-mono text-primary text-sm sm:text-base scrollbar-thin scrollbar-thumb-primary/20">
                 <code>{code}</code>
@@ -447,19 +447,19 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full">
           <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/20 shadow-sm flex flex-col items-center justify-center">
             <span className="text-4xl font-black text-rose-600">{stats.again}</span>
-            <span className="text-[10px] font-bold text-rose-600/80 uppercase tracking-widest mt-1">Erros</span>
+            <span className="eyebrow text-rose-600/80 mt-1">Erros</span>
           </div>
           <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 shadow-sm flex flex-col items-center justify-center">
             <span className="text-4xl font-black text-amber-600">{stats.hard}</span>
-            <span className="text-[10px] font-bold text-amber-600/80 uppercase tracking-widest mt-1">Difíceis</span>
+            <span className="eyebrow text-amber-600/80 mt-1">Difíceis</span>
           </div>
           <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 shadow-sm flex flex-col items-center justify-center">
             <span className="text-4xl font-black text-emerald-600">{stats.good}</span>
-            <span className="text-[10px] font-bold text-emerald-600/80 uppercase tracking-widest mt-1">Bons</span>
+            <span className="eyebrow text-emerald-600/80 mt-1">Bons</span>
           </div>
           <div className="p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20 shadow-sm flex flex-col items-center justify-center">
             <span className="text-4xl font-black text-blue-600">{stats.easy}</span>
-            <span className="text-[10px] font-bold text-blue-600/80 uppercase tracking-widest mt-1">Fáceis</span>
+            <span className="eyebrow text-blue-600/80 mt-1">Fáceis</span>
           </div>
         </div>
 
@@ -497,11 +497,11 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
             
             <div className="text-center space-y-1">
                 <div className="flex items-center justify-center gap-2">
-                    <Badge variant="secondary" className="bg-primary/10 text-primary border-none text-[10px] uppercase font-bold tracking-widest px-3">
+                    <Badge variant="secondary" className="eyebrow bg-primary/10 text-primary border-none px-3">
                         {deck.title}
                     </Badge>
                     {written && (
-                        <Badge variant="secondary" className="gap-1 border-none bg-amber-500/10 text-amber-600 px-2 text-[10px] font-bold uppercase tracking-widest">
+                        <Badge variant="secondary" className="eyebrow gap-1 border-none bg-amber-500/10 text-amber-600 px-2">
                             <PenLine className="h-3 w-3" /> Escrita
                         </Badge>
                     )}

@@ -229,7 +229,7 @@ export function SubjectFormDialog({
           <DialogBody className="space-y-5">
 
           <div className="space-y-1.5">
-            <Label htmlFor="subject-title" className="flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            <Label htmlFor="subject-title" className="eyebrow flex items-center gap-1 text-muted-foreground">
               Título da matéria <span className="text-destructive">*</span>
             </Label>
             <Input
@@ -245,7 +245,7 @@ export function SubjectFormDialog({
 
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <Label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              <Label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                 <FolderTree className="h-3.5 w-3.5" /> Pertence a
               </Label>
               {/* Combobox com busca: com muitas matérias raiz, achar o pai é digitar */}
@@ -259,7 +259,7 @@ export function SubjectFormDialog({
             </div>
 
             <div className="space-y-1.5">
-              <Label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              <Label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                 <HashIcon className="h-3.5 w-3.5" /> Categoria
               </Label>
               <Input
@@ -273,7 +273,7 @@ export function SubjectFormDialog({
 
           {/* ÍCONE + COR numa linha só, alinhados (era um grid de 5 col. torto). */}
           <div className="space-y-1.5">
-            <Label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            <Label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
               <Palette className="h-3.5 w-3.5" /> Ícone & cor
             </Label>
             <div className="flex items-center gap-3">
@@ -315,7 +315,7 @@ export function SubjectFormDialog({
 
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <Label className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              <Label className="eyebrow flex items-center justify-between text-muted-foreground">
                 <span className="flex items-center gap-1.5"><Target className="h-3.5 w-3.5" /> Meta total</span>
                 <span className="text-[10px] font-normal lowercase text-muted-foreground/70">{hoursToMinutes(goalHours)} min</span>
               </Label>
@@ -334,7 +334,7 @@ export function SubjectFormDialog({
             </div>
 
             <div className="space-y-1.5">
-              <Label className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              <Label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
                 <Gauge className="h-3.5 w-3.5" /> Dificuldade
               </Label>
               <Select value={difficulty} onValueChange={setDifficulty}>

@@ -159,7 +159,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
       {/* 1. Core Metrics */}
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label className="flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider">
+          <Label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
             <MapPin className="h-3.5 w-3.5 text-primary" /> Distância
           </Label>
           <div className="relative group">
@@ -178,7 +178,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
         </div>
 
         <div className="space-y-2">
-          <Label className="flex items-center gap-1.5 text-xs font-bold text-muted-foreground uppercase tracking-wider">
+          <Label className="eyebrow flex items-center gap-1.5 text-muted-foreground">
             <Timer className="h-3.5 w-3.5 text-primary" /> Tempo
           </Label>
           <div className="relative group">
@@ -198,7 +198,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
       {/* 2. Live Feedback Card */}
       <div className="bg-primary/5 p-4 rounded-xl border border-primary/10 flex divide-x divide-primary/10">
         <div className="flex-1 flex flex-col items-center justify-center gap-1">
-          <span className="text-[10px] font-bold text-primary/60 uppercase tracking-widest flex items-center gap-1.5">
+          <span className="eyebrow text-primary/60 flex items-center gap-1.5">
             <Gauge className="h-3 w-3" /> Pace Médio
           </span>
           <div className="text-2xl font-black text-primary font-mono tracking-tight">
@@ -206,7 +206,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
           </div>
         </div>
         <div className="flex-1 flex flex-col items-center justify-center gap-1">
-          <span className="text-[10px] font-bold text-primary/60 uppercase tracking-widest flex items-center gap-1.5">
+          <span className="eyebrow text-primary/60 flex items-center gap-1.5">
             <Flame className="h-3 w-3" /> Calorias
           </span>
           <div className="text-2xl font-black text-primary font-mono tracking-tight">
@@ -218,7 +218,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
       {/* 3. Intensity Slider */}
       <div className="space-y-4 px-1">
         <div className="flex justify-between items-center">
-          <Label className="flex items-center gap-2 text-xs font-bold text-muted-foreground uppercase tracking-wide">
+          <Label className="eyebrow flex items-center gap-2 text-muted-foreground">
             <Activity className="h-3.5 w-3.5 text-primary" /> Esforço Percebido
           </Label>
           <span className={cn(
@@ -246,7 +246,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
       {/* 4. Details */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-1.5">
-          <Label className="text-[10px] font-bold text-muted-foreground uppercase tracking-wide flex items-center gap-1.5">
+          <Label className="eyebrow text-muted-foreground flex items-center gap-1.5">
             <Navigation className="h-3 w-3" /> Terreno
           </Label>
           <Select value={surface} onValueChange={setSurface}>
@@ -263,7 +263,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
           </Select>
         </div>
         <div className="space-y-1.5">
-          <Label className="text-[10px] font-bold text-muted-foreground uppercase tracking-wide flex items-center gap-1.5">
+          <Label className="eyebrow text-muted-foreground flex items-center gap-1.5">
             <Footprints className="h-3 w-3" /> Tênis
           </Label>
           <Select value={shoes} onValueChange={setShoes}>
@@ -285,7 +285,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
 
       {/* 5. Notes */}
       <div className="space-y-1.5">
-        <Label className="text-[10px] font-bold text-muted-foreground uppercase tracking-wide">Notas</Label>
+        <Label className="eyebrow text-muted-foreground">Notas</Label>
         <Textarea 
           placeholder="Sensações, clima, dor..." 
           className="resize-none h-20 text-xs bg-background border-border/60 focus-visible:ring-primary/20 leading-relaxed"

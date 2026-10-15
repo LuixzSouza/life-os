@@ -91,7 +91,7 @@ export function ImportRunsDialog() {
                     ) : (
                         <div className="space-y-4">
                             <div className="flex items-center justify-between">
-                                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
+                                <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
                                     <CheckCircle2 className="h-4 w-4 text-emerald-500" /> {parsed.length} corrida(s) · {fileName}
                                 </span>
                                 <Button variant="ghost" size="sm" onClick={reset} className="h-8 gap-1 text-muted-foreground hover:text-destructive">

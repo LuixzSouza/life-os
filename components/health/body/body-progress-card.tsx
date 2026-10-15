@@ -60,7 +60,7 @@ export function BodyProgressCard({ progress }: { progress: BodyProgressInfo | nu
                             const Icon = Math.abs(delta) < 0.05 ? Minus : delta > 0 ? TrendingUp : TrendingDown;
                             return (
                                 <div key={item.label} className="rounded-xl border border-border/40 bg-muted/20 p-3">
-                                    <p className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">{item.label}</p>
+                                    <p className="eyebrow text-muted-foreground">{item.label}</p>
                                     <div className="mt-1 flex items-baseline gap-1.5">
                                         <span className="text-lg font-bold tabular-nums">{item.to.toFixed(1)}</span>
                                         <span className="text-xs text-muted-foreground">{item.unit}</span>

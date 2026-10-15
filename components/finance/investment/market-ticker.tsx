@@ -64,7 +64,7 @@ function TickerCard({ item }: { item: MarketItem }) {
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-muted/50 text-muted-foreground transition-colors group-hover:bg-primary/10 group-hover:text-primary">
                                 {iconType && iconType({ className: "h-4 w-4" })}
                             </div>
-                        <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground group-hover:text-foreground transition-colors">
+                        <span className="eyebrow text-muted-foreground group-hover:text-foreground transition-colors">
                             {item.ticker}
                         </span>
                     </div>

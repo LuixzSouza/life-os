@@ -101,7 +101,7 @@ export default async function ResultadoPage({
           <CardContent className="flex flex-col items-center gap-6 py-8 sm:flex-row sm:justify-around">
             <div className="text-center">
               <p className={cn("text-5xl font-black leading-none", TONE_CLASS[band.tone])}>{attempt.score}</p>
-              <p className="mt-1 text-xs uppercase tracking-wide text-muted-foreground">de 1000 · {band.label}</p>
+              <p className="eyebrow mt-1 text-muted-foreground">de 1000 · {band.label}</p>
             </div>
             <div className="grid grid-cols-3 gap-6 text-center">
               <Metric value={attempt.correctCount} label="acertos" className="text-emerald-600 dark:text-emerald-400" />
@@ -110,7 +110,7 @@ export default async function ResultadoPage({
             </div>
             <div className="text-center">
               <p className="text-2xl font-black leading-none">{formatDuration(attempt.secondsSpent)}</p>
-              <p className="mt-1 text-xs uppercase tracking-wide text-muted-foreground">de prova</p>
+              <p className="eyebrow mt-1 text-muted-foreground">de prova</p>
             </div>
           </CardContent>
         </Card>
@@ -198,7 +198,7 @@ function Metric({ value, label, className }: { value: number; label: string; cla
   return (
     <div>
       <p className={cn("text-2xl font-black leading-none", className)}>{value}</p>
-      <p className="mt-1 text-[11px] uppercase tracking-wide text-muted-foreground">{label}</p>
+      <p className="eyebrow mt-1 text-muted-foreground">{label}</p>
     </div>
   );
 }

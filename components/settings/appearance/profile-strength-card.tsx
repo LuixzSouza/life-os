@@ -70,7 +70,7 @@ export function ProfileStrengthCard({ name, avatarUrl, coverUrl, bio, pixKey }: 
             <span
               key={item.label}
               className={cn(
-                "inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border transition-colors",
+                "eyebrow inline-flex items-center gap-1 px-2.5 py-1 rounded-full border transition-colors",
                 item.done
                   ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
                   : "bg-muted/40 text-muted-foreground border-border/40"

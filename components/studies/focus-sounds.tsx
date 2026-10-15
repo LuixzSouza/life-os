@@ -190,7 +190,7 @@ export function FocusSounds({ compact = false }: { compact?: boolean }) {
         <div className="flex items-center gap-3 border-t border-border/40 pt-4">
           {master === 0 ? <VolumeX className="h-4 w-4 shrink-0 text-muted-foreground" /> : <Volume2 className="h-4 w-4 shrink-0 text-primary" />}
           <div className="flex-1">
-            <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Volume geral</p>
+            <p className="eyebrow mb-1 text-muted-foreground">Volume geral</p>
             <Slider value={[Math.round(master * 100)]} min={0} max={100} step={1} onValueChange={(vals) => changeMaster(vals[0])} aria-label="Volume geral" />
           </div>
           <span className="w-8 text-right text-xs tabular-nums text-muted-foreground">{Math.round(master * 100)}</span>

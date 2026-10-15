@@ -35,7 +35,7 @@ export const UserProfileSection = ({
             <p className="text-sm font-bold truncate text-foreground leading-tight">
               {user?.name || "Usuário"}
             </p>
-            <p className="text-[10px] font-medium text-muted-foreground truncate uppercase tracking-widest mt-0.5">
+            <p className="eyebrow text-muted-foreground truncate mt-0.5">
               {user?.bio || "Administrador"}
             </p>
           </div>

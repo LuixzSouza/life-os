@@ -211,7 +211,7 @@ export function RestOverlay({
             {/* RPE da série recém-feita — opcional, 1 toque; tocar de novo desfaz. */}
             {onRate && (
               <div className="mt-2 flex flex-col items-center gap-1.5">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                <p className="eyebrow text-muted-foreground">
                   Esforço da série (RPE)
                 </p>
                 <div className="flex items-center gap-1.5">
@@ -259,7 +259,7 @@ export function RestOverlay({
             <Repeat2 className="h-5 w-5" />
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block text-[10px] font-bold uppercase tracking-wider text-amber-600">Bi-set · aproveite o descanso</span>
+            <span className="eyebrow block text-amber-600">Bi-set · aproveite o descanso</span>
             <span className="block truncate text-sm font-semibold text-foreground">Fazer agora: {superset.name}</span>
           </span>
           <ChevronRight className="h-4 w-4 shrink-0 text-amber-600" />
@@ -272,7 +272,7 @@ export function RestOverlay({
           <div className="flex items-center gap-3">
             <ExerciseThumb name={next.name} group={next.group} showPlay={false} className="h-11 w-11 rounded-lg" />
             <div className="min-w-0 flex-1">
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">A seguir</p>
+              <p className="eyebrow text-muted-foreground">A seguir</p>
               <p className="truncate text-sm font-semibold text-foreground">{next.name}</p>
               {next.last && (
                 <p className="mt-0.5 flex items-center gap-1 truncate text-[11px] text-muted-foreground">

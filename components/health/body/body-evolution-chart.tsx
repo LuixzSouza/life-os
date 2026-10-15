@@ -33,7 +33,7 @@ function DeltaBadge({ label, unit, d, lowerIsGood = true, neutral = false }: { l
   const tone = neutral ? "text-muted-foreground" : (lowerIsGood ? down : !down) ? "text-emerald-500" : "text-rose-500";
   return (
     <div className="flex flex-col">
-      <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{label}</span>
+      <span className="eyebrow text-muted-foreground">{label}</span>
       <div className="flex items-baseline gap-1.5">
         <span className="text-lg font-bold tabular-nums">{d.last}{unit}</span>
         {d.diff !== 0 && (
@@ -68,7 +68,7 @@ export function BodyEvolutionChart({ data }: { data: BodyEvolutionPoint[] }) {
     <Card className="border-border/60 bg-card shadow-sm">
       <CardHeader className="pb-2 border-b border-border/40 bg-muted/20">
         <div className="flex flex-wrap items-center justify-between gap-3 py-1">
-          <CardTitle className="text-xs uppercase font-bold text-muted-foreground tracking-widest flex items-center gap-2">
+          <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
             <LineChartIcon className="h-4 w-4 text-primary" /> Evolução Corporal
           </CardTitle>
           {enoughPoints && (

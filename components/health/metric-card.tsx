@@ -75,7 +75,7 @@ export function MetricCard({
           {trend.value}
         </div>
         {trend.label && (
-          <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest opacity-60 truncate">
+          <span className="eyebrow text-muted-foreground opacity-60 truncate">
             {trend.label}
           </span>
         )}
@@ -105,7 +105,7 @@ export function MetricCard({
               {title}
             </h3>
             {subtitle && (
-              <p className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest">
+              <p className="eyebrow text-muted-foreground/40">
                 {subtitle}
               </p>
             )}

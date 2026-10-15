@@ -511,7 +511,7 @@ function DivisionEditor({ division, canDelete, onPatch, onPatchExercise, onDelet
       {/* Agenda semanal: em quais dias esta divisão é o treino do dia (opcional).
           A recomendação de "hoje" prioriza a divisão agendada pro dia da semana. */}
       <div className="flex flex-wrap items-center gap-1.5">
-        <span className="mr-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Dias</span>
+        <span className="eyebrow mr-0.5 text-muted-foreground">Dias</span>
         {WEEKDAY_LABELS.map((label, day) => {
           const active = division.weekdays?.includes(day) ?? false;
           return (
@@ -638,7 +638,7 @@ function ExerciseRow({ ex, first, last, onMove, onPatch, onRemove }: {
         {/* Linha 1: Séries */}
         <div className="flex flex-wrap items-center gap-3">
           <div className="flex flex-col gap-1 flex-1 min-w-0">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Séries</span>
+            <span className="eyebrow text-muted-foreground">Séries</span>
             <div className="inline-flex items-center gap-1 rounded-lg border border-border/50 bg-background w-fit">
               <button type="button" onClick={() => stepSets(-1)} className="px-2 py-1 text-muted-foreground hover:text-foreground">−</button>
               <span className="min-w-10 text-center font-mono tabular-nums text-sm font-semibold">{t.sets}</span>
@@ -648,7 +648,7 @@ function ExerciseRow({ ex, first, last, onMove, onPatch, onRemove }: {
 
           {/* Faixa de reps/tempo */}
           <div className="flex flex-col gap-1 flex-1 min-w-0">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+            <span className="eyebrow text-muted-foreground">
               {ex.timed ? "Tempo ⏱" : "Repetições"}
             </span>
             <div className="inline-flex items-center gap-1 rounded-lg border border-border/50 bg-background px-1.5 py-1 w-fit">
@@ -673,7 +673,7 @@ function ExerciseRow({ ex, first, last, onMove, onPatch, onRemove }: {
         {/* Linha 2: Intensidade com explicação */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Intensidade</span>
+            <span className="eyebrow text-muted-foreground">Intensidade</span>
             <button
               type="button"
               onClick={() => setShowIntensityHelp(!showIntensityHelp)}
@@ -705,7 +705,7 @@ function ExerciseRow({ ex, first, last, onMove, onPatch, onRemove }: {
 
             {t.intensity && (
               <div className="inline-flex items-center gap-2">
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Valor:</span>
+                <span className="eyebrow text-muted-foreground">Valor:</span>
                 <input
                   inputMode="numeric"
                   value={String(t.intensity.value)}

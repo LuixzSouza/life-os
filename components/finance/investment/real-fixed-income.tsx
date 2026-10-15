@@ -117,7 +117,7 @@ export function RealFixedIncome({ cdi, ipca, tesouro }: RealFixedIncomeProps) {
             <HoverCard key={term}>
               <HoverCardTrigger asChild>
                 <div className="cursor-help rounded-xl border border-border/50 bg-muted/20 p-4 text-center transition-all duration-300 hover:border-primary/40 hover:bg-primary/5 hover:shadow-sm">
-                  <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{term}</span>
+                  <span className="eyebrow text-muted-foreground">{term}</span>
                 </div>
               </HoverCardTrigger>
               <HoverCardContent className="z-50 w-[280px] rounded-2xl border-border/50 p-6 text-sm shadow-2xl sm:w-80" sideOffset={12}>

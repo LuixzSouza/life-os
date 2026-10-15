@@ -310,7 +310,7 @@ export function CelebrationStage({
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.05 }}
-          className="mb-6 inline-flex items-center gap-1.5 rounded-full bg-white/50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground/60 backdrop-blur dark:bg-white/10"
+          className="eyebrow mb-6 inline-flex items-center gap-1.5 rounded-full bg-white/50 px-3 py-1 text-foreground/60 backdrop-blur dark:bg-white/10"
         >
           <Cake className="h-3.5 w-3.5" /> {data.isToday ? "É hoje!" : "Celebração"}
         </motion.div>

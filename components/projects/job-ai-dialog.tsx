@@ -127,7 +127,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                     </DialogTitle>
                     {job && (
                         <div className="flex items-center gap-2 pt-1">
-                            <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
+                            <p className="eyebrow text-muted-foreground">
                                 {job.role} · {job.company}
                             </p>
                             {job.matchScore != null && (

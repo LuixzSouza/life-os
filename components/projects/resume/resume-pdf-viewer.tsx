@@ -78,7 +78,7 @@ function Toolbar({
   const pct = effectivePct(zoom);
   const segBtn = (active: boolean) =>
     cn(
-      "flex items-center gap-1 rounded-lg px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider transition-colors",
+      "eyebrow flex items-center gap-1 rounded-lg px-2.5 py-1 transition-colors",
       active ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
     );
   const iconBtn =
@@ -161,7 +161,7 @@ export default function ResumePdfViewer({ data, locale, template, name }: Resume
   }
 
   const iconAction =
-    "flex h-7 items-center gap-1.5 rounded-lg px-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:opacity-40";
+    "eyebrow flex h-7 items-center gap-1.5 rounded-lg px-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:opacity-40";
 
   return (
     <div className="flex h-full w-full flex-col gap-2">
@@ -207,7 +207,7 @@ export default function ResumePdfViewer({ data, locale, template, name }: Resume
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-xl border border-border/40 bg-muted/20">
             <Loader2 className="h-6 w-6 animate-spin text-primary" />
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            <p className="eyebrow text-muted-foreground">
               Gerando prévia em PDF…
             </p>
           </div>
@@ -215,7 +215,7 @@ export default function ResumePdfViewer({ data, locale, template, name }: Resume
 
         {/* Selo "atualizando" — só quando há um PDF antigo visível sendo trocado. */}
         {instance.loading && url && (
-          <div className="pointer-events-none absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-background/95 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-muted-foreground shadow-md backdrop-blur">
+          <div className="eyebrow pointer-events-none absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-background/95 px-3 py-1.5 text-muted-foreground shadow-md backdrop-blur">
             <Loader2 className="h-3 w-3 animate-spin text-primary" /> Atualizando
           </div>
         )}
@@ -238,7 +238,7 @@ export default function ResumePdfViewer({ data, locale, template, name }: Resume
                 onClick={() => setFullscreen(false)}
                 title="Fechar tela cheia (Esc)"
                 aria-label="Fechar tela cheia"
-                className="flex h-8 items-center gap-1.5 rounded-full bg-muted/60 px-3 text-[10px] font-bold uppercase tracking-wider text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                className="eyebrow flex h-8 items-center gap-1.5 rounded-full bg-muted/60 px-3 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               >
                 <Minimize2 className="h-3.5 w-3.5" /> Fechar
               </button>

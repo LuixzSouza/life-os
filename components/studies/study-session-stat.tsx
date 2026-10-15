@@ -20,7 +20,7 @@ export function Stat({
         bordered && "border-l border-r border-border/40"
       )}
     >
-      <div className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground">
+      <div className="eyebrow text-muted-foreground">
         {label}
       </div>
 
