@@ -148,9 +148,22 @@ export async function clearReadNotifications(): Promise<number> {
  * baratos a cada ciclo — sem acionar IA/backup fora de hora.
  */
 export async function generateReminders(opts: { heavy?: boolean } = {}): Promise<number> {
-  const heavy = opts.heavy ?? true;
   const userId = await getCurrentUserId();
   if (!userId) return 0;
+  return generateRemindersForUser(userId, opts);
+}
+
+/**
+ * Mesmo motor, sem depender de request/cookie: usado pelo agendador do servidor
+ * (lib/background-jobs.ts) para rodar lembretes/backup/IA com o app FECHADO.
+ * Tudo aqui é idempotente por dia (notifyOnce, *IfDue), então rodar pelo sino e
+ * pelo agendador ao mesmo tempo não duplica nada.
+ */
+export async function generateRemindersForUser(
+  userId: string,
+  opts: { heavy?: boolean } = {},
+): Promise<number> {
+  const heavy = opts.heavy ?? true;
 
   const now = new Date();
   const in24h = new Date(now.getTime() + 24 * 3600 * 1000);

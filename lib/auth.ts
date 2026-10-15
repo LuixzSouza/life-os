@@ -2,7 +2,15 @@ import { SignJWT, jwtVerify, type JWTPayload } from "jose";
 import { cookies } from "next/headers";
 import { cache } from "react";
 import bcrypt from "bcryptjs";
-import { getOrCreateSecret } from "./db-config";
+import { getOrCreateSecret, isEphemeralServerless } from "./db-config";
+
+/**
+ * Duração da sessão. Desktop (app pessoal, servidor só no PC): 30 dias — logar
+ * toda semana era atrito para o uso diário. Nuvem (instância exposta): 7 dias.
+ */
+function sessionDays(): number {
+  return isEphemeralServerless() ? 7 : 30;
+}
 
 /**
  * Chave de assinatura do JWT. Prioriza `process.env.JWT_SECRET`; em builds
@@ -47,7 +55,7 @@ export async function encrypt(payload: SessionPayload) {
   return await new SignJWT(payload)
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
-    .setExpirationTime("7d") // Sessão dura 7 dias
+    .setExpirationTime(`${sessionDays()}d`)
     .sign(getKey());
 }
 
@@ -83,7 +91,7 @@ export async function verifyPassword(plain: string, hash: string): Promise<boole
 }
 
 export async function login(userId: string) {
-  const expires = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 7 dias
+  const expires = new Date(Date.now() + sessionDays() * 24 * 60 * 60 * 1000);
 
   // Embute a versão atual do token: "Desconectar outros dispositivos"
   // incrementa User.tokenVersion e invalida todo cookie com `tv` antigo.

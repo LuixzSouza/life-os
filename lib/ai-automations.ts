@@ -54,7 +54,7 @@ export async function runDueAutomations(userId: string): Promise<number> {
 
     // Snapshot compacto dá contexto real ao one-shot (sem tools).
     let snapshot = "";
-    try { snapshot = await getUserContext(); } catch { snapshot = ""; }
+    try { snapshot = await getUserContext(userId); } catch { snapshot = ""; }
 
     const system =
       "Você executa uma AUTOMAÇÃO AGENDADA do Life OS. Responda o pedido do usuário em no máximo 4 frases, " +

@@ -8,8 +8,12 @@ import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { getCurrentUserId } from "@/lib/auth";
 
-export async function getUserContext(): Promise<string> {
-    const userId = await getCurrentUserId();
+/**
+ * `forUserId`: passado por jobs em segundo plano (agendador do servidor), onde
+ * não há request/cookie. Sem ele, usa o usuário da sessão.
+ */
+export async function getUserContext(forUserId?: string): Promise<string> {
+    const userId = forUserId ?? (await getCurrentUserId());
     if (!userId) return "Usuário não autenticado.";
 
     const now = new Date();

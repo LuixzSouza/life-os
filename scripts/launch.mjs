@@ -141,7 +141,9 @@ function findBrowser() {
 
 function openApp(port) {
   if (NO_OPEN) return;
-  const url = urlFor(port);
+  // Abre direto no painel (sem passar pela página de apresentação). Sem sessão,
+  // o proxy manda para o /login e o login volta para o /dashboard.
+  const url = `${urlFor(port)}/dashboard`;
   const browser = findBrowser();
   try {
     if (browser) {

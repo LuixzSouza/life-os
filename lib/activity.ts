@@ -1,3 +1,4 @@
+import { after } from "next/server";
 import { prisma } from "./prisma";
 import { getCurrentUserId } from "./auth";
 
@@ -17,19 +18,35 @@ export async function logActivity(input: {
   meta?: unknown; // serializado em JSON
 }): Promise<void> {
   try {
+    // A sessão é lida AGORA (cookies só existem durante o request).
     const userId = await getCurrentUserId();
     if (!userId) return;
-    await prisma.activityLog.create({
-      data: {
-        userId,
-        action: input.action,
-        module: input.module,
-        summary: input.summary ?? null,
-        entityType: input.entityType ?? null,
-        entityId: input.entityId ?? null,
-        meta: input.meta != null ? JSON.stringify(input.meta) : null,
-      },
-    });
+    const data = {
+      userId,
+      action: input.action,
+      module: input.module,
+      summary: input.summary ?? null,
+      entityType: input.entityType ?? null,
+      entityId: input.entityId ?? null,
+      meta: input.meta != null ? JSON.stringify(input.meta) : null,
+    };
+    const write = async () => {
+      try {
+        await prisma.activityLog.create({ data });
+      } catch (e) {
+        console.error("[activity] falha ao registrar:", e);
+      }
+    };
+
+    // No modo réplica/nuvem cada escrita é uma ida ao Turso (~150–300ms). O log
+    // é best-effort, então vai para DEPOIS da resposta: a ação que chamou
+    // responde na hora. Fora de um request (scripts/testes) `after` lança — aí
+    // grava inline, como antes.
+    try {
+      after(write);
+    } catch {
+      await write();
+    }
   } catch (e) {
     console.error("[activity] falha ao registrar:", e);
   }
