@@ -4,3 +4,4 @@
 export * from "./schemas";
 export * from "./subject";
 export * from "./session";
+export * from "./redacao";
