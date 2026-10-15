@@ -47,7 +47,7 @@ export function SkillTreeDialog({ open, onOpenChange }: { open: boolean; onOpenC
               <div className="flex items-center gap-3 rounded-2xl border border-primary/20 bg-primary/5 p-4">
                 <span className="text-4xl">{data.overallEmoji}</span>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Nível geral</p>
+                  <p className="text-xs font-medium text-muted-foreground">Nível geral</p>
                   <p className="text-lg font-black leading-tight text-foreground">
                     Nível {data.overallLevel} · <span className="text-primary">{data.overallTitle}</span>
                   </p>

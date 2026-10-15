@@ -97,7 +97,7 @@ export function BillingReminders({ clients, onCharge, onCopyCharge }: BillingRem
   }
 
   return (
-    <div className="rounded-[1.5rem] border border-border/50 bg-card/50 backdrop-blur-sm shadow-sm overflow-hidden">
+    <div className="rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm shadow-sm overflow-hidden">
       {/* Cabeçalho */}
       <button
         onClick={() => setOpen(v => !v)}

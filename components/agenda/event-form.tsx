@@ -165,7 +165,7 @@ export function EventForm({
           </div>
 
           {/* Data e Horários (Timeblocking Grid) */}
-          <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 bg-muted/10 p-4 rounded-[1.5rem] border border-border/40 shadow-inner">
+          <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 bg-muted/10 p-4 rounded-2xl border border-border/40 shadow-inner">
             <div className="sm:col-span-12">
               <Label htmlFor="date" className="text-xs font-medium text-muted-foreground flex items-center gap-2 mb-2">
                 <CalendarCheck className="h-3 w-3" /> Data Base

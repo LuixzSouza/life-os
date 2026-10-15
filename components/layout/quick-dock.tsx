@@ -84,7 +84,7 @@ export function QuickDock() {
                             // Escalonado: ao abrir, o item mais próximo do botão entra primeiro.
                             style={{ transitionDelay: open ? `${(ITEMS.length - 1 - i) * 45}ms` : `${i * 30}ms` }}
                         >
-                            <span className="rounded-full border border-border/40 bg-card/95 px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-foreground shadow-md backdrop-blur">
+                            <span className="rounded-full border border-border/40 bg-card/95 px-3 py-1.5 text-xs font-medium text-foreground shadow-md backdrop-blur">
                                 {item.label}
                                 {item.hint && (
                                     <span className="ml-1.5 font-bold normal-case tracking-normal text-muted-foreground/60">{item.hint}</span>

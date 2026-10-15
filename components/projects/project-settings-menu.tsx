@@ -101,7 +101,7 @@ export function ProjectSettingsMenu({
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-64 p-2 rounded-2xl shadow-xl border-border/40 backdrop-blur-lg">
           <DropdownMenuLabel className="px-3 py-2">
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/60">Opções do Projeto</span>
+            <span className="text-xs font-medium text-muted-foreground/60">Opções do Projeto</span>
           </DropdownMenuLabel>
           
           <DropdownMenuItem onSelect={() => setIsEditOpen(true)} className="rounded-xl px-3 py-2.5 gap-3 cursor-pointer focus:bg-primary/5 group">
@@ -135,7 +135,7 @@ export function ProjectSettingsMenu({
                     <Settings2 className="h-6 w-6" />
                 </div>
                 <div>
-                    <DialogTitle className="text-2xl font-black uppercase tracking-tighter">Propriedades</DialogTitle>
+                    <DialogTitle className="text-2xl font-semibold">Propriedades</DialogTitle>
                     <DialogDescription className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Configurações de exibição</DialogDescription>
                 </div>
             </div>
@@ -144,12 +144,12 @@ export function ProjectSettingsMenu({
           <form action={handleUpdate}>
             <DialogBody className="space-y-6">
                 <div className="space-y-2.5">
-                <Label htmlFor="title" className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Nome do Projeto</Label>
+                <Label htmlFor="title" className="text-xs font-medium text-muted-foreground ml-1">Nome do Projeto</Label>
                 <Input id="title" name="title" defaultValue={projectTitle} required className="h-12 bg-muted/20 border-border/50 rounded-xl font-bold text-base focus-visible:ring-primary/30" />
                 </div>
 
                 <div className="space-y-4">
-                    <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1 flex items-center gap-2">
+                    <Label className="text-xs font-medium text-muted-foreground ml-1 flex items-center gap-2">
                         <Palette className="h-3.5 w-3.5" /> Cor de Identidade
                     </Label>
                     <div className="grid grid-cols-5 gap-3 bg-muted/30 p-4 rounded-2xl border border-border/40">
@@ -172,13 +172,13 @@ export function ProjectSettingsMenu({
                 </div>
                 
                 <div className="space-y-2.5">
-                <Label htmlFor="description" className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Descrição</Label>
+                <Label htmlFor="description" className="text-xs font-medium text-muted-foreground ml-1">Descrição</Label>
                 <Textarea id="description" name="description" defaultValue={projectDescription || ""} className="resize-none min-h-[120px] bg-muted/20 border-border/50 rounded-xl font-medium p-4 focus-visible:ring-primary/30" />
                 </div>
             </DialogBody>
 
             <DialogFooter>
-              <Button type="submit" disabled={isLoading} className="w-full h-14 rounded-2xl font-black uppercase tracking-widest text-xs shadow-lg transition-all active:scale-95" style={{ backgroundColor: selectedColor }}>
+              <Button type="submit" disabled={isLoading} className="w-full h-14 rounded-2xl font-medium text-xs shadow-lg transition-all active:scale-95" style={{ backgroundColor: selectedColor }}>
                 {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : "Salvar Alterações"}
               </Button>
             </DialogFooter>

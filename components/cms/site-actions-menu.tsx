@@ -101,7 +101,7 @@ export function SiteActionsMenu({ site }: { site: { id: string; name: string; ur
       <Dialog open={isDeleteDialogOpen} onOpenChange={setIsDeleteDialogOpen}>
         <DialogContent size="md">
           <DialogHeader className="flex flex-col items-center text-center">
-            <div className="h-16 w-16 rounded-[2rem] bg-rose-500/10 flex items-center justify-center text-rose-500 border border-rose-500/20 shadow-inner mb-1">
+            <div className="h-16 w-16 rounded-2xl bg-rose-500/10 flex items-center justify-center text-rose-500 border border-rose-500/20 shadow-inner mb-1">
               <AlertCircle className="h-8 w-8" />
             </div>
             <DialogTitle className="text-xl font-bold tracking-tight text-foreground">Excluir container?</DialogTitle>

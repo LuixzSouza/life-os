@@ -55,7 +55,7 @@ export function CorrelationDashboard({ matrix }: { matrix: CorrelationMatrix }) 
     return (
       <div className="rounded-2xl border-2 border-dashed border-border/40 bg-muted/10 p-8 text-center">
         <FlaskConical className="mx-auto mb-3 h-8 w-8 text-muted-foreground/40" />
-        <h4 className="text-sm font-black uppercase tracking-tighter text-foreground">Coletando amostra…</h4>
+        <h4 className="text-sm font-medium text-foreground">Coletando amostra…</h4>
         <p className="mx-auto mt-1 max-w-sm text-xs text-muted-foreground">
           O Motor de Correlação precisa de pelo menos 5 dias com registros (energia, sono, treino ou foco)
           nos últimos {windowDays} dias. Você tem {loggedDays} — continue os check-ins diários.

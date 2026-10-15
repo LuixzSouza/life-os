@@ -230,7 +230,7 @@ export function TaskInput({ projectId }: TaskInputProps) {
 
                             <div className="flex items-center gap-4 ml-auto">
                                 {/* CONTADOR DE CARACTERES */}
-                                <div className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40 font-mono">
+                                <div className="text-xs font-medium text-muted-foreground/40 font-mono">
                                     {content.length} / {MAX_CHARS}
                                 </div>
 
@@ -238,7 +238,7 @@ export function TaskInput({ projectId }: TaskInputProps) {
                                     onClick={handleSubmit}
                                     disabled={isUploading || (!content.trim() && !image)}
                                     className={cn(
-                                        "h-11 px-6 rounded-xl font-black uppercase tracking-widest text-[10px] shadow-xl transition-all active:scale-95",
+                                        "h-11 px-6 rounded-xl font-medium text-xs shadow-xl transition-all active:scale-95",
                                         isSuccess ? "bg-emerald-500 text-white" : "bg-foreground text-background hover:bg-foreground/90"
                                     )}
                                 >
@@ -293,7 +293,7 @@ function ToolbarButton({ icon: Icon, onClick, tooltip }: ToolbarButtonProps) {
                     <Icon className="h-4 w-4 opacity-50 group-hover:opacity-100" />
                 </Button>
             </TooltipTrigger>
-            <TooltipContent side="top" className="text-[10px] font-black uppercase tracking-widest bg-zinc-950 text-white px-3 py-1.5 border-none">
+            <TooltipContent side="top" className="text-xs font-medium bg-zinc-950 text-white px-3 py-1.5 border-none">
                 {tooltip}
             </TooltipContent>
         </Tooltip>

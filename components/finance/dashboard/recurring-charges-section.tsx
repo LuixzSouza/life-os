@@ -63,7 +63,7 @@ function RecurringChargesCard({ total, items, clients }: { total: number; items:
       {/* Resumo */}
       <div className="p-6 border-b border-border/40 flex justify-between items-start bg-gradient-to-br from-emerald-500/5 to-background">
         <div>
-          <p className="text-[10px] text-muted-foreground font-black uppercase tracking-widest mb-1">
+          <p className="text-xs text-muted-foreground font-medium mb-1">
             Receita Recorrente Mensal
           </p>
           <h3 className={cn("text-3xl font-black text-emerald-600 tracking-tighter", smartView && "blur-md select-none")}>

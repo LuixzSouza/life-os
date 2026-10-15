@@ -188,7 +188,7 @@ export function HoldingDialog({ open, onOpenChange, holding }: HoldingDialogProp
               {/* Populares */}
               {query.trim().length === 0 && (
                 <div className="space-y-3">
-                  <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Populares · 1 clique</p>
+                  <p className="text-xs font-medium text-muted-foreground">Populares · 1 clique</p>
                   {POPULAR.map((grp) => (
                     <div key={grp.group} className="space-y-1.5">
                       <p className="text-[10px] font-bold text-muted-foreground/60">{grp.group}</p>
@@ -221,7 +221,7 @@ export function HoldingDialog({ open, onOpenChange, holding }: HoldingDialogProp
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
                     <p className="font-bold text-foreground">{ticker}</p>
-                    <span className="rounded-md bg-muted/60 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wider text-muted-foreground">{TYPE_LABEL[type] ?? type}</span>
+                    <span className="rounded-md bg-muted/60 px-1.5 py-0.5 text-xs font-medium text-muted-foreground">{TYPE_LABEL[type] ?? type}</span>
                   </div>
                   <p className="text-[11px] text-muted-foreground truncate">
                     {selName || ticker}{currentPrice != null && ` · agora ${formatMoney(currentPrice)}`}

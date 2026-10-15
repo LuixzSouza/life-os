@@ -46,7 +46,7 @@ const CustomTooltip = ({ active, payload, label }: FinanceChartTooltipProps) => 
     return (
       <div className="flex flex-col gap-2 rounded-xl border border-border/40 bg-background/95 p-3 shadow-2xl backdrop-blur-md min-w-[160px]">
         <div className="flex items-center justify-between border-b border-border/40 pb-2">
-          <span className="text-[10px] uppercase text-muted-foreground font-black tracking-widest">{label}</span>
+          <span className="text-xs text-muted-foreground font-medium">{label}</span>
           {isIncome ? <TrendingUp className="h-3.5 w-3.5 text-emerald-500" /> : <TrendingDown className="h-3.5 w-3.5 text-rose-500" />}
         </div>
         <div className="flex items-center justify-between gap-3">
@@ -75,9 +75,9 @@ function FinanceChartContent({ data, title = "Fluxo de Caixa", className }: { da
 
   if (isEmpty) {
     return (
-      <div className={cn("h-[250px] w-full flex flex-col items-center justify-center bg-muted/5 rounded-[2rem] border-2 border-dashed border-border/40", className)}>
+      <div className={cn("h-[250px] w-full flex flex-col items-center justify-center bg-muted/5 rounded-2xl border-2 border-dashed border-border/40", className)}>
         <Activity className="h-6 w-6 text-muted-foreground/40 mb-2" />
-        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Dados insuficientes</p>
+        <p className="text-xs font-medium text-muted-foreground/40">Dados insuficientes</p>
       </div>
     );
   }
@@ -86,8 +86,8 @@ function FinanceChartContent({ data, title = "Fluxo de Caixa", className }: { da
     <div className={cn("w-full space-y-3 sm:space-y-6", className)}>
       {/* Sem título quando o Card pai já o exibe (title="") — só a legenda. */}
       <div className={cn("flex flex-wrap items-center gap-2 px-2", title ? "justify-between" : "justify-end")}>
-        {title && <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">{title}</h4>}
-        <div className="flex gap-3 sm:gap-4 text-[9px] font-black uppercase tracking-widest">
+        {title && <h4 className="text-xs font-medium text-muted-foreground">{title}</h4>}
+        <div className="flex gap-3 sm:gap-4 text-xs font-medium">
           <span className="flex items-center gap-1.5 sm:gap-2"><span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]" /> Entradas</span>
           <span className="flex items-center gap-1.5 sm:gap-2"><span className="w-1.5 h-1.5 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]" /> Saídas</span>
         </div>
@@ -135,7 +135,7 @@ const FinanceChartDynamic = dynamic(() => Promise.resolve(FinanceChartContent), 
   ssr: false,
   loading: () => (
     <div className="h-[250px] w-full bg-muted/5 animate-pulse rounded-2xl border border-border/40 flex items-center justify-center">
-      <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/30">Carregando…</span>
+      <span className="text-xs font-medium text-muted-foreground/30">Carregando…</span>
     </div>
   ),
 });

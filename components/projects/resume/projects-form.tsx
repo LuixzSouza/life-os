@@ -45,7 +45,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
   };
 
   return (
-    <div className="space-y-6 bg-card border border-border/40 p-6 md:p-8 rounded-[2rem] shadow-sm">
+    <div className="space-y-6 bg-card border border-border/40 p-6 md:p-8 rounded-2xl shadow-sm">
       
       {/* HEADER DA SEÇÃO */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6 border-b border-border/40 pb-4">
@@ -54,7 +54,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
             <LayoutTemplate className="h-4 w-4" />
           </div>
           <div>
-            <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-muted-foreground/80">
+            <h3 className="text-[11px] font-medium text-muted-foreground/80">
               Case Studies
             </h3>
             <p className="text-[10px] text-muted-foreground font-medium mt-0.5">
@@ -65,7 +65,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
         <Button 
           size="sm" 
           onClick={addProject} 
-          className="h-10 rounded-xl font-black uppercase tracking-widest text-[10px] gap-2 shadow-sm hover:scale-105 transition-all w-full sm:w-auto"
+          className="h-10 rounded-xl font-medium text-xs gap-2 shadow-sm hover:scale-105 transition-all w-full sm:w-auto"
         >
           <Plus className="h-4 w-4" /> Novo Projeto
         </Button>
@@ -83,12 +83,12 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
         {data.projects.map((proj, index) => (
           <div 
             key={proj.id} 
-            className="relative group border border-border/60 bg-muted/10 rounded-[1.5rem] p-5 md:p-6 shadow-sm hover:border-primary/30 transition-all"
+            className="relative group border border-border/60 bg-muted/10 rounded-2xl p-5 md:p-6 shadow-sm hover:border-primary/30 transition-all"
           >
             {/* Cabeçalho do Card */}
             <div className="flex justify-between items-center mb-5 border-b border-border/40 pb-3">
               <div className="flex items-center gap-3">
-                <span className="bg-primary/10 text-primary text-[9px] uppercase tracking-widest font-black px-3 py-1.5 rounded-lg border border-primary/20">
+                <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1.5 rounded-lg border border-primary/20">
                   PROJETO #{index + 1}
                 </span>
                 <ReorderControls
@@ -113,7 +113,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
             <div className="space-y-5">
               {/* Título */}
               <div className="space-y-2">
-                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
+                <Label className="text-xs font-medium text-muted-foreground/60">
                   Título da Missão
                 </Label>
                 <Input 
@@ -127,7 +127,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
               {/* Função e Duração */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
+                    <Label className="text-xs font-medium text-muted-foreground/60">
                       Função/Cargo
                     </Label>
                     <Input 
@@ -138,7 +138,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                     />
                 </div>
                 <div className="space-y-2">
-                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
+                    <Label className="text-xs font-medium text-muted-foreground/60">
                       Duração
                     </Label>
                     <Input 
@@ -153,7 +153,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
               {/* Estrutura do Case Study (Problema e Impacto) */}
               <div className="space-y-4 border-l-2 border-primary/30 pl-4 py-2 bg-primary/5 rounded-r-2xl pr-4">
                   <div className="space-y-2">
-                      <Label className="text-[10px] font-black uppercase tracking-widest text-foreground flex items-center gap-1.5">
+                      <Label className="text-xs font-medium text-foreground flex items-center gap-1.5">
                         <Target className="h-3 w-3 text-primary" /> Desafio (Problema)
                       </Label>
                       <SmartTextarea
@@ -168,7 +168,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                       />
                   </div>
                   <div className="space-y-2">
-                      <Label className="text-[10px] font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-500 flex items-center gap-1.5">
+                      <Label className="text-xs font-medium text-emerald-600 dark:text-emerald-500 flex items-center gap-1.5">
                         <Zap className="h-3 w-3" /> Resultados (Impacto)
                       </Label>
                       <SmartTextarea
@@ -187,7 +187,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
               {/* Links */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-border/40">
                   <div className="space-y-2 mt-3">
-                      <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60 flex items-center gap-1.5">
+                      <Label className="text-xs font-medium text-muted-foreground/60 flex items-center gap-1.5">
                         <LinkIcon className="h-3 w-3" /> Live URL
                       </Label>
                       <Input 
@@ -198,7 +198,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                       />
                   </div>
                   <div className="space-y-2 mt-3">
-                      <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60 flex items-center gap-1.5">
+                      <Label className="text-xs font-medium text-muted-foreground/60 flex items-center gap-1.5">
                         <Github className="h-3 w-3" /> Repo URL
                       </Label>
                       <Input 
@@ -216,9 +216,9 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
       
       {/* ESTADO VAZIO (EMPTY STATE) */}
       {data.projects.length === 0 && (
-        <div className="flex flex-col items-center justify-center py-12 border-2 border-dashed border-border/40 rounded-[2rem] bg-muted/5">
+        <div className="flex flex-col items-center justify-center py-12 border-2 border-dashed border-border/40 rounded-2xl bg-muted/5">
           <LayoutTemplate className="h-8 w-8 text-muted-foreground/20 mb-3" />
-          <p className="text-muted-foreground/60 text-[11px] font-black uppercase tracking-widest">
+          <p className="text-muted-foreground/60 text-[11px] font-medium">
             Nenhum projeto registrado.
           </p>
         </div>

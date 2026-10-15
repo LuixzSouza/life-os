@@ -156,7 +156,7 @@ export function WelcomeTour() {
                 transition={{ type: "spring", bounce: 0.4, duration: 0.6 }}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
-                className="relative z-10 w-full max-w-[500px] bg-card/90 dark:bg-zinc-950/90 border border-white/20 dark:border-white/10 rounded-[2rem] shadow-2xl overflow-hidden backdrop-blur-xl"
+                className="relative z-10 w-full max-w-[500px] bg-card/90 dark:bg-zinc-950/90 border border-white/20 dark:border-white/10 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl"
             >
                 {/* Efeito de Brilho */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
@@ -181,7 +181,7 @@ export function WelcomeTour() {
                                 exit={{ opacity: 0, scale: 0.4, rotateY: direction * -90 }}
                                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
                                 className={cn(
-                                    "w-32 h-32 rounded-[2rem] flex items-center justify-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] p-7 ring-1 ring-white/20",
+                                    "w-32 h-32 rounded-2xl flex items-center justify-center shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] p-7 ring-1 ring-white/20",
                                     slide.iconBg
                                 )}
                             >

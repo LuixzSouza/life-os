@@ -89,7 +89,7 @@ export function MeetingBoard({ meetings, projectId }: MeetingBoardProps) {
             <CalendarClock className="h-5 w-5" />
           </div>
           <div>
-            <h3 className="flex items-center gap-2 text-sm font-black uppercase tracking-widest">
+            <h3 className="flex items-center gap-2 text-sm font-medium">
               Reuniões
               {meetings.length > 0 && (
                 <span className="rounded-md bg-muted/60 px-1.5 py-0.5 text-[10px] font-bold normal-case tracking-normal text-muted-foreground tabular-nums">
@@ -152,7 +152,7 @@ export function MeetingBoard({ meetings, projectId }: MeetingBoardProps) {
       )}
 
       {meetings.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-[2rem] bg-muted/10 text-center">
+        <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
           <div className="h-16 w-16 rounded-2xl bg-muted/50 flex items-center justify-center mb-4">
             <FileText className="h-8 w-8 text-muted-foreground/30" />
           </div>
@@ -160,7 +160,7 @@ export function MeetingBoard({ meetings, projectId }: MeetingBoardProps) {
           <p className="text-sm text-muted-foreground max-w-xs mt-1">Crie uma, anote os pontos durante a call e gere o checklist com IA.</p>
         </div>
       ) : filtered.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-16 border-2 border-dashed border-border/40 rounded-[2rem] bg-muted/10 text-center">
+        <div className="flex flex-col items-center justify-center py-16 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
           <Search className="h-7 w-7 text-muted-foreground/30 mb-3" />
           <h4 className="font-bold text-foreground">Nenhuma reunião encontrada</h4>
           <p className="text-sm text-muted-foreground mt-1">Ajuste a busca ou os filtros.</p>

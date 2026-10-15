@@ -182,7 +182,7 @@ export function TransactionDialog({
               </div>
 
               <div className="space-y-2">
-                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+                <Label className="text-xs font-medium text-muted-foreground ml-1">
                   Valor (R$)
                 </Label>
                 <div className="relative">
@@ -211,7 +211,7 @@ export function TransactionDialog({
               </div>
 
               <div className="space-y-2">
-                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+                <Label className="text-xs font-medium text-muted-foreground ml-1">
                   Descrição
                 </Label>
                 <Input
@@ -225,7 +225,7 @@ export function TransactionDialog({
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">
                     Carteira
                   </Label>
                   <Select
@@ -245,7 +245,7 @@ export function TransactionDialog({
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">
                     Categoria
                   </Label>
                   <div className="relative">
@@ -261,7 +261,7 @@ export function TransactionDialog({
               </div>
 
               <div className="space-y-2">
-                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+                <Label className="text-xs font-medium text-muted-foreground ml-1">
                   Data
                 </Label>
                 <div className="relative">

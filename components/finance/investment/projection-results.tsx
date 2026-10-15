@@ -41,7 +41,7 @@ export function ProjectionResults({
       <CardContent className="p-8 md:p-10 relative z-10 flex flex-col h-full justify-center min-h-[400px]">
 
         <div className="mb-auto">
-          <p className="text-zinc-400 text-[10px] font-black uppercase tracking-widest mb-3 flex items-center gap-2">
+          <p className="text-zinc-400 text-xs font-medium mb-3 flex items-center gap-2">
             {mode === "GROWTH" ? <TrendingUp className="h-4 w-4" /> : <Sparkles className="h-4 w-4 text-amber-400" />}
             {mode === "GROWTH" ? `Patrimônio em ${years} anos` : "Aporte Mensal Necessário"}
           </p>
@@ -70,7 +70,7 @@ export function ProjectionResults({
           <div className="h-px bg-white/10 my-4" />
 
           <div className="flex justify-between items-center pt-1">
-            <span className="text-xs font-black uppercase tracking-widest text-zinc-300">
+            <span className="text-xs font-medium text-zinc-300">
               Lucro Realizado
             </span>
             <span className="text-xl font-black font-mono tracking-tighter text-emerald-400 drop-shadow-md">

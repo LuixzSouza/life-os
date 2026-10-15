@@ -56,7 +56,7 @@ export async function DailyRegulatorCard() {
                 <p className="text-sm font-bold text-foreground">{s.title}</p>
                 <p className="text-xs leading-relaxed text-muted-foreground">{s.detail}</p>
                 {s.actionLabel && (
-                  <span className="mt-1 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider" style={{ color }}>
+                  <span className="mt-1 inline-flex items-center gap-1 text-[11px] font-medium" style={{ color }}>
                     {s.actionLabel} <ArrowUpRight className="h-3 w-3" />
                   </span>
                 )}

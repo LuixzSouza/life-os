@@ -18,10 +18,10 @@ export function LanguagesForm({ data, onChange }: { data: PortfolioData; onChang
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-end border-b border-border/40 pb-4">
-        <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-muted-foreground/80 flex items-center gap-2">
+        <h3 className="text-[11px] font-medium text-muted-foreground/80 flex items-center gap-2">
           <Languages className="h-4 w-4 text-primary" /> Idiomas
         </h3>
-        <Button size="sm" onClick={add} className="h-10 rounded-xl font-black uppercase tracking-widest text-[10px] gap-2 shadow-lg hover:scale-105 transition-all">
+        <Button size="sm" onClick={add} className="h-10 rounded-xl font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
           <Plus className="h-4 w-4" /> Adicionar
         </Button>
       </div>
@@ -56,7 +56,7 @@ export function LanguagesForm({ data, onChange }: { data: PortfolioData; onChang
           </div>
         ))}
         {data.languages.length === 0 && (
-          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/30 text-center py-6 border-2 border-dashed border-border/40 rounded-xl">
+          <p className="text-xs font-medium text-muted-foreground/30 text-center py-6 border-2 border-dashed border-border/40 rounded-xl">
             Nenhum idioma listado.
           </p>
         )}

@@ -179,7 +179,7 @@ export function BudgetSection({ budget, monthlyFlow, wishlist, totalBalance }: B
         <div className="rounded-2xl border border-border/40 bg-card p-6 shadow-sm space-y-5">
           <div className="flex items-center gap-2">
             <TrendingUp className="h-4 w-4 text-primary" />
-            <h4 className="text-sm font-black uppercase tracking-widest text-foreground">No ritmo atual</h4>
+            <h4 className="text-sm font-medium text-foreground">No ritmo atual</h4>
           </div>
 
           {projection && projection.sampleMonths > 0 ? (
@@ -205,7 +205,7 @@ export function BudgetSection({ budget, monthlyFlow, wishlist, totalBalance }: B
 
               {goals.length > 0 && (
                 <div className="space-y-2">
-                  <p className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+                  <p className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
                     <CalendarClock className="h-3.5 w-3.5" /> Quando cada meta chega
                   </p>
                   {goals.map((g) => (

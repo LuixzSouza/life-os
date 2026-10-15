@@ -47,7 +47,7 @@ export function PriorityBadge({ priority, className }: PriorityBadgeProps) {
       variant="outline" 
       className={cn(
         'flex items-center gap-1.5 px-2 py-1 h-6 transition-all duration-300 cursor-default shadow-sm border rounded-lg',
-        'text-[9px] font-black uppercase tracking-[0.12em]',
+        'text-xs font-medium',
         config.color,
         className
       )}

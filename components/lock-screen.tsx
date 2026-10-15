@@ -230,7 +230,7 @@ export function LockScreen({ onUnlock }: LockScreenProps) {
             <motion.div
                 animate={shake}
                 className={cn(
-                    "relative z-10 w-full max-w-[400px] shrink-0 rounded-[2.5rem] border border-border/40 bg-background/80 p-6 shadow-2xl backdrop-blur-xl transition-colors duration-300 sm:p-8 md:p-10",
+                    "relative z-10 w-full max-w-[400px] shrink-0 rounded-2xl border border-border/40 bg-background/80 p-6 shadow-2xl backdrop-blur-xl transition-colors duration-300 sm:p-8 md:p-10",
                     isError && "border-rose-500/50 shadow-[0_0_30px_rgba(244,63,94,0.2)]"
                 )}
             >
@@ -250,7 +250,7 @@ export function LockScreen({ onUnlock }: LockScreenProps) {
                     </div>
 
                     <div className="space-y-1.5">
-                        <h2 className="flex items-center justify-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">
+                        <h2 className="flex items-center justify-center gap-2 text-xs font-medium text-muted-foreground">
                             <span className="h-2 w-2 animate-pulse rounded-full bg-rose-500" /> Protocolo de Segurança
                         </h2>
                         <h1 className="text-2xl font-extrabold tracking-tight text-foreground">
@@ -314,7 +314,7 @@ export function LockScreen({ onUnlock }: LockScreenProps) {
                         type="submit"
                         disabled={loading || !password || locked}
                         className={cn(
-                            "h-14 w-full rounded-full text-[11px] font-black uppercase tracking-widest shadow-lg transition-all duration-300",
+                            "h-14 w-full rounded-full text-[11px] font-medium shadow-lg transition-all duration-300",
                             locked
                                 ? "bg-muted text-muted-foreground"
                                 : isError

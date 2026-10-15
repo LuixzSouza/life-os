@@ -25,7 +25,7 @@ export function AccessDialog() {
         <Button
           className={cn(
             "h-11 px-5 rounded-xl bg-foreground text-background hover:bg-primary hover:text-white shadow-lg",
-            "font-black uppercase tracking-widest text-[10px] gap-2 transition-all active:scale-95 group"
+            "font-medium text-xs gap-2 transition-all active:scale-95 group"
           )}
         >
           <ShieldPlus className="h-4 w-4 stroke-[3] transition-transform group-hover:scale-110" />

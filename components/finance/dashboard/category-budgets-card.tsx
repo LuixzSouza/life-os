@@ -87,7 +87,7 @@ export function CategoryBudgetsCard({ items, options }: CategoryBudgetsCardProps
             <Gauge className="h-3.5 w-3.5 text-primary" />
           </span>
           <div>
-            <h4 className="text-sm font-black uppercase tracking-widest text-foreground">Tetos por categoria</h4>
+            <h4 className="text-sm font-medium text-foreground">Tetos por categoria</h4>
             <p className="text-[10px] text-muted-foreground">
               Limite mensal em valor para as categorias que mais fogem do controle.
             </p>

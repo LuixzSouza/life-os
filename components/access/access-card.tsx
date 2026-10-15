@@ -88,9 +88,9 @@ export function AccessCard({ item, strength, reused = false, breachCount }: { it
         {/* --- HEADER DO CARD --- */}
         <div className="p-6 pb-2 flex items-start gap-4">
           <div className="shrink-0 relative">
-            <Avatar className="h-12 w-12 rounded-[1rem] border border-border/40 shadow-sm bg-background">
+            <Avatar className="h-12 w-12 rounded-2xl border border-border/40 shadow-sm bg-background">
               <AvatarImage src={faviconUrl} alt={item.title} className="p-2 object-contain" />
-              <AvatarFallback className={cn("rounded-[1rem]", catConfig.bg)}>
+              <AvatarFallback className={cn("rounded-2xl", catConfig.bg)}>
                 <CategoryIcon className={cn("h-5 w-5", catConfig.color)} />
               </AvatarFallback>
             </Avatar>

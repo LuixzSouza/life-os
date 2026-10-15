@@ -38,7 +38,7 @@ export function StudyModeDialog({ deck, onClose }: StudyModeDialogProps) {
                   <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-2">
                           <h3 className="font-extrabold text-base sm:text-lg text-foreground">Inteligente</h3>
-                          <span className="inline-flex items-center rounded-md bg-primary px-2 py-0.5 text-[10px] font-black tracking-widest uppercase text-primary-foreground">
+                          <span className="inline-flex items-center rounded-md bg-primary px-2 py-0.5 text-xs font-medium text-primary-foreground">
                               Recomendado
                           </span>
                       </div>
@@ -113,7 +113,7 @@ export function StudyModeDialog({ deck, onClose }: StudyModeDialogProps) {
                   <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-2">
                           <h3 className="font-extrabold text-base sm:text-lg text-foreground">Combinar</h3>
-                          <span className="inline-flex items-center rounded-md bg-emerald-500/15 px-2 py-0.5 text-[10px] font-black uppercase tracking-widest text-emerald-600">Jogo</span>
+                          <span className="inline-flex items-center rounded-md bg-emerald-500/15 px-2 py-0.5 text-xs font-medium text-emerald-600">Jogo</span>
                       </div>
                       <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
                           Ligue <strong className="text-foreground">termo ↔ definição</strong> contra o relógio. Prática rápida e divertida{total < 2 ? " (precisa de 2+ cartões)" : ""}.

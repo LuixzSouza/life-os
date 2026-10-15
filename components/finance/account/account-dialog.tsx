@@ -195,7 +195,7 @@ export function AccountDialog({
         <form action={handleSubmit} className="flex flex-col flex-1 min-h-0" noValidate>
           <DialogBody className="space-y-5">
           <div className="space-y-2">
-            <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+            <Label className="text-xs font-medium text-muted-foreground ml-1">
               Nome da Conta
             </Label>
 
@@ -210,7 +210,7 @@ export function AccountDialog({
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+              <Label className="text-xs font-medium text-muted-foreground ml-1">
                 Tipo
               </Label>
 
@@ -229,7 +229,7 @@ export function AccountDialog({
             </div>
 
             <div className="space-y-2">
-              <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+              <Label className="text-xs font-medium text-muted-foreground ml-1">
                 Saldo Atual (R$)
               </Label>
 
@@ -252,7 +252,7 @@ export function AccountDialog({
           </div>
 
           <div className="space-y-3">
-            <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+            <Label className="text-xs font-medium text-muted-foreground ml-1">
               Identidade Visual
             </Label>
 

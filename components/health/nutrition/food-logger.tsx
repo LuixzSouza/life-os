@@ -482,7 +482,7 @@ function MealFormDialog({ meal, children }: { meal?: Meal; children?: React.Reac
                 )}
             </DialogTrigger>
 
-            <DialogContent size="xl" className="w-[96vw] h-[88vh] md:h-[660px] p-0 gap-0 overflow-hidden rounded-[1.75rem] border-border/40 shadow-2xl flex flex-col md:flex-row">
+            <DialogContent size="xl" className="w-[96vw] h-[88vh] md:h-[660px] p-0 gap-0 overflow-hidden rounded-2xl border-border/40 shadow-2xl flex flex-col md:flex-row">
 
                 {/* --- ESQUERDA: BUSCA DE ALIMENTOS --- */}
                 <div className={cn(

@@ -192,7 +192,7 @@ export function MatchGame({ deck, cards }: MatchGameProps) {
       {/* Tela de vitória */}
       {done && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 p-6 backdrop-blur-sm animate-in fade-in">
-          <div className="w-full max-w-sm space-y-5 rounded-[2rem] border border-border/50 bg-card p-8 text-center shadow-2xl animate-in zoom-in-95">
+          <div className="w-full max-w-sm space-y-5 rounded-2xl border border-border/50 bg-card p-8 text-center shadow-2xl animate-in zoom-in-95">
             <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-amber-400/20 to-primary/10 text-amber-500">
               <Trophy className="h-8 w-8" />
             </div>

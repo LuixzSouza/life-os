@@ -38,7 +38,7 @@ export function LiquefyCard() {
 
   return (
     <div className="rounded-2xl border border-border/40 bg-card p-5 shadow-sm transition-all hover:shadow-md">
-      <p className="mb-1 flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+      <p className="mb-1 flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
         <Snowflake className="h-3.5 w-3.5 text-sky-500" /> Tarefas congeladas · {tasks.length}
       </p>
       <p className="mb-3 text-[11px] text-muted-foreground">
@@ -68,7 +68,7 @@ export function LiquefyCard() {
                 size="sm"
                 disabled={busyId !== null}
                 onClick={() => melt(task)}
-                className="h-7 shrink-0 gap-1.5 rounded-lg px-2 text-[10px] font-black uppercase tracking-wider text-sky-500 hover:bg-sky-500/10 hover:text-sky-500"
+                className="h-7 shrink-0 gap-1.5 rounded-lg px-2 text-xs font-medium text-sky-500 hover:bg-sky-500/10 hover:text-sky-500"
               >
                 {busyId === task.id ? <Loader2 className="h-3 w-3 animate-spin" /> : <FlaskConical className="h-3 w-3" />}
                 Liquefazer

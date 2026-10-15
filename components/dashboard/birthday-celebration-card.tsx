@@ -29,7 +29,7 @@ export async function BirthdayCelebrationCard() {
           <PartyPopper className="h-5 w-5" />
         </span>
         <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-pink-600/80 dark:text-pink-400/80">
+          <p className="text-xs font-medium text-pink-600/80 dark:text-pink-400/80">
             Aniversário hoje
           </p>
           <p className="text-sm font-bold text-foreground">

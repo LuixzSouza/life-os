@@ -73,7 +73,7 @@ export function WishlistGrid({ items, accounts, totalBalance }: WishlistGridProp
                     {/* Poder de compra: quanto da lista o saldo atual cobre */}
                     <div className="lg:w-72 shrink-0">
                         <div className="flex justify-between items-end mb-2">
-                            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Poder de compra</span>
+                            <span className="text-xs font-medium text-muted-foreground">Poder de compra</span>
                             <span className="text-sm font-black font-mono text-primary">{smartView ? "•••" : `${Math.round(purchasePower)}%`}</span>
                         </div>
                         <div className="h-2.5 w-full bg-muted rounded-full overflow-hidden shadow-inner">
@@ -101,7 +101,7 @@ function SummaryTile({ icon, label, value, blur }: { icon: React.ReactNode; labe
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground truncate">{label}</p>
+                <p className="text-xs font-medium text-muted-foreground truncate">{label}</p>
                 <p className={cn("text-base font-black font-mono tracking-tight text-foreground truncate", blur && "blur-sm select-none")}>{value}</p>
             </div>
         </div>
@@ -182,7 +182,7 @@ function BuyDialog({ item, accounts, affordable }: { item: WishlistData; account
                     </div>
 
                     <div className="space-y-2">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Pagar com</p>
+                        <p className="text-xs font-medium text-muted-foreground ml-1">Pagar com</p>
                         <Select value={accountId} onValueChange={setAccountId}>
                             <SelectTrigger className="h-12 rounded-xl bg-muted/20 border-border/50 font-medium">
                                 <SelectValue placeholder="Escolha a conta" />

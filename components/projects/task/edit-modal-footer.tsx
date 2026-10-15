@@ -25,7 +25,7 @@ export function EditModalFooter({ onDelete, isSaving, onSave }: EditModalFooterP
         </AlertDialogTrigger>
 
         <AlertDialogContent
-          className="rounded-[2rem] border-border/40 shadow-2xl p-8 max-w-sm flex flex-col items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="rounded-2xl border-border/40 shadow-2xl p-8 max-w-sm flex flex-col items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
           <AlertDialogHeader className="flex flex-col items-center text-center space-y-4">
             <div className="h-16 w-16 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-500">

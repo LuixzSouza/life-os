@@ -79,7 +79,7 @@ export function StatusStepper({ status, onChange, className }: StatusStepperProp
       title={isDone ? 'Concluído — clique para reabrir' : `${cfg.label} — clique para mover para ${STEP_MAP[next].label}`}
       className={cn(
         'group/step inline-flex h-6 cursor-pointer items-center gap-1.5 rounded-lg border px-2 shadow-sm transition-all duration-300',
-        'text-[8px] font-black uppercase tracking-[0.12em]',
+        'text-[11px] font-medium',
         'hover:shadow-md active:scale-95',
         cfg.chip,
         className,

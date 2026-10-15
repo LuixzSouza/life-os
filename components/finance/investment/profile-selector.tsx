@@ -104,7 +104,7 @@ function ProfileCard({ active, onClick, icon: Icon, theme, title, subtitle, desc
                 <h3 className={cn("font-extrabold text-xl", active ? "text-foreground" : "text-muted-foreground group-hover:text-foreground transition-colors")}>
                     {title}
                 </h3>
-                <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/70">
+                <p className="text-xs font-medium text-muted-foreground/70">
                     {subtitle}
                 </p>
             </div>

@@ -51,7 +51,7 @@ export function BrainDumpBox({ title, description, placeholder, onParse }: Brain
     };
 
     return (
-        <div className="rounded-[1.5rem] border border-violet-500/20 bg-violet-500/[0.04] overflow-hidden">
+        <div className="rounded-2xl border border-violet-500/20 bg-violet-500/[0.04] overflow-hidden">
             <button
                 type="button"
                 onClick={() => setOpen((v) => !v)}
@@ -61,7 +61,7 @@ export function BrainDumpBox({ title, description, placeholder, onParse }: Brain
                     <Wand2 className="h-4 w-4" />
                 </div>
                 <div className="min-w-0 flex-1">
-                    <span className="block text-[11px] font-black uppercase tracking-widest text-violet-600 dark:text-violet-400">{title}</span>
+                    <span className="block text-[11px] font-medium text-violet-600 dark:text-violet-400">{title}</span>
                     <span className="block text-[10px] font-semibold text-muted-foreground truncate">{description}</span>
                 </div>
                 <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform", open && "rotate-180")} />

@@ -54,7 +54,7 @@ export function TaskFilters({ currentFilter, buildUrl, stats }: TaskFiltersProps
                 <div className="p-1.5 bg-muted rounded-lg border border-border/50">
                     <Filter className="h-3.5 w-3.5 text-muted-foreground" />
                 </div>
-                <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/70">
+                <h3 className="text-xs font-medium text-muted-foreground/70">
                     Filtragem
                 </h3>
             </div>

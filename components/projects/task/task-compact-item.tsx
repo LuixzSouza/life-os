@@ -73,12 +73,12 @@ export function TaskCompactItem({
 
             {/* Status só quando agrega: em progresso (azul) / revisão (roxo) */}
             {!isDone && status === 'IN_PROGRESS' && (
-              <span className="shrink-0 rounded bg-blue-500/10 px-1.5 py-px text-[8px] font-black uppercase tracking-wider text-blue-500">
+              <span className="shrink-0 rounded bg-blue-500/10 px-1.5 py-px text-xs font-medium text-blue-500">
                 Em progresso
               </span>
             )}
             {!isDone && status === 'REVIEW' && (
-              <span className="shrink-0 rounded bg-purple-500/10 px-1.5 py-px text-[8px] font-black uppercase tracking-wider text-purple-500">
+              <span className="shrink-0 rounded bg-purple-500/10 px-1.5 py-px text-xs font-medium text-purple-500">
                 Revisão
               </span>
             )}

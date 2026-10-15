@@ -64,7 +64,7 @@ export function MarketDetailModal({ item, onClose }: { item: MarketItem | null; 
               {/* Preço + variação do dia */}
               <div className="flex items-end justify-between gap-3">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Preço atual</p>
+                  <p className="text-xs font-medium text-muted-foreground">Preço atual</p>
                   <p className="font-mono text-3xl font-black tracking-tight text-foreground">{item.displayValue}</p>
                 </div>
                 <div className={cn(
@@ -135,7 +135,7 @@ function Stat({ label, value, tone = "default" }: { label: string; value: string
   const color = tone === "emerald" ? "text-emerald-600 dark:text-emerald-400" : tone === "rose" ? "text-rose-600 dark:text-rose-400" : "text-foreground";
   return (
     <div className="rounded-xl border border-border/40 bg-card p-3">
-      <p className="text-[9px] font-black uppercase tracking-widest text-muted-foreground leading-tight">{label}</p>
+      <p className="text-xs font-medium text-muted-foreground leading-tight">{label}</p>
       <p className={cn("mt-1 font-mono font-bold tabular-nums text-sm", color)}>{value}</p>
     </div>
   );

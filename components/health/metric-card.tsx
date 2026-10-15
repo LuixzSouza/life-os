@@ -68,7 +68,7 @@ export function MetricCard({
     return (
       <div className="flex items-center gap-2 mt-4">
         <div className={cn(
-          "inline-flex items-center gap-1 px-2 py-0.5 rounded-md border text-[10px] font-black uppercase tracking-tighter shadow-sm",
+          "inline-flex items-center gap-1 px-2 py-0.5 rounded-md border text-xs font-medium shadow-sm",
           config.style
         )}>
           <TrendIcon className="h-3 w-3 stroke-[3]" />
@@ -87,7 +87,7 @@ export function MetricCard({
     <Card
       onClick={onClick}
       className={cn(
-        "group relative overflow-hidden border-border/40 bg-card rounded-[1.5rem] transition-all duration-500 shadow-sm",
+        "group relative overflow-hidden border-border/40 bg-card rounded-2xl transition-all duration-500 shadow-sm",
         "hover:shadow-2xl hover:shadow-primary/5 hover:border-primary/30",
         onClick && "cursor-pointer active:scale-[0.98]"
       )}
@@ -101,7 +101,7 @@ export function MetricCard({
       <CardContent className="p-6 relative z-10">
         <div className="flex items-start justify-between mb-4">
           <div className="space-y-1">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/70">
+            <h3 className="text-xs font-medium text-muted-foreground/70">
               {title}
             </h3>
             {subtitle && (
@@ -131,7 +131,7 @@ export function MetricCard({
                 {value}
               </span>
               {unit && (
-                <span className="text-xs font-black text-muted-foreground/60 uppercase tracking-widest">
+                <span className="text-xs font-medium text-muted-foreground/60">
                   {unit}
                 </span>
               )}

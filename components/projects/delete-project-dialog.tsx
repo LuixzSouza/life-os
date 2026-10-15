@@ -68,7 +68,7 @@ export function DeleteProjectDialog({
 
         <DialogBody>
           <div className="rounded-2xl border border-border/50 bg-muted/30 p-4 text-left">
-            <p className="text-[10px] font-black uppercase tracking-[0.15em] text-muted-foreground mb-2">O que acontece</p>
+            <p className="text-xs font-medium text-muted-foreground mb-2">O que acontece</p>
             <ul className="space-y-1.5 text-xs text-muted-foreground/90">
               {taskCount !== undefined && taskCount > 0 && (
                 <li className="flex gap-1.5"><span className="text-primary">•</span> As <strong className="text-foreground/80">{taskCount}</strong> tarefas são preservadas e voltam ao restaurar.</li>

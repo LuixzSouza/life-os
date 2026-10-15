@@ -264,7 +264,7 @@ export function SubjectCard({
             variant="outline"
             onClick={startStudy}
             title="Abrir o modo foco nesta matéria"
-            className="h-8 shrink-0 gap-1 rounded-lg px-2.5 text-[10px] font-black uppercase tracking-wider hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+            className="h-8 shrink-0 gap-1 rounded-lg px-2.5 text-xs font-medium hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
           >
             <Play className="h-3 w-3" /> <span className="hidden sm:inline">Estudar</span>
           </Button>
@@ -310,7 +310,7 @@ export function SubjectCard({
               onClick={startStudy}
               title="Abrir o modo foco nesta matéria"
               className={cn(
-                "h-8 gap-1 rounded-lg px-2.5 text-[10px] font-black uppercase tracking-wider transition-all",
+                "h-8 gap-1 rounded-lg px-2.5 text-xs font-medium transition-all",
                 "hover:border-primary/40 hover:bg-primary/5 hover:text-primary",
                 "md:opacity-0 md:group-hover:opacity-100 md:focus-visible:opacity-100"
               )}
@@ -372,7 +372,7 @@ function NotesPill({ subjectId, count }: { subjectId: string; count: number }) {
       href={`/notes?subject=${subjectId}`}
       onClick={(e) => e.stopPropagation()}
       title={`Ver ${count} ${count === 1 ? "nota desta matéria" : "notas desta matéria"}`}
-      className="flex h-8 shrink-0 items-center gap-1 rounded-lg border border-border/60 bg-muted/40 px-2.5 text-[10px] font-black uppercase tracking-wider text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+      className="flex h-8 shrink-0 items-center gap-1 rounded-lg border border-border/60 bg-muted/40 px-2.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
     >
       <FileText className="h-3 w-3" /> {count}
     </Link>
@@ -386,7 +386,7 @@ function ReviewPill({ subjectId, due }: { subjectId: string; due: number }) {
       href={`/flashcards/review?subject=${subjectId}`}
       onClick={(e) => e.stopPropagation()}
       title={`Revisar ${due} ${due === 1 ? "cartão vencido" : "cartões vencidos"} desta matéria`}
-      className="flex h-8 shrink-0 items-center gap-1 rounded-lg border border-primary/30 bg-primary/10 px-2.5 text-[10px] font-black uppercase tracking-wider text-primary transition-colors hover:bg-primary/20"
+      className="flex h-8 shrink-0 items-center gap-1 rounded-lg border border-primary/30 bg-primary/10 px-2.5 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
     >
       <Zap className="h-3 w-3" /> {due}
     </Link>

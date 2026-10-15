@@ -242,7 +242,7 @@ export function MarketDashboard({ data: initialData, initialFavorites = [] }: { 
                                 )}
                                 {favorites.length > 0 && (
                                     <div className="flex flex-wrap gap-1.5 pt-1">
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mr-1 self-center">Seguindo:</span>
+                                        <span className="text-xs font-medium text-muted-foreground mr-1 self-center">Seguindo:</span>
                                         {favorites.map((t) => (
                                             <button key={t} onClick={() => toggleFavorite(t)} className="flex items-center gap-1 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 px-2 py-1 text-xs font-bold hover:bg-amber-500/20 transition-colors">
                                                 {t} <X className="h-3 w-3" />

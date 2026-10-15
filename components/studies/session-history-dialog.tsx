@@ -122,7 +122,7 @@ export function SessionHistoryDialog({ totalSessions }: { totalSessions: number 
                 size="sm"
                 disabled={isLoading}
                 onClick={() => fetchPage(sessions[sessions.length - 1]?.date.toISOString())}
-                className="h-8 gap-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest"
+                className="h-8 gap-1.5 rounded-xl text-xs font-medium"
               >
                 {isLoading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ChevronDown className="h-3.5 w-3.5" />}
                 Carregar mais

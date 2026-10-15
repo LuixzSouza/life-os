@@ -107,7 +107,7 @@ export function ModelSelector({ currentProvider, currentModel, configuredProvide
       {/* TRIGGER (BOTÃO VISÍVEL NO CHAT) */}
       <SelectTrigger 
         className={cn(
-            "h-9 px-4 text-[11px] font-black uppercase tracking-widest transition-all duration-300",
+            "h-9 px-4 text-[11px] font-medium transition-all duration-300",
             "bg-background/80 backdrop-blur-md border border-border/40 rounded-full",
             "focus:ring-2 focus:ring-primary/20 hover:border-primary/40 hover:bg-accent/50 shadow-sm",
             "min-w-[210px] w-auto data-[state=open]:border-primary/50",
@@ -140,7 +140,7 @@ export function ModelSelector({ currentProvider, currentModel, configuredProvide
         {MODEL_OPTIONS.map((group, groupIdx) => (
             <div key={group.category} className={cn(groupIdx > 0 && "mt-2 pt-2 border-t border-border/20")}>
                 
-                <div className="px-3 py-2 text-[9px] font-black text-muted-foreground/60 uppercase tracking-[0.2em]">
+                <div className="px-3 py-2 text-xs font-medium text-muted-foreground/60">
                     {group.category}
                 </div>
                 

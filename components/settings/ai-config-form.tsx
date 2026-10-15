@@ -95,10 +95,10 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
             {/* --- SELETOR DE PROVEDOR --- */}
             <div className="space-y-4">
                 <div className="flex items-center justify-between pb-2 border-b border-border/40">
-                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                    <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                         <Cpu className="h-4 w-4 text-primary" /> Motor de Processamento
                     </Label>
-                    <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground bg-muted/50 px-3 py-1 rounded-full border border-border/40">
+                    <span className="text-xs font-medium text-muted-foreground bg-muted/50 px-3 py-1 rounded-full border border-border/40">
                         Ativo: <span className={cn("text-foreground", isLocal ? "text-zinc-500" : "text-primary")}>{providerInfo?.name ?? provider}</span>
                     </span>
                 </div>
@@ -125,9 +125,9 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
 
             <div className="grid gap-6 md:grid-cols-2">
                 {/* --- INPUT: MODELO --- */}
-                <div className="space-y-3 bg-muted/10 p-5 rounded-[2rem] border border-border/40 relative">
+                <div className="space-y-3 bg-muted/10 p-5 rounded-2xl border border-border/40 relative">
                     <div className="flex justify-between items-center">
-                        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                        <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                             <Bot className="h-4 w-4" /> Versão do Modelo
                         </Label>
                         <Badge label="REQUERIDO" />
@@ -151,7 +151,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                                     onClick={() => setModel(m.value)}
                                     title={m.value}
                                     className={cn(
-                                        "text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full border transition-colors",
+                                        "text-xs font-medium px-2.5 py-1 rounded-full border transition-colors",
                                         model.trim() === m.value
                                             ? "bg-primary/10 text-primary border-primary/30"
                                             : "bg-background text-muted-foreground border-border/40 hover:border-primary/30 hover:text-foreground"
@@ -169,13 +169,13 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                 </div>
 
                 {/* --- INPUT: API KEY (DINÂMICO) --- */}
-                <div className={cn("space-y-3 p-5 rounded-[2rem] border transition-all duration-500 relative", isLocal ? "bg-muted/5 border-border/20 opacity-60 grayscale" : "bg-primary/5 border-primary/20 shadow-inner")}>
+                <div className={cn("space-y-3 p-5 rounded-2xl border transition-all duration-500 relative", isLocal ? "bg-muted/5 border-border/20 opacity-60 grayscale" : "bg-primary/5 border-primary/20 shadow-inner")}>
                     <div className="flex justify-between items-center">
-                        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                        <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                             <KeyRound className="h-4 w-4" /> Credencial de Acesso
                         </Label>
                         {!isLocal && (
-                            <Link href={providerInfo?.keyUrl || "#"} target="_blank" className="flex items-center gap-1 text-[9px] font-black uppercase tracking-widest text-primary hover:text-primary/80 transition-colors">
+                            <Link href={providerInfo?.keyUrl || "#"} target="_blank" className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors">
                                 Obter Chave <ExternalLink className="h-3 w-3" />
                             </Link>
                         )}
@@ -213,15 +213,15 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
             </div>
 
             {/* --- INPUT: PERSONALIDADE --- */}
-            <div className="space-y-3 bg-muted/10 p-5 rounded-[2rem] border border-border/40">
+            <div className="space-y-3 bg-muted/10 p-5 rounded-2xl border border-border/40">
                 <div className="flex items-center justify-between">
-                    <Label htmlFor="aiPersona" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+                    <Label htmlFor="aiPersona" className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
                         <Sparkles className="h-4 w-4 text-primary" /> Personalidade Base (System Prompt)
                     </Label>
                     {/* Feedback Dinâmico sobre o estado da Personalidade */}
                     <div className="flex items-center gap-3">
                         <span className={cn(
-                            "text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-sm border",
+                            "text-xs font-medium px-2 py-0.5 rounded-sm border",
                             isDefaultPersona ? "bg-muted/50 text-muted-foreground border-border/40" : "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
                         )}>
                             {isDefaultPersona ? "Padrão do Sistema" : "Personalizado"}
@@ -263,7 +263,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                     variant="outline"
                     onClick={handleTestConnection}
                     disabled={isTesting}
-                    className="font-black uppercase tracking-widest text-[10px] rounded-full h-12 px-6 border-border/60"
+                    className="font-medium text-xs rounded-full h-12 px-6 border-border/60"
                 >
                     {isTesting ? (
                         <span className="flex items-center gap-2"><Loader2 className="h-4 w-4 animate-spin"/> Testando...</span>
@@ -274,7 +274,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                 <Button
                     type="submit"
                     disabled={isLoading}
-                    className="bg-foreground text-background hover:bg-foreground/90 font-black uppercase tracking-widest text-[10px] rounded-full h-12 px-8 shadow-xl transition-transform hover:scale-105"
+                    className="bg-foreground text-background hover:bg-foreground/90 font-medium text-xs rounded-full h-12 px-8 shadow-xl transition-transform hover:scale-105"
                 >
                     {isLoading ? (
                         <span className="flex items-center gap-2"><Loader2 className="h-4 w-4 animate-spin"/> Atualizando Núcleo...</span>
@@ -305,14 +305,14 @@ function ProviderCard({ value, icon, title, active, colorClass, hasKey }: Provid
             <Label
                 htmlFor={`provider-${value}`}
                 className={cn(
-                    "flex flex-col items-center justify-center rounded-[1.5rem] border-2 p-4 cursor-pointer transition-all duration-300 h-full text-center group bg-background/50 backdrop-blur-sm",
+                    "flex flex-col items-center justify-center rounded-2xl border-2 p-4 cursor-pointer transition-all duration-300 h-full text-center group bg-background/50 backdrop-blur-sm",
                     active ? "border-primary shadow-lg shadow-primary/5 bg-primary/5 scale-[1.02]" : "border-border/40 hover:bg-muted/50 hover:border-primary/30"
                 )}
             >
                 <div className={cn("mb-2 transition-colors", active ? colorClass : "text-muted-foreground")}>
                     {icon}
                 </div>
-                <span className={cn("font-black uppercase tracking-widest text-[9px] block", active ? "text-foreground" : "text-muted-foreground")}>
+                <span className={cn("font-medium text-xs block", active ? "text-foreground" : "text-muted-foreground")}>
                     {title}
                 </span>
 

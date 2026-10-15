@@ -40,7 +40,7 @@ export function WardrobeItemCard({
     <Card
       onClick={() => isBuildingOutfit ? onToggleOutfit(item) : undefined}
       className={cn(
-        "group relative overflow-hidden border-border/40 shadow-sm transition-all duration-300 bg-card rounded-[1.25rem] flex flex-col",
+        "group relative overflow-hidden border-border/40 shadow-sm transition-all duration-300 bg-card rounded-2xl flex flex-col",
         isBuildingOutfit && "cursor-pointer hover:border-primary/40",
         isSelectedForOutfit ? "ring-2 ring-primary border-primary shadow-lg shadow-primary/10 scale-[0.98]" : "hover:shadow-xl hover:border-primary/20"
       )}

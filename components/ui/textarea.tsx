@@ -40,7 +40,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
 
           // 3. Paper: Padding generoso (estilo escrita de notas longas)
           variant === "paper" && [
-            "px-7 py-7 rounded-[2rem] border-none bg-muted/30 shadow-inner",
+            "px-7 py-7 rounded-2xl border-none bg-muted/30 shadow-inner",
             "focus-visible:bg-muted/50"
           ],
 

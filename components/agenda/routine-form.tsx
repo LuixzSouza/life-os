@@ -80,7 +80,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
         </div>
 
         {/* Time Grid (Início e Fim) */}
-        <div className="grid grid-cols-2 gap-4 bg-muted/10 p-4 rounded-[1.5rem] border border-border/40 shadow-inner">
+        <div className="grid grid-cols-2 gap-4 bg-muted/10 p-4 rounded-2xl border border-border/40 shadow-inner">
             <div className="space-y-2">
                 <Label className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
                     <Clock className="h-3 w-3" /> Início
@@ -154,7 +154,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
                 <Trash2 className="h-5 w-5" />
               </Button>
             </AlertDialogTrigger>
-            <AlertDialogContent className="rounded-[2.5rem] border-border/40 shadow-2xl p-8 max-w-sm fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[110]">
+            <AlertDialogContent className="rounded-2xl border-border/40 shadow-2xl p-8 max-w-sm fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[110]">
               <AlertDialogHeader className="items-center text-center">
                 <div className="h-14 w-14 bg-rose-500/10 text-rose-500 flex items-center justify-center rounded-2xl mb-4"><Trash2 className="h-6 w-6"/></div>
                 <AlertDialogTitle className="font-semibold text-xl">Apagar Bloco?</AlertDialogTitle>

@@ -46,7 +46,7 @@ export function ClientCard({
     : null;
 
   return (
-    <div className="flex flex-col rounded-[1.5rem] border border-border/40 bg-card/50 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+    <div className="flex flex-col rounded-2xl border border-border/40 bg-card/50 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
 
       <div className="p-5 flex justify-between items-start border-b border-border/10 bg-muted/5">
         <div className="flex gap-3.5 items-center min-w-0 flex-1">
@@ -139,11 +139,11 @@ export function ClientCard({
       {/* Resumo financeiro */}
       <div className="flex items-stretch divide-x divide-border/30 border-b border-border/10 bg-muted/5">
         <div className="flex-1 px-5 py-3">
-          <p className="text-[9px] font-black uppercase tracking-widest text-muted-foreground">A Receber</p>
+          <p className="text-xs font-medium text-muted-foreground">A Receber</p>
           <p className="text-sm font-bold font-mono text-emerald-600 dark:text-emerald-400">{formatCurrency(clientReceivable)}</p>
         </div>
         <div className="flex-1 px-5 py-3">
-          <p className={cn("text-[9px] font-black uppercase tracking-widest", clientOverdue > 0 ? "text-rose-500" : "text-muted-foreground")}>Em Atraso</p>
+          <p className={cn("text-xs font-medium", clientOverdue > 0 ? "text-rose-500" : "text-muted-foreground")}>Em Atraso</p>
           <p className={cn("text-sm font-bold font-mono", clientOverdue > 0 ? "text-rose-600" : "text-muted-foreground/50")}>{formatCurrency(clientOverdue)}</p>
         </div>
       </div>

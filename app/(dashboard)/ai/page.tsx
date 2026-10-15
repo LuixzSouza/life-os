@@ -173,12 +173,12 @@ export default async function AIPage({ searchParams }: AIPageProps) {
                         </div>
                         <div className="min-w-0">
                             <div className="flex items-center gap-2">
-                                <h1 className="truncate text-xs font-black uppercase tracking-[0.2em] text-foreground">Cérebro Digital</h1>
+                                <h1 className="truncate text-xs font-medium text-foreground">Cérebro Digital</h1>
                                 <Badge variant="outline" className="hidden sm:inline-flex text-[8px] font-black px-1.5 h-4 border-primary/30 text-primary bg-primary/5 animate-pulse">LIVE</Badge>
                             </div>
                             <div className="flex items-center gap-2 mt-1">
                                 <Badge variant="secondary" className={cn(
-                                    "text-[9px] px-2 h-5 font-black uppercase tracking-widest border gap-1.5",
+                                    "text-xs px-2 h-5 font-medium border gap-1.5",
                                     isLocal ? "border-zinc-500/20 text-zinc-500 bg-zinc-500/5" : "border-primary/20 text-primary bg-primary/5"
                                 )}>
                                     <ProviderIcon className="w-3 h-3" />
@@ -226,7 +226,7 @@ export default async function AIPage({ searchParams }: AIPageProps) {
                             title="Consumo real informado pelo provedor a cada resposta (estimativa ≈4 caracteres/token só quando ele não informa), zerado todo dia 1º. Planos grátis NÃO têm teto mensal de tokens — o limite real é de requisições por minuto/dia, imposto pelo provedor."
                         >
                             <div className="flex flex-col items-end">
-                                <span className="text-[8px] font-black uppercase tracking-widest text-muted-foreground/70">Uso no mês</span>
+                                <span className="text-xs font-medium text-muted-foreground/70">Uso no mês</span>
                                 <span className="text-xs font-mono font-bold text-foreground">
                                     {compact.format(monthlyTokensUsed)} <span className="text-[9px]">TKN</span>
                                     <span className="ml-1 text-[8px] font-bold uppercase tracking-widest text-muted-foreground/60">· sem teto mensal</span>
@@ -236,7 +236,7 @@ export default async function AIPage({ searchParams }: AIPageProps) {
                             <div className="flex items-center gap-1.5 text-muted-foreground" title={`O contador zera dia 1º. Faltam ${daysUntilRenewal} dias.`}>
                                 <CalendarClock className="w-4 h-4" />
                                 <div className="flex flex-col">
-                                    <span className="text-[8px] font-black uppercase tracking-widest">Zera em</span>
+                                    <span className="text-xs font-medium">Zera em</span>
                                     <span className="text-[9px] font-bold">{daysUntilRenewal} dias</span>
                                 </div>
                             </div>
@@ -247,7 +247,7 @@ export default async function AIPage({ searchParams }: AIPageProps) {
                         className="ml-auto flex w-40 shrink-0 flex-col items-end gap-1 sm:w-48"
                         title={`Memória DESTA conversa: ~${estimatedTokens.toLocaleString("pt-BR")} de ${CONTEXT_LIMIT.toLocaleString("pt-BR")} tokens que o ${currentModel} aceita por vez. Chegando perto, comece uma conversa nova.`}
                     >
-                        <div className="flex w-full justify-between text-[9px] font-black uppercase tracking-widest text-muted-foreground">
+                        <div className="flex w-full justify-between text-xs font-medium text-muted-foreground">
                             <span className="flex items-center gap-1"><Activity className="w-2.5 h-2.5" /> Contexto</span>
                             <span className={status.text}>{memoryPercentage}%</span>
                         </div>

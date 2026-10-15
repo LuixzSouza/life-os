@@ -610,7 +610,7 @@ function AtomicityHint({ title, content }: { title: string; content: string }) {
     >
       <Atom className={cn("mt-0.5 h-3.5 w-3.5 shrink-0", report.level === "dense" ? "text-amber-500" : "text-muted-foreground")} />
       <div className="space-y-0.5">
-        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+        <p className="text-xs font-medium text-muted-foreground">
           Nota atômica · 1 ideia por nota
         </p>
         {report.hints.map((h) => (

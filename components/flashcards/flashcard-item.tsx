@@ -109,7 +109,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
           
           {/* FRENTE */}
           <div className="p-6 md:p-8 space-y-4 bg-background/50">
-            <p className="text-[10px] uppercase font-black text-muted-foreground tracking-[0.2em] flex items-center gap-2">
+            <p className="text-xs font-medium text-muted-foreground flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary shadow-[0_0_8px_rgba(var(--primary),0.5)] transition-all" />
               Pergunta
             </p>
@@ -145,7 +145,7 @@ export function FlashcardItem({ card, index, total, deckId }: FlashcardItemProps
 
           {/* VERSO */}
           <div className="p-6 md:p-8 space-y-4 bg-muted/20 group-hover:bg-muted/40 transition-colors">
-            <p className="text-[10px] uppercase font-black text-muted-foreground tracking-[0.2em] flex items-center gap-2">
+            <p className="text-xs font-medium text-muted-foreground flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-indigo-500/40 group-hover:bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.5)] transition-all" />
               Resposta
             </p>

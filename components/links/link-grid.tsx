@@ -307,7 +307,7 @@ export function LinkGrid({ links }: { links: SavedLink[] }) {
                     {faviconUrl ? (
                       <img src={faviconUrl} alt={domain ?? link.title} className="h-12 w-12 rounded-xl shadow-sm bg-background p-1.5 border border-border/40" />
                     ) : (
-                      <span className="text-3xl font-black text-muted-foreground/30 uppercase">{link.title.slice(0, 2)}</span>
+                      <span className="text-3xl font-semibold text-muted-foreground/30">{link.title.slice(0, 2)}</span>
                     )}
                     </div>
                 )}

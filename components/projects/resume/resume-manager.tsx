@@ -82,7 +82,7 @@ export function ResumeManager({ resumes }: { resumes: ResumeRecord[] }) {
     // --- MODO EDITOR ---
     if (editing) {
         return (
-            <div className="bg-white dark:bg-zinc-950 border border-border/40 rounded-[2rem] shadow-sm overflow-hidden p-2">
+            <div className="bg-white dark:bg-zinc-950 border border-border/40 rounded-2xl shadow-sm overflow-hidden p-2">
                 <ResumeBuilder
                     resumeId={editing.id}
                     resumeName={editing.name}

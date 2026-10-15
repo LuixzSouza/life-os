@@ -129,13 +129,13 @@ export function FieldFocusProvider({ children }: { children: React.ReactNode }) 
                                 />
                                 <DialogBody className="space-y-4">
                                     <div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Antes</span>
+                                        <span className="text-xs font-medium text-muted-foreground/60">Antes</span>
                                         <div className="mt-1 max-h-32 overflow-y-auto whitespace-pre-wrap rounded-xl border border-border/40 bg-muted/20 p-3 text-xs text-muted-foreground">
                                             {state.cfg.original || "(vazio)"}
                                         </div>
                                     </div>
                                     <div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-violet-500">Depois (editável)</span>
+                                        <span className="text-xs font-medium text-violet-500">Depois (editável)</span>
                                         <Textarea
                                             value={draft}
                                             onChange={(e) => setDraft(e.target.value)}

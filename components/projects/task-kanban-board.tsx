@@ -75,7 +75,7 @@ export function TaskKanbanBoard({ initialTasks }: TaskKanbanBoardProps) {
             <div className="flex items-center justify-between px-2 py-2 mb-1">
               <div className="flex items-center gap-2">
                 <Icon className={cn('h-4 w-4', col.accent)} />
-                <span className="text-[11px] font-black uppercase tracking-widest text-foreground/80">{col.label}</span>
+                <span className="text-[11px] font-medium text-foreground/80">{col.label}</span>
               </div>
               <span className="text-[10px] font-black text-muted-foreground bg-background border border-border/40 rounded-full h-5 min-w-5 px-1.5 flex items-center justify-center">
                 {colTasks.length}

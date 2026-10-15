@@ -75,11 +75,11 @@ export async function BlindSpotRadar() {
   return (
     <div className="rounded-2xl border border-border/40 bg-card p-5 shadow-sm transition-all hover:shadow-md">
       <div className="mb-4 flex items-center justify-between gap-2">
-        <p className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+        <p className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
           <Radar className="h-3.5 w-3.5 text-primary" /> Radar de pontos cegos · {WINDOW_DAYS} dias
         </p>
         {blind.length > 0 && (
-          <span className="rounded-md bg-rose-500/10 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-rose-500">
+          <span className="rounded-md bg-rose-500/10 px-2 py-0.5 text-xs font-medium text-rose-500">
             {blind.length} área(s) no escuro
           </span>
         )}

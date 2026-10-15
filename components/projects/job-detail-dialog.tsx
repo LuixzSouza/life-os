@@ -147,7 +147,7 @@ export function JobDetailDialog({ job, resumes, onOpenChange }: JobDetailDialogP
               {/* Notas e observações (Markdown) */}
               {job.requirements && job.requirements.trim() && (
                 <div className="rounded-xl border border-border/40 bg-muted/10 p-4">
-                  <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-2 flex items-center gap-1.5">
+                  <h4 className="text-xs font-medium text-muted-foreground mb-2 flex items-center gap-1.5">
                     <FileText className="h-3 w-3" /> Notas e observações
                   </h4>
                   <div className="prose prose-sm dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1 prose-code:rounded prose-code:before:content-none prose-code:after:content-none">
@@ -159,7 +159,7 @@ export function JobDetailDialog({ job, resumes, onOpenChange }: JobDetailDialogP
               {/* Timeline do funil (eventos de estágio) */}
               {job.events && job.events.length > 0 && (
                 <div className="rounded-xl border border-border/40 bg-muted/10 p-4">
-                  <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-3">Linha do tempo</h4>
+                  <h4 className="text-xs font-medium text-muted-foreground mb-3">Linha do tempo</h4>
                   <div className="space-y-2.5">
                     {job.events.map((e, i) => {
                       const info = STATUS_MAP[e.status] ?? STATUS_MAP.APPLIED;

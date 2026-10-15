@@ -204,7 +204,7 @@ export function TimelineFeed({ initialItems }: { initialItems: ClientActivity[] 
       <div className="space-y-2">
         {presentModules.length > 1 && (
           <div className="flex items-center gap-2 overflow-x-auto pb-0.5 scrollbar-hide">
-            <span className="flex shrink-0 items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground/50">
+            <span className="flex shrink-0 items-center gap-1.5 text-xs font-medium text-muted-foreground/50">
               <Filter className="h-3 w-3" /> Módulo
             </span>
             {presentModules.map(([m, count]) => {
@@ -232,7 +232,7 @@ export function TimelineFeed({ initialItems }: { initialItems: ClientActivity[] 
 
         {presentActions.length > 1 && (
           <div className="flex items-center gap-2 overflow-x-auto pb-0.5 scrollbar-hide">
-            <span className="flex shrink-0 items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground/50">
+            <span className="flex shrink-0 items-center gap-1.5 text-xs font-medium text-muted-foreground/50">
               <Activity className="h-3 w-3" /> Ação
             </span>
             {presentActions.map(([a, count]) => {
@@ -286,7 +286,7 @@ export function TimelineFeed({ initialItems }: { initialItems: ClientActivity[] 
           {groups.map(([day, rows]) => (
             <section key={day}>
               <div className="mb-2.5 flex items-center gap-2">
-                <h2 className="text-[11px] font-black uppercase tracking-widest text-foreground/70 first-letter:uppercase">{day}</h2>
+                <h2 className="text-[11px] font-medium text-foreground/70 first-letter:uppercase">{day}</h2>
                 <span className="rounded-full bg-muted/60 px-1.5 py-px text-[10px] font-bold tabular-nums text-muted-foreground/60">{rows.length}</span>
                 <div className="h-px flex-1 bg-gradient-to-r from-border/60 to-transparent" />
               </div>
@@ -361,7 +361,7 @@ export function TimelineFeed({ initialItems }: { initialItems: ClientActivity[] 
             variant="outline"
             onClick={loadMore}
             disabled={isLoading}
-            className="h-9 gap-1.5 rounded-xl text-[11px] font-black uppercase tracking-widest"
+            className="h-9 gap-1.5 rounded-xl text-[11px] font-medium"
           >
             {isLoading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ChevronDown className="h-3.5 w-3.5" />}
             Carregar mais

@@ -156,7 +156,7 @@ export function TransactionsView({
 
                     {/* Resumo Dinâmico */}
                     <div className="lg:col-span-1 rounded-2xl border border-border/40 bg-card p-6 shadow-sm flex flex-col justify-center">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-4 flex items-center gap-2">
+                        <p className="text-xs font-medium text-muted-foreground mb-4 flex items-center gap-2">
                             <Filter className="h-3.5 w-3.5" /> {PERIOD_LABELS[filters.period] ?? "Período"}
                         </p>
 
@@ -340,7 +340,7 @@ export function TransactionsView({
                         <section key={group.key}>
                             {/* Cabeçalho do dia: rótulo + saldo do dia */}
                             <div className="flex items-baseline justify-between gap-3 px-2 pb-2">
-                                <h3 className="text-xs font-black uppercase tracking-widest text-muted-foreground">
+                                <h3 className="text-xs font-medium text-muted-foreground">
                                     {group.label}
                                 </h3>
                                 <span className={cn(
@@ -351,7 +351,7 @@ export function TransactionsView({
                                 </span>
                             </div>
 
-                            <div className="overflow-hidden rounded-[1.25rem] border border-border/40 bg-card shadow-sm divide-y divide-border/30">
+                            <div className="overflow-hidden rounded-2xl border border-border/40 bg-card shadow-sm divide-y divide-border/30">
                                 {group.rows.map((t) => {
                                     const isIncome = t.type === "INCOME";
                                     return (
@@ -417,7 +417,7 @@ export function TransactionsView({
 
                     {/* PAGINAÇÃO */}
                     {totalPages > 1 && (
-                        <div className="flex items-center justify-between gap-4 rounded-[1.25rem] border border-border/40 bg-card px-4 py-3 shadow-sm sm:px-5">
+                        <div className="flex items-center justify-between gap-4 rounded-2xl border border-border/40 bg-card px-4 py-3 shadow-sm sm:px-5">
                             <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
                                 Página {page} de {totalPages}
                             </span>

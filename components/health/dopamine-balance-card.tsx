@@ -56,10 +56,10 @@ export async function DopamineBalanceCard() {
   return (
     <div className="rounded-2xl border border-border/40 bg-card p-5 shadow-sm transition-all hover:shadow-md">
       <div className="mb-4 flex items-center justify-between gap-2">
-        <p className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+        <p className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
           <Scale className="h-3.5 w-3.5 text-primary" /> Balanço dopaminérgico · {WINDOW_DAYS} dias
         </p>
-        <span className="rounded-md bg-muted/60 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-muted-foreground">
+        <span className="rounded-md bg-muted/60 px-2 py-0.5 text-xs font-medium text-muted-foreground">
           experimento
         </span>
       </div>
@@ -71,7 +71,7 @@ export async function DopamineBalanceCard() {
 
       <div className="grid gap-3 sm:grid-cols-2">
         <div className="rounded-xl border border-border/40 bg-background p-3">
-          <p className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-emerald-500">
+          <p className="flex items-center gap-1.5 text-xs font-medium text-emerald-500">
             <Zap className="h-3 w-3" /> Conquistada · {earnedPct}%
           </p>
           <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
@@ -83,7 +83,7 @@ export async function DopamineBalanceCard() {
           </p>
         </div>
         <div className="rounded-xl border border-border/40 bg-background p-3">
-          <p className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-rose-400">
+          <p className="flex items-center gap-1.5 text-xs font-medium text-rose-400">
             <Popcorn className="h-3 w-3" /> Barata (proxy) · {100 - earnedPct}%
           </p>
           <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">

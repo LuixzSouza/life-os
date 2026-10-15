@@ -270,7 +270,7 @@ export function ProjectCardMenu({ projectId, slug, title, taskCount, status = "A
                   onSelect={() => changePara(key)}
                   className="rounded-lg px-2.5 py-2 gap-2 cursor-pointer"
                 >
-                  <span className={cn("rounded px-1.5 py-0.5 text-[9px] font-black uppercase tracking-widest", PARA_META[key].badgeClass)}>
+                  <span className={cn("rounded px-1.5 py-0.5 text-xs font-medium", PARA_META[key].badgeClass)}>
                     {PARA_META[key].label}
                   </span>
                   <span className="flex-1 truncate text-[10px] text-muted-foreground">{PARA_META[key].hint}</span>

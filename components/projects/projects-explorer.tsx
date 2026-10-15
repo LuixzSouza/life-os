@@ -197,7 +197,7 @@ export function ProjectsExplorer({ projects, inbox }: { projects: ProjectItem[];
 
         {/* Grid */}
         {visible.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-[2rem] bg-muted/10 text-center">
+          <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
             <div className="h-16 w-16 rounded-2xl bg-muted/50 flex items-center justify-center mb-4">
               <LayoutGrid className="h-8 w-8 text-muted-foreground/30" />
             </div>

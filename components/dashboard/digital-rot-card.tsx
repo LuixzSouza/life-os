@@ -66,7 +66,7 @@ export function DigitalRotCard() {
   return (
     <div className="rounded-2xl border border-border/40 bg-card p-5 shadow-sm transition-all hover:shadow-md">
       <div className="mb-1 flex items-center justify-between gap-2">
-        <p className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+        <p className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
           <Ghost className="h-3.5 w-3.5 text-violet-500" /> Digital rot · {items.length} item(ns) apodrecendo
         </p>
         <Button
@@ -74,7 +74,7 @@ export function DigitalRotCard() {
           size="sm"
           onClick={sweepAll}
           disabled={sweeping}
-          className="h-7 gap-1.5 rounded-lg px-2 text-[10px] font-black uppercase tracking-wider text-violet-500 hover:bg-violet-500/10 hover:text-violet-500"
+          className="h-7 gap-1.5 rounded-lg px-2 text-xs font-medium text-violet-500 hover:bg-violet-500/10 hover:text-violet-500"
         >
           {sweeping ? <Loader2 className="h-3 w-3 animate-spin" /> : <Archive className="h-3 w-3" />}
           Limpeza fantasma

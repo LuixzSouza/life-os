@@ -23,13 +23,13 @@ interface SkillCategoryProps {
 }
 
 const SkillCategory = ({ title, category, data, onAdd, onRemove, onUpdate }: SkillCategoryProps) => (
-  <div className="space-y-4 bg-muted/10 border border-border/40 p-5 rounded-[1.5rem]">
+  <div className="space-y-4 bg-muted/10 border border-border/40 p-5 rounded-2xl">
     <div className="flex justify-between items-center border-b border-border/40 pb-3">
       <div className="flex items-center gap-2">
         <div className="h-6 w-6 rounded-md bg-primary/10 flex items-center justify-center text-primary">
             <Code2 className="h-3 w-3" />
         </div>
-        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{title}</Label>
+        <Label className="text-xs font-medium text-muted-foreground">{title}</Label>
       </div>
       <Button size="icon" variant="ghost" aria-label="Adicionar habilidade" className="h-7 w-7 rounded-lg bg-background shadow-sm hover:bg-primary/10 hover:text-primary" onClick={() => onAdd(category)}>
         <Plus className="h-3.5 w-3.5" />
@@ -71,7 +71,7 @@ const SkillCategory = ({ title, category, data, onAdd, onRemove, onUpdate }: Ski
         </div>
       ))}
       {data.skills[category].length === 0 && (
-        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/30 text-center py-4 border-2 border-dashed border-border/40 rounded-xl">
+        <p className="text-xs font-medium text-muted-foreground/30 text-center py-4 border-2 border-dashed border-border/40 rounded-xl">
           Nenhuma habilidade listada.
         </p>
       )}
@@ -93,12 +93,12 @@ const SoftSkills = ({ data, onChange }: SkillsFormProps) => {
   const removeTag = (tag: string) => onChange({ ...data, skills: { ...data.skills, softSkills: data.skills.softSkills.filter(t => t !== tag) } });
 
   return (
-    <div className="space-y-4 bg-muted/10 border border-border/40 p-5 rounded-[1.5rem]">
+    <div className="space-y-4 bg-muted/10 border border-border/40 p-5 rounded-2xl">
       <div className="flex items-center gap-2 border-b border-border/40 pb-3">
         <div className="h-6 w-6 rounded-md bg-primary/10 flex items-center justify-center text-primary">
           <Heart className="h-3 w-3" />
         </div>
-        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Soft Skills</Label>
+        <Label className="text-xs font-medium text-muted-foreground">Soft Skills</Label>
       </div>
       <div className="flex gap-2">
         <Input
@@ -124,7 +124,7 @@ const SoftSkills = ({ data, onChange }: SkillsFormProps) => {
           ))}
         </div>
       ) : (
-        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/30 text-center py-4 border-2 border-dashed border-border/40 rounded-xl">
+        <p className="text-xs font-medium text-muted-foreground/30 text-center py-4 border-2 border-dashed border-border/40 rounded-xl">
           Nenhuma soft skill listada.
         </p>
       )}

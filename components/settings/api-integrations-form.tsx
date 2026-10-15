@@ -55,7 +55,7 @@ const StatusIndicator = ({ status }: { status: APIProvider['status'] }) => {
   return (
     <div className="flex items-center gap-2">
       <div className={`h-2 w-2 rounded-full ${color}`} />
-      <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{label}</span>
+      <span className="text-xs font-medium text-muted-foreground">{label}</span>
     </div>
   );
 };
@@ -66,7 +66,7 @@ const SubmitButton: React.FC = () => {
     <Button
       type="submit"
       disabled={pending}
-      className="w-full sm:w-auto px-8 gap-2 bg-foreground text-background hover:bg-foreground/90 font-black uppercase tracking-widest text-[10px] shadow-xl rounded-full transition-transform hover:scale-105"
+      className="w-full sm:w-auto px-8 gap-2 bg-foreground text-background hover:bg-foreground/90 font-medium text-xs shadow-xl rounded-full transition-transform hover:scale-105"
     >
       {pending ? (
         <Loader2 className="h-4 w-4 animate-spin" />
@@ -132,7 +132,7 @@ const APIInputField: React.FC<{
   const currentStatus = active ? (value.trim() ? "active" : "pending") : "inactive";
 
   return (
-    <Card className="overflow-hidden border-border/40 hover:border-primary/40 transition-all duration-500 group rounded-[2rem] bg-muted/5">
+    <Card className="overflow-hidden border-border/40 hover:border-primary/40 transition-all duration-500 group rounded-2xl bg-muted/5">
       <CardHeader className="pb-3 border-b border-border/20">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-3">
@@ -141,7 +141,7 @@ const APIInputField: React.FC<{
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <CardTitle className="text-xs font-black uppercase tracking-wider">{field.label}</CardTitle>
+                <CardTitle className="text-xs font-medium">{field.label}</CardTitle>
                 <StatusIndicator status={currentStatus} />
               </div>
               <CardDescription className="text-[10px] font-medium mt-1">{field.description}</CardDescription>
@@ -156,11 +156,11 @@ const APIInputField: React.FC<{
       <CardContent className="space-y-4 pt-4">
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <Label htmlFor={field.id} className="text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5 text-muted-foreground">
+            <Label htmlFor={field.id} className="text-xs font-medium flex items-center gap-1.5 text-muted-foreground">
               <Key className="h-3.5 w-3.5" /> Hash/Key
             </Label>
             <div className="flex items-center gap-2">
-              <button type="button" onClick={toggleActive} className={cn("text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full transition-colors border", active ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" : "bg-background border-border/40 text-muted-foreground hover:bg-muted")}>
+              <button type="button" onClick={toggleActive} className={cn("text-xs font-medium px-3 py-1 rounded-full transition-colors border", active ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" : "bg-background border-border/40 text-muted-foreground hover:bg-muted")}>
                 {active ? "Habilitado" : "Desabilitado"}
               </button>
               {field.secret && (
@@ -268,7 +268,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
               <Plug className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h2 className="text-xl font-black uppercase tracking-widest text-foreground">API Hub</h2>
+            <h2 className="text-xl font-semibold text-foreground">API Hub</h2>
             <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Conecte o Life OS ao mundo exterior.</p>
           </div>
         </div>
@@ -283,13 +283,13 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         {/* 🟢 REMOVIDA A TAB DA IA DAQUI */}
         <TabsList className="grid w-full grid-cols-3 lg:w-fit bg-muted/50 p-1.5 rounded-full h-auto">
-          <TabsTrigger value="content" className="gap-2 rounded-full text-xs font-black uppercase tracking-widest py-2.5 data-[state=active]:bg-background data-[state=active]:shadow-sm">
+          <TabsTrigger value="content" className="gap-2 rounded-full text-xs font-medium py-2.5 data-[state=active]:bg-background data-[state=active]:shadow-sm">
               <Film className="h-3.5 w-3.5" /> Entretenimento
           </TabsTrigger>
-          <TabsTrigger value="nutrition" className="gap-2 rounded-full text-xs font-black uppercase tracking-widest py-2.5 data-[state=active]:bg-background data-[state=active]:shadow-sm">
+          <TabsTrigger value="nutrition" className="gap-2 rounded-full text-xs font-medium py-2.5 data-[state=active]:bg-background data-[state=active]:shadow-sm">
               <Salad className="h-3.5 w-3.5" /> Nutrição
           </TabsTrigger>
-          <TabsTrigger value="finance" className="gap-2 rounded-full text-xs font-black uppercase tracking-widest py-2.5 data-[state=active]:bg-background data-[state=active]:shadow-sm">
+          <TabsTrigger value="finance" className="gap-2 rounded-full text-xs font-medium py-2.5 data-[state=active]:bg-background data-[state=active]:shadow-sm">
               <Banknote className="h-3.5 w-3.5" /> Open Finance
           </TabsTrigger>
         </TabsList>
@@ -309,7 +309,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
           </TabsContent>
 
           <TabsContent value="nutrition" className="space-y-4 m-0">
-            <Card className="overflow-hidden border-border/40 rounded-[2rem] bg-muted/5">
+            <Card className="overflow-hidden border-border/40 rounded-2xl bg-muted/5">
               <CardHeader className="pb-3 border-b border-border/20">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
@@ -318,7 +318,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
                     </div>
                     <div>
                       <div className="flex items-center gap-3">
-                        <CardTitle className="text-xs font-black uppercase tracking-wider">Open Food Facts</CardTitle>
+                        <CardTitle className="text-xs font-medium">Open Food Facts</CardTitle>
                         <StatusIndicator status={foodApiEnabled ? "active" : "inactive"} />
                       </div>
                       <CardDescription className="text-[10px] font-medium mt-1">
@@ -341,7 +341,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
                     type="button"
                     onClick={() => setFoodApiEnabled(v => !v)}
                     className={cn(
-                      "shrink-0 text-[9px] font-black uppercase tracking-widest px-4 py-2 rounded-full transition-colors border",
+                      "shrink-0 text-xs font-medium px-4 py-2 rounded-full transition-colors border",
                       foodApiEnabled
                         ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
                         : "bg-background border-border/40 text-muted-foreground hover:bg-muted"
@@ -367,7 +367,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
             <CardContent className="p-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
                 <div>
-                    <p className="text-[11px] font-black uppercase tracking-widest text-foreground flex items-center gap-2">
+                    <p className="text-[11px] font-medium text-foreground flex items-center gap-2">
                         <Database className="h-3.5 w-3.5 text-primary" /> Commit Manual
                     </p>
                     <p className="text-[9px] font-medium text-muted-foreground/70 mt-1">

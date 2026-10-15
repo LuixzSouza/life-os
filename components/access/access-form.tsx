@@ -159,13 +159,13 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
         {/* TABS TÁTICAS */}
         <Tabs value={accessType} onValueChange={(v) => setAccessType(v as AccessType)} className="w-full">
             <TabsList className="grid w-full grid-cols-3 p-1 bg-muted/20 border border-border/40 h-12 rounded-2xl">
-              <TabsTrigger value="PERSONAL" className="gap-2 h-full rounded-xl font-black uppercase tracking-widest text-[10px] data-[state=active]:bg-background data-[state=active]:shadow-lg">
+              <TabsTrigger value="PERSONAL" className="gap-2 h-full rounded-xl font-medium text-xs data-[state=active]:bg-background data-[state=active]:shadow-lg">
                   <UserCircle className="h-4 w-4 opacity-70" /> Pessoal
               </TabsTrigger>
-              <TabsTrigger value="CLIENT" className="gap-2 h-full rounded-xl font-black uppercase tracking-widest text-[10px] data-[state=active]:bg-background data-[state=active]:shadow-lg">
+              <TabsTrigger value="CLIENT" className="gap-2 h-full rounded-xl font-medium text-xs data-[state=active]:bg-background data-[state=active]:shadow-lg">
                   <Briefcase className="h-4 w-4 opacity-70" /> Cliente
               </TabsTrigger>
-              <TabsTrigger value="NOTE" className="gap-2 h-full rounded-xl font-black uppercase tracking-widest text-[10px] data-[state=active]:bg-background data-[state=active]:shadow-lg">
+              <TabsTrigger value="NOTE" className="gap-2 h-full rounded-xl font-medium text-xs data-[state=active]:bg-background data-[state=active]:shadow-lg">
                   <StickyNote className="h-4 w-4 opacity-70" /> Nota
               </TabsTrigger>
             </TabsList>
@@ -178,7 +178,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
             {/* CAMPO CONDICIONAL: CLIENTE */}
             {accessType === "CLIENT" && (
                 <div className="space-y-2 animate-in slide-in-from-top-4 duration-300">
-                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Identificação do Cliente</Label>
+                    <Label className="text-xs font-medium text-muted-foreground ml-1">Identificação do Cliente</Label>
                     <div className="relative group">
                         <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary group-focus-within:text-primary transition-colors z-10" />
                         <Input
@@ -195,7 +195,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
             {/* GRID: TÍTULO E CATEGORIA */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                  <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">
                       {isNote ? "Título" : accessType === "CLIENT" ? "Serviço / Instância" : "Plataforma"}
                   </Label>
                   <div className="relative group">
@@ -211,7 +211,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
               </div>
 
               <div className="space-y-2">
-                  <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Categoria de Segurança</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Categoria de Segurança</Label>
                   <Select name="category" defaultValue={item?.category ?? (accessType === "CLIENT" ? "WORK" : "SOCIAL")}>
                     <SelectTrigger className="h-12 bg-muted/10 border-border/40 rounded-xl font-bold text-xs uppercase tracking-widest">
                         <SelectValue />
@@ -230,7 +230,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
             <>
             {/* USUÁRIO */}
             <div className="space-y-2">
-              <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">ID de Usuário / Email</Label>
+              <Label className="text-xs font-medium text-muted-foreground ml-1">ID de Usuário / Email</Label>
               <div className="relative group">
                   <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors z-10" />
                   <Input
@@ -246,8 +246,8 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
             {/* SENHA & GERADOR */}
             <div className="space-y-2 p-4 bg-muted/10 rounded-2xl border border-border/40 shadow-inner">
               <div className="flex justify-between items-center mb-1">
-                  <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Chave de Acesso</Label>
-                  <div className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-tighter text-emerald-500 bg-emerald-500/5 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                  <Label className="text-xs font-medium text-muted-foreground">Chave de Acesso</Label>
+                  <div className="flex items-center gap-1.5 text-xs font-medium text-emerald-500 bg-emerald-500/5 px-2 py-0.5 rounded-full border border-emerald-500/20">
                       <ShieldCheck className="h-3 w-3" /> Criptografado
                   </div>
               </div>
@@ -287,7 +287,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                     <PopoverContent align="end" className="w-72 rounded-2xl p-5 space-y-5">
                       <div className="space-y-3">
                         <div className="flex items-center justify-between">
-                          <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Comprimento</Label>
+                          <Label className="text-xs font-medium text-muted-foreground">Comprimento</Label>
                           <span className="text-sm font-black text-primary font-mono">{genOptions.length}</span>
                         </div>
                         <Slider
@@ -297,14 +297,14 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                         />
                       </div>
                       <div className="flex items-center justify-between">
-                        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Incluir números</Label>
+                        <Label className="text-xs font-medium text-muted-foreground">Incluir números</Label>
                         <Switch checked={genOptions.numbers} onCheckedChange={(c) => setGenOptions((o) => ({ ...o, numbers: c }))} />
                       </div>
                       <div className="flex items-center justify-between">
-                        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Incluir símbolos</Label>
+                        <Label className="text-xs font-medium text-muted-foreground">Incluir símbolos</Label>
                         <Switch checked={genOptions.symbols} onCheckedChange={(c) => setGenOptions((o) => ({ ...o, symbols: c }))} />
                       </div>
-                      <Button type="button" onClick={handleGeneratePassword} className="w-full h-10 rounded-xl font-black uppercase tracking-widest text-[10px] gap-2">
+                      <Button type="button" onClick={handleGeneratePassword} className="w-full h-10 rounded-xl font-medium text-xs gap-2">
                         <Wand2 className="h-3.5 w-3.5" /> Gerar agora
                       </Button>
                     </PopoverContent>
@@ -314,7 +314,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                       type="button"
                       variant="outline"
                       onClick={handleGeneratePassword}
-                      className="h-11 px-4 rounded-xl border-dashed border-primary/40 hover:bg-primary/5 hover:text-primary font-black uppercase tracking-widest text-[9px] gap-2"
+                      className="h-11 px-4 rounded-xl border-dashed border-primary/40 hover:bg-primary/5 hover:text-primary font-medium text-xs gap-2"
                   >
                       <Wand2 className="h-3.5 w-3.5" /> Gerar
                   </Button>
@@ -327,7 +327,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                     <div className={cn("h-full rounded-full transition-all duration-500 ease-out", strengthColor)} style={{ width: `${strength}%` }} />
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground">Força: <span className={cn(strength >= 80 ? "text-emerald-500" : strength >= 50 ? "text-amber-500" : "text-rose-500")}>{strengthLabel}</span></span>
+                    <span className="text-xs font-medium text-muted-foreground">Força: <span className={cn(strength >= 80 ? "text-emerald-500" : strength >= 50 ? "text-amber-500" : "text-rose-500")}>{strengthLabel}</span></span>
                     <span className="text-[9px] font-mono text-muted-foreground">{password.length} caracteres</span>
                   </div>
                 </div>
@@ -338,7 +338,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
 
             {/* URL */}
             <div className="space-y-2">
-              <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Ponto de Acesso (URL)</Label>
+              <Label className="text-xs font-medium text-muted-foreground ml-1">Ponto de Acesso (URL)</Label>
               <div className="relative group">
                 <Globe className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors z-10" />
                 <Input name="url" defaultValue={item?.url ?? ""} placeholder="https://..." className="pl-10 h-11 bg-muted/10 border-border/40 focus-visible:ring-primary/20 rounded-xl font-mono text-xs" />
@@ -347,7 +347,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
 
             {/* NOTAS / CONTEÚDO */}
             <div className="space-y-2">
-              <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+              <Label className="text-xs font-medium text-muted-foreground ml-1">
                 {isNote ? "Conteúdo da anotação" : "Registros de Auditoria / Notas"}
               </Label>
               <Textarea
@@ -365,13 +365,13 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
                 type="button" 
                 variant="ghost" 
                 onClick={onClose} 
-                className="flex-1 h-12 rounded-xl text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:bg-muted"
+                className="flex-1 h-12 rounded-xl text-xs font-medium text-muted-foreground hover:bg-muted"
               >
                 Cancelar
               </Button>
               <Button 
                 type="submit" 
-                className="flex-[2] h-12 rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-black uppercase tracking-widest text-[10px] shadow-lg transition-all active:scale-95"
+                className="flex-[2] h-12 rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs shadow-lg transition-all active:scale-95"
               >
                 {isLoading ? (
                   <Loader2 className="h-4 w-4 animate-spin" />

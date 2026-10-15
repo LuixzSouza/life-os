@@ -129,7 +129,7 @@ export function NoteGraphView({ graph }: { graph: NoteGraph }) {
             type="button"
             onClick={() => setHideOrphans((v) => !v)}
             className={cn(
-              "rounded-lg border px-2.5 py-1 text-[10px] font-black uppercase tracking-wider transition-all",
+              "rounded-lg border px-2.5 py-1 text-xs font-medium transition-all",
               hideOrphans
                 ? "border-transparent bg-primary/10 text-primary"
                 : "border-border/40 bg-muted/30 text-muted-foreground hover:bg-muted/60",

@@ -33,7 +33,7 @@ const StateContainer = ({ children }: { children: React.ReactNode }) => (
     <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
     <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-    <div className="w-full max-w-lg text-center space-y-8 p-10 rounded-[2.5rem] border border-border/50 bg-card/40 backdrop-blur-xl shadow-2xl animate-in zoom-in-95 fade-in duration-500 relative z-10">
+    <div className="w-full max-w-lg text-center space-y-8 p-10 rounded-2xl border border-border/50 bg-card/40 backdrop-blur-xl shadow-2xl animate-in zoom-in-95 fade-in duration-500 relative z-10">
       {children}
     </div>
   </div>
@@ -118,8 +118,8 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
   if (deck.cards.length === 0) {
     return (
       <StateContainer>
-        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-[2rem] bg-gradient-to-br from-primary/20 to-primary/5 ring-1 ring-primary/20 shadow-inner relative">
-          <div className="absolute inset-0 bg-primary/20 rounded-[2rem] blur-xl opacity-50" />
+        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 ring-1 ring-primary/20 shadow-inner relative">
+          <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl opacity-50" />
           <Layers className="h-12 w-12 text-primary relative z-10" />
         </div>
         
@@ -181,8 +181,8 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
   if (isSmart && cards.length === 0) {
     return (
       <StateContainer>
-        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-[2rem] bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 ring-1 ring-emerald-500/20 shadow-inner relative">
-          <div className="absolute inset-0 bg-emerald-500/20 rounded-[2rem] blur-xl opacity-50" />
+        <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 ring-1 ring-emerald-500/20 shadow-inner relative">
+          <div className="absolute inset-0 bg-emerald-500/20 rounded-2xl blur-xl opacity-50" />
           <BrainCircuit className="h-12 w-12 text-emerald-600 relative z-10" />
         </div>
 

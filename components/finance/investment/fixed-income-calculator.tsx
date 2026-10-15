@@ -84,17 +84,17 @@ export function FixedIncomeCalculator({ cdi, ipca, preset }: FixedIncomeCalculat
 
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-1.5">
-            <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Aporte (R$)</label>
+            <label className="text-xs font-medium text-muted-foreground">Aporte (R$)</label>
             <Input type="number" min="0" step="100" value={amount} onChange={(e) => setAmount(Math.max(0, Number(e.target.value)))} className="rounded-xl font-mono" />
           </div>
           <div className="space-y-1.5">
-            <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Prazo (meses)</label>
+            <label className="text-xs font-medium text-muted-foreground">Prazo (meses)</label>
             <Input type="number" min="1" step="1" value={months} onChange={(e) => setMonths(Math.max(1, Number(e.target.value)))} className="rounded-xl font-mono" />
           </div>
         </div>
 
         <div className="space-y-1.5">
-          <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Tipo de rendimento</label>
+          <label className="text-xs font-medium text-muted-foreground">Tipo de rendimento</label>
           <div className="flex gap-2">
             {modeBtn("CDI", "% do CDI")}
             {modeBtn("IPCA", "IPCA +")}
@@ -104,11 +104,11 @@ export function FixedIncomeCalculator({ cdi, ipca, preset }: FixedIncomeCalculat
 
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-1.5">
-            <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{rateLabel}</label>
+            <label className="text-xs font-medium text-muted-foreground">{rateLabel}</label>
             <Input type="number" min="0" step="0.5" value={rate} onChange={(e) => setRate(Math.max(0, Number(e.target.value)))} className="rounded-xl font-mono" />
           </div>
           <div className="space-y-1.5">
-            <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Imposto</label>
+            <label className="text-xs font-medium text-muted-foreground">Imposto</label>
             <Button type="button" variant="outline" onClick={() => setTaxFree((v) => !v)} className={cn("w-full rounded-xl font-bold", taxFree ? "border-emerald-500/40 text-emerald-600 bg-emerald-500/10" : "")}>
               {taxFree ? <><ShieldCheck className="h-4 w-4 mr-1.5" /> Isento de IR</> : "Tributado (IR)"}
             </Button>
@@ -124,7 +124,7 @@ export function FixedIncomeCalculator({ cdi, ipca, preset }: FixedIncomeCalculat
       {/* RESULTADO */}
       <div className="space-y-4 rounded-2xl border border-primary/20 bg-primary/[0.03] p-6 shadow-sm">
         <div className="flex items-center justify-between">
-          <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Valor líquido em {months} meses</span>
+          <span className="text-xs font-medium text-muted-foreground">Valor líquido em {months} meses</span>
           <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-black text-primary">{result.annualRate.toFixed(2)}% a.a.</span>
         </div>
         <p className="font-mono text-4xl font-black tracking-tighter text-foreground">{formatMoney(result.net)}</p>
@@ -150,7 +150,7 @@ function Stat({ label, value, tone = "default", icon }: { label: string; value: 
   const color = tone === "emerald" ? "text-emerald-600 dark:text-emerald-400" : tone === "rose" ? "text-rose-600 dark:text-rose-400" : "text-foreground";
   return (
     <div className="rounded-xl bg-background/60 border border-border/40 p-3">
-      <p className="text-[9px] font-black uppercase tracking-widest text-muted-foreground leading-tight">{label}</p>
+      <p className="text-xs font-medium text-muted-foreground leading-tight">{label}</p>
       <p className={cn("mt-1 font-mono font-bold tabular-nums flex items-center gap-1", color)}>{icon}{value}</p>
     </div>
   );

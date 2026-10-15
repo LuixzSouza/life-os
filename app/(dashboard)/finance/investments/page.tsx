@@ -44,7 +44,7 @@ export default async function InvestmentsPage() {
         title="Central de Investimentos"
         description="Simule e planeje o crescimento do seu patrimônio."
         actions={
-          <div className="hidden items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-xs font-black uppercase tracking-wider text-primary shadow-sm md:flex">
+          <div className="hidden items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-xs font-medium text-primary shadow-sm md:flex">
             <Sparkles className="h-4 w-4" />
             <span>Dados de Mercado Ao Vivo</span>
           </div>

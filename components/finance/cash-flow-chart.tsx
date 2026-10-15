@@ -46,7 +46,7 @@ const CustomTooltip = ({ active, payload, label }: FlowTooltipProps) => {
 
   return (
     <div className="flex flex-col gap-2 rounded-xl border border-border/40 bg-background/95 p-3 shadow-2xl backdrop-blur-md min-w-[180px]">
-      <span className="text-[10px] uppercase text-muted-foreground font-black tracking-widest border-b border-border/40 pb-2">
+      <span className="text-xs text-muted-foreground font-medium border-b border-border/40 pb-2">
         {label}
       </span>
       <div className="flex items-center justify-between gap-3">
@@ -66,7 +66,7 @@ const CustomTooltip = ({ active, payload, label }: FlowTooltipProps) => {
         </span>
       </div>
       <div className="flex items-center justify-between gap-3 border-t border-border/40 pt-2">
-        <span className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">
+        <span className="text-[11px] font-medium text-muted-foreground">
           Saldo
         </span>
         <span
@@ -98,7 +98,7 @@ function CashFlowChartContent({ data, className }: { data: CashFlowPoint[]; clas
         )}
       >
         <Activity className="h-7 w-7 text-muted-foreground/40 mb-2" />
-        <p className="text-[11px] font-black uppercase tracking-widest text-muted-foreground/50">
+        <p className="text-[11px] font-medium text-muted-foreground/50">
           Sem dados de fluxo de caixa
         </p>
         <p className="text-xs text-muted-foreground/40 mt-1">Registre transações para ver a evolução mensal.</p>
@@ -172,7 +172,7 @@ const CashFlowChartDynamic = dynamic(() => Promise.resolve(CashFlowChartContent)
   ssr: false,
   loading: () => (
     <div className="h-[300px] w-full bg-muted/5 animate-pulse rounded-2xl border border-border/40 flex items-center justify-center">
-      <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/30">
+      <span className="text-xs font-medium text-muted-foreground/30">
         Carregando fluxo de caixa...
       </span>
     </div>

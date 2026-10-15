@@ -261,7 +261,7 @@ function LoadingLabel({ override }: { override?: string | null }) {
         return () => clearInterval(id);
     }, []);
     return (
-        <span className="ml-1 text-[9px] font-black uppercase tracking-widest text-muted-foreground/60">
+        <span className="ml-1 text-xs font-medium text-muted-foreground/60">
             {override || LOADING_STEPS[Math.min(step, LOADING_STEPS.length - 1)]}
         </span>
     );
@@ -419,7 +419,7 @@ function ClarifyPanel({
         <div className="mb-2 overflow-hidden rounded-2xl border border-primary/25 bg-card/95 shadow-xl backdrop-blur-md animate-in fade-in slide-in-from-bottom-2 duration-300">
             {/* Cabeçalho */}
             <div className="flex items-center justify-between gap-2 border-b border-border/40 bg-primary/5 px-3.5 py-2">
-                <span className={cn("flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest", accent)}>
+                <span className={cn("flex items-center gap-1.5 text-xs font-medium", accent)}>
                     <MessageCircleQuestion className="h-3.5 w-3.5" />
                     Falta um detalhe pra eu executar
                     {questions.length > 1 && (
@@ -598,7 +598,7 @@ function AssistantContent({
             {visible && (
                 <div className={cn(
                     "prose prose-sm dark:prose-invert max-w-none overflow-x-auto",
-                    "prose-p:my-2 prose-headings:my-3 prose-headings:font-black prose-headings:uppercase prose-headings:tracking-wider",
+                    "prose-p:my-2 prose-headings:my-3 prose-headings:font-semibold",
                     "prose-pre:bg-zinc-950 prose-pre:border prose-pre:border-zinc-800/50 prose-pre:shadow-inner",
                     "prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none",
                     "prose-strong:font-black",
@@ -654,7 +654,7 @@ function AssistantContent({
                                     <MetaIcon className="h-4 w-4" />
                                 </span>
                                 <span className="min-w-0 flex-1">
-                                    <span className="block text-[9px] font-black uppercase tracking-widest text-muted-foreground">
+                                    <span className="block text-xs font-medium text-muted-foreground">
                                         {meta.label} · {info.name}
                                     </span>
                                     <span className="block truncate text-xs font-bold text-foreground">{a.label}</span>
@@ -1111,16 +1111,16 @@ export function ChatInterface({
                             <div className="w-full max-w-lg px-4 space-y-5">
                                 <div className="relative inline-flex mx-auto">
                                     <div className="absolute inset-0 blur-3xl opacity-30 rounded-full animate-pulse bg-amber-500/30" />
-                                    <div className="relative p-6 rounded-[2rem] shadow-2xl ring-1 backdrop-blur-md bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40">
+                                    <div className="relative p-6 rounded-2xl shadow-2xl ring-1 backdrop-blur-md bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40">
                                         <AlertTriangle className="h-12 w-12 text-amber-500" />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <h3 className="text-xl font-black uppercase tracking-[0.2em] text-foreground">IA não conectada</h3>
+                                    <h3 className="text-xl font-semibold text-foreground">IA não conectada</h3>
                                     <p className="text-sm text-muted-foreground">{aiStatus.reason}</p>
                                 </div>
                                 <div className="text-left bg-card border border-border/50 rounded-2xl p-5 space-y-3 shadow-sm">
-                                    <p className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">Para ativar</p>
+                                    <p className="text-[11px] font-medium text-muted-foreground">Para ativar</p>
                                     <p className="text-sm text-foreground/90">{aiStatus.setup}</p>
                                     <div className="flex flex-wrap gap-2 pt-1">
                                         <Link href="/settings?tab=intelligence" className="inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2 text-xs font-bold text-primary-foreground shadow-sm transition hover:opacity-90">
@@ -1139,12 +1139,12 @@ export function ChatInterface({
                             <>
                                 <div className="relative">
                                     <div className={cn("absolute inset-0 blur-3xl opacity-30 rounded-full animate-pulse", currentStyle.bgColor)} />
-                                    <div className={cn("relative p-6 rounded-[2rem] shadow-2xl ring-1 transition-colors duration-500 backdrop-blur-md", currentStyle.bgColor, currentStyle.borderColor)}>
+                                    <div className={cn("relative p-6 rounded-2xl shadow-2xl ring-1 transition-colors duration-500 backdrop-blur-md", currentStyle.bgColor, currentStyle.borderColor)}>
                                         <CurrentIcon className={cn("h-12 w-12", currentStyle.color)} />
                                     </div>
                                 </div>
                                 <div className="space-y-2 max-w-md px-4">
-                                    <h3 className="text-xl font-black uppercase tracking-[0.2em] text-foreground">
+                                    <h3 className="text-xl font-semibold text-foreground">
                                         {greeting()}{userName ? `, ${userName}` : ""}
                                     </h3>
                                     <p className="text-muted-foreground text-xs uppercase tracking-widest font-bold">
@@ -1156,12 +1156,12 @@ export function ChatInterface({
                                         <button
                                             key={idx}
                                             onClick={() => handleSend(item.prompt)}
-                                            className="flex flex-col items-start gap-3 p-4 text-left bg-card hover:bg-accent/50 border border-border/40 rounded-[1.5rem] transition-all duration-300 hover:border-primary/50 hover:shadow-lg group"
+                                            className="flex flex-col items-start gap-3 p-4 text-left bg-card hover:bg-accent/50 border border-border/40 rounded-2xl transition-all duration-300 hover:border-primary/50 hover:shadow-lg group"
                                         >
                                             <div className={cn("p-2.5 rounded-xl shadow-sm", item.color)}>
                                                 <item.icon className="h-4 w-4" />
                                             </div>
-                                            <span className="font-black text-[10px] uppercase tracking-widest text-foreground/80 group-hover:text-foreground">
+                                            <span className="font-medium text-xs text-foreground/80 group-hover:text-foreground">
                                                 {item.label}
                                             </span>
                                         </button>
@@ -1172,7 +1172,7 @@ export function ChatInterface({
 
                         {/* ----- O QUE DÁ PRA FAZER (capacidades centralizadas) ----- */}
                         <div className="w-full max-w-2xl px-4">
-                            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/70">O que eu posso gerenciar</p>
+                            <p className="mb-3 text-xs font-medium text-muted-foreground/70">O que eu posso gerenciar</p>
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                                 {AI_CAPABILITIES.map((cap) => {
                                     const Icon = CAP_ICONS[cap.icon] ?? Sparkles;
@@ -1226,7 +1226,7 @@ export function ChatInterface({
                         {daySep && (
                             <div suppressHydrationWarning className="flex items-center gap-3 py-1 animate-in fade-in">
                                 <div className="h-px flex-1 bg-border/40" />
-                                <span className="text-[9px] font-black uppercase tracking-[0.2em] text-muted-foreground/60">{daySep}</span>
+                                <span className="text-xs font-medium text-muted-foreground/60">{daySep}</span>
                                 <div className="h-px flex-1 bg-border/40" />
                             </div>
                         )}
@@ -1254,11 +1254,11 @@ export function ChatInterface({
                                     "relative w-fit max-w-full px-5 py-3.5 text-sm leading-relaxed",
                                     isUser
                                         ? cn(
-                                            "group/msg rounded-[1.375rem] bg-gradient-to-br from-primary to-primary/85 font-medium text-primary-foreground shadow-md shadow-primary/15",
+                                            "group/msg rounded-2xl bg-gradient-to-br from-primary to-primary/85 font-medium text-primary-foreground shadow-md shadow-primary/15",
                                             !nextSame && "rounded-br-md"
                                         )
                                         : cn(
-                                            "group/msg rounded-[1.375rem] border bg-card/95 shadow-sm backdrop-blur-sm transition-shadow hover:shadow-md",
+                                            "group/msg rounded-2xl border bg-card/95 shadow-sm backdrop-blur-sm transition-shadow hover:shadow-md",
                                             !grouped && "rounded-tl-md",
                                             style.borderColor
                                         )
@@ -1322,12 +1322,12 @@ export function ChatInterface({
                         {streamText ? (
                             /* STREAMING REAL: o texto chega token a token via SSE. */
                             <div className={cn(
-                                "max-w-[85%] md:max-w-[75%] rounded-[1.375rem] rounded-tl-md border bg-card/95 px-5 py-3.5 text-sm leading-relaxed shadow-sm backdrop-blur-sm",
+                                "max-w-[85%] md:max-w-[75%] rounded-2xl rounded-tl-md border bg-card/95 px-5 py-3.5 text-sm leading-relaxed shadow-sm backdrop-blur-sm",
                                 currentStyle.borderColor
                             )}>
                                 <div className={cn(
                                     "prose prose-sm dark:prose-invert max-w-none overflow-x-auto",
-                                    "prose-p:my-2 prose-headings:my-3 prose-headings:font-black prose-headings:uppercase prose-headings:tracking-wider",
+                                    "prose-p:my-2 prose-headings:my-3 prose-headings:font-semibold",
                                     "prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none",
                                     "prose-strong:font-black"
                                 )}>
@@ -1336,7 +1336,7 @@ export function ChatInterface({
                                 <span className={cn("ml-0.5 inline-block h-4 w-[3px] animate-pulse rounded-sm align-middle", currentStyle.color.replace("text-", "bg-"))} />
                             </div>
                         ) : (
-                            <div className="bg-card/95 border border-border/40 px-5 py-3.5 rounded-[1.375rem] rounded-tl-md shadow-sm flex items-center gap-1.5">
+                            <div className="bg-card/95 border border-border/40 px-5 py-3.5 rounded-2xl rounded-tl-md shadow-sm flex items-center gap-1.5">
                                 <span className={cn("w-1.5 h-1.5 rounded-full animate-bounce [animation-delay:-0.3s]", currentStyle.color.replace("text-", "bg-"))} />
                                 <span className={cn("w-1.5 h-1.5 rounded-full animate-bounce [animation-delay:-0.15s]", currentStyle.color.replace("text-", "bg-"))} />
                                 <span className={cn("w-1.5 h-1.5 rounded-full animate-bounce", currentStyle.color.replace("text-", "bg-"))} />
@@ -1382,7 +1382,7 @@ export function ChatInterface({
                     {/* Banner do modo edição */}
                     {editing && (
                         <div className="mb-2 flex items-center justify-between gap-2 rounded-xl border border-amber-500/30 bg-amber-500/10 px-3 py-1.5 animate-in fade-in slide-in-from-bottom-1">
-                            <span className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-amber-600">
+                            <span className="flex items-center gap-1.5 text-xs font-medium text-amber-600">
                                 <Pencil className="h-3 w-3" /> Editando a última mensagem — Enter reenvia, Esc cancela
                             </span>
                             <button
@@ -1398,7 +1398,7 @@ export function ChatInterface({
 
                     <div className="flex justify-center mb-3">
                         <span className={cn(
-                            "text-[9px] uppercase font-black tracking-[0.2em] px-3 py-1.5 rounded-full border bg-background/80 backdrop-blur-md shadow-sm transition-colors duration-500 flex items-center gap-2",
+                            "text-xs font-medium px-3 py-1.5 rounded-full border bg-background/80 backdrop-blur-md shadow-sm transition-colors duration-500 flex items-center gap-2",
                             currentStyle.color, currentStyle.borderColor
                         )}>
                             <CurrentIcon className="w-3 h-3" />
@@ -1413,7 +1413,7 @@ export function ChatInterface({
                                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose-500/60" />
                                 <span className="relative inline-flex h-2 w-2 rounded-full bg-rose-500" />
                             </span>
-                            <span className="shrink-0 text-[10px] font-black uppercase tracking-widest text-rose-500">
+                            <span className="shrink-0 text-xs font-medium text-rose-500">
                                 Ouvindo · {formatListenClock(dictation.seconds)}
                             </span>
                             <span className="truncate text-xs italic text-muted-foreground">
@@ -1422,7 +1422,7 @@ export function ChatInterface({
                             <button
                                 type="button"
                                 onClick={dictation.stop}
-                                className="ml-auto shrink-0 rounded-md px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-rose-500 transition hover:bg-rose-500/10"
+                                className="ml-auto shrink-0 rounded-md px-1.5 py-0.5 text-xs font-medium text-rose-500 transition hover:bg-rose-500/10"
                             >
                                 Parar
                             </button>
@@ -1454,7 +1454,7 @@ export function ChatInterface({
                     )}
 
                     <div className={cn(
-                        "relative flex items-end gap-2 bg-background/80 backdrop-blur-xl border rounded-[2rem] p-2 shadow-2xl transition-all duration-300",
+                        "relative flex items-end gap-2 bg-background/80 backdrop-blur-xl border rounded-2xl p-2 shadow-2xl transition-all duration-300",
                         "focus-within:ring-2 focus-within:ring-opacity-20",
                         currentStyle.borderColor,
                         currentStyle.ringColor

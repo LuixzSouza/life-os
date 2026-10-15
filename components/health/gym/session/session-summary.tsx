@@ -205,7 +205,7 @@ export function SessionSummary({
           transition={{ delay: 0.25 }}
           className="mt-3 rounded-2xl border border-amber-400/40 bg-gradient-to-r from-amber-400/15 via-amber-300/10 to-transparent p-3.5"
         >
-          <p className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider text-amber-600">
+          <p className="flex items-center gap-1.5 text-[11px] font-medium text-amber-600">
             <Trophy className="h-3.5 w-3.5" /> {prs.length === 1 ? "Recorde batido hoje" : `${prs.length} recordes batidos hoje`} 🎉
           </p>
           <div className="mt-2 flex flex-wrap gap-1.5">

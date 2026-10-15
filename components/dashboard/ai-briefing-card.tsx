@@ -69,7 +69,7 @@ export function AiBriefingCard() {
             <Sunrise className="h-4.5 w-4.5" />
           </span>
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">
+            <p className="text-xs font-medium text-muted-foreground">
               Briefing do dia
             </p>
             <p className="flex items-center gap-1 text-[9px] font-bold uppercase tracking-widest text-muted-foreground/60">
@@ -99,7 +99,7 @@ export function AiBriefingCard() {
       <div className="mt-3 flex justify-end">
         <Link
           href={`/ai?q=${encodeURIComponent("Aprofunde o briefing de hoje: o que merece minha atenção e por quê?")}`}
-          className="inline-flex items-center gap-1.5 rounded-full border border-border/50 bg-background/60 px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
+          className="inline-flex items-center gap-1.5 rounded-full border border-border/50 bg-background/60 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
         >
           Aprofundar com IA <ArrowRight className="h-3 w-3" />
         </Link>

@@ -66,7 +66,7 @@ const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
             }}
           />
 
-          <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+          <span className="text-xs font-medium text-muted-foreground">
             {chartData.name}
           </span>
         </div>
@@ -76,7 +76,7 @@ const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
             {chartData.value}
           </span>
 
-          <span className="text-[9px] font-black uppercase text-muted-foreground/50">
+          <span className="text-xs font-medium text-muted-foreground/50">
             Minutos_Sessão
           </span>
         </div>
@@ -96,12 +96,12 @@ function StudyChartContent({ data }: StudyChartProps) {
 
   if (isEmpty) {
     return (
-      <div className="h-[220px] flex flex-col items-center justify-center bg-muted/5 rounded-[2.5rem] border-2 border-dashed border-border/40">
+      <div className="h-[220px] flex flex-col items-center justify-center bg-muted/5 rounded-2xl border-2 border-dashed border-border/40">
         <div className="p-4 bg-background rounded-3xl mb-3 shadow-inner border border-border/10">
           <BookOpen className="h-6 w-6 text-muted-foreground/30" />
         </div>
 
-        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/40">
+        <p className="text-xs font-medium text-muted-foreground/40">
           Offline_Data_Null
         </p>
       </div>
@@ -150,7 +150,7 @@ function StudyChartContent({ data }: StudyChartProps) {
               iconType="circle"
               iconSize={6}
               formatter={(value: string) => (
-                <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/70 ml-2">
+                <span className="text-xs font-medium text-muted-foreground/70 ml-2">
                   {value}
                 </span>
               )}
@@ -171,11 +171,11 @@ export const StudyChart = dynamic<StudyChartProps>(
   {
     ssr: false,
     loading: () => (
-      <div className="h-[220px] w-full bg-muted/5 animate-pulse rounded-[2.5rem] border border-border/40 flex items-center justify-center">
+      <div className="h-[220px] w-full bg-muted/5 animate-pulse rounded-2xl border border-border/40 flex items-center justify-center">
         <div className="flex items-center gap-3">
           <Activity className="h-4 w-4 text-muted-foreground/20 animate-spin" />
 
-          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/30">
+          <span className="text-xs font-medium text-muted-foreground/30">
             Analysing_Brain_State...
           </span>
         </div>

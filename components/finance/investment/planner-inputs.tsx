@@ -10,7 +10,7 @@ export function InputGroup({ label, value, onChange, highlight = false, icon }: 
   const symbol = useCurrencySymbol();
   return (
     <div className="space-y-2.5 group">
-      <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2 group-focus-within:text-primary transition-colors ml-1">
+      <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2 group-focus-within:text-primary transition-colors ml-1">
         <span className="opacity-70">{icon}</span> {label}
       </Label>
       <div className="relative">
@@ -34,7 +34,7 @@ export function TimeSlider({ years, setYears, max = 40 }: { years: number, setYe
   return (
     <div className="space-y-5">
       <div className="flex justify-between items-end">
-        <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Tempo Investido</Label>
+        <Label className="text-xs font-medium text-muted-foreground ml-1">Tempo Investido</Label>
         <span className="text-sm font-black font-mono tracking-tighter text-primary bg-primary/10 px-3 py-1 rounded-lg text-nowrap border border-primary/20 shadow-sm">
           {years} anos
         </span>

@@ -96,7 +96,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
       {/* LISTA AGRUPADA */}
       <div className="flex-1 p-6 space-y-6 overflow-y-auto custom-scrollbar bg-background/30">
         {total === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full py-16 text-center border-2 border-dashed border-border/40 rounded-[2rem] bg-muted/5">
+          <div className="flex flex-col items-center justify-center h-full py-16 text-center border-2 border-dashed border-border/40 rounded-2xl bg-muted/5">
             <div className="bg-emerald-500/10 p-4 rounded-2xl mb-4 shadow-inner border border-emerald-500/20">
               <Sparkles className="h-8 w-8 text-emerald-500 animate-pulse" />
             </div>

@@ -325,7 +325,7 @@ export function FocusDock() {
   // --- PAINEL EXPANDIDO --------------------------------------------------
   return (
     <div className="fixed right-4 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-50 w-[calc(100vw-2rem)] max-w-[340px] md:right-6 md:bottom-6">
-      <div className="overflow-hidden rounded-[1.75rem] border border-border/40 bg-card/95 shadow-2xl backdrop-blur animate-in fade-in slide-in-from-bottom-4 duration-300">
+      <div className="overflow-hidden rounded-2xl border border-border/40 bg-card/95 shadow-2xl backdrop-blur animate-in fade-in slide-in-from-bottom-4 duration-300">
         {/* Cabeçalho */}
         <div
           className="flex items-center justify-between px-4 py-3"
@@ -336,7 +336,7 @@ export function FocusDock() {
               <Brain className="h-4 w-4" />
             </span>
             <div className="flex flex-col leading-none">
-              <span className="text-xs font-black uppercase tracking-widest text-foreground">Modo Foco</span>
+              <span className="text-xs font-medium text-foreground">Modo Foco</span>
               <span className="mt-0.5 text-[10px] font-bold" style={{ color: phaseMeta.color }}>{phaseMeta.label}</span>
             </div>
           </div>
@@ -508,7 +508,7 @@ function SettingsPanel({
       {state.mode === "POMODORO" && (
         <>
           <div>
-            <p className="mb-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground">Presets</p>
+            <p className="mb-2 text-xs font-medium text-muted-foreground">Presets</p>
             <div className="grid grid-cols-2 gap-2">
               {FOCUS_PRESETS.map((p) => {
                 const active = state.focusMin === p.focusMin && state.shortMin === p.shortMin && state.longMin === p.longMin;
@@ -544,7 +544,7 @@ function SettingsPanel({
         </>
       )}
 
-      <Button onClick={onClose} className="h-11 w-full rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-black uppercase tracking-widest text-[10px]">
+      <Button onClick={onClose} className="h-11 w-full rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs">
         <Maximize2 className="mr-2 h-3.5 w-3.5" /> Voltar ao timer
       </Button>
     </div>
@@ -554,7 +554,7 @@ function SettingsPanel({
 function Field({ label, value, onChange, wide }: { label: string; value: number; onChange: (v: string) => void; wide?: boolean }) {
   return (
     <div className={cn("space-y-1.5", wide && "col-span-full")}>
-      <label className="text-[9px] font-black uppercase tracking-widest text-muted-foreground">{label}</label>
+      <label className="text-xs font-medium text-muted-foreground">{label}</label>
       <Input
         type="number"
         min={1}

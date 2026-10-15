@@ -70,7 +70,7 @@ export function MonthlySummary({ totalBalance, monthIncome, monthExpense, monthl
 
           <div className="flex items-center gap-4 flex-wrap">
             {/* Legenda */}
-            <div className="hidden sm:flex gap-4 text-[10px] font-black uppercase tracking-widest">
+            <div className="hidden sm:flex gap-4 text-xs font-medium">
               <span className="flex items-center gap-2 text-muted-foreground"><span className="w-2 h-2 rounded-full bg-emerald-500" /> Entradas</span>
               <span className="flex items-center gap-2 text-muted-foreground"><span className="w-2 h-2 rounded-full bg-rose-500" /> Saídas</span>
             </div>
@@ -84,7 +84,7 @@ export function MonthlySummary({ totalBalance, monthIncome, monthExpense, monthl
                   onClick={() => setFlowMonths(m)}
                   aria-pressed={flowMonths === m}
                   className={cn(
-                    "px-3 py-1.5 rounded-lg text-[11px] font-black uppercase tracking-wider transition-all",
+                    "px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all",
                     flowMonths === m
                       ? "bg-background text-primary shadow-sm ring-1 ring-border"
                       : "text-muted-foreground hover:text-foreground"

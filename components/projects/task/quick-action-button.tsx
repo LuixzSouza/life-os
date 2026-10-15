@@ -63,7 +63,7 @@ export const QuickActionButton = forwardRef<HTMLButtonElement, QuickActionButton
             side="bottom" 
             className="px-3 py-1.5 bg-zinc-950 text-white border-zinc-800 rounded-lg shadow-2xl"
           >
-            <p className="text-[10px] font-black uppercase tracking-[0.15em] leading-none">
+            <p className="text-xs font-medium leading-none">
               {label}
             </p>
           </TooltipContent>

@@ -553,8 +553,8 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
                 style={{ transformStyle: "preserve-3d" }}
             >
                 {/* --- FRENTE (PERGUNTA) --- */}
-                <div className={cn("absolute inset-0 w-full h-full backface-hidden rounded-[2.5rem] flex flex-col items-center justify-center p-8 sm:p-12 text-center overflow-y-auto scrollbar-hide border-2 bg-card shadow-2xl", "border-primary/10 hover:border-primary/30 transition-all")} style={{ backfaceVisibility: "hidden" }}>
-                    <Badge variant="outline" className="absolute top-8 left-8 uppercase tracking-[0.2em] text-[10px] font-black text-muted-foreground border-border/60 px-3 py-1.5">
+                <div className={cn("absolute inset-0 w-full h-full backface-hidden rounded-2xl flex flex-col items-center justify-center p-8 sm:p-12 text-center overflow-y-auto scrollbar-hide border-2 bg-card shadow-2xl", "border-primary/10 hover:border-primary/30 transition-all")} style={{ backfaceVisibility: "hidden" }}>
+                    <Badge variant="outline" className="absolute top-8 left-8 text-xs font-medium text-muted-foreground border-border/60 px-3 py-1.5">
                         Frente
                     </Badge>
                     <SpeakButton text={front?.text} className="absolute top-6 right-6" />
@@ -628,8 +628,8 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
                 </div>
 
                 {/* --- VERSO (RESPOSTA) --- */}
-                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-[2.5rem] flex flex-col items-center justify-center p-8 sm:p-12 text-center overflow-y-auto scrollbar-hide bg-slate-950 border border-slate-800 shadow-2xl" style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
-                    <Badge variant="outline" className="absolute top-8 left-8 uppercase tracking-[0.2em] text-[10px] font-black border-primary/30 text-primary/80 bg-primary/10 px-3 py-1.5">
+                <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl flex flex-col items-center justify-center p-8 sm:p-12 text-center overflow-y-auto scrollbar-hide bg-slate-950 border border-slate-800 shadow-2xl" style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
+                    <Badge variant="outline" className="absolute top-8 left-8 text-xs font-medium border-primary/30 text-primary/80 bg-primary/10 px-3 py-1.5">
                         Verso
                     </Badge>
                     <SpeakButton text={back?.text} className="absolute top-6 right-6 text-slate-400 hover:bg-white/10 hover:text-white" />
@@ -637,7 +637,7 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
                         {/* MODO ESCRITA: o que você digitou + dica de proximidade. */}
                         {written && (
                             <div className="mx-auto mb-6 w-full max-w-xl rounded-2xl border border-slate-800 bg-slate-900/60 p-4 text-left">
-                                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Sua resposta</p>
+                                <p className="text-xs font-medium text-slate-400">Sua resposta</p>
                                 <p className="mt-1 text-base text-slate-100">
                                     {typedAnswer.trim() || <span className="italic text-slate-500">— (em branco)</span>}
                                 </p>
@@ -675,13 +675,13 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
             {gradeStep === "choose" ? (
                 /* PASSO 1: errei ou acertei (Acertei revela as 3 notas). */
                 <div className="flex flex-wrap justify-center gap-3 sm:gap-4 pb-4">
-                    <Button size="lg" disabled={isSaving} onClick={() => handleRate("AGAIN")} className={cn("flex-1 h-20 sm:h-24 rounded-[1.5rem] bg-rose-500/10 text-rose-600 hover:bg-rose-500 hover:text-white border border-rose-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm", suggestedRating === "AGAIN" && "ring-2 ring-rose-400 ring-offset-2 ring-offset-background")}>
+                    <Button size="lg" disabled={isSaving} onClick={() => handleRate("AGAIN")} className={cn("flex-1 h-20 sm:h-24 rounded-2xl bg-rose-500/10 text-rose-600 hover:bg-rose-500 hover:text-white border border-rose-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm", suggestedRating === "AGAIN" && "ring-2 ring-rose-400 ring-offset-2 ring-offset-background")}>
                       <span className="flex items-center gap-1.5 text-base sm:text-lg"><X className="h-4 w-4" /> Errei</span>
                       <span className="text-[11px] font-bold opacity-90 tabular-nums">{previews?.AGAIN}</span>
                       <span className="hidden font-mono text-[9px] tracking-widest opacity-50 sm:block">tecla 1</span>
                     </Button>
 
-                    <Button size="lg" disabled={isSaving} onClick={() => setGradeStep("correct")} className={cn("flex-1 h-20 sm:h-24 rounded-[1.5rem] bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500 hover:text-white border border-emerald-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm", suggestedRating && suggestedRating !== "AGAIN" && "ring-2 ring-emerald-400 ring-offset-2 ring-offset-background")}>
+                    <Button size="lg" disabled={isSaving} onClick={() => setGradeStep("correct")} className={cn("flex-1 h-20 sm:h-24 rounded-2xl bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500 hover:text-white border border-emerald-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm", suggestedRating && suggestedRating !== "AGAIN" && "ring-2 ring-emerald-400 ring-offset-2 ring-offset-background")}>
                       <span className="flex items-center gap-1.5 text-base sm:text-lg"><Check className="h-4 w-4" /> Acertei</span>
                       <span className="text-[11px] font-medium opacity-80">escolher dificuldade →</span>
                       <span className="hidden font-mono text-[9px] tracking-widest opacity-50 sm:block">tecla 2 / Espaço</span>
@@ -691,19 +691,19 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
                 /* PASSO 2 (acertou): grau de facilidade — alimenta o SRS. */
                 <div className="space-y-3 pb-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
                     <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                        <Button size="lg" disabled={isSaving} onClick={() => handleRate("HARD")} className={cn("flex-1 h-20 sm:h-24 rounded-[1.5rem] bg-amber-500/10 text-amber-600 hover:bg-amber-500 hover:text-white border border-amber-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm", suggestedRating === "HARD" && "ring-2 ring-amber-400 ring-offset-2 ring-offset-background")}>
+                        <Button size="lg" disabled={isSaving} onClick={() => handleRate("HARD")} className={cn("flex-1 h-20 sm:h-24 rounded-2xl bg-amber-500/10 text-amber-600 hover:bg-amber-500 hover:text-white border border-amber-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm", suggestedRating === "HARD" && "ring-2 ring-amber-400 ring-offset-2 ring-offset-background")}>
                           <span className="text-base sm:text-lg">Difícil</span>
                           <span className="text-[11px] font-bold opacity-90 tabular-nums">{previews?.HARD}</span>
                           <span className="hidden font-mono text-[9px] tracking-widest opacity-50 sm:block">tecla 1</span>
                         </Button>
 
-                        <Button size="lg" disabled={isSaving} onClick={() => handleRate("GOOD")} className={cn("flex-1 h-20 sm:h-24 rounded-[1.5rem] bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500 hover:text-white border border-emerald-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm", suggestedRating === "GOOD" && "ring-2 ring-emerald-400 ring-offset-2 ring-offset-background")}>
+                        <Button size="lg" disabled={isSaving} onClick={() => handleRate("GOOD")} className={cn("flex-1 h-20 sm:h-24 rounded-2xl bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500 hover:text-white border border-emerald-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm", suggestedRating === "GOOD" && "ring-2 ring-emerald-400 ring-offset-2 ring-offset-background")}>
                           <span className="text-base sm:text-lg">Bom</span>
                           <span className="text-[11px] font-bold opacity-90 tabular-nums">{previews?.GOOD}</span>
                           <span className="hidden font-mono text-[9px] tracking-widest opacity-50 sm:block">tecla 2</span>
                         </Button>
 
-                        <Button size="lg" disabled={isSaving} onClick={() => handleRate("EASY")} className="flex-1 h-20 sm:h-24 rounded-[1.5rem] bg-blue-500/10 text-blue-600 hover:bg-blue-500 hover:text-white border border-blue-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm">
+                        <Button size="lg" disabled={isSaving} onClick={() => handleRate("EASY")} className="flex-1 h-20 sm:h-24 rounded-2xl bg-blue-500/10 text-blue-600 hover:bg-blue-500 hover:text-white border border-blue-500/20 font-bold transition-all hover:scale-105 active:scale-95 flex flex-col items-center justify-center gap-0.5 shadow-sm">
                           <span className="text-base sm:text-lg">Fácil</span>
                           <span className="text-[11px] font-bold opacity-90 tabular-nums">{previews?.EASY}</span>
                           <span className="hidden font-mono text-[9px] tracking-widest opacity-50 sm:block">tecla 3</span>

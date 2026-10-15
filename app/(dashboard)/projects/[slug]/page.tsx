@@ -436,7 +436,7 @@ export default async function ProjectDetailPage(props: ProjectDetailPageProps) {
 
 function EmptyState({ search }: { search: boolean }) {
   return (
-    <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-[2rem] bg-muted/10 text-center">
+    <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-border/40 rounded-2xl bg-muted/10 text-center">
       <div className="h-16 w-16 rounded-2xl bg-muted/50 flex items-center justify-center mb-4">
         {search ? <Search className="h-8 w-8 text-muted-foreground/40" /> : <ListTodo className="h-8 w-8 text-muted-foreground/40" />}
       </div>

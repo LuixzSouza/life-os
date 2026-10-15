@@ -165,7 +165,7 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
                     <form action={handleSubmit} className="flex flex-col flex-1 min-h-0" noValidate>
                         <DialogBody className="space-y-5">
                             <div className="space-y-2">
-                                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">O que será cobrado</Label>
+                                <Label className="text-xs font-medium text-muted-foreground ml-1">O que será cobrado</Label>
                                 <Input name="title" placeholder="Ex: Mensalidade do site, Consultoria..." defaultValue={item?.title} required className="h-12 rounded-xl bg-muted/20 font-medium" />
                             </div>
 
@@ -177,7 +177,7 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">{installmentMode ? "Valor total" : "Valor"}</Label>
+                                    <Label className="text-xs font-medium text-muted-foreground ml-1">{installmentMode ? "Valor total" : "Valor"}</Label>
                                     <div className="relative">
                                         <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground/50" />
                                         <Input
@@ -199,7 +199,7 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Frequência</Label>
+                                    <Label className="text-xs font-medium text-muted-foreground ml-1">Frequência</Label>
                                     <Select name="frequency" value={frequency} onValueChange={setFrequency}>
                                         <SelectTrigger className="h-12 rounded-xl bg-muted/20 font-medium"><SelectValue /></SelectTrigger>
                                         <SelectContent className="rounded-xl z-[9999]">
@@ -213,16 +213,16 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
                                 <>
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Nº de parcelas</Label>
+                                            <Label className="text-xs font-medium text-muted-foreground ml-1">Nº de parcelas</Label>
                                             <Input type="number" min="2" max="360" value={installments} onChange={(e) => setInstallments(e.target.value.replace(/\D/g, ""))} required className="h-12 rounded-xl bg-muted/20 font-mono font-bold" />
                                         </div>
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Parcelas já pagas</Label>
+                                            <Label className="text-xs font-medium text-muted-foreground ml-1">Parcelas já pagas</Label>
                                             <Input type="number" min="0" max={String(Math.max(0, installmentsNum - 1))} value={paid} onChange={(e) => setPaid(e.target.value.replace(/\D/g, ""))} className="h-12 rounded-xl bg-muted/20 font-mono font-bold" />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">
+                                        <Label className="text-xs font-medium text-muted-foreground ml-1">
                                             Próxima cobrança (parcela {Math.min((parseInt(paid || "0", 10) || 0) + 1, installmentsNum)}/{installmentsNum})
                                         </Label>
                                         <Input name="startDate" type="date" defaultValue={toDateInput(item?.startDate)} required className="h-12 rounded-xl bg-muted/20 font-medium" />
@@ -235,25 +235,25 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
                                 <div className="grid grid-cols-2 gap-4">
                                     {frequency === "MONTHLY" ? (
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Dia da Cobrança</Label>
+                                            <Label className="text-xs font-medium text-muted-foreground ml-1">Dia da Cobrança</Label>
                                             <Input name="dayOfMonth" type="number" min="1" max="31" placeholder="Dia (1-31)" defaultValue={item?.dayOfMonth} required className="h-12 rounded-xl bg-muted/20 font-mono font-bold" />
                                         </div>
                                     ) : (
                                         <div className="space-y-2">
-                                            <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">1ª Cobrança</Label>
+                                            <Label className="text-xs font-medium text-muted-foreground ml-1">1ª Cobrança</Label>
                                             <Input name="startDate" type="date" defaultValue={toDateInput(item?.startDate)} required className="h-12 rounded-xl bg-muted/20 font-medium" />
                                         </div>
                                     )}
 
                                     <div className="space-y-2">
-                                        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Encerra em (opcional)</Label>
+                                        <Label className="text-xs font-medium text-muted-foreground ml-1">Encerra em (opcional)</Label>
                                         <Input name="endDate" type="date" defaultValue={toDateInput(item?.endDate)} className="h-12 rounded-xl bg-muted/20 font-medium" />
                                     </div>
                                 </div>
                             )}
 
                             <div className="space-y-2">
-                                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Cliente (Negócios)</Label>
+                                <Label className="text-xs font-medium text-muted-foreground ml-1">Cliente (Negócios)</Label>
                                 {clients.length > 0 ? (
                                     <Select name="clientId" defaultValue={item?.clientId ?? "none"}>
                                         <SelectTrigger className="h-12 rounded-xl bg-muted/20 font-medium"><SelectValue placeholder="Sem cliente (avulso)" /></SelectTrigger>
@@ -279,7 +279,7 @@ export function RecurringChargeDialog({ trigger, item, clients }: RecurringCharg
                             </div>
 
                             <div className="space-y-2">
-                                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Categoria</Label>
+                                <Label className="text-xs font-medium text-muted-foreground ml-1">Categoria</Label>
                                 <Select name="category" defaultValue={item?.category || "Cobrança"}>
                                     <SelectTrigger className="h-12 rounded-xl bg-muted/20 font-medium"><SelectValue /></SelectTrigger>
                                     <SelectContent className="rounded-xl z-[9999]">

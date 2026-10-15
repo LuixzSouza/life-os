@@ -98,7 +98,7 @@ export function NewProjectDialog() {
                             <FolderPlus className={cn("h-6 w-6 transition-colors duration-500", selectedColor.class.replace('bg-', 'text-'))} />
                         </div>
                         <div className="space-y-1">
-                            <DialogTitle className="text-2xl font-black uppercase tracking-tighter">Criar Projeto</DialogTitle>
+                            <DialogTitle className="text-2xl font-semibold">Criar Projeto</DialogTitle>
                             <DialogDescription className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Defina sua nova meta</DialogDescription>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ export function NewProjectDialog() {
                 <DialogBody className="space-y-6">
                     {/* Nome do Projeto */}
                     <div className={cn("space-y-2 transition-all duration-300", selectedColor.ringClass)}>
-                        <Label htmlFor="title" className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">
+                        <Label htmlFor="title" className="text-xs font-medium text-muted-foreground ml-1">
                             Título
                         </Label>
                         <div className="relative group">
@@ -125,7 +125,7 @@ export function NewProjectDialog() {
 
                     {/* Descrição */}
                     <div className={cn("space-y-2 transition-all duration-300", selectedColor.ringClass)}>
-                        <Label htmlFor="description" className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">
+                        <Label htmlFor="description" className="text-xs font-medium text-muted-foreground ml-1">
                             Descrição (Opcional)
                         </Label>
                         <div className="relative group">
@@ -142,7 +142,7 @@ export function NewProjectDialog() {
 
                     {/* Taxonomia PARA (#10): em qual gaveta isso vive? */}
                     <div className="space-y-2">
-                        <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">
+                        <Label className="text-xs font-medium text-muted-foreground ml-1">
                             Método PARA
                         </Label>
                         <div className="grid grid-cols-4 gap-1.5">
@@ -153,7 +153,7 @@ export function NewProjectDialog() {
                                     onClick={() => setParaType(paraType === key ? null : key)}
                                     title={PARA_META[key].hint}
                                     className={cn(
-                                        "rounded-xl border px-2 py-2 text-[10px] font-black uppercase tracking-wider transition-all",
+                                        "rounded-xl border px-2 py-2 text-xs font-medium transition-all",
                                         paraType === key
                                             ? cn("border-transparent shadow-sm", PARA_META[key].badgeClass)
                                             : "border-border/40 bg-muted/20 text-muted-foreground hover:bg-muted/50",
@@ -170,7 +170,7 @@ export function NewProjectDialog() {
 
                     {/* Color Picker Corrigido */}
                     <div className="space-y-4">
-                        <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1 flex items-center gap-2">
+                        <Label className="text-xs font-medium text-muted-foreground ml-1 flex items-center gap-2">
                             <Palette className="h-3.5 w-3.5" /> Identidade Visual
                         </Label>
                         <div className="flex justify-between items-center bg-muted/30 p-3 rounded-2xl border border-border/40">
@@ -202,7 +202,7 @@ export function NewProjectDialog() {
                             type="submit"
                             disabled={isLoading} 
                             className={cn(
-                                "w-full h-14 rounded-2xl font-black uppercase tracking-widest text-xs shadow-xl transition-all duration-500",
+                                "w-full h-14 rounded-2xl font-medium text-xs shadow-xl transition-all duration-500",
                                 selectedColor.class,
                                 "text-white hover:brightness-110 active:scale-95 disabled:opacity-50"
                             )}

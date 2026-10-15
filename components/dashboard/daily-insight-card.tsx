@@ -60,7 +60,7 @@ export async function DailyInsightCard() {
 
       <div className="min-w-0 flex-1">
         <div className="mb-0.5 flex items-center gap-2">
-          <span className="flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+          <span className="flex items-center gap-1 text-xs font-medium text-muted-foreground">
             <Sparkles className="h-3 w-3 text-primary" /> Insight do dia
           </span>
           <span className="flex items-center gap-0.5 rounded-full px-1.5 text-[11px] font-black tabular-nums" style={{ backgroundColor: `${accent}1a`, color: accent }}>

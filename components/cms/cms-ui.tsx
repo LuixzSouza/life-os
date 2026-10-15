@@ -84,7 +84,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="secondary" className="w-full gap-2 rounded-xl font-black uppercase tracking-widest text-[10px] h-11 shadow-sm hover:bg-primary hover:text-primary-foreground transition-all group">
+        <Button variant="secondary" className="w-full gap-2 rounded-xl font-medium text-xs h-11 shadow-sm hover:bg-primary hover:text-primary-foreground transition-all group">
           <Code2 className="h-4 w-4 group-hover:scale-110 transition-transform" />
           Gerenciar Container
         </Button>
@@ -96,7 +96,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
           <SheetHeader className="space-y-4 text-left">
             <div className="flex items-start justify-between">
               <div className="space-y-1">
-                <SheetTitle className="text-2xl font-black uppercase tracking-tighter flex items-center gap-3">
+                <SheetTitle className="text-2xl font-semibold flex items-center gap-3">
                   <Database className="h-6 w-6 text-primary" />
                   {site.name}
                 </SheetTitle>
@@ -120,12 +120,12 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
             </div>
 
             {/* API KEY SECTION */}
-            <div className="flex items-center gap-3 rounded-[1.25rem] border border-primary/20 bg-primary/[0.03] p-3 shadow-inner">
+            <div className="flex items-center gap-3 rounded-2xl border border-primary/20 bg-primary/[0.03] p-3 shadow-inner">
               <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
                 <ShieldCheck className="h-4 w-4" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[9px] font-black uppercase tracking-widest text-primary/60 mb-0.5">Project API Key</p>
+                <p className="text-xs font-medium text-primary/60 mb-0.5">Project API Key</p>
                 <code className="text-[10px] font-mono font-bold block truncate text-foreground/80 tracking-tighter">
                   {site.apiKey}
                 </code>
@@ -157,7 +157,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
 
                   <TabsTrigger
                     value="new"
-                    className="px-4 h-9 rounded-xl border border-dashed border-border/60 text-muted-foreground hover:bg-muted data-[state=active]:bg-foreground data-[state=active]:text-background font-black text-[10px] uppercase tracking-widest gap-2 ml-2"
+                    className="px-4 h-9 rounded-xl border border-dashed border-border/60 text-muted-foreground hover:bg-muted data-[state=active]:bg-foreground data-[state=active]:text-background font-medium text-xs gap-2 ml-2"
                   >
                     <Plus className="h-3.5 w-3.5" /> Novo Endpoint
                   </TabsTrigger>
@@ -203,9 +203,9 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
 
               {/* FORMULÁRIO DE NOVA PÁGINA */}
               <TabsContent value="new" className="h-full m-0 focus-visible:ring-0 animate-in slide-in-from-bottom-2 duration-300 overflow-y-auto">
-                <Card className="border-border/40 bg-muted/5 shadow-xl rounded-[2rem] border-dashed">
+                <Card className="border-border/40 bg-muted/5 shadow-xl rounded-2xl border-dashed">
                   <CardHeader className="p-8 pb-4">
-                    <CardTitle className="text-xl font-black uppercase tracking-tighter">Inicializar Nova Rota</CardTitle>
+                    <CardTitle className="text-xl font-semibold">Inicializar Nova Rota</CardTitle>
                     <CardDescription className="text-xs font-medium uppercase tracking-wider text-muted-foreground/60">
                       Defina o caminho do seu novo endpoint JSON.
                     </CardDescription>
@@ -222,7 +222,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                       <input type="hidden" name="siteId" value={site.id} />
 
                       <div className="space-y-3">
-                        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Slug do Endpoint</Label>
+                        <Label className="text-xs font-medium text-muted-foreground/60">Slug do Endpoint</Label>
                         <div className="flex h-12 bg-muted/20 border border-border/50 rounded-xl shadow-inner focus-within:ring-2 focus-within:ring-primary/20 transition-all p-1">
                           <span className="flex items-center justify-center px-4 font-mono font-bold text-muted-foreground bg-muted/40 rounded-lg border border-border/40 mr-1">
                             /
@@ -236,7 +236,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                         </div>
                       </div>
 
-                      <Button type="submit" className="w-full h-12 rounded-xl bg-foreground text-background hover:bg-foreground/90 font-black uppercase tracking-widest text-[11px] shadow-xl">
+                      <Button type="submit" className="w-full h-12 rounded-xl bg-foreground text-background hover:bg-foreground/90 font-medium text-[11px] shadow-xl">
                         Provisionar Rota
                       </Button>
                     </form>

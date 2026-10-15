@@ -75,7 +75,7 @@ export function TimelineInsights({ insights }: { insights: ActivityInsights }) {
       {/* HEATMAP */}
       <div className="rounded-2xl border border-border/40 bg-card p-4 shadow-sm lg:col-span-8">
         <div className="mb-3 flex items-center justify-between">
-          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+          <p className="text-xs font-medium text-muted-foreground">
             Vida registrada · últimas {weeks.length} semanas
           </p>
           <p className="text-[10px] font-bold tabular-nums text-muted-foreground/60">

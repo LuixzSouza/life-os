@@ -109,14 +109,14 @@ export function TaskListItem({
             <span title={dot.label} className={cn('h-2 w-2 shrink-0 rounded-full', dot.className)} />
 
             {task.dueDate && (
-              <DateBadge date={task.dueDate} isOverdue={isOverdue} className="h-5 px-1.5 text-[9px] uppercase font-black" />
+              <DateBadge date={task.dueDate} isOverdue={isOverdue} className="h-5 px-1.5 text-xs font-medium" />
             )}
 
             {checklist.length > 0 && (
               <span
                 title="Subtarefas"
                 className={cn(
-                  'inline-flex items-center gap-1 text-[10px] font-black uppercase',
+                  'inline-flex items-center gap-1 text-xs font-medium',
                   checklistDone === checklist.length ? 'text-emerald-600' : 'text-muted-foreground/60',
                 )}
               >
@@ -125,7 +125,7 @@ export function TaskListItem({
             )}
 
             {hasEstimate && (
-              <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase text-muted-foreground/50">
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground/50">
                 <Timer size={11} /> {task.estimatedTime}m
               </span>
             )}

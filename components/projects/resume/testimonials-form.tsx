@@ -19,18 +19,18 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
         <div className="space-y-6">
             <div className="flex justify-between items-end border-b border-border/40 pb-4">
                 <div className="space-y-1">
-                    <h3 className="text-[11px] font-black uppercase tracking-[0.2em] text-muted-foreground/80 flex items-center gap-2">
+                    <h3 className="text-[11px] font-medium text-muted-foreground/80 flex items-center gap-2">
                         <MessageSquareQuote className="h-4 w-4 text-primary" /> Prova Social
                     </h3>
                 </div>
-                <Button size="sm" onClick={add} className="h-10 rounded-xl font-black uppercase tracking-widest text-[10px] gap-2 shadow-lg hover:scale-105 transition-all">
+                <Button size="sm" onClick={add} className="h-10 rounded-xl font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
                     <Plus className="h-4 w-4" /> Adicionar
                 </Button>
             </div>
 
             <div className="grid grid-cols-1 gap-8">
                 {data.testimonials.map((test, index) => (
-                    <div key={test.id} className="relative group bg-card border border-border/40 p-6 rounded-[2rem] shadow-sm hover:border-primary/30 transition-all">
+                    <div key={test.id} className="relative group bg-card border border-border/40 p-6 rounded-2xl shadow-sm hover:border-primary/30 transition-all">
                         <Button
                             size="icon"
                             variant="destructive"
@@ -42,13 +42,13 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                         </Button>
 
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="bg-primary/10 text-primary text-[9px] uppercase tracking-widest font-black px-3 py-1 rounded-lg border border-primary/20">#{index + 1}</span>
+                            <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-lg border border-primary/20">#{index + 1}</span>
                             <ReorderControls index={index} count={data.testimonials.length} onMove={(dir) => move(index, dir)} orientation="horizontal" />
                         </div>
 
                         <div className="space-y-4">
                             <div className="space-y-2">
-                                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Conteúdo do Depoimento</Label>
+                                <Label className="text-xs font-medium text-muted-foreground/60">Conteúdo do Depoimento</Label>
                                 <Textarea 
                                     placeholder="O que disseram sobre o seu trabalho..." 
                                     value={test.text} 
@@ -59,7 +59,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Nome do Autor</Label>
+                                    <Label className="text-xs font-medium text-muted-foreground/60">Nome do Autor</Label>
                                     <Input 
                                         placeholder="Ex: João Souza" 
                                         value={test.authorName} 
@@ -68,7 +68,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Empresa</Label>
+                                    <Label className="text-xs font-medium text-muted-foreground/60">Empresa</Label>
                                     <Input 
                                         placeholder="Ex: Acme Corp" 
                                         value={test.company} 
@@ -79,7 +79,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                             </div>
 
                             <div className="space-y-2">
-                                <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Cargo do Autor</Label>
+                                <Label className="text-xs font-medium text-muted-foreground/60">Cargo do Autor</Label>
                                 <Input 
                                     placeholder="Ex: CTO" 
                                     value={test.authorRole} 
@@ -93,7 +93,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
             </div>
             
             {data.testimonials.length === 0 && (
-                <div className="text-center py-8 border-2 border-dashed border-border/40 rounded-[2rem] text-muted-foreground/50 text-sm font-black uppercase tracking-widest">
+                <div className="text-center py-8 border-2 border-dashed border-border/40 rounded-2xl text-muted-foreground/50 text-sm font-medium">
                     Nenhum depoimento registrado.
                 </div>
             )}

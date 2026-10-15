@@ -99,7 +99,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
                       <Trash2 className="h-4 w-4" /> Resetar Tudo
                     </DropdownMenuItem>
                   </AlertDialogTrigger>
-                  <AlertDialogContent className="rounded-[2.5rem] p-8 border-border/40 max-w-sm text-center">
+                  <AlertDialogContent className="rounded-2xl p-8 border-border/40 max-w-sm text-center">
                     <AlertDialogHeader className="flex flex-col items-center">
                       <div className="h-14 w-14 bg-rose-500/10 text-rose-500 flex items-center justify-center rounded-2xl mb-4"><Trash2 className="h-6 w-6"/></div>
                       <AlertDialogTitle className="font-semibold text-xl">Zerar Rotina?</AlertDialogTitle>
@@ -130,7 +130,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
 
       {/* CONTEÚDO PRINCIPAL */}
       {items.length === 0 ? (
-        <div className="flex flex-col items-center justify-center flex-1 py-16 px-4 border-2 border-dashed border-border/40 rounded-[2rem] bg-muted/5 mt-6">
+        <div className="flex flex-col items-center justify-center flex-1 py-16 px-4 border-2 border-dashed border-border/40 rounded-2xl bg-muted/5 mt-6">
           <div className="bg-primary/10 p-4 rounded-2xl mb-6 shadow-inner border border-primary/20">
             <Wand2 className="h-8 w-8 text-primary animate-pulse" />
           </div>
@@ -176,7 +176,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
           </ScrollArea>
 
           {/* GRID DE HORÁRIOS */}
-          <div className="flex-1 bg-card border border-border/40 rounded-[2rem] shadow-sm relative overflow-hidden mt-4">
+          <div className="flex-1 bg-card border border-border/40 rounded-2xl shadow-sm relative overflow-hidden mt-4">
             {DAYS.map((day) => (
               <TabsContent key={day.id} value={day.id} className="h-full m-0 absolute inset-0 outline-none">
                 <RoutineGrid items={items.filter((i) => i.daysOfWeek.includes(day.id))} isToday={day.id === defaultTab} />

@@ -191,7 +191,7 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
           <ArrowLeft size={16} /> Voltar para Negócios
         </Link>
 
-        <div className="flex justify-between items-start gap-4 rounded-[1.5rem] border border-border/40 bg-card/50 p-5 sm:p-6 shadow-sm">
+        <div className="flex justify-between items-start gap-4 rounded-2xl border border-border/40 bg-card/50 p-5 sm:p-6 shadow-sm">
           <div className="flex gap-4 items-center min-w-0 flex-1">
             <Avatar className="h-16 w-16 shrink-0 rounded-2xl border border-primary/10 shadow-inner">
               <AvatarImage src={client.imageUrl || undefined} className="object-cover" alt={client.name} />
@@ -275,22 +275,22 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
       {/* RESUMO FINANCEIRO */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="rounded-2xl border border-border/40 bg-card p-4 shadow-sm">
-          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Total Recebido</p>
+          <p className="text-xs font-medium text-muted-foreground">Total Recebido</p>
           <p className="text-xl font-bold font-mono text-foreground mt-1">{formatCurrency(earned)}</p>
         </div>
         <div className="rounded-2xl border border-transparent bg-emerald-50/50 dark:bg-emerald-950/10 p-4 shadow-sm">
-          <p className="text-[10px] font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">A Receber</p>
+          <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400">A Receber</p>
           <p className="text-xl font-bold font-mono text-emerald-700 dark:text-emerald-300 mt-1">{formatCurrency(receivable)}</p>
         </div>
         <div className={cn("rounded-2xl border border-transparent p-4 shadow-sm", overdue > 0 ? "bg-red-50 dark:bg-red-950/20" : "bg-muted/30")}>
-          <p className={cn("text-[10px] font-black uppercase tracking-widest", overdue > 0 ? "text-red-600 dark:text-red-400" : "text-muted-foreground")}>Em Atraso</p>
+          <p className={cn("text-xs font-medium", overdue > 0 ? "text-red-600 dark:text-red-400" : "text-muted-foreground")}>Em Atraso</p>
           <p className={cn("text-xl font-bold font-mono mt-1", overdue > 0 ? "text-red-700 dark:text-red-300" : "text-muted-foreground/60")}>{formatCurrency(overdue)}</p>
         </div>
       </div>
 
       {/* CONTRATOS + INFORMAÇÕES — a lista flui na página (scroll natural, nada preso). */}
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-3">
-        <div className="rounded-[1.5rem] border border-border/40 bg-card/50 p-5 sm:p-6 shadow-sm lg:col-span-2">
+        <div className="rounded-2xl border border-border/40 bg-card/50 p-5 sm:p-6 shadow-sm lg:col-span-2">
           <ContractsList
             client={client}
             onNewBilling={setSelectedClientForBilling}
@@ -308,8 +308,8 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
 
         {/* Ficha do cliente: campos que antes ficavam invisíveis (email, documento,
             endereço, notas). Editáveis pelo menu ⋯ → Editar Cliente. */}
-        <div className="rounded-[1.5rem] border border-border/40 bg-card/50 p-5 sm:p-6 shadow-sm space-y-4">
-          <span className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.1em] flex items-center gap-2">
+        <div className="rounded-2xl border border-border/40 bg-card/50 p-5 sm:p-6 shadow-sm space-y-4">
+          <span className="text-xs font-medium text-muted-foreground flex items-center gap-2">
             <IdCard size={12} className="text-primary/60" /> Ficha do Cliente
           </span>
 
@@ -319,7 +319,7 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
             <InfoRow icon={MapPin} label="Endereço" value={client.address} />
             {client.notes ? (
               <div className="rounded-xl border border-border/40 bg-background/60 p-3">
-                <p className="mb-1 flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+                <p className="mb-1 flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
                   <StickyNote size={11} /> Notas internas
                 </p>
                 <p className="whitespace-pre-line text-xs leading-relaxed text-foreground/80">{client.notes}</p>
@@ -388,7 +388,7 @@ function InfoRow({
         <Icon size={13} />
       </span>
       <div className="min-w-0">
-        <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{label}</p>
+        <p className="text-xs font-medium text-muted-foreground">{label}</p>
         {href ? (
           <a href={href} className="hover:underline">{content}</a>
         ) : (

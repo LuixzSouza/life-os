@@ -168,7 +168,7 @@ export default function ResumePdfViewer({ data, locale, template, name }: Resume
       {/* BARRA DE FERRAMENTAS */}
       <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-border/40 bg-background/80 px-2 py-1.5 backdrop-blur">
         <div className="flex items-center gap-2">
-          <span className="hidden pl-1 text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/70 sm:inline">
+          <span className="hidden pl-1 text-xs font-medium text-muted-foreground/70 sm:inline">
             Prévia fiel
           </span>
           {url && <Toolbar zoom={zoom} setZoom={setZoom} />}
@@ -225,7 +225,7 @@ export default function ResumePdfViewer({ data, locale, template, name }: Resume
       {fullscreen && url && (
         <div className="fixed inset-0 z-[200] flex flex-col bg-background/95 backdrop-blur-md animate-in fade-in duration-200">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/40 px-4 py-3 sm:px-6">
-            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-muted-foreground">
+            <span className="text-[11px] font-medium text-muted-foreground">
               Prévia do currículo
             </span>
             <div className="flex items-center gap-2">

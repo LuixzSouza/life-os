@@ -102,7 +102,7 @@ export function TasksByDay({ initialTasks }: { initialTasks: Task[] }) {
               </div>
               <h3 className={cn('text-sm font-bold tracking-tight', tone.title)}>{section.label}</h3>
               {section.tone === 'today' && (
-                <span className="rounded-full bg-primary px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-primary-foreground">
+                <span className="rounded-full bg-primary px-2 py-0.5 text-xs font-medium text-primary-foreground">
                   Hoje
                 </span>
               )}

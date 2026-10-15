@@ -403,7 +403,7 @@ export function UnifiedAgenda({ items, selectedDateISO, themedDays = [], events 
 
       {/* CONFIRMAÇÃO ÚNICA de exclusão (regra: nunca AlertDialog dentro do .map). */}
       <AlertDialog open={!!deletingEvent} onOpenChange={(o) => { if (!o && !isDeleting) setDeletingEvent(null); }}>
-        <AlertDialogContent className="rounded-[2rem]">
+        <AlertDialogContent className="rounded-2xl">
           <AlertDialogHeader>
             <AlertDialogTitle>Excluir este evento?</AlertDialogTitle>
             <AlertDialogDescription>

@@ -72,9 +72,9 @@ export function EventDeleteButton({
       </AlertDialogTrigger>
 
       {/* Modal Estilo HUD (Centralizado, Bordas Altas) */}
-      <AlertDialogContent className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:max-w-[450px] p-8 gap-6 bg-background border-border/40 shadow-2xl rounded-[2.5rem] z-[100]">
+      <AlertDialogContent className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 sm:max-w-[450px] p-8 gap-6 bg-background border-border/40 shadow-2xl rounded-2xl z-[100]">
         <AlertDialogHeader className="sm:text-center flex flex-col items-center">
-          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-[1.5rem] bg-rose-500/10 border border-rose-500/20 shadow-inner">
+          <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-rose-500/10 border border-rose-500/20 shadow-inner">
             <AlertTriangle className="h-7 w-7 text-rose-500" />
           </div>
           

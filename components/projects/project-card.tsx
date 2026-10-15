@@ -237,7 +237,7 @@ export function ProjectCard({
         {/* Rodapé: etiqueta PARA à esquerda, ação à direita */}
         <div className="mt-3 flex items-center justify-between border-t border-border/40 pt-3">
           {paraMeta ? (
-            <span className={cn("inline-flex items-center rounded-md px-2 py-0.5 text-[9px] font-black uppercase tracking-widest", paraMeta.badgeClass)}>
+            <span className={cn("inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium", paraMeta.badgeClass)}>
               {paraMeta.label}
             </span>
           ) : (

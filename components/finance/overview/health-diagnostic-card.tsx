@@ -37,7 +37,7 @@ export function HealthDiagnosticCard({ metrics, smartView, isClient }: HealthDia
           <div className="flex items-center gap-3">
             <ShieldCheck className="h-6 w-6 text-foreground/80" /> Diagnóstico
           </div>
-          <Badge variant="outline" className={cn("px-3 py-1 font-black tracking-widest uppercase text-[10px] border-current bg-transparent", metrics.health.text)}>
+          <Badge variant="outline" className={cn("px-3 py-1 font-medium text-xs border-current bg-transparent", metrics.health.text)}>
             {metrics.health.label}
           </Badge>
         </CardTitle>
@@ -70,14 +70,14 @@ export function HealthDiagnosticCard({ metrics, smartView, isClient }: HealthDia
               <span className={cn("text-6xl font-black font-mono tracking-tighter tabular-nums transition-all duration-700", metrics.health.text, smartView && "blur-xl opacity-40")}>
                 {metrics.committed.toFixed(0)}<span className="text-3xl">%</span>
               </span>
-              <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mt-1">Comprometido</p>
+              <p className="text-xs font-medium text-muted-foreground mt-1">Comprometido</p>
             </div>
           </div>
         </div>
 
         {/* Plano de Ação */}
         <div className="bg-muted/20 p-6 rounded-2xl border border-border/50 shadow-sm mt-auto">
-          <h4 className="text-[10px] font-black uppercase tracking-widest flex items-center gap-2 mb-4 text-foreground/80">
+          <h4 className="text-xs font-medium flex items-center gap-2 mb-4 text-foreground/80">
             <Zap className="h-4 w-4 text-primary fill-primary/20" /> O que fazer agora?
           </h4>
           <ul className="space-y-4">

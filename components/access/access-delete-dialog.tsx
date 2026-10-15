@@ -19,7 +19,7 @@ export function AccessDeleteDialog({ open, onOpenChange, isDeleting, onConfirm }
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <div className="h-16 w-16 bg-rose-500/10 border border-rose-500/20 text-rose-500 flex items-center justify-center rounded-[1.5rem] mb-4 shadow-inner">
+          <div className="h-16 w-16 bg-rose-500/10 border border-rose-500/20 text-rose-500 flex items-center justify-center rounded-2xl mb-4 shadow-inner">
             <AlertTriangle className="h-7 w-7" />
           </div>
           <AlertDialogTitle>Expurgar Credencial?</AlertDialogTitle>

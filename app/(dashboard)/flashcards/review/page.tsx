@@ -54,8 +54,8 @@ export default async function GlobalReviewPage({
     return (
       <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background p-6">
         <div className="pointer-events-none absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-emerald-500/10 blur-[100px]" />
-        <div className="z-10 w-full max-w-lg space-y-8 rounded-[2.5rem] border border-border/50 bg-card/40 p-10 text-center shadow-2xl backdrop-blur-xl animate-in zoom-in-95 fade-in duration-500">
-          <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-[2rem] bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 shadow-inner ring-1 ring-emerald-500/20">
+        <div className="z-10 w-full max-w-lg space-y-8 rounded-2xl border border-border/50 bg-card/40 p-10 text-center shadow-2xl backdrop-blur-xl animate-in zoom-in-95 fade-in duration-500">
+          <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 shadow-inner ring-1 ring-emerald-500/20">
             <BrainCircuit className="h-12 w-12 text-emerald-600" />
           </div>
           <div className="space-y-3">

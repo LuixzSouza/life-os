@@ -111,7 +111,7 @@ export function TransactionList({ transactions, accounts = [] }: { transactions:
                     <div key={g.key} className="mb-1">
                         {/* Cabeçalho do dia */}
                         <div className="sticky top-0 z-10 flex items-center justify-between px-3 py-2 bg-card/95 backdrop-blur-sm">
-                            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+                            <span className="text-xs font-medium text-muted-foreground">
                                 {g.label}
                             </span>
                             <span
@@ -219,7 +219,7 @@ export function RecurringCard({ total, items, accounts = [] }: { total: number, 
                 </div>
 
                 <div className="relative z-10">
-                    <p className="text-[10px] text-muted-foreground font-black uppercase tracking-widest mb-1">
+                    <p className="text-xs text-muted-foreground font-medium mb-1">
                         Custo Mensal Fixo
                     </p>
                     <h3 className={cn("text-3xl font-black text-foreground tracking-tighter", smartView && "blur-md select-none")}>
@@ -321,7 +321,7 @@ function RecurringItemWrapper({ item, onPay }: { item: RecurringItemData, onPay:
                         </span>
                         <span
                             className={cn(
-                                "text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-md border",
+                                "text-xs font-medium px-1.5 py-0.5 rounded-md border",
                                 ended
                                     ? "bg-muted text-muted-foreground border-border/50"
                                     : isSoon
@@ -343,7 +343,7 @@ function RecurringItemWrapper({ item, onPay }: { item: RecurringItemData, onPay:
                     <button
                         type="button"
                         onClick={handleUndo}
-                        className="group/undo inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 hover:bg-emerald-500/15 transition-colors"
+                        className="group/undo inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 hover:bg-emerald-500/15 transition-colors"
                     >
                         <Check className="h-3 w-3 group-hover/undo:hidden" />
                         <Undo2 className="h-3 w-3 hidden group-hover/undo:block" />
@@ -354,7 +354,7 @@ function RecurringItemWrapper({ item, onPay }: { item: RecurringItemData, onPay:
                     <button
                         type="button"
                         onClick={() => onPay(item)}
-                        className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg bg-orange-500/10 text-orange-600 border border-orange-500/20 hover:bg-orange-500/15 active:scale-95 transition-all"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg bg-orange-500/10 text-orange-600 border border-orange-500/20 hover:bg-orange-500/15 active:scale-95 transition-all"
                     >
                         <Wallet className="h-3 w-3" /> Paguei
                     </button>
@@ -396,7 +396,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                     }} className="flex flex-col flex-1 min-h-0">
                         <DialogBody className="space-y-5">
                             <div className="space-y-1.5">
-                                <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Conta de Origem</Label>
+                                <Label className="text-xs font-medium text-muted-foreground ml-1">Conta de Origem</Label>
                                 <Select value={accountId} onValueChange={setAccountId}>
                                     <SelectTrigger className="rounded-xl h-12 bg-muted/20">
                                         <SelectValue placeholder="Selecione a conta..." />

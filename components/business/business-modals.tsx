@@ -85,7 +85,7 @@ export function ClientModal({ open, onOpenChange, editingClient, friends, phoneV
 
   const linkedFriend = friends.find(f => f.id === friendId);
 
-  const labelCls = "text-[10px] uppercase font-black text-muted-foreground ml-1";
+  const labelCls = "text-xs font-medium text-muted-foreground ml-1";
   const inputCls = "rounded-xl bg-muted/20 border-border/40 h-11";
 
   return (
@@ -267,27 +267,27 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
               <DialogBody className="space-y-5">
 
               <div className="space-y-1.5">
-                  <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Serviço ou Projeto</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Serviço ou Projeto</Label>
                   <Input name="title" required placeholder="Ex: Consultoria Mensal" className="rounded-xl h-12 bg-muted/20" />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                      <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Valor Total</Label>
+                      <Label className="text-xs font-medium text-muted-foreground ml-1">Valor Total</Label>
                       <div className="relative">
                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-muted-foreground">{symbol}</span>
                         <Input type="number" step="0.01" name="totalValue" required className="pl-9 rounded-xl h-12 bg-muted/20 font-mono text-lg" />
                       </div>
                   </div>
                   <div className="space-y-1.5">
-                      <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Parcelas</Label>
+                      <Label className="text-xs font-medium text-muted-foreground ml-1">Parcelas</Label>
                       <Input type="number" name="installments" defaultValue="1" required min="1" className="rounded-xl h-12 bg-muted/20 font-mono text-lg" />
                   </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                      <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Ciclo</Label>
+                      <Label className="text-xs font-medium text-muted-foreground ml-1">Ciclo</Label>
                       <Select name="interval" defaultValue="MONTHLY">
                           <SelectTrigger className="rounded-xl h-12 bg-muted/20">
                               <SelectValue />
@@ -299,7 +299,7 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
                       </Select>
                   </div>
                   <div className="space-y-1.5">
-                      <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Venc. Inicial</Label>
+                      <Label className="text-xs font-medium text-muted-foreground ml-1">Venc. Inicial</Label>
                       <Input type="date" name="startDate" defaultValue={toInputDate(new Date())} required className="rounded-xl h-12 bg-muted/20" />
                   </div>
               </div>
@@ -343,17 +343,17 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
               <DialogBody className="space-y-5">
 
               <div className="space-y-1.5">
-                  <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Descrição</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Descrição</Label>
                   <Input name="title" defaultValue={invoice?.title} required className="rounded-xl h-12 bg-muted/20 font-medium" />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                      <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Valor Parcela</Label>
+                      <Label className="text-xs font-medium text-muted-foreground ml-1">Valor Parcela</Label>
                       <Input type="number" step="0.01" name="value" defaultValue={invoice?.value} required className="rounded-xl h-12 bg-muted/20 font-mono" />
                   </div>
                   <div className="space-y-1.5">
-                      <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Vencimento</Label>
+                      <Label className="text-xs font-medium text-muted-foreground ml-1">Vencimento</Label>
                       <Input
                           type="date"
                           name="dueDate"
@@ -365,7 +365,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
               </div>
 
               <div className="space-y-1.5">
-                  <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Link de pagamento <span className="font-medium normal-case tracking-normal">(boleto / checkout — opcional)</span></Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Link de pagamento <span className="font-medium normal-case tracking-normal">(boleto / checkout — opcional)</span></Label>
                   <Input
                     name="linkUrl"
                     type="url"
@@ -377,7 +377,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
               </div>
 
               <div className="space-y-1.5">
-                  <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Status de Pagamento</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Status de Pagamento</Label>
                   <Select name="status" defaultValue={invoice?.status || "PENDING"}>
                       <SelectTrigger className="rounded-xl h-12 bg-muted/20">
                           <SelectValue />
@@ -441,12 +441,12 @@ export function BillingEditModal({ billing, onClose }: BillingEditModalProps) {
               <DialogBody className="space-y-5">
 
               <div className="space-y-1.5">
-                  <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Título do Serviço</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Título do Serviço</Label>
                   <Input name="title" defaultValue={billing?.title} required className="rounded-xl h-12 bg-muted/20" />
               </div>
 
               <div className="space-y-1.5">
-                  <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Status do Projeto</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Status do Projeto</Label>
                   <Select name="status" defaultValue={billing?.status || "ACTIVE"}>
                       <SelectTrigger className="rounded-xl h-12 bg-muted/20">
                           <SelectValue placeholder="Selecione..." />
@@ -512,7 +512,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
             }} className="flex flex-col flex-1 min-h-0">
                 <DialogBody className="space-y-5">
                 <div className="space-y-1.5">
-                    <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Conta de Destino</Label>
+                    <Label className="text-xs font-medium text-muted-foreground ml-1">Conta de Destino</Label>
                     <Select value={accountId} onValueChange={setAccountId}>
                         <SelectTrigger className="rounded-xl h-12 bg-muted/20">
                             <SelectValue placeholder="Selecione a conta..." />
@@ -584,17 +584,17 @@ export function AddInvoiceModal({ billing, onClose }: AddInvoiceModalProps) {
           <input type="hidden" name="billingId" value={billing?.id || ""} />
           <DialogBody className="space-y-5">
             <div className="space-y-1.5">
-              <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Descrição</Label>
+              <Label className="text-xs font-medium text-muted-foreground ml-1">Descrição</Label>
               <Input name="title" placeholder="Ex: Aditivo — nova página" required className="rounded-xl h-12 bg-muted/20 font-medium" />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Valor ({currencySymbol})</Label>
+                <Label className="text-xs font-medium text-muted-foreground ml-1">Valor ({currencySymbol})</Label>
                 <Input type="number" step="0.01" min="0.01" name="value" placeholder="0,00" required className="rounded-xl h-12 bg-muted/20 font-mono" />
               </div>
               <div className="space-y-1.5">
-                <Label className="text-[10px] uppercase font-black text-muted-foreground ml-1">Vencimento</Label>
+                <Label className="text-xs font-medium text-muted-foreground ml-1">Vencimento</Label>
                 <Input type="date" name="dueDate" required className="rounded-xl h-12 bg-muted/20" />
               </div>
             </div>
@@ -628,7 +628,7 @@ export function DeleteAlert({ target, onClose, onConfirm }: DeleteAlertProps) {
           // z-[110]: SEMPRE acima do overlay (z-[100]) — z-50 deixava o vidro
           // desfocado NA FRENTE da caixa de confirmação (modal "fantasma").
           "fixed left-[50%] top-[50%] z-[110] grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%]",
-          "rounded-[2rem] border border-destructive/20 bg-background p-8 shadow-2xl duration-200",
+          "rounded-2xl border border-destructive/20 bg-background p-8 shadow-2xl duration-200",
           "animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95"
         )}
       >

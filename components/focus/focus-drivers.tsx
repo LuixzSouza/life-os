@@ -28,7 +28,7 @@ export function FocusDrivers({ drivers }: { drivers: FocusDriversData }) {
   return (
     <div className="px-4 pb-6 sm:px-6">
       <div className="rounded-2xl border border-border/40 bg-card p-4 shadow-sm">
-        <h3 className="mb-1 flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+        <h3 className="mb-1 flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
           <Sparkles className="h-3.5 w-3.5 text-primary" /> O que move o seu foco
         </h3>
         <p className="mb-4 text-[11px] text-muted-foreground/70">

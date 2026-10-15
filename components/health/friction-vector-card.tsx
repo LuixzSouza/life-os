@@ -41,7 +41,7 @@ export async function FrictionVectorCard() {
           {dom.emoji}
         </span>
         <div className="min-w-0">
-          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Maior obstáculo</p>
+          <p className="text-xs font-medium text-muted-foreground">Maior obstáculo</p>
           <p className="text-sm font-black" style={{ color: dom.color }}>
             {dom.label} <span className="font-bold text-muted-foreground">· {domStat?.pct ?? 0}% das falhas</span>
           </p>
@@ -70,7 +70,7 @@ export async function FrictionVectorCard() {
       {/* Hábitos que mais travam */}
       {fv.habits.length > 0 && (
         <div className="mt-4 border-t border-border/40 pt-3">
-          <p className="mb-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground">Onde mais trava</p>
+          <p className="mb-2 text-xs font-medium text-muted-foreground">Onde mais trava</p>
           <div className="space-y-1.5">
             {fv.habits.map((h) => {
               const m = h.topReason ? META[h.topReason] : null;

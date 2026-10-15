@@ -81,12 +81,12 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
         return (
             <div className="space-y-4">
                 <div className="flex items-center justify-between gap-2">
-                    <Button onClick={() => run(mode)} disabled={isLoading} className="gap-2 rounded-xl font-black uppercase tracking-widest text-[11px] h-11">
+                    <Button onClick={() => run(mode)} disabled={isLoading} className="gap-2 rounded-xl font-medium text-[11px] h-11">
                         {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : value ? <RefreshCw className="h-4 w-4" /> : <Sparkles className="h-4 w-4" />}
                         {value ? "Gerar novamente" : generateLabel}
                     </Button>
                     {value && (
-                        <Button variant="outline" onClick={() => copy(value)} className="gap-2 rounded-xl font-black uppercase tracking-widest text-[10px] h-11 border-border/60">
+                        <Button variant="outline" onClick={() => copy(value)} className="gap-2 rounded-xl font-medium text-xs h-11 border-border/60">
                             <Copy className="h-3.5 w-3.5" /> Copiar
                         </Button>
                     )}
@@ -96,19 +96,19 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                     {isLoading ? (
                         <div className="flex flex-col items-center justify-center h-[280px] gap-3 text-muted-foreground">
                             <Loader2 className="h-8 w-8 animate-spin text-violet-500" />
-                            <p className="text-[11px] font-black uppercase tracking-widest">Processando com IA...</p>
+                            <p className="text-[11px] font-medium">Processando com IA...</p>
                         </div>
                     ) : value ? (
                         <div className={cn(
                             "prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap leading-relaxed",
-                            "prose-headings:font-black prose-headings:uppercase prose-headings:tracking-wider prose-strong:font-black"
+                            "prose-headings:font-semibold prose-strong:font-black"
                         )}>
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>{value}</ReactMarkdown>
                         </div>
                     ) : (
                         <div className="flex flex-col items-center justify-center h-[280px] gap-3 text-center text-muted-foreground/50">
                             <Sparkles className="h-10 w-10" />
-                            <p className="text-[11px] font-black uppercase tracking-widest max-w-[260px]">
+                            <p className="text-[11px] font-medium max-w-[260px]">
                                 Clique em &quot;{generateLabel}&quot; para a IA gerar usando seu currículo e os dados da vaga.
                             </p>
                         </div>
@@ -122,7 +122,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
         <Dialog open={!!job} onOpenChange={onOpenChange}>
             <DialogContent size="lg">
                 <DialogHeader className="bg-gradient-to-br from-violet-500/10 to-transparent">
-                    <DialogTitle className="text-2xl font-black uppercase tracking-tighter flex items-center gap-2">
+                    <DialogTitle className="text-2xl font-semibold flex items-center gap-2">
                         <Sparkles className="h-6 w-6 text-violet-500" /> Assistente de Carreira
                     </DialogTitle>
                     {job && (
@@ -142,13 +142,13 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                 <DialogBody>
                     <Tabs defaultValue="cover" className="w-full">
                         <TabsList className="bg-muted/40 p-1.5 rounded-2xl border border-border/40 h-12 w-full mb-6">
-                            <TabsTrigger value="cover" className="rounded-xl font-black text-[10px] uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:shadow-md gap-2 h-full flex-1">
+                            <TabsTrigger value="cover" className="rounded-xl font-medium text-xs data-[state=active]:bg-background data-[state=active]:shadow-md gap-2 h-full flex-1">
                                 <FileText className="h-3.5 w-3.5" /> Carta
                             </TabsTrigger>
-                            <TabsTrigger value="match" className="rounded-xl font-black text-[10px] uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:shadow-md gap-2 h-full flex-1">
+                            <TabsTrigger value="match" className="rounded-xl font-medium text-xs data-[state=active]:bg-background data-[state=active]:shadow-md gap-2 h-full flex-1">
                                 <Target className="h-3.5 w-3.5" /> Match
                             </TabsTrigger>
-                            <TabsTrigger value="tailor" className="rounded-xl font-black text-[10px] uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:shadow-md gap-2 h-full flex-1">
+                            <TabsTrigger value="tailor" className="rounded-xl font-medium text-xs data-[state=active]:bg-background data-[state=active]:shadow-md gap-2 h-full flex-1">
                                 <FileUser className="h-3.5 w-3.5" /> Currículo
                             </TabsTrigger>
                         </TabsList>
@@ -161,7 +161,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                         <TabsContent value="tailor" className="mt-0 focus-visible:ring-0 outline-none">
                             <div className="space-y-4">
                                 <div className="flex items-center gap-2">
-                                    <Button onClick={runTailor} disabled={tailoring} className="gap-2 rounded-xl font-black uppercase tracking-widest text-[11px] h-11">
+                                    <Button onClick={runTailor} disabled={tailoring} className="gap-2 rounded-xl font-medium text-[11px] h-11">
                                         {tailoring ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />}
                                         {tailoredName ? "Gerar outra versão" : "Criar currículo para esta vaga"}
                                     </Button>
@@ -171,7 +171,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                                     {tailoring ? (
                                         <div className="flex flex-col items-center justify-center h-[280px] gap-3 text-muted-foreground">
                                             <Loader2 className="h-8 w-8 animate-spin text-violet-500" />
-                                            <p className="text-[11px] font-black uppercase tracking-widest">Adaptando à vaga…</p>
+                                            <p className="text-[11px] font-medium">Adaptando à vaga…</p>
                                         </div>
                                     ) : tailoredName ? (
                                         <div className="flex flex-col items-center justify-center h-[280px] gap-4 text-center">
@@ -187,7 +187,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                                             <Button
                                                 variant="outline"
                                                 onClick={() => onOpenChange(false)}
-                                                className="gap-2 rounded-xl font-black uppercase tracking-widest text-[10px] h-10 border-border/60"
+                                                className="gap-2 rounded-xl font-medium text-xs h-10 border-border/60"
                                             >
                                                 Fechar e abrir a aba Currículos <ArrowRight className="h-3.5 w-3.5" />
                                             </Button>
@@ -195,7 +195,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                                     ) : (
                                         <div className="flex flex-col items-center justify-center h-[280px] gap-3 text-center text-muted-foreground/60">
                                             <FileUser className="h-10 w-10" />
-                                            <p className="text-[11px] font-black uppercase tracking-widest max-w-[280px]">
+                                            <p className="text-[11px] font-medium max-w-[280px]">
                                                 A IA parte do seu currículo Base e reescreve resumo, conquistas e impacto para enfatizar o que casa com esta vaga — sem inventar nada.
                                             </p>
                                         </div>

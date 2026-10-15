@@ -88,11 +88,11 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                             </div>
                                             <div className="space-y-1.5">
                                                 <div className="flex flex-wrap items-center gap-2">
-                                                    <Badge variant="secondary" className="text-[9px] font-black bg-muted text-muted-foreground uppercase tracking-widest">
+                                                    <Badge variant="secondary" className="text-xs font-medium bg-muted text-muted-foreground">
                                                         {product.type}
                                                     </Badge>
                                                     {isBest && (
-                                                        <Badge variant="secondary" className="text-[9px] font-black bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-widest shadow-sm gap-1 pl-1.5 border-0">
+                                                        <Badge variant="secondary" className="text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm gap-1 pl-1.5 border-0">
                                                             <Zap className="h-3 w-3 fill-current" /> Top Retorno
                                                         </Badge>
                                                     )}
@@ -120,7 +120,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                             </Badge>
                                         </div>
                                         <div className="sm:text-right mt-2 sm:mt-0">
-                                            <p className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">
+                                            <p className="text-xs font-medium text-muted-foreground mb-1">
                                                 Retorno Líquido
                                             </p>
                                             <div className="flex items-center sm:justify-end gap-2 text-primary">
@@ -139,7 +139,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                 <div className="bg-card border-b border-border/40 p-6 md:p-8 relative shrink-0">
                                     <DialogHeader className="text-left space-y-4">
                                         <div className="flex flex-wrap items-center gap-2">
-                                            <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20 border-0 font-black tracking-widest text-[10px] uppercase">
+                                            <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20 border-0 font-medium text-xs">
                                                 {product.type}
                                             </Badge>
                                             {product.hasFGC && (
@@ -162,7 +162,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                     
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                         <div className="space-y-2 bg-muted/20 p-5 rounded-2xl border border-border/50 shadow-inner">
-                                            <p className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Lucro Líquido</p>
+                                            <p className="text-xs font-medium text-muted-foreground">Lucro Líquido</p>
                                             <p className="text-3xl md:text-4xl font-black font-mono text-emerald-600 dark:text-emerald-500 tracking-tighter">
                                                 + {formatCurrency(result.netProfit)}
                                             </p>
@@ -171,7 +171,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                         
                                         <div className="space-y-4 bg-muted/20 p-5 rounded-2xl border border-border/50 shadow-inner">
                                             <div>
-                                                <p className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-1">Força contra o CDI</p>
+                                                <p className="text-xs font-medium text-muted-foreground mb-1">Força contra o CDI</p>
                                                 <div className="flex items-baseline gap-2">
                                                     <span className="text-3xl md:text-4xl font-black font-mono text-foreground tracking-tighter">
                                                         {result.equivalentCDI.toFixed(0)}%

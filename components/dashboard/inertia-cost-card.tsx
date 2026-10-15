@@ -56,7 +56,7 @@ export async function InertiaCostCard() {
 
   return (
     <div className="rounded-2xl border border-border/40 bg-card p-5 shadow-sm transition-all hover:shadow-md">
-      <p className="mb-4 flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+      <p className="mb-4 flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
         <Ghost className="h-3.5 w-3.5 text-violet-500" /> Custo fantasma da inércia
       </p>
 

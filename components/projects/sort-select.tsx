@@ -36,7 +36,7 @@ export function SortSelect({ sortBy, slug }: SortSelectProps) {
 
     return (
         <div className="flex flex-col gap-1.5 min-w-[160px]">
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/60 ml-1">
+            <span className="text-xs font-medium text-muted-foreground/60 ml-1">
                 Ordenar por
             </span>
 

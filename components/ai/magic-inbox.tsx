@@ -164,7 +164,7 @@ export function MagicInbox() {
                 <Sparkles className="h-4 w-4" />
               </span>
               <span className="flex flex-col text-left leading-tight">
-                <span className="text-sm font-black uppercase tracking-widest">Inbox Mágica</span>
+                <span className="text-sm font-medium">Inbox Mágica</span>
                 <span className="text-[11px] font-medium normal-case tracking-normal text-muted-foreground">
                   Despeje a vida de uma vez — eu separo em registros
                 </span>
@@ -209,7 +209,7 @@ export function MagicInbox() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rose-500/60" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-rose-500" />
                   </span>
-                  <span className="shrink-0 text-[10px] font-black uppercase tracking-widest text-rose-500">
+                  <span className="shrink-0 text-xs font-medium text-rose-500">
                     Ouvindo · {formatListenClock(dictation.seconds)}
                   </span>
                   <span className="truncate text-xs italic text-muted-foreground">
@@ -218,7 +218,7 @@ export function MagicInbox() {
                   <button
                     type="button"
                     onClick={dictation.stop}
-                    className="ml-auto shrink-0 rounded-md px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-rose-500 transition hover:bg-rose-500/10"
+                    className="ml-auto shrink-0 rounded-md px-1.5 py-0.5 text-xs font-medium text-rose-500 transition hover:bg-rose-500/10"
                   >
                     Parar
                   </button>
@@ -270,7 +270,7 @@ export function MagicInbox() {
             </div>
           ) : (
             <div className="space-y-3">
-              <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
+              <p className="text-xs font-medium text-muted-foreground/60">
                 {source === "ai" ? "Classificado pela sua IA" : "Classificado localmente (IA não conectada)"} — revise e confirme
               </p>
               <ul className="max-h-64 space-y-2 overflow-y-auto pr-1">
@@ -317,7 +317,7 @@ export function MagicInbox() {
                   <Link
                     href={`/ai?q=${encodeURIComponent(text)}`}
                     onClick={() => close(false)}
-                    className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground transition-colors hover:text-primary"
                   >
                     Abrir no chat <ArrowRight className="h-3 w-3" />
                   </Link>

@@ -49,7 +49,7 @@ export function FocusInsights({ stats }: { stats: FocusStats }) {
 
       {/* BARRAS POR DIA */}
       <div className="rounded-2xl border border-border/40 bg-card p-4 shadow-sm">
-        <h3 className="mb-4 flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+        <h3 className="mb-4 flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
           <Flame className="h-3.5 w-3.5" style={{ color: ACCENT }} /> Foco por dia
         </h3>
         <div className="flex items-end justify-between gap-2" style={{ height: 132 }}>
@@ -83,7 +83,7 @@ export function FocusInsights({ stats }: { stats: FocusStats }) {
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         {/* TOP RÓTULOS */}
         <div className="rounded-2xl border border-border/40 bg-card p-4 shadow-sm">
-          <h3 className="mb-3 text-[10px] font-black uppercase tracking-widest text-muted-foreground">No que você focou</h3>
+          <h3 className="mb-3 text-xs font-medium text-muted-foreground">No que você focou</h3>
           <div className="space-y-2.5">
             {stats.byLabel.map((l) => (
               <div key={l.label}>
@@ -101,7 +101,7 @@ export function FocusInsights({ stats }: { stats: FocusStats }) {
 
         {/* SESSÕES RECENTES */}
         <div className="rounded-2xl border border-border/40 bg-card p-4 shadow-sm">
-          <h3 className="mb-3 text-[10px] font-black uppercase tracking-widest text-muted-foreground">Sessões recentes</h3>
+          <h3 className="mb-3 text-xs font-medium text-muted-foreground">Sessões recentes</h3>
           <div className="space-y-1.5">
             {stats.recent.map((s) => (
               <div key={s.id} className="flex items-center gap-3 rounded-xl border border-border/40 bg-background px-3 py-2">

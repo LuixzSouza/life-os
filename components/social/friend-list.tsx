@@ -108,7 +108,7 @@ export function FriendList({
 
       {/* --- GRID DE CONEXÕES --- */}
       {filteredAndSortedFriends.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 text-center border border-dashed border-border/60 rounded-[2rem] bg-muted/10 shadow-sm">
+        <div className="flex flex-col items-center justify-center py-20 text-center border border-dashed border-border/60 rounded-2xl bg-muted/10 shadow-sm">
           <div className="p-4 bg-background border border-border/40 rounded-full mb-4 shadow-sm">
             <UsersIcon className="h-8 w-8 text-muted-foreground/50" />
           </div>

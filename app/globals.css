@@ -547,3 +547,16 @@ body.privacy-mode-active .privacy-blur:hover {
     scroll-behavior: auto !important;
   }
 }
+/* ---------------------------------------------------------------
+   EYEBROW — rótulo pequeno em caixa-alta (títulos de seção, KPIs,
+   rótulos de campo). Padrão ÚNICO do sistema: antes havia 8+ combinações
+   de tamanho/peso/espaçamento. Use `eyebrow` + uma cor (ex.:
+   `eyebrow text-muted-foreground`) em vez de montar à mão.
+   --------------------------------------------------------------- */
+@utility eyebrow {
+  font-size: 11px;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

@@ -58,7 +58,7 @@ export function EndpointEditor({ page }: { page: SitePage }) {
   try { JSON.parse(code); } catch { isJsonValid = false; }
 
   return (
-    <div className="flex flex-col h-full bg-card border border-border/40 rounded-[2rem] shadow-sm overflow-hidden animate-in fade-in duration-300">
+    <div className="flex flex-col h-full bg-card border border-border/40 rounded-2xl shadow-sm overflow-hidden animate-in fade-in duration-300">
       {/* TOOLBAR DO EDITOR */}
       <div className="flex items-center justify-between bg-muted/10 border-b border-border/40 p-4 md:px-6 shrink-0">
         <div className="flex items-center gap-4">
@@ -67,17 +67,17 @@ export function EndpointEditor({ page }: { page: SitePage }) {
           </Badge>
 
           {isDirty ? (
-            <Badge variant="outline" className="text-[10px] font-black uppercase tracking-widest gap-1 bg-amber-500/10 text-amber-600 border-amber-500/20">
+            <Badge variant="outline" className="text-xs font-medium gap-1 bg-amber-500/10 text-amber-600 border-amber-500/20">
               Pendente
             </Badge>
           ) : (
-            <Badge variant="outline" className="text-[10px] font-black uppercase tracking-widest gap-1 bg-emerald-500/10 text-emerald-600 border-emerald-500/20">
+            <Badge variant="outline" className="text-xs font-medium gap-1 bg-emerald-500/10 text-emerald-600 border-emerald-500/20">
               <Check className="h-3 w-3" /> Live
             </Badge>
           )}
 
           {!isJsonValid && code.length > 0 && (
-            <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-rose-500">
+            <span className="inline-flex items-center gap-1 text-xs font-medium text-rose-500">
               <AlertTriangle className="h-3 w-3" /> JSON inválido
             </span>
           )}
@@ -89,7 +89,7 @@ export function EndpointEditor({ page }: { page: SitePage }) {
             onClick={handleSave}
             disabled={!isDirty || isSaving || !isJsonValid}
             title={!isJsonValid ? "Corrija o JSON antes de publicar" : undefined}
-            className="h-8 gap-2 font-black uppercase tracking-widest text-[10px] rounded-lg shadow-lg"
+            className="h-8 gap-2 font-medium text-xs rounded-lg shadow-lg"
           >
             {isSaving ? <Loader2 className="h-3 w-3 animate-spin" /> : <Save className="h-3 w-3" />}
             Deploy

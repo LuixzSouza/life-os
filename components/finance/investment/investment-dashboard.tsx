@@ -100,7 +100,7 @@ export function InvestmentDashboard({ initialMarketData, positions, totals, teso
                 <TabsContent value="PLANNER" className="space-y-8 focus-visible:outline-none animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <div className="flex flex-col gap-8">
                         <section className="bg-card p-6 md:p-8 rounded-2xl border border-border/40 shadow-sm">
-                            <h3 className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-6 flex items-center gap-2">
+                            <h3 className="text-xs font-medium text-muted-foreground mb-6 flex items-center gap-2">
                                 <div className="h-5 w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs">1</div>
                                 Defina seu Perfil de Risco
                             </h3>
@@ -108,7 +108,7 @@ export function InvestmentDashboard({ initialMarketData, positions, totals, teso
                         </section>
                         
                         <section className="bg-card p-6 md:p-8 rounded-2xl border border-border/40 shadow-sm">
-                            <h3 className="text-[10px] font-black text-muted-foreground uppercase tracking-widest mb-6 flex items-center gap-2">
+                            <h3 className="text-xs font-medium text-muted-foreground mb-6 flex items-center gap-2">
                                 <div className="h-5 w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs">2</div>
                                 Simulação de Juros Compostos
                             </h3>
@@ -185,7 +185,7 @@ function SummaryCard({ icon: Icon, title, value, subtitle, theme }: SummaryCardP
                     </div>
                 </div>
                 <div className="space-y-1 mt-auto">
-                    <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{title}</p>
+                    <p className="text-xs font-medium text-muted-foreground">{title}</p>
                     <div className="text-3xl font-black font-mono tracking-tighter text-foreground">
                         {value}
                     </div>

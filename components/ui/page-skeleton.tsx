@@ -185,7 +185,7 @@ function AgendaBody() {
           <Skeleton className="h-16 w-full rounded-xl" />
         </div>
       </div>
-      <div className="space-y-0 rounded-[2rem] border border-border/40 bg-card p-4 shadow-sm lg:col-span-9">
+      <div className="space-y-0 rounded-2xl border border-border/40 bg-card p-4 shadow-sm lg:col-span-9">
         <div className="flex gap-2 border-b border-border/40 pb-3">
           {Array.from({ length: 5 }).map((_, i) => (
             <Skeleton key={i} className="h-9 w-24 rounded-lg" />

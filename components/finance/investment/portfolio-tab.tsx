@@ -133,7 +133,7 @@ export function PortfolioTab({ positions, totals }: PortfolioTabProps) {
       {/* ALOCAÇÃO */}
       <Card className="rounded-2xl border-border/40 shadow-sm">
         <CardContent className="p-6">
-          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-4 flex items-center gap-2">
+          <p className="text-xs font-medium text-muted-foreground mb-4 flex items-center gap-2">
             <PieIcon className="h-3.5 w-3.5" /> Alocação da carteira
           </p>
           <PortfolioAllocationChart positions={positions} />
@@ -145,7 +145,7 @@ export function PortfolioTab({ positions, totals }: PortfolioTabProps) {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-border/40 text-[10px] font-black uppercase tracking-wider text-muted-foreground">
+              <tr className="border-b border-border/40 text-xs font-medium text-muted-foreground">
                 <th className="text-left font-black px-5 py-3">Ativo</th>
                 <th className="text-right font-black px-3 py-3">Qtd</th>
                 <th className="text-right font-black px-3 py-3 hidden sm:table-cell">Preço médio</th>
@@ -265,7 +265,7 @@ function KpiCard({ label, value, sub, icon, tone = "default", accent, blur }: Kp
     <Card className="rounded-2xl border-border/40 shadow-sm">
       <CardContent className="p-4">
         <div className="flex items-center justify-between mb-3">
-          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{label}</p>
+          <p className="text-xs font-medium text-muted-foreground">{label}</p>
           <div className={cn("p-2 rounded-xl", iconTone)}>{icon}</div>
         </div>
         <p className={cn(

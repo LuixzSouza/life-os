@@ -129,7 +129,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 space-y-3">
                 <div className="flex items-center gap-2">
                     <Sparkles className="h-4 w-4 text-primary" />
-                    <p className="text-[11px] font-black uppercase tracking-widest text-primary">
+                    <p className="text-[11px] font-medium text-primary">
                         Viu em alguma loja? Cole o link
                     </p>
                 </div>
@@ -176,7 +176,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                         ) : (
                             <div className="flex flex-col items-center text-muted-foreground/50 gap-3">
                                 <ImageIcon className="h-12 w-12 opacity-50" />
-                                <span className="text-[10px] uppercase font-black tracking-widest text-center px-4">URL da Imagem</span>
+                                <span className="text-xs font-medium text-center px-4">URL da Imagem</span>
                             </div>
                         )}
                     </div>
@@ -200,7 +200,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                 <div className="flex-1 space-y-5 min-w-0">
                     {/* Nome */}
                     <div className="space-y-2">
-                        <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">O que você deseja conquistar? *</Label>
+                        <Label className="text-xs font-medium text-muted-foreground ml-1">O que você deseja conquistar? *</Label>
                         <div className="relative">
                             <Tag className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground/50" />
                             <Input
@@ -217,7 +217,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
 
                     {/* Preço — o "dá pra comprar?" é calculado contra o saldo real das contas */}
                     <div className="space-y-2">
-                        <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Valor Total (R$) *</Label>
+                        <Label className="text-xs font-medium text-muted-foreground ml-1">Valor Total (R$) *</Label>
                         <div className="relative group">
                             <DollarSign className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground/50 group-focus-within:text-primary transition-colors" />
                             <Input
@@ -239,7 +239,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
 
                     {/* Prioridade */}
                     <div className="space-y-2 pt-1">
-                        <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Qual o grau de urgência?</Label>
+                        <Label className="text-xs font-medium text-muted-foreground ml-1">Qual o grau de urgência?</Label>
                         <div className="grid grid-cols-3 gap-3">
                             <button
                                 type="button"
@@ -276,7 +276,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
 
                     {/* Link da Loja */}
                     <div className="space-y-2 pt-1">
-                        <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest ml-1">Link da Loja (Opcional)</Label>
+                        <Label className="text-xs font-medium text-muted-foreground ml-1">Link da Loja (Opcional)</Label>
                         <div className="relative">
                             <ArrowUpRight className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground/50" />
                             <Input

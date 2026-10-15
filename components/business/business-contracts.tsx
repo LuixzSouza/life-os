@@ -43,7 +43,7 @@ export function ContractsList({
   return (
     <div className="flex flex-col">
       <div className="flex justify-between items-center mb-4">
-        <span className="text-[10px] font-black text-muted-foreground uppercase tracking-[0.1em] flex items-center gap-2">
+        <span className="text-xs font-medium text-muted-foreground flex items-center gap-2">
           <Briefcase size={12} className="text-primary/60" /> Contratos e Projetos
         </span>
         <Button variant="ghost" size="sm" className="h-7 px-2.5 text-[10px] font-bold uppercase tracking-wider hover:bg-primary/10 hover:text-primary rounded-lg" onClick={() => onNewBilling(client.id)}>

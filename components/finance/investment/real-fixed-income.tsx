@@ -65,7 +65,7 @@ export function RealFixedIncome({ cdi, ipca, tesouro }: RealFixedIncomeProps) {
             <Banknote className="h-4 w-4 text-primary" />
             <h3 className="text-sm font-extrabold uppercase tracking-widest text-foreground">Tesouro Direto · ao vivo</h3>
           </div>
-          <span className="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+          <span className="rounded-full bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-600 dark:text-emerald-400">
             Taxas reais · B3
           </span>
         </div>
@@ -84,7 +84,7 @@ export function RealFixedIncome({ cdi, ipca, tesouro }: RealFixedIncomeProps) {
                   <div>
                     <div className="flex items-start justify-between gap-2">
                       <div className={cn("p-2 rounded-xl bg-muted/40 border border-border/40", meta.color)}><meta.Icon className="h-4 w-4" /></div>
-                      <span className="rounded-md bg-muted/50 px-2 py-0.5 text-[9px] font-black uppercase tracking-wider text-muted-foreground">{meta.label}</span>
+                      <span className="rounded-md bg-muted/50 px-2 py-0.5 text-xs font-medium text-muted-foreground">{meta.label}</span>
                     </div>
                     <h4 className="mt-3 font-bold text-foreground leading-tight">{b.name}</h4>
                     <p className="mt-1 font-mono text-lg font-black text-primary">{rateDisplay(b)}</p>

@@ -39,7 +39,7 @@ function Calendar({
         ...formatters,
       }}
       className={cn(
-        "group/calendar rounded-[1.5rem] border border-border/40 bg-card p-5 shadow-xl",
+        "group/calendar rounded-2xl border border-border/40 bg-card p-5 shadow-xl",
         "[[data-slot=card-content]_&]:bg-transparent",
         "[[data-slot=popover-content]_&]:bg-transparent",
         String.raw`rtl:**:[.rdp-button\_next>svg]:rotate-180`,
@@ -80,7 +80,7 @@ function Calendar({
 
         // Cabeçalho do Mês (Tipografia Tática)
         caption_label: cn(
-          "select-none text-xs font-black uppercase tracking-widest text-foreground",
+          "select-none text-xs font-medium text-foreground",
           captionLayout !== "label" &&
             "flex h-8 items-center gap-1 rounded-md pl-2 pr-1 [&>svg]:size-3.5 [&>svg]:text-muted-foreground",
           defaultClassNames.caption_label
@@ -108,7 +108,7 @@ function Calendar({
 
         // Dias da Semana (Seg, Ter, Qua...)
         weekday: cn(
-          "flex-1 text-center text-[9px] font-black uppercase tracking-widest text-muted-foreground/60 select-none",
+          "flex-1 text-center text-xs font-medium text-muted-foreground/60 select-none",
           defaultClassNames.weekday
         ),
 

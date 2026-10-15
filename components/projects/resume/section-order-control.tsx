@@ -54,7 +54,7 @@ export function SectionOrderControl({
                     variant="outline"
                     size="sm"
                     title="Ordenar e mostrar/ocultar seções do PDF"
-                    className="h-9 rounded-xl font-black uppercase tracking-widest text-[9px] gap-1.5 border-border/60 hover:bg-primary/5 hover:text-primary"
+                    className="h-9 rounded-xl font-medium text-xs gap-1.5 border-border/60 hover:bg-primary/5 hover:text-primary"
                 >
                     <ListOrdered className="h-3.5 w-3.5" />
                     <span className="hidden sm:inline">Seções</span>
@@ -66,7 +66,7 @@ export function SectionOrderControl({
             </PopoverTrigger>
             <PopoverContent align="end" className="w-72 rounded-2xl p-3">
                 <div className="mb-2 px-1">
-                    <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/70">Seções do PDF</p>
+                    <p className="text-xs font-medium text-muted-foreground/70">Seções do PDF</p>
                     <p className="text-[10px] text-muted-foreground/60">Reordene com ↑/↓ e oculte com o olho.</p>
                 </div>
                 <div className="space-y-1">

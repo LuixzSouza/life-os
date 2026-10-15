@@ -66,7 +66,7 @@ export function DateBadge({ date, isOverdue: forceOverdue = false, className }: 
           <Badge
             variant="outline"
             className={cn(
-              'flex items-center gap-1.5 px-2.5 py-1 h-6 text-[9px] font-black uppercase tracking-[0.1em] border transition-all cursor-default shadow-sm rounded-lg',
+              'flex items-center gap-1.5 px-2.5 py-1 h-6 text-xs font-medium border transition-all cursor-default shadow-sm rounded-lg',
               getStyle(),
               className
             )}
@@ -88,7 +88,7 @@ export function DateBadge({ date, isOverdue: forceOverdue = false, className }: 
                 <div className="p-1.5 bg-primary/10 rounded-lg">
                     <Timer className="h-3.5 w-3.5 text-primary" />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest">{getRelativeTime() || 'Prazo Final'}</span>
+                <span className="text-xs font-medium">{getRelativeTime() || 'Prazo Final'}</span>
              </div>
              <div className="space-y-0.5">
                 <p className="text-xs font-bold text-foreground">

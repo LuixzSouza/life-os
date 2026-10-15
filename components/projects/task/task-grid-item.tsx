@@ -133,15 +133,15 @@ export function TaskGridItem({
         <div className="mt-auto flex flex-wrap items-center gap-1.5" onPointerDown={stopPropagation}>
           {/* Stepper interativo: 1 clique avança no pipeline (substitui o badge morto) */}
           <StatusStepper status={status} onChange={onStatusChange} className="h-6" />
-          <PriorityBadge priority={(task.priority as TaskPriority) || "MEDIUM"} className="h-5 px-2 text-[8px] font-black uppercase tracking-[0.1em]" />
-          {task.dueDate && <DateBadge date={task.dueDate} isOverdue={isOverdue} className="h-5 px-2 text-[8px] font-black uppercase tracking-[0.1em]" />}
+          <PriorityBadge priority={(task.priority as TaskPriority) || "MEDIUM"} className="h-5 px-2 text-xs font-medium" />
+          {task.dueDate && <DateBadge date={task.dueDate} isOverdue={isOverdue} className="h-5 px-2 text-xs font-medium" />}
         </div>
       </div>
 
       {/* FOOTER */}
       <div className="px-5 pb-5" onPointerDown={stopPropagation}>
         <div className="flex justify-between items-center mb-2 px-0.5">
-            <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">Integridade</span>
+            <span className="text-xs font-medium text-muted-foreground/40">Integridade</span>
             <span className="text-[10px] font-mono font-black text-primary">{Math.round(progress)}%</span>
         </div>
         <ProgressBar value={progress} className="h-1.5" showLabel={false} />

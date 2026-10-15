@@ -55,7 +55,7 @@ export function IncomeDynamicsCard({
         {/* Bloco Editável do Salário */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 rounded-2xl border border-border/60 bg-muted/10 hover:bg-muted/30 hover:border-primary/30 transition-all group/salary gap-4 shadow-sm">
           <div>
-            <p className="text-[10px] font-black uppercase text-muted-foreground tracking-widest flex items-center gap-1.5 mb-1">
+            <p className="text-xs font-medium text-muted-foreground flex items-center gap-1.5 mb-1">
               <Wallet className="h-3.5 w-3.5" /> Receita Bruta / Salário
             </p>
             <p className="text-xs text-muted-foreground font-medium">{TOOLTIPS.salarioBruto}</p>
