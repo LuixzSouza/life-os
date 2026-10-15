@@ -15,10 +15,11 @@ export default async function LoginPage() {
         // 2. Tenta apenas buscar os dados dentro do try
         userCount = await prisma.user.count();
     } catch (error) {
-        // Se der erro REAL de banco (conexão recusada, arquivo corrompido), cai aqui.
+        // Erro REAL de banco (travado, timeout, conexão recusada). NÃO mandar
+        // para o /setup: o banco existe e tem dados — o setup convidaria a criar
+        // um admin novo por cima. Cai no app/error.tsx ("Tentar novamente").
         console.error("Erro crítico ao acessar banco de dados:", error);
-        // O redirect aqui funciona porque é o fim da execução neste bloco
-        redirect("/setup");
+        throw new Error("Banco de dados indisponível no momento.");
     }
 
     // 3. Verificação de Lógica de Negócio (FORA do try/catch)
