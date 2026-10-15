@@ -12,6 +12,7 @@ import {
     TrendingUp, TrendingDown, Search, Activity, BarChart3, HelpCircle, RefreshCw, Star, Plus, Shuffle, Loader2, X
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SafeImg } from "@/components/ui/safe-img";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { MarketDetailModal } from "./market-detail-modal";
 
@@ -219,10 +220,11 @@ export function MarketDashboard({ data: initialData, initialFavorites = [] }: { 
                                             return (
                                                 <div key={s.ticker} className="flex items-center gap-3 px-3 py-2.5">
                                                     <div className="h-8 w-8 shrink-0 rounded-lg bg-muted/50 border border-border/40 flex items-center justify-center overflow-hidden">
-                                                        {s.logo
-                                                            // eslint-disable-next-line @next/next/no-img-element
-                                                            ? <img src={s.logo} alt="" className="h-full w-full object-contain" />
-                                                            : <span className="text-[10px] font-black text-muted-foreground">{s.ticker.slice(0, 2)}</span>}
+                                                        <SafeImg
+                                                            src={s.logo}
+                                                            className="h-full w-full object-contain"
+                                                            fallback={<span className="text-xs font-semibold text-muted-foreground">{s.ticker.slice(0, 2)}</span>}
+                                                        />
                                                     </div>
                                                     <div className="min-w-0 flex-1">
                                                         <p className="font-bold text-sm text-foreground">{s.ticker}</p>
@@ -320,11 +322,12 @@ function MarketHighlightCard({ item, onSelect, isFav, onToggleFav }: { item: Mar
                 <div className="flex justify-between items-start mb-3">
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-background border border-border flex items-center justify-center overflow-hidden shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                            {item.logoUrl ? (
-                                <img src={item.logoUrl} alt={item.ticker} className="w-full h-full object-cover" />
-                            ) : (
-                                <Activity className="h-5 w-5 text-muted-foreground" />
-                            )}
+                            <SafeImg
+                                src={item.logoUrl}
+                                alt={item.ticker}
+                                className="w-full h-full object-cover"
+                                fallback={<Activity className="h-5 w-5 text-muted-foreground" />}
+                            />
                         </div>
                         <div>
                             <p className="eyebrow text-muted-foreground">{item.ticker}</p>
@@ -363,13 +366,16 @@ function MarketGrid({ items, onSelect, favSet, onToggleFav }: { items: MarketIte
                     <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-lg bg-white dark:bg-zinc-900 border border-border/50 p-1 flex items-center justify-center overflow-hidden shrink-0 shadow-sm">
-                                {item.logoUrl ? (
-                                    <img src={item.logoUrl} alt={item.ticker} className="w-full h-full object-contain" />
-                                ) : (
-                                    <div className="w-full h-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs rounded-md">
-                                        {item.ticker.slice(0,2)}
-                                    </div>
-                                )}
+                                <SafeImg
+                                    src={item.logoUrl}
+                                    alt={item.ticker}
+                                    className="w-full h-full object-contain"
+                                    fallback={
+                                        <div className="w-full h-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs rounded-md">
+                                            {item.ticker.slice(0,2)}
+                                        </div>
+                                    }
+                                />
                             </div>
                             <div>
                                 <p className="font-bold text-sm text-foreground">{item.ticker}</p>
@@ -445,11 +451,11 @@ function TopMoversCard({ data, type, title, description, onSelect }: { data: Mar
                     {sorted.map(item => (
                         <div key={item.ticker} onClick={() => onSelect(item)} className="flex items-center justify-between py-3 text-sm group hover:bg-white/50 dark:hover:bg-black/20 px-4 -mx-4 transition-colors cursor-pointer">
                             <div className="flex items-center gap-3">
-                                {item.logoUrl ? (
-                                    <img src={item.logoUrl} className="w-5 h-5 rounded-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="" />
-                                ) : (
-                                    <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center text-[8px] font-bold">{item.ticker[0]}</div>
-                                )}
+                                <SafeImg
+                                    src={item.logoUrl}
+                                    className="w-5 h-5 rounded-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                                    fallback={<div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center text-[10px] font-bold">{item.ticker[0]}</div>}
+                                />
                                 <div>
                                     <span className="font-semibold text-foreground block leading-none">{item.ticker}</span>
                                     <span className="text-[10px] text-muted-foreground hidden sm:block truncate max-w-[80px]">{item.name}</span>
