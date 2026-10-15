@@ -289,6 +289,9 @@ const BACKUP_ENTRIES: BackupEntry[] = [
   std("meetings", "Meeting", "tasks", prisma.meeting, {
     fks: [{ field: "projectId", target: "projects" }],
   }),
+  std("meetingImages", "MeetingImage", "tasks", prisma.meetingImage, {
+    fks: [{ field: "meetingId", target: "meetings", required: true }],
+  }),
   // Antes de jobApplications: na Fase 3 a vaga ganha FK para o currículo enviado.
   std("resumes", "Resume", "tasks", prisma.resume),
   std("jobApplications", "JobApplication", "tasks", prisma.jobApplication, {
@@ -390,6 +393,9 @@ const BACKUP_ENTRIES: BackupEntry[] = [
   std("savedLinks", "SavedLink", "links", prisma.savedLink),
   std("mediaItems", "MediaItem", "entertainment", prisma.mediaItem),
   std("wardrobeItems", "WardrobeItem", "wardrobe", prisma.wardrobeItem),
+  std("wardrobeImages", "WardrobeImage", "wardrobe", prisma.wardrobeImage, {
+    fks: [{ field: "itemId", target: "wardrobeItems", required: true }],
+  }),
 
   // Tecido conectivo dependente + sistema
   std("taggables", "Taggable", "system", prisma.taggable, {

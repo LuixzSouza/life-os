@@ -81,6 +81,8 @@ model User {
   studyNotes        StudyNote[]
   studyNoteVersions StudyNoteVersion[]
   noteImages        NoteImage[]
+  meetingImages     MeetingImage[]
+  wardrobeImages    WardrobeImage[]
   notebooks         Notebook[]
   studyContents     StudyContent[]
   learningGoals     LearningGoal[]
@@ -238,7 +240,6 @@ model StudySession {
 
   createdAt DateTime @default(now())
 
-  @@index([userId])
   @@index([subjectId])
   @@index([userId, date])
 }
@@ -284,11 +285,12 @@ model StudyNote {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
-  @@index([userId])
   @@index([subjectId])
   @@index([notebookId])
   @@index([projectId])
   @@index([userId, deletedAt])
+  @@index([contentId])
+  @@index([sessionId])
 }
 
 // Imagem incorporada numa nota: guarda o Base64 fora do texto (markdown limpo).
@@ -374,7 +376,6 @@ model LearningGoal {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([userId])
   @@index([subjectId])
   @@index([userId, deletedAt])
 }
@@ -453,7 +454,6 @@ model Flashcard {
 
   createdAt DateTime @default(now())
 
-  @@index([userId])
   @@index([deckId])
   @@index([userId, nextReview])
 }
@@ -511,7 +511,6 @@ model Transaction {
   deletedAt DateTime?
   createdAt DateTime  @default(now())
 
-  @@index([userId])
   @@index([accountId])
   @@index([categoryId])
   @@index([userId, date])
@@ -574,7 +573,6 @@ model RecurringExpensePayment {
 
   @@unique([recurringExpenseId, dueDate]) // idempotência: uma ocorrência só é paga uma vez
   @@index([userId])
-  @@index([recurringExpenseId])
 }
 
 // Cobranças recorrentes (receitas a RECEBER todo mês) — espelho de RecurringExpense
@@ -616,7 +614,6 @@ model RecurringCharge {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([userId])
   @@index([userId, active])
   @@index([clientId])
   @@index([billingId])
@@ -640,7 +637,6 @@ model WishlistItem {
   deletedAt DateTime?
   createdAt DateTime  @default(now())
 
-  @@index([userId])
   @@index([userId, deletedAt])
 }
 
@@ -672,7 +668,6 @@ model Category {
   updatedAt DateTime @updatedAt
 
   @@unique([userId, name, type])
-  @@index([userId])
   @@index([parentId])
 }
 
@@ -715,7 +710,6 @@ model Project {
 
   deletedAt DateTime?
 
-  @@index([userId])
   @@index([clientId])
   @@index([userId, deletedAt])
 }
@@ -727,7 +721,10 @@ model Meeting {
   rawNotes String  @default("")
   summary  String?
   image    String? // legado: 1ª imagem (compat). Galeria completa fica em `images`.
-  images   String? // JSON: array de data URLs (anexos da reunião)
+  // JSON: array de { src, caption }. `src` agora aponta para /api/meeting-image/[id]
+  // (base64 externalizado em MeetingImage, fora da linha). Data URLs base64 inline
+  // ainda são aceitos p/ retrocompat (reuniões antigas) e migram no próximo save.
+  images   String?
 
   participants String? // JSON: array de nomes dos participantes
   tags         String? // JSON: array de etiquetas
@@ -739,11 +736,35 @@ model Meeting {
   userId String?
   user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
+  imageRows MeetingImage[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@index([userId])
   @@index([projectId])
+}
+
+// Anexo (imagem) de uma reunião: base64 guardado FORA da linha do Meeting, para a
+// linha ficar enxuta e a galeria ser servida por /api/meeting-image/[id] com cache
+// (payload da página não carrega mais base64). Espelha o padrão de NoteImage.
+// `hash` = sha256 do `data` → dedup idempotente no autosave (reenvio não duplica).
+model MeetingImage {
+  id   String @id @default(uuid())
+  mime String
+  data String // Base64 puro (sem o prefixo data:)
+  hash String // sha256 do data
+
+  meetingId String
+  meeting   Meeting @relation(fields: [meetingId], references: [id], onDelete: Cascade)
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([meetingId, hash])
 }
 
 model Task {
@@ -778,7 +799,6 @@ model Task {
 
   deletedAt DateTime?
 
-  @@index([userId])
   @@index([projectId])
   @@index([userId, isDone])
   @@index([userId, deletedAt])
@@ -809,7 +829,13 @@ model JobApplication {
   matchScore  Int? // % de compatibilidade da última análise (ordenação por fit)
 
   // --- Rastreabilidade do currículo enviado (Fase 3 do Career OS) ---
-  // Ver comentário no schema.prisma canônico. String→text no Postgres (cabe JSON).
+  // resumeId: vínculo VIVO com a versão de currículo (pode ser editada depois).
+  //   Sem FK de propósito: no modo réplica/Turso o ensureSchema só faz ADD COLUMN
+  //   (SQLite não adiciona FK a tabela existente). A deleteResume nulifica os
+  //   links órfãos na mão — o snapshot abaixo é quem garante a imutabilidade.
+  // resumeSnapshot: JSON CONGELADO no momento do envio (envelope ResumeSnapshot:
+  //   nome/locale/template + PortfolioData). Nunca muda, mesmo que a versão viva
+  //   seja editada ou excluída — é o "o que a empresa recebeu".
   resumeId       String?
   resumeSnapshot String?
   snapshotAt     DateTime?
@@ -975,7 +1001,6 @@ model Workout {
   userId String?
   user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([userId])
   @@index([userId, date])
 }
 
@@ -992,7 +1017,6 @@ model Shoe {
   updatedAt   DateTime @updatedAt
 
   @@unique([userId, name])
-  @@index([userId])
 }
 
 // Ficha de treino estruturada (Plano → Divisões A/B/C → Exercícios + Metas tipadas).
@@ -1011,7 +1035,6 @@ model WorkoutPlan {
   userId String?
   user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([userId])
   @@index([userId, updatedAt])
 }
 
@@ -1031,7 +1054,6 @@ model WorkoutPhoto {
   sets        Int?
   createdAt   DateTime @default(now())
 
-  @@index([userId])
   @@index([userId, date])
 }
 
@@ -1087,7 +1109,6 @@ model HabitLog {
 
   @@unique([habitId, date])
   @@index([userId, date])
-  @@index([habitId])
 }
 
 model HealthMetric {
@@ -1099,7 +1120,6 @@ model HealthMetric {
   userId String?
   user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([userId])
   @@index([userId, type, date])
 }
 
@@ -1151,7 +1171,6 @@ model Meal {
   userId String?
   user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([userId])
   @@index([userId, date])
 }
 
@@ -1215,7 +1234,6 @@ model Event {
   deletedAt DateTime?
   createdAt DateTime  @default(now())
 
-  @@index([userId])
   @@index([projectId])
   @@index([taskId])
   @@index([userId, startTime])
@@ -1257,7 +1275,6 @@ model ThemedDay {
   updatedAt DateTime @updatedAt
 
   @@unique([userId, weekday])
-  @@index([userId])
 }
 
 // Sessão de Foco (Pomodoro / cronômetro) — Fase 1 do roadmap (Time-Blocking + Foco).
@@ -1282,7 +1299,6 @@ model FocusSession {
   endedAt   DateTime @default(now())
   createdAt DateTime @default(now())
 
-  @@index([userId])
   @@index([userId, endedAt])
 }
 
@@ -1480,7 +1496,6 @@ model AiEmbedding {
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, entityType, entityId])
-  @@index([userId, entityType])
 }
 
 model AccessItem {
@@ -1519,7 +1534,6 @@ model SavedLink {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
-  @@index([userId])
   @@index([userId, deletedAt])
 }
 
@@ -1550,7 +1564,6 @@ model MediaItem {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
-  @@index([userId])
   @@index([userId, status])
   @@index([userId, deletedAt])
 }
@@ -1581,13 +1594,14 @@ model Friend {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
-  @@index([userId])
   @@index([userId, deletedAt])
 }
 
 model WardrobeItem {
   id         String    @id @default(uuid())
   name       String
+  // Aponta a foto atual: ref /api/wardrobe-image/<id> (base64 em WardrobeImage),
+  // ou URL externa, ou data URL base64 legado (migra no próximo save).
   imageUrl   String?
   brand      String?
   color      String?
@@ -1601,12 +1615,35 @@ model WardrobeItem {
   status     String    @default("IN_CLOSET")
   userId     String
   user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  imageRows  WardrobeImage[]
   deletedAt  DateTime?
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
 
-  @@index([userId])
   @@index([userId, deletedAt])
+}
+
+// Foto de uma peça do guarda-roupa: base64 guardado FORA da linha do WardrobeItem
+// (o grid do closet não arrasta mais base64) e servido por /api/wardrobe-image/[id]
+// com cache. 1:1 na prática — o item aponta a foto atual em `imageUrl`; a ref usa o
+// id da IMAGEM, então trocar a foto gera nova ref (cache-safe). `hash` sha256 do
+// `data` → idempotência no save. Mesmo padrão de MeetingImage/NoteImage.
+model WardrobeImage {
+  id   String @id @default(uuid())
+  mime String
+  data String // Base64 puro (sem o prefixo data:)
+  hash String // sha256 do data
+
+  itemId String
+  item   WardrobeItem @relation(fields: [itemId], references: [id], onDelete: Cascade)
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([itemId, hash])
 }
 
 // =========================================================
@@ -1643,7 +1680,6 @@ model Client {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([userId])
   @@index([friendId])
   @@index([userId, deletedAt])
 }
@@ -1708,7 +1744,6 @@ model Invoice {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([userId])
   @@index([billingId])
   @@index([status])
   @@index([dueDate])
@@ -1748,7 +1783,6 @@ model Tag {
   createdAt DateTime @default(now())
 
   @@unique([userId, name])
-  @@index([userId])
 }
 
 // Ligação polimórfica Tag <-> qualquer entidade (entityType + entityId).
@@ -1862,7 +1896,6 @@ model EntityLink {
   createdAt DateTime @default(now())
 
   @@unique([fromType, fromId, toType, toId, kind])
-  @@index([fromType, fromId])
   @@index([toType, toId])
   @@index([userId])
 }
