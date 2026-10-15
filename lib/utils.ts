@@ -5,6 +5,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+/**
+ * Só a 1ª letra maiúscula: "quinta-feira, 15 de outubro" → "Quinta-feira, 15 de
+ * outubro". Use em vez do CSS `capitalize`, que capitaliza CADA palavra e gera
+ * "Quinta-Feira, 15 De Outubro" em datas pt-BR.
+ */
+export function capFirst(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
 // ============================================================================
 // FORMATAÇÃO DE DATA/HORA/NÚMERO (DETERMINÍSTICA — SEGURA P/ HIDRATAÇÃO)
 // ----------------------------------------------------------------------------

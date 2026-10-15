@@ -248,7 +248,9 @@ export default function RegisterPageClient() {
             </div>
 
             {/* --- COLUNA DIREITA: SHOWCASE --- */}
-            <div className="hidden lg:flex flex-col justify-center items-center relative border-l border-border/60 overflow-hidden landing-aurora landing-grid bg-gradient-to-br from-primary/5 via-background to-background">
+            <div className="hidden lg:flex flex-col justify-center items-center relative border-l border-border/60 overflow-hidden landing-grid bg-gradient-to-br from-primary/5 via-background to-background">
+                {/* Aurora como camada de fundo própria (ver LoginPageClient). */}
+                <div aria-hidden className="landing-aurora" />
                 <div className="relative z-10 w-full max-w-md px-12">
                     <div className="mb-16 flex items-center gap-3">
                         <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-primary to-primary/60 text-primary-foreground flex items-center justify-center shadow-lg shadow-primary/30">

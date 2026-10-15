@@ -1,4 +1,5 @@
 import { Calendar as CalendarIcon, TrendingUp } from "lucide-react";
+import { capFirst } from "@/lib/utils";
 import { QuickActions } from "@/components/dashboard/quick-actions";
 
 interface DashboardHeaderProps {
@@ -18,8 +19,8 @@ export function DashboardHeader({ greeting, userName, productivityScore }: Dashb
         </h1>
         <p className="text-muted-foreground flex items-center gap-1.5 sm:gap-2 mt-1 sm:mt-1.5 text-xs sm:text-sm">
           <CalendarIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-          <span className="capitalize">
-            {new Date().toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' })}
+          <span>
+            {capFirst(new Date().toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' }))}
           </span>
         </p>
       </div>

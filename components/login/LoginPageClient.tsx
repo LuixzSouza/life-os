@@ -365,7 +365,11 @@ export default function LoginPageClient() {
             </div>
 
             {/* --- COLUNA DIREITA: VISUAL SHOWCASE --- */}
-            <div className="hidden lg:flex flex-col justify-center items-center relative border-l border-border/60 overflow-hidden landing-aurora landing-grid bg-gradient-to-br from-primary/5 via-background to-background">
+            <div className="hidden lg:flex flex-col justify-center items-center relative border-l border-border/60 overflow-hidden landing-grid bg-gradient-to-br from-primary/5 via-background to-background">
+
+                {/* Aurora é fundo decorativo (absolute + pointer-events:none): fica numa
+                    camada própria — aplicada na coluna, tirava ela do grid e cobria o form. */}
+                <div aria-hidden className="landing-aurora" />
 
                 <div className="relative z-10 w-full max-w-md px-12">
 

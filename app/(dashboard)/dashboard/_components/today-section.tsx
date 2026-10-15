@@ -4,6 +4,7 @@
 // (compromissos/prazos), não registros do passado (refeição comida etc.).
 
 import Link from "next/link";
+import { capFirst } from "@/lib/utils";
 import { CalendarDays, AlertTriangle, ArrowRight, Sun } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { getAgendaItems } from "@/lib/agenda-aggregator";
@@ -63,7 +64,7 @@ export async function TodaySection({ userId }: { userId: string }) {
           </div>
           <div className="min-w-0">
             <h2 className="text-sm font-bold text-foreground">Hoje</h2>
-            <p className="truncate text-[11px] capitalize text-muted-foreground">{dateLabel}</p>
+            <p className="truncate text-[11px] text-muted-foreground">{capFirst(dateLabel)}</p>
           </div>
         </div>
         <Link

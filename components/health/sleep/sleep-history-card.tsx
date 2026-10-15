@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Trash2, Zap } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { cn } from "@/lib/utils";
+import { cn, capFirst } from "@/lib/utils";
 import type { SleepEntry } from "./sleep-types";
 
 interface SleepHistoryCardProps {
@@ -33,7 +33,7 @@ export function SleepHistoryCard({ data, onDelete }: SleepHistoryCardProps) {
           Histórico Recente
         </CardTitle>
       </CardHeader>
-      <ScrollArea className="flex-1">
+      <ScrollArea className="flex-1 min-h-0">
         <div className="divide-y divide-border/40">
           {data.slice().reverse().map((entry) => {
             const parsedDate = parseISO(entry.date);
@@ -42,8 +42,8 @@ export function SleepHistoryCard({ data, onDelete }: SleepHistoryCardProps) {
                 <div className="flex items-center gap-3">
                   <div className={cn("w-1 h-8 rounded-full", getQualityBg(entry.value))}></div>
                   <div>
-                    <p className="text-sm font-bold text-foreground capitalize">
-                      {format(parsedDate, "EEEE", { locale: ptBR })}
+                    <p className="text-sm font-bold text-foreground">
+                      {capFirst(format(parsedDate, "EEEE", { locale: ptBR }))}
                     </p>
                     <p className="text-xs text-muted-foreground">
                       {format(parsedDate, "d 'de' MMM")}

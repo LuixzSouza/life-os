@@ -1,6 +1,7 @@
 'use client';
 
 import { format, isToday, isTomorrow, isYesterday, differenceInDays, isValid, isPast } from 'date-fns';
+import { capFirst } from "@/lib/utils";
 import { ptBR } from 'date-fns/locale';
 import { Badge } from '@/components/ui/badge';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -93,8 +94,8 @@ export function DateBadge({ date, isOverdue: forceOverdue = false, className }: 
                 <p className="text-xs font-bold text-foreground">
                     {format(dateObj, "dd 'de' MMMM", { locale: ptBR })}
                 </p>
-                <p className="text-[10px] font-medium text-muted-foreground capitalize">
-                    {format(dateObj, "EEEE", { locale: ptBR })}
+                <p className="text-[10px] font-medium text-muted-foreground">
+                    {capFirst(format(dateObj, "EEEE", { locale: ptBR }))}
                 </p>
              </div>
           </div>

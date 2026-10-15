@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { cn, capFirst } from "@/lib/utils";
 import { createMeeting } from "@/app/(dashboard)/projects/actions";
 import { parseActionItems } from "@/lib/meeting-summary";
 import { useRecording } from "@/components/providers/recording-provider";
@@ -208,8 +208,8 @@ export function MeetingBoard({ meetings, projectId }: MeetingBoardProps) {
                 )}
 
                 <div className="flex flex-wrap items-center gap-3 mt-3 text-[10px] text-muted-foreground/60 font-medium">
-                  <span className="capitalize">
-                    {new Date(m.createdAt).toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "short" })}
+                  <span>
+                    {capFirst(new Date(m.createdAt).toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "short" }))}
                     {" · "}
                     {new Date(m.createdAt).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}
                   </span>
