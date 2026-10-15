@@ -28,7 +28,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { PageShell, PageHeader, PageContainer } from "@/components/layout/page-shell";
 
-import { History, AlertCircle, BookOpen, PenLine, LayoutGrid } from "lucide-react";
+import { History, AlertCircle, BookOpen, PenLine, LayoutGrid, ListChecks, Timer } from "lucide-react";
 
 // Tipos Prisma corretos
 import { StudySubject, Prisma } from "@prisma/client";
@@ -391,6 +391,17 @@ export default async function StudiesPage() {
             <Link href="/goals">
               <Button variant="outline" className="gap-2">
                 <LayoutGrid className="h-4 w-4" /> Quadro de estudo
+              </Button>
+            </Link>
+            {/* Preparação ENEM: banco de questões → simulado cronometrado */}
+            <Link href="/studies/questoes">
+              <Button variant="outline" className="gap-2">
+                <ListChecks className="h-4 w-4" /> Questões
+              </Button>
+            </Link>
+            <Link href="/studies/simulados">
+              <Button variant="outline" className="gap-2">
+                <Timer className="h-4 w-4" /> Simulados
               </Button>
             </Link>
             <Link href="/studies/redacao">

@@ -89,6 +89,10 @@ model User {
   learningTasks     LearningTask[]
   flashcardDecks    FlashcardDeck[]
   flashcards        Flashcard[]
+  questions         Question[]
+  questionOptions   QuestionOption[]
+  exams             Exam[]
+  examAttempts      ExamAttempt[]
   managedSites      ManagedSite[]
   sitePages         SitePage[]
   meetings          Meeting[]
@@ -176,6 +180,7 @@ model StudySubject {
   decks    FlashcardDeck[]
   notes    StudyNote[]
   goals    LearningGoal[]
+  questions Question[]
 
   userId String?
   user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -456,6 +461,108 @@ model Flashcard {
 
   @@index([deckId])
   @@index([userId, nextReview])
+}
+
+// ---------------------------------------------------------
+// BANCO DE QUESTÕES & SIMULADOS (preparação ENEM/vestibular)
+// ---------------------------------------------------------
+
+// Uma questão objetiva. As alternativas vivem em QuestionOption para que a
+// resposta de um simulado aponte para um id ESTÁVEL (e não para um índice, que
+// quebraria se a questão fosse editada depois da prova).
+model Question {
+  id        String  @id @default(uuid())
+  statement String // enunciado
+  // Resolução comentada: o que transforma erro em aprendizado.
+  explanation String?
+  // Área do ENEM: LINGUAGENS | HUMANAS | NATUREZA | MATEMATICA | OUTRA
+  area       String  @default("OUTRA")
+  difficulty Int     @default(3) // 1..5
+  source     String? // "ENEM 2023", "Prof. Ana", "Gerada por IA"
+  imageUrl   String? // base64 opcional (mesma filosofia portátil do resto)
+
+  // Estatísticas de desempenho — alimentam a repetição do que o aluno erra.
+  timesAnswered Int @default(0)
+  timesCorrect  Int @default(0)
+
+  subjectId String?
+  subject   StudySubject? @relation(fields: [subjectId], references: [id], onDelete: SetNull)
+
+  options QuestionOption[]
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, area])
+  @@index([subjectId])
+}
+
+model QuestionOption {
+  id       String  @id @default(uuid())
+  text     String
+  isCorrect Boolean @default(false)
+  position Int     @default(0)
+
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([questionId])
+  @@index([userId])
+}
+
+// Simulado: uma seleção ORDENADA de questões + cronômetro. A lista fica em JSON
+// (mesmo padrão do WorkoutPlan) porque é um snapshot da prova montada — não
+// precisa de join nem sobrevive a consultas relacionais.
+model Exam {
+  id          String  @id @default(uuid())
+  title       String
+  description String?
+  area        String? // filtro usado na montagem (informativo)
+  // 0 = sem limite de tempo.
+  durationMinutes Int @default(0)
+  // JSON: string[] de Question.id, na ordem da prova.
+  questionIds String @default("[]")
+
+  attempts ExamAttempt[]
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model ExamAttempt {
+  id String @id @default(uuid())
+
+  examId String
+  exam   Exam   @relation(fields: [examId], references: [id], onDelete: Cascade)
+
+  // JSON: { [questionId]: optionId | null } — respostas marcadas.
+  answers String @default("{}")
+
+  correctCount Int   @default(0)
+  totalCount   Int   @default(0)
+  // Nota 0–1000 (TRI simplificada: acerto ponderado pela dificuldade).
+  score        Float @default(0)
+  secondsSpent Int   @default(0)
+
+  startedAt  DateTime  @default(now())
+  finishedAt DateTime?
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([examId])
+  @@index([userId])
 }
 
 // =========================================================

@@ -223,6 +223,67 @@ CREATE TABLE "Flashcard" (
 );
 
 -- CreateTable
+CREATE TABLE "Question" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "statement" TEXT NOT NULL,
+    "explanation" TEXT,
+    "area" TEXT NOT NULL DEFAULT 'OUTRA',
+    "difficulty" INTEGER NOT NULL DEFAULT 3,
+    "source" TEXT,
+    "imageUrl" TEXT,
+    "timesAnswered" INTEGER NOT NULL DEFAULT 0,
+    "timesCorrect" INTEGER NOT NULL DEFAULT 0,
+    "subjectId" TEXT,
+    "userId" TEXT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    CONSTRAINT "Question_subjectId_fkey" FOREIGN KEY ("subjectId") REFERENCES "StudySubject" ("id") ON DELETE SET NULL ON UPDATE CASCADE,
+    CONSTRAINT "Question_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "QuestionOption" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "text" TEXT NOT NULL,
+    "isCorrect" BOOLEAN NOT NULL DEFAULT false,
+    "position" INTEGER NOT NULL DEFAULT 0,
+    "questionId" TEXT NOT NULL,
+    "userId" TEXT,
+    CONSTRAINT "QuestionOption_questionId_fkey" FOREIGN KEY ("questionId") REFERENCES "Question" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT "QuestionOption_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "Exam" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "title" TEXT NOT NULL,
+    "description" TEXT,
+    "area" TEXT,
+    "durationMinutes" INTEGER NOT NULL DEFAULT 0,
+    "questionIds" TEXT NOT NULL DEFAULT '[]',
+    "userId" TEXT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    CONSTRAINT "Exam_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- CreateTable
+CREATE TABLE "ExamAttempt" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "examId" TEXT NOT NULL,
+    "answers" TEXT NOT NULL DEFAULT '{}',
+    "correctCount" INTEGER NOT NULL DEFAULT 0,
+    "totalCount" INTEGER NOT NULL DEFAULT 0,
+    "score" REAL NOT NULL DEFAULT 0,
+    "secondsSpent" INTEGER NOT NULL DEFAULT 0,
+    "startedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "finishedAt" DATETIME,
+    "userId" TEXT,
+    CONSTRAINT "ExamAttempt_examId_fkey" FOREIGN KEY ("examId") REFERENCES "Exam" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT "ExamAttempt_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- CreateTable
 CREATE TABLE "Account" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "name" TEXT NOT NULL,
@@ -1264,6 +1325,27 @@ CREATE INDEX "Flashcard_deckId_idx" ON "Flashcard"("deckId");
 
 -- CreateIndex
 CREATE INDEX "Flashcard_userId_nextReview_idx" ON "Flashcard"("userId", "nextReview");
+
+-- CreateIndex
+CREATE INDEX "Question_userId_area_idx" ON "Question"("userId", "area");
+
+-- CreateIndex
+CREATE INDEX "Question_subjectId_idx" ON "Question"("subjectId");
+
+-- CreateIndex
+CREATE INDEX "QuestionOption_questionId_idx" ON "QuestionOption"("questionId");
+
+-- CreateIndex
+CREATE INDEX "QuestionOption_userId_idx" ON "QuestionOption"("userId");
+
+-- CreateIndex
+CREATE INDEX "Exam_userId_idx" ON "Exam"("userId");
+
+-- CreateIndex
+CREATE INDEX "ExamAttempt_examId_idx" ON "ExamAttempt"("examId");
+
+-- CreateIndex
+CREATE INDEX "ExamAttempt_userId_idx" ON "ExamAttempt"("userId");
 
 -- CreateIndex
 CREATE INDEX "Account_userId_idx" ON "Account"("userId");

@@ -244,8 +244,30 @@ e o polimento de motivação (Duolingo/Forest).
       registra — Tempo (vs. `goalMinutes`), Memória (cartões com `interval ≥ 21d`),
       Constância (dias ativos em 30) e Objetivos (metas concluídas).
       `components/studies/mastery-tracks.tsx` na página de Estudos. ✅ 2026-07-21
-- [ ] F1. **Banco de questões** (`Question` + `QuestionOption`) por matéria/área. 🗄️
-- [ ] F2. **Simulados** (`Exam` + `ExamAttempt`) cronometrados + correção. 🗄️
+- [x] **F1. Banco de questões** 🗄️ — models `Question` + `QuestionOption`.
+      `app/(dashboard)/studies/actions/questions.ts` (CRUD + `generateQuestions` por
+      IA, com recado honesto quando não há provedor) + `/studies/questoes`
+      (`question-bank.tsx`, `question-form-dialog.tsx`, `question-ai-dialog.tsx`).
+      Guarda aproveitamento por questão (`timesAnswered`/`timesCorrect`), que é o
+      que alimenta a estratégia "Meus erros". ✅ 2026-07-22
+- [x] **F2. Simulados** 🗄️ — models `Exam` + `ExamAttempt`.
+      `actions/exams.ts` (montagem por estratégia, `startAttempt`, `submitAttempt`)
+      + `lib/exam-scoring.ts` (TRI simplificada, módulo puro) + `lib/exam-shared.ts`.
+      Rotas: `/studies/simulados` (montar/refazer/evolução), `/studies/simulados/[id]`
+      (prova cronometrada) e `.../resultado/[attemptId]` (gabarito comentado). ✅ 2026-07-22
+
+> **Três decisões do lote F1+F2:**
+> 1. **O gabarito nunca vai para o cliente durante a prova.** A rota da prova
+>    seleciona a questão SEM `isCorrect`/`explanation`; a correção acontece no
+>    servidor (`submitAttempt`). Não dá para colar pelo DevTools.
+> 2. **"TRI simplificada" é honesta sobre o que é.** Acerto ponderado pela
+>    dificuldade × fator de coerência (errar fácil e acertar difícil desconta até
+>    40%). Não é o modelo logístico do INEP — e a UI diz isso ao aluno.
+> 3. **A lista de questões do simulado é JSON** (`Exam.questionIds`), como o
+>    `WorkoutPlan`: é o SNAPSHOT da prova montada, não um relacionamento vivo.
+>    Editar uma questão depois não reescreve o histórico da prova.
+
+**🎉 Fase 2 COMPLETA.** Próximo: Fase 3 (refino e encanto).
 
 > **Honestidade da nota de domínio (D1):** pilar SEM dado (matéria sem flashcards,
 > sem metas) **não** pontua zero — sai da média e o peso é redistribuído, senão o
@@ -288,9 +310,26 @@ e o polimento de motivação (Duolingo/Forest).
       SEM schema (reusa StudyNote).
 - [x] **Fase 2 · D2 + D1** — Quadro de estudo (Kanban de metas) e Trilhas de
       domínio (mastery por matéria). Ambos SEM schema novo. ✅ 2026-07-21
-- [ ] **Fase 2 restante:** só F1 (banco de questões) + F2 (simulados) — os dois
-      exigem schema 🗄️ (cuidado no modo réplica/Turso: baseline + derive + push
-      controlado). São o último lote da Fase 2; depois começa a Fase 3.
+- [x] **Fase 2 · F1 + F2** — Banco de questões e Simulados entregues COM schema
+      novo (4 models). ✅ 2026-07-22
+- [ ] **Fase 3** (próxima): H1 streak freeze + lembrete, E2 cronograma semanal,
+      G* tutor de IA proativo, C3 canvas de rascunho, A4 jardim de constância.
+
+### 🗄️ Como o schema novo foi aplicado (receita que funcionou)
+
+`prisma db push` **não serve** aqui: ele mira o `DATABASE_URL` do `.env` (arquivo
+local) e, pior, propôs dropar uma coluna com dado (`RecurringExpense.autoPay`,
+drift antigo). O caminho certo, sem perder nada:
+
+1. Editar `prisma/schema.prisma` (models + relações no `User`).
+2. `npm run db:derive` → schemas postgres/mysql derivados.
+3. `npm run db:generate:all` → os 3 clients.
+4. `npm run db:baseline` (+ `:postgres` e `:mysql`) → baselines regenerados.
+5. `npm run db:ensure` → aplica o baseline **no primário Turso**, de forma
+   idempotente (`CREATE TABLE IF NOT EXISTS`), sem tocar em nada existente.
+
+> Se o passo 5 falhar com `fetch failed / ConnectTimeoutError`, é o primário
+> demorando mais que os 10s do undici para aceitar a conexão — repetir resolve.
 
 > Garantias a cada passo: `tsc --noEmit` (projeto inteiro) + ESLint verdes; import
 > em runtime dos módulos puros (templates + motor de som) sem erro.

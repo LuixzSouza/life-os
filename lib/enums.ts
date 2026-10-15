@@ -16,6 +16,19 @@ export type TaskStatus = (typeof TASK_STATUSES)[number];
 export const GOAL_STATUSES = ["TODO", "IN_PROGRESS", "REVIEW", "DONE"] as const;
 export type GoalStatus = (typeof GOAL_STATUSES)[number];
 
+// Áreas do conhecimento do ENEM (banco de questões e simulados). "OUTRA" cobre
+// concurso/faculdade/idiomas — o módulo não é só ENEM, é só ancorado nele.
+export const QUESTION_AREAS = ["LINGUAGENS", "HUMANAS", "NATUREZA", "MATEMATICA", "OUTRA"] as const;
+export type QuestionArea = (typeof QUESTION_AREAS)[number];
+
+export const QUESTION_AREA_LABELS: Record<QuestionArea, string> = {
+  LINGUAGENS: "Linguagens e Códigos",
+  HUMANAS: "Ciências Humanas",
+  NATUREZA: "Ciências da Natureza",
+  MATEMATICA: "Matemática",
+  OUTRA: "Outra",
+};
+
 export const TASK_PRIORITIES = ["HIGH", "MEDIUM", "LOW"] as const;
 export type TaskPriority = (typeof TASK_PRIORITIES)[number];
 

@@ -224,6 +224,68 @@ CREATE TABLE "Flashcard" (
 );
 
 -- CreateTable
+CREATE TABLE "Question" (
+    "id" TEXT NOT NULL,
+    "statement" TEXT NOT NULL,
+    "explanation" TEXT,
+    "area" TEXT NOT NULL DEFAULT 'OUTRA',
+    "difficulty" INTEGER NOT NULL DEFAULT 3,
+    "source" TEXT,
+    "imageUrl" TEXT,
+    "timesAnswered" INTEGER NOT NULL DEFAULT 0,
+    "timesCorrect" INTEGER NOT NULL DEFAULT 0,
+    "subjectId" TEXT,
+    "userId" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Question_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "QuestionOption" (
+    "id" TEXT NOT NULL,
+    "text" TEXT NOT NULL,
+    "isCorrect" BOOLEAN NOT NULL DEFAULT false,
+    "position" INTEGER NOT NULL DEFAULT 0,
+    "questionId" TEXT NOT NULL,
+    "userId" TEXT,
+
+    CONSTRAINT "QuestionOption_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Exam" (
+    "id" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "description" TEXT,
+    "area" TEXT,
+    "durationMinutes" INTEGER NOT NULL DEFAULT 0,
+    "questionIds" TEXT NOT NULL DEFAULT '[]',
+    "userId" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Exam_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "ExamAttempt" (
+    "id" TEXT NOT NULL,
+    "examId" TEXT NOT NULL,
+    "answers" TEXT NOT NULL DEFAULT '{}',
+    "correctCount" INTEGER NOT NULL DEFAULT 0,
+    "totalCount" INTEGER NOT NULL DEFAULT 0,
+    "score" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "secondsSpent" INTEGER NOT NULL DEFAULT 0,
+    "startedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "finishedAt" TIMESTAMP(3),
+    "userId" TEXT,
+
+    CONSTRAINT "ExamAttempt_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "Account" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
@@ -1298,6 +1360,27 @@ CREATE INDEX "Flashcard_deckId_idx" ON "Flashcard"("deckId");
 CREATE INDEX "Flashcard_userId_nextReview_idx" ON "Flashcard"("userId", "nextReview");
 
 -- CreateIndex
+CREATE INDEX "Question_userId_area_idx" ON "Question"("userId", "area");
+
+-- CreateIndex
+CREATE INDEX "Question_subjectId_idx" ON "Question"("subjectId");
+
+-- CreateIndex
+CREATE INDEX "QuestionOption_questionId_idx" ON "QuestionOption"("questionId");
+
+-- CreateIndex
+CREATE INDEX "QuestionOption_userId_idx" ON "QuestionOption"("userId");
+
+-- CreateIndex
+CREATE INDEX "Exam_userId_idx" ON "Exam"("userId");
+
+-- CreateIndex
+CREATE INDEX "ExamAttempt_examId_idx" ON "ExamAttempt"("examId");
+
+-- CreateIndex
+CREATE INDEX "ExamAttempt_userId_idx" ON "ExamAttempt"("userId");
+
+-- CreateIndex
 CREATE INDEX "Account_userId_idx" ON "Account"("userId");
 
 -- CreateIndex
@@ -1674,6 +1757,27 @@ ALTER TABLE "Flashcard" ADD CONSTRAINT "Flashcard_deckId_fkey" FOREIGN KEY ("dec
 
 -- AddForeignKey
 ALTER TABLE "Flashcard" ADD CONSTRAINT "Flashcard_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Question" ADD CONSTRAINT "Question_subjectId_fkey" FOREIGN KEY ("subjectId") REFERENCES "StudySubject"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Question" ADD CONSTRAINT "Question_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "QuestionOption" ADD CONSTRAINT "QuestionOption_questionId_fkey" FOREIGN KEY ("questionId") REFERENCES "Question"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "QuestionOption" ADD CONSTRAINT "QuestionOption_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Exam" ADD CONSTRAINT "Exam_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "ExamAttempt" ADD CONSTRAINT "ExamAttempt_examId_fkey" FOREIGN KEY ("examId") REFERENCES "Exam"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "ExamAttempt" ADD CONSTRAINT "ExamAttempt_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Account" ADD CONSTRAINT "Account_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;

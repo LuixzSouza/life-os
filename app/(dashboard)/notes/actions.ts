@@ -367,6 +367,63 @@ export async function generateNoteFlashcards(noteId: string): Promise<NoteFlashc
   }
 }
 
+export interface NoteQuestionsResult {
+  success: boolean;
+  message: string;
+  created: number;
+}
+
+/**
+ * Gera QUESTÕES de múltipla escolha desta nota e as manda para o Banco de
+ * Questões — o mesmo caminho que a nota já tem para virar flashcard, mas para o
+ * outro lado da memória: o flashcard treina recordar, a questão treina escolher
+ * sob pressão de prova. A nota entra como `sourceText` para a IA não inventar
+ * fora do conteúdo estudado. Ver [[connected-by-design]].
+ */
+export async function generateNoteQuestions(noteId: string, count = 5): Promise<NoteQuestionsResult> {
+  try {
+    const userId = await requireUserId();
+
+    const note = await prisma.studyNote.findFirst({
+      where: { id: noteId, userId, deletedAt: null },
+      select: { title: true, content: true, subjectId: true },
+    });
+    if (!note) return { success: false, message: "Nota não encontrada.", created: 0 };
+
+    const body = (note.content ?? "").trim();
+    if (body.length < 100) {
+      return { success: false, message: "A nota está curta demais para virar questões. Escreva um pouco mais.", created: 0 };
+    }
+
+    const { generateQuestions } = await import("@/app/(dashboard)/studies/actions/questions");
+    const res = await generateQuestions({
+      topic: note.title?.trim() || "conteúdo da nota",
+      sourceText: body,
+      count,
+      subjectId: note.subjectId,
+      // A área sai da matéria quando houver; sem matéria, "OUTRA" é honesto —
+      // o aluno reclassifica no banco em um clique.
+      area: null,
+    });
+
+    if (!res.success) return { success: false, message: res.message, created: 0 };
+
+    await logActivity({
+      action: "CREATE",
+      module: "studies",
+      entityType: "question",
+      entityId: noteId,
+      summary: `Gerou ${res.created ?? 0} questões a partir de uma nota`,
+    });
+
+    revalidatePath("/studies/questoes");
+    return { success: true, message: res.message, created: res.created ?? 0 };
+  } catch (error) {
+    console.error("Erro ao gerar questões da nota:", error);
+    return { success: false, message: "Falha ao gerar as questões.", created: 0 };
+  }
+}
+
 /**
  * Reincorpora as imagens (/api/note-image/{id}) como data:base64 no conteúdo.
  * Usado na exportação Markdown, para o arquivo ser portátil fora do app.

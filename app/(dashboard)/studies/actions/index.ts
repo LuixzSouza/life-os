@@ -5,3 +5,5 @@ export * from "./schemas";
 export * from "./subject";
 export * from "./session";
 export * from "./redacao";
+export * from "./questions";
+export * from "./exams";
