@@ -48,7 +48,8 @@ export function AgendaCalendar({ busyDays }: AgendaCalendarProps) {
           mode="single"
           selected={date}
           onSelect={handleSelect}
-          className="p-0 font-medium"
+          // Sem a moldura/sombra do Calendar base: quem emoldura é a seção da página.
+          className="border-0 bg-transparent p-0 font-medium shadow-none"
           locale={ptBR}
           modifiers={{ booked1: tiers.light, booked2: tiers.mid, booked3: tiers.heavy }}
           modifiersClassNames={{

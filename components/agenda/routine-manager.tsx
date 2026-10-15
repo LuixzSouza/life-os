@@ -71,14 +71,14 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
     <div className="flex min-h-0 w-full flex-1 flex-col animate-in fade-in duration-500">
       {/* HEADER — sticky (G17): rolar a lista não some com o contexto/ações.
           -mx/-mt compensam o p-6 da TabsContent p/ o blur cobrir borda a borda. */}
-      <div className="sticky top-0 z-20 -mx-6 -mt-6 flex shrink-0 flex-col justify-between gap-4 border-b border-border/40 bg-background/95 px-6 pb-4 pt-6 backdrop-blur sm:flex-row sm:items-center">
+      <div className="sticky top-0 z-20 -mx-4 -mt-4 md:-mx-6 md:-mt-6 flex shrink-0 flex-col justify-between gap-4 border-b border-border/40 bg-card/95 px-4 pb-4 pt-5 md:px-6 backdrop-blur sm:flex-row sm:items-center">
         <div className="flex items-center gap-3">
           <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shadow-inner border border-primary/20">
             <LayoutGrid className="h-6 w-6" />
           </div>
           <div>
-            <h3 className="text-xl font-black uppercase tracking-tighter text-foreground">Protocolo Base</h3>
-            <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-0.5">
+            <h3 className="text-xl font-semibold text-foreground">Protocolo Base</h3>
+            <p className="mt-0.5 text-xs text-muted-foreground">
               Hábitos e blocos de tempo fixos
             </p>
           </div>
@@ -95,19 +95,19 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
               <DropdownMenuContent align="end" className="w-48 rounded-xl border-border/60">
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <DropdownMenuItem onSelect={(e) => e.preventDefault()} className="text-rose-500 focus:text-rose-600 focus:bg-rose-500/10 cursor-pointer font-bold text-xs uppercase tracking-widest gap-2">
+                    <DropdownMenuItem onSelect={(e) => e.preventDefault()} className="text-rose-500 focus:text-rose-600 focus:bg-rose-500/10 cursor-pointer font-medium gap-2">
                       <Trash2 className="h-4 w-4" /> Resetar Tudo
                     </DropdownMenuItem>
                   </AlertDialogTrigger>
                   <AlertDialogContent className="rounded-[2.5rem] p-8 border-border/40 max-w-sm text-center">
                     <AlertDialogHeader className="flex flex-col items-center">
                       <div className="h-14 w-14 bg-rose-500/10 text-rose-500 flex items-center justify-center rounded-2xl mb-4"><Trash2 className="h-6 w-6"/></div>
-                      <AlertDialogTitle className="font-black uppercase tracking-tighter text-xl">Zerar Rotina?</AlertDialogTitle>
+                      <AlertDialogTitle className="font-semibold text-xl">Zerar Rotina?</AlertDialogTitle>
                       <AlertDialogDescription className="text-xs font-medium">Isso apagará todos os blocos de todos os dias da semana. Irreversível.</AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter className="sm:justify-center mt-6">
-                      <AlertDialogCancel className="rounded-xl text-[10px] font-black uppercase tracking-widest h-12 w-full sm:w-auto">Cancelar</AlertDialogCancel>
-                      <AlertDialogAction onClick={handleReset} className="bg-rose-500 hover:bg-rose-600 text-white rounded-xl text-[10px] font-black uppercase tracking-widest h-12 w-full sm:w-auto">Confirmar Exclusão</AlertDialogAction>
+                      <AlertDialogCancel className="rounded-xl text-xs font-medium h-12 w-full sm:w-auto">Cancelar</AlertDialogCancel>
+                      <AlertDialogAction onClick={handleReset} className="bg-rose-500 hover:bg-rose-600 text-white rounded-xl text-xs font-medium h-12 w-full sm:w-auto">Confirmar Exclusão</AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
@@ -117,12 +117,12 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
           <Button
             onClick={() => setIsCleaningOpen(true)}
             variant="outline"
-            className="h-11 px-4 rounded-xl gap-2 border-amber-500/30 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 font-black uppercase tracking-widest text-[10px] shadow-sm transition-all"
+            className="h-11 px-4 rounded-xl gap-2 border-amber-500/30 text-amber-600 dark:text-amber-400 hover:bg-amber-500/10 font-medium text-xs shadow-sm transition-all"
             title="Limpeza Programada: rodízio de cômodos por dia"
           >
             <BrushCleaning className="h-4 w-4" /> Limpeza
           </Button>
-          <Button onClick={() => setIsDialogOpen(true)} className="h-11 px-5 rounded-xl bg-foreground text-background hover:bg-primary shadow-lg font-black uppercase tracking-widest text-[10px] gap-2 transition-all">
+          <Button onClick={() => setIsDialogOpen(true)} className="h-11 px-5 rounded-xl bg-foreground text-background hover:bg-primary shadow-lg font-medium text-xs gap-2 transition-all">
             <Plus className="h-4 w-4 stroke-[3]" /> Novo Bloco
           </Button>
         </div>
@@ -134,11 +134,11 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
           <div className="bg-primary/10 p-4 rounded-2xl mb-6 shadow-inner border border-primary/20">
             <Wand2 className="h-8 w-8 text-primary animate-pulse" />
           </div>
-          <h4 className="text-2xl font-black uppercase tracking-tighter text-foreground mb-2">Protocolo Vazio</h4>
+          <h4 className="text-2xl font-semibold text-foreground mb-2">Protocolo Vazio</h4>
           <p className="text-muted-foreground text-xs font-medium text-center max-w-[300px] mb-8 leading-relaxed">
             Você ainda não configurou uma rotina fixa. Use o nosso modelo de alta performance para começar.
           </p>
-          <Button onClick={handleSeed} disabled={isLoading} variant="outline" className="h-12 px-6 rounded-xl gap-2 border-primary/30 hover:bg-primary/10 text-primary font-black uppercase tracking-widest text-[10px] shadow-sm transition-all">
+          <Button onClick={handleSeed} disabled={isLoading} variant="outline" className="h-12 px-6 rounded-xl gap-2 border-primary/30 hover:bg-primary/10 text-primary font-medium text-xs shadow-sm transition-all">
             {isLoading ? <Loader2 className="animate-spin h-4 w-4" /> : <Sparkles className="h-4 w-4" />}
             Gerar Rotina Padrão
           </Button>
@@ -147,7 +147,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
         <Tabs defaultValue={defaultTab} className="flex-1 flex flex-col min-h-0 w-full mt-6">
           {/* TABS DE NAVEGAÇÃO DE DIAS */}
           <ScrollArea className="w-full shrink-0">
-            <TabsList className="bg-transparent p-0 h-auto gap-2 w-full justify-start pb-2">
+            <TabsList className="grid h-auto w-full grid-cols-7 gap-1.5 bg-transparent p-0 pb-2">
               {DAYS.map((day) => {
                 const count = countByDay(day.id);
                 const isToday = day.id === defaultTab;
@@ -156,15 +156,16 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
                     key={day.id}
                     value={day.id}
                     className={cn(
-                      "group/tab relative flex items-center gap-1.5 border border-border/40 rounded-xl px-4 h-11 text-[11px] font-black uppercase tracking-widest transition-all hover:bg-muted bg-background shadow-sm",
+                      "group/tab relative flex h-10 min-w-0 items-center justify-center gap-1.5 rounded-lg border border-border/60 bg-background px-1.5 text-xs font-medium transition-colors hover:bg-muted",
                       "data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md",
                       isToday && "ring-1 ring-primary/50",
                     )}
                   >
                     {isToday && <span className="h-1.5 w-1.5 rounded-full bg-primary group-data-[state=active]/tab:bg-primary-foreground" />}
-                    {day.label}
+                    <span className="xl:hidden">{day.label.slice(0, 3)}</span>
+                    <span className="hidden xl:inline">{day.label}</span>
                     {count > 0 && (
-                      <span className="rounded-md bg-foreground/10 px-1.5 text-[9px] tabular-nums leading-5 group-data-[state=active]/tab:bg-background/25">
+                      <span className="hidden rounded-md bg-foreground/10 px-1.5 text-[10px] tabular-nums leading-5 sm:inline group-data-[state=active]/tab:bg-background/25">
                         {count}
                       </span>
                     )}

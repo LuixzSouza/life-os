@@ -29,7 +29,7 @@ import { requestFocusStart } from "@/components/focus/focus-core";
 import { type ThemedDayData } from "@/app/(dashboard)/agenda/themed-days-actions";
 import { toggleTaskDone, moveEvent } from "@/app/(dashboard)/agenda/actions";
 import { agendaUrl } from "@/components/agenda/agenda-shared";
-import { cn } from "@/lib/utils";
+import { cn, capFirst } from "@/lib/utils";
 
 type EventWithProject = Prisma.EventGetPayload<{
   include: {
@@ -469,16 +469,17 @@ export function TimeBlockingDay({ events, tasks, themedDays, selectedDateISO }: 
   return (
     <div className="flex h-full flex-col">
       {/* TOOLBAR */}
-      <div className="flex items-center justify-between gap-3 border-b border-border/40 bg-muted/10 px-4 py-3">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-border/40 bg-muted/10 px-4 py-3">
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">
             <Button variant="outline" size="icon" aria-label="Dia anterior" className="h-8 w-8" onClick={() => goDay(-1)}><ChevronLeft className="h-4 w-4" /></Button>
             <Button variant="outline" size="icon" aria-label="Próximo dia" className="h-8 w-8" onClick={() => goDay(1)}><ChevronRight className="h-4 w-4" /></Button>
           </div>
-          <h2 className="ml-1 text-base font-bold capitalize" style={themeColor ? { color: themeColor } : undefined}>
-            {format(day, "EEEE, d 'de' MMM", { locale: ptBR })}
+          <h2 className="ml-1 whitespace-nowrap text-base font-semibold" style={themeColor ? { color: themeColor } : undefined}>
+            <span className="sm:hidden">{capFirst(format(day, "EEE, d MMM", { locale: ptBR }))}</span>
+            <span className="hidden sm:inline">{capFirst(format(day, "EEEE, d 'de' MMM", { locale: ptBR }))}</span>
           </h2>
-          {isToday && <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-primary">Hoje</span>}
+          {isToday && <span className="rounded-md bg-primary/10 px-1.5 py-0.5 text-xs font-medium text-primary">Hoje</span>}
           {/* #8: orçamento de tempo — dia irreal = frustração */}
           {allocatedMin > 0 && (
             <span
@@ -492,11 +493,11 @@ export function TimeBlockingDay({ events, tasks, themedDays, selectedDateISO }: 
             </span>
           )}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-2">
           <Button
             variant="outline"
             onClick={() => setShowTasks((v) => !v)}
-            className={cn("h-9 rounded-xl px-3 text-[10px] font-black uppercase tracking-widest", showTasks && "border-primary/40 bg-primary/5 text-primary")}
+            className={cn("h-9 rounded-lg px-3 text-sm font-medium", showTasks && "border-primary/40 bg-primary/5 text-primary")}
           >
             <ListTodo className="mr-1.5 h-4 w-4" /> Tarefas
             {tasks.length > 0 && <span className="ml-1.5 rounded-full bg-primary/15 px-1.5 text-[10px] tabular-nums text-primary">{tasks.length}</span>}
@@ -508,7 +509,7 @@ export function TimeBlockingDay({ events, tasks, themedDays, selectedDateISO }: 
               start.setHours(9, 0, 0, 0);
               setCreating({ start, end: new Date(start.getTime() + 3_600_000) });
             }}
-            className="h-9 rounded-xl bg-foreground px-4 text-[10px] font-black uppercase tracking-widest text-background hover:bg-primary hover:text-white"
+            className="h-9 rounded-lg px-3.5 text-sm font-medium"
           >
             <Plus className="mr-1.5 h-4 w-4 stroke-[3]" /> Bloco
           </Button>
@@ -539,7 +540,7 @@ export function TimeBlockingDay({ events, tasks, themedDays, selectedDateISO }: 
                       size="sm"
                       variant={scheduled ? "ghost" : "outline"}
                       onClick={() => scheduleTask(t)}
-                      className="h-8 shrink-0 rounded-lg px-2.5 text-[10px] font-black uppercase tracking-wider"
+                      className="h-8 shrink-0 rounded-lg px-2.5 text-xs font-medium"
                     >
                       <CalendarPlus2 className="mr-1 h-3.5 w-3.5" /> Agendar
                     </Button>
@@ -557,7 +558,7 @@ export function TimeBlockingDay({ events, tasks, themedDays, selectedDateISO }: 
       {/* DIA INTEIRO (D2): chips acima da grade — não ocupam horário */}
       {allDayEvents.length > 0 && (
         <div className="flex flex-wrap items-center gap-2 border-b border-border/40 px-4 py-2">
-          <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/60">Dia inteiro</span>
+          <span className="text-[11px] font-medium text-muted-foreground">Dia inteiro</span>
           {allDayEvents.map((e) => (
             <button
               key={e.id}

@@ -67,7 +67,7 @@ export function EventDeleteButton({
           )}
         >
           <Trash2 className={cn("h-4 w-4", variant !== "ghost" && "mr-2")} />
-          {variant !== "ghost" && <span className="text-[10px] font-black uppercase tracking-widest">Excluir</span>}
+          {variant !== "ghost" && <span className="text-xs font-medium">Excluir</span>}
         </Button>
       </AlertDialogTrigger>
 
@@ -78,7 +78,7 @@ export function EventDeleteButton({
             <AlertTriangle className="h-7 w-7 text-rose-500" />
           </div>
           
-          <AlertDialogTitle className="text-2xl font-black uppercase tracking-tighter text-foreground">
+          <AlertDialogTitle className="text-2xl font-semibold text-foreground">
             Abortar Evento?
           </AlertDialogTitle>
           
@@ -90,7 +90,7 @@ export function EventDeleteButton({
         <AlertDialogFooter className="sm:justify-center gap-3 w-full">
           <AlertDialogCancel 
             disabled={isDeleting} 
-            className="w-full sm:w-auto h-12 rounded-xl text-[10px] font-black uppercase tracking-widest border-border/60 hover:bg-muted"
+            className="w-full sm:w-auto h-12 rounded-xl text-xs font-medium border-border/60 hover:bg-muted"
           >
             Cancelar
           </AlertDialogCancel>
@@ -101,7 +101,7 @@ export function EventDeleteButton({
               handleDelete();
             }}
             disabled={isDeleting}
-            className="w-full sm:w-auto h-12 rounded-xl bg-rose-500 hover:bg-rose-600 text-white text-[10px] font-black uppercase tracking-widest shadow-lg shadow-rose-500/20"
+            className="w-full sm:w-auto h-12 rounded-xl bg-rose-500 hover:bg-rose-600 text-white text-xs font-medium shadow-lg shadow-rose-500/20"
           >
             {isDeleting ? (
               <Loader2 className="h-4 w-4 animate-spin" />

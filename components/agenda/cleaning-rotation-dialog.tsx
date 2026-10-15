@@ -101,7 +101,7 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
                 maxLength={40}
                 className="h-9 text-sm"
               />
-              <Button type="button" onClick={addRoom} size="icon" variant="outline" className="h-9 w-9 shrink-0 rounded-lg" title="Adicionar cômodo">
+              <Button type="button" onClick={addRoom} size="icon" variant="outline" className="h-9 w-9 shrink-0 rounded-lg" title="Adicionar cômodo" aria-label="Adicionar cômodo">
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
@@ -117,7 +117,7 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
                   type="button"
                   onClick={() => toggleDay(day.id)}
                   className={cn(
-                    "rounded-lg border px-3 py-1.5 text-[11px] font-black uppercase tracking-widest transition-colors",
+                    "rounded-lg border px-3 py-1.5 text-[11px] font-medium transition-colors",
                     days.includes(day.id)
                       ? "border-primary bg-primary text-primary-foreground shadow-sm"
                       : "border-border/40 bg-background text-muted-foreground hover:bg-muted",
@@ -153,7 +153,7 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
           <Button
             onClick={submit}
             disabled={isPending || rooms.length === 0 || days.length === 0}
-            className="h-12 w-full rounded-xl text-[10px] font-black uppercase tracking-widest"
+            className="h-12 w-full rounded-xl text-xs font-medium"
           >
             {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <BrushCleaning className="h-4 w-4" />}
             Criar rodízio ({rooms.length} cômodos · {days.length} dias)

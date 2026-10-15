@@ -150,7 +150,7 @@ export function EventForm({
 
           {/* Título */}
           <div className="space-y-2">
-            <Label htmlFor="title" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+            <Label htmlFor="title" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
               <Type className="h-3 w-3" /> Identificação do Evento
             </Label>
             <Input
@@ -167,7 +167,7 @@ export function EventForm({
           {/* Data e Horários (Timeblocking Grid) */}
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 bg-muted/10 p-4 rounded-[1.5rem] border border-border/40 shadow-inner">
             <div className="sm:col-span-12">
-              <Label htmlFor="date" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2 mb-2">
+              <Label htmlFor="date" className="text-xs font-medium text-muted-foreground flex items-center gap-2 mb-2">
                 <CalendarCheck className="h-3 w-3" /> Data Base
               </Label>
               <div className="relative group">
@@ -192,13 +192,13 @@ export function EventForm({
                 onCheckedChange={(v) => setIsAllDay(v === true)}
                 className="h-4 w-4 border-2 border-primary/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary rounded"
               />
-              <Label htmlFor="isAllDay" className="cursor-pointer select-none text-[10px] font-black uppercase tracking-widest text-muted-foreground">
+              <Label htmlFor="isAllDay" className="cursor-pointer select-none text-xs font-medium text-muted-foreground">
                 Dia inteiro (sem horário)
               </Label>
             </div>
 
             <div className={cn("sm:col-span-6 space-y-2", isAllDay && "hidden")}>
-              <Label htmlFor="time" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+              <Label htmlFor="time" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                 <Clock className="h-3 w-3" /> Início
               </Label>
               <Input
@@ -213,7 +213,7 @@ export function EventForm({
             </div>
 
             <div className={cn("sm:col-span-6 space-y-2", isAllDay && "hidden")}>
-              <Label htmlFor="endTime" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+              <Label htmlFor="endTime" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                 <Clock className="h-3 w-3" /> Fim
               </Label>
               <Input
@@ -229,7 +229,7 @@ export function EventForm({
 
             {/* #2: Recorrência ("toda segunda, 7h, academia") — motor de lib/recurrence.ts */}
             <div className="sm:col-span-6 space-y-2">
-              <Label htmlFor="frequency" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+              <Label htmlFor="frequency" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                 <Repeat className="h-3 w-3" /> Repetir
               </Label>
               <select
@@ -248,7 +248,7 @@ export function EventForm({
 
             {frequency && (
               <div className="sm:col-span-6 space-y-2">
-                <Label htmlFor="recurrenceEnd" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+                <Label htmlFor="recurrenceEnd" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                   <CalendarCheck className="h-3 w-3" /> Repetir até <span className="normal-case font-medium">(opcional)</span>
                 </Label>
                 <Input
@@ -264,7 +264,7 @@ export function EventForm({
 
           {/* Localização */}
           <div className="space-y-2">
-            <Label htmlFor="location" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+            <Label htmlFor="location" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
               <MapPin className="h-3 w-3" /> Local ou Link
             </Label>
             <div className="relative group">
@@ -281,7 +281,7 @@ export function EventForm({
 
           {/* Descrição */}
           <div className="space-y-2">
-            <Label htmlFor="description" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+            <Label htmlFor="description" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
               Detalhes Adicionais
             </Label>
             <Textarea
@@ -297,7 +297,7 @@ export function EventForm({
           {/* Cor e Notificações */}
           <div className="space-y-6 pb-2">
             <div className="space-y-3">
-              <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
+              <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
                 <Palette className="h-3 w-3" /> Classificação de Cor
               </Label>
               <div className="flex flex-wrap gap-2">
@@ -345,7 +345,7 @@ export function EventForm({
             type="button"
             variant="ghost"
             onClick={onClose}
-            className="flex-1 h-12 rounded-xl text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-border/40 transition-all hidden sm:flex"
+            className="flex-1 h-12 rounded-xl text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-border/40 transition-all hidden sm:flex"
           >
             Cancelar
           </Button>
@@ -353,7 +353,7 @@ export function EventForm({
         <Button
           type="submit"
           disabled={isPending}
-          className="flex-[2] h-12 w-full rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-black uppercase tracking-widest text-[10px] shadow-lg transition-all group active:scale-95"
+          className="flex-[2] h-12 w-full rounded-xl bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs shadow-lg transition-all group active:scale-95"
         >
           {isPending ? (
             <Loader2 className="h-4 w-4 animate-spin" />

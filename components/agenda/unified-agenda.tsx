@@ -9,7 +9,7 @@ import {
 import { ptBR } from "date-fns/locale";
 import { ChevronLeft, ChevronRight, CalendarDays, LayoutList, ArrowLeft, CalendarRange, Pencil, CalendarPlus, Trash2, Loader2, Plus, Search, X, Download, Repeat, CalendarOff } from "lucide-react";
 import { toast } from "sonner";
-import { cn } from "@/lib/utils";
+import { cn, capFirst } from "@/lib/utils";
 import { onActivate } from "@/lib/a11y";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -266,8 +266,8 @@ export function UnifiedAgenda({ items, selectedDateISO, themedDays = [], events 
                 <Button variant="outline" size="icon" aria-label="Dia anterior" className="h-8 w-8" onClick={() => goDay(-1)}><ChevronLeft className="h-4 w-4" /></Button>
                 <Button variant="outline" size="icon" aria-label="Próximo dia" className="h-8 w-8" onClick={() => goDay(1)}><ChevronRight className="h-4 w-4" /></Button>
               </div>
-              <h2 className="ml-1 text-base font-bold capitalize">
-                {format(day, "EEEE, d 'de' MMMM", { locale: ptBR })}
+              <h2 className="ml-1 text-base font-semibold">
+                {capFirst(format(day, "EEEE, d 'de' MMMM", { locale: ptBR }))}
               </h2>
             </>
           ) : view === "week" ? (
@@ -276,7 +276,7 @@ export function UnifiedAgenda({ items, selectedDateISO, themedDays = [], events 
                 <Button variant="outline" size="icon" aria-label="Semana anterior" className="h-8 w-8" onClick={() => goWeek(-1)}><ChevronLeft className="h-4 w-4" /></Button>
                 <Button variant="outline" size="icon" aria-label="Próxima semana" className="h-8 w-8" onClick={() => goWeek(1)}><ChevronRight className="h-4 w-4" /></Button>
               </div>
-              <h2 className="ml-1 text-base font-bold">
+              <h2 className="ml-1 text-base font-semibold">
                 {format(weekDays[0], "d MMM", { locale: ptBR })} – {format(weekDays[6], "d MMM yyyy", { locale: ptBR })}
               </h2>
             </>
@@ -286,7 +286,7 @@ export function UnifiedAgenda({ items, selectedDateISO, themedDays = [], events 
                 <Button variant="outline" size="icon" aria-label="Mês anterior" className="h-8 w-8" onClick={() => goMonth(-1)}><ChevronLeft className="h-4 w-4" /></Button>
                 <Button variant="outline" size="icon" aria-label="Próximo mês" className="h-8 w-8" onClick={() => goMonth(1)}><ChevronRight className="h-4 w-4" /></Button>
               </div>
-              <h2 className="ml-1 text-base font-bold capitalize">{format(cursor, "MMMM 'de' yyyy", { locale: ptBR })}</h2>
+              <h2 className="ml-1 text-base font-semibold">{capFirst(format(cursor, "MMMM 'de' yyyy", { locale: ptBR }))}</h2>
             </>
           )}
         </div>
@@ -299,8 +299,8 @@ export function UnifiedAgenda({ items, selectedDateISO, themedDays = [], events 
               ref={searchRef}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Buscar na agenda…  ( / )"
-              className="h-8 w-36 rounded-lg border border-border/50 bg-background pl-8 pr-7 text-xs outline-none transition-all focus:border-primary/40 sm:w-44 sm:focus:w-56"
+              placeholder="Buscar  (/)"
+              className="h-8 w-32 rounded-lg border border-border/50 bg-background pl-8 pr-7 text-xs outline-none transition-all focus:border-primary/40 sm:w-40 sm:focus:w-56"
             />
             {query && (
               <button
@@ -473,7 +473,7 @@ export function UnifiedAgenda({ items, selectedDateISO, themedDays = [], events 
                 </div>
                 <div className="min-w-0">
                   <DialogTitle>Evento recorrente</DialogTitle>
-                  <DialogDescription className="capitalize">
+                  <DialogDescription>
                     &quot;{occurrence.anchor.title}&quot; · {format(parseISO(`${occurrence.dateKey}T12:00:00`), "EEEE, d 'de' MMMM", { locale: ptBR })}
                   </DialogDescription>
                 </div>
@@ -545,8 +545,8 @@ export function UnifiedAgenda({ items, selectedDateISO, themedDays = [], events 
                 </div>
                 <div className="min-w-0">
                   <DialogTitle>Novo evento</DialogTitle>
-                  <DialogDescription className="capitalize">
-                    {format(creatingDay, "EEEE, d 'de' MMMM", { locale: ptBR })}
+                  <DialogDescription>
+                    {capFirst(format(creatingDay, "EEEE, d 'de' MMMM", { locale: ptBR }))}
                   </DialogDescription>
                 </div>
               </div>
@@ -587,7 +587,7 @@ function MonthGrid({
         })}
       </div>
 
-      <ScrollArea className="flex-1">
+      <ScrollArea className="flex-1 min-h-0">
         <div className="grid grid-cols-7 auto-rows-fr">
           {days.map((d) => {
             const items = byDay.get(dayKey(d)) ?? [];
@@ -865,7 +865,7 @@ function NowDivider() {
   return (
     <div className="flex items-center gap-2 py-0.5">
       <span className="h-2 w-2 animate-pulse rounded-full bg-rose-500" />
-      <span className="text-[9px] font-black uppercase tracking-widest text-rose-500">agora · {format(new Date(), "HH:mm")}</span>
+      <span className="text-xs font-medium text-rose-500">agora · {format(new Date(), "HH:mm")}</span>
       <span className="h-px flex-1 bg-rose-500/30" />
     </div>
   );
@@ -909,6 +909,7 @@ function AgendaRow({ item, showTime, dim, eventById, onEditEvent, onDeleteEvent,
             variant="ghost"
             size="icon"
             title="Editar evento"
+            aria-label="Editar evento"
             onClick={() => onEditEvent(editable)}
             className="h-8 w-8 rounded-lg text-muted-foreground hover:bg-primary/10 hover:text-primary"
           >
@@ -918,6 +919,7 @@ function AgendaRow({ item, showTime, dim, eventById, onEditEvent, onDeleteEvent,
             variant="ghost"
             size="icon"
             title="Excluir evento"
+            aria-label="Excluir evento"
             onClick={() => onDeleteEvent(editable)}
             className="h-8 w-8 rounded-lg text-muted-foreground hover:bg-rose-500/10 hover:text-rose-500"
           >
@@ -936,6 +938,7 @@ function AgendaRow({ item, showTime, dim, eventById, onEditEvent, onDeleteEvent,
             variant="ghost"
             size="icon"
             title="Evento recorrente — editar/pular esta ocorrência ou a série"
+            aria-label="Opções do evento recorrente"
             onClick={() => onRecurring(occurrenceAnchor, format(parseISO(item.date), "yyyy-MM-dd"))}
             className="h-8 w-8 rounded-lg text-muted-foreground hover:bg-primary/10 hover:text-primary"
           >

@@ -13,7 +13,7 @@ import { Play, Sunrise, ArrowRight, CalendarRange } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { cn } from "@/lib/utils";
+import { cn, capFirst } from "@/lib/utils";
 import { requestFocusStart } from "@/components/focus/focus-core";
 import { AgendaItemIcon } from "./agenda-item-icon";
 import { CATEGORY_META, agendaUrl, type AgendaItem } from "./agenda-shared";
@@ -90,16 +90,16 @@ export function TodayPanel({ items, inRange }: { items: AgendaItem[]; inRange: b
   }
 
   return (
-    <ScrollArea className="flex-1">
+    <ScrollArea className="flex-1 min-h-0">
       <div className="mx-auto w-full max-w-2xl space-y-4 p-4 sm:p-6">
         {/* Cabeçalho do dia */}
         <div className="flex items-center justify-between">
           <div>
-            <p className="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-primary">
+            <p className="flex items-center gap-1.5 text-xs font-medium text-primary">
               <Sunrise className="h-3.5 w-3.5" /> Hoje
             </p>
-            <h2 className="text-lg font-black capitalize tracking-tight">
-              {format(now, "EEEE, d 'de' MMMM", { locale: ptBR })}
+            <h2 className="text-lg font-semibold tracking-tight">
+              {capFirst(format(now, "EEEE, d 'de' MMMM", { locale: ptBR }))}
             </h2>
           </div>
           <span className="rounded-xl border border-border/40 bg-muted/30 px-3 py-1.5 font-mono text-sm font-bold tabular-nums">
@@ -134,7 +134,7 @@ export function TodayPanel({ items, inRange }: { items: AgendaItem[]; inRange: b
         <div className="flex items-center gap-2" aria-label="Agora">
           <span className="h-2 w-2 rounded-full bg-rose-500" />
           <span className="h-px flex-1 bg-rose-500/60" />
-          <span className="font-mono text-[10px] font-black uppercase tracking-widest text-rose-500">agora</span>
+          <span className="font-mono text-xs font-medium text-rose-500">agora</span>
         </div>
 
         {/* O que vem (próximo destacado) */}
@@ -178,7 +178,7 @@ function TodayRow({ item, highlight, onFocus }: { item: AgendaItem; highlight?: 
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-semibold text-foreground">
           {item.title}
-          {highlight && <span className="ml-2 rounded-full bg-primary/10 px-2 py-0.5 text-[9px] font-black uppercase tracking-wider text-primary">próximo</span>}
+          {highlight && <span className="ml-2 rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">próximo</span>}
         </p>
         <p className="truncate text-xs text-muted-foreground">
           <span className="font-medium" style={{ color: item.color }}>{meta.label}</span>
@@ -190,7 +190,7 @@ function TodayRow({ item, highlight, onFocus }: { item: AgendaItem; highlight?: 
         <Button
           size="sm"
           onClick={onFocus}
-          className="h-8 shrink-0 rounded-lg bg-primary px-2.5 text-[10px] font-black uppercase tracking-wider text-primary-foreground"
+          className="h-8 shrink-0 rounded-lg bg-primary px-2.5 text-xs font-medium text-primary-foreground"
         >
           <Play className="mr-1 h-3 w-3" /> Foco
         </Button>

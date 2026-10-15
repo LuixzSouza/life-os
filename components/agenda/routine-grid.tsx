@@ -53,7 +53,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
     return (
       <div className="flex flex-col items-center justify-center h-full py-20 text-muted-foreground/40 text-center">
         <Sun className="h-16 w-16 mb-4 opacity-50" />
-        <h4 className="text-xl font-black uppercase tracking-tighter text-foreground/50">Dia Livre</h4>
+        <h4 className="text-xl font-semibold text-foreground/50">Dia Livre</h4>
         <p className="text-[10px] font-bold uppercase tracking-widest mt-2">Nenhum protocolo para hoje</p>
       </div>
     );
@@ -74,14 +74,14 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
       {/* RESUMO DO DIA + LEGENDA */}
       <div className="flex items-center justify-between gap-3 border-b border-border/40 bg-muted/10 px-4 py-2.5 shrink-0">
         <div className="flex items-center gap-3">
-          <span className="text-[10px] font-black uppercase tracking-widest text-foreground tabular-nums">
+          <span className="text-xs font-medium text-foreground tabular-nums">
             {items.length} {items.length === 1 ? "bloco" : "blocos"}
           </span>
           <span className="text-[10px] font-bold text-muted-foreground tabular-nums">
             {formatDuration(totalMinutes)} agendadas
           </span>
           {isToday && (
-            <span className="rounded-md bg-primary/10 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-primary">Hoje</span>
+            <span className="rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">Hoje</span>
           )}
         </div>
 
@@ -105,7 +105,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
           {hours.map((hour) => (
             <div key={hour} className="absolute w-full flex items-start" style={{ top: `${(hour - START_HOUR) * HOUR_HEIGHT}px`, height: `${HOUR_HEIGHT}px` }}>
               <div className="w-14 text-right pr-3 shrink-0 -mt-2">
-                <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">{hour.toString().padStart(2, "0")}:00</span>
+                <span className="text-xs font-medium text-muted-foreground/40">{hour.toString().padStart(2, "0")}:00</span>
               </div>
               <div className="flex-1 border-t border-border/40 border-dashed" />
             </div>
@@ -143,7 +143,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
 
                         {!isCompact && (
                           <div className="mt-1.5 flex items-center gap-2">
-                            <span className={cn("text-[9px] font-black uppercase tracking-wider", theme.colorClass)}>{theme.label}</span>
+                            <span className={cn("text-xs font-medium", theme.colorClass)}>{theme.label}</span>
                             <span className="text-[9px] font-bold text-muted-foreground/60 uppercase tracking-widest tabular-nums border-l border-border pl-2">
                               {item.startTime} - {item.endTime}
                             </span>
@@ -196,7 +196,7 @@ function NowLine({ startHour, endHour, hourHeight }: { startHour: number; endHou
 
   return (
     <div className="pointer-events-none absolute left-0 right-2 z-20 flex items-center" style={{ top: `${top}px` }}>
-      <span className="w-14 shrink-0 pr-2 text-right text-[8px] font-black uppercase tracking-widest text-rose-500 tabular-nums">
+      <span className="w-14 shrink-0 pr-2 text-right text-xs font-medium text-rose-500 tabular-nums">
         {label}
       </span>
       <div className="relative flex-1">

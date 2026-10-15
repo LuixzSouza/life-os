@@ -9,7 +9,7 @@ import {
 import { Input } from "@/components/ui/input";
 import {
   Plus, ChevronLeft, ChevronRight,
-  Clock, CalendarPlus, ListTodo, Clock3, Loader2, ChevronDown,
+  CalendarPlus, ListTodo, Clock3, Loader2, ChevronDown,
 } from "lucide-react";
 import { format, addDays, subDays, isSameDay } from "date-fns";
 import { ptBR } from "date-fns/locale";
@@ -19,7 +19,7 @@ import { EventForm } from "@/components/agenda/event-form";
 import { agendaUrl } from "@/components/agenda/agenda-shared";
 import { AskAiButton } from "@/components/ai/ask-ai-button";
 import { createTask } from "@/app/(dashboard)/projects/actions/task";
-import { cn } from "@/lib/utils";
+import { cn, capFirst } from "@/lib/utils";
 
 interface AgendaHeaderProps {
   isSpecificDate: boolean;
@@ -81,46 +81,45 @@ export function AgendaHeader({ date, userName }: AgendaHeaderProps) {
   // Compacto no mobile (iPhone SE): saudação some, título menor e controles
   // numa linha só — o header não pode comer meia tela do celular.
   return (
-    <header className="sticky top-0 z-40 w-full bg-background/90 backdrop-blur-md border-b border-border/40 px-4 py-2.5 sm:px-6 sm:py-4 shadow-sm">
-      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2.5 sm:gap-4">
+    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 px-4 py-3 backdrop-blur-md md:px-6">
+      <div className="mx-auto flex max-w-[1600px] flex-col justify-between gap-3 md:flex-row md:items-center">
 
         {/* BLOCO ESQUERDO: Saudação e Data */}
         <div className="min-w-0">
-          <h2 className="hidden sm:flex text-[10px] font-black text-primary uppercase tracking-[0.2em] items-center gap-1.5 mb-1">
-            <Clock className="h-3 w-3" /> {greeting}, {who}.
-          </h2>
-          <h1 className="text-lg sm:text-2xl font-black tracking-tighter text-foreground capitalize flex flex-wrap items-center gap-x-2">
-            {format(date, "EEEE", { locale: ptBR })}
-            <span className="text-muted-foreground/50 font-medium">
-              {format(date, "d 'de' MMMM", { locale: ptBR })}
-            </span>
+          <p className="hidden text-sm text-muted-foreground sm:block">
+            {greeting}, {who}
+          </p>
+          <h1 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+            <span>{capFirst(format(date, "EEEE", { locale: ptBR }))}</span>
+            <span className="text-muted-foreground">, {format(date, "d 'de' MMMM", { locale: ptBR })}</span>
           </h1>
         </div>
 
         {/* BLOCO DIREITO: Controles */}
-        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-          
-          {/* Navegador de Dias (Control Group) */}
-          <div className="flex items-center bg-muted/30 p-1 rounded-xl border border-border/40 shadow-inner">
-            <Button variant="ghost" size="icon" aria-label="Dia anterior" onClick={handlePrevDay} className="h-8 w-8 rounded-lg hover:bg-background hover:shadow-sm text-muted-foreground hover:text-foreground transition-all">
+        <div className="flex flex-wrap items-center gap-2">
+
+          {/* Navegador de Dias (grupo segmentado) */}
+          <div className="flex items-center rounded-lg border border-border/60 bg-card">
+            <Button variant="ghost" size="icon" aria-label="Dia anterior" onClick={handlePrevDay} className="h-9 w-9 rounded-none rounded-l-lg text-muted-foreground hover:text-foreground">
               <ChevronLeft className="h-4 w-4" />
             </Button>
-            
-            <Button variant="ghost" onClick={handleToday} className={cn(
-                "h-8 px-4 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all",
-                isSameDay(date, new Date()) 
-                  ? "bg-primary/10 text-primary hover:bg-primary/20" 
-                  : "text-muted-foreground hover:text-foreground hover:bg-background hover:shadow-sm"
-              )}>
+
+            <Button
+              variant="ghost"
+              onClick={handleToday}
+              disabled={isSameDay(date, new Date())}
+              className={cn(
+                "h-9 rounded-none border-x border-border/60 px-3 text-sm font-medium",
+                "disabled:opacity-100 disabled:text-muted-foreground",
+              )}
+            >
               Hoje
             </Button>
 
-            <Button variant="ghost" size="icon" aria-label="Próximo dia" onClick={handleNextDay} className="h-8 w-8 rounded-lg hover:bg-background hover:shadow-sm text-muted-foreground hover:text-foreground transition-all">
+            <Button variant="ghost" size="icon" aria-label="Próximo dia" onClick={handleNextDay} className="h-9 w-9 rounded-none rounded-r-lg text-muted-foreground hover:text-foreground">
               <ChevronRight className="h-4 w-4" />
             </Button>
           </div>
-
-          <div className="h-8 w-px bg-border/40 hidden md:block mx-1" />
 
           {/* #5: a Agenda agora conversa com o Cérebro Digital */}
           <AskAiButton
@@ -132,9 +131,9 @@ export function AgendaHeader({ date, userName }: AgendaHeaderProps) {
           {/* Botão de Ação Primária (G20: menu — Evento · Tarefa · Bloco agora) */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button className="h-9 sm:h-10 rounded-xl px-4 sm:px-5 bg-foreground text-background hover:bg-primary hover:text-white shadow-lg font-black uppercase tracking-widest text-[10px] transition-all active:scale-95">
-                <Plus className="h-4 w-4 mr-1.5 stroke-[3]" /> Registrar
-                <ChevronDown className="h-3 w-3 ml-1.5 opacity-60" />
+              <Button className="h-9 rounded-lg px-3.5 text-sm font-medium">
+                <Plus className="mr-1 h-4 w-4" /> Novo
+                <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-70" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56 rounded-xl">
@@ -175,7 +174,7 @@ export function AgendaHeader({ date, userName }: AgendaHeaderProps) {
             icon={<ListTodo />}
             iconClassName="bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
             title="Tarefa rápida"
-            description={<span className="capitalize">vence {format(date, "EEEE, d 'de' MMMM", { locale: ptBR })}</span>}
+            description={<span>vence {format(date, "EEEE, d 'de' MMMM", { locale: ptBR })}</span>}
           />
           <DialogBody>
             <div className="flex items-center gap-2">

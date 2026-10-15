@@ -1,18 +1,19 @@
 import { prisma } from "@/lib/prisma";
+import { capFirst } from "@/lib/utils";
 import { Prisma } from "@prisma/client";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TabsContent } from "@/components/ui/tabs";
 import { AgendaTabsRoot } from "@/components/agenda/agenda-tabs";
 import { isAgendaTab } from "@/components/agenda/agenda-shared";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
-import { Target, CalendarClock, ListChecks, Clock, ListTodo, Sun, Sunrise, CalendarRange, Timer, Brain, PenLine } from "lucide-react";
+import { CalendarClock, ListChecks } from "lucide-react";
+import { ptBR } from "date-fns/locale";
 import {
   parseISO, startOfMonth, endOfMonth, startOfWeek, endOfWeek, isSameDay, format,
 } from "date-fns";
 
 import { AgendaHeader } from "@/components/agenda/agenda-header";
 import { AgendaCalendar } from "@/components/agenda/agenda-calendar";
+import { AgendaNav } from "@/components/agenda/agenda-nav";
 import { UnifiedAgenda } from "@/components/agenda/unified-agenda";
 import { TaskList } from "@/components/agenda/task-list";
 import { RoutineManager } from "@/components/agenda/routine-manager";
@@ -128,144 +129,141 @@ export default async function AgendaPage({ searchParams }: AgendaPageProps) {
   const itemsRealToday = todayInRange ? agendaItems.filter((i) => isSameDay(new Date(i.date), now)) : [];
   const firstName = currentUser?.name?.trim().split(/\s+/)[0] || null;
 
+  const summary = (
+    <DaySummary
+      date={selectedDate}
+      itemsCount={itemsToday.length}
+      pendingTaskCount={pendingTaskCount}
+      nextUp={nextUp ? { title: nextUp.title, time: nextUp.time ?? "", subtitle: nextUp.subtitle ?? null } : null}
+    />
+  );
+
   return (
-    <div className="min-h-screen bg-muted/30 pb-24 animate-in fade-in duration-500">
+    <div className="min-h-screen bg-background pb-24 animate-in fade-in duration-500">
       <AgendaHeader isSpecificDate={isSpecificDate} date={selectedDate} userName={firstName} />
 
-      <div className="mx-auto max-w-[1600px] space-y-8 px-4 py-6 md:px-8">
-        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-12">
+      {/* Layout de app de calendário: lateral fixa (navegação + mini-mês +
+          resumo) e UM painel com a visão ativa — sem card dentro de card. */}
+      <AgendaTabsRoot
+        initialTab={activeTab}
+        className="mx-auto flex max-w-[1600px] gap-6 px-4 py-5 md:px-6 lg:flex-row"
+      >
+        {/* Sem sticky: a lateral é mais alta que telas de 768px e o resumo ficava inalcançável. */}
+        <aside className="hidden w-72 shrink-0 flex-col gap-6 self-start lg:flex">
+          <AgendaNav variant="rail" counts={{ tasks: pendingTaskCount }} />
+          <section aria-label="Mini calendário" className="rounded-xl border border-border/60 bg-card p-3">
+            <AgendaCalendar busyDays={busyDays} />
+          </section>
+          {summary}
+        </aside>
 
-          {/* SIDEBAR — no mobile vai DEPOIS do card principal (G6): as abas são
-              o destino; mini-calendário e resumo são apoio. */}
-          <div className="order-2 space-y-6 lg:order-none lg:col-span-3">
-            <Card className="overflow-hidden rounded-[1.5rem] border-border/40 bg-card shadow-sm">
-              <CardContent className="flex justify-center p-4">
-                <AgendaCalendar busyDays={busyDays} />
-              </CardContent>
-            </Card>
+        <div className="flex min-w-0 flex-1 flex-col gap-4">
+          <AgendaNav variant="bar" className="lg:hidden" />
 
-            <Card className="overflow-hidden rounded-[1.5rem] border-border/40 bg-card shadow-sm">
-              <CardHeader className="border-b border-border/40 bg-muted/10 pb-3">
-                <CardTitle className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-foreground">
-                  <Target className="h-4 w-4 text-primary" /> Resumo do Dia
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-5 p-4">
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="flex flex-col items-center rounded-xl border border-border/40 bg-background p-4 text-center shadow-sm">
-                    <CalendarClock className="mb-2 h-4 w-4 text-blue-500" />
-                    <span className="text-2xl font-black leading-none tabular-nums">{itemsToday.length}</span>
-                    <span className="mt-1 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">Registros hoje</span>
-                  </div>
-                  <div className="flex flex-col items-center rounded-xl border border-border/40 bg-background p-4 text-center shadow-sm">
-                    <ListChecks className="mb-2 h-4 w-4 text-amber-500" />
-                    <span className="text-2xl font-black leading-none tabular-nums">{pendingTaskCount}</span>
-                    <span className="mt-1 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">Tarefas ativas</span>
-                  </div>
-                </div>
+          <section className="flex min-h-[75vh] flex-col overflow-hidden rounded-xl border border-border/60 bg-card md:h-[calc(100vh-150px)] md:min-h-[640px]">
+            {/* MODO HOJE (#6): linha do tempo vertical do dia real */}
+            <TabsContent value="today" className="m-0 flex h-full flex-1 flex-col overflow-hidden p-0 data-[state=active]:flex">
+              <TodayPanel items={itemsRealToday} inRange={todayInRange} />
+            </TabsContent>
 
-                <div>
-                  <h4 className="mb-3 flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-muted-foreground">
-                    <Clock className="h-3 w-3" /> Próximo na Fila
-                  </h4>
-                  {nextUp ? (
-                    // G1: o card agora LEVA a algum lugar — abre a grade de
-                    // Blocos do dia (onde o horário vive).
-                    <Link
-                      href={`/agenda?date=${format(selectedDate, "yyyy-MM-dd")}&tab=blocks`}
-                      className="block cursor-pointer rounded-xl border border-l-4 border-primary/20 border-l-primary bg-primary/5 p-3 transition-colors hover:bg-primary/10"
-                    >
-                      <p className="truncate text-sm font-bold text-primary">{nextUp.title}</p>
-                      <div className="mt-2 flex items-center justify-between">
-                        <Badge variant="outline" className="border-primary/20 bg-background px-1.5 font-mono text-[10px] text-primary">
-                          {nextUp.time}
-                        </Badge>
-                        {nextUp.subtitle && (
-                          <p className="max-w-[120px] truncate text-[10px] font-medium text-muted-foreground">{nextUp.subtitle}</p>
-                        )}
-                      </div>
-                    </Link>
-                  ) : (
-                    <div className="rounded-xl border border-dashed border-border/40 bg-muted/20 py-4 text-center">
-                      <p className="text-xs font-medium text-muted-foreground">Sem horários pendentes hoje.</p>
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+            {/* CALENDÁRIO UNIFICADO */}
+            <TabsContent value="calendar" className="m-0 flex h-full flex-1 flex-col overflow-hidden p-0 data-[state=active]:flex">
+              <UnifiedAgenda items={agendaItems} selectedDateISO={selectedDate.toISOString()} themedDays={themedDays} events={editableEvents} />
+            </TabsContent>
 
-          {/* ÁREA PRINCIPAL — no mobile altura natural (G7: um scroll só). */}
-          <div className="order-1 lg:order-none lg:col-span-9">
-            <Card className="flex flex-col overflow-hidden rounded-[2rem] border-border/40 bg-card shadow-xl md:h-[calc(100vh-140px)] md:min-h-[700px]">
-              <AgendaTabsRoot initialTab={activeTab} className="flex h-full w-full flex-1 flex-col">
-                <div className="flex items-center justify-between border-b border-border/40 bg-muted/10 px-4 py-3">
-                  {/* G2/G3: realce primário em TODAS as abas + scroll sem barra no mobile */}
-                  <TabsList className="h-11 overflow-x-auto scrollbar-hide rounded-xl border border-border/40 bg-muted/50 p-1 shadow-inner">
-                    <TabsTrigger value="today" className="gap-2 rounded-lg px-3 sm:px-5 text-[10px] font-black uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm">
-                      <Sunrise className="h-4 w-4" /> Hoje
-                    </TabsTrigger>
-                    <TabsTrigger value="calendar" className="gap-2 rounded-lg px-3 sm:px-5 text-[10px] font-black uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm">
-                      <CalendarRange className="h-4 w-4" /> Calendário
-                    </TabsTrigger>
-                    <TabsTrigger value="blocks" className="gap-2 rounded-lg px-3 sm:px-5 text-[10px] font-black uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm">
-                      <Timer className="h-4 w-4" /> Blocos
-                    </TabsTrigger>
-                    <TabsTrigger value="planner" className="gap-2 rounded-lg px-3 sm:px-5 text-[10px] font-black uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm">
-                      <PenLine className="h-4 w-4" /> Planner
-                    </TabsTrigger>
-                    <TabsTrigger value="focus" className="gap-2 rounded-lg px-3 sm:px-5 text-[10px] font-black uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm">
-                      <Brain className="h-4 w-4" /> Foco
-                    </TabsTrigger>
-                    <TabsTrigger value="tasks" className="gap-2 rounded-lg px-3 sm:px-5 text-[10px] font-black uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm">
-                      <ListTodo className="h-4 w-4" /> Tarefas
-                    </TabsTrigger>
-                    <TabsTrigger value="routine" className="gap-2 rounded-lg px-3 sm:px-5 text-[10px] font-black uppercase tracking-widest data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm">
-                      <Sun className="h-4 w-4" /> Rotina
-                    </TabsTrigger>
-                  </TabsList>
-                </div>
+            {/* TIME-BLOCKING (grade de horas interativa) */}
+            <TabsContent value="blocks" className="m-0 flex h-full flex-1 flex-col overflow-hidden p-0 data-[state=active]:flex">
+              <TimeBlockingDay events={blockEvents} tasks={pendingTasks} themedDays={themedDays} selectedDateISO={selectedDate.toISOString()} />
+            </TabsContent>
 
-                {/* MODO HOJE (#6): linha do tempo vertical do dia real */}
-                <TabsContent value="today" className="m-0 flex h-full flex-1 flex-col overflow-hidden p-0 data-[state=active]:flex">
-                  <TodayPanel items={itemsRealToday} inRange={todayInRange} />
-                </TabsContent>
+            {/* PLANNER SEMANAL (Método Alastrar — dias × tarefas, riscar ao concluir) */}
+            <TabsContent value="planner" className="m-0 flex h-full flex-1 flex-col overflow-hidden p-0 data-[state=active]:flex">
+              <WeekPlanner tasks={weekTasks} selectedDateISO={selectedDate.toISOString()} themedDays={themedDays} />
+            </TabsContent>
 
-                {/* CALENDÁRIO UNIFICADO */}
-                <TabsContent value="calendar" className="m-0 flex h-full flex-1 flex-col overflow-hidden p-0 data-[state=active]:flex">
-                  <UnifiedAgenda items={agendaItems} selectedDateISO={selectedDate.toISOString()} themedDays={themedDays} events={editableEvents} />
-                </TabsContent>
+            {/* FOCO (painel de produtividade — últimos 7 dias + padrões) */}
+            <TabsContent value="focus" className="m-0 flex-1 flex-col overflow-y-auto data-[state=active]:flex">
+              <FocusInsights stats={focusStats} />
+              <FocusDrivers drivers={focusDrivers} />
+            </TabsContent>
 
-                {/* TIME-BLOCKING (grade de horas interativa) */}
-                <TabsContent value="blocks" className="m-0 flex h-full flex-1 flex-col overflow-hidden p-0 data-[state=active]:flex">
-                  <TimeBlockingDay events={blockEvents} tasks={pendingTasks} themedDays={themedDays} selectedDateISO={selectedDate.toISOString()} />
-                </TabsContent>
+            {/* TAREFAS */}
+            <TabsContent value="tasks" className="m-0 flex-1 flex-col overflow-y-auto p-4 md:p-6 data-[state=active]:flex">
+              <TaskList tasks={pendingTasks} total={pendingTaskCount} />
+            </TabsContent>
 
-                {/* PLANNER SEMANAL (Método Alastrar — dias × tarefas, riscar ao concluir) */}
-                <TabsContent value="planner" className="m-0 flex h-full flex-1 flex-col overflow-hidden p-0 data-[state=active]:flex">
-                  <WeekPlanner tasks={weekTasks} selectedDateISO={selectedDate.toISOString()} themedDays={themedDays} />
-                </TabsContent>
+            {/* ROTINA */}
+            <TabsContent value="routine" className="m-0 flex-1 flex-col overflow-y-auto p-4 md:p-6 data-[state=active]:flex">
+              <RoutineManager items={routineItems} />
+            </TabsContent>
+          </section>
 
-                {/* FOCO (painel de produtividade — últimos 7 dias + padrões) */}
-                <TabsContent value="focus" className="m-0 flex-1 overflow-y-auto bg-background/50 data-[state=active]:flex flex-col">
-                  <FocusInsights stats={focusStats} />
-                  <FocusDrivers drivers={focusDrivers} />
-                </TabsContent>
-
-                {/* TAREFAS */}
-                <TabsContent value="tasks" className="m-0 flex-1 overflow-y-auto bg-background/50 p-6 data-[state=active]:flex flex-col">
-                  <TaskList tasks={pendingTasks} total={pendingTaskCount} />
-                </TabsContent>
-
-                {/* ROTINA */}
-                <TabsContent value="routine" className="m-0 flex-1 overflow-y-auto bg-background/50 p-6 data-[state=active]:flex flex-col">
-                  <RoutineManager items={routineItems} />
-                </TabsContent>
-              </AgendaTabsRoot>
-            </Card>
+          {/* Mobile: apoio DEPOIS do painel (as visões são o destino). */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:hidden">
+            <section aria-label="Mini calendário" className="flex justify-center rounded-xl border border-border/60 bg-card p-3">
+              <AgendaCalendar busyDays={busyDays} />
+            </section>
+            {summary}
           </div>
         </div>
-      </div>
+      </AgendaTabsRoot>
     </div>
+  );
+}
+
+/** Resumo enxuto do dia selecionado: próximo compromisso + dois contadores. */
+function DaySummary({
+  date,
+  itemsCount,
+  pendingTaskCount,
+  nextUp,
+}: {
+  date: Date;
+  itemsCount: number;
+  pendingTaskCount: number;
+  nextUp: { title: string; time: string; subtitle: string | null } | null;
+}) {
+  return (
+    <section aria-label="Resumo do dia" className="rounded-xl border border-border/60 bg-card p-4">
+      <div className="mb-3 flex items-baseline justify-between">
+        <h2 className="text-sm font-semibold">Resumo do dia</h2>
+        <span className="text-xs text-muted-foreground">{capFirst(format(date, "EEE, d MMM", { locale: ptBR }))}</span>
+      </div>
+
+      {nextUp ? (
+        // G1: o card LEVA a algum lugar — abre a grade de Blocos do dia.
+        <Link
+          href={`/agenda?date=${format(date, "yyyy-MM-dd")}&tab=blocks`}
+          className="mb-3 flex items-start gap-3 rounded-lg border border-border/60 p-3 transition-colors hover:border-primary/40 hover:bg-muted/40"
+        >
+          <span className="mt-0.5 rounded-md bg-primary/10 px-1.5 py-0.5 font-mono text-xs font-semibold tabular-nums text-primary">
+            {nextUp.time}
+          </span>
+          <span className="min-w-0">
+            <span className="block truncate text-sm font-medium">{nextUp.title}</span>
+            {nextUp.subtitle && <span className="block truncate text-xs text-muted-foreground">{nextUp.subtitle}</span>}
+          </span>
+        </Link>
+      ) : (
+        <p className="mb-3 rounded-lg bg-muted/40 px-3 py-2.5 text-xs text-muted-foreground">
+          Nada com horário pendente.
+        </p>
+      )}
+
+      <dl className="grid grid-cols-2 gap-2 text-sm">
+        <div className="flex items-center gap-2 rounded-lg bg-muted/40 px-3 py-2">
+          <CalendarClock className="h-4 w-4 text-muted-foreground" />
+          <dt className="sr-only">Registros no dia</dt>
+          <dd className="font-semibold tabular-nums">{itemsCount}</dd>
+          <span className="truncate text-xs text-muted-foreground">no dia</span>
+        </div>
+        <div className="flex items-center gap-2 rounded-lg bg-muted/40 px-3 py-2">
+          <ListChecks className="h-4 w-4 text-muted-foreground" />
+          <dt className="sr-only">Tarefas pendentes</dt>
+          <dd className="font-semibold tabular-nums">{pendingTaskCount}</dd>
+          <span className="truncate text-xs text-muted-foreground">tarefas</span>
+        </div>
+      </dl>
+    </section>
   );
 }

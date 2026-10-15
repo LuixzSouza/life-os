@@ -81,7 +81,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
             <CheckSquare className="h-5 w-5" />
           </div>
           <div>
-            <h3 className="font-black uppercase tracking-tighter text-foreground text-lg leading-none">Foco do Dia</h3>
+            <h3 className="font-semibold text-foreground text-lg leading-none">Foco do Dia</h3>
             <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">Tarefas ativas por prioridade</p>
           </div>
         </div>
@@ -100,7 +100,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
             <div className="bg-emerald-500/10 p-4 rounded-2xl mb-4 shadow-inner border border-emerald-500/20">
               <Sparkles className="h-8 w-8 text-emerald-500 animate-pulse" />
             </div>
-            <h4 className="text-xl font-black uppercase tracking-tighter text-foreground">Tudo Limpo!</h4>
+            <h4 className="text-xl font-semibold text-foreground">Tudo Limpo!</h4>
             <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mt-2 max-w-[250px] leading-relaxed opacity-60">
               Nenhuma tarefa pendente. Aproveite a visão livre — ou adicione uma acima.
             </p>
@@ -113,7 +113,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
               <div key={group.key} className="space-y-3">
                 <div className="flex items-center gap-2">
                   <Icon className={cn("h-3.5 w-3.5", meta.accent)} />
-                  <span className={cn("text-[10px] font-black uppercase tracking-widest", meta.accent)}>{meta.label}</span>
+                  <span className={cn("text-xs font-medium", meta.accent)}>{meta.label}</span>
                   <span className="text-[10px] font-bold text-muted-foreground/50 tabular-nums">{group.items.length}</span>
                   <div className="flex-1 h-px bg-border/40" />
                 </div>
@@ -132,7 +132,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
       <div className="p-5 border-t border-border/40 bg-muted/10 shrink-0">
         <Button variant="ghost" className="w-full h-12 rounded-xl flex justify-between items-center text-muted-foreground hover:text-primary hover:bg-primary/5 transition-all group/btn border border-transparent hover:border-primary/20" asChild>
           <Link href="/projects">
-            <span className="text-[10px] font-black uppercase tracking-widest">
+            <span className="text-xs font-medium">
               {hiddenCount > 0 ? `+${hiddenCount} no Painel de Projetos` : "Painel de Projetos"}
             </span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-2" />
@@ -177,7 +177,7 @@ function QuickAddTask() {
           <option value="LOW">Baixa</option>
         </select>
         <Input name="dueDate" type="date" aria-label="Vencimento" className="h-9 w-[150px] text-xs" />
-        <Button type="submit" disabled={isPending} size="icon" className="h-9 w-9 shrink-0 rounded-lg" title="Adicionar tarefa">
+        <Button type="submit" disabled={isPending} size="icon" className="h-9 w-9 shrink-0 rounded-lg" title="Adicionar tarefa" aria-label="Adicionar tarefa">
           {isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
         </Button>
       </div>
@@ -233,7 +233,7 @@ function TaskRow({ task, isLate }: { task: TaskWithProject; isLate: boolean }) {
           {task.dueDate && (
             <div
               className={cn(
-                "flex items-center gap-1.5 text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-md border",
+                "flex items-center gap-1.5 text-xs font-medium px-2 py-0.5 rounded-md border",
                 isLate
                   ? "bg-rose-500/10 text-rose-500 border-rose-500/20"
                   : "bg-muted/40 text-muted-foreground border-border/40",
@@ -248,7 +248,7 @@ function TaskRow({ task, isLate }: { task: TaskWithProject; isLate: boolean }) {
           {task.project && (
             <Badge
               variant="outline"
-              className="text-[9px] h-5 px-2 font-black uppercase tracking-widest gap-1 border border-border/40 bg-background"
+              className="text-xs h-5 px-2 font-medium gap-1 border border-border/40 bg-background"
               style={{ color: projectColor }}
             >
               <Folder className="h-3 w-3" style={{ color: projectColor }} />

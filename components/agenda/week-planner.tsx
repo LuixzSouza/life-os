@@ -63,8 +63,8 @@ export function WeekPlanner({ tasks, selectedDateISO, themedDays }: WeekPlannerP
           <PenLine className="h-5 w-5" />
         </div>
         <div>
-          <h3 className="text-lg font-black uppercase leading-none tracking-tighter text-foreground">Planner da Semana</h3>
-          <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+          <h3 className="text-lg font-semibold leading-none text-foreground">Planner da Semana</h3>
+          <p className="mt-1 text-xs text-muted-foreground">
             {format(weekDays[0], "dd MMM", { locale: ptBR })} — {format(weekDays[6], "dd MMM", { locale: ptBR })} · risque ao concluir
           </p>
         </div>
@@ -72,7 +72,7 @@ export function WeekPlanner({ tasks, selectedDateISO, themedDays }: WeekPlannerP
 
       <div className="flex-1 overflow-auto bg-background/30 p-4">
         {/* G9: < md empilha um card por dia (hoje primeiro); ≥ md vira as 7 colunas */}
-        <div className="grid grid-cols-1 gap-3 md:min-w-[980px] md:grid-cols-7">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4 min-[1800px]:grid-cols-7">
           {weekDays.map((day) => {
             const theme = themedByWeekday.get(day.getDay());
             const dayTasks = tasks
@@ -84,20 +84,20 @@ export function WeekPlanner({ tasks, selectedDateISO, themedDays }: WeekPlannerP
               <div
                 key={day.toISOString()}
                 className={cn(
-                  "flex min-h-[140px] flex-col rounded-2xl border bg-card shadow-sm transition-colors md:min-h-[320px]",
+                  "flex min-h-[140px] flex-col rounded-xl border bg-card transition-colors md:min-h-[220px]",
                   today ? "border-primary/40 ring-1 ring-primary/20 max-md:order-first" : "border-border/40",
                 )}
               >
                 {/* Cabeçalho do dia (cor do Dia Temático quando existir) */}
                 <div
-                  className="rounded-t-2xl border-b border-border/40 px-3 py-2.5"
+                  className="rounded-t-xl border-b border-border/40 px-3 py-2.5"
                   style={theme ? { backgroundColor: `${theme.color}14` } : undefined}
                 >
                   <div className="flex items-center justify-between gap-1">
-                    <p className={cn("text-[10px] font-black uppercase tracking-widest", today ? "text-primary" : "text-muted-foreground")}>
+                    <p className={cn("text-xs font-medium", today ? "text-primary" : "text-muted-foreground")}>
                       {format(day, "EEE", { locale: ptBR }).replace(".", "")}
                     </p>
-                    <p className={cn("text-sm font-black tabular-nums", today ? "text-primary" : "text-foreground")}>
+                    <p className={cn("text-sm font-semibold tabular-nums", today ? "text-primary" : "text-foreground")}>
                       {format(day, "dd")}
                     </p>
                   </div>
@@ -185,7 +185,7 @@ function DayQuickAdd({ day }: { day: Date }) {
         placeholder="Anotar…"
         className="h-7 flex-1 border-none bg-transparent px-1 text-xs shadow-none focus-visible:ring-0"
       />
-      <Button type="submit" disabled={isPending} size="icon" variant="ghost" className="h-9 w-9 md:h-7 md:w-7 shrink-0 rounded-md" title="Adicionar">
+      <Button type="submit" disabled={isPending} size="icon" variant="ghost" className="h-9 w-9 md:h-7 md:w-7 shrink-0 rounded-md" title="Adicionar" aria-label="Adicionar anotação">
         {isPending ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Plus className="h-3.5 w-3.5" />}
       </Button>
     </form>

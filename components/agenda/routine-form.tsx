@@ -75,20 +75,20 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
 
         {/* Atividade */}
         <div className="space-y-2">
-            <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest flex items-center gap-2">Identificação da Atividade</Label>
+            <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">Identificação da Atividade</Label>
             <Input name="title" defaultValue={item?.title} placeholder="Ex: Leitura Focada, Academia..." className="h-12 bg-muted/20 border-border/40 focus-visible:ring-primary/30 rounded-xl font-bold text-base" required />
         </div>
 
         {/* Time Grid (Início e Fim) */}
         <div className="grid grid-cols-2 gap-4 bg-muted/10 p-4 rounded-[1.5rem] border border-border/40 shadow-inner">
             <div className="space-y-2">
-                <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest flex items-center gap-1.5">
+                <Label className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
                     <Clock className="h-3 w-3" /> Início
                 </Label>
                 <Input type="time" name="startTime" defaultValue={item?.startTime || "07:00"} className="h-12 bg-background border-border/40 focus-visible:ring-primary/30 rounded-xl font-mono font-black text-lg text-center" required />
             </div>
             <div className="space-y-2">
-                <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest flex items-center gap-1.5">
+                <Label className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
                     <Clock className="h-3 w-3" /> Fim
                 </Label>
                 <Input type="time" name="endTime" defaultValue={item?.endTime || "08:00"} className="h-12 bg-background border-border/40 focus-visible:ring-primary/30 rounded-xl font-mono font-black text-lg text-center" required />
@@ -97,7 +97,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
 
         {/* Categoria */}
         <div className="space-y-2">
-            <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Categoria Tática</Label>
+            <Label className="text-xs font-medium text-muted-foreground">Categoria Tática</Label>
             <Select name="category" defaultValue={item?.category || "study"}>
             <SelectTrigger className="h-12 bg-muted/20 border-border/40 rounded-xl font-bold text-sm">
                 <SelectValue />
@@ -114,7 +114,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
 
         {/* Dias da Semana (Chips) */}
         <div className="space-y-3">
-            <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Frequência (Ativo em)</Label>
+            <Label className="text-xs font-medium text-muted-foreground">Frequência (Ativo em)</Label>
             <div className="flex flex-wrap gap-2">
             {DAYS.map((day) => (
                 <div
@@ -125,7 +125,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
                 onClick={() => toggleDay(day.id)}
                 onKeyDown={onActivate(() => toggleDay(day.id))}
                 className={cn(
-                    "cursor-pointer h-10 px-4 flex items-center justify-center rounded-xl text-[10px] font-black uppercase tracking-widest transition-all select-none border-2",
+                    "cursor-pointer h-10 px-4 flex items-center justify-center rounded-xl text-xs font-medium transition-all select-none border-2",
                     selectedDays.includes(day.id)
                     ? "bg-primary text-primary-foreground border-primary shadow-md scale-105"
                     : "bg-muted/30 text-muted-foreground border-transparent hover:border-primary/30"
@@ -139,7 +139,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
 
         {/* Descrição */}
         <div className="space-y-2 pb-2">
-            <Label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">Anotações Adicionais</Label>
+            <Label className="text-xs font-medium text-muted-foreground">Anotações Adicionais</Label>
             <Textarea name="description" defaultValue={item?.description || ""} rows={3} className="bg-muted/20 border-border/40 rounded-xl resize-none text-sm font-medium p-4 leading-relaxed" placeholder="Metas ou checklists da rotina..." />
         </div>
       </div>
@@ -157,12 +157,12 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
             <AlertDialogContent className="rounded-[2.5rem] border-border/40 shadow-2xl p-8 max-w-sm fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[110]">
               <AlertDialogHeader className="items-center text-center">
                 <div className="h-14 w-14 bg-rose-500/10 text-rose-500 flex items-center justify-center rounded-2xl mb-4"><Trash2 className="h-6 w-6"/></div>
-                <AlertDialogTitle className="font-black uppercase tracking-tighter text-xl">Apagar Bloco?</AlertDialogTitle>
+                <AlertDialogTitle className="font-semibold text-xl">Apagar Bloco?</AlertDialogTitle>
                 <AlertDialogDescription className="text-xs font-medium">Isso removerá a atividade da sua rotina.</AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter className="mt-6 gap-2 sm:justify-center">
-                <AlertDialogCancel className="h-11 rounded-xl text-[10px] font-black uppercase tracking-widest m-0 flex-1">Cancelar</AlertDialogCancel>
-                <AlertDialogAction onClick={handleDelete} className="bg-rose-500 hover:bg-rose-600 text-white h-11 rounded-xl text-[10px] font-black uppercase tracking-widest flex-1">Excluir</AlertDialogAction>
+                <AlertDialogCancel className="h-11 rounded-xl text-xs font-medium m-0 flex-1">Cancelar</AlertDialogCancel>
+                <AlertDialogAction onClick={handleDelete} className="bg-rose-500 hover:bg-rose-600 text-white h-11 rounded-xl text-xs font-medium flex-1">Excluir</AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
@@ -171,10 +171,10 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
         )}
 
         <div className="flex gap-2 flex-1 justify-end">
-          <Button type="button" variant="ghost" onClick={onClose} className="h-12 px-6 rounded-xl text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:bg-muted hidden sm:flex">
+          <Button type="button" variant="ghost" onClick={onClose} className="h-12 px-6 rounded-xl text-xs font-medium text-muted-foreground hover:bg-muted hidden sm:flex">
             Cancelar
           </Button>
-          <Button type="submit" disabled={isLoading} className="h-12 w-full sm:w-auto px-8 rounded-xl bg-foreground text-background hover:bg-primary hover:text-white shadow-lg font-black uppercase tracking-widest text-[10px] transition-all active:scale-95">
+          <Button type="submit" disabled={isLoading} className="h-12 w-full sm:w-auto px-8 rounded-xl bg-foreground text-background hover:bg-primary hover:text-white shadow-lg font-medium text-xs transition-all active:scale-95">
             {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Gravar Dados"}
           </Button>
         </div>

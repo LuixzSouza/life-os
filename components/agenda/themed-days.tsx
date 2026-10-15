@@ -118,7 +118,7 @@ export function ThemedDays({ themedDays, weekday }: { themedDays: ThemedDayData[
             <span className="text-xs font-medium">Sem tema para {WEEKDAYS[weekday]}</span>
           </div>
         )}
-        <Button variant="ghost" size="sm" onClick={() => setOpen(true)} className="h-8 shrink-0 rounded-lg px-2.5 text-[10px] font-black uppercase tracking-wider text-muted-foreground hover:text-foreground">
+        <Button variant="ghost" size="sm" onClick={() => setOpen(true)} className="h-8 shrink-0 rounded-lg px-2.5 text-xs font-medium text-muted-foreground hover:text-foreground">
           <Palette className="mr-1.5 h-3.5 w-3.5" /> Temas
         </Button>
       </div>
@@ -139,14 +139,14 @@ export function ThemedDays({ themedDays, weekday }: { themedDays: ThemedDayData[
               return (
                 <div key={d} className="rounded-2xl border border-border/40 bg-muted/10 p-3">
                   <div className="mb-2 flex items-center justify-between">
-                    <span className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">{WEEKDAYS[d]}</span>
+                    <span className="text-[11px] font-medium text-muted-foreground">{WEEKDAYS[d]}</span>
                     <div className="flex items-center gap-1.5">
                       {hasTheme && (
                         <Button variant="ghost" size="icon" aria-label="Limpar dia" onClick={() => clearDay(d)} disabled={saving} className="h-9 w-9 md:h-7 md:w-7 text-muted-foreground hover:text-rose-500">
                           <Trash2 className="h-3.5 w-3.5" />
                         </Button>
                       )}
-                      <Button size="sm" onClick={() => saveDay(d)} disabled={saving} className="h-7 rounded-lg px-3 text-[10px] font-black uppercase tracking-wider">
+                      <Button size="sm" onClick={() => saveDay(d)} disabled={saving} className="h-7 rounded-lg px-3 text-xs font-medium">
                         {saving ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <><Check className="mr-1 h-3.5 w-3.5" /> Salvar</>}
                       </Button>
                     </div>
