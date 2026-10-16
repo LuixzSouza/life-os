@@ -126,7 +126,7 @@ export function RestoreBackupForm() {
                         </>
                     ) : (
                         <>
-                            <ShieldCheck className="mr-2 h-4 w-4" /> Validar Backup
+                            <ShieldCheck className="mr-2 h-4 w-4" /> Validar backup
                         </>
                     )}
                 </Button>
@@ -141,7 +141,7 @@ export function RestoreBackupForm() {
                         </>
                     ) : (
                         <>
-                            <Upload className="mr-2 h-4 w-4" /> Iniciar Restauração
+                            <Upload className="mr-2 h-4 w-4" /> Iniciar restauração
                         </>
                     )}
                 </Button>
@@ -200,7 +200,7 @@ export function FactoryResetButton() {
             <AlertDialogContent className="border-destructive/20">
                 <AlertDialogHeader>
                     <AlertDialogTitle className="flex items-center gap-2 text-destructive text-xl">
-                        <AlertTriangle className="h-6 w-6" /> Ação Irreversível
+                        <AlertTriangle className="h-6 w-6" /> Ação irreversível
                     </AlertDialogTitle>
                     
                     {/* ENVOLVE TUDO em um DIV para evitar o aninhamento inválido dentro do <p> nativo do Description */}
@@ -215,10 +215,10 @@ export function FactoryResetButton() {
                         
                         {/* Lista (UL): Renderizada aqui como irmão da Description P */}
                         <ul className="list-disc list-inside bg-destructive/5 p-3 rounded-lg text-destructive font-medium text-sm space-y-1 border border-destructive/10">
-                            <li>Projetos e Tarefas</li>
-                            <li>Transações Financeiras</li>
+                            <li>Projetos e tarefas</li>
+                            <li>Transações financeiras</li>
                             <li>Histórico de Estudos e IA</li>
-                            <li>Configurações Personalizadas</li>
+                            <li>Configurações personalizadas</li>
                         </ul>
                         
                         {/* Texto 2: Confirmação de digitação */}

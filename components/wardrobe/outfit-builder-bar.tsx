@@ -18,7 +18,7 @@ export function OutfitBuilderBar({ outfitBuilder, onToggleItem, onCancel, onWear
       <div className="flex items-center gap-3 w-full xl:w-auto shrink-0">
         <div className="p-3 bg-primary/10 rounded-2xl"><Wand2 className="h-6 w-6 text-primary" /></div>
         <div>
-          <h3 className="text-base font-bold text-primary">Montando Look do Dia</h3>
+          <h3 className="text-base font-bold text-primary">Montando look do dia</h3>
           <p className="text-xs font-medium text-primary/60">Selecione até 5 peças abaixo</p>
         </div>
       </div>
@@ -47,7 +47,7 @@ export function OutfitBuilderBar({ outfitBuilder, onToggleItem, onCancel, onWear
 
       <div className="flex gap-2 w-full xl:w-auto shrink-0">
         <Button variant="ghost" onClick={onCancel} className="text-muted-foreground w-full xl:w-auto hover:bg-destructive/10 hover:text-destructive">Cancelar</Button>
-        <Button disabled={outfitBuilder.length === 0} onClick={onWear} className="bg-primary shadow-lg shadow-primary/20 w-full xl:w-auto">Usar Look</Button>
+        <Button disabled={outfitBuilder.length === 0} onClick={onWear} className="bg-primary shadow-lg shadow-primary/20 w-full xl:w-auto">Usar look</Button>
       </div>
     </div>
   );

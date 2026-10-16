@@ -45,7 +45,7 @@ export function InvestmentDashboard({ initialMarketData, positions, totals, teso
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <SummaryCard 
                     icon={Target}
-                    title="Meta do Perfil"
+                    title="Meta do perfil"
                     value={`${selectedRate.toFixed(2)}%`}
                     subtitle="a.a. estimado"
                     theme="primary"
@@ -102,7 +102,7 @@ export function InvestmentDashboard({ initialMarketData, positions, totals, teso
                         <section className="bg-card p-6 md:p-8 rounded-2xl border border-border/40 shadow-sm">
                             <h3 className="text-xs font-medium text-muted-foreground mb-6 flex items-center gap-2">
                                 <div className="h-5 w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs">1</div>
-                                Defina seu Perfil de Risco
+                                Defina seu perfil de risco
                             </h3>
                             <ProfileSelector currentProfile={profile} onSelect={setProfile} />
                         </section>
@@ -110,7 +110,7 @@ export function InvestmentDashboard({ initialMarketData, positions, totals, teso
                         <section className="bg-card p-6 md:p-8 rounded-2xl border border-border/40 shadow-sm">
                             <h3 className="text-xs font-medium text-muted-foreground mb-6 flex items-center gap-2">
                                 <div className="h-5 w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs">2</div>
-                                Simulação de Juros Compostos
+                                Simulação de juros compostos
                             </h3>
                             <InvestmentPlanner rate={selectedRate} />
                         </section>
@@ -121,7 +121,7 @@ export function InvestmentDashboard({ initialMarketData, positions, totals, teso
                 <TabsContent value="PRODUCTS" className="space-y-6 focus-visible:outline-none animate-in fade-in slide-in-from-bottom-4 duration-500">
                     <div className="bg-card border border-border/40 rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between shadow-sm">
                         <div className="space-y-2">
-                            <h3 className="text-2xl font-extrabold text-foreground">Calculadora de Renda Fixa</h3>
+                            <h3 className="text-2xl font-extrabold text-foreground">Calculadora de renda fixa</h3>
                             <p className="text-muted-foreground max-w-2xl text-sm font-medium leading-relaxed">
                                 Descubra o que rende mais no seu bolso: produtos isentos de IR (como LCI/LCA) ou produtos tributados (como CDB/LC) que oferecem taxas brutas mais altas.
                             </p>

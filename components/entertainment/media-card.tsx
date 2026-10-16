@@ -134,7 +134,7 @@ export function MediaCard({ item }: { item: MediaItemData }) {
                 </DropdownMenuRadioGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem className="text-destructive focus:bg-destructive/10 cursor-pointer text-xs font-medium" onClick={handleDelete}>
-                  <Trash2 className="h-3.5 w-3.5 mr-2" /> Remover da Biblioteca
+                  <Trash2 className="h-3.5 w-3.5 mr-2" /> Remover da biblioteca
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -244,7 +244,7 @@ export function MediaCard({ item }: { item: MediaItemData }) {
 
               {/* Avaliação e Review */}
               <form id={`review-form-${item.id}`} onSubmit={handleSaveDetails} className="space-y-4 pt-4 border-t border-border/40">
-                <h3 className="text-sm font-bold text-foreground">Sua Avaliação e Notas</h3>
+                <h3 className="text-sm font-bold text-foreground">Sua avaliação e notas</h3>
 
                 <div className="flex items-center gap-1 bg-muted/20 w-fit p-1 rounded-xl border border-border/40">
                   {[1, 2, 3, 4, 5].map((star) => (

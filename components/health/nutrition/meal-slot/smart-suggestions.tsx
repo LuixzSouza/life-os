@@ -18,7 +18,7 @@ export function SmartSuggestions({ goal, setGoal, onApply }: SmartSuggestionsPro
           <div className="p-1.5 rounded-md bg-gradient-to-br from-primary/10 to-primary/5">
             <Sparkles className="h-4 w-4 text-primary" />
           </div>
-          <Label className="text-sm font-semibold">Sugestões Inteligentes</Label>
+          <Label className="text-sm font-semibold">Sugestões inteligentes</Label>
         </div>
 
         <Select value={goal} onValueChange={(val) => setGoal(val as GoalType)}>
@@ -29,13 +29,13 @@ export function SmartSuggestions({ goal, setGoal, onApply }: SmartSuggestionsPro
             <SelectItem value="LOSE_WEIGHT" className="cursor-pointer">
               <div className="flex items-center gap-2">
                 <span>🔥</span>
-                <span>Perder Peso</span>
+                <span>Perder peso</span>
               </div>
             </SelectItem>
             <SelectItem value="GAIN_MUSCLE" className="cursor-pointer">
               <div className="flex items-center gap-2">
                 <span>💪</span>
-                <span>Ganhar Massa</span>
+                <span>Ganhar massa</span>
               </div>
             </SelectItem>
           </SelectContent>

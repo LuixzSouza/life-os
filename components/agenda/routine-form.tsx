@@ -75,7 +75,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
 
         {/* Atividade */}
         <div className="space-y-2">
-            <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">Identificação da Atividade</Label>
+            <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">Identificação da atividade</Label>
             <Input name="title" defaultValue={item?.title} placeholder="Ex: Leitura Focada, Academia..." className="focus-visible:ring-primary/30 font-bold text-base" required />
         </div>
 
@@ -97,7 +97,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
 
         {/* Categoria */}
         <div className="space-y-2">
-            <Label className="text-xs font-medium text-muted-foreground">Categoria Tática</Label>
+            <Label className="text-xs font-medium text-muted-foreground">Categoria tática</Label>
             <Select name="category" defaultValue={item?.category || "study"}>
             <SelectTrigger className="font-bold text-sm">
                 <SelectValue />
@@ -139,7 +139,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
 
         {/* Descrição */}
         <div className="space-y-2 pb-2">
-            <Label className="text-xs font-medium text-muted-foreground">Anotações Adicionais</Label>
+            <Label className="text-xs font-medium text-muted-foreground">Anotações adicionais</Label>
             <Textarea name="description" defaultValue={item?.description || ""} rows={3} className="resize-none text-sm font-medium p-4 leading-relaxed" placeholder="Metas ou checklists da rotina..." />
         </div>
       </div>
@@ -174,7 +174,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
           <Button type="button" variant="ghost" onClick={onClose} className="h-10 px-6 text-xs font-medium text-muted-foreground hover:bg-muted hidden sm:flex">
             Cancelar
           </Button>
-          <Button type="submit" disabled={isLoading} className="h-10 w-full sm:w-auto px-8 bg-foreground text-background hover:bg-primary hover:text-white shadow-lg font-medium text-xs transition-all active:scale-95">
+          <Button type="submit" disabled={isLoading} className="h-10 w-full sm:w-auto px-8 font-medium text-xs transition-all active:scale-95">
             {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Gravar Dados"}
           </Button>
         </div>

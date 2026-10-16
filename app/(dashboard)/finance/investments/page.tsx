@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, LineChart, Sparkles } from "lucide-react";
+import { LineChart, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { InvestmentDashboard } from "@/components/finance/investment/investment-dashboard";
 import { getMarketOverview } from "@/lib/market-service";
@@ -39,23 +39,20 @@ export default async function InvestmentsPage() {
       <div className="absolute left-0 top-0 -z-10 h-[600px] w-[600px] rounded-full bg-primary/5 blur-[120px]" />
 
       <PageHeader
-        className="bg-transparent backdrop-blur-sm"
+        backHref="/finance"
+        backLabel="Voltar para Finanças"
         icon={<LineChart className="h-6 w-6" />}
-        title="Central de Investimentos"
+        title="Central de investimentos"
         description="Simule e planeje o crescimento do seu patrimônio."
         actions={
-          <div className="hidden items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-xs font-medium text-primary shadow-sm md:flex">
-            <Sparkles className="h-4 w-4" />
-            <span>Dados de Mercado Ao Vivo</span>
-          </div>
-        }
-      >
-        <Link href="/finance" className="w-fit">
-          <Button variant="ghost" size="sm" className="-ml-2 gap-1 pl-2 text-muted-foreground hover:text-foreground">
-            <ChevronLeft className="h-4 w-4" /> Voltar para Finanças
+          // Antes era uma pílula decorativa que parecia botão e não fazia nada.
+          <Button asChild variant="outline" size="sm" className="gap-2">
+            <Link href="/finance/market">
+              <Sparkles className="h-4 w-4" /> Mercado ao vivo
+            </Link>
           </Button>
-        </Link>
-      </PageHeader>
+        }
+      />
 
       <PageContainer className="space-y-10">
         <InvestmentDashboard initialMarketData={marketData} positions={positions} totals={totals} tesouro={tesouro} />

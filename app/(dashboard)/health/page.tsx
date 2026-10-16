@@ -70,10 +70,10 @@ export default async function HealthPage() {
 
                     {/* --- GRID 1: MÉTRICAS RÁPIDAS (Overview Diário) --- */}
                     <section className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-                        <HealthStatCard label="Peso Atual" value={weight} unit="kg" icon={Target} color="zinc" />
-                        <HealthStatCard label="Água Hoje" value={waterTotal} unit="ml" icon={Droplets} color="blue" />
+                        <HealthStatCard label="Peso atual" value={weight} unit="kg" icon={Target} color="zinc" />
+                        <HealthStatCard label="Água hoje" value={waterTotal} unit="ml" icon={Droplets} color="blue" />
                         <HealthStatCard label="Sono" value={lastSleep?.value || 0} unit="hrs" icon={Moon} color="indigo" />
-                        <HealthStatCard label="Refeições Hoje" value={meals.length} unit="logs" icon={Utensils} color="emerald" />
+                        <HealthStatCard label="Refeições hoje" value={meals.length} unit="logs" icon={Utensils} color="emerald" />
                     </section>
 
                     {/* --- GRID 2: CONTEÚDO PRINCIPAL (Layout 2/3 e 1/3) --- */}
@@ -102,7 +102,7 @@ export default async function HealthPage() {
                             </div>
 
                             <div className="space-y-4">
-                                <SectionHeader icon={Dumbbell} title="Últimos Treinos" />
+                                <SectionHeader icon={Dumbbell} title="Últimos treinos" />
                                 <div className="border border-border/40 rounded-2xl overflow-hidden bg-card/50 shadow-sm">
                                     <ActivityFeed initialWorkouts={workouts} />
                                 </div>
@@ -115,7 +115,7 @@ export default async function HealthPage() {
                             <SleepCard value={lastSleep?.value || 0} />
                             
                             <div className="space-y-4 pt-2">
-                                <SectionHeader icon={Utensils} title="Diário Nutricional" />
+                                <SectionHeader icon={Utensils} title="Diário nutricional" />
                                 <div className="border border-border/40 rounded-2xl overflow-hidden bg-card/50 shadow-sm">
                                     <FoodLogger meals={meals} />
                                 </div>

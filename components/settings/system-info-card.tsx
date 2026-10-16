@@ -31,7 +31,7 @@ export function SystemInfoCard({ info }: { info: SystemInfo }) {
             <CardHeader className="pb-3 border-b border-border/40 bg-muted/10">
                 <CardTitle className="text-sm font-semibold flex items-center gap-2">
                     <Activity className="h-4 w-4 text-primary" />
-                    Status do Ambiente
+                    Status do ambiente
                 </CardTitle>
                 <CardDescription className="text-xs truncate">
                     Informações do servidor Node.js.
@@ -85,7 +85,7 @@ export function SystemInfoCard({ info }: { info: SystemInfo }) {
                     {/* OS */}
                     <div className="p-2.5 rounded-lg border border-border/50 bg-background/50 space-y-1 col-span-2">
                         <p className="text-[10px] text-muted-foreground flex items-center gap-1.5 uppercase font-semibold">
-                            <Cpu className="h-3 w-3" /> Sistema Operacional
+                            <Cpu className="h-3 w-3" /> Sistema operacional
                         </p>
                         <p className="text-xs font-medium capitalize truncate" title={info.platform}>
                             {info.platform}

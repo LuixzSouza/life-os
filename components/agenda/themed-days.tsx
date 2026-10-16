@@ -128,7 +128,7 @@ export function ThemedDays({ themedDays, weekday }: { themedDays: ThemedDayData[
         <DialogContent size="lg">
           <DialogHeader
             icon={<Palette className="h-5 w-5" />}
-            title="Dias Temáticos"
+            title="Dias temáticos"
             description="Dê uma identidade a cada dia da semana"
           />
           <DialogBody className="space-y-2.5">

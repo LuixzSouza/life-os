@@ -98,7 +98,7 @@ const SoftSkills = ({ data, onChange }: SkillsFormProps) => {
         <div className="h-6 w-6 rounded-md bg-primary/10 flex items-center justify-center text-primary">
           <Heart className="h-3 w-3" />
         </div>
-        <Label className="text-xs font-medium text-muted-foreground">Soft Skills</Label>
+        <Label className="text-xs font-medium text-muted-foreground">Soft skills</Label>
       </div>
       <div className="flex gap-2">
         <Input
@@ -156,8 +156,8 @@ export function SkillsForm({ data, onChange }: SkillsFormProps) {
 
   return (
     <div className="space-y-6">
-      <SkillCategory title="Linguagens de Programação" category="languages" data={data} onAdd={addSkill} onRemove={removeSkill} onUpdate={updateSkill} />
-      <SkillCategory title="Frameworks & Bibliotecas" category="frameworks" data={data} onAdd={addSkill} onRemove={removeSkill} onUpdate={updateSkill} />
+      <SkillCategory title="Linguagens de programação" category="languages" data={data} onAdd={addSkill} onRemove={removeSkill} onUpdate={updateSkill} />
+      <SkillCategory title="Frameworks & bibliotecas" category="frameworks" data={data} onAdd={addSkill} onRemove={removeSkill} onUpdate={updateSkill} />
       <SkillCategory title="Ferramentas & DevOps" category="tools" data={data} onAdd={addSkill} onRemove={removeSkill} onUpdate={updateSkill} />
       <SoftSkills data={data} onChange={onChange} />
     </div>

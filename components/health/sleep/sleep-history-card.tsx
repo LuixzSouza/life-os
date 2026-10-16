@@ -30,7 +30,7 @@ export function SleepHistoryCard({ data, onDelete }: SleepHistoryCardProps) {
     <Card className="flex-1 flex flex-col overflow-hidden">
       <CardHeader className="pb-3 border-b border-border/40 bg-muted/20">
         <CardTitle className="eyebrow text-muted-foreground">
-          Histórico Recente
+          Histórico recente
         </CardTitle>
       </CardHeader>
       <ScrollArea className="flex-1 min-h-0">

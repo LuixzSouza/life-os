@@ -104,7 +104,7 @@ export default async function CMSPage() {
 
                 <CardFooter className="p-0 border-t border-border/40 bg-muted/5">
                   <Link href={`/cms/${site.id}`} className="w-full flex items-center justify-center gap-2 p-3 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted/20 transition-colors">
-                    Abrir Editor <ArrowRight className="h-3.5 w-3.5" />
+                    Abrir editor <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </CardFooter>
 

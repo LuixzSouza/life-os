@@ -51,7 +51,7 @@ export default function Error({
           <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
             <Link href="/dashboard">
               <Home className="size-4" />
-              Voltar ao Dashboard
+              Voltar ao dashboard
             </Link>
           </Button>
         </div>

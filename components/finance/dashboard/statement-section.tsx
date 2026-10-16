@@ -25,7 +25,7 @@ export function StatementSection({ transactions, recurring, totalRecurring, acco
           <div className="flex items-center justify-between">
             <h3 className="text-xl font-extrabold text-foreground flex items-center gap-3">
               <div className="p-2 bg-foreground/5 rounded-xl"><Receipt className="h-5 w-5 text-primary" /></div>
-              Histórico Recente
+              Histórico recente
             </h3>
             <Link href="/finance/transactions">
               <Button variant="ghost" size="sm" className="h-9 px-4 gap-2 text-muted-foreground hover:text-primary hover:bg-primary/5 font-bold group transition-all">
@@ -55,7 +55,7 @@ export function StatementSection({ transactions, recurring, totalRecurring, acco
           <div className="flex items-center justify-between">
             <h3 className="text-xl font-extrabold text-foreground flex items-center gap-3">
               <div className="p-2 bg-orange-500/10 rounded-xl"><AlertCircle className="h-5 w-5 text-orange-500" /></div>
-              Custos Fixos
+              Custos fixos
             </h3>
             <RecurringDialog trigger={
               <Button variant="outline" size="icon" aria-label="Adicionar custo fixo" className="h-9 w-9 hover:bg-primary/10 hover:text-primary transition-all active:scale-95 border-border/50 shadow-sm">
@@ -77,7 +77,7 @@ export function StatementSection({ transactions, recurring, totalRecurring, acco
                   <RecurringDialog
                     trigger={
                       <Button variant="outline" className="h-10 px-6 font-bold shadow-sm transition-all active:scale-95 bg-background">
-                        Adicionar Fixo
+                        Adicionar fixo
                       </Button>
                     }
                   />

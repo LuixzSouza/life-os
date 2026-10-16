@@ -20,7 +20,7 @@ export function RandomPickDialog({ item, onClose, onReroll }: RandomPickDialogPr
         <div className="bg-gradient-to-b from-primary/10 to-background p-8 pt-10 relative">
             <div className="absolute top-4 right-4 text-primary opacity-50"><Sparkles className="h-6 w-6"/></div>
             <DialogHeader>
-              <DialogTitle className="flex flex-col items-center gap-2 text-2xl font-bold">Sua Sessão de Hoje</DialogTitle>
+              <DialogTitle className="flex flex-col items-center gap-2 text-2xl font-bold">Sua sessão de hoje</DialogTitle>
               <DialogDescription className="text-muted-foreground">O destino escolheu esta obra para você.</DialogDescription>
             </DialogHeader>
 

@@ -13,7 +13,7 @@ export function IngredientList({ ingredients, onUpdateAmount, onRemove }: Ingred
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <Label className="text-sm font-semibold">Ingredientes Adicionados</Label>
+        <Label className="text-sm font-semibold">Ingredientes adicionados</Label>
         <span className="text-xs text-muted-foreground">
           {ingredients.length} item{ingredients.length !== 1 ? 's' : ''}
         </span>

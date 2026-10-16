@@ -185,8 +185,8 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button className="bg-foreground text-background hover:bg-foreground/90 shadow-md gap-2 font-semibold h-10 px-4">
-          <Plus className="h-4 w-4" /> Buscar Obras
+        <Button className="gap-2 font-semibold h-10 px-4">
+          <Plus className="h-4 w-4" /> Buscar obras
         </Button>
       </DialogTrigger>
 
@@ -194,7 +194,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
         {/* CABEÇALHO fixo (título + abas + busca) — um único bloco, sem borda dupla. */}
         <div className="shrink-0 border-b border-border/40 bg-muted/10 px-6 pt-6 pb-4">
           <DialogHeader className="border-0 bg-transparent p-0">
-            <DialogTitle className="text-xl">Explorar Catálogo</DialogTitle>
+            <DialogTitle className="text-xl">Explorar catálogo</DialogTitle>
             <DialogDescription>Busque na base global (TMDB, RAWG, Google Books, iTunes).</DialogDescription>
           </DialogHeader>
 

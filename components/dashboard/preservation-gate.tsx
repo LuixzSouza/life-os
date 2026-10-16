@@ -54,7 +54,7 @@ export function PreservationGate({ lowEnergy, children }: { lowEnergy: boolean; 
             <BatteryLow className="h-4 w-4" />
           </div>
           <div>
-            <p className="text-sm font-bold text-foreground">Modo de Preservação ativo</p>
+            <p className="text-sm font-bold text-foreground">Modo de preservação ativo</p>
             <p className="mt-0.5 max-w-md text-[11px] leading-relaxed text-muted-foreground">
               Sua energia hoje está baixa — escondi os painéis de análise para poupar decisões.
               Foque no básico: água, um micro-passo de 2 minutos e descanso. Os dados continuam sendo coletados.

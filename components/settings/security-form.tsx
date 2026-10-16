@@ -220,7 +220,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
                 <div className="h-1 w-full bg-destructive" /> 
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-foreground text-base">
-                        <ShieldCheck className="h-5 w-5 text-destructive" /> Credenciais de Acesso
+                        <ShieldCheck className="h-5 w-5 text-destructive" /> Credenciais de acesso
                     </CardTitle>
                     <CardDescription>Gerencie a senha mestra que protege todo o sistema.</CardDescription>
                 </CardHeader>
@@ -230,7 +230,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
                         <div className="p-3 bg-destructive/5 rounded-lg border border-destructive/10 flex gap-3 items-start">
                             <AlertTriangle className="h-4 w-4 text-destructive shrink-0 mt-0.5" />
                             <div className="text-xs text-muted-foreground">
-                                <span className="font-bold text-destructive block mb-0.5">Zona de Risco</span>
+                                <span className="font-bold text-destructive block mb-0.5">Zona de risco</span>
                                 Exige sua senha atual. Ao trocar, você será desconectado e precisará
                                 entrar novamente com a nova senha.
                             </div>
@@ -238,7 +238,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
 
                         {/* Senha atual (obrigatória) */}
                         <div className="space-y-2">
-                            <Label htmlFor="currentPassword">Senha Atual</Label>
+                            <Label htmlFor="currentPassword">Senha atual</Label>
                             <div className="relative">
                                 <Lock className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
                                 <Input
@@ -257,7 +257,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
 
                         <div className="grid gap-4 md:grid-cols-2">
                             <div className="space-y-2">
-                                <Label htmlFor="newPassword">Nova Senha</Label>
+                                <Label htmlFor="newPassword">Nova senha</Label>
                                 <div className="relative">
                                     <Lock className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
                                     <Input 
@@ -302,7 +302,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
                             </div>
 
                             <div className="space-y-2">
-                                <Label htmlFor="confirmPassword">Confirmar Senha</Label>
+                                <Label htmlFor="confirmPassword">Confirmar senha</Label>
                                 <div className="relative">
                                     <Lock className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
                                     <Input 
@@ -333,7 +333,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
             <Card>
                 <CardHeader className="pb-3">
                     <CardTitle className="text-base font-medium flex items-center gap-2">
-                        <Lock className="h-4 w-4 text-primary" /> Privacidade & Bloqueio
+                        <Lock className="h-4 w-4 text-primary" /> Privacidade & bloqueio
                     </CardTitle>
                     <CardDescription>Comportamento do sistema quando você está ausente.</CardDescription>
                 </CardHeader>
@@ -346,7 +346,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
                                 <Clock className="h-4 w-4 text-muted-foreground" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium leading-none">Bloqueio Automático</p>
+                                <p className="text-sm font-medium leading-none">Bloqueio automático</p>
                                 <p className="text-xs text-muted-foreground mt-1">
                                     Tempo de inatividade até exigir senha novamente.
                                 </p>
@@ -409,7 +409,7 @@ export function SecurityForm({ initialAutoLock = 15, initialPrivacyMode = false,
             <Card>
                 <CardHeader className="pb-3">
                     <CardTitle className="text-base font-medium flex items-center gap-2">
-                        <UserPlus className="h-4 w-4 text-primary" /> Acesso ao Sistema
+                        <UserPlus className="h-4 w-4 text-primary" /> Acesso ao sistema
                     </CardTitle>
                     <CardDescription>Controle quem pode criar conta nesta instância.</CardDescription>
                 </CardHeader>

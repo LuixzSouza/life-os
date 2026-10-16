@@ -80,7 +80,7 @@ export function MigrateToReplicaCard() {
         </div>
         <div className="grid gap-1.5">
           <Label htmlFor="migrateToken" className="text-[11px] font-semibold uppercase text-muted-foreground">
-            Token de Autenticação
+            Token de autenticação
           </Label>
           <Input
             id="migrateToken"

@@ -214,10 +214,10 @@ export default async function SettingsPage({
                 <div className="overflow-x-auto scrollbar-hide border-b border-border/60">
                     <TabsList className="bg-transparent h-11 p-0 gap-6 w-full justify-start min-w-max rounded-none">
                     {[
-                        { value: "profile", icon: User, label: "Perfil & Aparência" },
-                        { value: "intelligence", icon: BrainCircuit, label: "Inteligência Artificial" },
+                        { value: "profile", icon: User, label: "Perfil & aparência" },
+                        { value: "intelligence", icon: BrainCircuit, label: "Inteligência artificial" },
                         { value: "integrations", icon: Plug, label: "Integrações & APIs" }, 
-                        { value: "system", icon: Database, label: "Dados & Sistema" },
+                        { value: "system", icon: Database, label: "Dados & sistema" },
                         { value: "security", icon: Shield, label: "Segurança" },
                     ].map((tab) => (
                         <TabsTrigger 
@@ -284,7 +284,7 @@ export default async function SettingsPage({
                     {dbStatus.mode !== "cloud" && (
                         <div className="grid gap-6 md:grid-cols-12 pt-6 border-t border-border">
                             <div className="md:col-span-4">
-                                <h3 className="text-lg font-medium text-foreground">Acesso Remoto</h3>
+                                <h3 className="text-lg font-medium text-foreground">Acesso remoto</h3>
                                 <p className="text-sm text-muted-foreground">
                                     Use o Life OS no celular mantendo os dados no seu computador.
                                 </p>
@@ -330,7 +330,7 @@ export default async function SettingsPage({
                     {/* D. Migração (Exportar/Importar JSON) */}
                     <div className="grid gap-6 md:grid-cols-12 pt-6 border-t border-border">
                         <div className="md:col-span-4">
-                            <h3 className="text-lg font-medium text-foreground">Migração de Dados</h3>
+                            <h3 className="text-lg font-medium text-foreground">Migração de dados</h3>
                             <p className="text-sm text-muted-foreground">
                                 Exporte partes específicas ou transfira dados via arquivo JSON.
                             </p>
@@ -356,7 +356,7 @@ export default async function SettingsPage({
                     {/* E. Zona de Perigo */}
                     <div className="grid gap-6 md:grid-cols-12 pt-6 border-t border-border">
                         <div className="md:col-span-4">
-                            <h3 className="text-lg font-medium text-destructive">Zona de Perigo</h3>
+                            <h3 className="text-lg font-medium text-destructive">Zona de perigo</h3>
                             <p className="text-sm text-muted-foreground">
                                 Apague conjuntos específicos de dados ou zere o sistema inteiro.
                             </p>
@@ -369,7 +369,7 @@ export default async function SettingsPage({
                             <Card className="border border-destructive/30 bg-destructive/5">
                                 <CardContent className="p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                                     <div>
-                                        <h4 className="text-sm font-bold text-destructive">Reset de Fábrica</h4>
+                                        <h4 className="text-sm font-bold text-destructive">Reset de fábrica</h4>
                                         <p className="text-xs text-muted-foreground">Apaga TUDO. Irreversível.</p>
                                     </div>
                                     <FactoryResetButton />
@@ -467,7 +467,7 @@ export default async function SettingsPage({
                 <TabsContent value="integrations" className="space-y-6 focus-visible:outline-none">
                     <div className="grid gap-6 md:grid-cols-12">
                         <div className="md:col-span-4">
-                            <h3 className="text-lg font-medium text-foreground">Chaves de Serviço</h3>
+                            <h3 className="text-lg font-medium text-foreground">Chaves de serviço</h3>
                             <p className="text-sm text-muted-foreground">Conecte serviços externos.</p>
                         </div>
                         <div className="md:col-span-8">

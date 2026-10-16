@@ -51,7 +51,7 @@ export function SortSelect({ sortBy, slug }: SortSelectProps) {
                 <SelectContent className="rounded-2xl p-1.5 border-border/40 shadow-xl backdrop-blur-xl">
                     <SortItem value="priority" label="Prioridade" icon={Flag} />
                     <SortItem value="dueDate" label="Vencimento" icon={Calendar} />
-                    <SortItem value="createdAt" label="Data de Criação" icon={Clock} />
+                    <SortItem value="createdAt" label="Data de criação" icon={Clock} />
                     <SortItem value="title" label="Título (A-Z)" icon={AlignLeft} />
                 </SelectContent>
             </Select>

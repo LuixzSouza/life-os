@@ -64,7 +64,7 @@ export function CleaningRotationDialog({ open, onClose }: CleaningRotationDialog
         <DialogHeader
           icon={<BrushCleaning />}
           iconClassName="bg-amber-500/10 text-amber-500 border-amber-500/20"
-          title="Limpeza Programada"
+          title="Limpeza programada"
           description="Um pedaço da casa por dia, em rodízio"
         />
 

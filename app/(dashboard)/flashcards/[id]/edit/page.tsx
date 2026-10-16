@@ -103,7 +103,7 @@ export default async function DeckEditPage({ params }: DeckEditPageProps) {
             <Link href={`/flashcards/${deck.id}/study`}>
               <Button className="gap-2 font-bold shadow-lg shadow-primary/20 transition-transform hover:scale-[1.02]">
                 <PlayCircle className="h-5 w-5 fill-current" />
-                Estudar Agora
+                Estudar agora
               </Button>
             </Link>
           )
@@ -112,7 +112,7 @@ export default async function DeckEditPage({ params }: DeckEditPageProps) {
         <Link href="/flashcards" className="w-fit">
           <Button variant="ghost" size="sm" className="-ml-2 text-muted-foreground hover:text-primary">
             <ArrowLeft className="mr-1 h-4 w-4" />
-            Voltar para Biblioteca
+            Voltar para biblioteca
           </Button>
         </Link>
       </PageHeader>
@@ -132,7 +132,7 @@ export default async function DeckEditPage({ params }: DeckEditPageProps) {
                     <CardHeader className="pb-4 border-b border-border/40 bg-muted/20">
                         <CardTitle className="flex items-center gap-2 text-lg">
                             <Plus className="h-5 w-5 text-primary" />
-                            Novo Cartão
+                            Novo cartão
                         </CardTitle>
                     </CardHeader>
                     
@@ -148,7 +148,7 @@ export default async function DeckEditPage({ params }: DeckEditPageProps) {
                                 <Sparkles className="h-5 w-5 text-blue-500" />
                             </div>
                             <div className="space-y-1">
-                                <h4 className="font-semibold text-sm text-blue-700 dark:text-blue-300">Dica de Ouro</h4>
+                                <h4 className="font-semibold text-sm text-blue-700 dark:text-blue-300">Dica de ouro</h4>
                                 <p className="text-xs text-blue-600/80 dark:text-blue-400/80 leading-relaxed">
                                     Mantenha os cartões simples. Um conceito por cartão facilita a memorização ativa e torna a revisão mais eficiente.
                                 </p>
@@ -163,7 +163,7 @@ export default async function DeckEditPage({ params }: DeckEditPageProps) {
                 <div className="flex items-center justify-between pb-2 border-b border-border/40">
                     <h3 className="text-lg font-bold flex items-center gap-2">
                         <Layers className="h-5 w-5 text-primary" />
-                        Cartões do Baralho
+                        Cartões do baralho
                     </h3>
                     <Badge variant="secondary" className="px-3">
                         Total: {deck.cards.length}

@@ -82,7 +82,7 @@ export function TaskList({ tasks, total }: { tasks: TaskWithProject[]; total: nu
             <CheckSquare className="h-5 w-5" />
           </div>
           <div>
-            <h3 className="font-semibold text-foreground text-lg leading-none">Foco do Dia</h3>
+            <h3 className="font-semibold text-foreground text-lg leading-none">Foco do dia</h3>
             <p className="eyebrow text-muted-foreground mt-1">Tarefas ativas por prioridade</p>
           </div>
         </div>

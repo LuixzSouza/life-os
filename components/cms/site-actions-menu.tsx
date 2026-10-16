@@ -61,7 +61,7 @@ export function SiteActionsMenu({ site }: { site: { id: string; name: string; ur
             <Edit2 className="h-3.5 w-3.5" /> Editar Configurações
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => setIsDeleteDialogOpen(true)} className="gap-2 text-xs font-bold text-rose-500 focus:text-rose-500 focus:bg-rose-500/10 cursor-pointer">
-            <Trash2 className="h-3.5 w-3.5" /> Excluir Container
+            <Trash2 className="h-3.5 w-3.5" /> Excluir container
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

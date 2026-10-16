@@ -60,7 +60,7 @@ export function SelectiveExport() {
         <Card className="h-full">
             <CardHeader className="pb-3">
                 <CardTitle className="text-base flex items-center gap-2">
-                    <Download className="h-4 w-4 text-primary" /> Exportação Avançada
+                    <Download className="h-4 w-4 text-primary" /> Exportação avançada
                 </CardTitle>
                 <CardDescription>
                     Escolha exatamente quais dados você deseja extrair do sistema.

@@ -169,7 +169,7 @@ export function MusicButton({ className }: { className?: string }) {
                   : "bg-emerald-500 text-white hover:bg-emerald-600",
               )}
             >
-              <Music className="h-4 w-4" /> Playlist Beast Mode
+              <Music className="h-4 w-4" /> Playlist beast mode
             </button>
             <button
               type="button"

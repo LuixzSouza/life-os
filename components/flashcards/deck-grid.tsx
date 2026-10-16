@@ -48,7 +48,7 @@ export function DeckGrid({ decks, subjects = [] }: DeckGridProps) {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
             <h2 className="text-2xl font-extrabold flex items-center gap-2">
-                Meus Baralhos
+                Meus baralhos
             </h2>
             <p className="text-sm text-muted-foreground mt-1">
                 {decks.length} coleção{decks.length !== 1 && "ões"} criadas. Organize e estude!

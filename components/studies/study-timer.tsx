@@ -115,7 +115,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
             <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-1 space-y-6">
                     <div>
-                        <h2 className="text-2xl font-bold tracking-tight mb-1">Sala de Preparação</h2>
+                        <h2 className="text-2xl font-bold tracking-tight mb-1">Sala de preparação</h2>
                         <p className="text-sm text-muted-foreground">Escolha a matéria, ajuste o ambiente e entre no modo foco profundo.</p>
                     </div>
 
@@ -135,7 +135,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
                         onClick={() => selectedSubjectId ? setIsFocusModeOpen(true) : toast.error("Selecione uma matéria primeiro!")}
                         className="w-full h-14 text-lg font-bold shadow-lg shadow-primary/20 bg-primary hover:bg-primary/90 transition-all active:scale-[0.98]"
                     >
-                        <Play className="h-5 w-5 mr-2" /> Iniciar Modo Foco
+                        <Play className="h-5 w-5 mr-2" /> Iniciar modo foco
                     </Button>
                 </div>
 
@@ -166,7 +166,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
 
                     <div className="bg-amber-500/10 border border-amber-500/20 p-4 rounded-xl relative overflow-hidden">
                         <div className="flex gap-2 items-center text-amber-600 dark:text-amber-400 font-bold text-xs mb-2">
-                            <Lightbulb className="h-3.5 w-3.5 animate-pulse" /> Dica de Produtividade
+                            <Lightbulb className="h-3.5 w-3.5 animate-pulse" /> Dica de produtividade
                         </div>
                         <p className="text-xs text-amber-700/80 dark:text-amber-500/80 leading-relaxed italic animate-in fade-in duration-700 key={activeTip}">
                             &quot;{activeTip}&quot;
@@ -177,7 +177,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
 
             {showSettings && (
                 <div className="mt-8 pt-6 border-t border-border/40 animate-in slide-in-from-top-4">
-                    <h3 className="text-sm font-bold mb-4 flex items-center gap-2"><Settings className="w-4 h-4"/> Configurações do Ambiente</h3>
+                    <h3 className="text-sm font-bold mb-4 flex items-center gap-2"><Settings className="w-4 h-4"/> Configurações do ambiente</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                         <div className="flex items-center justify-between p-3 border rounded-lg bg-muted/20">
                             <Label htmlFor="sound-switch" className="flex items-center gap-2 cursor-pointer text-[10px] md:text-xs font-semibold">
@@ -244,7 +244,7 @@ export function StudyTimer({ subjects }: { subjects: (StudySubject & { totalMinu
               </div>
 
               <div className="space-y-3">
-                <Label className="eyebrow text-muted-foreground">Tipo de Atividade</Label>
+                <Label className="eyebrow text-muted-foreground">Tipo de atividade</Label>
                 <Select value={sessionType} onValueChange={(v) => setSessionType(v as SessionType)}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>

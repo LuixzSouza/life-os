@@ -30,7 +30,7 @@ export function SleepInsightCard({ insights, goal }: { insights: SleepInsights; 
     <Card className="bg-gradient-to-br from-primary/5 to-transparent border-primary/20">
       <CardHeader className="pb-2">
         <CardTitle className="text-xs uppercase font-bold text-primary flex items-center gap-2">
-          <BrainCircuit className="h-4 w-4" /> Coach do Sono
+          <BrainCircuit className="h-4 w-4" /> Coach do sono
         </CardTitle>
       </CardHeader>
       <CardContent>

@@ -109,13 +109,13 @@ export function ProjectsExplorer({ projects, inbox }: { projects: ProjectItem[];
       <section className="space-y-3">
         <div className="flex items-center gap-2 px-1">
           <Inbox className="h-4 w-4 text-blue-500" />
-          <h2 className="text-sm font-semibold text-foreground">Caixa de Entrada</h2>
+          <h2 className="text-sm font-semibold text-foreground">Caixa de entrada</h2>
           <span className="text-xs text-muted-foreground">· captura rápida de ideias</span>
         </div>
         <ProjectCard
           id="inbox"
           slug="inbox"
-          title="Caixa de Entrada"
+          title="Caixa de entrada"
           description="Tudo o que ainda não foi organizado em um projeto específico."
           totalTasks={inbox.totalTasks}
           completedTasks={inbox.completedTasks}

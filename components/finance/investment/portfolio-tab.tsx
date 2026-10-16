@@ -78,7 +78,7 @@ export function PortfolioTab({ positions, totals }: PortfolioTabProps) {
       {/* HEADER + AÇÃO */}
       <div className="flex items-center justify-between gap-3">
         <h3 className="text-lg font-extrabold text-foreground flex items-center gap-2">
-          <Wallet className="h-5 w-5 text-primary" /> Minha Carteira
+          <Wallet className="h-5 w-5 text-primary" /> Minha carteira
         </h3>
         <Button onClick={openCreate} className="gap-2 font-bold shadow-lg shadow-primary/20">
           <Plus className="h-4 w-4" /> Adicionar ativo

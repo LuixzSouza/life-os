@@ -24,7 +24,7 @@ export function RoutineCard({ workStart, setWorkStart, workEnd, setWorkEnd, lang
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-base">
-          <Clock className="h-5 w-5 text-primary" /> Rotina & Idioma
+          <Clock className="h-5 w-5 text-primary" /> Rotina & idioma
         </CardTitle>
         <CardDescription>Horário de trabalho (usado na Agenda), lembrete de blocos e idioma.</CardDescription>
       </CardHeader>

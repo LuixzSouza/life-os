@@ -129,7 +129,7 @@ export function MealSlotForm({ dayIdx, type, existingSlot, onClose }: MealSlotFo
         {/* CABEÇALHO DO PRATO */}
         <div className="space-y-2">
           <Label className="text-sm font-semibold flex items-center gap-2">
-            <span className="text-foreground">Nome da Refeição</span>
+            <span className="text-foreground">Nome da refeição</span>
             <span className="text-destructive">*</span>
           </Label>
           <Input

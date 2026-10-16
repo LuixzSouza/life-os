@@ -96,7 +96,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
             <div className="space-y-4">
                 <div className="flex items-center justify-between pb-2 border-b border-border/40">
                     <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-                        <Cpu className="h-4 w-4 text-primary" /> Motor de Processamento
+                        <Cpu className="h-4 w-4 text-primary" /> Motor de processamento
                     </Label>
                     <span className="eyebrow text-muted-foreground bg-muted/50 px-3 py-1 rounded-full border border-border/40">
                         Ativo: <span className={cn("text-foreground", isLocal ? "text-zinc-500" : "text-primary")}>{providerInfo?.name ?? provider}</span>
@@ -128,7 +128,7 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                 <div className="space-y-3 bg-muted/10 p-5 rounded-2xl border border-border/40 relative">
                     <div className="flex justify-between items-center">
                         <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-                            <Bot className="h-4 w-4" /> Versão do Modelo
+                            <Bot className="h-4 w-4" /> Versão do modelo
                         </Label>
                         <Badge label="REQUERIDO" />
                     </div>
@@ -172,11 +172,11 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                 <div className={cn("space-y-3 p-5 rounded-2xl border transition-all duration-500 relative", isLocal ? "bg-muted/5 border-border/20 opacity-60 grayscale" : "bg-primary/5 border-primary/20 shadow-inner")}>
                     <div className="flex justify-between items-center">
                         <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-                            <KeyRound className="h-4 w-4" /> Credencial de Acesso
+                            <KeyRound className="h-4 w-4" /> Credencial de acesso
                         </Label>
                         {!isLocal && (
                             <Link href={providerInfo?.keyUrl || "#"} target="_blank" className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors">
-                                Obter Chave <ExternalLink className="h-3 w-3" />
+                                Obter chave <ExternalLink className="h-3 w-3" />
                             </Link>
                         )}
                     </div>
@@ -268,18 +268,18 @@ export function AIConfigForm({ settings }: AIConfigFormProps) {
                     {isTesting ? (
                         <span className="flex items-center gap-2"><Loader2 className="h-4 w-4 animate-spin"/> Testando...</span>
                     ) : (
-                        <span className="flex items-center gap-2"><TestTube2 className="h-4 w-4" /> Testar Conexão</span>
+                        <span className="flex items-center gap-2"><TestTube2 className="h-4 w-4" /> Testar conexão</span>
                     )}
                 </Button>
                 <Button
                     type="submit"
                     disabled={isLoading}
-                    className="bg-foreground text-background hover:bg-foreground/90 font-medium text-xs rounded-full h-10 px-8 shadow-xl transition-transform hover:scale-105"
+                    className="font-medium text-xs rounded-full h-10 px-8 transition-transform hover:scale-105"
                 >
                     {isLoading ? (
                         <span className="flex items-center gap-2"><Loader2 className="h-4 w-4 animate-spin"/> Atualizando Núcleo...</span>
                     ) : (
-                        <span className="flex items-center gap-2"><Save className="h-4 w-4" /> Sincronizar Cérebro</span>
+                        <span className="flex items-center gap-2"><Save className="h-4 w-4" /> Sincronizar cérebro</span>
                     )}
                 </Button>
             </div>

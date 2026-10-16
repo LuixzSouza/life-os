@@ -86,10 +86,10 @@ export function FinanceOverview({
 
       {/* CARDS DE MÉTRICAS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <MetricCard title="Patrimônio Consolidado" value={totalBalance} icon={<Wallet className="h-6 w-6 text-primary" />} variant="primary" tooltip={TOOLTIPS.patrimonio} isSmartView={smartView} />
-        <MetricCard title="Dívida Ativa" value={totalPendingDebts} icon={<AlertTriangle className="h-6 w-6 text-rose-500" />} variant="danger" trend="up" tooltip={TOOLTIPS.dividaAtiva} isSmartView={smartView} />
+        <MetricCard title="Patrimônio consolidado" value={totalBalance} icon={<Wallet className="h-6 w-6 text-primary" />} variant="primary" tooltip={TOOLTIPS.patrimonio} isSmartView={smartView} />
+        <MetricCard title="Dívida ativa" value={totalPendingDebts} icon={<AlertTriangle className="h-6 w-6 text-rose-500" />} variant="danger" trend="up" tooltip={TOOLTIPS.dividaAtiva} isSmartView={smartView} />
         <MetricCard title="Cofre (Wishlist)" value={wishlistSaved} icon={<Target className="h-6 w-6 text-emerald-500" />} variant="default" description={`Meta Total: ${formatMoney(wishlistTotal)}`} tooltip={TOOLTIPS.metas} isSmartView={smartView} />
-        <MetricCard title="Custos Fixos Totais" value={totalRecurring} icon={<DollarSign className="h-6 w-6 text-amber-500" />} variant="warning" tooltip={TOOLTIPS.custosFixos} isSmartView={smartView} />
+        <MetricCard title="Custos fixos totais" value={totalRecurring} icon={<DollarSign className="h-6 w-6 text-amber-500" />} variant="warning" tooltip={TOOLTIPS.custosFixos} isSmartView={smartView} />
       </div>
 
       {/* ÁREA DE DETALHES & SAÚDE FINANCEIRA */}

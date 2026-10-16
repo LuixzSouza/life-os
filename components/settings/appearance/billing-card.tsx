@@ -16,7 +16,7 @@ export function BillingCard({ pixKey, setPixKey, businessName, setBusinessName }
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <QrCode className="h-4 w-4 text-primary" /> Cobrança & Negócios
+          <QrCode className="h-4 w-4 text-primary" /> Cobrança & negócios
         </CardTitle>
         <CardDescription>Usado nas mensagens de cobrança enviadas aos seus clientes.</CardDescription>
       </CardHeader>

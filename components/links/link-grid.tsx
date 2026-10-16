@@ -264,12 +264,12 @@ export function LinkGrid({ links }: { links: SavedLink[] }) {
           <Dialog open={isCreateOpen} onOpenChange={setIsCreateOpen}>
             <DialogTrigger asChild>
               <Button className="gap-2 bg-primary hover:bg-primary/90 shadow-md">
-                <Plus className="h-4 w-4" /> Novo Recurso
+                <Plus className="h-4 w-4" /> Novo recurso
               </Button>
             </DialogTrigger>
             <DialogContent size="md">
               <DialogHeader>
-                <DialogTitle>Adicionar Recurso</DialogTitle>
+                <DialogTitle>Adicionar recurso</DialogTitle>
               </DialogHeader>
               <LinkForm onClose={() => setIsCreateOpen(false)} />
             </DialogContent>
@@ -387,7 +387,7 @@ export function LinkGrid({ links }: { links: SavedLink[] }) {
                         className="block"
                     >
                         <Button variant="outline" size="sm" className="w-full gap-2 hover:bg-primary/5 hover:text-primary hover:border-primary/30 group/btn">
-                            Acessar Link
+                            Acessar link
                             <ExternalLink className="h-3 w-3 transition-transform group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
                         </Button>
                     </a>
@@ -443,7 +443,7 @@ export function LinkGrid({ links }: { links: SavedLink[] }) {
       <Dialog open={!!editingLink} onOpenChange={() => setEditingLink(null)}>
         <DialogContent size="md">
             <DialogHeader>
-            <DialogTitle>Editar Recurso</DialogTitle>
+            <DialogTitle>Editar recurso</DialogTitle>
             </DialogHeader>
             {editingLink && (
                 <LinkForm

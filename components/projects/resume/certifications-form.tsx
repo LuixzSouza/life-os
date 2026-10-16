@@ -18,7 +18,7 @@ export function CertificationsForm({ data, onChange }: { data: PortfolioData; on
       <div className="flex justify-between items-end border-b border-border/40 pb-4">
         <div className="space-y-1">
           <h3 className="text-[11px] font-medium text-muted-foreground/80 flex items-center gap-2">
-            <Award className="h-4 w-4 text-primary" /> Cursos & Certificações
+            <Award className="h-4 w-4 text-primary" /> Cursos & certificações
           </h3>
         </div>
         <Button size="sm" onClick={add} className="h-10 font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">

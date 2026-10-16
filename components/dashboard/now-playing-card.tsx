@@ -12,7 +12,7 @@ export function NowPlayingCard({ media }: NowPlayingCardProps) {
     <Card className="bg-gradient-to-b from-card to-muted/10">
       <CardHeader className="flex flex-row items-center justify-between pb-4">
         <CardTitle className="text-sm flex items-center gap-2">
-          <PlayCircle className="h-4 w-4 text-muted-foreground" /> Consumindo Agora
+          <PlayCircle className="h-4 w-4 text-muted-foreground" /> Consumindo agora
         </CardTitle>
         <Link href="/entertainment" className="text-[10px] uppercase font-bold text-muted-foreground hover:text-primary transition-colors">Ver tudo</Link>
       </CardHeader>

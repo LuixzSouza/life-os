@@ -101,7 +101,7 @@ export function ProjectSettingsMenu({
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-64 p-2 rounded-2xl shadow-xl border-border/40 backdrop-blur-lg">
           <DropdownMenuLabel className="px-3 py-2">
-            <span className="text-xs font-medium text-muted-foreground/60">Opções do Projeto</span>
+            <span className="text-xs font-medium text-muted-foreground/60">Opções do projeto</span>
           </DropdownMenuLabel>
           
           <DropdownMenuItem onSelect={() => setIsEditOpen(true)} className="rounded-xl px-3 py-2.5 gap-3 cursor-pointer focus:bg-primary/5 group">
@@ -144,13 +144,13 @@ export function ProjectSettingsMenu({
           <form action={handleUpdate}>
             <DialogBody className="space-y-6">
                 <div className="space-y-2.5">
-                <Label htmlFor="title" className="text-xs font-medium text-muted-foreground ml-1">Nome do Projeto</Label>
+                <Label htmlFor="title" className="text-xs font-medium text-muted-foreground ml-1">Nome do projeto</Label>
                 <Input id="title" name="title" defaultValue={projectTitle} required className="font-bold text-base focus-visible:ring-primary/30" />
                 </div>
 
                 <div className="space-y-4">
                     <Label className="text-xs font-medium text-muted-foreground ml-1 flex items-center gap-2">
-                        <Palette className="h-3.5 w-3.5" /> Cor de Identidade
+                        <Palette className="h-3.5 w-3.5" /> Cor de identidade
                     </Label>
                     <div className="grid grid-cols-5 gap-3 bg-muted/30 p-4 rounded-2xl border border-border/40">
                         {PROJECT_COLORS.map((color) => (

@@ -93,7 +93,7 @@ export function ShoeMileageCard({ shoes }: { shoes: ShoeWithMileage[] }) {
       <CardHeader className="pb-2 border-b border-border/40 bg-muted/20">
         <div className="flex items-center justify-between py-1">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
-            <Footprints className="h-4 w-4 text-primary" /> Meus Tênis
+            <Footprints className="h-4 w-4 text-primary" /> Meus tênis
           </CardTitle>
           <Button size="sm" variant="ghost" className="h-7 gap-1 text-xs" onClick={() => openForm(null)}>
             <Plus className="h-3.5 w-3.5" /> Cadastrar

@@ -124,7 +124,7 @@ export function FriendDetailModal({ friend, onOpenChange, onEdit }: FriendDetail
                   {/* Tags */}
                   {tagList.length > 0 && (
                     <div className="space-y-2">
-                      <p className="text-[10px] text-muted-foreground font-bold uppercase flex items-center gap-1.5"><Hash className="h-3 w-3" /> Contexto & Tags</p>
+                      <p className="text-[10px] text-muted-foreground font-bold uppercase flex items-center gap-1.5"><Hash className="h-3 w-3" /> Contexto & tags</p>
                       <div className="flex flex-wrap gap-2">
                         {tagList.map((tag, idx) => (
                           <Badge key={idx} variant="secondary" className="px-2.5 py-1 bg-primary/5 text-primary border-primary/10 font-semibold">
@@ -164,7 +164,7 @@ export function FriendDetailModal({ friend, onOpenChange, onEdit }: FriendDetail
                       {bdayInfo.text && <Badge variant="secondary" className="mt-2 text-[10px] bg-pink-500/10 text-pink-600 border-none">{bdayInfo.text}</Badge>}
                     </div>
                     <div className="bg-card p-4 rounded-2xl border border-border/50 shadow-sm">
-                      <p className="text-[10px] text-muted-foreground font-bold uppercase mb-1 flex items-center gap-1.5"><Gift className="h-3 w-3 text-purple-500" /> Ideias de Presente</p>
+                      <p className="text-[10px] text-muted-foreground font-bold uppercase mb-1 flex items-center gap-1.5"><Gift className="h-3 w-3 text-purple-500" /> Ideias de presente</p>
                       <p className="text-sm text-foreground/80 leading-snug">
                         {friend.giftIdeas || <span className="italic opacity-60">Sem ideias registradas.</span>}
                       </p>
@@ -175,7 +175,7 @@ export function FriendDetailModal({ friend, onOpenChange, onEdit }: FriendDetail
                     <div
                       role="button"
                       tabIndex={0}
-                      aria-label="Copiar chave Pix"
+                      aria-label="Copiar chave pix"
                       onClick={() => copyToClipboard(friend.pixKey, "Chave Pix")}
                       onKeyDown={onActivate(() => copyToClipboard(friend.pixKey, "Chave Pix"))}
                       className="group flex items-center justify-between p-4 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 cursor-pointer hover:bg-emerald-500/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40"
@@ -183,7 +183,7 @@ export function FriendDetailModal({ friend, onOpenChange, onEdit }: FriendDetail
                       <div className="flex items-center gap-3">
                         <div className="p-2 bg-emerald-500/10 rounded-xl text-emerald-600"><LinkIcon className="h-4 w-4" /></div>
                         <div>
-                          <p className="text-[10px] text-emerald-600/80 font-bold uppercase">Chave Pix</p>
+                          <p className="text-[10px] text-emerald-600/80 font-bold uppercase">Chave pix</p>
                           <p className="text-sm font-mono font-bold text-emerald-700 dark:text-emerald-500 truncate max-w-[200px]">{friend.pixKey}</p>
                         </div>
                       </div>
@@ -192,7 +192,7 @@ export function FriendDetailModal({ friend, onOpenChange, onEdit }: FriendDetail
                   )}
 
                   <div className="space-y-2">
-                    <p className="text-[10px] text-muted-foreground font-bold uppercase flex items-center gap-1.5"><MapPin className="h-3 w-3" /> Anotações & Endereço</p>
+                    <p className="text-[10px] text-muted-foreground font-bold uppercase flex items-center gap-1.5"><MapPin className="h-3 w-3" /> Anotações & endereço</p>
                     <div className="p-4 bg-muted/20 border border-border/40 rounded-2xl text-sm text-foreground/90 min-h-[80px] whitespace-pre-wrap leading-relaxed">
                       {friend.notes ? friend.notes : <span className="italic opacity-60">Nenhuma anotação extra. Pense em como vocês se conheceram ou gostos dessa pessoa!</span>}
                       {friend.address && <div className="mt-3 pt-3 border-t border-border/40 text-xs text-muted-foreground flex gap-1.5"><MapPin className="h-3.5 w-3.5 shrink-0 opacity-60" /> {friend.address}</div>}

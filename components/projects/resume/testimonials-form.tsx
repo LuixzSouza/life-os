@@ -20,7 +20,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
             <div className="flex justify-between items-end border-b border-border/40 pb-4">
                 <div className="space-y-1">
                     <h3 className="text-[11px] font-medium text-muted-foreground/80 flex items-center gap-2">
-                        <MessageSquareQuote className="h-4 w-4 text-primary" /> Prova Social
+                        <MessageSquareQuote className="h-4 w-4 text-primary" /> Prova social
                     </h3>
                 </div>
                 <Button size="sm" onClick={add} className="h-10 font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
@@ -48,7 +48,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
 
                         <div className="space-y-4">
                             <div className="space-y-2">
-                                <Label className="text-xs font-medium text-muted-foreground/60">Conteúdo do Depoimento</Label>
+                                <Label className="text-xs font-medium text-muted-foreground/60">Conteúdo do depoimento</Label>
                                 <Textarea 
                                     placeholder="O que disseram sobre o seu trabalho..." 
                                     value={test.text} 
@@ -59,7 +59,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                             
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <Label className="text-xs font-medium text-muted-foreground/60">Nome do Autor</Label>
+                                    <Label className="text-xs font-medium text-muted-foreground/60">Nome do autor</Label>
                                     <Input 
                                         placeholder="Ex: João Souza" 
                                         value={test.authorName} 
@@ -79,7 +79,7 @@ export function TestimonialsForm({ data, onChange }: { data: PortfolioData, onCh
                             </div>
 
                             <div className="space-y-2">
-                                <Label className="text-xs font-medium text-muted-foreground/60">Cargo do Autor</Label>
+                                <Label className="text-xs font-medium text-muted-foreground/60">Cargo do autor</Label>
                                 <Input 
                                     placeholder="Ex: CTO" 
                                     value={test.authorRole} 

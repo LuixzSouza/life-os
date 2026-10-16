@@ -24,7 +24,7 @@ export function WishlistSection({ wishlist, accounts, totalBalance }: WishlistSe
             <ShoppingBag className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="text-2xl font-extrabold text-foreground">Lista de Desejos</h3>
+            <h3 className="text-2xl font-extrabold text-foreground">Lista de desejos</h3>
             <p className="text-sm text-muted-foreground mt-0.5 font-medium">Seus desejos comparados com o saldo real das suas contas.</p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export function WishlistSection({ wishlist, accounts, totalBalance }: WishlistSe
           )}
           <WishlistDialog trigger={
             <Button size="lg" className="font-bold shadow-lg shadow-primary/20 transition-all active:scale-95 px-8">
-              <Plus className="h-5 w-5 mr-2" /> Nova Meta
+              <Plus className="h-5 w-5 mr-2" /> Nova meta
             </Button>
           } />
         </div>
@@ -60,7 +60,7 @@ export function WishlistSection({ wishlist, accounts, totalBalance }: WishlistSe
               <WishlistDialog
                 trigger={
                   <Button variant="default" className="h-10 px-8 font-bold shadow-lg shadow-primary/20 mt-2 transition-all active:scale-95">
-                    <Plus className="h-4 w-4 mr-2" /> Criar Meta
+                    <Plus className="h-4 w-4 mr-2" /> Criar meta
                   </Button>
                 }
               />

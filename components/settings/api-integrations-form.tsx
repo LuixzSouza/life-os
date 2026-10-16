@@ -66,7 +66,7 @@ const SubmitButton: React.FC = () => {
     <Button
       type="submit"
       disabled={pending}
-      className="w-full sm:w-auto px-8 gap-2 bg-foreground text-background hover:bg-foreground/90 font-medium text-xs shadow-xl rounded-full transition-transform hover:scale-105"
+      className="w-full sm:w-auto px-8 gap-2 font-medium text-xs rounded-full transition-transform hover:scale-105"
     >
       {pending ? (
         <Loader2 className="h-4 w-4 animate-spin" />
@@ -268,7 +268,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
               <Plug className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-foreground">API Hub</h2>
+            <h2 className="text-xl font-semibold text-foreground">API hub</h2>
             <p className="eyebrow text-muted-foreground">Conecte o Life OS ao mundo exterior.</p>
           </div>
         </div>
@@ -368,7 +368,7 @@ export default function APIIntegrationsForm({ settings }: APIIntegrationsFormPro
               <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
                 <div>
                     <p className="text-[11px] font-medium text-foreground flex items-center gap-2">
-                        <Database className="h-3.5 w-3.5 text-primary" /> Commit Manual
+                        <Database className="h-3.5 w-3.5 text-primary" /> Commit manual
                     </p>
                     <p className="text-[9px] font-medium text-muted-foreground/70 mt-1">
                         O Life OS não testa as chaves automaticamente ao salvar.

@@ -30,7 +30,7 @@ export function FoodSearch({ searchOpen, setSearchOpen, ingredients, onAdd }: Fo
     <div className="space-y-3">
       <Label className="text-sm font-semibold flex items-center gap-2">
         <Search className="h-4 w-4 text-primary" />
-        Adicionar Alimentos
+        Adicionar alimentos
       </Label>
 
       <Popover open={searchOpen} onOpenChange={setSearchOpen} modal={true}>

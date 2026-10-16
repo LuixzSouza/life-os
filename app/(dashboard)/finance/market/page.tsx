@@ -7,9 +7,7 @@ import { requireUserId } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 import { MarketDashboard } from "@/components/finance/market/market-dashboard"; // Vamos criar esse componente
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ChevronLeft, LineChart } from "lucide-react";
+import { LineChart } from "lucide-react";
 import { PageShell, PageHeader, PageContainer } from "@/components/layout/page-shell";
 
 export const metadata: Metadata = {
@@ -33,16 +31,12 @@ export default async function MarketPage() {
   return (
     <PageShell>
       <PageHeader
+        backHref="/finance"
+        backLabel="Voltar para Finanças"
         icon={<LineChart className="h-6 w-6" />}
-        title="Terminal de Mercado"
+        title="Terminal de mercado"
         description="Cotações da B3, FIIs, ETFs, câmbio e cripto em tempo real."
-      >
-        <Link href="/finance" className="w-fit">
-          <Button variant="ghost" size="sm" className="-ml-2 gap-1 pl-2 text-muted-foreground hover:text-foreground">
-            <ChevronLeft className="h-4 w-4" /> Voltar para Finanças
-          </Button>
-        </Link>
-      </PageHeader>
+      />
 
       <PageContainer>
         <MarketDashboard data={marketData} initialFavorites={watchlist} />

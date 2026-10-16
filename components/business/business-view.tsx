@@ -123,7 +123,7 @@ export function BusinessView({ initialClients, friends, pixKey, businessName }: 
           />
         </div>
         <Button onClick={handleOpenNewClientModal} className="w-full sm:w-auto shadow-md gap-2 font-bold">
-          <Plus size={18} /> Novo Cliente
+          <Plus size={18} /> Novo cliente
         </Button>
       </div>
 

@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { DeckGrid } from "@/components/flashcards/deck-grid";
 import { Metadata } from "next";
-import { Layers, BrainCircuit, ArrowLeft, BookOpen, Target, TrendingUp, Zap, CheckCircle2 } from "lucide-react";
+import { Layers, Target, TrendingUp, Zap, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -88,30 +88,12 @@ export default async function FlashcardsPage() {
   return (
     <PageShell>
       <PageHeader
+        backHref="/studies"
+        backLabel="Voltar para Estudos"
         icon={<Layers className="h-6 w-6" />}
         title="Flashcards"
-        description={
-          <span className="flex items-center gap-2">
-            <BrainCircuit className="h-4 w-4 text-primary/70" />
-            Domine o conteúdo usando repetição espaçada.
-          </span>
-        }
-        actions={
-          <Link href="/studies">
-            <Button variant="outline" className="gap-2 border-border/60 bg-background/50 shadow-sm backdrop-blur-sm">
-              <BookOpen className="h-4 w-4 text-primary" />
-              Árvore de Matérias
-            </Button>
-          </Link>
-        }
-      >
-        <Link href="/studies" className="w-fit">
-          <Button variant="ghost" size="sm" className="-ml-2 text-muted-foreground hover:bg-transparent hover:text-primary">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Voltar para o Painel de Estudos
-          </Button>
-        </Link>
-      </PageHeader>
+        description="Domine o conteúdo usando repetição espaçada."
+      />
 
       {/* ================= CONTENT ================= */}
       <PageContainer className="space-y-8">
@@ -127,7 +109,7 @@ export default async function FlashcardsPage() {
                             <div className="p-2 bg-primary/10 rounded-lg text-primary">
                                 <Target className="h-5 w-5" />
                             </div>
-                            <h3 className="font-bold text-lg">Acervo Global</h3>
+                            <h3 className="font-bold text-lg">Acervo global</h3>
                         </div>
                         <div className="mt-4 flex items-end gap-2">
                             <span className="text-5xl font-black text-foreground leading-none">{totalCards}</span>
@@ -175,7 +157,7 @@ export default async function FlashcardsPage() {
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="font-bold text-lg flex items-center gap-2">
                                 <TrendingUp className="h-5 w-5 text-primary" />
-                                Saúde da sua Memória
+                                Saúde da sua memória
                             </h3>
                         </div>
 

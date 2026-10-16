@@ -83,7 +83,7 @@ export function LogSleepDialog({ goal = DEFAULT_SLEEP_GOAL }: { goal?: number })
       <DialogContent size="md">
         <DialogHeader
           icon={<Moon />}
-          title="Registrar Sono"
+          title="Registrar sono"
           description="Informe os horários — calculamos a duração automaticamente."
         />
 

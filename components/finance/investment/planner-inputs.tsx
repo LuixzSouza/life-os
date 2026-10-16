@@ -34,7 +34,7 @@ export function TimeSlider({ years, setYears, max = 40 }: { years: number, setYe
   return (
     <div className="space-y-5">
       <div className="flex justify-between items-end">
-        <Label className="text-xs font-medium text-muted-foreground ml-1">Tempo Investido</Label>
+        <Label className="text-xs font-medium text-muted-foreground ml-1">Tempo investido</Label>
         <span className="text-sm font-black font-mono tracking-tighter text-primary bg-primary/10 px-3 py-1 rounded-lg text-nowrap border border-primary/20 shadow-sm">
           {years} anos
         </span>

@@ -57,7 +57,7 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
         </div>
         <div className="space-y-3">
           <h2 className="text-3xl font-extrabold tracking-tight text-foreground">
-            ID Inválido
+            ID inválido
           </h2>
           <p className="text-muted-foreground leading-relaxed text-base">
             Não foi possível identificar o parâmetro do baralho. O link pode estar quebrado ou incompleto.
@@ -66,7 +66,7 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
         <div className="pt-4">
           <Link href="/flashcards" className="block">
             <Button variant="outline" size="lg" className="w-full gap-2 h-14 text-base font-semibold hover:bg-muted/50">
-              <ArrowLeft className="h-5 w-5" /> Voltar para Biblioteca
+              <ArrowLeft className="h-5 w-5" /> Voltar para biblioteca
             </Button>
           </Link>
         </div>
@@ -105,7 +105,7 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
         <div className="pt-4">
           <Link href="/flashcards" className="block">
             <Button variant="default" size="lg" className="w-full gap-2 shadow-lg shadow-primary/20 h-14 text-base font-bold">
-              <ArrowLeft className="h-5 w-5" /> Voltar para Biblioteca
+              <ArrowLeft className="h-5 w-5" /> Voltar para biblioteca
             </Button>
           </Link>
         </div>
@@ -125,7 +125,7 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
         
         <div className="space-y-3">
           <h3 className="text-3xl font-extrabold tracking-tight text-foreground flex items-center justify-center gap-3">
-            Baralho Vazio
+            Baralho vazio
           </h3>
           <p className="text-muted-foreground leading-relaxed text-base">
             O baralho <span className="font-bold text-foreground">&quot;{deck.title}&quot;</span> ainda não possui cartões. Adicione conteúdo para que seu cérebro comece a trabalhar!
@@ -141,7 +141,7 @@ export default async function StudyPage({ params, searchParams }: StudyPageProps
 
           <Link href={`/flashcards/${deckId}/edit`} className="w-full sm:w-1/2">
             <Button className="w-full gap-2 h-14 text-base font-bold shadow-lg shadow-primary/25 bg-primary hover:bg-primary/90 text-primary-foreground transition-all hover:-translate-y-0.5 active:translate-y-0">
-              <Plus className="h-5 w-5" /> Criar Cartões
+              <Plus className="h-5 w-5" /> Criar cartões
             </Button>
           </Link>
         </div>

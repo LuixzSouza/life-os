@@ -82,7 +82,7 @@ export function AdvancedInsights({ stats }: { stats: BodyStats }) {
                 <Card className="border-indigo-500/20 bg-gradient-to-br from-indigo-500/5 to-transparent">
                     <CardHeader className="pb-2">
                         <CardTitle className="flex items-center gap-2 text-xs font-bold uppercase text-indigo-500">
-                            <TrendingUp className="h-4 w-4" /> Potencial Muscular
+                            <TrendingUp className="h-4 w-4" /> Potencial muscular
                             <span className="ml-auto">
                                 <MetricExplainer
                                     title="FFMI — Índice de Massa Livre de Gordura"
@@ -138,7 +138,7 @@ export function AdvancedInsights({ stats }: { stats: BodyStats }) {
                 )}>
                     <CardHeader className="pb-2">
                         <CardTitle className="flex items-center gap-2 text-xs font-bold uppercase text-foreground">
-                            <HeartCrack className="h-4 w-4" /> Risco Cardíaco
+                            <HeartCrack className="h-4 w-4" /> Risco cardíaco
                             <span className="ml-auto">
                                 <MetricExplainer
                                     title="RCQ — Razão Cintura-Quadril"
@@ -169,7 +169,7 @@ export function AdvancedInsights({ stats }: { stats: BodyStats }) {
                 )}>
                     <CardHeader className="pb-2">
                         <CardTitle className="flex items-center gap-2 text-xs font-bold uppercase text-foreground">
-                            <Ruler className="h-4 w-4" /> Cintura ÷ Altura
+                            <Ruler className="h-4 w-4" /> Cintura ÷ altura
                             <span className="ml-auto">
                                 <MetricExplainer
                                     title="WHtR — Razão Cintura-Altura"

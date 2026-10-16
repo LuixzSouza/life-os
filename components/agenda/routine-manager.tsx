@@ -78,7 +78,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
             <LayoutGrid className="h-6 w-6" />
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-foreground">Protocolo Base</h3>
+            <h3 className="text-xl font-semibold text-foreground">Protocolo base</h3>
             <p className="mt-0.5 text-xs text-muted-foreground">
               Hábitos e blocos de tempo fixos
             </p>
@@ -97,7 +97,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <DropdownMenuItem onSelect={(e) => e.preventDefault()} className="text-rose-500 focus:text-rose-600 focus:bg-rose-500/10 cursor-pointer font-medium gap-2">
-                      <Trash2 className="h-4 w-4" /> Resetar Tudo
+                      <Trash2 className="h-4 w-4" /> Resetar tudo
                     </DropdownMenuItem>
                   </AlertDialogTrigger>
                   <AlertDialogContent className="rounded-2xl p-8 border-border/40 max-w-sm text-center">
@@ -108,7 +108,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
                     </AlertDialogHeader>
                     <AlertDialogFooter className="sm:justify-center mt-6">
                       <AlertDialogCancel className="rounded-xl text-xs font-medium h-12 w-full sm:w-auto">Cancelar</AlertDialogCancel>
-                      <AlertDialogAction onClick={handleReset} className="bg-rose-500 hover:bg-rose-600 text-white rounded-xl text-xs font-medium h-12 w-full sm:w-auto">Confirmar Exclusão</AlertDialogAction>
+                      <AlertDialogAction onClick={handleReset} className="bg-rose-500 hover:bg-rose-600 text-white rounded-xl text-xs font-medium h-12 w-full sm:w-auto">Confirmar exclusão</AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
@@ -123,8 +123,8 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
           >
             <BrushCleaning className="h-4 w-4" /> Limpeza
           </Button>
-          <Button onClick={() => setIsDialogOpen(true)} className="h-10 px-5 bg-foreground text-background hover:bg-primary shadow-lg font-medium text-xs gap-2 transition-all">
-            <Plus className="h-4 w-4 stroke-[3]" /> Novo Bloco
+          <Button onClick={() => setIsDialogOpen(true)} className="h-10 px-5 font-medium text-xs gap-2 transition-all">
+            <Plus className="h-4 w-4 stroke-[3]" /> Novo bloco
           </Button>
         </div>
       </div>
@@ -191,7 +191,7 @@ export function RoutineManager({ items }: { items: RoutineItem[] }) {
         <DialogContent size="md">
           <DialogHeader
             icon={<CalendarDays />}
-            title="Novo Bloco Fixo"
+            title="Novo bloco fixo"
             description="Configure um hábito recorrente"
           />
           <RoutineForm onClose={() => setIsDialogOpen(false)} />

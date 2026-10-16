@@ -20,7 +20,7 @@ export function AccessEditDialog({ open, onOpenChange, item }: AccessEditDialogP
               <Fingerprint className="h-6 w-6" />
             </div>
             <div>
-              <DialogTitle>Sincronizar Acesso</DialogTitle>
+              <DialogTitle>Sincronizar acesso</DialogTitle>
               <DialogDescription>Atualize as credenciais no cofre</DialogDescription>
             </div>
           </div>

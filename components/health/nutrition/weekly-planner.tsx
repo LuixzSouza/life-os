@@ -199,7 +199,7 @@ export function WeeklyPlanner({ initialData, suggestedGoal = null, tdee = null, 
             <CalendarRange className="h-5 w-5 text-primary" />
           </div>
           <div>
-            <h2 className="text-xl font-bold tracking-tight">Planejador Semanal</h2>
+            <h2 className="text-xl font-bold tracking-tight">Planejador semanal</h2>
             <p className="text-sm text-muted-foreground">Monte um cardápio profissional, equilibrado e do seu jeito.</p>
           </div>
         </div>
@@ -279,7 +279,7 @@ export function WeeklyPlanner({ initialData, suggestedGoal = null, tdee = null, 
               view === "day" ? "bg-background shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground"
             )}
           >
-            <CalendarDays className="h-4 w-4" /> Por Dia
+            <CalendarDays className="h-4 w-4" /> Por dia
           </button>
           <button
             onClick={() => setView("week")}
@@ -288,7 +288,7 @@ export function WeeklyPlanner({ initialData, suggestedGoal = null, tdee = null, 
               view === "week" ? "bg-background shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground"
             )}
           >
-            <LayoutGrid className="h-4 w-4" /> Semana Inteira
+            <LayoutGrid className="h-4 w-4" /> Semana inteira
           </button>
         </div>
       </div>
@@ -385,7 +385,7 @@ export function WeeklyPlanner({ initialData, suggestedGoal = null, tdee = null, 
                           onClick={handleClearDay}
                           className="bg-destructive hover:bg-destructive/90 text-destructive-foreground"
                         >
-                          Confirmar Limpeza
+                          Confirmar limpeza
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>

@@ -21,7 +21,7 @@ export function BedtimeCalculator() {
     <Card>
       <CardHeader className="pb-3 border-b border-border/40 bg-muted/20">
         <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2 py-1">
-          <Calculator className="h-4 w-4 text-primary" /> Calculadora de Ciclos
+          <Calculator className="h-4 w-4 text-primary" /> Calculadora de ciclos
         </CardTitle>
       </CardHeader>
       <CardContent className="pt-5 space-y-4">

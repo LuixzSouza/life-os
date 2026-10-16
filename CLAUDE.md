@@ -50,6 +50,9 @@ Life OS is a privacy-first, local-capable "Second Brain" operating system. It un
 ### 6. Padrões visuais do sistema (padronização de 2026-10)
 Toda tela segue estes padrões — não reinvente localmente:
 - **Estrutura de página:** `PageShell` + `PageHeader` (ícone, título, descrição, `actions`) + `PageContainer` (`components/layout/page-shell.tsx`). Um cabeçalho só por tela — nada de 2º título grande logo abaixo.
+- **Cabeçalho:** voltar = prop `backHref` (seta ‹), nunca link "Voltar para…" à mão; contagens vão no `description` ("24 links · 8 categorias"); indicadores ricos vão numa linha de `StatCard` abaixo do header — nunca caixas de número dentro do header.
+- **Botão primário:** `<Button>` padrão (cor primária). Nada de `bg-foreground text-background` (botão branco).
+- **Textos em sentence case (pt-BR):** "Nova meta", "Fluxo de caixa", "Confirmar senha" — só a 1ª palavra maiúscula, exceto siglas (IA, PDF, API) e nomes de módulo usados como lugar ("no Financeiro", "Tags & Anexos").
 - **Ações do cabeçalho:** só AÇÕES da tela atual (contextuais). Atalhos de navegação que já estão no menu lateral não entram no header.
 - **Rótulo pequeno em caixa-alta** (títulos de card/KPI/seção, rótulos de campo): use **só** `eyebrow` + uma cor (`eyebrow text-muted-foreground`). Proibido montar `text-[10px] font-black uppercase tracking-widest` à mão. O `cn()` já entende que `eyebrow` substitui tamanho/peso/espaçamento.
 - **Texto dinâmico em caixa-alta:** se o rótulo mostra algo que vem em minúsculas (mês/dia da semana do `date-fns`, "agora", tempo relativo), a caixa-alta vem do `eyebrow` — nunca remova o `uppercase` de um rótulo assim sem tratar o texto.

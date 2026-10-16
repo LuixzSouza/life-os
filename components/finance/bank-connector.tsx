@@ -182,11 +182,11 @@ export function BankConnector({ onOpenImport }: { onOpenImport?: () => void }) {
                     {/* Cabeçalho Customizado */}
                     <div className="flex justify-between items-center p-4 bg-muted/10 border-b border-border/40 shrink-0">
                         <div className="flex items-center gap-2">
-                            <DialogTitle className="sr-only">Conexão Segura</DialogTitle>
+                            <DialogTitle className="sr-only">Conexão segura</DialogTitle>
                             <div className="p-1.5 bg-emerald-500/10 rounded-lg">
                                 <ShieldCheck className="h-5 w-5 text-emerald-600" />
                             </div>
-                            <span className="font-extrabold text-sm uppercase tracking-widest text-foreground">Sincronização Bancária</span>
+                            <span className="font-extrabold text-sm uppercase tracking-widest text-foreground">Sincronização bancária</span>
                         </div>
                         <Button variant="ghost" size="icon" aria-label="Fechar" className="h-8 w-8 rounded-full hover:bg-muted/80" onClick={handleCloseConnection}>
                             <X className="h-5 w-5 text-muted-foreground" />

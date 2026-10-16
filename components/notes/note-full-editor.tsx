@@ -261,7 +261,7 @@ export function NoteFullEditor({
           <Link
             href="/notes"
             className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-muted/50 transition-all hover:bg-primary/10 hover:text-primary"
-            title="Voltar para Notas"
+            title="Voltar para notas"
           >
             <ArrowLeft className="h-4 w-4" />
           </Link>

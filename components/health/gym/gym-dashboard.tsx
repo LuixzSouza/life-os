@@ -133,11 +133,11 @@ export function GymDashboard({ workouts, recovery = [] }: { workouts: GymWorkout
           <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
             <DialogTrigger asChild>
               <Button size="sm" variant="outline" className="h-9 w-full gap-2 font-medium shadow-sm sm:w-auto">
-                <Plus className="h-4 w-4" /> Registrar Sessão
+                <Plus className="h-4 w-4" /> Registrar sessão
               </Button>
             </DialogTrigger>
             <DialogContent size="md">
-              <DialogHeader icon={<Dumbbell />} title="Novo Treino" description="Registre as cargas e volumes da sua sessão de hoje." />
+              <DialogHeader icon={<Dumbbell />} title="Novo treino" description="Registre as cargas e volumes da sua sessão de hoje." />
               <DialogBody className="custom-scrollbar">
                 <GymForm onSuccess={() => setIsAddOpen(false)} />
               </DialogBody>

@@ -101,7 +101,7 @@ export function BackupManager({ history, mode = "local" }: { history: BackupLog[
                         <div className="space-y-1">
                             <CardTitle className="text-base flex items-center gap-2">
                                 <ArchiveRestore className="h-4 w-4 text-primary" />
-                                Snapshots & Histórico
+                                Snapshots & histórico
                             </CardTitle>
                             <CardDescription>
                                 {mode === "replica"
@@ -214,7 +214,7 @@ export function BackupManager({ history, mode = "local" }: { history: BackupLog[
                     <AlertDialogHeader>
                         <AlertDialogTitle className="flex items-center gap-2">
                             <AlertTriangle className="h-5 w-5 text-yellow-500" />
-                            Confirmar Restauração
+                            Confirmar restauração
                         </AlertDialogTitle>
                         <div className="space-y-3 pt-2">
                             <p className="text-sm text-muted-foreground">

@@ -66,7 +66,7 @@ export default async function SleepPage() {
   if (hasError) {
     return (
       <ErrorState
-        title="Falha de Leitura"
+        title="Falha de leitura"
         description="Não foi possível sincronizar seus dados de sono no momento."
         backHref="/health"
         retryHref="/health/sleep"
@@ -79,7 +79,7 @@ export default async function SleepPage() {
     <PageShell>
       <PageHeader
         icon={<Moon className="h-6 w-6" />}
-        title="Monitor de Sono"
+        title="Monitor de sono"
         description="Análise de qualidade do descanso, recuperação e consistência."
         backHref="/health"
         backLabel="Voltar para Overview"

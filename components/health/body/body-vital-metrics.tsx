@@ -75,7 +75,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
                 <Card>
                     <CardHeader className="pb-2">
                         <CardTitle className="text-xs uppercase font-bold text-muted-foreground flex items-center gap-2">
-                            <Scale className="h-4 w-4 text-primary" /> Peso Ideal
+                            <Scale className="h-4 w-4 text-primary" /> Peso ideal
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3">
@@ -106,7 +106,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
                 <Card>
                     <CardHeader className="pb-2">
                         <CardTitle className="text-xs uppercase font-bold text-muted-foreground flex items-center gap-2">
-                            <Activity className="h-4 w-4 text-primary" /> Gordura Estimada
+                            <Activity className="h-4 w-4 text-primary" /> Gordura estimada
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-2">
@@ -137,7 +137,7 @@ export function BodyVitalMetrics({ stats, onEdit }: { stats: BodyStats; onEdit: 
                             <span className="font-bold">{bsa.toFixed(2)} m²</span>
                         </div>
                         <div className="flex justify-between">
-                            <span className="text-muted-foreground">BMI Prime</span>
+                            <span className="text-muted-foreground">BMI prime</span>
                             <span className="font-bold">{prime.value.toFixed(2)} <span className="text-xs text-muted-foreground font-medium">({prime.status})</span></span>
                         </div>
                     </CardContent>

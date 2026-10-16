@@ -16,7 +16,7 @@ export function WishlistDialog({ trigger }: WishlistDialogProps) {
             <DialogTrigger asChild>
                 {trigger ? trigger : (
                     <Button variant="outline" className="gap-2 font-bold border-dashed border-border hover:bg-muted/50">
-                        <Plus className="h-4 w-4"/> Nova Meta
+                        <Plus className="h-4 w-4"/> Nova meta
                     </Button>
                 )}
             </DialogTrigger>
@@ -24,7 +24,7 @@ export function WishlistDialog({ trigger }: WishlistDialogProps) {
             <DialogContent size="lg">
                 <DialogHeader
                     icon={<Target />}
-                    title="Nova Meta de Consumo"
+                    title="Nova meta de consumo"
                     description="O que você está planejando conquistar?"
                 />
                 <DialogBody>

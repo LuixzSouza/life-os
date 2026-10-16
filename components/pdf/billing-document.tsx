@@ -208,7 +208,7 @@ export function BillingDocument({
               {businessName ? <Text style={s.brandTag}>{businessName}</Text> : null}
             </View>
             <View style={{ alignItems: "flex-end" }}>
-              <Text style={s.docKicker}>Resumo de Cobrança</Text>
+              <Text style={s.docKicker}>Resumo de cobrança</Text>
               <Text style={s.docMeta}>{generatedAt}</Text>
             </View>
           </View>

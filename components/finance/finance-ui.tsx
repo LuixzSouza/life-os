@@ -220,7 +220,7 @@ export function RecurringCard({ total, items, accounts = [] }: { total: number, 
 
                 <div className="relative z-10">
                     <p className="text-xs text-muted-foreground font-medium mb-1">
-                        Custo Mensal Fixo
+                        Custo mensal fixo
                     </p>
                     <h3 className={cn("text-3xl font-black text-foreground tracking-tighter", smartView && "blur-md select-none")}>
                         {moneyShort(total)}
@@ -381,7 +381,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                 <DialogHeader
                     icon={<Wallet className="h-5 w-5" />}
                     iconClassName="bg-orange-500/10 text-orange-600 border-orange-500/20"
-                    title="Registrar Pagamento"
+                    title="Registrar pagamento"
                     description={<>A saída de <strong className="text-orange-600">{item ? formatCurrency(item.amount) : ""}</strong> será lançada como despesa na conta escolhida.</>}
                 />
 
@@ -396,7 +396,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                     }} className="flex flex-col flex-1 min-h-0">
                         <DialogBody className="space-y-5">
                             <div className="space-y-1.5">
-                                <Label className="text-xs font-medium text-muted-foreground ml-1">Conta de Origem</Label>
+                                <Label className="text-xs font-medium text-muted-foreground ml-1">Conta de origem</Label>
                                 <Select value={accountId} onValueChange={setAccountId}>
                                     <SelectTrigger>
                                         <SelectValue placeholder="Selecione a conta..." />
@@ -417,7 +417,7 @@ function RecurringPayModal({ item, accounts, onClose }: { item: RecurringItemDat
                         <DialogFooter>
                             <Button type="button" variant="ghost" onClick={onClose}>Cancelar</Button>
                             <SubmitButton className="rounded-xl px-8 font-bold bg-orange-600 hover:bg-orange-700 shadow-lg shadow-orange-600/20">
-                                Confirmar Pagamento
+                                Confirmar pagamento
                             </SubmitButton>
                         </DialogFooter>
                     </form>

@@ -65,7 +65,7 @@ export function CaloriesCard({
                         <Flame className="h-4 w-4" />
                     </div>
                     <div className="min-w-0">
-                        <CardTitle className="text-sm font-semibold">Gasto Calórico</CardTitle>
+                        <CardTitle className="text-sm font-semibold">Gasto calórico</CardTitle>
                         <span className="mt-0.5 block truncate text-[11px] text-muted-foreground">Estimado pelo seu peso, altura e atividade</span>
                     </div>
                 </div>

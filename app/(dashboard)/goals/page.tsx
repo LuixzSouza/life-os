@@ -17,7 +17,7 @@ export default async function GoalsPage({
     <PageShell>
       <PageHeader
         icon={<Target className="h-5 w-5" />}
-        title="Metas de Aprendizado"
+        title="Metas de aprendizado"
         description="Defina objetivos, quebre em passos e acompanhe o progresso — conectado ao resto do Life OS."
       />
       <PageContainer>

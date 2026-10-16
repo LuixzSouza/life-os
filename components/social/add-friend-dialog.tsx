@@ -201,7 +201,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
     <Dialog open={open} onOpenChange={setOpen}>
       {mode === "create" && (
         <Button onClick={() => setOpen(true)} className="gap-2 font-medium shadow-sm">
-          <Plus className="h-4 w-4" /> Novo Contato
+          <Plus className="h-4 w-4" /> Novo contato
         </Button>
       )}
       
@@ -273,7 +273,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2 col-span-2 md:col-span-1">
-                      <Label htmlFor="name" className="text-xs font-semibold text-muted-foreground">Nome Completo <span className="text-rose-500">*</span></Label>
+                      <Label htmlFor="name" className="text-xs font-semibold text-muted-foreground">Nome completo <span className="text-rose-500">*</span></Label>
                       <Input id="name" name="name" value={formData.name || ""} onChange={handleChange} required placeholder="Ex: João Silva" />
                     </div>
                     <div className="space-y-2 col-span-2 md:col-span-1">
@@ -283,14 +283,14 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                   </div>
 
                   <div className="space-y-2">
-                    <Label className="text-xs font-semibold text-muted-foreground">Círculo de Proximidade</Label>
+                    <Label className="text-xs font-semibold text-muted-foreground">Círculo de proximidade</Label>
                     <Select value={formData.proximity} onValueChange={(v) => handleSelectChange("proximity", v)}>
                       <SelectTrigger>
                         <SelectValue placeholder="Selecione o nível" />
                       </SelectTrigger>
                       <SelectContent className="rounded-lg">
                         <SelectItem value="FAMILY">Família</SelectItem>
-                        <SelectItem value="CLOSE">Amigo Próximo</SelectItem>
+                        <SelectItem value="CLOSE">Amigo próximo</SelectItem>
                         <SelectItem value="WORK">Trabalho / Negócios</SelectItem>
                         <SelectItem value="CASUAL">Conhecido / Casual</SelectItem>
                       </SelectContent>
@@ -339,7 +339,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                   
                   <div className="space-y-3 bg-muted/10 p-5 rounded-xl border border-border/40">
                     <Label className="text-xs font-semibold text-foreground flex items-center gap-2">
-                        <Tags className="h-3.5 w-3.5 text-primary" /> Tags & Classificações
+                        <Tags className="h-3.5 w-3.5 text-primary" /> Tags & classificações
                     </Label>
                     <div className="flex gap-2">
                       <Input 
@@ -369,18 +369,18 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
 
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="birthday" className="text-xs font-semibold text-muted-foreground">Data de Aniversário</Label>
+                      <Label htmlFor="birthday" className="text-xs font-semibold text-muted-foreground">Data de aniversário</Label>
                       <Input id="birthday" name="birthday" type="date" value={formData.birthday || ""} onChange={handleChange} />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="pixKey" className="text-xs font-semibold text-muted-foreground">Chave Pix</Label>
+                      <Label htmlFor="pixKey" className="text-xs font-semibold text-muted-foreground">Chave pix</Label>
                       <Input id="pixKey" name="pixKey" value={formData.pixKey || ""} onChange={handleChange} placeholder="CPF, Email, Celular..." />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="giftIdeas" className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
-                      <Gift className="h-3.5 w-3.5 text-purple-500" /> Ideias de Presente
+                      <Gift className="h-3.5 w-3.5 text-purple-500" /> Ideias de presente
                     </Label>
                     <Input id="giftIdeas" name="giftIdeas" value={formData.giftIdeas || ""} onChange={handleChange} placeholder="Ex: Livros de ficção, vinho, fone..." />
                   </div>
@@ -393,7 +393,7 @@ export function FriendFormDialog({ mode, initialData, open: controlledOpen, onOp
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="notes" className="text-xs font-semibold text-muted-foreground">Anotações e Histórico</Label>
+                    <Label htmlFor="notes" className="text-xs font-semibold text-muted-foreground">Anotações e histórico</Label>
                     <Textarea
                       id="notes"
                       name="notes"

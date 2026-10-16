@@ -93,7 +93,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                                     </Badge>
                                                     {isBest && (
                                                         <Badge variant="secondary" className="text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm gap-1 pl-1.5 border-0">
-                                                            <Zap className="h-3 w-3 fill-current" /> Top Retorno
+                                                            <Zap className="h-3 w-3 fill-current" /> Top retorno
                                                         </Badge>
                                                     )}
                                                 </div>
@@ -121,7 +121,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                         </div>
                                         <div className="sm:text-right mt-2 sm:mt-0">
                                             <p className="text-xs font-medium text-muted-foreground mb-1">
-                                                Retorno Líquido
+                                                Retorno líquido
                                             </p>
                                             <div className="flex items-center sm:justify-end gap-2 text-primary">
                                                 <span className="text-2xl font-black font-mono tracking-tighter">{formatCurrency(result.netAmount)}</span>
@@ -144,7 +144,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                             </Badge>
                                             {product.hasFGC && (
                                                 <Badge variant="outline" className="eyebrow text-muted-foreground border-border/60 flex items-center gap-1">
-                                                    <ShieldCheck className="h-3.5 w-3.5" /> FGC Garantido
+                                                    <ShieldCheck className="h-3.5 w-3.5" /> FGC garantido
                                                 </Badge>
                                             )}
                                         </div>
@@ -162,7 +162,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                     
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                         <div className="space-y-2 bg-muted/20 p-5 rounded-2xl border border-border/50 shadow-inner">
-                                            <p className="text-xs font-medium text-muted-foreground">Lucro Líquido</p>
+                                            <p className="text-xs font-medium text-muted-foreground">Lucro líquido</p>
                                             <p className="text-3xl md:text-4xl font-black font-mono text-emerald-600 dark:text-emerald-500 tracking-tighter">
                                                 + {formatCurrency(result.netProfit)}
                                             </p>
@@ -195,7 +195,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                             <CheckCircle2 className="h-5 w-5" />
                                         </div>
                                         <div className="space-y-1.5">
-                                            <h4 className="font-extrabold text-foreground text-base">Veredito da Rentabilidade</h4>
+                                            <h4 className="font-extrabold text-foreground text-base">Veredito da rentabilidade</h4>
                                             <p className="text-sm font-medium text-muted-foreground leading-relaxed">
                                                 {result.equivalentCDI > 100 
                                                     ? `Excelente opção! Supera o CDI tradicional. Mesmo com impostos (se houver), você ganha aproximadamente ${Math.round(result.equivalentCDI - 100)}% acima da renda fixa básica.`
@@ -205,8 +205,8 @@ export function ProductComparator({ cdi }: ComparatorProps) {
                                         </div>
                                     </div>
 
-                                    <Button className="w-full h-14 text-lg font-bold bg-foreground text-background hover:bg-foreground/90 shadow-lg transition-all active:scale-[0.98]">
-                                        Planejar Aporte
+                                    <Button className="w-full h-14 text-lg font-bold transition-all active:scale-[0.98]">
+                                        Planejar aporte
                                     </Button>
                                 </div>
                             </DialogContent>
@@ -219,7 +219,7 @@ export function ProductComparator({ cdi }: ComparatorProps) {
             <div className="pt-10 mt-10 border-t border-border/40">
                 <h3 className="text-sm font-extrabold text-foreground mb-6 flex items-center gap-3 uppercase tracking-widest">
                     <div className="p-1.5 bg-primary/10 rounded-md text-primary"><Info className="h-4 w-4" /></div> 
-                    Glossário do Investidor
+                    Glossário do investidor
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                     {Object.entries(GLOSSARY).map(([term, def]) => (

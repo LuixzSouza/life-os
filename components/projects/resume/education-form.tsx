@@ -18,7 +18,7 @@ export function EducationForm({ data, onChange }: { data: PortfolioData; onChang
       <div className="flex justify-between items-end border-b border-border/40 pb-4">
         <div className="space-y-1">
           <h3 className="text-[11px] font-medium text-muted-foreground/80 flex items-center gap-2">
-            <GraduationCap className="h-4 w-4 text-primary" /> Formação Acadêmica
+            <GraduationCap className="h-4 w-4 text-primary" /> Formação acadêmica
           </h3>
         </div>
         <Button size="sm" onClick={add} className="h-10 font-medium text-xs gap-2 shadow-lg hover:scale-105 transition-all">
@@ -40,7 +40,7 @@ export function EducationForm({ data, onChange }: { data: PortfolioData; onChang
 
             <div className="space-y-4">
               <div className="space-y-2">
-                  <Label className="text-xs font-medium text-muted-foreground/60">Instituição de Ensino</Label>
+                  <Label className="text-xs font-medium text-muted-foreground/60">Instituição de ensino</Label>
                   <Input value={edu.institution} onChange={e => update(edu.id, 'institution', e.target.value)} placeholder="Ex: Universidade XYZ" className="font-bold" />
               </div>
               <div className="space-y-2">

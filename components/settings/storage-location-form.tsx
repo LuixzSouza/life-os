@@ -42,7 +42,7 @@ export function StorageLocationForm({ currentPath }: { currentPath?: string }) {
                             <HardDrive className="h-6 w-6" />
                         </div>
                         <div className="space-y-1">
-                            <h4 className="font-semibold text-foreground">Localização do Banco de Dados</h4>
+                            <h4 className="font-semibold text-foreground">Localização do banco de dados</h4>
                             <p className="text-xs text-muted-foreground leading-relaxed max-w-md">
                                 Escolha uma <strong>pasta</strong> (HD, SSD, pen drive) para levar o banco
                                 para lá, ou aponte para um <strong>arquivo .db existente</strong> para

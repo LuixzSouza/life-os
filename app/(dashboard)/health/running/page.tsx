@@ -75,7 +75,7 @@ export default async function RunningPage() {
   if (hasError) {
     return (
       <ErrorState
-        title="Falha de Leitura"
+        title="Falha de leitura"
         description="Não foi possível sincronizar seu histórico de corridas no momento."
         backHref="/health"
         retryHref="/health/running"
@@ -88,7 +88,7 @@ export default async function RunningPage() {
     <PageShell>
       <PageHeader
         icon={<Footprints className="h-6 w-6" />}
-        title="Corrida & Cardio"
+        title="Corrida & cardio"
         description="Acompanhe seu pace, volume de treinamento e evolução."
         backHref="/health"
         backLabel="Voltar para Overview"

@@ -22,7 +22,7 @@ export function AccountsSection({ accounts }: AccountsSectionProps) {
       <div className="flex items-center justify-between mb-6 gap-3">
         <h3 className="text-xl font-extrabold text-foreground flex items-center gap-3">
           <div className="p-2 bg-primary/10 rounded-xl"><Wallet className="h-5 w-5 text-primary" /></div>
-          Minhas Contas
+          Minhas contas
         </h3>
         {accounts.length > 0 && (
           <Button
@@ -57,7 +57,7 @@ export function AccountsSection({ accounts }: AccountsSectionProps) {
                 onOpenChange={setIsAccountOpen}
                 trigger={
                   <Button className="h-10 px-8 font-bold shadow-lg shadow-primary/20 transition-all active:scale-95" onClick={() => setIsAccountOpen(true)}>
-                    <Plus className="h-4 w-4 mr-2" /> Criar Carteira
+                    <Plus className="h-4 w-4 mr-2" /> Criar carteira
                   </Button>
                 }
               />

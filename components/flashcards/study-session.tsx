@@ -466,11 +466,11 @@ export function StudySession({ deck, cards: initialCards, mode = "flip" }: Study
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md pt-6">
           <Link href="/flashcards" className="w-full">
              <Button variant="outline" size="lg" className="w-full h-14 text-base font-bold transition-all">
-                Sair para Biblioteca
+                Sair para biblioteca
              </Button>
           </Link>
           <Button onClick={restartFull} size="lg" className="w-full h-14 text-base font-bold shadow-xl shadow-primary/20 hover:scale-[1.02] transition-transform bg-primary text-primary-foreground">
-            <Repeat className="mr-2 h-5 w-5" /> Revisar Novamente
+            <Repeat className="mr-2 h-5 w-5" /> Revisar novamente
           </Button>
         </div>
       </div>

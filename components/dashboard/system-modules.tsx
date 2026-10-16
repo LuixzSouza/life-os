@@ -24,7 +24,7 @@ export function SystemModules({
     <div className="pt-6 border-t border-border/40">
       <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
         <Server className="h-5 w-5 text-muted-foreground" />
-        Módulos do Sistema
+        Módulos do sistema
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -62,7 +62,7 @@ export function SystemModules({
               <div className="text-2xl font-bold">{aiMessagesCount} <span className="text-sm font-normal text-muted-foreground">pings hoje</span></div>
             </div>
             <Link href="/ai" className="mt-4">
-              <Badge variant="outline" className="w-full justify-center hover:bg-muted py-1">Abrir Chat</Badge>
+              <Badge variant="outline" className="w-full justify-center hover:bg-muted py-1">Abrir chat</Badge>
             </Link>
           </CardContent>
         </Card>
@@ -89,9 +89,9 @@ export function SystemModules({
           <CardContent className="p-4 flex flex-col h-full">
             <div className="flex items-center justify-between mb-3">
               <span className="eyebrow text-muted-foreground flex items-center gap-1.5">
-                <LinkIcon className="h-3.5 w-3.5 text-indigo-500" /> Links Salvos
+                <LinkIcon className="h-3.5 w-3.5 text-indigo-500" /> Links salvos
               </span>
-              <Link href="/links" className="text-[10px] text-primary hover:underline">Ver Todos</Link>
+              <Link href="/links" className="text-[10px] text-primary hover:underline">Ver todos</Link>
             </div>
             <div className="space-y-2 flex-1">
               {recentLinks.length === 0 ? (

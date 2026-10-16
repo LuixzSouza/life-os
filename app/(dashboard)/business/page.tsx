@@ -125,7 +125,7 @@ export default async function BusinessPage() {
     <PageShell className="bg-background/50">
       <PageHeader
         icon={<Briefcase className="h-6 w-6" />}
-        title="Negócios & Clientes"
+        title="Negócios & clientes"
         description="Gestão financeira de clientes, cobranças e contratos."
         actions={<AskAiButton q="Como estão meus clientes? Alguma fatura vencida ou cobrança pendente?" label="Analisar com IA" />}
       />
@@ -139,7 +139,7 @@ export default async function BusinessPage() {
           {/* 1. O que já entrou no bolso */}
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-xs font-medium text-muted-foreground">Total Recebido</CardTitle>
+              <CardTitle className="text-xs font-medium text-muted-foreground">Total recebido</CardTitle>
               <Landmark className="h-4 w-4 text-muted-foreground/70" />
             </CardHeader>
             <CardContent>
@@ -152,7 +152,7 @@ export default async function BusinessPage() {
           {/* 2. O que tem pra receber (Saudável) */}
           <Card className="border-transparent bg-emerald-50/50 dark:bg-emerald-950/10">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-xs font-medium text-emerald-600 dark:text-emerald-400">A Receber</CardTitle>
+              <CardTitle className="text-xs font-medium text-emerald-600 dark:text-emerald-400">A receber</CardTitle>
               <Wallet className="h-4 w-4 text-emerald-500 opacity-70" />
             </CardHeader>
             <CardContent>
@@ -165,7 +165,7 @@ export default async function BusinessPage() {
           {/* 3. O que deu ruim (Atenção) */}
           <Card className={cn("shadow-sm border-transparent transition-colors", totalOverdue > 0 ? "bg-red-50 dark:bg-red-950/20" : "bg-muted/30")}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className={cn("text-xs font-medium", totalOverdue > 0 ? "text-red-600 dark:text-red-400" : "text-muted-foreground")}>Em Atraso</CardTitle>
+              <CardTitle className={cn("text-xs font-medium", totalOverdue > 0 ? "text-red-600 dark:text-red-400" : "text-muted-foreground")}>Em atraso</CardTitle>
               <AlertCircle className={cn("h-4 w-4 opacity-70", totalOverdue > 0 ? "text-red-500" : "text-muted-foreground")} />
             </CardHeader>
             <CardContent>
@@ -178,7 +178,7 @@ export default async function BusinessPage() {
           {/* 4. Operacional */}
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-xs font-medium text-muted-foreground">Contratos Ativos</CardTitle>
+              <CardTitle className="text-xs font-medium text-muted-foreground">Contratos ativos</CardTitle>
               <TrendingUp className="h-4 w-4 text-muted-foreground/70" />
             </CardHeader>
             <CardContent>
@@ -189,7 +189,7 @@ export default async function BusinessPage() {
           {/* 5. Clientes */}
           <Card className="hidden md:block">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-xs font-medium text-muted-foreground">Base de Clientes</CardTitle>
+              <CardTitle className="text-xs font-medium text-muted-foreground">Base de clientes</CardTitle>
               <Users className="h-4 w-4 text-muted-foreground/70" />
             </CardHeader>
             <CardContent>

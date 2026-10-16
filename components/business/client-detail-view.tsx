@@ -188,7 +188,7 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
       {/* CABEÇALHO DO CLIENTE */}
       <div className="flex flex-col gap-4">
         <Link href="/business" className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors w-fit">
-          <ArrowLeft size={16} /> Voltar para Negócios
+          <ArrowLeft size={16} /> Voltar para negócios
         </Link>
 
         <div className="flex justify-between items-start gap-4 rounded-2xl border border-border/40 bg-card/50 p-5 sm:p-6 shadow-sm">
@@ -255,7 +255,7 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 rounded-xl shadow-xl">
               <DropdownMenuItem onClick={() => { setEditingClient(client); setPhoneValue(maskPhone(client.phone || "")); setIsClientModalOpen(true); }} className="cursor-pointer">
-                <Pencil className="mr-2 h-4 w-4" /> Editar Cliente
+                <Pencil className="mr-2 h-4 w-4" /> Editar cliente
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => setConnClient({ id: client.id, title: client.name })} className="cursor-pointer">
                 <TagIcon className="mr-2 h-4 w-4" /> Tags & Anexos
@@ -265,7 +265,7 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
                 className="text-destructive focus:text-destructive focus:bg-destructive/10 cursor-pointer"
                 onClick={() => setDeleteTarget({ type: 'CLIENT', id: client.id, name: client.name })}
               >
-                <Trash2 className="mr-2 h-4 w-4" /> Excluir Cliente
+                <Trash2 className="mr-2 h-4 w-4" /> Excluir cliente
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -275,15 +275,15 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
       {/* RESUMO FINANCEIRO */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="rounded-2xl border border-border/40 bg-card p-4 shadow-sm">
-          <p className="text-xs font-medium text-muted-foreground">Total Recebido</p>
+          <p className="text-xs font-medium text-muted-foreground">Total recebido</p>
           <p className="text-xl font-bold font-mono text-foreground mt-1">{formatCurrency(earned)}</p>
         </div>
         <div className="rounded-2xl border border-transparent bg-emerald-50/50 dark:bg-emerald-950/10 p-4 shadow-sm">
-          <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400">A Receber</p>
+          <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400">A receber</p>
           <p className="text-xl font-bold font-mono text-emerald-700 dark:text-emerald-300 mt-1">{formatCurrency(receivable)}</p>
         </div>
         <div className={cn("rounded-2xl border border-transparent p-4 shadow-sm", overdue > 0 ? "bg-red-50 dark:bg-red-950/20" : "bg-muted/30")}>
-          <p className={cn("text-xs font-medium", overdue > 0 ? "text-red-600 dark:text-red-400" : "text-muted-foreground")}>Em Atraso</p>
+          <p className={cn("text-xs font-medium", overdue > 0 ? "text-red-600 dark:text-red-400" : "text-muted-foreground")}>Em atraso</p>
           <p className={cn("text-xl font-bold font-mono mt-1", overdue > 0 ? "text-red-700 dark:text-red-300" : "text-muted-foreground/60")}>{formatCurrency(overdue)}</p>
         </div>
       </div>
@@ -310,7 +310,7 @@ export function ClientDetailView({ client, accounts, friends, pixKey, businessNa
             endereço, notas). Editáveis pelo menu ⋯ → Editar Cliente. */}
         <div className="rounded-2xl border border-border/40 bg-card/50 p-5 sm:p-6 shadow-sm space-y-4">
           <span className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-            <IdCard size={12} className="text-primary/60" /> Ficha do Cliente
+            <IdCard size={12} className="text-primary/60" /> Ficha do cliente
           </span>
 
           <div className="space-y-3">

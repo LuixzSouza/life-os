@@ -36,14 +36,14 @@ export function DevilsAdvocateButton({ input }: { input: AdvocateInput }) {
         onClick={summon}
         className="w-full gap-1.5 border-rose-500/30 text-rose-500 hover:bg-rose-500/10 hover:text-rose-500"
       >
-        <Scale className="h-3.5 w-3.5" /> Ouvir o Advogado do Diabo
+        <Scale className="h-3.5 w-3.5" /> Ouvir o advogado do diabo
       </Button>
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent size="md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Flame className="h-4 w-4 text-rose-500" /> Advogado do Diabo
+              <Flame className="h-4 w-4 text-rose-500" /> Advogado do diabo
             </DialogTitle>
             <DialogDescription>
               Não sou eu falando — são os seus próprios argumentos.

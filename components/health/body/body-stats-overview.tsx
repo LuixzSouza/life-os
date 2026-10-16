@@ -62,7 +62,7 @@ export function BodyStatsOverview({ stats, deviceMetrics = null, onEdit }: { sta
                     <div className="min-w-0">
                         <CardTitle className="flex items-center gap-2 text-sm font-semibold">
                             <div className="rounded-lg bg-primary/10 p-1.5 text-primary"><Scale className="h-4 w-4" /></div>
-                            Composição Corporal
+                            Composição corporal
                             <MetricExplainer
                                 title="% de Gordura Corporal (fórmula Naval)"
                                 whatItIs="A fatia do seu peso que é gordura. É calculada a partir das medidas de pescoço, cintura e quadril (o método usado pela Marinha dos EUA)."

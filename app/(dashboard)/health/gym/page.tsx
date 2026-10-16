@@ -171,7 +171,7 @@ export default async function GymPage() {
   if (hasError) {
     return (
       <ErrorState
-        title="Falha de Leitura"
+        title="Falha de leitura"
         description="Não foi possível sincronizar seu histórico de treinos no momento."
         backHref="/health"
         retryHref="/health/gym"
@@ -184,7 +184,7 @@ export default async function GymPage() {
     <PageShell>
       <PageHeader
         icon={<Dumbbell className="h-6 w-6" />}
-        title="Treino de Força"
+        title="Treino de força"
         description="Gestão de sobrecarga progressiva e histórico de sessões."
         backHref="/health"
         backLabel="Voltar para Overview"

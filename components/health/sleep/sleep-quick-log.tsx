@@ -133,7 +133,7 @@ export function SleepQuickLog({ data, goal }: { data: SleepEntry[]; goal: number
                 ))}
               </div>
               <p className="mt-2 text-[11px] text-muted-foreground">
-                Quer precisão? Use <span className="font-medium text-foreground/70">Registrar Noite</span> abaixo com os horários exatos.
+                Quer precisão? Use <span className="font-medium text-foreground/70">Registrar noite</span> abaixo com os horários exatos.
               </p>
             </>
           ) : (

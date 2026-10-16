@@ -135,7 +135,7 @@ export function ClientModal({ open, onOpenChange, editingClient, friends, phoneV
                       </div>
                     </div>
                     <div className="flex-1 space-y-1.5">
-                      <p className="text-[11px] font-bold text-foreground">Logo da Empresa</p>
+                      <p className="text-[11px] font-bold text-foreground">Logo da empresa</p>
                       <div className="flex gap-1.5">
                         <Button type="button" variant="outline" size="sm" className="h-8 text-[11px]" onClick={() => fileRef.current?.click()} disabled={uploading}>
                           <Upload className="h-3 w-3 mr-1" /> Enviar
@@ -151,7 +151,7 @@ export function ClientModal({ open, onOpenChange, editingClient, friends, phoneV
                   </div>
 
                   <div className="space-y-1.5">
-                      <Label className={labelCls}>Nome do Cliente</Label>
+                      <Label className={labelCls}>Nome do cliente</Label>
                       <Input name="name" defaultValue={editingClient?.name} required className={cn(inputCls, "font-medium")} />
                   </div>
 
@@ -251,7 +251,7 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
       <DialogContent size="md">
           <DialogHeader
             icon={<FileText className="h-5 w-5" />}
-            title="Novo Contrato"
+            title="Novo contrato"
             description="Defina o valor total e as parcelas."
           />
           <form action={async (fd) => {
@@ -267,13 +267,13 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
               <DialogBody className="space-y-5">
 
               <div className="space-y-1.5">
-                  <Label className="text-xs font-medium text-muted-foreground ml-1">Serviço ou Projeto</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Serviço ou projeto</Label>
                   <Input name="title" required placeholder="Ex: Consultoria Mensal" />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                      <Label className="text-xs font-medium text-muted-foreground ml-1">Valor Total</Label>
+                      <Label className="text-xs font-medium text-muted-foreground ml-1">Valor total</Label>
                       <div className="relative">
                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-muted-foreground">{symbol}</span>
                         <Input type="number" step="0.01" name="totalValue" required className="pl-9 font-mono text-lg" />
@@ -307,7 +307,7 @@ export function BillingModal({ clientId, onClose }: BillingModalProps) {
               </DialogBody>
 
               <DialogFooter>
-                  <SubmitButton className="w-full h-12 rounded-xl font-bold shadow-lg shadow-primary/20">Gerar Faturas</SubmitButton>
+                  <SubmitButton className="w-full h-12 rounded-xl font-bold shadow-lg shadow-primary/20">Gerar faturas</SubmitButton>
               </DialogFooter>
           </form>
       </DialogContent>
@@ -327,7 +327,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
       <DialogContent size="md">
           <DialogHeader
             icon={<Receipt className="h-5 w-5" />}
-            title="Ajustar Fatura"
+            title="Ajustar fatura"
             description="Modifique valores ou data desta parcela específica."
           />
           <form action={async (fd) => {
@@ -349,7 +349,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
 
               <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                      <Label className="text-xs font-medium text-muted-foreground ml-1">Valor Parcela</Label>
+                      <Label className="text-xs font-medium text-muted-foreground ml-1">Valor parcela</Label>
                       <Input type="number" step="0.01" name="value" defaultValue={invoice?.value} required className="font-mono" />
                   </div>
                   <div className="space-y-1.5">
@@ -377,7 +377,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
               </div>
 
               <div className="space-y-1.5">
-                  <Label className="text-xs font-medium text-muted-foreground ml-1">Status de Pagamento</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Status de pagamento</Label>
                   <Select name="status" defaultValue={invoice?.status || "PENDING"}>
                       <SelectTrigger>
                           <SelectValue />
@@ -400,7 +400,7 @@ export function InvoiceModal({ invoice, onClose }: InvoiceModalProps) {
               </DialogBody>
 
               <DialogFooter className="flex flex-col gap-3">
-                  <SubmitButton className="w-full h-12 rounded-xl font-bold">Salvar Ajuste</SubmitButton>
+                  <SubmitButton className="w-full h-12 rounded-xl font-bold">Salvar ajuste</SubmitButton>
                   {invoice?.status === 'PAID' && invoice?.paidAt && (
                       <p className="eyebrow text-center text-emerald-600">
                         Recebido em {new Date(invoice.paidAt).toLocaleDateString('pt-BR')}
@@ -425,7 +425,7 @@ export function BillingEditModal({ billing, onClose }: BillingEditModalProps) {
       <DialogContent size="md">
           <DialogHeader
             icon={<FileText className="h-5 w-5" />}
-            title="Editar Contrato"
+            title="Editar contrato"
             description="Mude o status geral deste projeto."
           />
           <form action={async (fd) => {
@@ -441,18 +441,18 @@ export function BillingEditModal({ billing, onClose }: BillingEditModalProps) {
               <DialogBody className="space-y-5">
 
               <div className="space-y-1.5">
-                  <Label className="text-xs font-medium text-muted-foreground ml-1">Título do Serviço</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Título do serviço</Label>
                   <Input name="title" defaultValue={billing?.title} required />
               </div>
 
               <div className="space-y-1.5">
-                  <Label className="text-xs font-medium text-muted-foreground ml-1">Status do Projeto</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Status do projeto</Label>
                   <Select name="status" defaultValue={billing?.status || "ACTIVE"}>
                       <SelectTrigger>
                           <SelectValue placeholder="Selecione..." />
                       </SelectTrigger>
                       <SelectContent className="rounded-xl z-[100]">
-                          <SelectItem value="ACTIVE">Em Andamento</SelectItem>
+                          <SelectItem value="ACTIVE">Em andamento</SelectItem>
                           <SelectItem value="COMPLETED">Concluído</SelectItem>
                           <SelectItem value="CANCELED">Cancelado</SelectItem>
                       </SelectContent>
@@ -494,7 +494,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
           <DialogHeader
             icon={<Wallet className="h-5 w-5" />}
             iconClassName="bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
-            title="Registrar Recebimento"
+            title="Registrar recebimento"
             description={<>A entrada de <strong className="text-emerald-600">{invoice ? formatCurrency(invoice.value) : ""}</strong> será lançada como receita na conta escolhida.</>}
           />
 
@@ -512,7 +512,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
             }} className="flex flex-col flex-1 min-h-0">
                 <DialogBody className="space-y-5">
                 <div className="space-y-1.5">
-                    <Label className="text-xs font-medium text-muted-foreground ml-1">Conta de Destino</Label>
+                    <Label className="text-xs font-medium text-muted-foreground ml-1">Conta de destino</Label>
                     <Select value={accountId} onValueChange={setAccountId}>
                         <SelectTrigger>
                             <SelectValue placeholder="Selecione a conta..." />
@@ -534,7 +534,7 @@ export function PaymentModal({ invoice, accounts, onClose }: PaymentModalProps) 
                 <DialogFooter>
                     <Button type="button" variant="ghost" onClick={onClose}>Cancelar</Button>
                     <SubmitButton className="rounded-xl px-8 font-bold bg-emerald-600 hover:bg-emerald-700 shadow-lg shadow-emerald-600/20">
-                      Confirmar Recebimento
+                      Confirmar recebimento
                     </SubmitButton>
                 </DialogFooter>
             </form>
@@ -569,7 +569,7 @@ export function AddInvoiceModal({ billing, onClose }: AddInvoiceModalProps) {
       <DialogContent size="md">
         <DialogHeader
           icon={<Receipt className="h-5 w-5" />}
-          title="Nova Parcela"
+          title="Nova parcela"
           description={billing ? `Adicionar fatura avulsa em "${billing.title}" (aditivo, hora extra, ajuste).` : ""}
         />
         <form action={async (fd) => {
@@ -605,7 +605,7 @@ export function AddInvoiceModal({ billing, onClose }: AddInvoiceModalProps) {
           </DialogBody>
 
           <DialogFooter>
-            <SubmitButton className="w-full h-12 rounded-xl font-bold">Adicionar Parcela</SubmitButton>
+            <SubmitButton className="w-full h-12 rounded-xl font-bold">Adicionar parcela</SubmitButton>
           </DialogFooter>
         </form>
       </DialogContent>
@@ -655,7 +655,7 @@ export function DeleteAlert({ target, onClose, onConfirm }: DeleteAlertProps) {
 
         <AlertDialogFooter className="mt-8 flex flex-col sm:flex-row gap-3">
           <AlertDialogCancel className="rounded-xl h-12 font-bold border-border/60 hover:bg-muted transition-all sm:flex-1">
-            Manter Dados
+            Manter dados
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={onConfirm}

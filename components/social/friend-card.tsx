@@ -74,7 +74,7 @@ export function FriendCard({ friend, lastContactAt, onContact, onSelect, onEdit,
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-40 rounded-xl shadow-xl">
                 <DropdownMenuItem className="text-xs font-medium cursor-pointer" onClick={() => onEdit(friend)}>
-                  <Pencil className="h-3.5 w-3.5 mr-2" /> Editar Perfil
+                  <Pencil className="h-3.5 w-3.5 mr-2" /> Editar perfil
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-xs font-medium cursor-pointer">
                   <Link href={`/social/celebrar/${friend.id}`}>
@@ -85,7 +85,7 @@ export function FriendCard({ friend, lastContactAt, onContact, onSelect, onEdit,
                   <TagIcon className="h-3.5 w-3.5 mr-2" /> Tags & Anexos
                 </DropdownMenuItem>
                 <DropdownMenuItem className="text-destructive focus:bg-destructive/10 text-xs font-medium cursor-pointer" onClick={() => onDelete({ id: friend.id!, name: friend.name })}>
-                  <Trash2 className="h-3.5 w-3.5 mr-2" /> Excluir Contato
+                  <Trash2 className="h-3.5 w-3.5 mr-2" /> Excluir contato
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

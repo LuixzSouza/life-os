@@ -178,7 +178,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
             {/* CAMPO CONDICIONAL: CLIENTE */}
             {accessType === "CLIENT" && (
                 <div className="space-y-2 animate-in slide-in-from-top-4 duration-300">
-                    <Label className="text-xs font-medium text-muted-foreground ml-1">Identificação do Cliente</Label>
+                    <Label className="text-xs font-medium text-muted-foreground ml-1">Identificação do cliente</Label>
                     <div className="relative group">
                         <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary group-focus-within:text-primary transition-colors z-10" />
                         <Input
@@ -211,7 +211,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
               </div>
 
               <div className="space-y-2">
-                  <Label className="text-xs font-medium text-muted-foreground ml-1">Categoria de Segurança</Label>
+                  <Label className="text-xs font-medium text-muted-foreground ml-1">Categoria de segurança</Label>
                   <Select name="category" defaultValue={item?.category ?? (accessType === "CLIENT" ? "WORK" : "SOCIAL")}>
                     <SelectTrigger className="eyebrow">
                         <SelectValue />
@@ -246,7 +246,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
             {/* SENHA & GERADOR */}
             <div className="space-y-2 p-4 bg-muted/10 rounded-2xl border border-border/40 shadow-inner">
               <div className="flex justify-between items-center mb-1">
-                  <Label className="text-xs font-medium text-muted-foreground">Chave de Acesso</Label>
+                  <Label className="text-xs font-medium text-muted-foreground">Chave de acesso</Label>
                   <div className="flex items-center gap-1.5 text-xs font-medium text-emerald-500 bg-emerald-500/5 px-2 py-0.5 rounded-full border border-emerald-500/20">
                       <ShieldCheck className="h-3 w-3" /> Criptografado
                   </div>
@@ -371,7 +371,7 @@ export function AccessForm({ item, onClose }: AccessFormProps) {
               </Button>
               <Button 
                 type="submit" 
-                className="flex-[2] h-10 bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs shadow-lg transition-all active:scale-95"
+                className="flex-[2] h-10 font-medium text-xs transition-all active:scale-95"
               >
                 {isLoading ? (
                   <Loader2 className="h-4 w-4 animate-spin" />

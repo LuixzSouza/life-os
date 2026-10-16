@@ -192,7 +192,7 @@ export function TransactionsView({
                         <div className="flex justify-between items-start mb-6">
                             <div>
                                 <h3 className="text-sm font-extrabold flex items-center gap-2">
-                                    <BarChart3 className="h-4 w-4 text-primary" /> Fluxo Mensal
+                                    <BarChart3 className="h-4 w-4 text-primary" /> Fluxo mensal
                                 </h3>
                                 <p className="text-xs text-muted-foreground font-medium mt-1">Receitas × despesas dos últimos 6 meses</p>
                             </div>
@@ -297,7 +297,7 @@ export function TransactionsView({
                                 <SelectValue placeholder="Carteira" />
                             </SelectTrigger>
                             <SelectContent className="rounded-xl font-medium">
-                                <SelectItem value="ALL">Todas as Contas</SelectItem>
+                                <SelectItem value="ALL">Todas as contas</SelectItem>
                                 {accounts.map(acc => (
                                     <SelectItem key={acc.id} value={acc.id}>{acc.name}</SelectItem>
                                 ))}
@@ -313,7 +313,7 @@ export function TransactionsView({
                                     </div>
                                 </SelectTrigger>
                                 <SelectContent className="rounded-xl font-medium max-h-72">
-                                    <SelectItem value="ALL">Todas as Categorias</SelectItem>
+                                    <SelectItem value="ALL">Todas as categorias</SelectItem>
                                     {categories.map((c) => (
                                         <SelectItem key={c} value={c}>{c}</SelectItem>
                                     ))}

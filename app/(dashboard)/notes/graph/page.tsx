@@ -15,7 +15,7 @@ export default async function NoteGraphPage() {
     <PageShell>
       <PageHeader
         icon={<Network className="h-5 w-5" />}
-        title="Grafo de Conexões"
+        title="Grafo de conexões"
         description="Seu segundo cérebro visto de cima: cada nota é um nó; links no texto e Conexões viram fios."
         actions={
           <Button asChild variant="outline" size="sm">

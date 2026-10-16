@@ -53,7 +53,7 @@ export function RoutineGrid({ items, isToday = false }: { items: RoutineItem[]; 
     return (
       <div className="flex flex-col items-center justify-center h-full py-20 text-muted-foreground/40 text-center">
         <Sun className="h-16 w-16 mb-4 opacity-50" />
-        <h4 className="text-xl font-semibold text-foreground/50">Dia Livre</h4>
+        <h4 className="text-xl font-semibold text-foreground/50">Dia livre</h4>
         <p className="eyebrow mt-2">Nenhum protocolo para hoje</p>
       </div>
     );

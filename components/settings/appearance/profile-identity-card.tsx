@@ -189,7 +189,7 @@ export function ProfileIdentityCard({
           <div className="flex-1 w-full pt-4 md:pt-20 space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="name" className="flex items-center gap-2 text-muted-foreground"><User className="h-3.5 w-3.5" /> Nome de Exibição</Label>
+                <Label htmlFor="name" className="flex items-center gap-2 text-muted-foreground"><User className="h-3.5 w-3.5" /> Nome de exibição</Label>
                 <Input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} className="focus-visible:ring-primary" />
               </div>
               <div className="space-y-2">

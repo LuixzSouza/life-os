@@ -110,7 +110,7 @@ export function RealFixedIncome({ cdi, ipca, tesouro }: RealFixedIncomeProps) {
       <section className="border-t border-border/40 pt-8">
         <h3 className="mb-6 flex items-center gap-3 text-sm font-extrabold uppercase tracking-widest text-foreground">
           <div className="rounded-md bg-primary/10 p-1.5 text-primary"><Info className="h-4 w-4" /></div>
-          Glossário do Investidor
+          Glossário do investidor
         </h3>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {Object.entries(GLOSSARY).map(([term, def]) => (

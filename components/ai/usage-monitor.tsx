@@ -124,7 +124,7 @@ function UsageItem({ icon, label, used, limit, colorClass, textColorClass }: Usa
                 {/* Header do Card */}
                 <div className="flex items-center justify-between p-4 border-b border-border/40 bg-muted/10">
                     <h4 className="text-xs font-medium flex items-center gap-2 text-muted-foreground">
-                        <Cpu className="h-4 w-4" /> Uso de Tokens
+                        <Cpu className="h-4 w-4" /> Uso de tokens
                     </h4>
                     <span className={cn(
                         "eyebrow px-2 py-1 rounded-full text-background shadow-sm", 

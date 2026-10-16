@@ -46,7 +46,7 @@ export function IncomeDynamicsCard({
 
       <CardHeader className="pb-4 pt-8 px-8">
         <CardTitle className="text-2xl font-extrabold flex items-center gap-3">
-          <TrendingUp className="h-6 w-6 text-primary" /> Dinâmica de Renda
+          <TrendingUp className="h-6 w-6 text-primary" /> Dinâmica de renda
         </CardTitle>
       </CardHeader>
 
@@ -84,11 +84,11 @@ export function IncomeDynamicsCard({
 
         {/* DRE Simplificado */}
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-2 px-2">
-          <ValueRow label="Deduções e Impostos" value={metrics.taxes} isNegative tooltip={TOOLTIPS.deducoes} isSmartView={smartView} />
-          <ValueRow label="Renda Líquida Real" value={netSalary} isTotal tooltip={TOOLTIPS.salarioLiquido} isSmartView={smartView} />
+          <ValueRow label="Deduções e impostos" value={metrics.taxes} isNegative tooltip={TOOLTIPS.deducoes} isSmartView={smartView} />
+          <ValueRow label="Renda líquida real" value={netSalary} isTotal tooltip={TOOLTIPS.salarioLiquido} isSmartView={smartView} />
           <Separator className="col-span-full my-3 md:hidden opacity-50" />
-          <ValueRow label="Custo de Vida Fixo" value={totalRecurring} isNegative tooltip={TOOLTIPS.custosFixos} isSmartView={smartView} />
-          <ValueRow label="Pagamento de Dívidas" value={totalPaidDebts} isNegative tooltip={TOOLTIPS.dividasPagas} isSmartView={smartView} />
+          <ValueRow label="Custo de vida fixo" value={totalRecurring} isNegative tooltip={TOOLTIPS.custosFixos} isSmartView={smartView} />
+          <ValueRow label="Pagamento de dívidas" value={totalPaidDebts} isNegative tooltip={TOOLTIPS.dividasPagas} isSmartView={smartView} />
         </div>
 
         {/* Resultado Final (Caixa Forte) */}
@@ -100,7 +100,7 @@ export function IncomeDynamicsCard({
           </div>
           <div className="relative z-10 mb-3 sm:mb-0">
             <p className="text-lg sm:text-xl font-black text-foreground flex items-center gap-2">
-              Fluxo de Caixa Livre <ArrowRight className="h-5 w-5 opacity-40" />
+              Fluxo de caixa livre <ArrowRight className="h-5 w-5 opacity-40" />
             </p>
             <p className="eyebrow text-muted-foreground mt-1">Sua capacidade real de aporte e lazer</p>
           </div>

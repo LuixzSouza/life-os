@@ -55,7 +55,7 @@ export function WardrobeListToolbar({
             onClick={onToggleOutfitMode}
             className={cn("h-11 transition-all rounded-xl px-4", isBuildingOutfit ? "bg-primary text-primary-foreground border-primary" : "border-border/50")}
           >
-            <Sparkles className="h-4 w-4 mr-2" /> Montar Look
+            <Sparkles className="h-4 w-4 mr-2" /> Montar look
           </Button>
 
           {/* Filtro de Lavanderia */}

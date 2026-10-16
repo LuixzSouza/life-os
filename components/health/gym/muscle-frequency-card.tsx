@@ -16,7 +16,7 @@ export function MuscleFrequencyCard({ distribution }: MuscleFrequencyCardProps) 
       <CardHeader className="pb-3 border-b border-border/40 bg-muted/10">
         <CardTitle className="text-sm font-semibold text-muted-foreground flex items-center gap-2">
           <BicepsFlexed className="h-4 w-4 text-primary" />
-          Grupos Musculares
+          Grupos musculares
         </CardTitle>
       </CardHeader>
       <CardContent className="pt-4 space-y-3">

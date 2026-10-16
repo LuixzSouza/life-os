@@ -13,7 +13,7 @@ export function ProjectsCard({ projects }: ProjectsCardProps) {
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-4">
         <CardTitle className="text-sm flex items-center gap-2">
-          <Target className="h-4 w-4 text-muted-foreground" /> Projetos Pessoais
+          <Target className="h-4 w-4 text-muted-foreground" /> Projetos pessoais
         </CardTitle>
         <Link href="/projects" className="text-xs text-primary hover:underline">Ver tudo</Link>
       </CardHeader>

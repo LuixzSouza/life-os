@@ -276,7 +276,7 @@ export default async function ReviewPage({
   if (!stats || !prev) {
     return (
       <ErrorState
-        title="Falha de Leitura"
+        title="Falha de leitura"
         description="Não foi possível montar a retrospectiva do mês agora."
         backHref="/dashboard"
         retryHref="/review"

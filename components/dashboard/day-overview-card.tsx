@@ -51,7 +51,7 @@ export function DayOverviewCard({ consumed, goal, workoutBurn, recovery }: DayOv
         >
           <div className="flex items-center justify-between">
             <span className="eyebrow flex items-center gap-2 text-muted-foreground">
-              <Flame className="h-4 w-4 text-orange-500" /> Energia do Dia
+              <Flame className="h-4 w-4 text-orange-500" /> Energia do dia
             </span>
             <ChevronRight className="h-4 w-4 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5" />
           </div>
@@ -97,7 +97,7 @@ export function DayOverviewCard({ consumed, goal, workoutBurn, recovery }: DayOv
         >
           <div className="flex items-center justify-between">
             <span className="eyebrow flex items-center gap-2 text-muted-foreground">
-              <BatteryCharging className="h-4 w-4 text-primary" /> Recuperação Muscular
+              <BatteryCharging className="h-4 w-4 text-primary" /> Recuperação muscular
             </span>
             <ChevronRight className="h-4 w-4 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5" />
           </div>

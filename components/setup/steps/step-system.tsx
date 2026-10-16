@@ -87,7 +87,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
           </p>
           <div className="grid gap-3 pt-1">
             <div className="grid gap-1.5">
-              <Label htmlFor="tursoUrl" className="text-[11px] font-semibold uppercase text-muted-foreground">URL do Banco</Label>
+              <Label htmlFor="tursoUrl" className="text-[11px] font-semibold uppercase text-muted-foreground">URL do banco</Label>
               <Input
                 id="tursoUrl"
                 value={formData.tursoUrl}
@@ -98,7 +98,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
             </div>
             <div className="grid gap-1.5">
               <Label htmlFor="tursoToken" className="text-[11px] font-semibold uppercase text-muted-foreground">
-                Token de Autenticação
+                Token de autenticação
               </Label>
               <Input
                 id="tursoToken"
@@ -178,7 +178,7 @@ export function StepSystem({ formData, setFormData, setDbProvider, dbFromEnv }: 
           </div>
           <div className="grid gap-1.5">
             <Label htmlFor="replicaToken" className="text-[11px] font-semibold uppercase text-muted-foreground">
-              Token de Autenticação
+              Token de autenticação
             </Label>
             <Input
               id="replicaToken"
@@ -558,7 +558,7 @@ function WorkPreferences({
   return (
     <div className="grid grid-cols-2 gap-6">
       <div className="space-y-2">
-        <Label>Horário de Trabalho</Label>
+        <Label>Horário de trabalho</Label>
         <div className="flex items-center gap-2">
           <Input type="time" value={formData.workStart} onChange={(e) => setFormData({ ...formData, workStart: e.target.value })} />
           <span className="text-muted-foreground text-sm">até</span>

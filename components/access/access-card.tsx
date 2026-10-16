@@ -152,7 +152,7 @@ export function AccessCard({ item, strength, reused = false, breachCount }: { it
 
         {/* --- FOOTER DE METADADOS --- */}
         <CardFooter className="px-6 py-4 bg-muted/10 border-t border-border/40 flex justify-between items-center gap-2">
-          <div className="flex items-center gap-1.5 text-muted-foreground shrink-0" title="Última Sincronização">
+          <div className="flex items-center gap-1.5 text-muted-foreground shrink-0" title="Última sincronização">
             <CalendarClock className="h-3 w-3 opacity-60" />
             <span className="text-[11px] font-medium">{formatDate(item.updatedAt || new Date())}</span>
           </div>

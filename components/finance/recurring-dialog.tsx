@@ -161,7 +161,7 @@ export function RecurringDialog({ trigger, item }: RecurringDialogProps) {
                     <form action={handleSubmit} className="flex flex-col flex-1 min-h-0" noValidate>
                         <DialogBody className="space-y-5">
                         <div className="space-y-2">
-                            <Label className="text-xs font-medium text-muted-foreground ml-1">Nome da Despesa</Label>
+                            <Label className="text-xs font-medium text-muted-foreground ml-1">Nome da despesa</Label>
                             <Input name="title" placeholder="Ex: Netflix, Internet, Aluguel..." defaultValue={item?.title} required className="font-medium" />
                         </div>
 
@@ -233,7 +233,7 @@ export function RecurringDialog({ trigger, item }: RecurringDialogProps) {
                             <div className="grid grid-cols-2 gap-4">
                                 {frequency === "MONTHLY" ? (
                                     <div className="space-y-2">
-                                        <Label className="text-xs font-medium text-muted-foreground ml-1">Dia do Vencimento</Label>
+                                        <Label className="text-xs font-medium text-muted-foreground ml-1">Dia do vencimento</Label>
                                         <Input name="dayOfMonth" type="number" min="1" max="31" placeholder="Dia (1-31)" defaultValue={item?.dayOfMonth} required className="font-mono font-bold" />
                                     </div>
                                 ) : (

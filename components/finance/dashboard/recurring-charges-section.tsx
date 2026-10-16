@@ -23,7 +23,7 @@ export function RecurringChargesSection({ charges, totalCharges, clients }: Recu
       <div className="flex items-center justify-between gap-3">
         <h3 className="text-xl font-extrabold text-foreground flex items-center gap-3">
           <div className="p-2 bg-emerald-500/10 rounded-xl"><HandCoins className="h-5 w-5 text-emerald-600" /></div>
-          Cobranças Recorrentes
+          Cobranças recorrentes
         </h3>
         <RecurringChargeDialog clients={clients} trigger={
           <Button variant="outline" size="sm" className="gap-2 font-bold shrink-0 hover:border-emerald-500/50 hover:text-emerald-600 transition-all active:scale-95">
@@ -64,7 +64,7 @@ function RecurringChargesCard({ total, items, clients }: { total: number; items:
       <div className="p-6 border-b border-border/40 flex justify-between items-start bg-gradient-to-br from-emerald-500/5 to-background">
         <div>
           <p className="text-xs text-muted-foreground font-medium mb-1">
-            Receita Recorrente Mensal
+            Receita recorrente mensal
           </p>
           <h3 className={cn("text-3xl font-black text-emerald-600 tracking-tighter", smartView && "blur-md select-none")}>
             {formatMoney(total)}

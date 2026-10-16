@@ -178,7 +178,7 @@ export function HealthActions() {
                 {showGym && (
                 <Button className="h-9 gap-2 font-medium shadow-sm" onClick={() => setGymOpen(true)}>
                     <Plus className="h-4 w-4" />
-                    Registrar Treino
+                    Registrar treino
                 </Button>
                 )}
                 {showRun && (
@@ -188,7 +188,7 @@ export function HealthActions() {
                     onClick={() => setRunOpen(true)}
                 >
                     <Timer className="h-4 w-4 text-blue-500" />
-                    Nova Corrida
+                    Nova corrida
                 </Button>
                 )}
             </div>
@@ -197,7 +197,7 @@ export function HealthActions() {
             <Dialog open={gymOpen} onOpenChange={setGymOpen}>
                 <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden">
                     <DialogHeader className="px-6 pt-6 pb-2">
-                        <DialogTitle className="text-xl">Novo Treino</DialogTitle>
+                        <DialogTitle className="text-xl">Novo treino</DialogTitle>
                         <DialogDescription>
                             Preencha os detalhes da sua sessão de musculação.
                         </DialogDescription>
@@ -212,7 +212,7 @@ export function HealthActions() {
             <Dialog open={runOpen} onOpenChange={setRunOpen}>
                 <DialogContent className="sm:max-w-[450px] p-0 overflow-hidden">
                     <DialogHeader className="px-6 pt-6 pb-2">
-                        <DialogTitle className="text-xl">Registrar Corrida</DialogTitle>
+                        <DialogTitle className="text-xl">Registrar corrida</DialogTitle>
                         <DialogDescription>
                             Adicione as métricas de tempo e distância do seu cardio.
                         </DialogDescription>

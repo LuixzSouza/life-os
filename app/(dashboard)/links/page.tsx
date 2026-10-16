@@ -21,14 +21,11 @@ export default async function LinksPage() {
     <PageShell>
       <PageHeader
         icon={<Link2 className="h-6 w-6" />}
-        title="Biblioteca de Links"
-        description="Centralize recursos importantes, referências e ferramentas para acesso rápido e organizado."
+        title="Biblioteca de links"
+        // Contagem no subtítulo (padrão de Projetos), não em caixas no cabeçalho.
+        description={`${links.length} ${links.length === 1 ? "link" : "links"} · ${categoryCount} ${categoryCount === 1 ? "categoria" : "categorias"}`}
         actions={
-          <div className="flex items-center gap-3">
-            <AskAiButton q="Organize minha biblioteca de links: o que está sem categoria ou parece duplicado?" label="Organizar com IA" />
-            <HeaderStat value={links.length} label="Links" />
-            <HeaderStat value={categoryCount} label="Categorias" />
-          </div>
+          <AskAiButton q="Organize minha biblioteca de links: o que está sem categoria ou parece duplicado?" label="Organizar com IA" />
         }
       />
 
@@ -39,13 +36,3 @@ export default async function LinksPage() {
   )
 }
 
-function HeaderStat({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="rounded-xl border border-border/60 bg-card px-5 py-3 text-center shadow-sm">
-      <span className="block text-2xl font-bold leading-none text-foreground">{value}</span>
-      <span className="eyebrow text-muted-foreground">
-        {label}
-      </span>
-    </div>
-  )
-}

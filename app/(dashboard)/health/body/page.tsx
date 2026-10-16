@@ -224,7 +224,7 @@ export default async function BodyPage() {
   if (hasError) {
     return (
       <ErrorState
-        title="Falha de Leitura"
+        title="Falha de leitura"
         description="Não foi possível recuperar suas métricas corporais no momento."
         backHref="/health"
         retryHref="/health/body"
@@ -236,7 +236,7 @@ export default async function BodyPage() {
     <PageShell>
       <PageHeader
         icon={<User className="h-6 w-6" />}
-        title="Composição Corporal"
+        title="Composição corporal"
         description="Acompanhamento de medidas, proporções e simetria."
         backHref="/health"
         backLabel="Voltar para Overview"

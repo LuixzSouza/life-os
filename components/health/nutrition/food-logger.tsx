@@ -171,7 +171,7 @@ export function FoodLogger({ meals, dailyGoal = 2000, workoutBurn = 0, missingKc
                 <div className="flex justify-between items-start">
                     <div className="space-y-1">
                         <h3 className="font-semibold text-sm flex items-center gap-2">
-                            <Utensils className="h-4 w-4 text-muted-foreground" /> Consumo Diário
+                            <Utensils className="h-4 w-4 text-muted-foreground" /> Consumo diário
                         </h3>
                         <p className="text-xs text-muted-foreground">{todayMeals.length} registros ativos hoje</p>
                     </div>

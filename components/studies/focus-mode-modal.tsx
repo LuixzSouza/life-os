@@ -155,7 +155,7 @@ export function FocusModeModal({ isOpen, subject, settings, preferences, onFinis
           onEscapeKeyDown={(e) => { e.preventDefault(); handleAttemptExit(); }}
       >
           <DialogHeader className="sr-only">
-              <DialogTitle>Modo Foco</DialogTitle>
+              <DialogTitle>Modo foco</DialogTitle>
               <DialogDescription>Concentre-se nos estudos.</DialogDescription>
           </DialogHeader>
 
@@ -171,7 +171,7 @@ export function FocusModeModal({ isOpen, subject, settings, preferences, onFinis
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
                       <Button variant="outline" size="lg" className="flex-1 h-14 text-base" onClick={handleResumeFromExit}>
-                          Voltar ao Foco
+                          Voltar ao foco
                       </Button>
                       <Button variant="destructive" size="lg" className="flex-1 h-14 text-base" onClick={onAbort}>
                           Sair sem salvar
@@ -222,7 +222,7 @@ export function FocusModeModal({ isOpen, subject, settings, preferences, onFinis
                                 <div className="p-6 rounded-full bg-primary/5 mb-4 animate-pulse">
                                     <BrainCircuit className="h-16 w-16 text-primary/70" />
                                 </div>
-                                <span className="text-sm font-bold tracking-widest uppercase text-primary/70">Foco Profundo</span>
+                                <span className="text-sm font-bold tracking-widest uppercase text-primary/70">Foco profundo</span>
                                 <span className="text-[10px] text-muted-foreground mt-2">O tempo está rodando...</span>
                             </div>
                         ) : (
@@ -255,7 +255,7 @@ export function FocusModeModal({ isOpen, subject, settings, preferences, onFinis
                       <div className="p-4 md:p-6 border-b border-border/40 flex items-center gap-3 shrink-0 bg-muted/10">
                           <div className="p-2 bg-primary/10 rounded-lg text-primary hidden md:block"><PenTool className="h-5 w-5" /></div>
                           <div>
-                              <h3 className="font-bold text-sm md:text-base">Caderno ao Vivo</h3>
+                              <h3 className="font-bold text-sm md:text-base">Caderno ao vivo</h3>
                               <p className="text-[10px] md:text-xs text-muted-foreground">Anote insights sem perder o foco.</p>
                           </div>
                       </div>
@@ -277,7 +277,7 @@ export function FocusModeModal({ isOpen, subject, settings, preferences, onFinis
                               <strong className="text-foreground">{Math.floor((totalFocusElapsed + (isBreak ? 0 : settings.focus - seconds)) / 60)}min</strong>
                           </p>
                           <Button onClick={handleFinish} size="sm" className="bg-gradient-to-r from-primary to-primary shadow-lg shadow-primary/20 gap-2 h-10 md:h-11 px-4 md:px-6">
-                              <CheckCircle2 className="h-4 w-4" /> Finalizar Sessão
+                              <CheckCircle2 className="h-4 w-4" /> Finalizar sessão
                           </Button>
                       </div>
                   </div>

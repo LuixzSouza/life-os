@@ -34,13 +34,13 @@ export function TaskSelect({ value, buildUrl }: TaskSelectProps) {
         <SelectItem value="dueDate">
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4" />
-            Data de Vencimento
+            Data de vencimento
           </div>
         </SelectItem>
         <SelectItem value="createdAt">
           <div className="flex items-center gap-2">
             <Clock className="h-4 w-4" />
-            Data de Criação
+            Data de criação
           </div>
         </SelectItem>
         <SelectItem value="title">

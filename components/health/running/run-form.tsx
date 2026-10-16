@@ -199,7 +199,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
       <div className="bg-primary/5 p-4 rounded-xl border border-primary/10 flex divide-x divide-primary/10">
         <div className="flex-1 flex flex-col items-center justify-center gap-1">
           <span className="eyebrow text-primary/60 flex items-center gap-1.5">
-            <Gauge className="h-3 w-3" /> Pace Médio
+            <Gauge className="h-3 w-3" /> Pace médio
           </span>
           <div className="text-2xl font-black text-primary font-mono tracking-tight">
             {pace} <span className="text-[10px] font-bold opacity-60 -ml-1">/km</span>
@@ -219,7 +219,7 @@ export function RunForm({ onSuccess, onClose, initialData, bodyWeight, shoeOptio
       <div className="space-y-4 px-1">
         <div className="flex justify-between items-center">
           <Label className="eyebrow flex items-center gap-2 text-muted-foreground">
-            <Activity className="h-3.5 w-3.5 text-primary" /> Esforço Percebido
+            <Activity className="h-3.5 w-3.5 text-primary" /> Esforço percebido
           </Label>
           <span className={cn(
             "text-[10px] font-bold px-2 py-0.5 rounded-md text-white shadow-sm transition-all",

@@ -59,7 +59,7 @@ export function ExperienceForm({ data, onChange }: ExperienceFormProps) {
       <div className="flex justify-between items-end border-b border-border/40 pb-4">
         <div className="space-y-1">
           <h3 className="text-[11px] font-medium text-muted-foreground/80 flex items-center gap-2">
-            <Building2 className="h-4 w-4 text-primary" /> Histórico Profissional
+            <Building2 className="h-4 w-4 text-primary" /> Histórico profissional
           </h3>
           <p className="text-xs text-muted-foreground">Registre sua evolução de carreira.</p>
         </div>
@@ -108,21 +108,21 @@ export function ExperienceForm({ data, onChange }: ExperienceFormProps) {
                 />
               </div>
               <div className="space-y-2">
-                <Label className="text-xs font-medium text-muted-foreground/60">Cargo Ocupado</Label>
+                <Label className="text-xs font-medium text-muted-foreground/60">Cargo ocupado</Label>
                 <Input 
                   value={exp.role} onChange={(e) => updateExperience(exp.id, "role", e.target.value)} 
                   placeholder="Ex: Senior Developer"
                 />
               </div>
               <div className="space-y-2">
-                <Label className="text-xs font-medium text-muted-foreground/60">Período de Atuação</Label>
+                <Label className="text-xs font-medium text-muted-foreground/60">Período de atuação</Label>
                 <div className="flex gap-2">
                     <Input value={exp.startDate} onChange={(e) => updateExperience(exp.id, "startDate", e.target.value)} placeholder="Início" />
                     <Input value={exp.endDate} onChange={(e) => updateExperience(exp.id, "endDate", e.target.value)} placeholder="Fim (ou Atual)" />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label className="text-xs font-medium text-muted-foreground/60">Tecnologias Usadas</Label>
+                <Label className="text-xs font-medium text-muted-foreground/60">Tecnologias usadas</Label>
                 <Input 
                   defaultValue={exp.stack.join(", ")} onBlur={(e) => handleStackChange(exp.id, e.target.value)} 
                   placeholder="React, Node.js, AWS (separadas por vírgula)" className="font-mono text-xs"
@@ -130,7 +130,7 @@ export function ExperienceForm({ data, onChange }: ExperienceFormProps) {
               </div>
               
               <div className="col-span-1 md:col-span-2 space-y-2 pt-2">
-                <Label className="text-xs font-medium text-muted-foreground/60">Resumo da Responsabilidade</Label>
+                <Label className="text-xs font-medium text-muted-foreground/60">Resumo da responsabilidade</Label>
                 <SmartTextarea
                   label={`Resumo — ${exp.role || "experiência"}`}
                   value={exp.summary}
@@ -144,7 +144,7 @@ export function ExperienceForm({ data, onChange }: ExperienceFormProps) {
 
               <div className="col-span-1 md:col-span-2 space-y-2 bg-primary/5 p-4 rounded-2xl border border-primary/10">
                 <Label className="text-xs font-medium text-primary flex justify-between">
-                  <span>Conquistas e Métricas</span>
+                  <span>Conquistas e métricas</span>
                   <span className="text-muted-foreground/50 lowercase font-medium tracking-normal text-xs">Uma por linha · ✨ para a IA melhorar</span>
                 </Label>
                 <SmartTextarea

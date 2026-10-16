@@ -69,7 +69,7 @@ export function BodyEvolutionChart({ data }: { data: BodyEvolutionPoint[] }) {
       <CardHeader className="pb-2 border-b border-border/40 bg-muted/20">
         <div className="flex flex-wrap items-center justify-between gap-3 py-1">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
-            <LineChartIcon className="h-4 w-4 text-primary" /> Evolução Corporal
+            <LineChartIcon className="h-4 w-4 text-primary" /> Evolução corporal
           </CardTitle>
           {enoughPoints && (
             <div className="flex items-center gap-6">

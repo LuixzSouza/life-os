@@ -44,7 +44,7 @@ export function StorageAnalytics({ stats }: { stats: StorageStats }) {
                     <div className="space-y-1">
                         <CardTitle className="text-base font-semibold flex items-center gap-2">
                             <Database className="h-4 w-4 text-primary" /> 
-                            Uso de Dados
+                            Uso de dados
                         </CardTitle>
                         <CardDescription>Gerenciamento de espaço do banco de dados.</CardDescription>
                     </div>

@@ -196,7 +196,7 @@ export function AccountDialog({
           <DialogBody className="space-y-5">
           <div className="space-y-2">
             <Label className="text-xs font-medium text-muted-foreground ml-1">
-              Nome da Conta
+              Nome da conta
             </Label>
 
             <Input
@@ -220,10 +220,10 @@ export function AccountDialog({
                 </SelectTrigger>
 
                 <SelectContent className="rounded-xl z-[100]">
-                  <SelectItem value="CHECKING">Conta Corrente</SelectItem>
+                  <SelectItem value="CHECKING">Conta corrente</SelectItem>
                   <SelectItem value="SAVINGS">Poupança</SelectItem>
                   <SelectItem value="INVESTMENT">Investimento</SelectItem>
-                  <SelectItem value="CASH">Dinheiro Físico</SelectItem>
+                  <SelectItem value="CASH">Dinheiro físico</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -253,7 +253,7 @@ export function AccountDialog({
 
           <div className="space-y-3">
             <Label className="text-xs font-medium text-muted-foreground ml-1">
-              Identidade Visual
+              Identidade visual
             </Label>
 
             <div className="flex flex-wrap gap-3">

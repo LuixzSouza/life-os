@@ -89,9 +89,9 @@ export function SubjectGridToolbar({
             </div>
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="totalMinutes">Mais Focado</SelectItem>
+            <SelectItem value="totalMinutes">Mais focado</SelectItem>
             <SelectItem value="title">Ordem (A-Z)</SelectItem>
-            <SelectItem value="createdAt">Mais Recente</SelectItem>
+            <SelectItem value="createdAt">Mais recente</SelectItem>
           </SelectContent>
         </Select>
       </div>

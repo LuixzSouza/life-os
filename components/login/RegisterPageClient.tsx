@@ -184,7 +184,7 @@ export default function RegisterPageClient() {
                                 {capsLockOn && (
                                     <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -5 }}
                                         className="flex items-center gap-1.5 text-amber-500 text-xs font-medium">
-                                        <ArrowUp className="h-3 w-3" /> Caps Lock ativado
+                                        <ArrowUp className="h-3 w-3" /> Caps lock ativado
                                     </motion.div>
                                 )}
                             </AnimatePresence>
@@ -192,7 +192,7 @@ export default function RegisterPageClient() {
 
                         {/* Confirmar */}
                         <div className="space-y-2">
-                            <Label htmlFor="confirm" className="eyebrow text-muted-foreground">Confirmar Senha</Label>
+                            <Label htmlFor="confirm" className="eyebrow text-muted-foreground">Confirmar senha</Label>
                             <Input id="confirm" type={showPassword ? "text" : "password"} required autoComplete="new-password"
                                 disabled={isLoading} value={confirm} onChange={(e) => { setConfirm(e.target.value); clearError(); }}
                                 className={cn("h-12 bg-muted/40", pass && confirm && pass !== confirm && "border-destructive focus-visible:ring-destructive")} />

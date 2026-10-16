@@ -21,7 +21,7 @@ export function ThemePaletteCard({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Paleta de Cores</CardTitle>
+        <CardTitle>Paleta de cores</CardTitle>
         <CardDescription>Escolha um preset ou personalize a cor do sistema.</CardDescription>
       </CardHeader>
       <CardContent>
@@ -48,7 +48,7 @@ export function ThemePaletteCard({
               "cursor-pointer rounded-lg border-2 p-2 flex flex-col items-center gap-2 hover:bg-muted transition-all aspect-square justify-center relative group overflow-hidden",
               !isPreset ? "border-primary bg-primary/5 shadow-sm" : "border-transparent bg-muted/30"
             )}
-            title="Cor Personalizada"
+            title="Cor personalizada"
           >
             <div className="h-6 w-6 rounded-full shadow-sm ring-2 ring-offset-2 ring-transparent group-hover:scale-110 transition-transform flex items-center justify-center overflow-hidden relative">
               {!isPreset ? (

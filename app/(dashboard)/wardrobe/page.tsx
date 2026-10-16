@@ -138,7 +138,7 @@ export default async function WardrobePage() {
     <PageShell>
       <PageHeader
         icon={<Shirt className="h-6 w-6" />}
-        title="Closet & Acervo"
+        title="Closet & acervo"
         description="Gerencie suas peças, otimize seus looks e acompanhe o real custo por uso."
         actions={<WardrobeFormDialog mode="create" />}
       />
@@ -148,7 +148,7 @@ export default async function WardrobePage() {
         {/* 🟢 DASHBOARD DE INTELIGÊNCIA */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           <StatCard
-            label="Patrimônio Estimado"
+            label="Patrimônio estimado"
             value={formatCurrency(totalValue, { currency, maximumFractionDigits: 0 })}
             icon={DollarSign}
             iconClassName="bg-muted text-muted-foreground"
@@ -169,7 +169,7 @@ export default async function WardrobePage() {
           />
 
           <HighlightCard 
-            label="Peça Favorita"
+            label="Peça favorita"
             value={mostWornItem?.name || "Nenhuma peça"}
             subValue={mostWornItem ? `Usada ${mostWornItem.wearCount} vezes` : "Comece a registrar seus looks!"}
             icon={TrendingUp}
@@ -177,7 +177,7 @@ export default async function WardrobePage() {
           />
 
           <HighlightCard 
-            label="Dinheiro Parado"
+            label="Dinheiro parado"
             value={forgottenItem ? forgottenItem.name : "Acervo Limpo!"}
             subValue={forgottenItem ? `Cara e não usada. Vender?` : "Você usa tudo o que tem."}
             icon={Tag}

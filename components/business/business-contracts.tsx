@@ -44,7 +44,7 @@ export function ContractsList({
     <div className="flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <span className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-          <Briefcase size={12} className="text-primary/60" /> Contratos e Projetos
+          <Briefcase size={12} className="text-primary/60" /> Contratos e projetos
         </span>
         <Button variant="ghost" size="sm" className="text-xs font-medium h-7 px-2.5 hover:bg-primary/10 hover:text-primary" onClick={() => onNewBilling(client.id)}>
           <Plus size={14} className="mr-1" /> Novo
@@ -83,7 +83,7 @@ export function ContractsList({
                           size="icon"
                           className="h-7 w-7 text-blue-500 hover:text-blue-600 hover:bg-blue-500/10 opacity-0 group-hover/billing:opacity-100 transition-opacity"
                           onClick={() => onCopyCharge(client.name, billing)}
-                          title="Copiar Resumo da Cobrança"
+                          title="Copiar resumo da cobrança"
                           aria-label="Copiar resumo da cobrança"
                         >
                           <Copy size={13} />
@@ -110,10 +110,10 @@ export function ContractsList({
                           <DropdownMenuContent align="end" className="rounded-xl shadow-lg">
                             <DropdownMenuItem onClick={() => onEditBilling(billing)} className="cursor-pointer font-medium">Ajustar Título/Status</DropdownMenuItem>
                             <DropdownMenuItem onClick={() => onAddInvoice({ id: billing.id, title: billing.title })} className="cursor-pointer font-medium">
-                              <Plus size={13} className="mr-1.5" /> Nova Parcela
+                              <Plus size={13} className="mr-1.5" /> Nova parcela
                             </DropdownMenuItem>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem className="text-destructive cursor-pointer font-medium" onClick={() => onDeleteTarget({ type: 'BILLING', id: billing.id, name: billing.title })}>Excluir Projeto</DropdownMenuItem>
+                            <DropdownMenuItem className="text-destructive cursor-pointer font-medium" onClick={() => onDeleteTarget({ type: 'BILLING', id: billing.id, name: billing.title })}>Excluir projeto</DropdownMenuItem>
                           </DropdownMenuContent>
                         </DropdownMenu>
                       </div>

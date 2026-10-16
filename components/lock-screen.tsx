@@ -251,10 +251,10 @@ export function LockScreen({ onUnlock }: LockScreenProps) {
 
                     <div className="space-y-1.5">
                         <h2 className="flex items-center justify-center gap-2 text-xs font-medium text-muted-foreground">
-                            <span className="h-2 w-2 animate-pulse rounded-full bg-rose-500" /> Protocolo de Segurança
+                            <span className="h-2 w-2 animate-pulse rounded-full bg-rose-500" /> Protocolo de segurança
                         </h2>
                         <h1 className="text-2xl font-extrabold tracking-tight text-foreground">
-                            Sistema Bloqueado
+                            Sistema bloqueado
                         </h1>
                         <p className="px-4 text-xs font-medium text-muted-foreground/80">
                             Digite sua senha mestra para retomar a sessão com segurança.
@@ -300,7 +300,7 @@ export function LockScreen({ onUnlock }: LockScreenProps) {
                         {/* Avisos contextuais: Caps Lock e tentativas erradas */}
                         {capsOn && !locked && (
                             <p className="flex items-center justify-center gap-1.5 text-[11px] font-semibold text-amber-600">
-                                <TriangleAlert className="h-3.5 w-3.5" /> Caps Lock está ligado
+                                <TriangleAlert className="h-3.5 w-3.5" /> Caps lock está ligado
                             </p>
                         )}
                         {!locked && attempts > 0 && (

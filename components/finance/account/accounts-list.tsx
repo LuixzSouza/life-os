@@ -117,7 +117,7 @@ export function AccountsList({ accounts }: { accounts: AccountItem[] }) {
                         <Plus className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
                     </div>
                     <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground mt-4 transition-colors">
-                        Nova Carteira
+                        Nova carteira
                     </span>
                 </div>
 
@@ -229,7 +229,7 @@ function BankCard({ account, onEdit, onDelete, onConnections }: { account: Accou
                             {account.isConnected ? (
                                 <span className="text-[10px] text-emerald-300/90 font-medium flex items-center gap-1">
                                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                                    Sync Ativo
+                                    Sync ativo
                                 </span>
                             ) : (
                                 <span className="eyebrow text-white/50">{meta.label}</span>
@@ -248,7 +248,7 @@ function BankCard({ account, onEdit, onDelete, onConnections }: { account: Accou
                             <DropdownMenuSeparator />
                             <DropdownMenuItem onClick={onEdit} className="cursor-pointer"><Pencil className="h-4 w-4 mr-2" /> Editar</DropdownMenuItem>
                             <DropdownMenuItem onClick={onConnections} className="cursor-pointer"><Tags className="h-4 w-4 mr-2" /> Tags & Anexos</DropdownMenuItem>
-                            <DropdownMenuItem onClick={handleCopyBalance} className="cursor-pointer"><Copy className="h-4 w-4 mr-2" /> Copiar Saldo</DropdownMenuItem>
+                            <DropdownMenuItem onClick={handleCopyBalance} className="cursor-pointer"><Copy className="h-4 w-4 mr-2" /> Copiar saldo</DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem onClick={onDelete} className="text-destructive focus:text-destructive cursor-pointer"><Trash2 className="h-4 w-4 mr-2" /> Encerrar</DropdownMenuItem>
                         </DropdownMenuContent>
@@ -264,7 +264,7 @@ function BankCard({ account, onEdit, onDelete, onConnections }: { account: Accou
                 </div>
 
                 <div>
-                    <p className="eyebrow text-white/60 mb-1 pl-1">Saldo Atual</p>
+                    <p className="eyebrow text-white/60 mb-1 pl-1">Saldo atual</p>
                     <div
                         className="flex items-center gap-3 cursor-pointer group/balance w-fit"
                         onClick={handleCopyBalance}

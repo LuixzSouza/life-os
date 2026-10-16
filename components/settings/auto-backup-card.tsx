@@ -68,7 +68,7 @@ export function AutoBackupCard({ initial }: { initial: AutoBackupStatus }) {
             <Card>
                 <CardHeader className="pb-3">
                     <CardTitle className="text-base flex items-center gap-2">
-                        <CalendarClock className="h-4 w-4 text-primary" /> Backup Automático
+                        <CalendarClock className="h-4 w-4 text-primary" /> Backup automático
                     </CardTitle>
                     <CardDescription>
                         Indisponível neste ambiente (nuvem/serverless) — o arquivo viveria num

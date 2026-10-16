@@ -55,7 +55,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
           </div>
           <div>
             <h3 className="text-[11px] font-medium text-muted-foreground/80">
-              Case Studies
+              Case studies
             </h3>
             <p className="text-[10px] text-muted-foreground font-medium mt-0.5">
               Projetos de destaque para o portfólio
@@ -67,7 +67,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
           onClick={addProject} 
           className="h-10 font-medium text-xs gap-2 shadow-sm hover:scale-105 transition-all w-full sm:w-auto"
         >
-          <Plus className="h-4 w-4" /> Novo Projeto
+          <Plus className="h-4 w-4" /> Novo projeto
         </Button>
       </div>
 
@@ -103,7 +103,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
                 variant="ghost"
                 className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
                 onClick={() => removeProject(proj.id)}
-                title="Excluir Projeto"
+                title="Excluir projeto"
                 aria-label="Excluir projeto"
               >
                 <Trash2 className="h-4 w-4" />
@@ -114,7 +114,7 @@ export function ProjectsForm({ data, onChange }: ProjectsFormProps) {
               {/* Título */}
               <div className="space-y-2">
                 <Label className="text-xs font-medium text-muted-foreground/60">
-                  Título da Missão
+                  Título da missão
                 </Label>
                 <Input 
                   value={proj.title} 

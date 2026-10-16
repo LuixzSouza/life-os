@@ -89,7 +89,7 @@ export async function PersonalSection({ userId }: { userId: string }) {
       
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <PersonalKpiCard 
-          title="Próximo Evento" 
+          title="Próximo evento" 
           value={nextEvent.title} 
           subtitle={nextEvent.time}
           highlight={nextEvent.relative}
@@ -106,7 +106,7 @@ export async function PersonalSection({ userId }: { userId: string }) {
         />
 
         <PersonalKpiCard 
-          title="Calorias Ingeridas" 
+          title="Calorias ingeridas" 
           value={<>{calsToday} <span className="text-sm font-normal text-muted-foreground">kcal</span></>} 
           subtitle="Consumo registrado hoje"
           icon={Utensils} 
@@ -143,7 +143,7 @@ export async function PersonalSection({ userId }: { userId: string }) {
 
           <div className="flex items-center gap-4 py-2">
             <div className="h-px bg-border flex-1"></div>
-            <span className="eyebrow text-muted-foreground">Módulos do Sistema</span>
+            <span className="eyebrow text-muted-foreground">Módulos do sistema</span>
             <div className="h-px bg-border flex-1"></div>
           </div>
           

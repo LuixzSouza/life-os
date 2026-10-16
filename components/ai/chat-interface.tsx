@@ -1128,7 +1128,7 @@ export function ChatInterface({
                                         </Link>
                                         {aiStatus.getKeyUrl && (
                                             <a href={aiStatus.getKeyUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border/60 bg-background px-4 py-2 text-xs font-bold text-foreground transition hover:bg-accent/50">
-                                                <ExternalLink className="h-4 w-4" /> Gerar API Key
+                                                <ExternalLink className="h-4 w-4" /> Gerar API key
                                             </a>
                                         )}
                                     </div>

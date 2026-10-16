@@ -58,7 +58,7 @@ export function MaintenancePanel({ mode = "local" }: { mode?: DbMode }) {
                 <CardHeader className="pb-3">
                     <CardTitle className="text-sm font-medium flex items-center gap-2">
                         <BowArrowIcon className="h-4 w-4 text-primary" />
-                        Limpeza & Performance
+                        Limpeza & performance
                     </CardTitle>
                     <CardDescription className="text-xs">
                         Execute o <code>VACUUM</code> para liberar espaço inutilizado e reindexar dados.

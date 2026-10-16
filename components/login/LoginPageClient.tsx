@@ -225,7 +225,7 @@ export default function LoginPageClient() {
                             {/* Input Senha */}
                             <div className="space-y-2 relative">
                                 <Label htmlFor="password" className="eyebrow text-muted-foreground">
-                                    Chave de Acesso
+                                    Chave de acesso
                                 </Label>
                                 <div className="relative">
                                     <Input
@@ -263,7 +263,7 @@ export default function LoginPageClient() {
                                             exit={{ opacity: 0, y: -5 }}
                                             className="absolute -bottom-6 left-0 flex items-center gap-1.5 text-amber-500 text-xs font-medium"
                                         >
-                                            <ArrowUp className="h-3 w-3" /> Caps Lock ativado
+                                            <ArrowUp className="h-3 w-3" /> Caps lock ativado
                                         </motion.div>
                                     )}
                                 </AnimatePresence>

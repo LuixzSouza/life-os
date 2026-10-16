@@ -123,7 +123,7 @@ export function BodySummaryCard({
                         <Activity className="h-4 w-4" />
                     </div>
                     <div className="min-w-0">
-                        <CardTitle className="text-sm font-semibold">Composição Corporal</CardTitle>
+                        <CardTitle className="text-sm font-semibold">Composição corporal</CardTitle>
                         <span className={cn("mt-0.5 block truncate text-[11px] font-medium", status.color)}>{status.label}</span>
                     </div>
                 </div>

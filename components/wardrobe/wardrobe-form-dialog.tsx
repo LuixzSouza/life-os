@@ -25,7 +25,7 @@ export function WardrobeFormDialog({ mode = "create", initialData, trigger, open
                 <DialogTrigger asChild>
                     {trigger || (
                         <Button className="gap-2 shadow-sm font-semibold h-10 px-4">
-                            <Plus className="h-4 w-4" /> Nova Peça
+                            <Plus className="h-4 w-4" /> Nova peça
                         </Button>
                     )}
                 </DialogTrigger>

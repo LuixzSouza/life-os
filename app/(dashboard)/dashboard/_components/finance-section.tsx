@@ -102,7 +102,7 @@ export async function FinanceSection({ userId, currency }: { userId: string, cur
       
       {/* KPIs Financeiros Padronizados (2 por linha já no mobile — sem torre de cards) */}
       <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
-        <KpiCard title="Saldo Total" value={formatCurrency(totalBalance)} icon={Wallet} color="blue" subtitle="Em todas as contas" />
+        <KpiCard title="Saldo total" value={formatCurrency(totalBalance)} icon={Wallet} color="blue" subtitle="Em todas as contas" />
         <KpiCard title="Entradas (Mês)" value={formatCurrency(income)} icon={TrendingUp} color="emerald" />
         <KpiCard title="Saídas (Mês)" value={formatCurrency(expense)} icon={TrendingDown} color="rose" />
         <KpiCard title="Margem / Retenção" value={`${margin.toFixed(1)}%`} icon={Activity} color="amber" subtitle="Sob o total de entradas" />
@@ -117,7 +117,7 @@ export async function FinanceSection({ userId, currency }: { userId: string, cur
           
           <Card className="flex-1">
             <CardHeader className="p-4 pb-2 sm:p-6 sm:pb-4">
-              <CardTitle className="text-base font-semibold">Fluxo de Caixa</CardTitle>
+              <CardTitle className="text-base font-semibold">Fluxo de caixa</CardTitle>
               <CardDescription>Balanço consolidado do mês atual</CardDescription>
             </CardHeader>
             <CardContent className="h-full min-h-[250px] overflow-hidden p-4 pt-0 sm:p-6 sm:pt-0">

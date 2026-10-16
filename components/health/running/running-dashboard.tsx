@@ -119,7 +119,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 <Dialog open={open} onOpenChange={setOpen}>
                     <DialogTrigger asChild>
                         <Button className="w-full h-10 text-base font-bold shadow-sm active:scale-[0.98] transition-all">
-                            <Plus className="mr-2 h-5 w-5" /> Registrar Corrida
+                            <Plus className="mr-2 h-5 w-5" /> Registrar corrida
                         </Button>
                     </DialogTrigger>
                     <DialogContent size="md">
@@ -128,7 +128,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                                 <div className="p-2 bg-primary/10 rounded-lg text-primary">
                                     <Footprints className="h-5 w-5" />
                                 </div>
-                                Nova Corrida
+                                Nova corrida
                             </DialogTitle>
                         </DialogHeader>
                         <DialogBody>
@@ -150,7 +150,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                             <div className="p-1.5 bg-primary/10 rounded-md text-primary">
                                 <MapPin className="h-3.5 w-3.5" />
                             </div>
-                            Volume Acumulado
+                            Volume acumulado
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="relative z-10 pt-4">
@@ -170,7 +170,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                             </div>
                             <div className="bg-muted/30 p-3 rounded-xl border border-border/50 flex flex-col justify-center">
                                 <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-bold uppercase mb-1">
-                                    <Gauge className="h-3.5 w-3.5" /> Pace Médio
+                                    <Gauge className="h-3.5 w-3.5" /> Pace médio
                                 </div>
                                 <span className="text-xl font-bold text-foreground font-mono">{avgPace}</span>
                             </div>
@@ -183,7 +183,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                     <div className="absolute left-0 top-0 w-1 h-full bg-amber-500"></div>
                     <CardHeader className="pb-2 pl-6">
                         <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
-                            <Trophy className="h-4 w-4 text-amber-500" /> Maior Distância
+                            <Trophy className="h-4 w-4 text-amber-500" /> Maior distância
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="pl-6 pt-2">
@@ -201,7 +201,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                                     </p>
                                 </div>
                                 <Badge variant="outline" className="eyebrow text-amber-600 border-amber-200 bg-amber-500/10 px-2 py-0.5 mb-1">
-                                    PR Record
+                                    PR record
                                 </Badge>
                             </div>
                         ) : (
@@ -327,7 +327,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                 <div className="space-y-4">
                     <div className="flex items-center gap-2 px-1">
                         <Footprints className="h-4 w-4 text-primary" />
-                        <h3 className="text-sm font-bold text-foreground">Histórico de Corridas</h3>
+                        <h3 className="text-sm font-bold text-foreground">Histórico de corridas</h3>
                     </div>
                     
                     {filteredRuns.length === 0 ? (
@@ -355,7 +355,7 @@ export function RunningDashboard({ runs, bodyWeight = null, shoes = [] }: { runs
                             <div className="p-2 bg-primary/10 rounded-lg text-primary">
                                 <Pencil className="h-5 w-5" />
                             </div>
-                            Editar Corrida
+                            Editar corrida
                         </DialogTitle>
                     </DialogHeader>
                     <DialogBody>

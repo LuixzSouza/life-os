@@ -142,7 +142,7 @@ export function WardrobeFormInner({ mode, initialData, onSuccess, onCancel }: { 
                             {/* 🟢 SELETOR DE CORES OTIMIZADO */}
                             <div className="space-y-3 pt-2">
                                 <div className="flex items-center justify-between">
-                                    <Label className="text-xs font-semibold text-muted-foreground">Cor Predominante</Label>
+                                    <Label className="text-xs font-semibold text-muted-foreground">Cor predominante</Label>
                                     {!previewImage && <span className="text-[10px] font-medium text-primary/80 flex items-center gap-1"><Sparkles className="h-3 w-3"/> Usado como capa</span>}
                                 </div>
                                 <div className="flex flex-wrap gap-2 items-center bg-muted/20 p-2 rounded-2xl border border-border/40">
@@ -163,7 +163,7 @@ export function WardrobeFormInner({ mode, initialData, onSuccess, onCancel }: { 
                                     ))}
 
                                     {/* Input Nativo Customizado para outras cores */}
-                                    <div className="ml-2 relative h-9 w-9 rounded-full overflow-hidden border border-border shadow-sm flex items-center justify-center bg-background hover:scale-110 transition-transform cursor-pointer group" title="Cor Customizada">
+                                    <div className="ml-2 relative h-9 w-9 rounded-full overflow-hidden border border-border shadow-sm flex items-center justify-center bg-background hover:scale-110 transition-transform cursor-pointer group" title="Cor customizada">
                                         <Palette className="h-4 w-4 text-muted-foreground group-hover:text-foreground z-10 pointer-events-none absolute" />
                                         <input
                                             type="color"
@@ -190,7 +190,7 @@ export function WardrobeFormInner({ mode, initialData, onSuccess, onCancel }: { 
                                     <Input type="number" step="0.01" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="0.00" />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label className="text-xs font-semibold text-muted-foreground">Status Atual</Label>
+                                    <Label className="text-xs font-semibold text-muted-foreground">Status atual</Label>
                                     <Select value={status} onValueChange={(val) => setStatus(val as WardrobeStatus)}>
                                         <SelectTrigger><SelectValue /></SelectTrigger>
                                         <SelectContent className="rounded-xl">

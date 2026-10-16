@@ -63,7 +63,7 @@ export function WeekPlanner({ tasks, selectedDateISO, themedDays }: WeekPlannerP
           <PenLine className="h-5 w-5" />
         </div>
         <div>
-          <h3 className="text-lg font-semibold leading-none text-foreground">Planner da Semana</h3>
+          <h3 className="text-lg font-semibold leading-none text-foreground">Planner da semana</h3>
           <p className="mt-1 text-xs text-muted-foreground">
             {format(weekDays[0], "dd MMM", { locale: ptBR })} — {format(weekDays[6], "dd MMM", { locale: ptBR })} · risque ao concluir
           </p>

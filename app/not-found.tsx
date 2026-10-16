@@ -39,7 +39,7 @@ export default function NotFound() {
           <Button asChild variant="primary" size="lg" className="w-full sm:w-auto">
             <Link href="/dashboard">
               <Home className="size-4" />
-              Ir para o Dashboard
+              Ir para o dashboard
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">

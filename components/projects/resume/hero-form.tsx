@@ -56,7 +56,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
           <User className="h-4 w-4" />
         </div>
         <h3 className="text-[11px] font-medium text-muted-foreground/80">
-          Identidade Operacional
+          Identidade operacional
         </h3>
       </div>
 
@@ -71,7 +71,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
           )}
         </div>
         <div className="flex flex-col gap-2">
-          <Label className="text-xs font-medium text-muted-foreground/60">Foto de Perfil</Label>
+          <Label className="text-xs font-medium text-muted-foreground/60">Foto de perfil</Label>
           <div className="flex gap-2">
             <Button asChild variant="outline" size="sm" className="font-medium text-xs gap-2 cursor-pointer">
               <label>
@@ -106,7 +106,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
 
       <div className="space-y-3">
         <Label className="text-xs font-medium text-muted-foreground/60 flex items-center gap-2">
-          Nome Completo
+          Nome completo
         </Label>
         <Input
           value={data.hero.name}
@@ -175,11 +175,11 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
 
       <div className="space-y-3 pt-2">
         <Label className="text-xs font-medium text-muted-foreground/60 flex justify-between">
-          <span>Resumo Estratégico</span>
+          <span>Resumo estratégico</span>
           <span className="text-muted-foreground/40 lowercase font-medium tracking-normal text-xs">✨ para a IA melhorar</span>
         </Label>
         <SmartTextarea
-          label="Resumo Estratégico"
+          label="Resumo estratégico"
           value={data.about.short}
           onChange={(v) => onChange({ ...data, about: { ...data.about, short: v } })}
           placeholder="Resumo de impacto para o cabeçalho..."
@@ -194,7 +194,7 @@ export function HeroForm({ data, onChange }: { data: PortfolioData; onChange: (d
       {/* COR DE DESTAQUE DO PDF */}
       <div className="space-y-3 pt-2 border-t border-border/40">
         <Label className="text-xs font-medium text-muted-foreground/60 flex items-center gap-2">
-          <Palette className="h-3 w-3" /> Cor de Destaque do Currículo
+          <Palette className="h-3 w-3" /> Cor de destaque do currículo
         </Label>
         <div className="flex flex-wrap items-center gap-2.5">
           {ACCENT_PRESETS.map((c) => (

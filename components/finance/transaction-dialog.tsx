@@ -122,7 +122,7 @@ export function TransactionDialog({
               className="h-10 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-0.5 active:translate-y-0"
               disabled={!hasAccounts}
             >
-              <Plus className="mr-2 h-5 w-5" /> Nova Transação
+              <Plus className="mr-2 h-5 w-5" /> Nova transação
             </Button>
           )}
         </DialogTrigger>}

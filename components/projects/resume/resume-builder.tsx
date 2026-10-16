@@ -243,7 +243,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                                 </div>
                                 <div className="min-w-0">
                                     <h3 className="font-medium text-primary text-[11px]">
-                                        Builder Engine
+                                        Builder engine
                                     </h3>
                                     <p className="eyebrow text-muted-foreground mt-0.5 truncate">
                                         {resumeName || "Gerador de Portfólio"}
@@ -313,7 +313,7 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                             <div className="flex justify-between items-end mb-1">
                                 <span className="text-xs font-medium text-muted-foreground/60 flex items-center gap-1.5">
                                     <ShieldCheck className="h-3 w-3 text-emerald-500" />
-                                    Integridade dos Dados
+                                    Integridade dos dados
                                 </span>
                                 <span className="text-[11px] font-mono font-black text-primary">{completion}%</span>
                             </div>
@@ -519,12 +519,12 @@ export function ResumeBuilder({ initialData, resumeId, resumeName, locale, templ
                             ) : autoSave === "saved" ? (
                                 <><CheckCircle2 className="h-4 w-4 text-emerald-500" /> Salvo</>
                             ) : (
-                                <><Save className="h-4 w-4" /> Gravar Dados</>
+                                <><Save className="h-4 w-4" /> Gravar dados</>
                             )}
                         </Button>
                         <Button
                             disabled={exporting}
-                            className="flex-1 gap-2 h-10 sm:h-14 bg-foreground text-background hover:bg-foreground/90 font-medium text-[11px] shadow-xl transition-all"
+                            className="flex-1 gap-2 h-10 sm:h-14 font-medium text-[11px] transition-all"
                             onClick={handleExportPdf}
                             title="Gera um PDF ATS-friendly (uma coluna, texto linear)"
                         >

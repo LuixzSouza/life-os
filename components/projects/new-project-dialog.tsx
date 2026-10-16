@@ -79,10 +79,10 @@ export function NewProjectDialog() {
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
                 <Button 
-                    className="gap-2 bg-foreground text-background hover:bg-foreground/90 shadow-lg px-5 h-10 transition-all active:scale-95"
+                    className="gap-2 px-5 h-10 transition-all active:scale-95"
                 >
                     <Plus className="h-4 w-4" /> 
-                    <span className="font-bold tracking-tight">Novo Projeto</span>
+                    <span className="font-bold tracking-tight">Novo projeto</span>
                 </Button>
             </DialogTrigger>
             
@@ -98,7 +98,7 @@ export function NewProjectDialog() {
                             <FolderPlus className={cn("h-6 w-6 transition-colors duration-500", selectedColor.class.replace('bg-', 'text-'))} />
                         </div>
                         <div className="space-y-1">
-                            <DialogTitle className="text-2xl font-semibold">Criar Projeto</DialogTitle>
+                            <DialogTitle className="text-2xl font-semibold">Criar projeto</DialogTitle>
                             <DialogDescription className="eyebrow text-muted-foreground">Defina sua nova meta</DialogDescription>
                         </div>
                     </div>
@@ -171,7 +171,7 @@ export function NewProjectDialog() {
                     {/* Color Picker Corrigido */}
                     <div className="space-y-4">
                         <Label className="text-xs font-medium text-muted-foreground ml-1 flex items-center gap-2">
-                            <Palette className="h-3.5 w-3.5" /> Identidade Visual
+                            <Palette className="h-3.5 w-3.5" /> Identidade visual
                         </Label>
                         <div className="flex justify-between items-center bg-muted/30 p-3 rounded-2xl border border-border/40">
                             {PROJECT_COLORS.map((color) => (
@@ -215,7 +215,7 @@ export function NewProjectDialog() {
                             ) : (
                                 <>
                                     <Sparkles className="mr-2 h-5 w-5 fill-current" />
-                                    Lançar Projeto
+                                    Lançar projeto
                                 </>
                             )}
                         </Button>

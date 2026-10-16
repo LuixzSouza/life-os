@@ -212,7 +212,7 @@ export function JobTracker({ jobs, resumes, projects }: JobTrackerProps) {
                             Vagas CLT/PJ
                         </TabsTrigger>
                         <TabsTrigger value="freela" className="rounded-lg text-xs font-semibold data-[state=active]:bg-background data-[state=active]:shadow-sm transition-all flex-1 h-full">
-                            Freelas & Projetos
+                            Freelas & projetos
                         </TabsTrigger>
                         <TabsTrigger value="resume" className="rounded-lg text-xs font-semibold data-[state=active]:bg-background data-[state=active]:shadow-sm transition-all gap-1.5 flex-1 h-full">
                             <FileText className="h-3.5 w-3.5" /> Currículos

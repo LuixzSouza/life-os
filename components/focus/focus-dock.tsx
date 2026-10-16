@@ -296,7 +296,7 @@ export function FocusDock() {
           onClick={() => update({ open: true })}
           className="group flex items-center gap-2.5 rounded-full border border-border/40 bg-card/95 px-3.5 py-2.5 shadow-lg backdrop-blur transition-all hover:shadow-xl active:scale-95"
           style={{ boxShadow: `0 8px 30px -8px ${phaseMeta.color}66` }}
-          aria-label="Abrir Modo Foco"
+          aria-label="Abrir modo foco"
         >
           <span className="relative flex h-7 w-7 items-center justify-center">
             <Ring progress={progress} color={phaseMeta.color} size={28} stroke={3} />
@@ -336,7 +336,7 @@ export function FocusDock() {
               <Brain className="h-4 w-4" />
             </span>
             <div className="flex flex-col leading-none">
-              <span className="text-xs font-medium text-foreground">Modo Foco</span>
+              <span className="text-xs font-medium text-foreground">Modo foco</span>
               <span className="mt-0.5 text-[10px] font-bold" style={{ color: phaseMeta.color }}>{phaseMeta.label}</span>
             </div>
           </div>
@@ -544,7 +544,7 @@ function SettingsPanel({
         </>
       )}
 
-      <Button onClick={onClose} className="h-10 w-full bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs">
+      <Button onClick={onClose} className="h-10 w-full font-medium text-xs">
         <Maximize2 className="mr-2 h-3.5 w-3.5" /> Voltar ao timer
       </Button>
     </div>

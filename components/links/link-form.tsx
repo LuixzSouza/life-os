@@ -105,7 +105,7 @@ export function LinkForm({ onClose, initialData }: { onClose: () => void, initia
       <DialogBody className="space-y-4">
       {/* URL + Magic Button */}
       <div className="space-y-1.5">
-        <Label>URL do Site</Label>
+        <Label>URL do site</Label>
         <div className="flex gap-2">
           <div className="relative flex-1">
             <LinkIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />

@@ -151,7 +151,7 @@ export function EventForm({
           {/* Título */}
           <div className="space-y-2">
             <Label htmlFor="title" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-              <Type className="h-3 w-3" /> Identificação do Evento
+              <Type className="h-3 w-3" /> Identificação do evento
             </Label>
             <Input
               id="title"
@@ -168,7 +168,7 @@ export function EventForm({
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 bg-muted/10 p-4 rounded-2xl border border-border/40 shadow-inner">
             <div className="sm:col-span-12">
               <Label htmlFor="date" className="text-xs font-medium text-muted-foreground flex items-center gap-2 mb-2">
-                <CalendarCheck className="h-3 w-3" /> Data Base
+                <CalendarCheck className="h-3 w-3" /> Data base
               </Label>
               <div className="relative group">
                 <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors pointer-events-none" />
@@ -265,7 +265,7 @@ export function EventForm({
           {/* Localização */}
           <div className="space-y-2">
             <Label htmlFor="location" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-              <MapPin className="h-3 w-3" /> Local ou Link
+              <MapPin className="h-3 w-3" /> Local ou link
             </Label>
             <div className="relative group">
               <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary transition-colors pointer-events-none" />
@@ -282,7 +282,7 @@ export function EventForm({
           {/* Descrição */}
           <div className="space-y-2">
             <Label htmlFor="description" className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-              Detalhes Adicionais
+              Detalhes adicionais
             </Label>
             <Textarea
               id="description"
@@ -298,7 +298,7 @@ export function EventForm({
           <div className="space-y-6 pb-2">
             <div className="space-y-3">
               <Label className="text-xs font-medium text-muted-foreground flex items-center gap-2">
-                <Palette className="h-3 w-3" /> Classificação de Cor
+                <Palette className="h-3 w-3" /> Classificação de cor
               </Label>
               <div className="flex flex-wrap gap-2">
                 {PRESET_COLORS.map((color) => (
@@ -353,7 +353,7 @@ export function EventForm({
         <Button
           type="submit"
           disabled={isPending}
-          className="flex-[2] h-10 w-full bg-foreground text-background hover:bg-primary hover:text-white font-medium text-xs shadow-lg transition-all group active:scale-95"
+          className="flex-[2] h-10 w-full font-medium text-xs transition-all group active:scale-95"
         >
           {isPending ? (
             <Loader2 className="h-4 w-4 animate-spin" />

@@ -260,7 +260,7 @@ export function RemoteAccessCard({ lanUrls, mode, windows, calendarToken }: Remo
 
             <div className="flex items-center justify-between gap-3">
               <div className="min-w-0">
-                <p className="text-xs font-medium text-foreground">Iniciar com o Windows</p>
+                <p className="text-xs font-medium text-foreground">Iniciar com o windows</p>
                 <p className="text-[11px] text-muted-foreground leading-relaxed">
                   O servidor sobe sozinho quando o PC liga — o celular sempre encontra o Life OS.
                 </p>
@@ -273,7 +273,7 @@ export function RemoteAccessCard({ lanUrls, mode, windows, calendarToken }: Remo
 
             <div className="flex items-center justify-between gap-3 pt-2 border-t border-border/40">
               <div className="min-w-0">
-                <p className="text-xs font-medium text-foreground">Liberar no Firewall do Windows</p>
+                <p className="text-xs font-medium text-foreground">Liberar no firewall do windows</p>
                 <p className="text-[11px] text-muted-foreground leading-relaxed">
                   Cria a regra das portas 3000–3011 (apenas redes privadas). Pede confirmação
                   de administrador <strong>na tela do PC</strong>, uma única vez.

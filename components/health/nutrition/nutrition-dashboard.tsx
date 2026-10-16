@@ -129,7 +129,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                             <LayoutList className="h-4 w-4" /> <span className="hidden sm:inline">Visão Geral</span><span className="sm:hidden">Diário</span>
                         </TabsTrigger>
                         <TabsTrigger value="planner" className="gap-2 px-6">
-                            <CalendarRange className="h-4 w-4" /> <span className="hidden sm:inline">Planejador Semanal</span><span className="sm:hidden">Planejador</span>
+                            <CalendarRange className="h-4 w-4" /> <span className="hidden sm:inline">Planejador semanal</span><span className="sm:hidden">Planejador</span>
                         </TabsTrigger>
                     </TabsList>
                 </div>
@@ -166,7 +166,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                             <Card>
                                 <CardHeader className="pb-2">
                                     <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
-                                        <TrendingUp className="h-4 w-4 text-primary" /> Tendência Semanal
+                                        <TrendingUp className="h-4 w-4 text-primary" /> Tendência semanal
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent className="h-[200px] w-full pt-4">
@@ -208,7 +208,7 @@ export function NutritionDashboard({ initialDate, meals, weekData, mealPlan = []
                                             <Target className="h-6 w-6" />
                                         </div>
                                         <div>
-                                            <p className="eyebrow text-muted-foreground mb-0.5">Saldo Calórico</p>
+                                            <p className="eyebrow text-muted-foreground mb-0.5">Saldo calórico</p>
                                             <div className="flex items-baseline gap-2">
                                                 <h2 className={cn("text-3xl font-black tracking-tight", isOver ? "text-destructive" : "text-emerald-500")}>
                                                     {isOver ? `+${Math.abs(balance)}` : balance}

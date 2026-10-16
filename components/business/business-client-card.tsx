@@ -120,7 +120,7 @@ export function ClientCard({
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-48 rounded-xl shadow-xl">
             <DropdownMenuItem onClick={() => onEditClient(client)} className="cursor-pointer">
-              <Pencil className="mr-2 h-4 w-4" /> Editar Cliente
+              <Pencil className="mr-2 h-4 w-4" /> Editar cliente
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => onOpenConnections(client)} className="cursor-pointer">
               <TagIcon className="mr-2 h-4 w-4" /> Tags & Anexos
@@ -130,7 +130,7 @@ export function ClientCard({
               className="text-destructive focus:text-destructive focus:bg-destructive/10 cursor-pointer"
               onClick={() => onDeleteTarget({ type: 'CLIENT', id: client.id, name: client.name })}
             >
-              <Trash2 className="mr-2 h-4 w-4" /> Excluir Cliente
+              <Trash2 className="mr-2 h-4 w-4" /> Excluir cliente
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -139,11 +139,11 @@ export function ClientCard({
       {/* Resumo financeiro */}
       <div className="flex items-stretch divide-x divide-border/30 border-b border-border/10 bg-muted/5">
         <div className="flex-1 px-5 py-3">
-          <p className="text-xs font-medium text-muted-foreground">A Receber</p>
+          <p className="text-xs font-medium text-muted-foreground">A receber</p>
           <p className="text-sm font-bold font-mono text-emerald-600 dark:text-emerald-400">{formatCurrency(clientReceivable)}</p>
         </div>
         <div className="flex-1 px-5 py-3">
-          <p className={cn("text-xs font-medium", clientOverdue > 0 ? "text-rose-500" : "text-muted-foreground")}>Em Atraso</p>
+          <p className={cn("text-xs font-medium", clientOverdue > 0 ? "text-rose-500" : "text-muted-foreground")}>Em atraso</p>
           <p className={cn("text-sm font-bold font-mono", clientOverdue > 0 ? "text-rose-600" : "text-muted-foreground/50")}>{formatCurrency(clientOverdue)}</p>
         </div>
       </div>

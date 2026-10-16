@@ -33,7 +33,7 @@ export function NewSiteDialog() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button className="h-10 px-4 gap-2 font-medium shadow-sm">
-          <Plus className="h-4 w-4" /> Novo Container
+          <Plus className="h-4 w-4" /> Novo container
         </Button>
       </DialogTrigger>
 

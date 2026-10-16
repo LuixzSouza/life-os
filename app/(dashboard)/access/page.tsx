@@ -2,13 +2,13 @@
 export const dynamic = "force-dynamic";
 
 import { prisma } from "@/lib/prisma"
-import { LockKeyhole, ShieldCheck, ShieldAlert, Repeat2, Activity } from "lucide-react"
+import { LockKeyhole, ShieldAlert, Repeat2, Activity } from "lucide-react"
 import { AccessView } from "@/components/access/access-view"
 import { getCurrentUserId } from "@/lib/auth"
 import { getVaultSecurityAudit } from "./actions"
-import { cn } from "@/lib/utils"
 import { Metadata } from "next"
 import { PageShell, PageHeader, PageContainer } from "@/components/layout/page-shell"
+import { StatCard } from "@/components/ui/stat-card"
 
 export const metadata: Metadata = {
   title: "Cofre de Senhas | Life OS",
@@ -32,62 +32,41 @@ export default async function AccessPage() {
     stats.healthScore >= 75 ? "text-emerald-500"
     : stats.healthScore >= 45 ? "text-amber-500"
     : "text-rose-500"
-  const healthBar =
-    stats.healthScore >= 75 ? "bg-emerald-500"
-    : stats.healthScore >= 45 ? "bg-amber-500"
-    : "bg-rose-500"
 
   return (
     <PageShell>
       <PageHeader
         icon={<LockKeyhole className="h-6 w-6" />}
-        title="Cofre de Acessos"
-        description="Gerencie credenciais pessoais e corporativas em um único lugar. Seus dados nunca saem do seu dispositivo sem criptografia."
-        actions={
-          <div className="grid w-full grid-cols-2 gap-3 sm:flex sm:w-auto">
-            {/* Saúde geral (score) */}
-            <div className="col-span-2 min-w-[160px] rounded-xl border border-border/60 bg-card p-4 shadow-sm sm:col-span-1">
-              <div className="mb-2 flex items-center justify-between">
-                <span className="eyebrow flex items-center gap-1.5 text-muted-foreground">
-                  <Activity className="h-3 w-3" /> Saúde
-                </span>
-                <span className={cn("text-lg font-black leading-none", healthColor)}>{stats.healthScore}%</span>
-              </div>
-              <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
-                <div className={cn("h-full rounded-full transition-all duration-700", healthBar)} style={{ width: `${stats.healthScore}%` }} />
-              </div>
-            </div>
+        title="Cofre de acessos"
+        description="Credenciais pessoais e corporativas num lugar só — criptografadas no seu dispositivo."
+      />
 
-            {/* Total */}
-            <div className="rounded-xl border border-border/60 bg-card p-4 text-center shadow-sm">
-              <span className="block text-2xl font-bold leading-none text-foreground">{allItems.length}</span>
-              <span className="eyebrow text-muted-foreground">Itens</span>
-            </div>
-
-            {/* Senhas frágeis */}
-            <div className={cn("rounded-xl border p-4 text-center shadow-sm", stats.weak > 0 ? "border-rose-500/30 bg-rose-500/5" : "border-border/60 bg-card")}>
-              <span className={cn("flex items-center justify-center gap-1 text-2xl font-bold leading-none", stats.weak > 0 ? "text-rose-500" : "text-foreground")}>
-                {stats.weak > 0 && <ShieldAlert className="h-4 w-4" />}{stats.weak}
-              </span>
-              <span className="eyebrow text-muted-foreground">Frágeis</span>
-            </div>
-
-            {/* Senhas reutilizadas */}
-            <div className={cn("rounded-xl border p-4 text-center shadow-sm", stats.reused > 0 ? "border-amber-500/30 bg-amber-500/5" : "border-border/60 bg-card")}>
-              <span className={cn("flex items-center justify-center gap-1 text-2xl font-bold leading-none", stats.reused > 0 ? "text-amber-500" : "text-foreground")}>
-                {stats.reused > 0 && <Repeat2 className="h-4 w-4" />}{stats.reused}
-              </span>
-              <span className="eyebrow text-muted-foreground">Repetidas</span>
-            </div>
-          </div>
-        }
-      >
-        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-          <ShieldCheck className="h-3 w-3" /> Ambiente Seguro & Criptografado
-        </div>
-      </PageHeader>
-
-      <PageContainer>
+      <PageContainer className="space-y-8">
+        {/* Indicadores do cofre: linha de StatCards (padrão das demais telas),
+            não mais caixas dentro do cabeçalho. */}
+        <section className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <StatCard
+            label="Saúde do cofre"
+            value={<span className={healthColor}>{stats.healthScore}%</span>}
+            icon={Activity}
+            hint={stats.healthScore >= 75 ? "Senhas em bom estado" : "Há senhas para revisar"}
+          />
+          <StatCard label="Itens" value={allItems.length} icon={LockKeyhole} hint="Credenciais e anotações" />
+          <StatCard
+            label="Senhas frágeis"
+            value={stats.weak}
+            icon={ShieldAlert}
+            hint={stats.weak > 0 ? "Troque por senhas fortes" : "Nenhuma senha fraca"}
+            iconClassName={stats.weak > 0 ? "text-rose-500 bg-rose-500/10" : undefined}
+          />
+          <StatCard
+            label="Senhas repetidas"
+            value={stats.reused}
+            icon={Repeat2}
+            hint={stats.reused > 0 ? "Use uma senha por serviço" : "Nenhuma repetida"}
+            iconClassName={stats.reused > 0 ? "text-amber-500 bg-amber-500/10" : undefined}
+          />
+        </section>
         <AccessView initialItems={allItems} audit={audit} />
       </PageContainer>
     </PageShell>

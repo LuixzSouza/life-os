@@ -201,7 +201,7 @@ export default async function NutritionPage(props: PageProps) {
   if (hasError) {
     return (
       <ErrorState
-        title="Falha de Leitura"
+        title="Falha de leitura"
         description="Não foi possível sincronizar seu diário alimentar no momento."
         backHref="/health"
         retryHref="/health/nutrition"
@@ -214,7 +214,7 @@ export default async function NutritionPage(props: PageProps) {
     <PageShell>
       <PageHeader
         icon={<Utensils className="h-6 w-6" />}
-        title="Nutrição & Planejamento"
+        title="Nutrição & planejamento"
         description="Diário alimentar, controle de macros e planejamento semanal."
         backHref="/health"
         backLabel="Voltar para Overview"

@@ -13,7 +13,7 @@ export function CalorieSummary({ totalCalories }: CalorieSummaryProps) {
             <Calculator className="h-5 w-5 text-primary" />
           </div>
           <div>
-            <p className="text-sm font-semibold text-foreground">Total de Calorias</p>
+            <p className="text-sm font-semibold text-foreground">Total de calorias</p>
             <p className="text-xs text-muted-foreground">Calculado automaticamente</p>
           </div>
         </div>

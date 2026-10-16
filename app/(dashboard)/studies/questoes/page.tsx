@@ -53,7 +53,7 @@ export default async function QuestoesPage() {
     <PageShell>
       <PageHeader
         icon={<ListChecks className="h-6 w-6" />}
-        title="Banco de Questões"
+        title="Banco de questões"
         description="Escreva (ou gere) questões com gabarito e explicação. Elas viram simulados cronometrados."
         backHref="/studies"
         backLabel="Voltar para Estudos"

@@ -27,7 +27,7 @@ export function MonthlySummary({ totalBalance, monthIncome, monthExpense, monthl
       {/* StatCards rápidos do mês */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         <MetricCard
-          title="Saldo Total"
+          title="Saldo total"
           value={totalBalance}
           icon={<Wallet className="h-5 w-5 text-primary" />}
           variant="primary"
@@ -35,7 +35,7 @@ export function MonthlySummary({ totalBalance, monthIncome, monthExpense, monthl
           isSmartView={smartView}
         />
         <MetricCard
-          title="Receitas do Mês"
+          title="Receitas do mês"
           value={monthIncome}
           icon={<ArrowDownLeft className="h-5 w-5 text-emerald-500" />}
           variant="success"
@@ -43,7 +43,7 @@ export function MonthlySummary({ totalBalance, monthIncome, monthExpense, monthl
           isSmartView={smartView}
         />
         <MetricCard
-          title="Despesas do Mês"
+          title="Despesas do mês"
           value={monthExpense}
           icon={<TrendingDown className="h-5 w-5 text-destructive" />}
           variant="danger"
@@ -51,7 +51,7 @@ export function MonthlySummary({ totalBalance, monthIncome, monthExpense, monthl
           isSmartView={smartView}
         />
         <MetricCard
-          title="Balanço do Mês"
+          title="Balanço do mês"
           value={monthBalance}
           icon={<Activity className="h-5 w-5 text-foreground" />}
           variant={monthBalance >= 0 ? "success" : "danger"}
@@ -65,7 +65,7 @@ export function MonthlySummary({ totalBalance, monthIncome, monthExpense, monthl
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
           <h3 className="text-lg font-extrabold text-foreground flex items-center gap-3">
             <div className="p-2 bg-primary/10 rounded-xl"><TrendingUp className="h-5 w-5 text-primary" /></div>
-            Fluxo de Caixa
+            Fluxo de caixa
           </h3>
 
           <div className="flex items-center gap-4 flex-wrap">

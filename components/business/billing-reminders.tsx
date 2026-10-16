@@ -109,7 +109,7 @@ export function BillingReminders({ clients, onCharge, onCopyCharge }: BillingRem
           </div>
           <div className="min-w-0">
             <h3 className="font-bold text-sm flex items-center gap-2">
-              Central de Cobranças
+              Central de cobranças
               <Badge variant="secondary" className="bg-primary/10 text-primary border-none text-[10px]">{reminders.length}</Badge>
             </h3>
             <p className="text-[11px] text-muted-foreground truncate">

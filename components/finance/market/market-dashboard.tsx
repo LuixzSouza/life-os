@@ -147,7 +147,7 @@ export function MarketDashboard({ data: initialData, initialFavorites = [] }: { 
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                             <div>
                                 <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2 text-foreground">
-                                    <BarChart3 className="h-6 w-6 text-primary" /> Cotações em Tempo Real
+                                    <BarChart3 className="h-6 w-6 text-primary" /> Cotações em tempo real
                                 </h2>
                                 <p className="text-sm text-muted-foreground mt-1">
                                     Acompanhe o valor atualizado de ações, fundos e moedas.
@@ -264,7 +264,7 @@ export function MarketDashboard({ data: initialData, initialFavorites = [] }: { 
                                     FIIs
                                     <InfoTooltip text="Fundos de Investimento Imobiliário: Você investe em imóveis e recebe 'aluguéis' (dividendos)." />
                                 </TabsTrigger>
-                                <TabsTrigger value="macro" className="rounded-lg flex-1 min-w-[120px]">Câmbio & Macro</TabsTrigger>
+                                <TabsTrigger value="macro" className="rounded-lg flex-1 min-w-[120px]">Câmbio & macro</TabsTrigger>
                             </TabsList>
 
                             <TabsContent value="all"><MarketGrid items={getFilteredByType('ALL')} onSelect={setSelected} favSet={favSet} onToggleFav={toggleFavorite} /></TabsContent>
@@ -276,8 +276,8 @@ export function MarketDashboard({ data: initialData, initialFavorites = [] }: { 
 
                     {/* Sidebar com Top Movers */}
                     <div className="w-full lg:w-80 space-y-6">
-                        <TopMoversCard data={data} type="high" title="Maiores Altas" description="Ativos que mais valorizaram hoje." onSelect={setSelected} />
-                        <TopMoversCard data={data} type="low" title="Maiores Baixas" description="Ativos que mais desvalorizaram hoje." onSelect={setSelected} />
+                        <TopMoversCard data={data} type="high" title="Maiores altas" description="Ativos que mais valorizaram hoje." onSelect={setSelected} />
+                        <TopMoversCard data={data} type="low" title="Maiores baixas" description="Ativos que mais desvalorizaram hoje." onSelect={setSelected} />
                     </div>
                 </div>
 
@@ -342,7 +342,7 @@ function MarketHighlightCard({ item, onSelect, isFav, onToggleFav }: { item: Mar
                 </div>
                 <div className="mt-4 flex items-baseline justify-between">
                     <span className="text-2xl font-mono font-bold tracking-tight text-foreground">{item.displayValue}</span>
-                    <span className="text-[10px] text-muted-foreground font-medium">Valor Atual</span>
+                    <span className="text-[10px] text-muted-foreground font-medium">Valor atual</span>
                 </div>
             </CardContent>
         </Card>
@@ -393,7 +393,7 @@ function MarketGrid({ items, onSelect, favSet, onToggleFav }: { items: MarketIte
                     <div className="flex items-baseline justify-between mb-3">
                         <div>
                             <span className="text-xl font-mono font-bold text-foreground">{item.displayValue}</span>
-                            <p className="text-[10px] text-muted-foreground font-medium">Preço Atual</p>
+                            <p className="text-[10px] text-muted-foreground font-medium">Preço atual</p>
                         </div>
                         {item.volume && (
                             <div className="text-right">

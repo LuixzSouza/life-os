@@ -61,7 +61,7 @@ export function SleepStats({ insights, goal }: { insights: SleepInsights; goal: 
       <Card className="relative overflow-hidden h-full flex flex-col justify-between">
         <CardHeader className="pb-2">
           <CardTitle className="eyebrow text-muted-foreground flex items-center gap-2">
-            <Battery className="h-4 w-4 text-primary" /> Banco de Sono
+            <Battery className="h-4 w-4 text-primary" /> Banco de sono
           </CardTitle>
         </CardHeader>
         <CardContent>

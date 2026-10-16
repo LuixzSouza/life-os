@@ -70,7 +70,7 @@ export default async function SocialPage() {
     <PageShell>
       <PageHeader
         icon={<Users className="h-6 w-6" />}
-        title="Conexões & Networking"
+        title="Conexões & networking"
         description="Centralize seus relacionamentos estratégicos e pessoais em um único local."
         actions={<FriendFormDialog mode="create" />}
       />
@@ -80,14 +80,14 @@ export default async function SocialPage() {
         {/* --- KPI SECTION --- */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           <StatCard
-            label="Rede Total"
+            label="Rede total"
             value={totalFriends}
             icon={TrendingUp}
             hint="Contatos registrados na base"
             iconClassName="text-blue-600 bg-blue-500/10"
           />
           <StatCard
-            label="Círculo Íntimo"
+            label="Círculo íntimo"
             value={closeFriends}
             icon={Heart}
             hint="Familiares e amigos próximos"
@@ -113,7 +113,7 @@ export default async function SocialPage() {
         <section className="space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/40 pb-4">
             <h2 className="text-lg font-semibold text-foreground flex items-center gap-2">
-              Sua Rede
+              Sua rede
             </h2>
             <p className="text-xs font-medium text-muted-foreground flex items-center gap-1.5 bg-muted/30 px-2.5 py-1 rounded-md">
                Aniversariantes do mês aparecem no topo

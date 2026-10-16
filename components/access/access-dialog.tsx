@@ -29,7 +29,7 @@ export function AccessDialog() {
           )}
         >
           <ShieldPlus className="h-4 w-4 stroke-[3] transition-transform group-hover:scale-110" />
-          <span>Novo Acesso</span>
+          <span>Novo acesso</span>
         </Button>
       </DialogTrigger>
 
@@ -45,7 +45,7 @@ export function AccessDialog() {
               </div>
             </div>
             <div>
-              <DialogTitle>Adicionar ao Cofre</DialogTitle>
+              <DialogTitle>Adicionar ao cofre</DialogTitle>
               <DialogDescription>Credenciais com criptografia ponta-a-ponta</DialogDescription>
             </div>
           </div>

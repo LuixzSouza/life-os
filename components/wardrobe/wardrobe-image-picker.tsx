@@ -88,7 +88,7 @@ export function WardrobeImagePicker({ previewImage, color, category, onPreviewCh
                         <img src={previewImage} alt="Pré-visualização da peça" className="w-full h-full object-contain p-4 md:p-8" />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
                             <Button variant="destructive" className="shadow-2xl font-bold gap-2" onClick={() => onPreviewChange("")}>
-                                <X className="h-4 w-4" /> Remover Foto
+                                <X className="h-4 w-4" /> Remover foto
                             </Button>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ export function WardrobeImagePicker({ previewImage, color, category, onPreviewCh
                 {source === "foto" && (
                     <div className="grid grid-cols-2 gap-2">
                         <Button type="button" variant="outline" className="h-10 gap-2 font-medium" onClick={() => cameraRef.current?.click()} disabled={uploading}>
-                            <Camera className="h-4 w-4" /> Tirar Foto
+                            <Camera className="h-4 w-4" /> Tirar foto
                         </Button>
                         <Button type="button" variant="outline" className="h-10 gap-2 font-medium" onClick={() => galleryRef.current?.click()} disabled={uploading}>
                             <ImagePlus className="h-4 w-4" /> Galeria

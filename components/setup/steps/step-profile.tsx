@@ -60,7 +60,7 @@ export function StepProfile({ formData, setFormData, showPassword, setShowPasswo
   return (
     <div className="space-y-6 animate-in slide-in-from-right-8 fade-in duration-300">
       <div className="grid gap-2">
-        <Label htmlFor="nameInput">Seu Nome Completo</Label>
+        <Label htmlFor="nameInput">Seu nome completo</Label>
         <Input
           id="nameInput"
           value={formData.name}
@@ -73,7 +73,7 @@ export function StepProfile({ formData, setFormData, showPassword, setShowPasswo
       </div>
 
       <div className="grid gap-2">
-        <Label htmlFor="emailInput">Email de Acesso</Label>
+        <Label htmlFor="emailInput">Email de acesso</Label>
         <Input
           id="emailInput"
           type="email"
@@ -87,7 +87,7 @@ export function StepProfile({ formData, setFormData, showPassword, setShowPasswo
 
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <Label htmlFor="passwordInput">Senha Mestra</Label>
+          <Label htmlFor="passwordInput">Senha mestra</Label>
           <button
             type="button"
             onClick={handleGenerate}

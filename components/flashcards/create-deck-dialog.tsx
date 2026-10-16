@@ -74,7 +74,7 @@ export function CreateDeckDialog({ open, onOpenChange, subjects }: CreateDeckDia
       <DialogTrigger asChild>
         <Button size="lg" className="gap-2 shadow-lg shadow-primary/20 bg-primary hover:bg-primary/90 font-bold h-10">
           <Plus className="h-5 w-5" />
-          Novo Baralho
+          Novo baralho
         </Button>
       </DialogTrigger>
 

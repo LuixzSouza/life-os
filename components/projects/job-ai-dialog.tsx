@@ -123,7 +123,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
             <DialogContent size="lg">
                 <DialogHeader className="bg-gradient-to-br from-violet-500/10 to-transparent">
                     <DialogTitle className="text-2xl font-semibold flex items-center gap-2">
-                        <Sparkles className="h-6 w-6 text-violet-500" /> Assistente de Carreira
+                        <Sparkles className="h-6 w-6 text-violet-500" /> Assistente de carreira
                     </DialogTitle>
                     {job && (
                         <div className="flex items-center gap-2 pt-1">
@@ -189,7 +189,7 @@ export function JobAiDialog({ job, onOpenChange }: { job: JobApplication | null;
                                                 onClick={() => onOpenChange(false)}
                                                 className="gap-2 font-medium text-xs h-10 border-border/60"
                                             >
-                                                Fechar e abrir a aba Currículos <ArrowRight className="h-3.5 w-3.5" />
+                                                Fechar e abrir a aba currículos <ArrowRight className="h-3.5 w-3.5" />
                                             </Button>
                                         </div>
                                     ) : (

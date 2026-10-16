@@ -47,7 +47,7 @@ export default async function JobsPage() {
     <PageShell>
       <PageHeader
         icon={<Briefcase className="h-6 w-6" />}
-        title="Vagas & Candidaturas"
+        title="Vagas & candidaturas"
         description="Acompanhe suas inscrições, entrevistas e o status de cada processo."
         actions={<AskAiButton q="Como está meu funil de vagas? Algum processo parado precisando de follow-up?" label="Analisar com IA" />}
       />

@@ -45,14 +45,14 @@ export function ShoppingListDialog({ plan }: { plan: MealPlanSlot[] }) {
       <DialogTrigger asChild>
         <Button variant="secondary" className="gap-2">
           <ShoppingCart className="h-4 w-4" />
-          <span>Lista de Compras</span>
+          <span>Lista de compras</span>
         </Button>
       </DialogTrigger>
 
       <DialogContent size="md">
         <DialogHeader
           icon={<ShoppingCart />}
-          title="Lista de Compras"
+          title="Lista de compras"
           description={
             list.length > 0
               ? `${list.length} ${list.length === 1 ? "item" : "itens"} consolidados de todo o cardápio da semana.`

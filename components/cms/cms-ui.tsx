@@ -86,7 +86,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
       <SheetTrigger asChild>
         <Button variant="secondary" className="w-full gap-2 font-medium text-xs h-10 shadow-sm hover:bg-primary hover:text-primary-foreground transition-all group">
           <Code2 className="h-4 w-4 group-hover:scale-110 transition-transform" />
-          Gerenciar Container
+          Gerenciar container
         </Button>
       </SheetTrigger>
 
@@ -125,12 +125,12 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                 <ShieldCheck className="h-4 w-4" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-xs font-medium text-primary/60 mb-0.5">Project API Key</p>
+                <p className="text-xs font-medium text-primary/60 mb-0.5">Project API key</p>
                 <code className="text-[10px] font-mono font-bold block truncate text-foreground/80 tracking-tighter">
                   {site.apiKey}
                 </code>
               </div>
-              <CopyButton text={site.apiKey} label="API Key" />
+              <CopyButton text={site.apiKey} label="API key" />
             </div>
           </SheetHeader>
         </div>
@@ -159,7 +159,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                     value="new"
                     className="px-4 h-9 rounded-xl border border-dashed border-border/60 text-muted-foreground hover:bg-muted data-[state=active]:bg-foreground data-[state=active]:text-background font-medium text-xs gap-2 ml-2"
                   >
-                    <Plus className="h-3.5 w-3.5" /> Novo Endpoint
+                    <Plus className="h-3.5 w-3.5" /> Novo endpoint
                   </TabsTrigger>
                 </TabsList>
               </ScrollArea>
@@ -205,7 +205,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
               <TabsContent value="new" className="h-full m-0 focus-visible:ring-0 animate-in slide-in-from-bottom-2 duration-300 overflow-y-auto">
                 <Card className="bg-muted/5 shadow-xl border-dashed">
                   <CardHeader className="p-8 pb-4">
-                    <CardTitle className="text-xl font-semibold">Inicializar Nova Rota</CardTitle>
+                    <CardTitle className="text-xl font-semibold">Inicializar nova rota</CardTitle>
                     <CardDescription className="eyebrow text-muted-foreground/60">
                       Defina o caminho do seu novo endpoint JSON.
                     </CardDescription>
@@ -222,7 +222,7 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                       <input type="hidden" name="siteId" value={site.id} />
 
                       <div className="space-y-3">
-                        <Label className="text-xs font-medium text-muted-foreground/60">Slug do Endpoint</Label>
+                        <Label className="text-xs font-medium text-muted-foreground/60">Slug do endpoint</Label>
                         <div className="flex h-12 bg-muted/20 border border-border/50 rounded-xl shadow-inner focus-within:ring-2 focus-within:ring-primary/20 transition-all p-1">
                           <span className="flex items-center justify-center px-4 font-mono font-bold text-muted-foreground bg-muted/40 rounded-lg border border-border/40 mr-1">
                             /
@@ -236,8 +236,8 @@ export function SiteManager({ site }: { site: SiteWithPages }) {
                         </div>
                       </div>
 
-                      <Button type="submit" className="w-full h-10 bg-foreground text-background hover:bg-foreground/90 font-medium text-[11px] shadow-xl">
-                        Provisionar Rota
+                      <Button type="submit" className="w-full h-10 font-medium text-[11px]">
+                        Provisionar rota
                       </Button>
                     </form>
                   </CardContent>

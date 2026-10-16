@@ -98,7 +98,7 @@ export function MealPlanDocument({
   return (
     <Document title="Cardápio Semanal — Life OS" author="Life OS">
       <BrandedPage docTitle="Cardápio Semanal" headerMeta={generatedAt}>
-        <PageTitle title="Cardápio Semanal" subtitle={subtitle} />
+        <PageTitle title="Cardápio semanal" subtitle={subtitle} />
 
         {isAutoGoal && tdee ? (
           <Text style={s.goalHint}>
@@ -150,7 +150,7 @@ export function MealPlanDocument({
 
         {/* Lista de compras */}
         <View break>
-          <PageTitle title="Lista de Compras" subtitle="Ingredientes consolidados de todo o cardápio da semana." />
+          <PageTitle title="Lista de compras" subtitle="Ingredientes consolidados de todo o cardápio da semana." />
           {shopping.length > 0 ? (
             <View style={s.shopGrid}>
               {shopping.map((item) => (

@@ -61,17 +61,17 @@ export function ProjectionResults({
         </div>
 
         <div className="space-y-4 mt-8 bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur-sm shadow-inner">
-          <ResultRow label="Total Investido" value={formatCurrency(finalData.invested)} />
+          <ResultRow label="Total investido" value={formatCurrency(finalData.invested)} />
 
           {compareSavings && (
-            <ResultRow label="Se fosse na Poupança" value={formatCurrency(finalData.savings)} opacity="text-zinc-400" />
+            <ResultRow label="Se fosse na poupança" value={formatCurrency(finalData.savings)} opacity="text-zinc-400" />
           )}
 
           <div className="h-px bg-white/10 my-4" />
 
           <div className="flex justify-between items-center pt-1">
             <span className="text-xs font-medium text-zinc-300">
-              Lucro Realizado
+              Lucro realizado
             </span>
             <span className="text-xl font-black font-mono tracking-tighter text-emerald-400 drop-shadow-md">
               + {formatCurrency(realProfit)}

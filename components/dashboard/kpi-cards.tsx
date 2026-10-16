@@ -41,7 +41,7 @@ export function KpiCards({
       <Reveal delay={0} className="h-full">
         <Card className="h-full hover:shadow-md hover:border-primary/30 transition-all">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-xs font-medium text-muted-foreground">Saldo Pessoal</CardTitle>
+            <CardTitle className="text-xs font-medium text-muted-foreground">Saldo pessoal</CardTitle>
             <DollarSign className="h-4 w-4 text-muted-foreground/50" />
           </CardHeader>
           <CardContent>
@@ -104,7 +104,7 @@ export function KpiCards({
       <Reveal delay={0.18} className="h-full">
         <Card className="h-full hover:shadow-md hover:border-primary/30 transition-all">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-xs font-medium text-muted-foreground">Tempo de Foco</CardTitle>
+            <CardTitle className="text-xs font-medium text-muted-foreground">Tempo de foco</CardTitle>
             <BookOpen className="h-4 w-4 text-muted-foreground/50" />
           </CardHeader>
           <CardContent>
@@ -126,7 +126,7 @@ export function KpiCards({
             <CalendarIcon className="h-16 w-16 text-primary" />
           </div>
           <CardHeader className="pb-2 relative z-10">
-            <CardTitle className="eyebrow text-primary">Próximo Evento</CardTitle>
+            <CardTitle className="eyebrow text-primary">Próximo evento</CardTitle>
           </CardHeader>
           <CardContent className="relative z-10">
             {nextEvent ? (

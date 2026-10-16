@@ -49,13 +49,13 @@ export function ContentMapDialog() {
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button variant="outline" size="sm" className="gap-1.5">
-          <MapIcon className="h-3.5 w-3.5" /> Mapa de Conteúdo
+          <MapIcon className="h-3.5 w-3.5" /> Mapa de conteúdo
         </Button>
       </DialogTrigger>
       <DialogContent size="md">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <MapIcon className="h-4 w-4 text-primary" /> Mapa de Conteúdo
+            <MapIcon className="h-4 w-4 text-primary" /> Mapa de conteúdo
           </DialogTitle>
           <DialogDescription>
             Escolha um tema: o mapa vira a nota-sumário dele, com link para cada nota atômica.

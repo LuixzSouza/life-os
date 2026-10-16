@@ -176,7 +176,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                         ) : (
                             <div className="flex flex-col items-center text-muted-foreground/50 gap-3">
                                 <ImageIcon className="h-12 w-12 opacity-50" />
-                                <span className="text-xs font-medium text-center px-4">URL da Imagem</span>
+                                <span className="text-xs font-medium text-center px-4">URL da imagem</span>
                             </div>
                         )}
                     </div>
@@ -297,7 +297,7 @@ export function WishlistForm({ item, onClose }: { item?: WishlistData, onClose: 
                     <Button type="button" variant="ghost" onClick={onClose} disabled={isLoading} className="h-10 px-6 font-bold">
                         Cancelar
                     </Button>
-                    <Button type="submit" disabled={isLoading} className="h-10 px-8 font-bold bg-foreground text-background hover:bg-foreground/90 shadow-lg shadow-foreground/10 transition-all active:scale-95 w-full sm:w-auto">
+                    <Button type="submit" disabled={isLoading} className="h-10 px-8 font-bold shadow-foreground/10 transition-all active:scale-95 w-full sm:w-auto">
                         {isLoading ? <Loader2 className="h-5 w-5 animate-spin mr-2" /> : null}
                         {item ? "Salvar Alterações" : "Criar Meta"}
                     </Button>

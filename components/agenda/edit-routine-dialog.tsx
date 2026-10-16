@@ -15,7 +15,7 @@ export function EditRoutineDialog({ item, children }: { item: RoutineItem; child
       <DialogContent size="md">
         <DialogHeader
           icon={<Clock className="h-5 w-5" />}
-          title="Editar Bloco"
+          title="Editar bloco"
           description="Ajuste os parâmetros da rotina"
         />
         {/* O Form gerencia seu próprio scroll interno */}

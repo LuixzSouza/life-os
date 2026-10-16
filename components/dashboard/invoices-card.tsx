@@ -17,9 +17,9 @@ export function InvoicesCard({ invoices, today, formatCurrency }: InvoicesCardPr
       <CardHeader className="flex flex-row items-center justify-between gap-2 pb-4">
         <CardTitle className="text-sm flex min-w-0 items-center gap-2">
           <Landmark className="h-4 w-4 shrink-0 text-muted-foreground" />
-          <span className="truncate">Faturas a Receber</span>
+          <span className="truncate">Faturas a receber</span>
         </CardTitle>
-        <Link href="/business" className="shrink-0 whitespace-nowrap text-xs text-primary hover:underline">Ir para Negócios</Link>
+        <Link href="/business" className="shrink-0 whitespace-nowrap text-xs text-primary hover:underline">Ir para negócios</Link>
       </CardHeader>
       <CardContent>
         {invoices.length === 0 ? (

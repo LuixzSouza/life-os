@@ -370,7 +370,7 @@ function WishlistCard({ item, accounts, totalBalance }: { item: WishlistData; ac
                         <DialogContent size="lg">
                             <DialogHeader
                                 icon={<Pencil />}
-                                title="Editar Desejo"
+                                title="Editar desejo"
                                 description="Ajuste o preço, prioridade ou detalhes do seu sonho."
                             />
                             <DialogBody>
@@ -394,7 +394,7 @@ function WishlistCard({ item, accounts, totalBalance }: { item: WishlistData; ac
                                 </AlertDialogDescription>
                             </AlertDialogHeader>
                             <AlertDialogFooter>
-                                <AlertDialogCancel disabled={isDeleting} className="rounded-xl h-12 font-bold">Manter Sonho</AlertDialogCancel>
+                                <AlertDialogCancel disabled={isDeleting} className="rounded-xl h-12 font-bold">Manter sonho</AlertDialogCancel>
                                 <AlertDialogAction
                                     onClick={(e) => { e.preventDefault(); void handleDeleteConfirmed(); }}
                                     disabled={isDeleting}

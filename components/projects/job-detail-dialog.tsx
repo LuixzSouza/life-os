@@ -118,7 +118,7 @@ export function JobDetailDialog({ job, resumes, onOpenChange }: JobDetailDialogP
                 Visão geral
               </TabsTrigger>
               <TabsTrigger value="resume" className="rounded-lg text-xs font-semibold data-[state=active]:bg-background data-[state=active]:shadow-sm gap-1.5 flex-1 h-full">
-                <FileText className="h-3.5 w-3.5" /> Currículo Enviado
+                <FileText className="h-3.5 w-3.5" /> Currículo enviado
               </TabsTrigger>
             </TabsList>
 

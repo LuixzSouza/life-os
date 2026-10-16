@@ -105,7 +105,7 @@ export async function ProductivitySection({ userId }: { userId: string }) {
         
         {/* Score com Variação e Barra Progressiva */}
         <ProductivityKpiCard 
-          title="Score de Produtividade" 
+          title="Score de produtividade" 
           value={<>{productivityScore} <span className="text-sm font-normal text-muted-foreground">/ 100</span></>} 
           icon={Trophy} 
           color="purple"
@@ -116,7 +116,7 @@ export async function ProductivitySection({ userId }: { userId: string }) {
 
         {/* Tarefas Padronizadas */}
         <ProductivityKpiCard 
-          title="Tarefas Concluídas" 
+          title="Tarefas concluídas" 
           value={data.completedTasks} 
           subtitle="Total histórico finalizado"
           icon={CheckCircle2} 
@@ -124,7 +124,7 @@ export async function ProductivitySection({ userId }: { userId: string }) {
         />
         
         <ProductivityKpiCard 
-          title="Tarefas Pendentes" 
+          title="Tarefas pendentes" 
           value={data.pendingTasks} 
           subtitle="Itens aguardando ação"
           icon={Circle} 
@@ -133,7 +133,7 @@ export async function ProductivitySection({ userId }: { userId: string }) {
 
         {/* Tempo de Estudo Contextualizado */}
         <ProductivityKpiCard 
-          title="Tempo de Estudo" 
+          title="Tempo de estudo" 
           value={`${totalStudyHours}h ${(totalStudyMinutes % 60).toString().padStart(2, '0')}m`} 
           subtitle="Foco acumulado geral"
           icon={Clock} 
@@ -149,7 +149,7 @@ export async function ProductivitySection({ userId }: { userId: string }) {
           <Card className="flex-1 flex flex-col">
             <CardHeader className="pb-4">
               <CardTitle className="text-base font-semibold flex items-center gap-2">
-                <BookOpen className="h-5 w-5 text-purple-500" /> Foco por Matéria
+                <BookOpen className="h-5 w-5 text-purple-500" /> Foco por matéria
               </CardTitle>
               <CardDescription>Distribuição do seu tempo de estudo focado</CardDescription>
             </CardHeader>

@@ -151,7 +151,7 @@ function EloInfoPopover() {
           <li>• <strong className="text-foreground">+1 PDL a cada 2 min</strong> de foco (máx. {DAILY_LP_CAP} PDL/dia — consistência vale mais que maratona).</li>
           <li>• Cada divisão pede 100 PDL (IV → I), 4 divisões por tier.</li>
           <li>• Parou de estudar? Você tem <strong className="text-foreground">{GRACE_DAYS} dias de carência</strong>. Depois disso, <strong className="text-rose-500">perde PDL por dia parado</strong>.</li>
-          <li>• Como no LoL: <strong className="text-foreground">Ferro a Prata não decaem</strong> — quem está começando não é punido.</li>
+          <li>• Como no LoL: <strong className="text-foreground">Ferro a prata não decaem</strong> — quem está começando não é punido.</li>
         </ul>
         <div className="mt-3 flex flex-wrap gap-1">
           {ELO_TIERS.map((t) => (

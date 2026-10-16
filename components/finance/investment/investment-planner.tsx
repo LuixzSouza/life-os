@@ -88,7 +88,7 @@ export function InvestmentPlanner({ rate }: PlannerProps) {
                                     <div className="p-2.5 bg-primary/10 rounded-xl text-primary border border-primary/20 shadow-sm">
                                         <Calculator className="h-5 w-5" />
                                     </div>
-                                    Simulador de Futuro
+                                    Simulador de futuro
                                 </CardTitle>
                                 <CardDescription className="font-medium text-sm">
                                     Projete seus rendimentos com base na taxa de {rate.toFixed(2)}% a.a.
@@ -116,7 +116,7 @@ export function InvestmentPlanner({ rate }: PlannerProps) {
                                             : "text-muted-foreground hover:text-foreground hover:bg-muted"
                                     )}
                                 >
-                                    <Target className="h-4 w-4" /> Bater Meta
+                                    <Target className="h-4 w-4" /> Bater meta
                                 </button>
                             </div>
                         </div>
@@ -131,13 +131,13 @@ export function InvestmentPlanner({ rate }: PlannerProps) {
                             {mode === "GROWTH" ? (
                                 <>
                                     <InputGroup
-                                        label="Valor Inicial"
+                                        label="Valor inicial"
                                         icon={<DollarSign className="h-4 w-4" />}
                                         value={initialAmount}
                                         onChange={setInitialAmount}
                                     />
                                     <InputGroup
-                                        label="Aporte Mensal"
+                                        label="Aporte mensal"
                                         icon={<CalendarClock className="h-4 w-4" />}
                                         value={monthlyContribution}
                                         onChange={setMonthlyContribution}
@@ -164,7 +164,7 @@ export function InvestmentPlanner({ rate }: PlannerProps) {
                                 <div className="flex items-center space-x-3 bg-muted/30 px-4 py-2.5 rounded-xl border border-border/50 transition-colors hover:bg-muted/50 shadow-sm">
                                     <Switch id="inflation" checked={showInflation} onCheckedChange={setShowInflation} />
                                     <Label htmlFor="inflation" className="eyebrow cursor-pointer flex items-center gap-1.5 text-muted-foreground">
-                                        Descontar Inflação
+                                        Descontar inflação
                                         <HoverCard>
                                             <HoverCardTrigger><HelpCircle className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" /></HoverCardTrigger>
                                             <HoverCardContent className="text-xs font-medium w-64 leading-relaxed rounded-xl shadow-xl border-border/50">
@@ -175,7 +175,7 @@ export function InvestmentPlanner({ rate }: PlannerProps) {
                                 </div>
                                 <div className="flex items-center space-x-3 bg-muted/30 px-4 py-2.5 rounded-xl border border-border/50 transition-colors hover:bg-muted/50 shadow-sm">
                                     <Switch id="savings" checked={compareSavings} onCheckedChange={setCompareSavings} />
-                                    <Label htmlFor="savings" className="eyebrow cursor-pointer text-muted-foreground">Comparar Poupança</Label>
+                                    <Label htmlFor="savings" className="eyebrow cursor-pointer text-muted-foreground">Comparar poupança</Label>
                                 </div>
                             </div>
 
