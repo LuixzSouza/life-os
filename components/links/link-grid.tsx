@@ -418,6 +418,7 @@ export function LinkGrid({ links }: { links: SavedLink[] }) {
                     variant="outline"
                     size="sm"
                     onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                    aria-label="Página anterior"
                     disabled={currentPage === 1}
                     className="h-8 w-8 p-0"
                 >
@@ -430,6 +431,7 @@ export function LinkGrid({ links }: { links: SavedLink[] }) {
                     variant="outline"
                     size="sm"
                     onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                    aria-label="Próxima página"
                     disabled={currentPage === totalPages}
                     className="h-8 w-8 p-0"
                 >

@@ -219,7 +219,7 @@ export function AddMediaDialog({ ownedExternalIds = [] }: { ownedExternalIds?: s
                   className="pl-9 pr-10 focus:border-primary/50 transition-all text-base"
                 />
                 {query && (
-                <button type="button" onClick={clearSearch} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground hover:bg-muted p-1 rounded-full transition-colors">
+                <button type="button" onClick={clearSearch} aria-label="Limpar busca" title="Limpar busca" className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground hover:bg-muted p-1 rounded-full transition-colors">
                     <X className="h-4 w-4" />
                 </button>
                 )}

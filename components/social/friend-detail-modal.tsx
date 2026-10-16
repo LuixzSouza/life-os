@@ -68,7 +68,7 @@ export function FriendDetailModal({ friend, onOpenChange, onEdit }: FriendDetail
                 )}
 
                 <Avatar className="h-28 w-28 border-4 border-background shadow-xl mb-4">
-                  <AvatarImage src={friend.imageUrl || undefined} className="object-cover" />
+                  <AvatarImage src={friend.imageUrl || undefined} alt={friend.name} className="object-cover" />
                   <AvatarFallback className="bg-primary/5 text-primary font-black text-3xl">{initials}</AvatarFallback>
                 </Avatar>
 

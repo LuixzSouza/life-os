@@ -68,6 +68,7 @@ export function ThemePaletteCard({
 
             <input
               type="color"
+              aria-label="Cor personalizada do tema"
               value={customColorInput}
               onChange={onCustomColorChange}
               className="absolute inset-0 opacity-0 w-full h-full cursor-pointer z-10"

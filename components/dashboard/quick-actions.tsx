@@ -38,19 +38,21 @@ export function QuickActions() {
                 {actions.map((action, index) => (
                     <Tooltip key={index}>
                         <TooltipTrigger asChild>
-                            <Link href={action.href}>
-                                <Button
-                                    size="icon"
-                                    variant="outline"
-                                    aria-label={action.label}
-                                    className={cn(
-                                        "h-9 w-9 rounded-full transition-all duration-200 hover:scale-105 shadow-sm",
-                                        action.className
-                                    )}
-                                >
+                            {/* Button asChild = o próprio <a> (antes era <a><button>, HTML
+                                inválido e o link ficava sem nome acessível). */}
+                            <Button
+                                asChild
+                                size="icon"
+                                variant="outline"
+                                className={cn(
+                                    "h-9 w-9 rounded-full transition-all duration-200 hover:scale-105 shadow-sm",
+                                    action.className
+                                )}
+                            >
+                                <Link href={action.href} aria-label={action.label}>
                                     <action.icon className="h-4 w-4" />
-                                </Button>
-                            </Link>
+                                </Link>
+                            </Button>
                         </TooltipTrigger>
                         <TooltipContent side="bottom" className="text-xs font-medium">
                             <p>{action.label}</p>

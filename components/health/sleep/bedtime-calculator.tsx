@@ -49,6 +49,7 @@ export function BedtimeCalculator() {
 
         <Input
           type="time"
+          aria-label={mode === "wake" ? "Horário para acordar" : "Horário para dormir"}
           value={mode === "wake" ? wakeTime : bedTime}
           onChange={(e) => (mode === "wake" ? setWakeTime(e.target.value) : setBedTime(e.target.value))}
           className="text-2xl font-bold text-center"

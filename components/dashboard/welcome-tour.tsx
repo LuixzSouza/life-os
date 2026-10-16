@@ -163,6 +163,8 @@ export function WelcomeTour() {
 
                 <button 
                     onClick={handleFinish}
+                    aria-label="Fechar tour"
+                    title="Fechar tour"
                     className="absolute top-5 right-5 p-2 rounded-full text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/10 transition-colors z-50"
                 >
                     <X className="w-5 h-5" />

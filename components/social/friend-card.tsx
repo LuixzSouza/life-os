@@ -60,7 +60,7 @@ export function FriendCard({ friend, lastContactAt, onContact, onSelect, onEdit,
       <CardContent className="p-5 pt-6 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-4">
           <Avatar className={cn("h-14 w-14 shadow-sm ring-2 ring-offset-2 ring-offset-card group-hover:scale-105 transition-transform duration-300", ringColor)}>
-            <AvatarImage src={friend.imageUrl || undefined} className="object-cover" />
+            <AvatarImage src={friend.imageUrl || undefined} alt={friend.name} className="object-cover" />
             <AvatarFallback className="bg-muted text-muted-foreground font-bold text-xs">{initials}</AvatarFallback>
           </Avatar>
 

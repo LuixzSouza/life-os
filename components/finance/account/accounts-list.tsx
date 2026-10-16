@@ -239,7 +239,7 @@ function BankCard({ account, onEdit, onDelete, onConnections }: { account: Accou
 
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <button className="p-2 hover:bg-white/10 rounded-full transition-colors outline-none text-white/70 hover:text-white">
+                            <button aria-label="Mais opções da conta" title="Mais opções" className="p-2 hover:bg-white/10 rounded-full transition-colors outline-none text-white/70 hover:text-white">
                                 <MoreVertical className="h-5 w-5" />
                             </button>
                         </DropdownMenuTrigger>

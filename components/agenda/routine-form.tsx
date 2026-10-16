@@ -150,7 +150,7 @@ export function RoutineForm({ item, onClose }: { item?: RoutineItem; onClose: ()
         {item ? (
           <AlertDialog open={isDeleteDialogOpen} onOpenChange={setIsDeleteDialogOpen}>
             <AlertDialogTrigger asChild>
-              <Button type="button" variant="outline" className="h-12 w-12 p-0 text-rose-500 border-rose-500/20 hover:bg-rose-500 hover:text-white transition-all shrink-0">
+              <Button type="button" variant="outline" aria-label="Excluir bloco" title="Excluir bloco" className="h-12 w-12 p-0 text-rose-500 border-rose-500/20 hover:bg-rose-500 hover:text-white transition-all shrink-0">
                 <Trash2 className="h-5 w-5" />
               </Button>
             </AlertDialogTrigger>
